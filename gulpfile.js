@@ -96,8 +96,8 @@ function css() {
        .pipe(group_media())
        .pipe(
            autoprefixer({
-               overrideBrowserslist: ["last 5 versions"],
-               cascade: true
+               //overrideBrowserslist: ["last 5 versions"],
+               //cascade: true
            })
        )
        .pipe(webpcss({
