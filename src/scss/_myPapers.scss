@@ -8,21 +8,21 @@
         @media ($media_full) {
             overflow-x: auto;
             overflow-y: hidden;
-    
+
             &::-webkit-scrollbar-track {
                 -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
                 background-color: #F5F5F5;
             }
-            
+
             &::-webkit-scrollbar {
                 height: 10px;
                 background-color: #F5F5F5;
             }
-            
+
             &::-webkit-scrollbar-thumb {
                 background-color: lighten($color_blue, 25%);
             }
-    
+
             .statTable__row, .statTable__content {
                 width: fit-content;
             }
@@ -34,16 +34,16 @@
                     left: unset;
                 }
             }
-    
+
             .statTable__item {
                 min-width: 180px;
                 max-width: 180px;
-    
+
                 &--grow {
                     min-width: 240px;
                     max-width: 240px;
                 }
-    
+
                 &--shrink {
                     min-width: 120px;
                     max-width: 120px;
@@ -54,7 +54,7 @@
         .statTable__item--withIcon {
             display: flex;
             align-items: center;
-           
+
             .paperDontTrade__icon {
                 width: 1.4rem;
                 height: 1.4rem;
@@ -140,7 +140,7 @@
             @media ($media_sm) {
                 display: none;
             }
-            
+
             .statTable__item {
                 color: $color_table_header_title;
             }
@@ -197,7 +197,7 @@
                 }
 
                 .statStickerInfo__changeStock {
-            
+
                     .btnShowAll__icon {
                         transform: rotate(180deg);
                     }
@@ -237,7 +237,7 @@
 
                     .statStickerInfo__changeStock {
                         color: $color_white;
-                
+
                         .btnShowAll {
                             color: $color_white;
                         }
@@ -248,7 +248,7 @@
                     .statStickerInfo__subtitle {
                         color: $color_white;
                     }
-    
+
                     .statSticker__percent--success {
                         color: $color_green_light_table_header;
                     }
@@ -261,7 +261,7 @@
                 .statTable__item--label {
                     display: block;
                 }
-                
+
             }
         }
 
@@ -680,14 +680,14 @@
             font-size: 0.85rem;
         }
     }
-    
+
     &--import {
         max-width: unset;
 
         @media ($media_xl) {
             max-width: unset;
         }
-    
+
         @media ($media_sm) {
             max-width: unset;
         }
@@ -793,7 +793,7 @@
                     font-weight: 600;
                     color: $color_black_title;
                     display: flex;
-                     
+
                     > span {
                         position: relative;
                         padding-left: 1.2rem;
@@ -1152,12 +1152,12 @@ $banch_items_space: 0.8rem;
             -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
             background-color: #F5F5F5;
         }
-        
+
         &::-webkit-scrollbar {
             height: 6px;
             background-color: #F5F5F5;
         }
-        
+
         &::-webkit-scrollbar-thumb {
             background-color: lighten($color_blue, 25%);
         }
@@ -1295,7 +1295,7 @@ $banch_items_space: 0.8rem;
     &__popup {
         transition: 0.3s ease-in-out;
         position: absolute;
-        bottom: -0.5rem;
+        //bottom: -0.5rem;
         left: 0;
         transform: translateY(100%);
         background: $color_block_bg;
@@ -1308,7 +1308,7 @@ $banch_items_space: 0.8rem;
         color: $color_black_main;
         line-height: 1.4;
         font-size: 0.9rem;
-    
+
         visibility: hidden;
         opacity: 0;
         width: max-content;
