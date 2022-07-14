@@ -1,0 +1,154 @@
+body.app.blockScroll {
+  overflow: hidden;
+}
+
+body.app .header-logo .logo {
+  left: 0;
+  transform: translateX(1rem);
+}
+
+body.app .section-app {
+  margin: calc(var(--header_height) + 1rem) 0 5.5rem 0;
+  padding: 0 var(--section_padding);
+}
+
+body.app .section-header {
+  background: linear-gradient(180deg, #F5F8FF 0%, #EAF1FE 100%);
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+  left: 0;
+  top: 0;
+}
+
+.appMenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #F5F8FF 0%, #EAF1FE 100%);
+  box-shadow: 0px -10px 20px -13px rgba(62, 84, 216, 0.3);
+  z-index: 6;
+  display: flex;
+  padding: 0.75rem 0;
+}
+
+.appMenu__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100%;
+  text-decoration: none;
+  color: #373943;
+}
+
+.appMenu__item--active .appMenu__icon {
+  stroke: #3E54D8;
+}
+
+.appMenu__item--active .appMenu__name {
+  color: #3E54D8;
+}
+
+.appMenu__icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  stroke: #373943;
+}
+
+.appMenu__name {
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.appOverlay {
+  position: fixed;
+  z-index: 5;
+  padding: 6.5rem var(--section_padding);
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #EAF1FE;
+}
+
+.appOverlay__content {
+  overflow-y: auto;
+  max-height: calc(100vh - 13rem);
+}
+
+.appOverlay__item {
+  display: flex;
+  flex-wrap: wrap;
+  color: #373943;
+  text-decoration: none;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.appOverlay__item--active .appOverlay__icon {
+  stroke: #3E54D8;
+}
+
+.appOverlay__item--active .appOverlay__name {
+  color: #3E54D8;
+}
+
+.appOverlay__item:not(:last-child) {
+  border-bottom: 1px solid #D3E3FF;
+}
+
+.appOverlay__icon {
+  transition: 0.3s ease-in-out;
+  width: 1.7rem;
+  height: 1.7rem;
+  stroke: #373943;
+  margin-right: 1rem;
+}
+
+.appOverlay__icon--caret {
+  width: 0.9rem;
+  height: 0.9rem;
+  margin: 0 0 0 0.7rem;
+}
+
+.appOverlay__name {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.appOverlay__switcher {
+  width: 100%;
+}
+
+.appOverlay__checkbox:checked ~ .appOverlay__container {
+  display: flex;
+}
+
+.appOverlay__checkbox:checked ~ .appOverlay__switcher .appOverlay__icon {
+  transform: rotate(180deg);
+}
+
+.appOverlay__container {
+  margin-top: 1.2rem;
+  flex-basis: 100%;
+  display: none;
+}
+
+.appOverlay__elems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem 2.6rem;
+}
+
+.appOverlay__elem {
+  font-size: 1.1rem;
+  color: #373943;
+  text-decoration: none;
+}
+
+.appOverlay__elem--active {
+  font-weight: 600;
+  color: #3E54D8;
+}
