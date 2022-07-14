@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include('_head.html', { "title": "BeatMarket - Компании" })
+    </head>
+    <body>
+        @@include("_header.html", { "title": "Мой портфель" })
+
+        <section class="section-outer section-main">
+            <div class="main">
+                @@include("_menu.html", { "title": "Мой портфель" })
+
+                <div class="main-content">
+                    <div class="main-contentPadding">
+
+                        <div class="main-content__elem main-content__elem--promo">
+                            <div class="assetsInfoPromo">
+                                <div class="assetsInfoPromo__row">
+                                    <div class="assetsInfoPromo__item">
+                                        <div class="assetsInfoPromo__info">
+                                            <div class="assetsInfoDescr">
+                                                <div class="assetsInfoDescr__header">
+                                                    <div class="assetsInfoDescr__info">
+                                                        <div class="assetsInfoDescr__img">
+                                                            <img src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin">
+                                                        </div>
+                                                        <div class="assetsInfoDescr__title">
+                                                            <h2 class="assetsInfoDescr__name">Bitcoin</h2>
+                                                            <span class="assetsInfoDescr__short">BTC</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="assetsInfoDescr__share">
+                                                        <div class="stategyPromo-info-buttons">
+                                                            <div class="stategyPromo-info-buttons-bottom">
+                                                                <label class="btn btn_primary btn-label">
+                                                                    <svg><use xlink:href="img/main.svg#icon-ShareNetwork"></use></svg>
+                                                
+                                                                    <input type="checkbox" class="visually_hidden">
+                                                                    <div class="dropdown dropdown--fullWidth">
+                                                                        <div class="dropdown-link">
+                                                                            <div class="dropdown-link-title">
+                                                                                <h5>Ссылка на портфель</h5>
+                                                                            </div>
+                                                                            <div class="dropdown-link-form">
+                                                                                <input type="text" value="https://beatmarket.one/portfolio">
+                                                                                <button class="btn btn_primary">
+                                                                                    <svg class="top-left"><use xlink:href="img/main.svg#icon-link"></use></svg>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                                <div class="assetsInfoDescr__content">
+                                                    <div class="assetsInfoDescr__label">Текующая цена</div>
+                                                    <span class="assetsInfoDescr__cost">40433.94 $ 
+                                                        <strong class="assetsInfoDescr__percent assetsInfoDescr__percent--success">+0.61 (+7,23%)</strong>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="assetsInfoPromo__item assetsInfoPromo__list">
+                                            <div class="lineDetails lineDetails--section">
+                                                <div class="lineDetails__item">
+                                                    <span class="lineDetails__value">Тип ценной бумаги</span>
+                                                    <span class="lineDetails__value lineDetails__value--bold">Криптовалюта</span>
+                                                </div>
+                                                <div class="lineDetails__item">
+                                                    <span class="lineDetails__value">Официальный сайт</span>
+                                                    <a class="lineDetails__value lineDetails__value--bold lineDetails__value--primary" href="#">www.bitcoin.org</a>
+                                                </div>
+                                                <div class="lineDetails__item">
+                                                    <span class="lineDetails__value">Алгоритм хеширования</span>
+                                                    <span class="lineDetails__value lineDetails__value--bold">SHA-256</span>
+                                                </div>
+                                                <div class="lineDetails__item">
+                                                    <span class="lineDetails__value">Капитализация</span>
+                                                    <span class="lineDetails__value lineDetails__value--bold">873.276.968.832.87 $</span>
+                                                </div>
+                                                <div class="lineDetails__item">
+                                                    <span class="lineDetails__value">Позиция среди криптовалют по капитализации</span>
+                                                    <span class="lineDetails__value lineDetails__value--bold">1</span>
+                                                </div>
+                                                <div class="lineDetails__item">
+                                                    <span class="lineDetails__value">Объем торгов</span>
+                                                    <span class="lineDetails__value lineDetails__value--bold">23.233.232.232 $</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="assetsInfoPromo__item assetsInfoPromo__graph">
+                                        <div class="stategyPromo-graph">
+                                            <h2 class="stategyPromo-graph-title">График цены</h2>
+                                            <div class="stategyPromo-graph-info">
+                                                <div class="stategyPromo-graph-info-content">
+                                                    <div class="stategyPromo-graph-info-content-choose">
+                                                        <div class="stategyPromo-graph-info-content-choose-item active">
+                                                            <span>Неделя</span>
+                                                        </div>
+                                                        <div class="stategyPromo-graph-info-content-choose-item">
+                                                            <span>Месяц</span>
+                                                        </div>
+                                                        <div class="stategyPromo-graph-info-content-choose-item">
+                                                            <span>Год</span>
+                                                        </div>
+                                                        <div class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
+                                                            <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stategyPromo-graph-values">
+                                                <div class="stategyPromo-graph-values-item primary">
+                                                    <span>IEF</span>
+                                                </div>
+                                            </div>
+                                            <div class="stategyPromo-graph-chart mainGraphBlock" id="demoGraph-3"></div>
+                                            <span class="stategyPromo-graph-dates strategyViewDate">21.11.2021 - 28.11.2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="assetsInfoPromo__row">
+                                    <p class="assetsInfoPromo__text">
+                                        Данный фонд имеет умеренный уровень процентного риска. 
+                                        И обеспечивает более высокий доход, чем краткосрочные фонды, 
+                                        такие как SHY и IEI. IEF взимает более высокую плату, чем некоторые конкуренты, при этом у фонда  
+                                        высокая ликвидность.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-content__elem">
+                            <div class="blockSection blockSection--card blockSection--circleRed">
+                                <div class="blockSection__content">
+                                    <div class="blockSection__row">
+                                        <div class="blockSection__col">
+                                            <div class="blockSection blockSection--card blockSection--blue">
+                                                <div class="blockSection__content">
+                                                    <div class="lineDetails lineDetails--blue">
+                                                        <div class="lineDetails__item">
+                                                            <span class="lineDetails__value">Coin Gecko rank</span>
+                                                            <span class="lineDetails__value">1</span>
+                                                        </div>
+                                                        <div class="lineDetails__item">
+                                                            <span class="lineDetails__value">Coin Gecko score</span>
+                                                            <span class="lineDetails__value">70.233</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="blockSection__col blockSection__col--grow">
+                                            <div class="blockSection blockSection--card">
+                                                <div class="blockSection__header">
+                                                    <h3 class="blockSection__title blockSection__title--primary">
+                                                        Изменения за 24ч
+                                                        <span class="blockSection__ticket blockSection__ticket--success">+2.123.23 $ (+2.12%)</span>
+                                                    </h3>
+                                                </div>
+                                                <div class="blockSection__content">
+                                                    <div class="customRange">
+                                                        <div class="customRange__slider"></div>
+                                                        <div class="customRange__info">
+                                                            <span class="customRange__value customRange__value--error">532.523.232 $ (low)</span>
+                                                            <span class="customRange__value customRange__value--success">233.514.232 $ (high)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="blockSection__row">
+                                        <div class="blockSection__col">
+                                            <div class="blockSection">
+                                                <div class="blockSection__header">
+                                                    <h3 class="blockSection__title">Доходность</h3>
+                                                </div>
+                                                <div class="blockSection__content">
+                                                    <div class="blockSection__assets customScroll">
+                                                        <div class="leastCard">
+                                                            <div class="leastCard__header">
+                                                                <h4 class="leastCard__title">7 дней</h4>
+                                                            </div>
+                                                            <div class="leastCard__graphInfo leastCard__graphInfo--success">
+                                                                <span class="leastCard__percent">+3.61 %</span>
+                                                                <div class="leastCard__graph">
+                                                                    <svg class="leastCard__icon"><use xlink:href="img/main.svg#icon-pseudoGraphBig"></use></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class="leastCard">
+                                                            <div class="leastCard__header">
+                                                                <h4 class="leastCard__title">14 дней</h4>
+                                                            </div>
+                                                            <div class="leastCard__graphInfo leastCard__graphInfo--success">
+                                                                <span class="leastCard__percent">+1.623231 %</span>
+                                                                <div class="leastCard__graph">
+                                                                    <svg class="leastCard__icon"><use xlink:href="img/main.svg#icon-pseudoGraphBig"></use></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class="leastCard">
+                                                            <div class="leastCard__header">
+                                                                <h4 class="leastCard__title">30 дней</h4>
+                                                            </div>
+                                                            <div class="leastCard__graphInfo leastCard__graphInfo--error">
+                                                                <span class="leastCard__percent">-2.12331 %</span>
+                                                                <div class="leastCard__graph">
+                                                                    <svg class="leastCard__icon"><use xlink:href="img/main.svg#icon-pseudoGraphBig"></use></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class="leastCard leastCard--active">
+                                                            <div class="leastCard__header">
+                                                                <h4 class="leastCard__title">60 дней</h4>
+                                                            </div>
+                                                            <div class="leastCard__graphInfo leastCard__graphInfo--success">
+                                                                <span class="leastCard__percent">+3.61 %</span>
+                                                                <div class="leastCard__graph">
+                                                                    <svg class="leastCard__icon"><use xlink:href="img/main.svg#icon-pseudoGraphBig"></use></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class="leastCard">
+                                                            <div class="leastCard__header">
+                                                                <h4 class="leastCard__title">120 дней</h4>
+                                                            </div>
+                                                            <div class="leastCard__graphInfo">
+                                                                <span class="leastCard__percent">0 %</span>
+                                                                <div class="leastCard__graph">
+                                                                    <svg class="leastCard__icon"><use xlink:href="img/main.svg#icon-pseudoGraphBig"></use></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>           
+                        </div>
+
+                        <div class="main-content__elem">
+                            <div class="blockSection blockSection--card">
+                                <div class="blockSection__header">
+                                    <h3 class="blockSection__title">Торгующие биржи <span class="blockSection__ticket">BTC</span></h3>
+                                </div>
+                                <div class="blockSection__content">
+                                    <div class="blockSection__burses" data-contentShower>
+                                        <a class="labelLink" href="#">exchange.bitcoin.com</a>
+                                        <a class="labelLink" href="#">www.bit-z.com</a>
+                                        <a class="labelLink" href="#">phemex.com</a>
+                                        <a class="labelLink" href="#">exchange.bitcoin.com</a>
+                                        <a class="labelLink" href="#">app.liquid.com</a>
+                                        <a class="labelLink" href="#">ftx.com</a>
+                                        <a class="labelLink" href="#">exchange.currency.com</a>
+                                        <a class="labelLink" href="#">hitbtc.com</a>
+                                        <a class="labelLink" href="#">ftx.com</a>
+                                        <a class="labelLink" href="#">exchange.bitcoin.com</a>
+                                        <a class="labelLink" href="#" data-contentShowerHidden>hitbtc.com</a>
+                                        <a class="labelLink" href="#" data-contentShowerHidden>ftx.com</a>
+                                        <a class="labelLink" href="#" data-contentShowerHidden>app.liquid.com</a>
+                                        <a class="labelLink" href="#" data-contentShowerHidden>pro.coinbase.com</a>
+                                        <a class="labelLink" href="#" data-contentShowerHidden>exchange.bitcoin.com</a>
+                                        <a class="labelLink" href="#" data-contentShowerHidden>www.bit-z.com</a>
+
+                                        <button class="btnShowAll labelLink labelLink--active">
+                                            <span class="btnShowAll__text">Показать все</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include("_footer.html")
+    </body>
+</html>

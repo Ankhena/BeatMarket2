@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - 404 Страница не найдена"
+		})
+
+	</head>
+	<body class="page-notfound">
+
+		@@include("_header.html")
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				<h1 class="main-title">Мой портфель</h1>
+
+				<div class="main-content">
+                    <div class="main-content notfound">
+                        <div class="notfound-item img">
+                            <img src="./img/404.svg" alt="404 не найдено">
+                        </div>
+                        <div class="notfound-item">
+                            <h1>Страница не найдена</h1>
+                        </div>
+                        <div class="notfound-item">
+                            <p>Нам очень жаль, но мы не нашли эту страницу. Она была удалена, либо вовсе не существовала</p>
+                        </div>
+                        <div class="notfound-item button">
+                            <a href="#" class="btn btn_blue">
+                                <svg><use xlink:href="img/main.svg#icon-house"></use></svg>
+                                <span>Вернуться на главную</span>
+                            </a>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

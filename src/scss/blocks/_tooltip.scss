@@ -1,0 +1,44 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip--open {
+  .tooltip__text {
+    position: absolute;
+    top: calc(100% + 12px);
+    //left: 50%;
+    //transform: translateX(-50%);
+    right: 0;
+    display: block;
+    width: max-content;
+    max-width: 600px;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 0 16px 0 #C1CDDF;
+    background: $color-inverse;
+    text-align: left;
+    z-index: 2;
+    @media ($media_sm) {
+      max-width: 250px;
+    }
+  }
+}
+
+.tooltip__btn {
+  //@extend .btn;
+  //@extend .btn--only-icon;
+  //@extend .btn--question;
+  width: 56px;
+  height: 56px;
+  border: 1px solid $color_block_border;
+  border-radius: 12px;
+  box-shadow: $shadow-block;
+  background: url("data:image/svg+xml,%3Csvg width='28' height='26' viewBox='0 0 28 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 22.5C19.799 22.5 24.5 17.799 24.5 12C24.5 6.20101 19.799 1.5 14 1.5C8.20101 1.5 3.5 6.20101 3.5 12C3.5 17.799 8.20101 22.5 14 22.5Z' stroke='%238C9BEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.125 11.125H14V17.25H14.875' stroke='%238C9BEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 8.5C14.7249 8.5 15.3125 7.91237 15.3125 7.1875C15.3125 6.46263 14.7249 5.875 14 5.875C13.2751 5.875 12.6875 6.46263 12.6875 7.1875C12.6875 7.91237 13.2751 8.5 14 8.5Z' fill='%238C9BEA'/%3E%3C/svg%3E%0A") no-repeat center;
+}
+
+.tooltip__text {
+  display: none;
+}

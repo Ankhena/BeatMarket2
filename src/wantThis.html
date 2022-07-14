@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Дивиденды"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Шаблон"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "",
+                    "supportMenu": "active"
+				})
+
+				<div class="main-content">
+
+                    <div class="main-contentPadding">
+                        <div class="wantThis">
+                            <h2 class="wantThis__header">
+                                <p class="wantThis__title">Хочешь также?</p>    
+                                <p class="wantThis__title">Присоединяйся к более чем 
+                                    <span class="wantThis__title--mark"><span>22 000 инвесторов!</span></span>
+                                </p> 
+                            </h2>
+                            <a href="#" class="wantThis__btn btn btn_blue">Попробовать</a>
+
+                            <div class="wantThis__circle wantThis__circle--red"></div>
+                            <div class="wantThis__circle wantThis__circle--yellow"></div>
+
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

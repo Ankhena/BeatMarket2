@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include('_head.html', { "title": "BeatMarket - Советник" })
+    </head>
+    <body>
+        @@include("_header.html", { "title": "Советник" })
+        <section class="section-outer section-main">
+            <div class="main">
+                @@include("_menu.html", { "title": "" })
+                <div class="main-content">
+                    <div class="main-content advisor">
+                        <section class="adv-portfolio">
+                            <div class="portfolio__prompt-sticky prompt prompt--danger">
+                                <div>Подтвердите, пожалуйста, почту. Мы отправили письмо на ваш E-mail</div>
+                                <a href="">Отправить повторно</a>
+                                <a href="">Указать другой E-mail</a>
+                            </div>
+                            <h1>Создание портфеля</h1>
+                            <form class="adv-portfolio__form form" action="">
+                                <div class="portfolio__prompt prompt">
+                                    <p class="prompt__title">Создайте свой портфель в 2 простых шага</p>
+                                    <ol>
+                                        <li>Укажите название портфеля, введите сумму и нажмите “Далее”</li>
+                                        <li>Выберите акции из списка, сгенерированного системой и осуществите покупку у своего брокера в соответствии с рекомендациями</li>
+                                    </ol>
+                                </div>
+                                <div class="form__item">
+                                    <label for="portfolio-name" class="form__label">Название портфеля</label>
+                                    <input id="portfolio-name" type="text" placeholder="Портфель" />
+                                </div>
+
+                                <div class="form__item">
+                                    <label for="start-sum" class="form__label">Стартовая сумма</label>
+                                    <input id="start-sum" type="text" placeholder="$11,500" />
+                                </div>
+
+                                <div class="form__item">
+                                    <label for="start-sum" class="form__label">Рынок</label>
+                                    <div class="modal-content-switcher-button blockSettings__switcher blockSettings__switcher--thin">
+                                        <label>
+                                            <input type="radio" name="switchAdvisorCountry" class="visually_hidden">
+                                            <span>Россия</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="switchAdvisorCountry" class="visually_hidden" checked="">
+                                            <span>США</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="switchAdvisorCountry" class="visually_hidden">
+                                            <span>Европа</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="switchAdvisorCountry" class="visually_hidden">
+                                            <span>Микс</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form__item">
+                                    <p class="form__textTitle">Советник будет формировать акции рынка США</p>
+                                </div>
+
+                                <div class="adv-portfolio__btns">
+                                    <div class="page__progress progress progress--1-2">
+                                        <span class="progress__value"> 1/2 настройка портфеля </span>
+                                    </div>
+                                    <button type="submit" class="btn btn_blue">Далее</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+
+                    @@include("_footerArea.html")
+                </div>
+            </div>
+        </section>
+
+        @@include("_footer.html")
+    </body>
+</html>

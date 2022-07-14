@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Настройки"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Настройки"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Настройки",
+                    "settingsMenu": "active"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+						<div class="myStrategy blockSettings">
+							<div class="myStrategy-items blockSettings__items">
+
+								<div class="myStrategy-items-item blockSettings__item">
+
+                                    <h3 class="blockSettings__title">Оповещения</h3>
+                                    <div class="myStrategy-items-item-header">
+                                        <button class="myStrategy-items-item-header-toggle blockSettings__toggle">
+                                            <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                        </button>
+                                    </div>
+
+									<div class="myStrategy-items-item-content blockSettings__content" id="tabs">
+
+                                        <!-- <div class="blockSettings__elem">
+                                            <div class="modal-content-switcher-button blockSettings__switcher">
+                                                <label>
+                                                    <input type="radio" name="switcherNotify" class="visually_hidden">
+                                                    <span>Телеграм</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="switcherNotify" class="visually_hidden" checked>
+                                                    <span>Email</span>
+                                                </label>
+                                            </div>
+                                        </div> -->
+
+                                        <ul class="blockSettings__elem modal-content-switcher-button blockSettings__switcher">
+                                            <li><a href="#tab-1">Телеграм</a></li>
+                                            <li><a href="#tab-2">Email</a></li>
+                                        </ul>
+
+                                        <div id="tab-1">
+
+                                            <div class="portfolio__prompt-sticky prompt prompt--danger prompt--blockSetting">
+                                                <div>Оповещения не приходят. Подпишитесь на бота, чтобы активировать</div>
+                                                <a href="#">Перейти в телеграм бота</a>
+                                            </div>
+
+                                            <div class="blockSettings__section">
+
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Оповещения по email
+                                                    </label>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <span class="blockSettings__descr blockSettings__descr--big">Доходность стратегии, состояние активов, сводка</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="blockSettings__section blockSettings__section--disabled">
+                                                <div class="blockSettings__elem">
+                                                    <h4 class="blockSettings__title blockSettings__title--section">Уведомления о портфеле</h4>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox ">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Данные о портфеле
+                                                    </label>
+                                                    <span class="blockSettings__descr">Доходность стратегии, состояние активов, сводка</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="blockSettings__section blockSettings__section--disabled">
+                                                <div class="blockSettings__elem">
+                                                    <h4 class="blockSettings__title blockSettings__title--section">Дивиденды</h4>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox ">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Выплаты
+                                                    </label>
+                                                    <span class="blockSettings__descr">Ближайшая выплата, компания, сумма, сумма выплаченная в этом месяце, сумма ожидаемая в этом месяце</span>
+                                                    <div class="modal-content-switcher-button blockSettings__switcher blockSettings__switcher--thin">
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackTg" class="visually_hidden">
+                                                            <span>Раз в день</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackTg" class="visually_hidden" checked>
+                                                            <span>Раз в неделю</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackTg" class="visually_hidden">
+                                                            <span>Раз в месяц</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox ">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Изменения
+                                                    </label>
+                                                    <span class="blockSettings__descr">Изменения в дивидендных выплатах отслеживаемых активов</span>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <button class="btn btn_blue">Сохранить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="tab-2">
+                                            
+                                            <div class="blockSettings__section">
+
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Оповещения по email
+                                                    </label>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <span class="blockSettings__descr blockSettings__descr--big">Доходность стратегии, состояние активов, сводка</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="blockSettings__section blockSettings__section--disabled">
+                                                <div class="blockSettings__elem">
+                                                    <h4 class="blockSettings__title blockSettings__title--section">Уведомления о портфеле</h4>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox ">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Данные о портфеле
+                                                    </label>
+                                                    <span class="blockSettings__descr">Доходность стратегии, состояние активов, сводка</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="blockSettings__section blockSettings__section--disabled">
+                                                <div class="blockSettings__elem">
+                                                    <h4 class="blockSettings__title blockSettings__title--section">Дивиденды</h4>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox ">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Выплаты
+                                                    </label>
+                                                    <span class="blockSettings__descr">Ближайшая выплата, компания, сумма, сумма выплаченная в этом месяце, сумма ожидаемая в этом месяце</span>
+                                                    <div class="modal-content-switcher-button blockSettings__switcher blockSettings__switcher--thin">
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackMail" class="visually_hidden" checked>
+                                                            <span>Раз в день</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackMail" class="visually_hidden">
+                                                            <span>Раз в неделю</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackMail" class="visually_hidden">
+                                                            <span>Раз в месяц</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox ">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Изменения
+                                                    </label>
+                                                    <span class="blockSettings__descr">Изменения в дивидендных выплатах отслеживаемых активов</span>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <button class="btn btn_blue">Сохранить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                       
+
+									</div>
+
+								</div>
+
+                                <div class="myStrategy-items-item blockSettings__item">
+
+                                    <h3 class="blockSettings__title">Налоги и комиссии</h3>
+                                    <div class="myStrategy-items-item-header">
+                                        <button class="myStrategy-items-item-header-toggle blockSettings__toggle">
+                                            <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                        </button>
+                                    </div>
+
+									<div class="myStrategy-items-item-content blockSettings__content">
+                                        <div class="blockSettings__section">
+
+                                            <div class="blockSettings__elem">
+                                                <label class="checkbox-toggle blockSettings__checkbox">
+                                                    <input class="checkbox-toggle__input" type="checkbox">
+                                                    <span class="checkbox-toggle__toggle"></span> Налог на прибыль
+                                                </label>
+                                            </div>
+                                            <div class="blockSettings__elem">
+                                                <div class="blockSettings__authForm authForm-content error">
+                                                    <div class="authForm-content-group error">
+                                                        <div class="authForm-content-group-input">
+                                                            <input type="email" placeholder="5 процентов" class="input_text">
+                                                        </div>
+                                                        <div class="authForm-content-group-message">
+                                                            <span>Введено неверное значение</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="blockSettings__elem">
+                                                <label class="checkbox-toggle blockSettings__checkbox">
+                                                    <input class="checkbox-toggle__input" type="checkbox">
+                                                    <span class="checkbox-toggle__toggle"></span> Налог на дивиденды
+                                                </label>
+                                            </div>
+
+                                            <div class="blockSettings__elem">
+                                                <label class="checkbox-toggle blockSettings__checkbox">
+                                                    <input class="checkbox-toggle__input" type="checkbox">
+                                                    <span class="checkbox-toggle__toggle"></span> Комиссии по сделкам
+                                                </label>
+                                            </div>
+
+                                            <div class="blockSettings__elem">
+                                                <button class="btn btn_blue">Сохранить</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+								</div>
+
+                                <div class="myStrategy-items-item blockSettings__item">
+
+                                    <h3 class="blockSettings__title">Аккаунт</h3>
+                                    <div class="myStrategy-items-item-header">
+                                        <button class="myStrategy-items-item-header-toggle blockSettings__toggle">
+                                            <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                        </button>
+                                    </div>
+
+									<div class="myStrategy-items-item-content blockSettings__content">
+
+                                        <div class="blockSettings__authForm authForm-content error">
+                                            <div class="authForm-content-group error">
+                                                <div class="authForm-content-group-label">
+                                                    <h4>E-mail</h4>
+                                                </div>
+                                                <div class="authForm-content-group-input">
+                                                    <input type="email" placeholder="Beat@gmail.com" class="input_text">
+                                                </div>
+                                                <div class="authForm-content-group-message">
+                                                    <span>Введите корректный E-mail</span>
+                                                </div>
+                                            </div>
+                                            <div class="authForm-content-group error">
+                                                <div class="authForm-content-group-label">
+                                                    <h4>Пароль</h4>
+                                                </div>
+                                                <div class="authForm-content-group-input icon">
+                                                    <input type="password" class="input_text">
+                                                    <svg class="eye eye_open"><use xlink:href="img/main.svg#eye"></use></svg>
+                                                    <svg class="eye eye_close"><use xlink:href="img/main.svg#eye_slash"></use></svg>
+                                                </div>
+                                                <div class="authForm-content-group-message">
+                                                    <span>Это поле обязательно для заполнения</span>
+                                                </div>
+                                            </div>
+                                            <div class="authForm-content-group error">
+                                                <div class="authForm-content-group-label">
+                                                    <h4>Повторите пароль</h4>
+                                                </div>
+                                                <div class="authForm-content-group-input icon">
+                                                    <input type="password" class="input_text">
+                                                    <svg class="eye eye_open"><use xlink:href="img/main.svg#eye"></use></svg>
+                                                    <svg class="eye eye_close"><use xlink:href="img/main.svg#eye_slash"></use></svg>
+                                                </div>
+                                                <div class="authForm-content-group-message">
+                                                    <span>Это поле обязательно для заполнения</span>
+                                                </div>
+                                            </div>
+                                            <div class="authForm-content-group">
+                                                <div class="authForm-content-group-error">
+                                                    <p>Не все обязательные поля заполнены</p>
+                                                </div>
+                                            </div>
+                                            <div class="authForm-content-btn half">
+                                                <button class="btn btn_blue">Сохранить</button>
+                                                <button class="btn btn--danger-transparent">Удалить профиль</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+								</div>
+
+                                <div class="myStrategy-items-item blockSettings__item">
+
+                                    <h3 class="blockSettings__title">Отображение портфеля</h3>
+                                    <div class="myStrategy-items-item-header">
+                                        <button class="myStrategy-items-item-header-toggle blockSettings__toggle">
+                                            <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                        </button>
+                                    </div>
+
+									<div class="myStrategy-items-item-content blockSettings__content">
+
+                                        <div class="blockSettings__elem blockSettings__authForm authForm-content">
+                                            <div class="authForm-content-group">
+                                                <div class="authForm-content-group-label">
+                                                    <h4>Название портфеля</h4>
+                                                </div>
+                                                <div class="authForm-content-group-input inline">
+                                                    <input type="text" class="input_text">
+                                                    <button class="btn btn_blue">Применить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--thin">
+                                            <input class="checkbox-toggle__input" type="checkbox">
+                                            <span class="checkbox-toggle__toggle"></span> Отображать Советника в списке стратегий
+                                        </label>
+
+                                    </div>
+
+								</div>
+
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

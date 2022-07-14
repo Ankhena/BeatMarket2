@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Дивиденды"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Поддержка"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Поддержка",
+                    "supportMenu": "active"
+				})
+
+				<div class="main-content">
+                    <div class="main-contentPadding support">
+
+                        <div class="support__write supportWrite">
+
+                            <div class="supportWrite__header">
+                                <h3 class="supportWrite__title">Написать в поддержку</h3>
+                                <div class="supportWrite__close">
+                                    <svg class="supportWrite__icon"><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+                                </div>
+                            </div>
+
+                            <div class="supportWrite__content">
+                                <div class="supportWrite__item inputGroup">
+                                    <span class="inputGroup__label">Тема</span>
+                                    <div class="inputGroup__item">
+                                        <input class="inputGroup__control" type="text" placeholder="Введите тему">
+                                    </div>
+                                </div>
+                                <div class="supportWrite__item inputGroup">
+                                    <span class="inputGroup__label">Сообщение</span>
+                                    <div class="inputGroup__item">
+                                        <textarea class="inputGroup__control" rows="5" placeholder="Ваше сообщение"></textarea>
+                                    </div>
+                                </div>
+                                <button class="supportWrite__item supportWrite__item--btn btn btn_blue">Отправить</button>
+                            </div>
+                        </div>
+
+                        <div class="support__ticket ticket">
+                            <div class="ticket__content">
+                                <div class="ticket__header">
+                                    <h2 class="ticket__title">Ваши тикеты</h2>
+                                </div>
+                                <div class="ticket__controls">
+                                    <div class="ticket__control ticket__control--theme inputGroup">
+                                        <span class="inputGroup__label">Тема</span>
+                                        <div class="inputGroup__item">
+                                            <input class="inputGroup__control inputGroup__control--padding" type="text" placeholder="Поиск по темам">
+                                            <svg class="inputGroup__icon"><use xlink:href="img/main.svg#icon-searchTicket"></use></svg>
+                                        </div>
+                                    </div>
+                                    <div class="ticket__control inputGroup">
+                                        <span class="inputGroup__label">Период</span>
+                                        <div class="inputGroup__item inputGroup__item--date">
+                                            <input class="inputGroup__control" type="text" value="06.07.2021 - 23.07.2021" disabled>
+                                            <svg class="inputGroup__icon"><use xlink:href="img/main.svg#icon-calendarTicket"></use></svg>
+                                        </div>
+                                    </div>
+                                    <div class="ticket__control inputGroup">
+                                        <span class="inputGroup__label">Статус</span>
+                                        <div class="inputGroup__item">
+
+                                            <div class="inputGroup__control inputSelect">
+
+                                                <input class="inputSelect__checkbox visually_hidden" id="ticketStatus" type="checkbox">
+
+                                                <label class="inputSelect__container" for="ticketStatus">
+                                                    <span class="inputSelect__value">Все статусы</span>
+                                                    <svg class="inputSelect__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                </label>
+
+                                                <div class="inputSelect__dropdown inputSelect__dropdown">
+                                                    <label class="inputSelect__item">
+                                                        <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked>
+                                                        <span class="inputSelect__choose radio_custom">Все статусы</span>
+                                                    </label>
+                                                    <label class="inputSelect__item">
+                                                        <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" >
+                                                        <span class="inputSelect__choose radio_custom">Ожидает</span>
+                                                    </label>
+                                                    <label class="inputSelect__item">
+                                                        <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                                                        <span class="inputSelect__choose radio_custom">В архиве</span>
+                                                    </label>
+                                                    <label class="inputSelect__item">
+                                                        <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                                                        <span class="inputSelect__choose radio_custom">Есть ответ</span>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- <div class="compare-menu-choose-item">
+                                                <div class="compare-menu-choose-item-name">
+                                                    <span class="success"></span>
+                                                    <label class="compare-menu-choose-item-btn stategyPromo-graph-info-btn btn_mainCash">
+
+                                                        <input type="checkbox" class="visually_hidden">
+                                        
+                                                        <span class="selected">S&P 500</span>
+                                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                        
+                                                        <div class="dropdown">
+                                                            <label class="dropdown-item">
+                                                                <input type="radio" name="myPortfolioRadio" class="visually_hidden">
+                                                                <span class="radio_custom">Стратегия удачи</span>
+                                                            </label>
+                                                            <label class="dropdown-item">
+                                                                <input type="radio" name="myPortfolioRadio" class="visually_hidden">
+                                                                <span class="radio_custom">Стратегия 2</span>
+                                                            </label>
+                                                            <label class="dropdown-item">
+                                                                <input type="radio" name="myPortfolioRadio" class="visually_hidden">
+                                                                <span class="radio_custom">Максимальный выкуп по акциям</span>
+                                                            </label>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div> -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ticket__table ticketTable">
+                                <div class="ticketTable__row ticketTable__row--header">
+                                    <span class="ticketTable__item">Номер</span>
+                                    <span class="ticketTable__item ticketTable__item--grow">Тема</span>
+                                    <span class="ticketTable__item">Дата</span>
+                                    <span class="ticketTable__item">Статус</span>
+                                </div>
+    
+                                <div class="ticketTable__row">
+                                    <div class="ticketTable__item ticketTable__item--mobile ticketTable__item--header">
+                                        <span class="ticketTable__title">Вопрос по тарифу советника</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Номер</span>
+                                        <span class="ticketTable__value ticketTable__value--num">№254627311</span>
+                                    </div>
+                                    <div class="ticketTable__item ticketTable__item--theme ticketTable__item--grow">
+                                        <span class="ticketTable__subtitle">Тема</span>
+                                        <span class="ticketTable__value">Вопрос по тарифу советника</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Дата</span>
+                                        <span class="ticketTable__value">18.10.2021</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Статус</span>
+                                        <div class="ticketTable__value ticketTableStatus ticketTableStatus--wait">Ожидает</div>
+                                    </div>
+                                    <div class="ticketTable__item ticketTable__item--mobile">
+                                        <a class="ticketTable__link" href="#">Перейти в диалог</a>
+                                    </div>
+                                </div>
+    
+                                <div class="ticketTable__row">
+                                    <div class="ticketTable__item ticketTable__item--mobile ticketTable__item--header">
+                                        <span class="ticketTable__title">Проверка работоспособности функции номер 3</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Номер</span>
+                                        <span class="ticketTable__value ticketTable__value--num">№254627311</span>
+                                    </div>
+                                    <div class="ticketTable__item ticketTable__item--theme ticketTable__item--grow">
+                                        <span class="ticketTable__subtitle">Тема</span>
+                                        <span class="ticketTable__value">Проверка работоспособности функции номер 3</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Дата</span>
+                                        <span class="ticketTable__value">18.10.2021</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Статус</span>
+                                        <div class="ticketTable__value ticketTableStatus ticketTableStatus--archive">В архиве</div>
+                                    </div>
+                                    <div class="ticketTable__item ticketTable__item--mobile">
+                                        <a class="ticketTable__link" href="#">Перейти в диалог</a>
+                                    </div>
+                                </div>
+                                <div class="ticketTable__row">
+                                    <div class="ticketTable__item ticketTable__item--mobile ticketTable__item--header">
+                                        <span class="ticketTable__title">Проверка работоспособности функции номер 3</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Номер</span>
+                                        <span class="ticketTable__value ticketTable__value--num">№254627311</span>
+                                    </div>
+                                    <div class="ticketTable__item ticketTable__item--theme ticketTable__item--grow">
+                                        <span class="ticketTable__subtitle">Тема</span>
+                                        <span class="ticketTable__value">Проверка работоспособности функции номер 3</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Дата</span>
+                                        <span class="ticketTable__value">18.10.2021</span>
+                                    </div>
+                                    <div class="ticketTable__item">
+                                        <span class="ticketTable__subtitle">Статус</span>
+                                        <div class="ticketTable__value ticketTableStatus ticketTableStatus--answer">
+                                            <span class="ticketTableStatus__text">Есть ответ</span>
+                                            <svg class="ticketTableStatus__icon"><use xlink:href="img/main.svg#icon-WarningCircle"></use></svg>
+                                        </div>
+                                    </div>
+                                    <div class="ticketTable__item ticketTable__item--mobile">
+                                        <a class="ticketTable__link" href="#">Перейти в диалог</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

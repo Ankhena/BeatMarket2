@@ -1,0 +1,61 @@
+// [[ Цвета, используемые в проекте. Должны начинаться с $color_ ]]
+
+$color_body_bg: #EAF1FE;
+$color_header_bg: linear-gradient(180deg, #FFFFFF -70.87%, rgba(255, 255, 255, 0) 100%);
+$color_menu_bg: linear-gradient(180deg, #EEF3FE 0%, #F5F9FF 100%);
+$color_menu_bg_mobile: #F0F5FE;
+
+$color_app_fixed_menus: linear-gradient(180deg, #F5F8FF 0%, #EAF1FE 100%);
+
+$color_block_border: #D3E3FF;
+$color_block_bg: #FCFDFF;
+$color_border_dop: #E6EEFF;
+$color_grey_counter: #F8F8F8;
+$color_bg_notify: #F0F6FF;
+
+$color_card_disabled: #F7F7FD;
+$color_checkbox_border: #E1E1E1;
+
+$color_black_main: #373943;
+$color_black_title: #24252E;
+$color_green: #199F27;
+$color_green_light_table_header: #1BD32F;
+$color_green_light: rgba(25, 159, 39, 0.5);
+$color_blue_hover: #1B2D9D;
+$color_blue: #3E54D8;
+$color_yellow: #F3B63F;
+$color_red: #ED6373;
+$color_red_bright: #DE4355;
+$color_red_light: #ff566a;
+
+$color_red_border: #E88390;
+
+$color-inverse: #ffffff;
+$color_grey: #929398;
+$color_lighten_grey: #F5F6FD;
+$color_light_grey: #F5F5F5;
+$color_table_header: $color_lighten_grey;
+$color_table_header_title: #606371;
+$color_border_graph_banch: #EDEDED;
+$color_soft_bg: #FAFCFF;
+
+$color_strategy_item_outline: #f7f9ff;
+$breadcrumb_bg: #F6F7FD;
+$breadcrumb_border: #8C9BEA;
+
+$color_border_in_blue: #4B68FF;
+
+
+$color_white: #fff;
+$color_primary: tomato;
+
+$color_burger_show: #222222;
+$color_burger_close: #666666;
+
+$color_slider_dot: $color_block_border;
+$color_slider_dot_active: $color_blue;
+
+$color_progress_from: $color_blue;
+$color_progress_to: $color-inverse;
+$danger_bg: #F4EFE7;
+$color_th_bg: $color_lighten_grey;

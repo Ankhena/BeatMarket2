@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include('_head.html', { "title": "BeatMarket - Компании" })
+    </head>
+    <body>
+
+        @@include("_header.html", {
+			"title": "Аналитика",
+            "searchBar": "true",
+            "searchBarClass": "headerSearchBar"
+		})
+
+        <section class="section-outer section-main">
+            <div class="main">
+                @@include("_menu.html", { 
+                    "title": "Аналитика",
+                    "analyticMenu": "active"
+                })
+
+                <div class="main-content">
+                    <div class="main-contentPadding">
+
+                        <div class="main-content__elem main-content__elem--promo analyticCreate">
+                            <div class="analyticCreate__switcher">
+                                <div class="modal-content-switcher-button">
+                                    <label>
+                                        <input type="radio" name="switcherAnalyticCreate" class="visually_hidden" checked="">
+                                        <span>Акции и ETF</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="switcherAnalyticCreate" class="visually_hidden">
+                                        <span>Криптовалюта</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="analyticCreate__search">
+                                <p class="analyticCreate__searchText">Укажите кампанию в поисковой строке, чтобы получить сводку</p>
+                                <div class="analyticCreate__searchInput inputGroup__item">
+                                    <input class="inputGroup__control inputGroup__control--padding" type="text" placeholder="AAPL или Apple ">
+                                    <svg class="inputGroup__icon"><use xlink:href="img/main.svg#icon-searchTicket"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-content__elem">
+                            <picture>
+                                <source media="(max-width: 576px)" srcset="./img/analyticStockDummyMob.svg">
+                                <img class="imgMax" src="./img/analyticStockDummy.svg" alt="Заглушка полей для аналитики">
+                            </picture>                                                  
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include("_footer.html")
+    </body>
+</html>

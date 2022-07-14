@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Подписка без дешевого тарифа"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Подписка"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Подписка",
+                    "advisorMenu": "active"
+				})
+
+				<div class="main-content main-contentPadding advisorRateList">
+
+                    <div class="advisorRateList__block">
+                        <div class="prompt-subscribe">
+                            <div class="prompt-subscribe__description prompt-subscribe__description--short">
+                                <div class="prompt-subscribe__header">
+                                    <h4 class="prompt-status__info prompt-status__info--mobile--full">Цель: Рост капитала</h4>
+                                    <div class="prompt-subscribe__status prompt-status">
+                                        <span class="prompt-subscribe__title prompt-status__info--mobile--full">Выбранный тариф:</span>
+                                        <span class="prompt-status__info prompt-status__info--mobile--full">Американский рынок</span>
+                                        <span class="prompt-status__info prompt-status__info--primary">690 руб.</span>
+                                        <span class="prompt-status__date">/ месяц</span>
+                                    </div>
+                                </div>
+                                <div class="prompt-subscribe__subheader prompt-details">
+                                    <span class="prompt-details__info">Доступ до <strong class="prompt-value prompt-value">06.06.2021</strong></span>
+                                    <span class="prompt-details__info">Осталось <strong class="prompt-value prompt-value">14 дней</strong></span>
+                                    <span class="prompt-details__info">Автопродление <strong class="prompt-value prompt-value--success">включено</strong></span> 
+                                </div>
+                            </div>
+                            <div class="prompt-subscribe__buttons">
+                                <button class="prompt-subscribe__button btn btn_blue">
+                                    <span class="btn__text">Продлить подписку</span>
+                                </button>
+                                <button class="prompt-subscribe__button btn btn_primary">Отменить</button>
+                            </div>
+                        </div>
+    
+                        <div class="prompt-subscribe">
+                            <div class="prompt-subscribe__description prompt-subscribe__description--short">
+                                <div class="prompt-subscribe__header">
+                                    <h4 class="prompt-status__info prompt-status__info--mobile--full">Цель: Регулярный доход</h4>
+                                    <div class="prompt-subscribe__status prompt-status">
+                                        <span class="prompt-subscribe__title prompt-status__info--mobile--full">Выбранный тариф:</span>
+                                        <strong class="prompt-value prompt-value--error prompt-status__info--mobile--full">Тариф не выбран</strong>
+                                    </div>
+                                </div>
+                                <div class="prompt-subscribe__subheader prompt-details">
+                                    <div class="prompt">
+                                        Вы еще не оформили тариф для этой цели. Под эту цель вы можете оформить <a href="#">отдельную подписку</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subscribe-changer">
+                        <label class="checkbox-toggle">
+                            <span class="checkbox-toggle__descr">Подписка на месяц</span>
+                            <input class="checkbox-toggle__input" type="checkbox">
+                            <span class="checkbox-toggle__toggle"></span>
+                            <span class="checkbox-toggle__descr checkbox-toggle__descr--light">Год <span class="checkbox-toggle__text checkbox-toggle__text--primary">(экономия до 30%)</span></span>
+                        </label>
+                    </div>
+
+                    <div class="myStrategy">
+                        <div class="myStrategy-header">
+                            <h2>Список тарифов</h2>
+                        </div>
+                        <div class="myStrategy-items">
+
+                            <div class="myStrategy-items-item orderHistory">
+                                <div class="myStrategy-items-item-header orderHistory__header">
+
+                                    <h3 class="orderHistory__title">Цель: Рост капитала</h3>
+                                
+                                    <button class="myStrategy-items-item-header-toggle active">
+                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                    </button>
+                                </div>
+
+                                <div class="myStrategy-items-item-content">
+                                    <p class="advisorRateList__text">
+                                        Формирование инвестиционного портфеля из акций, которые помимо доходности за счет роста котировок приносят 
+                                        регулярную доходность в виде дивидендов. Мечта таких инвесторов — жить «на дивиденды», не уменьшая при этом
+                                        «тело» капитала, сами акции в портфеле. Пример описания стратегии
+                                    </p>
+
+                                    <div class="rate-cards">
+        
+                                        <div class="tarrifsCard softBg blue">
+                                            <div class="tarrifsCard-header">
+                                                <h3>Российский рынок</h3>
+                                            </div>
+                                            <div class="tarrifsCard-cost">
+                                                <p>
+                                                    <strong>690 руб.</strong>
+                                                    <span>/ месяц</span>
+                                                </p>
+                                            </div>
+                                            <div class="tarrifsCard-text">
+                                                <ul class="baseList">
+                                                    <li>Топ 10 акций РФ по рейтингу BM. Ежемесячный дайджест</li>
+                                                    <li>Рейтинг BM заработает внутри сервиса</li>
+                                                    <li>Советник сбалансирует ваш портфель акциями рейтинга BM</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tarrifsCard-btn">
+                                                <button class="btn btn_tarrifs">
+                                                    <span class="btn__text">Оформить подписку</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="tarrifsCard softBg yellow">
+                                            <div class="tarrifsCard-header">
+                                                <h3>Американский рынок</h3>
+                                            </div>
+                                            <div class="tarrifsCard-cost">
+                                                <p>
+                                                    <strong>890 руб.</strong>
+                                                    <span>/ месяц</span>
+                                                </p>
+                                            </div>
+                                            <div class="tarrifsCard-text">
+                                                <ul class="baseList">
+                                                    <li>Топ 10 акций РФ по рейтингу BM. Ежемесячный дайджест</li>
+                                                    <li>Рейтинг BM заработает внутри сервиса</li>
+                                                    <li>Советник сбалансирует ваш портфель акциями рейтинга BM</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tarrifsCard-btn">
+                                                <span class="status success">Активный</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="tarrifsCard softBg red">
+                                            <div class="tarrifsCard-header">
+                                                <h3>Рынки USA+РФ+Европа</h3>
+                                            </div>
+                                            <div class="tarrifsCard-cost">
+                                                <p>
+                                                    <strong>690 руб.</strong>
+                                                    <span>/ месяц</span>
+                                                </p>
+                                            </div>
+                                            <div class="tarrifsCard-text">
+                                                <ul class="baseList">
+                                                    <li>Топ 10 акций РФ по рейтингу BM. Ежемесячный дайджест</li>
+                                                    <li>Рейтинг BM заработает внутри сервиса</li>
+                                                    <li>Советник сбалансирует ваш портфель акциями рейтинга BM</li>
+                                                </ul>
+                                            </div>
+                                            <div class="tarrifsCard-btn">
+                                                <button class="btn btn_tarrifs">
+                                                    <span class="btn__text">Оформить подписку</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+
+                            <div class="myStrategy-items-item orderHistory">
+                                <div class="myStrategy-items-item-header orderHistory__header">
+
+                                    <h3 class="orderHistory__title">Цель: Регулярный доход</h3>
+                                
+                                    <button class="myStrategy-items-item-header-toggle active">
+                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                    </button>
+                                </div>
+
+                                <div class="myStrategy-items-item-content">
+                                    <p class="advisorRateList__text">
+                                        Формирование инвестиционного портфеля из акций, которые помимо доходности за счет роста котировок приносят 
+                                        регулярную доходность в виде дивидендов. Мечта таких инвесторов — жить «на дивиденды», не уменьшая при этом
+                                        «тело» капитала, сами акции в портфеле. Пример описания стратегии
+                                    </p>
+
+                                    <div class="rate-cards">
+
+                                        <div class="tarrifsCard softBg yellow">
+                                            <div class="tarrifsCard-header">
+                                                <h3>Американский рынок</h3>
+                                            </div>
+                                            <div class="tarrifsCard-cost">
+                                                <p>
+                                                    <strong>690 руб.</strong>
+                                                    <span>/ месяц</span>
+                                                </p>
+                                            </div>
+                                            <div class="tarrifsCard-text">
+                                                <ul class="baseList">
+                                                    <li>Топ 20 дивидендных акций USA со скидкой от 20% и надежностью выплат 97%. Еженедельный дайджест</li>
+                                                    <li>Рейтинг DBM заработает внутри сервиса <strong>(скоро)</strong></li>
+                                                </ul>
+                                            </div>
+                                            <div class="tarrifsCard-btn">
+                                                <button class="btn btn_tarrifs">
+                                                    <span class="btn__text">Оформить подписку</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Заглушка"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Стартовый портфель. Стратегия 2",
+										"cashStatus": "success",
+										"cashValue": "21%",
+										"toggleActive": ""
+									})
+
+								</div>
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "",
+										"cashValue": "0%",
+										"toggleActive": "active"
+									})
+
+									<div class="myStrategy-items-item-content">
+                                        @@include("_myStrategyNav.html", {
+                                            "myPapers": "",
+                                            "addCompany": "",
+                                            "indicators": "",
+                                            "perfomance": "",
+                                            "dividents": "",
+                                            "news": "",
+                                            "history": ""
+                                        })
+										<div class="myStrategy-emptyPortfolio-container dummy">
+											<div class="info">
+												<h2 class="info-title">Данный раздел еще в разработке, но очень скоро появится</h2>
+                                                <img class="info-img" src="./img/dummy_img.svg" alt="Изображение девушки у доски">
+											</div>
+											<div class="sprites">
+												<svg class="sprites-left"><use xlink:href="img/main.svg#icon-strategy-sprite-red"></use></svg>
+												<svg class="sprites-right"><use xlink:href="img/main.svg#icon-strategy-sprite-green"></use></svg>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Показатели"
+		})
+
+	</head>
+	<body class="viewProfile">
+
+        @@include("_header.html", {
+			"title": "Мои стратегии",
+            "searchBar": "true",
+            "searchBarClass": "headerSearchBar"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				<div class="main-content">
+
+                    <div class="main-content main-contentPadding pageGetPortfolio">
+
+                        <div class="dialogData__link backlink-block">
+                            <a class="backlink" href="#">Вернуться к странице аналитики</a>
+                        </div>
+
+                        <div class="pageGetPortfolio__container">
+                            <div class="pageGetPortfolio__info">
+                                <h1 class="pageGetPortfolio__title">Заведите портфель на <span class="pageGetPortfolio__primary">BeatMarket</span></h1>
+                                <h2 class="pageGetPortfolio__subtitle">И анализируйте без ограничений</h2>
+                            </div>
+
+                            <div class="pageGetPortfolio__content">
+                                <div class="pageGetPortfolio__container blockSection blockSection--card blockSection--getPortfolio">
+                                    <div class="pageGetPortfolio__items">
+                                        <div class="pageGetPortfolio__item blockSection blockSection--card blockSection--getPortfolio">
+                                            <img class="pageGetPortfolio__img" src="./img/getPortfolio/getPortfolioIcon_1.svg" alt="Иконка роста акций">
+                                            <p class="pageGetPortfolio__text">90 000 компаний</p>
+                                        </div>
+                                        <div class="pageGetPortfolio__item blockSection blockSection--card blockSection--getPortfolio">
+                                            <img class="pageGetPortfolio__img" src="./img/getPortfolio/getPortfolioIcon_2.svg" alt="Иконка роста акций">
+                                            <p class="pageGetPortfolio__text">25 лет данных</p>
+                                        </div>
+                                        <div class="pageGetPortfolio__item blockSection blockSection--card blockSection--getPortfolio">
+                                            <img class="pageGetPortfolio__img" src="./img/getPortfolio/getPortfolioIcon_3.svg" alt="Иконка роста акций">
+                                            <p class="pageGetPortfolio__text">Активы всех типов и легкий старт!</p>
+                                        </div>
+                                    </div>
+                                    <div class="pageGetPortfolio__btn">
+                                        <a href="#" class="btn btn_blue">Завести портфель</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        <div class="infoBanner">
+            <div class="infoBanner__content">
+                <svg class="infoBanner__icon"><use xlink:href="img/main.svg#icon_lightning"></use></svg>
+                <span class="infoBanner__text">Подборка акций бьющих рынок</span>
+                <a data-modal="modal_settings" class="infoBanner__btn btn btn_blue" href="#">Узнать</a>
+
+                <div class="infoBanner__close">
+                    <svg><use xlink:href="img/main.svg#icon-closeModal-gray"></use></svg>
+                </div>
+            </div>
+        </div>
+
+        @@include("_footerArea.html")
+        @@include("_footer.html")
+
+	</body>
+</html>

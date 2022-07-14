@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Подписка без дешевого тарифа"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Подписка"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Подписка",
+                    "advisorMenu": "active"
+				})
+
+				<div class="main-content">
+
+                    <div class="main-content main-contentPadding">
+                        <div class="prompt-subscribe">
+                            <div class="prompt-subscribe__description prompt-subscribe__description--short">
+                                <div class="prompt-subscribe__header">
+                                    <h4 class="prompt-subscribe__title">Выбранный тариф:</h4>
+                                    <div class="prompt-subscribe__status prompt-status">
+                                        <span class="prompt-status__info prompt-status__info--mobile--full">Советник</span>
+                                        <span class="prompt-status__info prompt-status__info--primary">690 руб.</span>
+                                        <span class="prompt-status__date">/ месяц</span>
+                                    </div>
+                                </div>
+                                <div class="prompt-subscribe__subheader prompt-details">
+                                    <span class="prompt-details__info">Подписка <strong class="prompt-value prompt-value--success">активна</strong></span> 
+                                    <span class="prompt-details__info">до <strong class="prompt-value prompt-value">06.06.2021</strong></span>
+                                    <span class="prompt-details__info">Осталось <strong class="prompt-value prompt-value">14 дней</strong></span>
+                                </div>
+                            </div>
+                            <div class="prompt-subscribe__buttons">
+                                <button class="prompt-subscribe__button btn btn_blue">
+                                    <svg class="btn__icon btn__icon--blue" data-closeModal><use xlink:href="img/main.svg#icon-rocket-launch"></use></svg>
+                                    <span class="btn__text">Расширить подписку</span>
+                                </button>
+                                <button class="prompt-subscribe__button btn btn_primary">Отменить</button>
+                            </div>
+                        </div>
+
+                        <div class="rate-cards">
+            
+                            <div class="tarrifsCard red">
+                                <div class="tarrifsCard-header">
+                                    <h3>Советник</h3>
+                                </div>
+                                <div class="tarrifsCard-cost">
+                                    <p>
+                                        <strong>690 руб.</strong>
+                                        <span>/ месяц</span>
+                                    </p>
+                                </div>
+                                <div class="tarrifsCard-text">
+                                    <p>
+                                        Управляйте портфелем на автопилоте. 
+                                        Платформа поможет с выбором, проследит за купленными акциями, покажет, на что обратить внимание.
+                                    </p>
+                                </div>
+                                <div class="tarrifsCard-btn">
+                                    <span class="status success">Активный</span>
+                                </div>
+                            </div>
+            
+                            <div class="tarrifsCard disabled yellow">
+                                <div class="tarrifsCard-header">
+                                    <h3>Все включено</h3>
+                                </div>
+                                <div class="tarrifsCard-cost">
+                                    <p>
+                                        <strong>890 руб.</strong>
+                                        <span>/ месяц</span>
+                                    </p>
+                                </div>
+                                <div class="tarrifsCard-text">
+                                    <p>Все функции платформы по выгодной цене. Легко и удобно. Никаких ограничений.</p>
+                                </div>
+                                <div class="tarrifsCard-btn">
+                                    <button class="btn btn_tarrifs btn_share">
+                                        <svg class="btn__icon btn__icon--primary" data-closeModal><use xlink:href="img/main.svg#icon-rocket-launch"></use></svg>
+                                        <span class="btn__text">Расширить подписку</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

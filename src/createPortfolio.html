@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Создание портфеля"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
+
+				<div class="main-content">
+                    <div class="main-content portfolio">
+                        <div class="portfolio-title">
+                            <h1>Создайте свой <br>первый портфель</h1>
+                        </div>
+                        <form class="portfolio-form" action="">
+                            <input class="portfolio-form-input" type="text" placeholder="Название портфеля">
+                            <select class="portfolio-form-select">
+                                <option selected value="SP 500">SP 500</option>
+                                <option value="Nasdaq">Nasdaq</option>
+                                <option value="Dow Jones">Dow Jones</option>
+                            </select>
+                            <div class="portfolio-form-button">
+                                <button class="btn btn_blue">Создать портфель</button>
+                            </div>
+                        </form>
+                        <div class="portfolio-figures">
+                            <svg class="top-left"><use xlink:href="img/main.svg#portfolio_figure_top_left"></use></svg>
+                            <svg class="top-right"><use xlink:href="img/main.svg#portfolio_figure_top_right"></use></svg>
+                            <svg class="bottom-left"><use xlink:href="img/main.svg#portfolio_figure_bottom_left"></use></svg>
+                            <svg class="bottom-right"><use xlink:href="img/main.svg#portfolio_figure_bottom_right"></use></svg>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

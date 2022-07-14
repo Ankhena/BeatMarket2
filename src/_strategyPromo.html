@@ -1,0 +1,166 @@
+<div class="stategyPromo">
+    <div class="stategyPromo-info">
+        <div class="stategyPromo-info-score">
+            @@if (context.addHeader == "true") {
+                <div class="stategyPromo-info-score-header">
+                    <h1>@@headerName</h1>
+                </div>
+            }
+            <div class="stategyPromo-info-score-main">
+                <h4>Текущий счёт</h4>
+                <p>$ 1 234 567,00</p>
+            </div>
+            <div class="stategyPromo-info-score-secondary">
+                <div class="stategyPromo-info-score-secondary-item">
+                    <h4>Общий доход</h4>
+                    <p class="success">+11 553,29 (+7,83%)</p>
+                </div>
+                <div class="stategyPromo-info-score-secondary-item">
+                    <h4>Дневной доход</h4>
+                    <p class="error">–10 171,38 (-0,73%)</p>
+                </div>
+            </div>
+        </div>
+        @@if (context.addHeader != "true") {
+        <div class="stategyPromo-info-buttons">
+                <div class="stategyPromo-info-buttons-top">
+                    <button class="btn btn_blue btn-full" data-modal="modal_add">
+                        <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
+                        <span>Добавить стратегию</span>
+                    </button>
+                </div>
+                <div class="stategyPromo-info-buttons-bottom">
+                    <label class="btn btn_primary btn-full btn-label">
+                        <svg><use xlink:href="img/main.svg#icon-ShareNetwork"></use></svg>
+                        <span>Поделиться</span>
+    
+                        <input type="checkbox" class="visually_hidden">
+                        <div class="dropdown">
+                            <div class="dropdown-social">
+                                <a href="#" class="dropdown-social-icon">
+                                    <svg><use xlink:href="img/main.svg#icon-facebook"></use></svg>
+                                </a>
+                                <a href="#" class="dropdown-social-icon">
+                                    <svg><use xlink:href="img/main.svg#icon-telegram"></use></svg>
+                                </a>
+                                <a href="#" class="dropdown-social-icon">
+                                    <svg><use xlink:href="img/main.svg#icon-instagram"></use></svg>
+                                </a>
+                                <a href="#" class="dropdown-social-icon">
+                                    <svg><use xlink:href="img/main.svg#icon-twitter"></use></svg>
+                                </a>
+                            </div>
+                            <div class="dropdown-link">
+                                <div class="dropdown-link-title">
+                                    <h5>Ссылка на портфель</h5>
+                                </div>
+                                <div class="dropdown-link-form">
+                                    <input type="text" value="https://beatmarket.one/portfolio">
+                                    <button class="btn btn_primary">
+                                        <svg class="top-left"><use xlink:href="img/main.svg#icon-link"></use></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dropdown-share">
+                                <h5>Ссылка доступна для всех</h5>
+                                <div class="dropdown-share-toggle">
+                                    <input type="checkbox" id="checkbox-1" checked>
+                                    <label for="checkbox-1"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <button class="btn btn_primary">
+                        <svg><use xlink:href="img/main.svg#icon-Printer"></use></svg>
+                    </button>
+                </div>
+        </div>
+        }
+    </div>
+    <div class="stategyPromo-graph">
+        <div class="stategyPromo-graph-info">
+            <label class="stategyPromo-graph-info-btn btn_mainCash" for="mainCash">
+
+                <input id="mainCash" type="checkbox" class="visually_hidden">
+
+                <span>Общий доход</span>
+                <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+
+                <div class="selectDropdown">
+                    <label class="selectDropdown-item border">
+                        <input type="checkbox" name="mainCashItems" class=" visually_hidden">
+                        <span class="checkbox_custom">Общий доход</span>
+                    </label>
+                    <label class="selectDropdown-item">
+                        <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                        <span class="checkbox_custom">Стратегия удачи</span>
+                    </label>
+                    <label class="selectDropdown-item">
+                        <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                        <span class="checkbox_custom">Стратегия 2</span>
+                    </label>
+                    <label class="selectDropdown-item">
+                        <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                        <span class="checkbox_custom">Максимальный выкуп по акциям</span>
+                    </label>
+                    <div class="selectDropdown-item">
+                        <button class="btn btn_blue">Применить</button>
+                    </div>
+                </div>
+            </label>
+            <div class="stategyPromo-graph-info-content">
+                <div class="stategyPromo-graph-info-content-choose">
+                    <div class="stategyPromo-graph-info-content-choose-item active">
+                        <span>Неделя</span>
+                    </div>
+                    <div class="stategyPromo-graph-info-content-choose-item">
+                        <span>Месяц</span>
+                    </div>
+                    <div class="stategyPromo-graph-info-content-choose-item">
+                        <span>Год</span>
+                    </div>
+                    <div class="stategyPromo-graph-info-content-choose-item dotted" id="chooseDataStrategy">
+                        <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stategyPromo-graph-values">
+            <div class="stategyPromo-graph-values-item primary">
+                <span>Ваш портфель</span>
+                <strong class="success">+6.18%</strong>
+            </div>
+            <div class="stategyPromo-graph-values-item error">
+                <span>S&P 500</span>
+                <strong class="success">+6.18%</strong>
+            </div>
+            <div class="stategyPromo-graph-values-item success">
+                <span>ВМ советник</span>
+                <strong class="success">+8.21%</strong>
+            </div>
+
+            <label class="stategyPromo-graph-values-btn">
+                <input type="checkbox" class="visually_hidden">
+
+                <span class="btn btn_primary"> 
+                    <svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
+                </span>
+
+                <div class="selectDropdown">
+                    <label class="selectDropdown-item border">
+                        <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                        <span class="checkbox_custom">С учетом дивидендов</span>
+                    </label>
+                    <div class="selectDropdown-item buttons">
+                        <button class="btn btn_blue">Сохранить настройки графика</button>
+                        <button class="btn btn_gray">Сбросить</button>
+                    </div>
+                </div>
+
+            </label>
+
+        </div>
+        <div class="stategyPromo-graph-chart mainGraphBlock" id="stategyPromoChart"></div>
+        <span class="stategyPromo-graph-dates" id="chooseDataStrategyValue">21.11.2021 - 28.11.2021</span>
+    </div>
+</div>

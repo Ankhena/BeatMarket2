@@ -1,0 +1,230 @@
+.authForm {
+    &-content {
+
+        &.error {
+            .authForm-content-group-error {
+                display: block;
+            }
+        }
+
+        &.success {
+            .authForm-content-group-success {
+                display: block;
+            }
+        }
+
+        &-group {
+
+            &:not(:first-child) {
+                margin-top: 1.1rem;
+            }
+
+            &.error {
+
+                .authForm-content-group-message {
+                    display: block;
+                }
+
+                .authForm-content-group-input {
+                    .input_text {
+                        border-color: $color_red;
+                    }
+                }
+            }
+
+            &-error, &-success {
+                display: none;
+                text-align: center;
+            }
+
+            &-error {
+                color: $color_red;
+            }
+
+            &-success {
+                color: $color_green;
+            }
+
+            &-label {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5rem;
+
+                @media ($media_sm) {
+                    flex-wrap: wrap;
+                }
+
+                h4 {
+                    color: $color_black_title;
+                    font-weight: 500;
+                    margin-right: 0.7rem;
+
+                    @media ($media_sm) {
+                        margin: 0 0 0.3rem 0;
+                    }
+                }
+
+                span {
+                    font-size: 0.8rem;
+                    color: $color_grey;
+
+                    @media ($media_sm) {
+                        width: 100%;
+                    }
+                }
+
+                strong {
+                    margin-left: auto;
+                    color: $color_blue;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+
+            &-input {
+                
+                &.icon {
+                    position: relative;
+
+                    .input_text {
+                        padding: 16px 40px 16px 25px;
+
+                        ~ .eye_close {
+                            display: none;
+                        }
+
+                        &:focus {
+                            ~ svg {
+                                stroke: $color_blue;
+                            }
+                        }
+                    }
+
+                    svg {
+                        position: absolute;
+                        width: 1.2rem;
+                        right: 1rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        stroke: $breadcrumb_border;
+                        transition: 0.3s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover {
+                            stroke: $color_blue;
+                        }
+                    }
+
+                    &.visible {
+                        .input_text {
+                            ~ .eye_close {
+                                display: block;
+                            }
+
+                            ~ .eye_open {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &.inline {
+                    display: flex;
+
+                    @media ($media_sm) {
+                        display: block;
+
+                        .btn {
+                            margin: 1rem 0 0 0;
+                        }
+                    }
+
+                    .btn {
+                        padding: 1.2rem 2.5rem;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+
+            &-message {
+                display: none;
+                margin-top: 0.5rem;
+
+                span {
+                    font-size: 0.8rem;
+                    color: $color_red;
+                }
+            }
+
+        }
+
+        &-btn {
+            display: flex;
+            margin-top: 1.8rem;
+
+            .btn {
+                width: 100%;
+                padding: 1.4rem 0;
+                text-decoration: none;
+                text-align: center;
+
+                &.btn_reverse {
+                    background-color: transparent;
+                    color: $color_blue;
+
+                    &:hover {
+                        color: $color_blue_hover;
+                    }
+                }
+            }
+
+            &.half {
+                justify-content: space-between;
+
+                .btn {
+                    flex-basis: 49%;
+                }
+
+                @media ($media_sm) {
+                    flex-direction: column;
+
+                    .btn {
+                        &:not(:last-child) {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-link {
+            margin-top: 1.8rem;
+            text-align: center;
+            font-weight: 500;
+
+            strong {
+                cursor: pointer;
+                color: $color_blue;
+                font-weight: 600;
+            }
+
+            &.icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                strong {
+                    font-weight: 500;
+                }
+
+                svg {
+                    width: .7rem;
+                    height: .7rem;
+                    stroke: #3e54d8;
+                    transform: rotate(90deg) translateX(-1px);
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+}

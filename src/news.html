@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Новости"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%",
+										"toggleActive": "active"
+									})
+
+									<div class="myStrategy-items-item-content">
+                                        @@include("_myStrategyNav.html", {
+                                            "myPapers": "",
+                                            "addCompany": "",
+                                            "indicators": "",
+                                            "perfomance": "",
+                                            "dividents": "",
+                                            "news": "active",
+                                            "history": ""
+                                        })
+										<div class="myStrategy-news-container the_table">
+											<div class="table">
+                                                <div class="table-header">
+                                                    <h5>Компания</h5>
+                                                    <h5>Дата</h5>
+                                                    <h5>Заголовок</h5>
+                                                </div>
+                                                <div class="table-content">
+                                                    <div class="table-content-company">3M Co MMM</div>
+                                                    <div class="table-content-item">
+                                                        <span class="company">3M Co MMM</span>
+                                                        <span class="date">27.04.2021</span>
+                                                        <span class="text">Франция намерена исследовать, почему героям были возданы соответствующие почести</span>
+                                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <span class="company"></span>
+                                                        <span class="date">27.04.2021</span>
+                                                        <span class="text">Инцидент не исчерпан: герцог графства коронован</span>
+                                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <span class="company"></span>
+                                                        <span class="date">28.04.2021</span>
+                                                        <span class="text">Подтверждено: героям были возданы соответствующие почести. Произошло это не так давно все были...</span>
+                                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <span class="company"></span>
+                                                        <span class="date">29.04.2021</span>
+                                                        <span class="text">
+                                                            Акции Сбербанка обновили исторический максимум в районе 300 рублей на фоне укрепления рубля к основным мировым валютам, свидетельствуют данные торгов.
+                                                            Бумаги российских компаний в основном дорожают на торгах в Лондоне. 
+                                                            <br><br>
+                                                            К 11.07 мск акции крупнейшего в РФ банка дорожали на 0,51% — до 294,68 рубля. Ранее в ходе торгов понедельника они обновили исторический максимум, поднявшись до 296,34 рубля.
+                                                            Доллар при этом опускался на 16 копеек — до 74,82 рубля, в район минимумов за месяц.
+                                                            <br><br>
+                                                            Индекс Мосбиржи повышается в пределах 0,1%.
+                                                        </span>
+                                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <span class="company"></span>
+                                                        <span class="date">29.04.2021</span>
+                                                        <span class="text">Все чаще появляется информация о том, что глубокий уровень погружения не стал.</span>
+                                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                    </div>
+                                                    <div class="table-content-company">Amgen inc AMGN</div>
+                                                    <div class="table-content-item">
+                                                        <span class="company">Amgen inc AMGN</span>
+                                                        <span class="date">30.04.2021</span>
+                                                        <span class="text">Подтверждено: героям были возданы соответствующие почести. Произошло это не так давно все были...</span>
+                                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <span class="company"></span>
+                                                        <span class="date">30.04.2021</span>
+                                                        <span class="text">Франция намерена исследовать, почему героям были возданы соответствующие почести</span>
+                                                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include('_head.html', {
+  "title": "BeatMarket - Купите эти акции у своего брокера"
+  })
+
+</head>
+<body>
+
+@@include("_header.html", {
+"title": "Рефералы"
+})
+
+<section class="section-outer section-main">
+  <div class="main">
+
+    @@include("_menu.html", {
+    "title": "Рефералы"
+    })
+
+    <!--    <h1 class="main-title">Статистика</h1>-->
+
+    <div class="main-content">
+      <div class="main-content advisor">
+
+        <section class="referrals">
+          <h1 class="referrals__title">Статистика</h1>
+          <section class="referrals__stats">
+
+            <dl class="referrals__description">
+              <div class="referrals__descr-item">
+                <dt>переходов</dt>
+                <dd>45</dd>
+              </div>
+              <div class="referrals__descr-item">
+                <dt>регистраций</dt>
+                <dd>35</dd>
+              </div>
+              <div class="referrals__descr-item referrals__descr-item--zero">
+                <dt>аккаунтов активно</dt>
+                <dd>0</dd>
+              </div>
+              <div class="referrals__descr-item referrals__descr-item--zero">
+                <dt>дней бесплатной подписки</dt>
+                <dd>0</dd>
+              </div>
+            </dl>
+            <p>За каждого друга, подключившегося по ссылке и пользующегося сервисом, вы получите +1 день бесплатной
+              подписки ежемесячно. (до 15 дней бесплатно, ежемесячно. Экономьте на подписке до 50%!)</p>
+          </section>
+
+
+          <form class="referrals__link">
+            <h3>Ссылка на советник</h3>
+            <p class="referrals__btns">
+              <input type="url">
+              <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+            </p>
+
+            <label class="referrals__text checkbox-toggle">
+              <input class="checkbox-toggle__input" type="checkbox" checked="">
+              <span class="checkbox-toggle__toggle"></span> Хочу, чтобы моя реферальная ссылка на результаты советника
+              была доступна всем
+            </label>
+          </form>
+
+          <form class="referrals__link referrals__link--ref">
+            <h3>Реферальная ссылка</h3>
+            <p class="referrals__btns">
+              <input type="url">
+              <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+            </p>
+            <p class="referrals__text">Отправляйте её напрямую, если не хотите показывать портфель</p>
+          </form>
+
+          <form class="referrals__link referrals__link--strategy">
+
+            <div class="referrals__settings">
+                <h3>Ссылки на мой портфель</h3>
+
+                <label class="referrals__dropdown stategyPromo-graph-values-btn">
+                    <input type="checkbox" class="visually_hidden">
+    
+                    <span class="btn btn_primary">
+                        <svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
+                    </span>
+    
+                    <div class="selectDropdown">
+                        <h4 class="selectDropdown-title">Настройки показа публичного портфеля</h4>
+                        <label class="selectDropdown-item">
+                            <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                            <span class="checkbox_custom">История сделок и доходности по активам</span>
+                        </label>
+                        <label class="selectDropdown-item">
+                            <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                            <span class="checkbox_custom">Дивидендная доходность в деньгах</span>
+                        </label>
+                        <label class="selectDropdown-item">
+                            <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                            <span class="checkbox_custom">Дивидендная цель</span>
+                        </label>
+                        <label class="selectDropdown-item border">
+                            <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                            <span class="checkbox_custom">Распределение по активам в разделе эффективнось</span>
+                        </label>
+                        <div class="selectDropdown-item buttons">
+                            <button class="btn btn_blue">Сохранить настройки</button>
+                            <button class="btn btn_gray">Сбросить</button>
+                        </div>
+                    </div>
+    
+                </label>
+            </div>
+
+            <div>
+                <p class="referrals__btns">
+                  <input type="url">
+                  <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+                </p>
+                <label class="referrals__text checkbox-toggle">
+                  <input class="checkbox-toggle__input" type="checkbox" checked="">
+                  <span class="checkbox-toggle__toggle"></span> Хочу,
+                  чтобы моя реферальная ссылка на результаты стратегии была доступна всем
+                </label>
+              </div>
+
+            <h3 class="referrals__headerSpace">Ссылки на мои стратегии</h3>
+
+            <div>
+
+                <div class="referrals__settings referrals__settings--min">
+                    <h4>Тестовая стратегия 1</h4>
+    
+                    <label class="referrals__dropdown stategyPromo-graph-values-btn">
+                        <input type="checkbox" class="visually_hidden">
+        
+                        <span class="btn btn_primary">
+                            <svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
+                        </span>
+        
+                        <div class="selectDropdown">
+                            <h4 class="selectDropdown-title">Настройки показа публичного портфеля</h4>
+                            <label class="selectDropdown-item">
+                                <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                <span class="checkbox_custom">История сделок и доходности по активам</span>
+                            </label>
+                            <label class="selectDropdown-item">
+                                <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                <span class="checkbox_custom">Дивидендная доходность в деньгах</span>
+                            </label>
+                            <label class="selectDropdown-item">
+                                <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                <span class="checkbox_custom">Дивидендная цель</span>
+                            </label>
+                            <label class="selectDropdown-item border">
+                                <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                <span class="checkbox_custom">Распределение по активам в разделе эффективнось</span>
+                            </label>
+                            <div class="selectDropdown-item buttons">
+                                <button class="btn btn_blue">Сохранить настройки</button>
+                                <button class="btn btn_gray">Сбросить</button>
+                            </div>
+                        </div>
+        
+                    </label>
+                </div>
+
+              <p class="referrals__btns">
+                <input type="url">
+                <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+              </p>
+              <label class="referrals__text checkbox-toggle">
+                <input class="checkbox-toggle__input" type="checkbox" checked="">
+                <span class="checkbox-toggle__toggle"></span> Хочу,
+                чтобы моя реферальная ссылка на результаты стратегии была доступна всем
+              </label>
+            </div>
+
+            <div>
+
+                <div class="referrals__settings referrals__settings--min">
+                    <h4>Тестовая стратегия 2</h4>
+    
+                    <label class="referrals__dropdown stategyPromo-graph-values-btn">
+                        <input type="checkbox" class="visually_hidden">
+        
+                        <span class="btn btn_primary">
+                            <svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
+                        </span>
+        
+                        <div class="selectDropdown">
+                            <h4 class="selectDropdown-title">Настройки показа публичного портфеля</h4>
+                            <label class="selectDropdown-item">
+                                <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                <span class="checkbox_custom">История сделок и доходности по активам</span>
+                            </label>
+                            <label class="selectDropdown-item">
+                                <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                <span class="checkbox_custom">Дивидендная доходность в деньгах</span>
+                            </label>
+                            <label class="selectDropdown-item">
+                                <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                <span class="checkbox_custom">Дивидендная цель</span>
+                            </label>
+                            <label class="selectDropdown-item border">
+                                <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                <span class="checkbox_custom">Распределение по активам в разделе эффективнось</span>
+                            </label>
+                            <div class="selectDropdown-item buttons">
+                                <button class="btn btn_blue">Сохранить настройки</button>
+                                <button class="btn btn_gray">Сбросить</button>
+                            </div>
+                        </div>
+        
+                    </label>
+                </div>
+
+              <p class="referrals__btns">
+                <input type="url">
+                <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+              </p>
+              <label class="referrals__text checkbox-toggle">
+                <input class="checkbox-toggle__input" type="checkbox" checked="">
+                <span class="checkbox-toggle__toggle"></span> Хочу,
+                чтобы моя реферальная ссылка на результаты стратегии была доступна всем
+              </label>
+            </div>
+
+          </form>
+
+
+        </section>
+
+        <!---->
+      </div>
+      @@include("_footerArea.html")
+    </div>
+
+  </div>
+</section>
+
+@@include("_footer.html")
+
+</body>
+</html>
+

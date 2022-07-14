@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Топ акций"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Топ акций"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Топ акций",
+                    "topSharesMenu": "active"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+						<div class="wantThis wantThis--short">
+							<h2 class="wantThis__header">
+								<p class="wantThis__title">Вы не подписаны на ежемесячную рассылку по лучшим акциям от BeatMarket</p>    
+								<p class="wantThis__text">Подпишитесь на рассылку и получайте отчеты каждый месяц
+									<span class="wantThis__title--mark"><span>на почту или в телеграм</span></span>
+								</p> 
+							</h2>
+							<button class="wantThis__btn btn btn_blue">Подписаться на рассылку</button>
+
+							<div class="wantThis__circle wantThis__circle--red"></div>
+							<div class="wantThis__circle wantThis__circle--yellow"></div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

@@ -1,0 +1,208 @@
+.myStrategy-items-item-header {
+    position: relative;
+    display: flex;
+
+    @media ($media_sm) {
+        flex-direction: column;
+    }
+
+    &-info {
+        flex-basis: 32%;
+        border-right: 1px solid $color_block_border;
+        padding-right: 1rem;
+
+        @media ($media_sm) {
+            width: auto;
+            border-right: unset;
+            border-bottom: 1px solid $color_block_border;
+            padding: 0 0 1rem 0;
+        }
+
+        &-title {
+            margin-bottom: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+
+            @media ($media_sm) {
+                width: 70%;
+            }
+
+            h3 {
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: $color_blue;
+                opacity: 0.9;
+                flex-basis: 90%;
+
+                line-height: 1.5;
+            }
+
+            svg {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+
+        &-content {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            .checkbox-label__area {
+                margin-top: 1.5rem;
+            }
+
+            &-cash {
+
+                h5 {
+                    font-weight: 500;
+                    font-size: 0.77rem;
+                    color: $color_black_title;
+                    margin-bottom: 0.5rem;
+                }
+
+                span {
+                    display: inline-block;
+                    background-color: $color_light_grey;
+                    font-size: 1.35rem;
+                    padding: 0.8rem 1.4rem;
+                    border-radius: 0.5rem;
+                    font-weight: bold;
+                    min-width: 6rem;
+                    text-align: center;
+
+                    &.success {
+                        background-color: $color_green;
+                        color: $color_white;
+                    }
+
+                    &.error {
+                        background-color: $color_red;
+                        color: $color_white;
+                    }
+                }
+            }
+
+            &-settings {
+
+                button {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        stroke: $color_grey;
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    span {
+                        color: $color_grey;
+                        margin-left: 0.5rem;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+
+                    &:hover {
+                        svg {
+                            stroke: $color_blue;
+                        }
+
+                        span {
+                            color: $color_blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-stat {
+        flex-basis: 68%;
+        display: flex;
+        padding: 0 8rem 0 2rem;
+        justify-content: space-between;
+        align-items: center;
+
+        &.paddingBase {
+            padding: 0 2rem;
+
+            @media ($media_sm) {
+                padding: 0;
+            }
+        }
+
+        @media ($media_sm) {
+            padding: 0;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        &-block {
+
+            h5 {
+                font-weight: 500;
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+
+            span {
+                font-weight: bold;
+                font-size: 1.55rem;
+                color: $color_black_title;
+
+                &.success {
+                    color: $color_green;
+                }
+            }
+
+            @media ($media_sm) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &-toggle {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        border: none;
+        outline: none;
+        border: 2px solid $color_blue;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        background-color: $color_white;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 0.8rem;
+            height: 0.8rem;
+            fill: $color_blue;
+        }
+
+        &.active {
+            background-color: $color_blue;
+            border-color: $color_blue;
+
+            svg {
+                fill: $color_white;
+                transform: rotate(180deg) translateY(1px);
+            }
+        }
+
+        @media ($media_sm) {
+            top: 0;
+            transform: translateY(0);
+        }
+    }
+}

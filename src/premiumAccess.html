@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Показатели"
+		})
+
+	</head>
+	<body class="viewProfile">
+
+		@@include("_header.html", {
+			"title": "Мои стратегии"
+		})
+
+		<section class="section-outer section-main">
+            <div class="main-content main-contentPadding premiumAccess">
+                <div class="premiumAccess__header">
+                    <h1 class="premiumAccess__title">Премиум доступ без ограничений</h1>
+                </div>
+                <div class="premiumAccess__body">
+                    <div class="premiumAccess__card premiumAccessCard">
+                        <div class="premiumAccessCard__content">
+                            <span class="premiumAccessCard__title">Уникальное предложение для своих</span>
+                            <h2 class="premiumAccessCard__subtitle">Полный доступ всего за 1 рубль!</h2>
+                            <span class="premiumAccessCard__access">Российский рынок</span>
+                            <ul class="baseList">
+                                <li>Топ 10 акций РФ по рейтингу BM. Ежемесячный дайджест</li>
+                                <li>Рейтинг BM заработает внутри сервиса</li>
+                                <li>Советник сбалансирует ваш портфель акциями рейтинга BM</li>
+                            </ul>
+                            <div class="premiumAccessCard__btn">
+                                <button class="prompt-subscribe__button btn btn_blue">
+                                    <svg class="btn__icon btn__icon--blue"><use xlink:href="img/main.svg#icon-rocket-launch"></use></svg>
+                                    <span class="btn__text">Получить доступ</span>
+                                </button>
+                            </div>
+                        </div>
+                        <picture class="premiumAccessCard__img">
+                            <source srcset="./img/premiumAccess_bg.png" media="(max-width: 1050px)">
+                            <img src="./img/premiumAccess_bg_mobile.png" alt="Иконка стрелки">
+                        </picture>
+                        <div class="premiumAccessCard__circles">
+                            <div class="premiumAccessCard__circle premiumAccessCard__circle--red"></div>
+                            <div class="premiumAccessCard__circle premiumAccessCard__circle--yellow"></div>
+                            <div class="premiumAccessCard__circle premiumAccessCard__circle--green"></div>
+                        </div>
+                    </div>
+
+                    <p class="premiumAccess__footerText">
+                        <span>Другие тарифы</span>
+                        <a href="#">BM рейтинг – рассылка USA - 249 рублей\мес</a>
+                        <a href="#">All-in-one – рассылка USA+РФ+Европа - 399 рублей\мес</a>
+                    </p>
+                </div>
+            </div>
+		</section>
+
+        @@include("_footerArea.html")
+        @@include("_footer.html")
+
+	</body>
+</html>

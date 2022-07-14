@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include('_head.html', {
+  "title": "BeatMarket - Купите эти акции у своего брокера"
+  })
+
+</head>
+<body>
+
+@@include("_header.html", {
+"title": "Советник"
+})
+
+
+<section class="section-outer section-main">
+  <div class="main">
+
+    @@include("_menu.html", {
+    "title": ""
+    })
+
+    <div class="main-content">
+      <div class="main-content advisor">
+        <p class="backlink-block">
+          <a class="backlink" href="">Вернуться к советнику</a>
+        </p>
+
+        <section class="adv-portfolio-settings">
+          <h1>Настройка портфеля</h1>
+          <section class="adv-portfolio-settings__top-up">
+            <h2>Пополнить счет</h2>
+            <form class="form" action="">
+              <div class="adv-portfolio-settings__btns">
+                <input type="text" placeholder="Введите сумму">
+                <button class="btn btn_blue">Пополнить</button>
+              </div>
+
+            </form>
+          </section>
+
+          <section class="adv-portfolio-settings__change-plan details details--bg details--open">
+            <header class="details__header">
+              <h2 class="details__title">Изменить текущий объём свободных средств</h2>
+              <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
+            </header>
+
+            <form class="form portfolio__form details__text" action="">
+              <div class="adv-portfolio-settings__btns">
+                <input type="text" placeholder="Введите сумму">
+                <button class="btn btn_blue">Изменить</button>
+              </div>
+
+            </form>
+          </section>
+
+          <section class="details  details--bg details--open">
+            <header class="details__header">
+              <h2 class="details__title">Редактировать текущий портфель</h2>
+              <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
+            </header>
+
+            <div class="details__text">
+              <div class="table-wrap">
+                <table class="adv-portfolio-settings__table table">
+                  <tbody>
+                  <tr class="table__title-tr">
+                    <th>Акция</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Сумма</th>
+                  </tr>
+
+                  <tr>
+                    <td class="td-name">
+                      <span class="ticket-abbr">MSFT</span>
+                      <span class="ticket-title">Lorem ipsum</span>
+                    </td>
+                    <td class="td-count table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--minus" aria-label="Минус"></button>
+                      2/4
+                      <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
+                    </td>
+                    <td class="td-price table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                              aria-label="Редактировать"></button>
+                      <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                             value="183,18">
+                      <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
+                    </td>
+                    <td class="td-summ">110,71 $</td>
+                  </tr>
+
+                  <tr>
+                    <td class="td-name">
+                      <span class="ticket-abbr">MSFT</span>
+                      <span class="ticket-title">Lorem ipsum</span>
+                    </td>
+                    <td class="td-count table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--minus" aria-label="Минус"></button>
+                      2/4
+                      <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
+                    </td>
+                    <td class="td-price table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                              aria-label="Редактировать"></button>
+                      <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                             value="183,18">
+                      <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
+                    </td>
+                    <td class="td-summ">110,71 $</td>
+                  </tr>
+
+                  <tr>
+                    <td class="td-name">
+                      <span class="ticket-abbr">MSFT</span>
+                      <span class="ticket-title">Lorem ipsum</span>
+                    </td>
+                    <td class="td-count table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--minus" aria-label="Минус"></button>
+                      2/4
+                      <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
+                    </td>
+                    <td class="td-price table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                              aria-label="Редактировать"></button>
+                      <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                             value="183,18">
+                      <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
+                    </td>
+                    <td class="td-summ">110,71 $</td>
+                  </tr>
+
+                  <tr>
+                    <td class="td-name">
+                      <span class="ticket-abbr">MSFT</span>
+                      <span class="ticket-title">Lorem ipsum</span>
+                    </td>
+                    <td class="td-count table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--minus" aria-label="Минус"></button>
+                      2/4
+                      <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
+                    </td>
+                    <td class="td-price table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                              aria-label="Редактировать"></button>
+                      <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                             value="183,18">
+                      <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
+                    </td>
+                    <td class="td-summ">110,71 $</td>
+                  </tr>
+
+                  <tr>
+                    <td class="td-name">
+                      <span class="ticket-abbr">MSFT</span>
+                      <span class="ticket-title">Lorem ipsum</span>
+                    </td>
+                    <td class="td-count table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--minus" aria-label="Минус"></button>
+                      2/4
+                      <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
+                    </td>
+                    <td class="td-price table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                              aria-label="Редактировать"></button>
+                      <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                             value="183,18">
+                      <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
+                    </td>
+                    <td class="td-summ">110,71 $</td>
+                  </tr>
+
+                  <tr>
+                    <td class="td-name">
+                      <span class="ticket-abbr">MSFT</span>
+                      <span class="ticket-title">Lorem ipsum</span>
+                    </td>
+                    <td class="td-count table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--minus" aria-label="Минус"></button>
+                      2/4
+                      <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
+                    </td>
+                    <td class="td-price table__td table__td--nowrap">
+                      <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                              aria-label="Редактировать"></button>
+                      <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                             value="183,18">
+                      <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
+                    </td>
+                    <td class="td-summ">110,71 $</td>
+                  </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="adv-portfolio-settings__btns">
+                <button class="btn btn_blue">Применить изменения</button>
+                <button class="btn btn--danger-transparent" type="button">Удалить портфель</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="details details--bg details--open">
+            <header class="details__header">
+              <h2 class="details__title">Название портфеля</h2>
+              <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
+            </header>
+
+            <form class="form details__text" action="">
+              <div class="adv-portfolio-settings__btns">
+                <input type="text" placeholder="Портфель">
+                <button class="btn btn_blue" type="submit">Применить</button>
+              </div>
+
+            </form>
+          </section>
+
+
+        </section>
+
+        <!---->
+      </div>
+      @@include("_footerArea.html")
+    </div>
+
+  </div>
+</section>
+
+@@include("_footer.html")
+
+</body>
+</html>
+

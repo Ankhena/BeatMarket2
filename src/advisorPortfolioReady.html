@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include('_head.html', { "title": "BeatMarket - Купите эти акции у своего брокера" })
+    </head>
+    <body>
+        @@include("_header.html", { "title": "Советник" })
+
+        <section class="section-outer section-main">
+            <div class="main">
+                @@include("_menu.html", { "title": "" })
+
+                <h1 class="main-title">Советник</h1>
+
+                <div class="main-content">
+                    <div class="main-content advisor">
+                        <section class="adv-prtf-ready">
+                            <div class="adv-prtf-ready__prompt-sticky prompt">
+                                Отличные новости! Вы сделали первый шаг на пути к победе над рынком! Ваш инвестиционный портфель сформирован. Система будет отслеживать ваш прогресс
+                                и советовать, что покупать, продавать или держать. Просто следуйте рекомендациям, и результаты вас порадуют!
+                            </div>
+
+                            <div class="adv-prtf-ready__efficiency">
+                                <section class="adv-prtf-ready__efficiency-descr">
+                                    <header>
+                                        <div class="adv-prtf-ready__efficiency-header">
+                                            <div class="paperDontTrade paperDontTrade--space">
+                                                <svg class="paperDontTrade__icon table-fixed-item-name__icon"><use xlink:href="img/main.svg#icon-update"></use></svg>
+                                                <div class="paperDontTrade__popup">Данные по стратегии обновляются</div>
+                                            </div>
+                                            <h2>Советник пробный раз</h2>
+                                        </div>
+                                        <div class="adv-prtf-ready__efficiency__btns">
+                                            <button class="btn btn--share"></button>
+                                            <button class="btn btn--settings"></button>
+                                        </div>
+                                    </header>
+                                    <div class="adv-prtf-ready__efficiency-text">
+                                        <p class="adv-prtf-ready__efficiency-data adv-prtf-ready__efficiency-data--stocks">
+                                            <span>Акции</span>
+                                            <span class="bright">$ 999 857 999,45</span>
+                                        </p>
+                                        <p class="adv-prtf-ready__efficiency-data adv-prtf-ready__efficiency-data--cash">
+                                            <span>Счёт</span>
+                                            <span>$ 999 857 999,45</span>
+                                        </p>
+                                        <p class="adv-prtf-ready__efficiency-data adv-prtf-ready__efficiency-data--income">
+                                            <span>Общий доход:</span>
+                                            <span class="h-positive">+1 920,5 (11,14 %)</span>
+                                        </p>
+                                        <p class="adv-prtf-ready__efficiency-data adv-prtf-ready__efficiency-data--daily-income">
+                                            <span>Дневной доход:</span>
+                                            <span class="h-negative">-148 (0,87%)</span>
+                                        </p>
+                                    </div>
+                                </section>
+
+                                <section class="adv-prtf-ready__efficiency-pie">
+                                    <div class="tooltip">
+                                        <button class="tooltip__btn" type="button" aria-label="Подробности"></button>
+                                        <div class="tooltip__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, deserunt, distinctio dolorum eaque eius eveniet ipsam mollitia
+                                            nostrum pariatur quibusdam quisquam quo quod reprehenderit velit voluptas? Magnam sequi totam voluptate!
+                                        </div>
+                                    </div>
+                                    <div class="adv-prtf-ready__pie-chart">
+                                        <svg width="280" height="280" viewBox="0,0,38.16, 38.16">
+                                            <circle r="15.9" cx="19.08" cy="19.08"></circle>
+                                            <circle r="15.9" cx="19.08" cy="19.08" style="stroke-dasharray: 75, 25"></circle>
+                                        </svg>
+                                        <div class="adv-prtf-ready__pie-chart-numbers">
+                                            <p><span class="bright">7.5</span>&nbsp;/<span> 10</span></p>
+                                            <p>Эффективность <br />портфеля</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <section class="adv-prtf-ready__efficiency-wrap">
+                                <div class="table-wrap">
+                                    <table class="adv-prtf-ready__efficiency-table table table--radius">
+                                        <tbody>
+                                            <tr class="table__title-tr">
+                                                <th>Тикет</th>
+                                                <th>Тактика</th>
+                                                <th>Ср.цена</th>
+                                                <th>Рын. цена</th>
+                                                <th>Кол-во</th>
+                                                <th>Дн. доход</th>
+                                                <th>Общ. доход</th>
+                                            </tr>
+
+                                            <tr class="tr-hold">
+                                                <td class="td-name">
+                                                    <span class="ticket-abbr">MSFT</span>
+                                                    <span class="ticket-title">lorem</span>
+                                                </td>
+                                                <td class="td-actions h-positive">
+                                                    <button class="btn btn--transparent">Держать</button>
+                                                </td>
+                                                <td class="td-price td-price--m">10,12 $</td>
+                                                <td class="td-price td-price--market">110,12 $</td>
+                                                <td class="td-count">22</td>
+                                                <td class="td-summ td-summ--day h-negative">220,24%</td>
+                                                <td class="td-summ td-summ--all h-negative">-1.23%</td>
+                                            </tr>
+
+                                            <tr class="tr-sell">
+                                                <td class="td-name">
+                                                    <span class="ticket-abbr">MSFT</span>
+                                                    <span class="ticket-title">lorem</span>
+                                                </td>
+                                                <td class="td-actions h-negative">
+                                                    <button class="btn btn--transparent">Продать</button>
+                                                </td>
+                                                <td class="td-price td-price--m">110,12 $</td>
+                                                <td class="td-price td-price--market">110,12 $</td>
+                                                <td class="td-count">22</td>
+                                                <td class="td-summ td-summ--day h-positive">220,24%</td>
+                                                <td class="td-summ td-summ--all h-positive">+1.23%</td>
+                                            </tr>
+
+                                            <tr class="tr-sell">
+                                                <td class="td-name">
+                                                    <span class="ticket-abbr">MSFT</span>
+                                                    <span class="ticket-title">lorem</span>
+                                                </td>
+                                                <td class="td-actions h-negative">
+                                                    <button class="btn btn--transparent">Продать</button>
+                                                </td>
+                                                <td class="td-price td-price--m">110,12 $</td>
+                                                <td class="td-price td-price--market">110,12 $</td>
+                                                <td class="td-count">22</td>
+                                                <td class="td-summ td-summ--day h-positive">220,24%</td>
+                                                <td class="td-summ td-summ--all h-positive">+1.23%</td>
+                                            </tr>
+
+                                            <tr class="tr-sell">
+                                                <td class="td-name">
+                                                    <span class="ticket-abbr">MSFT</span>
+                                                    <span class="ticket-title">lorem</span>
+                                                </td>
+                                                <td class="td-actions h-negative">
+                                                    <button class="btn btn--transparent">Продать</button>
+                                                </td>
+                                                <td class="td-price td-price--m">110,12 $</td>
+                                                <td class="td-price td-price--market">110,12 $</td>
+                                                <td class="td-count">22</td>
+                                                <td class="td-summ td-summ--day h-positive">220,24%</td>
+                                                <td class="td-summ td-summ--all h-positive">+1.23%</td>
+                                            </tr>
+
+                                            <tr class="tr-total">
+                                                <td class="td-total">Итого:</td>
+                                                <td class="td-total-summ" colspan="6">
+                                                    <span class="tr-total__stocks">
+                                                        <span class="tr-total__name">Кол-во акций:</span>
+                                                        <span class="tr-total__value">78</span></span
+                                                    >
+                                                    <span class="tr-total__summ">
+                                                        <span class="tr-total__name">Общ. доход:</span>
+                                                        <span class="tr-total__value h-positive">+3234.10 $</span>
+                                                        <span class="tr-total__value h-positive">+3.2%</span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="adv-prtf-ready__btns">
+                                    <button class="btn btn_blue">Инвестировать ещё</button>
+                                    <button class="btn btn_red">Продать</button>
+                                </div>
+                                <div class="prompt prompt prompt--warning">У вас есть бумаги на продажу&nbsp;— для максимальной прибыли продайте их сейчас</div>
+                            </section>
+
+                            <section class="adv-prtf-ready__comparison">
+                                <h2 class="">Сравнение доходности</h2>
+                                <p class="adv-prtf-ready__subtitle">Вашего портфеля и SP500</p>
+
+                                <div class="adv-prtf-ready__comparison-charts">
+                                    <div class="adv-prtf-ready__comparison-tabs">
+                                        <input id="comparison-period-1" class="visually-hidden" type="radio" name="comparison-period" checked />
+                                        <label for="comparison-period-1">По месяцам</label>
+                                        <input id="comparison-period-2" class="visually-hidden" type="radio" name="comparison-period" />
+                                        <label for="comparison-period-2">По годам</label>
+                                        <input id="comparison-period-3" class="visually-hidden" type="radio" name="comparison-period" />
+                                        <label for="comparison-period-3">В этом году</label>
+                                    </div>
+                                    <div class="table-wrap">
+                                        <div class="table-wrap__content">
+                                            <div class="table-wrap__names">
+                                                <span>SP 500</span>
+                                                <span>Мой портфель</span>
+                                            </div>
+
+                                            <div class="table-wrap__header">
+                                                <table class="adv-prtf-ready__comparison-table table">
+                                                    <tr class="table__title-tr">
+                                                        <th>Февраль</th>
+                                                        <th>Март</th>
+                                                        <th>Апрель</th>
+                                                        <th>Май</th>
+                                                        <th>Июнь</th>
+                                                        <th>За всё время</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table__td h-negative">-1,07%</td>
+                                                        <td class="table__td h-positive">+1,07%</td>
+                                                        <td class="table__td h-positive">+1,07%</td>
+                                                        <td class="table__td h-positive">+1,07%</td>
+                                                        <td class="table__td h-negative">-1,07%</td>
+                                                        <td>+16,07%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table__td h-positive">+1,07%</td>
+                                                        <td class="table__td h-negative">-1,07%</td>
+                                                        <td class="table__td h-positive">+1,07%</td>
+                                                        <td class="table__td h-positive">+1,07%</td>
+                                                        <td class="table__td h-positive">+1,07%</td>
+                                                        <td class="table__td h-positive">+10,01%</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div id="adv-prtf-ready__comparison-chart" class="mainGraphBlock adv-prtf-ready__comparison-chart"></div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="adv-prtf-ready__dividends">
+                                <h2>Дивиденды</h2>
+                                <div class="adv-prtf-ready__dividends-inner">
+                                    <section class="adv-prtf-ready__dividends-year">
+                                        <h3>Годовой дивидендный доход</h3>
+                                        <p class="adv-prtf-ready__dividends-summ">3 621 $</p>
+                                        <dl class="adv-prtf-ready__description">
+                                            <div class="adv-prtf-ready__descr-item">
+                                                <dt>Месяц</dt>
+                                                <dd>81.06 $</dd>
+                                            </div>
+                                            <div class="adv-prtf-ready__descr-item">
+                                                <dt>День</dt>
+                                                <dd>5.34 $</dd>
+                                            </div>
+                                            <div class="adv-prtf-ready__descr-item">
+                                                <dt>Доходность</dt>
+                                                <dd class="h-positive">8.3 %</dd>
+                                            </div>
+                                        </dl>
+                                    </section>
+
+                                    <section class="adv-prtf-ready__next-payout">
+                                        <h3>Следующая выплата</h3>
+                                        <p class="ticket-name">
+                                            <span class="ticket-abbr">MSFT</span>
+                                            <span class="ticket-title">UnitedHealth Group Incorporated (DE)</span>
+                                        </p>
+                                        <p class="adv-prtf-ready__dividends-summ">621 $</p>
+                                        <a href="" class="adv-prtf-ready__link-more">Посмотреть все</a>
+                                    </section>
+                                </div>
+                            </section>
+
+                            <section class="apr-share">
+                                <form class="apr-share__inner">
+                                    <h3>Поделитесь результатом со своими друзьями</h3>
+
+                                    <p class="apr-share__btns">
+                                        <input type="url" />
+                                        <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+                                    </p>
+                                    <label class="apr-share__text checkbox-toggle">
+                                        <input class="checkbox-toggle__input" type="checkbox" checked="" />
+                                        <span class="checkbox-toggle__toggle"></span> Хочу, чтобы моя реферальная ссылка на результаты была доступна всем
+                                    </label>
+                                </form>
+
+                                <div class="apr-share__inner apr-share__inner--bg">
+                                    <p class="apr-share__friend">
+                                        Друзья смогут оценить и бесплатно попробовать инвестирование с BeatMarket, а вы <b>сэкономите на подписке до 50%</b>
+                                    </p>
+                                    <button class="btn btn_blue">Подробнее</button>
+                                </div>
+                            </section>
+
+                            <!---->
+                        </section>
+                    </div>
+                    @@include("_footerArea.html")
+                </div>
+            </div>
+        </section>
+
+        @@include("_footer.html")
+    </body>
+</html>

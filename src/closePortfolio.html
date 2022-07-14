@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Показатели"
+		})
+
+	</head>
+	<body class="viewProfile">
+
+		@@include("_header.html", {
+			"title": ""
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				<div class="main-content">
+
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        <div class="closePortfolio">
+
+                            <div class="closePortfolio__content">
+                                <h1 class="closePortfolio__title">Пользователь закрыл доступ к портфелю</h1>
+                                <p class="closePortfolio__text">Но результаты выглядят потрясающе! Инвестируйте с умом и тоже добьетесь успеха</p>
+                                <h3 class="closePortfolio__subtitle">Предалагем вам бесплатно оценить весь функционал нашего сервиса</h3>
+                                <ul class="closePortfolio__items">
+                                    <li class="closePortfolio__item">Ведите учет своих собственных инвестиций и отслеживайте доходность</li>
+                                    <li class="closePortfolio__item">Проверяйте и сравнивайте разные стратегии, следите за выбранными компаниями или криптовалютой</li>
+                                    <li class="closePortfolio__item">Инвестируйте используя рекомендации BeatMarket Advisor</li>
+                                </ul>
+                                <button class="closePortfolio__btn btn btn_blue">Попробовать бесплатно</button>
+                            </div>
+
+                            <div class="closePortfolio__icons">
+                                <div class="closePortfolio__icon closePortfolio__icon--red"></div>
+                                <div class="closePortfolio__icon closePortfolio__icon--yellow"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    @@include("_footerArea.html")
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

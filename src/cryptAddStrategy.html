@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Добавить стратегию крипто"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "",
+										"cashValue": " 0$ ",
+										"toggleActive": "active",
+                                        "titleIcon": "icon-bitcoin"
+									})
+
+									<div class="myStrategy-items-item-content">
+                                        <nav class="nav justifyStart">
+                                            <ul></ul>
+                                        </nav>
+										<div class="myStrategy-emptyPortfolio-container crypt">
+											<div class="info">
+												<h2 class="info-subtitle">Выбранный портфель пока что пуст</h2>
+												<p class="info-subtext">Выберите, что хотите добавить. Стратегия может содержать в себе <strong>акции, ПИФы, ETF</strong>, либо <strong>криптовалюту.</strong> </p>
+												
+                                                <div class="modal-content-switcher use_mt_first">
+                                                    <div class="modal-content-switcher-button">
+                                                        <label>
+                                                            <input type="radio" name="switcherCrypt" class="visually_hidden" checked>
+                                                            <span>Акции, ПИФы, ETF</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherCrypt" class="visually_hidden">
+                                                            <span>Криптовалюта</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <p class="info-text">Наберите кодировку или название бумаги, чтобы увидеть её в списке, отметьте, чтобы добавить в портфель.</p>
+                                                
+												@@include("_inputSearch.html")
+
+											</div>
+											<div class="sprites">
+												<svg class="sprites-left"><use xlink:href="img/main.svg#icon-strategy-sprite-red"></use></svg>
+												<svg class="sprites-right"><use xlink:href="img/main.svg#icon-strategy-sprite-green"></use></svg>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+                                <div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Стартовый портфель. Акции",
+										"cashStatus": "success",
+										"cashValue": "+21%",
+										"toggleActive": "",
+                                        "titleIcon": "icon-dollar"
+									})
+
+								</div>
+
+                                <div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Стартовый портфель. Крипто",
+										"cashStatus": "success",
+										"cashValue": "+21%",
+										"toggleActive": "",
+                                        "titleIcon": "icon-bitcoin"
+									})
+
+								</div>
+
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+
+                
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Аналитика"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%",
+										"toggleActive": "active",
+                                        "titleIcon": "icon-bitcoin"
+									})
+
+									<div class="myStrategy-items-item-content">
+                                        @@include("_myStrategyNavCrypto.html", {
+                                            "cryptMyCrypt": "",
+                                            "cryptAnalytics": "active",
+                                            "cryptAddCoin": "",
+                                            "news": "",
+                                            "cryptHistory": ""
+                                        })
+
+                                        <div class="performance">
+
+                                            <div class="performance-info">
+                                                <div class="performance-info-cards">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h4>Доходность портфеля</h4>
+                                                        </div>
+                                                        <div class="card-content">
+                                                            <span>6 месяцев <strong class="success">+10.5%</strong></span>
+                                                            <span>12 месяцев <strong class="success">+7.53%</strong></span>
+                                                            <span>Все время <strong class="success">+3.21%</strong></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h4>Лучшая сделка</h4>
+                                                        </div>
+                                                        <div class="card-content">
+                                                            <span>Монета
+                                                                <img src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin">
+                                                                <strong class="primary">BTC</strong>
+                                                                <strong class="secondary">Bitcoin</strong>
+                                                            </span>
+                                                            <span>Дата сделки <strong>17 ноября 2019 г</strong></span>
+                                                            <span>Доход <strong class="success">+71.53%</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="performance-structure">
+                                                <div class="header">
+                                                    <h3>Состав портфеля</h3>
+                                                </div>
+                                                <div class="performance-structure-content">
+                                                    <div class="card">
+                                                        <div class="card-content-graph graph graph-big" id="cryptAnalyticsGraph"></div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="content-header card-header">
+                                                            <h4>Общая сумма</h4>
+                                                        </div>
+                                                        <div class="content-data">
+                                                            <div class="content-data-cost">
+                                                                <span>33 621 234 $</span>
+                                                            </div>
+                                                            <div class="content-data-pager pagination">
+                                                                <ul>
+                                                                    <li class="prev">
+                                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                                    </li>
+                                                                    <li class="current"><a href="#">1/7</a></li>
+                                                                    <li class="next">
+                                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-graphInfo">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="performance-item">
+                                                <div class="header">
+                                                    <h3>Распределение активов по капитализации</h3>
+                                                </div>
+                                                <div class="blockSection blockSection--card">
+                                                    <div class="blockSection__content">
+                                                        <div class="tabs">
+                                                            <ul class="tabs__switcher tabsSwitcher">
+                                                                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-1">Мега (3%)</a></li>
+                                                                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-2">Большие (23%)</a></li>
+                                                                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-3">Средние (15%)</a></li>
+                                                                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-4">Малые (22%)</a></li>
+                                                            </ul>
+                    
+                                                            <div class="tabs__content">
+                                                                <div class="coinRangs" id="coinRangs-1" data-contentShower>
+                                                                    <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
+                                                                    <div class="coinRangs__content">
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin11</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="coinRangs__button">
+                                                                        <button class="btnShowAll">
+                                                                            <span class="btnShowAll__text">Показать все</span>
+                                                                            <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="coinRangs" id="coinRangs-2" data-contentShower>
+                                                                    <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
+                                                                    <div class="coinRangs__content">
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin22</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="coinRangs__button">
+                                                                        <button class="btnShowAll">
+                                                                            <span class="btnShowAll__text">Показать все</span>
+                                                                            <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="coinRangs" id="coinRangs-3" data-contentShower>
+                                                                    <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
+                                                                    <div class="coinRangs__content">
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin33</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="coinRangs__button">
+                                                                        <button class="btnShowAll">
+                                                                            <span class="btnShowAll__text">Показать все</span>
+                                                                            <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="coinRangs" id="coinRangs-4" data-contentShower>
+                                                                    <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
+                                                                    <div class="coinRangs__content">
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin44</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo">
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="coinInfo" data-contentShowerHidden>
+                                                                            <div class="coinInfo__picture">
+                                                                                <img class="coinInfo__img" src="./img/statTable__icons/bitcoin.svg" alt="Bitcoin иконка" />
+                                                                            </div>
+                                                                            <div class="coinInfo__content">
+                                                                                <span class="coinInfo__label">BTC</span>
+                                                                                <span class="coinInfo__name">Bitcoin</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="coinRangs__button">
+                                                                        <button class="btnShowAll">
+                                                                            <span class="btnShowAll__text">Показать все</span>
+                                                                            <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="performance-separation">
+                                                <div class="header">
+                                                    <h3>Распределение по алгоритмам хеширования</h3>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-block">
+                                                        <div class="card-content">
+                                                            <div class="card-content-graph graph graph-middle" id="separation_graph_1"></div>
+                                                            <div class="card-content-info grid"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

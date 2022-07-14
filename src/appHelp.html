@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Приложение",
+            "appStyle": "true"
+		})
+
+	</head>
+	<body class="app">
+
+        <section class="section-outer section-app">
+            <div class="section-app__content">
+            
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, modi nihil, consequatur odio accusantium ipsam corrupti aliquam provident velit animi deserunt facilis ratione enim perferendis porro fuga. Aut ipsum deserunt et quos rerum. Adipisci tempora perferendis unde perspiciatis quaerat necessitatibus ipsam. Dolores, reprehenderit libero! Veniam eligendi nemo nisi velit recusandae aut accusamus est consequatur qui rerum ullam iure beatae quo alias, sit a quae assumenda voluptates minus quod. Qui quos exercitationem, cum ea laboriosam asperiores odio recusandae fuga, molestias accusamus aliquid harum. Perferendis ut ullam ducimus iste repellat voluptate odio aliquid provident nobis facilis placeat quae architecto quod, vero repudiandae id iusto, cumque impedit distinctio! Soluta itaque omnis voluptatem eveniet totam enim similique odio doloribus culpa, accusantium dignissimos nam officia consequatur illo fugiat mollitia adipisci atque molestias expedita neque minima quaerat blanditiis. Dolore earum, magnam quis maiores porro adipisci deleniti ullam magni fugit labore. Blanditiis deleniti beatae est laborum eum itaque molestiae voluptate tenetur maxime, nam ratione cumque rerum dolore ullam? Ipsam molestiae optio, rerum fugit porro voluptate totam blanditiis at doloribus, nam nemo magni alias repellat dolorum vel eos expedita repudiandae dignissimos. Sequi neque aliquam mollitia, reprehenderit sint facilis ut accusantium dolor fugit nobis quidem voluptas suscipit tenetur veritatis molestiae officia, iusto nihil, sapiente excepturi voluptates assumenda ratione illo? Pariatur dignissimos accusantium quis aliquam? In, natus amet? Nam eligendi laborum deleniti voluptatem quia id veniam quasi, doloribus culpa. Deleniti maxime iusto voluptas facere obcaecati reiciendis incidunt modi, aperiam voluptate illum odio voluptates deserunt quisquam magni corrupti tenetur sapiente exercitationem amet cumque. Incidunt a animi cum ea modi odit nam mollitia pariatur hic debitis eveniet vero vitae libero aliquam saepe illo tempore, dicta blanditiis nostrum eum, voluptates reprehenderit amet dolor distinctio! Recusandae enim, blanditiis explicabo laborum aspernatur quis? Iure, aspernatur accusamus fuga esse rem nam. Exercitationem harum ea pariatur est.
+
+            </div>
+        </section>
+
+        @@include("_appHeader.html")
+
+        <!-- <div class="appOverlay">
+            <div class="appOverlay__item">
+                <svg class="appOverlay__icon"><use xlink:href="img/main.svg#icon-info"></use></svg>
+                <span class="appOverlay__name">FAQ</span>
+            </div>
+            <div class="appOverlay__item">
+                <svg class="appOverlay__icon"><use xlink:href="img/main.svg#icon-headset"></use></svg>
+                <span class="appOverlay__name">Поддержка</span>
+            </div>
+        </div> -->
+
+        @@include("_appMenu.html", {
+            "portfolio": "",
+            "advisor": "",
+            "subscribe": "",
+            "help": "",
+            "account": "appMenu__item--active"
+        })
+
+        @@include("_appMenu.html", {
+            "portfolio": "",
+            "advisor": "",
+            "subscribe": "",
+            "help": "appMenu__item--active",
+            "account": ""
+        })
+
+        @@include("_footer.html")
+
+	</body>
+</html>

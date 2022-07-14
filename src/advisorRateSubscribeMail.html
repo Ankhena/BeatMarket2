@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Показатели"
+		})
+
+	</head>
+	<body class="viewProfile">
+
+		@@include("_header.html", {
+			"title": "Мои стратегии"
+		})
+
+		<section class="section-outer section-main">
+            <div class="main-content main-contentPadding premiumAccess">
+                <div class="premiumAccess__header">
+                    <h1 class="premiumAccess__title">Подписка на рассылку рейтинга</h1>
+                </div>
+                <div class="premiumAccess__body">
+
+                    <div class="tarrifsCard softBg blue">
+                        <div class="tarrifsCard-header">
+                            <h3>Российский рынок</h3>
+                        </div>
+                        <div class="tarrifsCard-cost">
+                            <p>
+                                <strong>690 руб.</strong>
+                                <span>/ месяц</span>
+                            </p>
+                        </div>
+                        <div class="tarrifsCard-text">
+                            <ul class="baseList">
+                                <li>Топ 10 акций РФ по рейтингу BM. Ежемесячный дайджест</li>
+                                <li>Рейтинг BM заработает внутри сервиса</li>
+                                <li>Советник сбалансирует ваш портфель акциями рейтинга BM</li>
+                            </ul>
+                        </div>
+                        <div class="modal-content-toggle use_mt">
+                            <button class="btnShowAll">
+                                <span class="btnShowAll__text">Промокод</span>
+                                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                            </button>
+                            <div class="toggleOverlay">
+                                <div class="modal-content-papers use_mt">
+                                    <div class="modal-content-papers-promo">
+                                        <label class="label_modal">Введите промокод</label>
+                                        <input type="text" placeholder="Промокод">
+                                    </div>
+                                    <div class="modal-content-papers-btn">
+                                        <button class="btn btn_blue" data-closeModal>Применить</button>
+                                    </div>
+                                    <p class="modal-content-papers-status success">Промокод успешно применен</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tarrifsCard-btn">
+                            <button class="btn btn_tarrifs">
+                                <span class="btn__text">Оформить подписку</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tarrifsCard softBg blue">
+                        <div class="tarrifsCard-header">
+                            <h3>Российский рынок</h3>
+                        </div>
+                        <div class="tarrifsCard-cost">
+                            <p>
+                                <strong>690 руб.</strong>
+                                <span>/ месяц</span>
+                            </p>
+                        </div>
+                        <div class="tarrifsCard-text">
+                            <ul class="baseList">
+                                <li>Топ 10 акций РФ по рейтингу BM. Ежемесячный дайджест</li>
+                                <li>Рейтинг BM заработает внутри сервиса</li>
+                                <li>Советник сбалансирует ваш портфель акциями рейтинга BM</li>
+                            </ul>
+                        </div>
+                        <div class="modal-content-toggle use_mt">
+                            <button class="btnShowAll btnShowAll--active">
+                                <span class="btnShowAll__text">Промокод</span>
+                                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                            </button>
+                            <div class="toggleOverlay" style="display: block;">
+                                <div class="modal-content-papers use_mt">
+                                    <div class="modal-content-papers-promo">
+                                        <label class="label_modal">Введите промокод</label>
+                                        <input type="text" placeholder="Промокод">
+                                    </div>
+                                    <div class="modal-content-papers-btn">
+                                        <button class="btn btn_blue" data-closeModal>Применить</button>
+                                    </div>
+                                    <p class="modal-content-papers-status success">Промокод успешно применен</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tarrifsCard-btn">
+                            <button class="btn btn_tarrifs">
+                                <span class="btn__text">Оформить подписку</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="premiumAccess__footerText">
+                        <span>Другие тарифы</span>
+                        <a href="#">BM рейтинг – рассылка USA - 249 рублей\мес</a>
+                        <a href="#">All-in-one – рассылка USA+РФ+Европа - 399 рублей\мес</a>
+                    </p>
+                </div>
+            </div>
+		</section>
+
+        @@include("_footerArea.html")
+        @@include("_footer.html")
+
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Компании"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%",
+										"toggleActive": "active"
+									})
+
+									<div class="myStrategy-items-item-content">
+                                        @@include("_myStrategyNav.html", {
+                                            "myPapers": "",
+                                            "addCompany": "active",
+                                            "indicators": "",
+                                            "perfomance": "",
+                                            "dividents": "",
+                                            "news": "",
+                                            "history": ""
+                                        })
+										<div class="myStrategy-emptyPortfolio-container">
+											<div class="info">
+												<h4 class="info-subtitle">Добавьте ценные бумаги вручную</h4>
+												<p class="info-text">Наберите кодировку или название бумаги, чтобы увидеть её в списке, отметьте, чтобы добавить в портфель.</p>
+												
+												@@include("_inputSearch.html")
+
+												<div class="info-divider">
+													<span>Или</span>
+												</div>
+
+												<div class="info-button">
+													<button class="btn btn_secondary">
+														<svg><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
+														<span>Импортировать из отчета</span>
+													</button>
+												</div>
+												
+											</div>
+											<div class="sprites">
+												<svg class="sprites-left"><use xlink:href="img/main.svg#icon-strategy-sprite-red"></use></svg>
+												<svg class="sprites-right"><use xlink:href="img/main.svg#icon-strategy-sprite-green"></use></svg>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

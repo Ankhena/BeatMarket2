@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - История"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_mainPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%",
+										"toggleActive": "active"
+									})
+
+									<div class="myStrategy-items-item-content">
+                                        @@include("_myStrategyNav.html", {
+                                            "myPapers": "",
+                                            "addCompany": "",
+                                            "indicators": "",
+                                            "perfomance": "",
+                                            "dividents": "",
+                                            "news": "",
+                                            "history": "active"
+                                        })
+
+                                        <div class="cashMoney">
+                                            <h4 class="cashMoney__title">Наличные</h4>
+                                            <span class="cashMoney__value">$ 50 232</span>
+                                            <div class="cashMoney__edit" data-modal="modal_cashMoney">
+                                                <svg class="cashMoney__icon"><use xlink:href="img/main.svg#icon-pencil"></use></svg>
+                                            </div>
+                                        </div>
+
+										<div class="myStrategy-history-container the_table">
+											<div class="table">
+                                                <div class="table-header">
+                                                    <h5>Операция</h5>
+                                                    <h5>Дата</h5>
+                                                    <h5>Название</h5>
+                                                    <h5>Кол-во</h5>
+                                                    <h5>Цена</h5>
+                                                    <h5>Общ.стоимость</h5>
+                                                </div>
+                                                <div class="table-content">
+                                                    <div class="table-content-item">
+                                                        <div class="table-content-item-info">
+                                                            <span class="operation success">
+                                                                <strong>Покупка</strong>
+                                                            </span>
+                                                            <span class="date">27.04.2021</span>
+                                                            <span class="name">BXP</span>
+                                                        </div>
+                                                        <div class="table-content-item-nums">
+                                                            <span class="count">5</span>
+                                                            <span class="cost">94.10 $</span>
+                                                            <span class="money">194.10 $</span>
+                                                        </div>
+                                                        <div class="table-content-item-operation">
+                                                            <div class="operate" data-modal="modal_add">
+                                                                <svg class="edit"><use xlink:href="img/main.svg#icon-pencil"></use></svg>
+                                                            </div>
+                                                            <div class="operate">
+                                                                <svg class="delete"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <div class="table-content-item-info">
+                                                            <span class="operation success">
+                                                                <strong>Покупка</strong>
+                                                            </span>
+                                                            <span class="date">27.04.2021</span>
+                                                            <span class="name">BXP</span>
+                                                        </div>
+                                                        <div class="table-content-item-nums">
+                                                            <span class="count">5</span>
+                                                            <span class="cost">94.10 $</span>
+                                                            <span class="money">194.10 $</span>
+                                                        </div>
+                                                        <div class="table-content-item-operation">
+                                                            <div class="operate" data-modal="modal_edit">
+                                                                <svg class="edit"><use xlink:href="img/main.svg#icon-pencil"></use></svg>
+                                                            </div>
+                                                            <div class="operate">
+                                                                <svg class="delete"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <div class="table-content-item-info">
+                                                            <span class="operation error">
+                                                                <strong>Продажа</strong>
+                                                            </span>
+                                                            <span class="date">27.04.2021</span>
+                                                            <span class="name">BXP</span>
+                                                        </div>
+                                                        <div class="table-content-item-nums">
+                                                            <span class="count">5</span>
+                                                            <span class="cost">94.10 $</span>
+                                                            <span class="money">194.10 $</span>
+                                                        </div>
+                                                        <div class="table-content-item-operation">
+                                                            <div class="operate" data-modal="modal_settings">
+                                                                <svg class="edit"><use xlink:href="img/main.svg#icon-pencil"></use></svg>
+                                                            </div>
+                                                            <div class="operate">
+                                                                <svg class="delete"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <div class="table-content-item-info">
+                                                            <span class="operation success">
+                                                                <strong>Покупка</strong>
+                                                            </span>
+                                                            <span class="date">27.04.2021</span>
+                                                            <span class="name">BXP</span>
+                                                        </div>
+                                                        <div class="table-content-item-nums">
+                                                            <span class="count">5</span>
+                                                            <span class="cost">94.10 $</span>
+                                                            <span class="money">194.10 $</span>
+                                                        </div>
+                                                        <div class="table-content-item-operation">
+                                                            <div class="operate" data-modal="modal_comment">
+                                                                <svg class="edit"><use xlink:href="img/main.svg#icon-pencil"></use></svg>
+                                                            </div>
+                                                            <div class="operate">
+                                                                <svg class="delete"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <div class="table-content-item-info">
+                                                            <span class="operation success">
+                                                                <strong>Покупка</strong>
+                                                            </span>
+                                                            <span class="date">27.04.2021</span>
+                                                            <span class="name">BXP</span>
+                                                        </div>
+                                                        <div class="table-content-item-nums">
+                                                            <span class="count">5</span>
+                                                            <span class="cost">94.10 $</span>
+                                                            <span class="money">194.10 $</span>
+                                                        </div>
+                                                        <div class="table-content-item-operation">
+                                                            <div class="operate" data-modal="modal_add_crypt">
+                                                                <svg class="edit"><use xlink:href="img/main.svg#icon-pencil"></use></svg>
+                                                            </div>
+                                                            <div class="operate">
+                                                                <svg class="delete"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-content-item">
+                                                        <div class="table-content-item-info">
+                                                            <span class="operation success">
+                                                                <strong>Покупка</strong>
+                                                            </span>
+                                                            <span class="date">27.04.2021</span>
+                                                            <span class="name">BXP</span>
+                                                        </div>
+                                                        <div class="table-content-item-nums">
+                                                            <span class="count">5</span>
+                                                            <span class="cost">94.10 $</span>
+                                                            <span class="money">194.10 $</span>
+                                                        </div>
+                                                        <div class="table-content-item-operation">
+                                                            <div class="operate" data-modal="modal_edit_crypt">
+                                                                <svg class="edit"><use xlink:href="img/main.svg#icon-pencil"></use></svg>
+                                                            </div>
+                                                            <div class="operate">
+                                                                <svg class="delete"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pagination">
+                                                <ul>
+                                                    <li class="prev">
+                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                    </li>
+                                                    <li><a href="#">1</a></li>
+                                                    <li><a href="#">...</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li class="active"><a href="#">5</a></li>
+                                                    <li><a href="#">6</a></li>
+                                                    <li><a href="#">...</a></li>
+                                                    <li><a href="#">12</a></li>
+                                                    <li class="next">
+                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                    </li>
+                                                </ul>
+                                                <span>Показано 90-105 из 210</span>
+                                            </div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>
