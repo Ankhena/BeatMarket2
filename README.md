@@ -6,3 +6,8 @@
 ## Посмотреть
 
 Проект собирается автоматом в ветку **gh-pages** и публикуется [https://ankhena.github.io/BeatMarket2/](https://ankhena.github.io/BeatMarket2/)
+
+
+Список страниц [https://ankhena.github.io/BeatMarket2/pages-list.html](https://ankhena.github.io/BeatMarket2/pages-list.html)
+
+
