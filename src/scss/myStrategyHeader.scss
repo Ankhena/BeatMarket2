@@ -1,208 +1,278 @@
 .myStrategy-items-item-header {
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
+
+  @media ($media_sm) {
+    flex-direction: column;
+  }
+
+  &-info {
+    flex-basis: 32%;
+    border-right: 1px solid $color_block_border;
+    padding-right: 1rem;
 
     @media ($media_sm) {
-        flex-direction: column;
+      width: auto;
+      border-right: unset;
+      border-bottom: 1px solid $color_block_border;
+      padding: 0 0 1rem 0;
     }
 
-    &-info {
-        flex-basis: 32%;
-        border-right: 1px solid $color_block_border;
-        padding-right: 1rem;
+    &-title {
+      margin-bottom: 1.2rem;
+      display: flex;
+      justify-content: space-between;
 
-        @media ($media_sm) {
-            width: auto;
-            border-right: unset;
-            border-bottom: 1px solid $color_block_border;
-            padding: 0 0 1rem 0;
+      @media ($media_sm) {
+        width: 70%;
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: $color_blue;
+        opacity: 0.9;
+        flex-basis: 90%;
+
+        line-height: 1.5;
+      }
+
+      svg {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
+
+    &-content {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .checkbox-label__area {
+        margin-top: 1.5rem;
+      }
+
+      &-cash {
+
+        h5 {
+          font-weight: 500;
+          font-size: 0.77rem;
+          color: $color_black_title;
+          margin-bottom: 0.5rem;
         }
 
-        &-title {
-            margin-bottom: 1.2rem;
-            display: flex;
-            justify-content: space-between;
+        span {
+          display: inline-block;
+          background-color: $color_light_grey;
+          font-size: 1.35rem;
+          padding: 0.8rem 1.4rem;
+          border-radius: 0.5rem;
+          font-weight: bold;
+          min-width: 6rem;
+          text-align: center;
 
-            @media ($media_sm) {
-                width: 70%;
-            }
+          &.success {
+            background-color: $color_green;
+            color: $color_white;
+          }
 
-            h3 {
-                font-weight: 600;
-                font-size: 1.1rem;
-                color: $color_blue;
-                opacity: 0.9;
-                flex-basis: 90%;
+          &.error {
+            background-color: $color_red;
+            color: $color_white;
+          }
+        }
+      }
 
-                line-height: 1.5;
-            }
+      &-settings {
 
+        button {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+
+          svg {
+            stroke: $color_grey;
+            width: 24px;
+            height: 24px;
+          }
+
+          span {
+            color: $color_grey;
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+          }
+
+          &:hover {
             svg {
-                width: 1.3rem;
-                height: 1.3rem;
-            }
-        }
-
-        &-content {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-
-            .checkbox-label__area {
-                margin-top: 1.5rem;
-            }
-
-            &-cash {
-
-                h5 {
-                    font-weight: 500;
-                    font-size: 0.77rem;
-                    color: $color_black_title;
-                    margin-bottom: 0.5rem;
-                }
-
-                span {
-                    display: inline-block;
-                    background-color: $color_light_grey;
-                    font-size: 1.35rem;
-                    padding: 0.8rem 1.4rem;
-                    border-radius: 0.5rem;
-                    font-weight: bold;
-                    min-width: 6rem;
-                    text-align: center;
-
-                    &.success {
-                        background-color: $color_green;
-                        color: $color_white;
-                    }
-
-                    &.error {
-                        background-color: $color_red;
-                        color: $color_white;
-                    }
-                }
-            }
-
-            &-settings {
-
-                button {
-                    border: none;
-                    outline: none;
-                    background-color: transparent;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-
-                    svg {
-                        stroke: $color_grey;
-                        width: 24px;
-                        height: 24px;
-                    }
-
-                    span {
-                        color: $color_grey;
-                        margin-left: 0.5rem;
-                        font-size: 0.9rem;
-                        font-weight: 500;
-                    }
-
-                    &:hover {
-                        svg {
-                            stroke: $color_blue;
-                        }
-
-                        span {
-                            color: $color_blue;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &-stat {
-        flex-basis: 68%;
-        display: flex;
-        padding: 0 8rem 0 2rem;
-        justify-content: space-between;
-        align-items: center;
-
-        &.paddingBase {
-            padding: 0 2rem;
-
-            @media ($media_sm) {
-                padding: 0;
-            }
-        }
-
-        @media ($media_sm) {
-            padding: 0;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        &-block {
-
-            h5 {
-                font-weight: 500;
-                font-size: 0.9rem;
-                margin-bottom: 0.5rem;
+              stroke: $color_blue;
             }
 
             span {
-                font-weight: bold;
-                font-size: 1.55rem;
-                color: $color_black_title;
-
-                &.success {
-                    color: $color_green;
-                }
+              color: $color_blue;
             }
-
-            @media ($media_sm) {
-                margin-bottom: 1rem;
-            }
+          }
         }
+      }
+    }
+  }
+
+  &-stat {
+    flex-basis: 68%;
+    display: flex;
+    padding: 0 8rem 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+
+    &.paddingBase {
+      padding: 0 2rem;
+
+      @media ($media_sm) {
+        padding: 0;
+      }
     }
 
-    &-toggle {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-
-        border: none;
-        outline: none;
-        border: 2px solid $color_blue;
-        width: 2.2rem;
-        height: 2.2rem;
-        border-radius: 50%;
-        background-color: $color_white;
-        cursor: pointer;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        svg {
-            width: 0.8rem;
-            height: 0.8rem;
-            fill: $color_blue;
-        }
-
-        &.active {
-            background-color: $color_blue;
-            border-color: $color_blue;
-
-            svg {
-                fill: $color_white;
-                transform: rotate(180deg) translateY(1px);
-            }
-        }
-
-        @media ($media_sm) {
-            top: 0;
-            transform: translateY(0);
-        }
+    @media ($media_sm) {
+      padding: 0;
+      flex-wrap: wrap;
+      margin-top: 1rem;
     }
+
+    &-block {
+
+      h5 {
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 1.55rem;
+        color: $color_black_title;
+
+        &.success {
+          color: $color_green;
+        }
+      }
+
+      @media ($media_sm) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    border: none;
+    outline: none;
+    border: 2px solid $color_blue;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: $color_white;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 0.8rem;
+      height: 0.8rem;
+      fill: $color_blue;
+    }
+
+    &.active {
+      background-color: $color_blue;
+      border-color: $color_blue;
+
+      svg {
+        fill: $color_white;
+        transform: rotate(180deg) translateY(1px);
+      }
+    }
+
+    @media ($media_sm) {
+      top: 0;
+      transform: translateY(0);
+    }
+  }
+}
+
+.myStrategy-scoring {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  gap: 8px;
+  padding: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 9px 0 rgba(62, 84, 216, 0.14);
+  border-radius: 8px;
+}
+
+.myStrategy-scoring__trend {
+  display: block;
+  width: 11px;
+  height: 7px;
+  background: var(--bgi) no-repeat center / contain;
+  color: var(--color);
+  &--positive {
+    --color: #{$color_green};
+    --bgi: var(--arrow-up-icon)
+  }
+  &--negative {
+    --color: #{$color_red};
+    --bgi: var(--arrow-down-icon);
+  }
+}
+
+.myStrategy-scoring__text {
+  grid-column: 1/-1;
+  font-size: rem(13, 18);
+  text-align: center;
+}
+
+.myStrategy-scoring__home {
+  // house
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 17.2373V12.7373C11.5 12.5383 11.421 12.3476 11.2803 12.2069C11.1397 12.0663 10.9489 11.9873 10.75 11.9873H7.75C7.55109 11.9873 7.36032 12.0663 7.21967 12.2069C7.07902 12.3476 7 12.5383 7 12.7373V17.2373C7 17.4362 6.92098 17.6269 6.78033 17.7676C6.63968 17.9082 6.44891 17.9873 6.25 17.9873H1.75C1.55109 17.9873 1.36032 17.9082 1.21967 17.7676C1.07902 17.6269 1 17.4362 1 17.2373V8.56539C1.00168 8.46159 1.02411 8.35918 1.06597 8.26419C1.10783 8.1692 1.16828 8.08354 1.24375 8.01226L8.74375 1.19664C8.88201 1.07015 9.06261 1 9.25 1C9.43739 1 9.61799 1.07015 9.75625 1.19664L17.2562 8.01226C17.3317 8.08354 17.3922 8.1692 17.434 8.26419C17.4759 8.35918 17.4983 8.46159 17.5 8.56539V17.2373C17.5 17.4362 17.421 17.6269 17.2803 17.7676C17.1397 17.9082 16.9489 17.9873 16.75 17.9873H12.25C12.0511 17.9873 11.8603 17.9082 11.7197 17.7676C11.579 17.6269 11.5 17.4362 11.5 17.2373Z' stroke='%23ABB7F9' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center / contain;
+}
+
+.myStrategy-scoring__diagram {
+  --persent: 54;
+  --diagram-color: #2781d0;
+
+  svg {
+    width: 51px;
+    height: 51px;
+  }
+
+  circle {
+    fill: transparent;
+  }
+
+  circle:nth-child(1) {
+    stroke: #e8f5ff;
+    stroke-width: 2;
+  }
+
+  circle:nth-child(2) {
+    stroke: var(--diagram-color);
+    stroke-width: 2;
+    stroke-dashoffset: 25;
+    stroke-dasharray: var(--persent), calc(100 - var(--persent));
+  }
+  text {
+    font-size: 16px;
+    font-weight: 600;
+  }
 }
