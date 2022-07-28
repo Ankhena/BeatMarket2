@@ -1320,6 +1320,11 @@ $banch_items_space: 0.8rem;
       width: auto;
       white-space: nowrap;
       font-weight: 500;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
     }
 
     @media ($media_xs) {
