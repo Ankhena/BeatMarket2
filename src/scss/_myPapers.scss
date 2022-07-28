@@ -1338,9 +1338,9 @@ $banch_items_space: 0.8rem;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   gap: 1px;
-  width: fit-content;
+  //width: fit-content;
   padding: 2px 4px;
-  margin: 0 5px;
+  margin: 0 10px 0 4px;
   background: #ffffff;
   box-shadow: 0 3px 9px 0 rgba(62, 84, 216, 0.14);
   border-radius: 8px;
@@ -1383,6 +1383,7 @@ $banch_items_space: 0.8rem;
 .statTable-scoring__diagram {
   --persent: 54;
   --diagram-color: #2781d0;
+  grid-column: 2/3;
 
   svg {
     width: 32px;

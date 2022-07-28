@@ -210,6 +210,7 @@
 .myStrategy-scoring {
   display: grid;
   grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: 1fr min-content 1fr;
   gap: 8px;
   padding: 12px;
   background: #ffffff;
@@ -258,6 +259,7 @@
 .myStrategy-scoring__diagram {
   --persent: 54;
   --diagram-color: #2781d0;
+  grid-column: 2/3;
 
   svg {
     width: 51px;
