@@ -5032,6 +5032,8 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   display: grid;
   grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
   grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: 1fr -webkit-min-content 1fr;
+  grid-template-columns: 1fr min-content 1fr;
   gap: 8px;
   padding: 12px;
   background: #ffffff;
@@ -5081,6 +5083,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .myStrategy-scoring__diagram {
   --persent: 54;
   --diagram-color: #2781d0;
+  grid-column: 2/3;
 }
 
 .myStrategy-scoring__diagram svg {
@@ -6663,11 +6666,8 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   grid-template-columns: 1fr -webkit-min-content 1fr;
   grid-template-columns: 1fr min-content 1fr;
   gap: 1px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   padding: 2px 4px;
-  margin: 0 5px;
+  margin: 0 10px 0 4px;
   background: #ffffff;
   box-shadow: 0 3px 9px 0 rgba(62, 84, 216, 0.14);
   border-radius: 8px;
@@ -6710,6 +6710,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .statTable-scoring__diagram {
   --persent: 54;
   --diagram-color: #2781d0;
+  grid-column: 2/3;
 }
 
 .statTable-scoring__diagram svg {
