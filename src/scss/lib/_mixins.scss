@@ -1854,8 +1854,6 @@ input[type="radio"]:checked {
 
 
 @function rem($size, $basicfz) {
-    //@return ($size/$layout-width*100)+vw;
-    //@return #{(math.div($size, $basicfz)*1)}rem;
     @return #{(math.div($size, $basicfz)*1)}rem;
 }
 
