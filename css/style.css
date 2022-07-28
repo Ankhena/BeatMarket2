@@ -6652,6 +6652,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   font-weight: 500;
 }
 
+.paperDontTrade__popup--link a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .statTable-scoring {
   align-self: center;
   display: grid;
