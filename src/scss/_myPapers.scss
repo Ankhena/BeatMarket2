@@ -1344,6 +1344,10 @@ $banch_items_space: 0.8rem;
   background: #ffffff;
   box-shadow: 0 3px 9px 0 rgba(62, 84, 216, 0.14);
   border-radius: 8px;
+
+  @media ($media_sm) {
+    align-self: start;
+  }
 }
 
 .statTable-scoring__value {
