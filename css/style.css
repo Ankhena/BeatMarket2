@@ -5036,6 +5036,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   grid-template-columns: 1fr min-content 1fr;
   gap: 8px;
   padding: 12px;
+  margin-left: 10px;
   background: #ffffff;
   box-shadow: 0 3px 9px 0 rgba(62, 84, 216, 0.14);
   border-radius: 8px;
@@ -14027,6 +14028,10 @@ body.viewProfile .header-controls-links-link.auth span {
 @media (max-width: 1150px) {
   .section-inner {
     max-width: 90%;
+  }
+
+  .myStrategy-scoring {
+    margin-left: 0;
   }
 
   .backlink {
