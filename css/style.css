@@ -15805,6 +15805,10 @@ body.viewProfile .header-controls-links-link.auth span {
     cursor: initial;
   }
 
+  .statTable-scoring {
+    align-self: start;
+  }
+
   .performance .card {
     cursor: initial;
   }
