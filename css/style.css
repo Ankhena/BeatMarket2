@@ -6666,7 +6666,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   grid-template-columns: 1fr min-content 1fr;
   gap: 1px;
   padding: 2px 4px;
-  margin: 0 10px 0 4px;
+  margin: 0 30px 0 4px;
   background: #ffffff;
   box-shadow: 0 3px 9px 0 rgba(62, 84, 216, 0.14);
   border-radius: 8px;
@@ -15810,6 +15810,7 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable-scoring {
     align-self: start;
+    margin: 0 10px 0 4px;
   }
 
   .performance .card {
