@@ -342,12 +342,12 @@
       //overflow: hidden;
 
       @media ($media_sm) {
+        flex-basis: calc(100% + 3rem);
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         margin: 0 -1.5rem;
         padding: 1rem 1.5rem;
-        flex-direction: row;
-        flex-basis: calc(100% + 3rem);
-
         background-color: $color_table_header;
       }
     }
@@ -1415,4 +1415,14 @@ $banch_items_space: 0.8rem;
     font-size: 12px;
     font-weight: 600;
   }
+}
+
+.statTable-scoring-in-heading {
+  background: red;
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+.statTable-scoring-in-heading__title {
+  grid-column: 1/-1;
 }
