@@ -6738,6 +6738,17 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   font-weight: 600;
 }
 
+.statTable-scoring-in-heading {
+  background: red;
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+
+.statTable-scoring-in-heading__title {
+  grid-column: 1/-1;
+}
+
 .performance > div {
   margin-top: 3.33rem;
 }
@@ -15646,11 +15657,12 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .statTable__item--sticker {
+    flex-basis: calc(100% + 3rem);
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 -1.5rem;
     padding: 1rem 1.5rem;
-    flex-direction: row;
-    flex-basis: calc(100% + 3rem);
     background-color: #F5F6FD;
   }
 
