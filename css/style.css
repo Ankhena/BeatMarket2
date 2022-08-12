@@ -5961,6 +5961,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   text-overflow: ellipsis;
 }
 
+.statTable__content--opened .statTable__item--only-desktop {
+  display: flex;
+}
+
 .statTable__description {
   display: none;
   margin-bottom: 0.4rem;
@@ -6672,6 +6676,25 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   border-radius: 8px;
 }
 
+.statTable-scoring--in-header {
+  display: none;
+}
+
+.statTable-scoring--in-header .statTable-scoring__diagram {
+  grid-column: span 1;
+  align-self: center;
+}
+
+.statTable-scoring__bms {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.statTable-scoring__safely {
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .statTable-scoring__value {
   display: block;
   font-size: 12px;
@@ -6736,17 +6759,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .statTable-scoring__diagram text {
   font-size: 12px;
   font-weight: 600;
-}
-
-.statTable-scoring-in-heading {
-  background: red;
-  display: grid;
-  gap: 10px;
-  width: 100%;
-}
-
-.statTable-scoring-in-heading__title {
-  grid-column: 1/-1;
 }
 
 .performance > div {
@@ -15676,6 +15688,10 @@ body.viewProfile .header-controls-links-link.auth span {
     display: block;
   }
 
+  .statTable__content--opened .statTable__item--only-desktop {
+    display: none;
+  }
+
   .statTable__description {
     display: inline-block;
   }
@@ -15823,6 +15839,19 @@ body.viewProfile .header-controls-links-link.auth span {
   .statTable-scoring {
     align-self: start;
     margin: 0 10px 0 4px;
+  }
+
+  .statTable-scoring--in-header {
+    display: grid;
+    grid-template-columns: -webkit-min-content -webkit-min-content 1fr -webkit-min-content;
+    grid-template-columns: min-content min-content 1fr min-content;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    padding: 7px 7px;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .performance .card {
