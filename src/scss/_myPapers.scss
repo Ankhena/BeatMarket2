@@ -1344,6 +1344,7 @@ $banch_items_space: 0.8rem;
 }
 
 .statTable-scoring {
+  min-width: 89px;
   align-self: center;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -1366,8 +1367,7 @@ $banch_items_space: 0.8rem;
   display: none;
 
   @media ($media_sm) {
-    display: grid;
-    grid-template-columns: min-content min-content 1fr min-content;
+    display: flex;
     gap: 10px;
     width: 100%;
     max-width: 400px;
@@ -1386,6 +1386,11 @@ $banch_items_space: 0.8rem;
     align-self: center;
   }
 
+}
+
+.statTable-scoring__content {
+  flex-grow: 1;
+  white-space: nowrap;
 }
 
 .statTable-scoring__bms {
@@ -1455,7 +1460,7 @@ $banch_items_space: 0.8rem;
     stroke: var(--diagram-color);
     stroke-width: 2;
     stroke-dashoffset: 25;
-    stroke-dasharray: var(--persent), calc(100 - var(--persent));
+    stroke-dasharray: var(--persent), calc(100px - var(--persent));
   }
 
   text {
