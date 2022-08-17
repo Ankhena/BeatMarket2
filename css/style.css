@@ -6664,6 +6664,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .statTable-scoring {
+  min-width: 89px;
   align-self: center;
   display: grid;
   grid-template-columns: 1fr -webkit-min-content 1fr;
@@ -6683,6 +6684,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .statTable-scoring--in-header .statTable-scoring__diagram {
   grid-column: span 1;
   align-self: center;
+}
+
+.statTable-scoring__content {
+  flex-grow: 1;
+  white-space: nowrap;
 }
 
 .statTable-scoring__bms {
@@ -6753,7 +6759,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   stroke: var(--diagram-color);
   stroke-width: 2;
   stroke-dashoffset: 25;
-  stroke-dasharray: var(--persent), calc(100 - var(--persent));
+  stroke-dasharray: var(--persent), calc(100px - var(--persent));
 }
 
 .statTable-scoring__diagram text {
@@ -15842,9 +15848,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .statTable-scoring--in-header {
-    display: grid;
-    grid-template-columns: -webkit-min-content -webkit-min-content 1fr -webkit-min-content;
-    grid-template-columns: min-content min-content 1fr min-content;
+    display: flex;
     gap: 10px;
     width: 100%;
     max-width: 400px;
