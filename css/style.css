@@ -5881,7 +5881,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .dividends .strategyCards-card {
-  flex-basis: 50%;
+  flex-basis: 49%;
   display: flex;
   flex-direction: column;
 }
@@ -13989,6 +13989,82 @@ body.viewProfile .header-controls-links-link.auth span {
 
 .analyticCreate__header .btn span {
   margin-left: 12px;
+}
+
+.analyticRatings__block {
+  background-color: #FFFFFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 18px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+}
+
+.analyticRatings__block + .analyticRatings__block {
+  margin-top: 40px;
+}
+
+.analyticRatings__left {
+  border-right: 1px solid #D3E3FF;
+  padding-right: 40px;
+  margin-right: 81px;
+  flex-basis: 50%;
+}
+
+.analyticRatings__right {
+  flex-basis: 50%;
+}
+
+.analyticRatings__name {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.analyticRatings__ratings {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block-rating {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 18px;
+  width: 100%;
+}
+
+.block-rating:not(:last-child) {
+  margin-left: 16px;
+}
+
+.block-rating__position {
+  font-weight: 600;
+  font-size: 14px;
+  color: #DE4355;
+  margin-right: 8px;
+}
+
+.block-rating__content {
+  display: flex;
+}
+
+.block-rating__content .myStrategy-scoring__diagram {
+  height: 51px;
+}
+
+.block-rating__info {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.block-rating__text {
+  font-weight: 600;
+  color: #373943;
+  margin-left: 16px;
 }
 
 @media (min-width: 564px) {

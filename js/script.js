@@ -3364,3 +3364,37 @@ initPortfolioProfitGraph();
 
 });
 
+//function tableScroll() {
+//  const table = document.querySelector(".table-scroll")
+//  let mouseOverBox = false
+
+//  table.addEventListener("mousedown", clickTable)
+
+
+//  function clickTable() {
+//    table.addEventListener("mousemove", moveTable)
+//    mouseOverBox = true
+
+//    console.log("Нажата")
+//  }
+
+//  table.addEventListener("mouseup", upClickTable)
+
+//  function moveTable(e) {
+//    if (mouseOverBox) {
+//      console.log('Вошел');
+//      let x = e.clientX
+
+//        table.scroll(x, 0)
+
+//    }
+//  }
+
+//  function upClickTable(e) {
+//    console.log('Ушел');
+//    mouseOverBox = false
+//  }
+
+//}
+
+//tableScroll()
