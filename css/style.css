@@ -4936,19 +4936,47 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   color: #fff;
 }
 
+.myStrategy-items-item-header-info-content-settings {
+  display: flex;
+  align-items: center;
+  color: #3E54D8;
+  transition: color 0.3s;
+}
+
+.myStrategy-items-item-header-info-content-settings:hover {
+  color: #1B2D9D;
+}
+
+.myStrategy-items-item-header-info-content-settings label {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 .myStrategy-items-item-header-info-content-settings button {
-  border: none;
+  border: 1px solid #D3E3FF;
+  border-radius: 6px;
   outline: none;
-  background-color: transparent;
+  background-color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: 8px;
+}
+
+.myStrategy-items-item-header-info-content-settings button:not(:first-child) {
+  margin-left: 16px;
+}
+
+.myStrategy-items-item-header-info-content-settings button:hover svg {
+  stroke: #1B2D9D;
 }
 
 .myStrategy-items-item-header-info-content-settings button svg {
-  stroke: #929398;
+  stroke: #3E54D8;
   width: 24px;
   height: 24px;
+  transition: stroke 0.3s;
 }
 
 .myStrategy-items-item-header-info-content-settings button span {
@@ -4956,14 +4984,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-left: 0.5rem;
   font-size: 0.9rem;
   font-weight: 500;
-}
-
-.myStrategy-items-item-header-info-content-settings button:hover svg {
-  stroke: #3E54D8;
-}
-
-.myStrategy-items-item-header-info-content-settings button:hover span {
-  color: #3E54D8;
 }
 
 .myStrategy-items-item-header-stat {
@@ -4976,6 +4996,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .myStrategy-items-item-header-stat.paddingBase {
   padding: 0 2rem;
+}
+
+.myStrategy-items-item-header-stat-block {
+  margin-right: 16px;
 }
 
 .myStrategy-items-item-header-stat-block h5 {
@@ -5109,6 +5133,36 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .myStrategy-scoring__diagram text {
   font-size: 16px;
   font-weight: 600;
+}
+
+.myStrategy-items-item-mention {
+  border: 1px solid #D3E3FF;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.myStrategy-items-item-mention::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+  background-color: #3E54D8;
+  left: 0;
+}
+
+.myStrategy-items-item-mention-img {
+  margin-right: 24px;
+}
+
+.myStrategy-items-item-mention-text {
+  font-size: 16px;
+  color: #373943;
 }
 
 .myStrategy-news-container .table-header h5:nth-child(1) {
@@ -5350,6 +5404,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: inline-block;
 }
 
 .myStrategy-indicators-container .table-fixed-item h5 {
@@ -5431,6 +5486,141 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   color: #ED6373;
 }
 
+.myStrategy-indicators__block {
+  background-color: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 18px;
+  padding: 32px;
+}
+
+.tarif__block {
+  background-color: #FCFDFF;
+  border: 1px solid #E6EEFF;
+  box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 12px;
+  padding: 32px 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarif__block::before {
+  position: absolute;
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+  transition: 0.3s ease-in-out;
+}
+
+.tarif__block.green::before {
+  background-color: #199F27;
+}
+
+.tarif__block.red::before {
+  background-color: #ED6373;
+}
+
+.tarifs-cards {
+  display: grid;
+  grid-auto-rows: minmax(170px, auto);
+  gap: 20px;
+}
+
+.tarif-block__item {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 500;
+  color: #373943;
+  white-space: nowrap;
+}
+
+.tarif-block__item:not(:first-child) {
+  margin-top: 15px;
+}
+
+.tarif-block__item span {
+  font-weight: 700;
+  font-size: 24px;
+  color: #3E54D8;
+  margin-right: 8px;
+}
+
+.tarif-block__currentResult {
+  background-color: #3E54D8;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 26px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.tarif-block__currentResult span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-right: 8px;
+}
+
+.indicators-title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #24252E;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.hint {
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-left: 16px;
+}
+
+.hint.green {
+  background-color: rgba(25, 159, 39, 0.24);
+  color: #199F27;
+}
+
+.hint.red {
+  background-color: rgba(222, 67, 85, 0.24);
+  color: #DE4355;
+}
+
+.hint.blue {
+  background-color: #D3E3FF;
+  color: #3E54D8;
+}
+
+.sp {
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  background-color: #F0F5FF;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+
+.sp span {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #3E54D8;
+}
+
 .dividends__item {
   margin-top: 3.35rem;
 }
@@ -5444,6 +5634,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .dividends .period-info {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -5470,6 +5661,24 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   width: 20px;
   height: 20px;
   margin-left: 0.5rem;
+}
+
+.dividends .period-info-filter {
+  display: inline-block;
+  background-color: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 6px;
+  margin-left: 32px;
+  padding: 5px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3E54D8;
+  transition: background-color 0.3s;
+}
+
+.dividends .period-info-filter:hover {
+  background-color: #1B2D9D;
+  color: #fff;
 }
 
 .dividends .period-status {
@@ -5546,11 +5755,39 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   align-items: center;
 }
 
+.dividends .table-fixed-item.inline .table-fixed-item-content {
+  flex-direction: row;
+  align-items: center;
+}
+
+.dividends .table-fixed-item.inline .table-fixed-item-percent {
+  margin-top: 3px;
+}
+
 .dividends .table-fixed-item-content {
-  max-width: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.dividends .table-fixed-item-content-first {
+  display: flex;
+  align-items: center;
+}
+
+.dividends .table-fixed-item-content-second {
+  display: flex;
+  align-items: center;
+}
+
+.dividends .table-fixed-item-content-second > span {
+  max-width: 75px;
+}
+
+.dividends .table-fixed-item-price {
+  font-weight: 500;
+  font-size: 12px;
+  color: #3E54D8;
+  margin-left: 9px;
 }
 
 .dividends .table-fixed-item-stat {
@@ -5568,22 +5805,28 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   font-size: 12px;
 }
 
-.dividends .table-fixed-item-stat-percent {
-  font-size: 0.75rem;
-  display: inline-block;
+.dividends .table-fixed-item-percent {
+  font-size: 0.7rem;
+  display: inline-flex;
+  align-items: center;
   font-weight: 600;
   line-height: 1;
+  margin-left: 8px;
 }
 
-.dividends .table-fixed-item-stat-percent.success {
+.dividends .table-fixed-item-percent span {
+  margin-left: 5px;
+}
+
+.dividends .table-fixed-item-percent.success {
   color: #199F27;
 }
 
-.dividends .table-fixed-item-stat-percent.error {
+.dividends .table-fixed-item-percent.error {
   color: #ED6373;
 }
 
-.dividends .table-fixed-item-stat-percent .ttm {
+.dividends .table-fixed-item-percent .ttm {
   margin-left: 0.2rem;
 }
 
@@ -6148,6 +6391,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .statSticker__percent--error {
   color: #ED6373;
+}
+
+.statSticker__block {
+  display: flex;
+  align-items: center;
 }
 
 .statStickerInfo {
@@ -7132,42 +7380,49 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .performance-sectors .card,
-.performance-assets .card {
+.performance-assets .card,
+.performance-location .card {
   display: flex;
 }
 
 .performance-sectors .card-block,
-.performance-assets .card-block {
+.performance-assets .card-block,
+.performance-location .card-block {
   flex-basis: 50%;
 }
 
 .performance-sectors .card-block.border,
-.performance-assets .card-block.border {
+.performance-assets .card-block.border,
+.performance-location .card-block.border {
   border-right: 1px solid #D3E3FF;
   padding-right: 2rem;
   margin-right: 2rem;
 }
 
 .performance-sectors .card-content-graph,
-.performance-assets .card-content-graph {
+.performance-assets .card-content-graph,
+.performance-location .card-content-graph {
   flex-basis: 28%;
 }
 
 .performance-sectors .card-content-info,
-.performance-assets .card-content-info {
+.performance-assets .card-content-info,
+.performance-location .card-content-info {
   margin-left: 1rem;
   padding-left: 2rem;
 }
 
 .performance-sectors .card-list ol,
-.performance-assets .card-list ol {
+.performance-assets .card-list ol,
+.performance-location .card-list ol {
   list-style: none;
   counter-reset: item;
   padding: 0;
 }
 
 .performance-sectors .card-list li,
-.performance-assets .card-list li {
+.performance-assets .card-list li,
+.performance-location .card-list li {
   counter-increment: item;
   display: flex;
   width: 70%;
@@ -7175,22 +7430,26 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .performance-sectors .card-list li .value,
-.performance-assets .card-list li .value {
+.performance-assets .card-list li .value,
+.performance-location .card-list li .value {
   margin-left: auto;
 }
 
 .performance-sectors .card-list li .value strong,
-.performance-assets .card-list li .value strong {
+.performance-assets .card-list li .value strong,
+.performance-location .card-list li .value strong {
   white-space: nowrap;
 }
 
 .performance-sectors .card-list li:not(:last-child),
-.performance-assets .card-list li:not(:last-child) {
+.performance-assets .card-list li:not(:last-child),
+.performance-location .card-list li:not(:last-child) {
   margin-bottom: 0.8rem;
 }
 
 .performance-sectors .card-list li:before,
-.performance-assets .card-list li:before {
+.performance-assets .card-list li:before,
+.performance-location .card-list li:before {
   margin-right: 0.4rem;
   content: counter(item) ". ";
   color: #929398;
@@ -7202,13 +7461,16 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .performance-sectors .card .graphContent span,
 .performance-sectors .card .graphContent strong,
 .performance-assets .card .graphContent span,
-.performance-assets .card .graphContent strong {
+.performance-assets .card .graphContent strong,
+.performance-location .card .graphContent span,
+.performance-location .card .graphContent strong {
   font-size: 0.9rem;
   white-space: nowrap;
 }
 
 .performance-sectors .card .graphContent:not(:last-child),
-.performance-assets .card .graphContent:not(:last-child) {
+.performance-assets .card .graphContent:not(:last-child),
+.performance-location .card .graphContent:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -7579,6 +7841,89 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 /*  Larger Screen Styling */
+
+.main-content-controlls {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.main-content-analyticScanner {
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.main-content-analyticScanner .inputGroup {
+  flex-grow: 1;
+}
+
+.main-content-analyticScanner .inputGroup:not(:first-child) {
+  margin-left: 20px;
+}
+
+.analyticScanner__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.analyticScanner__header h2 {
+  font-size: 40px;
+  line-height: 48px;
+  margin-right: 16px;
+}
+
+.analyticScanner__header .btn {
+  display: flex;
+  align-items: center;
+}
+
+.analyticScanner__header .btn span {
+  margin-left: 12px;
+}
+
+.analyticScanner__counts {
+  display: flex;
+  border: 1px solid #D3E3FF;
+  border-radius: 10px;
+  max-height: 55px;
+  margin-top: 30px;
+  max-width: 191px;
+  width: 100%;
+  justify-content: center;
+}
+
+.analyticScanner__count {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3E54D8;
+  padding: 16px 26px;
+}
+
+.analyticScanner__count span {
+  color: #929398;
+}
+
+.analyticScanner__count:last-child {
+  border-left: 1px solid #D3E3FF;
+}
+
+.analyticScanner .btnShowAll {
+  margin-bottom: 32px;
+}
+
+.analyticScanner__btn-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.analyticScanner__btn-list .btn {
+  margin-right: 16px;
+}
 
 .support__write {
   margin-bottom: 1.4rem;
@@ -9145,6 +9490,8 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .assetsInfoPromo__graph .modal-content-switcher-button span {
+  align-items: center;
+  height: 100%;
   padding: 0.95rem 0;
 }
 
@@ -9488,6 +9835,60 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .mainPromo__button svg {
   width: 32px;
   height: 32px;
+}
+
+.mainPromo__mention {
+  background-color: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 8px;
+  color: #929398;
+  padding: 13px 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.mainPromo-mention__text {
+  max-width: 272px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.39;
+}
+
+.mainPromo-mention__btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  height: 3px;
+  cursor: pointer;
+}
+
+.mainPromo-mention__btn:hover span::before,
+.mainPromo-mention__btn:hover span::after {
+  background-color: #3E54D8;
+}
+
+.mainPromo-mention__btn span {
+  position: absolute;
+}
+
+.mainPromo-mention__btn span::before,
+.mainPromo-mention__btn span::after {
+  content: "";
+  position: absolute;
+  width: 1.5px;
+  height: 21px;
+  background-color: #929398;
+  transition: background-color 0.3s;
+}
+
+.mainPromo-mention__btn span::before {
+  transform: rotate(45deg);
+}
+
+.mainPromo-mention__btn span::after {
+  transform: rotate(-46deg);
 }
 
 .btnShare {
@@ -10133,9 +10534,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .dividendsTarget__labelInfo svg {
-  width: 1.33rem;
-  height: 1.33rem;
+  min-width: 18px;
+  min-height: 18px;
   margin-right: 0.6rem;
+  width: 18px;
+  height: 18px;
 }
 
 .dividendsTarget__labelInfo--primary {
@@ -10306,9 +10709,12 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   height: 1.35rem;
 }
 
+.analyticCreate__header {
+  margin-bottom: 2.2rem;
+}
+
 .analyticCreate__switcher {
   width: 40%;
-  margin-bottom: 2.2rem;
 }
 
 .analyticCreate__searchText {
@@ -10892,6 +11298,28 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   top: 0;
   right: 0;
   transform: translate(50%, -50%);
+}
+
+.myStrategy-items-item-content-nav__btn:hover span::before {
+  background-color: #1B2D9D;
+}
+
+.myStrategy-items-item-content-nav__btn span {
+  color: #E1E6FF;
+  position: relative;
+}
+
+.myStrategy-items-item-content-nav__btn span::before {
+  content: "";
+  background-color: #3E54D8;
+  border-radius: 6px;
+  position: absolute;
+  width: 133px;
+  height: 40px;
+  z-index: -1;
+  left: -13px;
+  top: -11px;
+  transition: background-color 0.3s;
 }
 
 input[type=radio],
@@ -13028,7 +13456,8 @@ td {
 
 .strategyCards {
   display: flex;
-  margin-top: 3rem;
+  flex-wrap: wrap;
+  margin-top: 1.7rem;
 }
 
 .strategyCards-card {
@@ -13036,7 +13465,8 @@ td {
   border: 1px solid #D3E3FF;
   border-radius: 1rem;
   padding: 1.35rem;
-  flex-basis: 25%;
+  flex-basis: 48%;
+  margin-top: 1.5rem;
 }
 
 .strategyCards-card:not(:last-child) {
@@ -13109,6 +13539,8 @@ td {
 }
 
 .strategyCards-card-coef {
+  display: flex;
+  align-items: center;
   margin: 1.6rem 0;
 }
 
@@ -13542,6 +13974,23 @@ body.viewProfile .header-controls-links-link.auth span {
   width: 100%;
 }
 
+.analyticCreate__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.analyticCreate__header .btn {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.analyticCreate__header .btn span {
+  margin-left: 12px;
+}
+
 @media (min-width: 564px) {
   .daterangepicker {
     width: auto;
@@ -13777,6 +14226,12 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
+@media (min-width: 1600px) {
+  .tarifs-cards {
+    grid-template-columns: 1.5fr 2fr 2fr;
+  }
+}
+
 @media (max-width: 1720px) {
   :root {
     --section_padding: 2.5rem;
@@ -13991,6 +14446,12 @@ body.viewProfile .header-controls-links-link.auth span {
   .strategyCards-card-header h3 {
     font-size: 0.9rem;
     margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 1599px) {
+  .tarifs-cards {
+    grid-template-columns: repeat(auto-fit, 1fr);
   }
 }
 
@@ -15616,6 +16077,14 @@ body.viewProfile .header-controls-links-link.auth span {
     stroke: #fff;
   }
 
+  .statTable__content--opened > .statTable__row .statTable__item {
+    display: flex;
+  }
+
+  .statTable__content--opened > .statTable__row .statTable__item--label {
+    display: block;
+  }
+
   .statTable__content--opened > .statTable__row .statTable__item--sticker {
     background-color: #3E54D8;
   }
@@ -15640,14 +16109,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable__content--opened > .statTable__row .statSticker__percent--success {
     color: #1BD32F;
-  }
-
-  .statTable__content--opened .statTable__item {
-    display: flex;
-  }
-
-  .statTable__content--opened .statTable__item--label {
-    display: block;
   }
 
   .statTable__content--danger {
@@ -15926,17 +16387,20 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .performance-sectors .card,
-  .performance-assets .card {
+  .performance-assets .card,
+  .performance-location .card {
     flex-wrap: wrap;
   }
 
   .performance-sectors .card-block,
-  .performance-assets .card-block {
+  .performance-assets .card-block,
+  .performance-location .card-block {
     flex-basis: 100%;
   }
 
   .performance-sectors .card-block.border,
-  .performance-assets .card-block.border {
+  .performance-assets .card-block.border,
+  .performance-location .card-block.border {
     padding: 0 0 2rem 0;
     margin: 0 0 2rem 0;
     border-right: none;
@@ -15944,7 +16408,8 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .performance-sectors .card-list li,
-  .performance-assets .card-list li {
+  .performance-assets .card-list li,
+  .performance-location .card-list li {
     width: 100%;
   }
 
@@ -16890,6 +17355,34 @@ body.viewProfile .header-controls-links-link.auth span {
     gap: 1.5rem;
   }
 
+  .myStrategy-indicators__block {
+    padding: 16px 12px;
+  }
+
+  .tarif__block {
+    padding: 16px 12px;
+  }
+
+  .tarif-block__item span {
+    margin-right: 0;
+    margin-top: 8px;
+  }
+
+  .tarif-block__item {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .tarif-block__currentResult {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .sp {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+
   .paperDontTrade__popup {
     max-width: 12rem;
   }
@@ -16897,6 +17390,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .blockSection__title {
     font-size: 1.15rem;
     letter-spacing: -0.2px;
+  }
+
+  .dividendsTarget__labelInfo {
+    margin-left: 2rem;
   }
 
   .advisorRateList .orderHistory__title {
@@ -16915,9 +17412,24 @@ body.viewProfile .header-controls-links-link.auth span {
   .adv-prtf-ready__pie-chart-numbers {
     font-size: 14px;
   }
+
+  .strategyCards-card-header {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: max-width: 576px) {
+  .tarif-block__currentResult span {
+    margin-right: 0;
+    margin-top: 8px;
+  }
 }
 
 @media (max-width: 450px) {
+  .myStrategy-items-item-mention-text {
+    font-size: 14px;
+  }
+
   .referrals__description {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;

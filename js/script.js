@@ -14,9 +14,9 @@ testWebP(function (support) {
     }
 });;
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-    function initModal(DOMelem) {
+  function initModal(DOMelem) {
 
     let overlay = document.querySelector(".overlay_modal");
     let html = document.documentElement;
@@ -88,7 +88,7 @@ $(document).ready(function() {
 }
 
 initModal();
-    function initBurgerMenu() {
+  function initBurgerMenu() {
     let button_burger = $("[data-burger='button']");
     let menu_burger = $("[data-burger='menu']");
     let overlay = document.querySelector(".overlay_burger");
@@ -106,7 +106,7 @@ initModal();
 }
 
 initBurgerMenu();
-    // link: https://selectric.js.org
+  // link: https://selectric.js.org
 
 function initSelectric() {
     document.querySelectorAll("select").forEach(item => {
@@ -115,7 +115,7 @@ function initSelectric() {
 }
 
 initSelectric();
-    function initScroll() {
+  function initScroll() {
     let overlay_burger = document.querySelector(".overlay_burger");
 
     document.querySelectorAll("[data-scroll]").forEach(item => {
@@ -134,7 +134,7 @@ initSelectric();
 }
 
 initScroll();
-    const myRenderGraph = document.querySelector("#stategyPromoChart");
+  const myRenderGraph = document.querySelector("#stategyPromoChart");
 const myRenderGraphCategories = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 const myRenderShowYLine = true; // если нужен показ верт. линий в графе, ставим true
 
@@ -232,7 +232,7 @@ if (myRenderGraph !== null) {
     }
     
 }
-    function initSearchInput() {
+  function initSearchInput() {
     document.querySelectorAll(".mySearchContainer").forEach(item => {
 
         item.addEventListener("input", (e) => {
@@ -341,7 +341,7 @@ if (myRenderGraph !== null) {
 }
 
 initSearchInput()
-    function initMoveStrategy() {
+  function initMoveStrategy() {
     let moveActive = false;
     let strategies = document.querySelectorAll(".myStrategy-items-item");
 
@@ -372,7 +372,7 @@ initSearchInput()
 }
 
 initMoveStrategy();
-    const myGraph = document.querySelector("#dividendsGraph");
+  const myGraph = document.querySelector("#dividendsGraph");
 
 if (myGraph !== null) {
     Highcharts.chart('dividendsGraph', {
@@ -423,7 +423,7 @@ if (myGraph !== null) {
         }]
     });
 }
-    function initInputCounter() {
+  function initInputCounter() {
     document.querySelectorAll("[data-counter]").forEach(item => {
         item.addEventListener("click", () => {
             let value = +document.querySelector(`#${item.dataset.counter}`).innerText;
@@ -434,7 +434,7 @@ if (myGraph !== null) {
 }
 
 initInputCounter();
-    function initBanchGraphModern() {
+  function initBanchGraphModern() {
     let graphContent = document.querySelector(".banchGraph .banchGraph-content");
 
     if (graphContent === null) {
@@ -623,236 +623,302 @@ initInputCounter();
 }
 
 initBanchGraphModern();
-    const separation_graph_1_data = [{
-    name: 'Intel',
-    y: 5,
-    z: 100,
-    color: "#5BDE60"
+  const separation_graph_1_data = [{
+  name: 'Intel',
+  y: 5,
+  z: 100,
+  color: "#5BDE60"
 }, {
-    name: 'Texas instrumental',
-    y: 23.03,
-    z: 100,
-    color: "#5B97DE"
+  name: 'Texas instrumental',
+  y: 23.03,
+  z: 100,
+  color: "#5B97DE"
 }, {
-    name: 'Tractor supply',
-    y: 7.11,
-    z: 100,
-    color: "#DE5B5B"
+  name: 'Tractor supply',
+  y: 7.11,
+  z: 100,
+  color: "#DE5B5B"
 }, {
-    name: 'Pool',
-    y: 8.25,
-    z: 100,
-    color: "#DEAA5B"
+  name: 'Pool',
+  y: 8.25,
+  z: 100,
+  color: "#DEAA5B"
 }, {
-    name: 'ZM company',
-    y: 3.03,
-    z: 100,
-    color: "#5E5BDE"
+  name: 'ZM company',
+  y: 3.03,
+  z: 100,
+  color: "#5E5BDE"
 }, {
-    name: 'Mastercard',
-    y: 5.24,
-    z: 100,
-    color: "#BC5BDE"
+  name: 'Mastercard',
+  y: 5.24,
+  z: 100,
+  color: "#BC5BDE"
 }, {
-    name: 'Other',
-    y: 55.67,
-    z: 100,
-    color: "#acacac"
+  name: 'Other',
+  y: 55.67,
+  z: 100,
+  color: "#acacac"
 }];
 
 const separation_graph_2_data = [{
-    name: 'Financial',
-    y: 5,
-    z: 100,
-    color: "#5BDE60"
+  name: 'Financial',
+  y: 5,
+  z: 100,
+  color: "#5BDE60"
 }, {
-    name: 'Technology',
-    y: 33.03,
-    z: 100,
-    color: "#5B97DE"
+  name: 'Technology',
+  y: 33.03,
+  z: 100,
+  color: "#5B97DE"
 }, {
-    name: 'Tractor supply',
-    y: 17.11,
-    z: 100,
-    color: "#DE5B5B"
+  name: 'Tractor supply',
+  y: 17.11,
+  z: 100,
+  color: "#DE5B5B"
 }, {
-    name: 'Pool',
-    y: 28.25,
-    z: 100,
-    color: "#DEAA5B"
+  name: 'Pool',
+  y: 28.25,
+  z: 100,
+  color: "#DEAA5B"
 }, {
-    name: 'ZM company',
-    y: 13.03,
-    z: 100,
-    color: "#5E5BDE"
+  name: 'ZM company',
+  y: 13.03,
+  z: 100,
+  color: "#5E5BDE"
 }];
 
 const separation_graph_3_data = [{
-    name: 'Equity',
-    y: 100,
-    z: 100,
-    color: "#DE5B5B"
+  name: 'Equity',
+  y: 100,
+  z: 100,
+  color: "#DE5B5B"
 }];
 
 const separation_graph_4_data = [{
-    name: 'INT',
-    y: 23.03,
-    z: 100,
-    color: "#2C7259"
+  name: 'INT',
+  y: 23.03,
+  z: 100,
+  color: "#2C7259"
 }, {
-    name: 'TXN',
-    y: 7.11,
-    z: 100,
-    color: "#FFEB34"
+  name: 'TXN',
+  y: 7.11,
+  z: 100,
+  color: "#FFEB34"
 }, {
-    name: 'TCKO',
-    y: 8.25,
-    z: 100,
-    color: "#B22D2D"
+  name: 'TCKO',
+  y: 8.25,
+  z: 100,
+  color: "#B22D2D"
 }, {
-    name: 'Pool',
-    y: 3.03,
-    z: 100,
-    color: "#BC5BDE"
+  name: 'Pool',
+  y: 3.03,
+  z: 100,
+  color: "#BC5BDE"
 }, {
-    name: 'MA',
-    y: 5.24,
-    z: 100,
-    color: "#2D1336"
+  name: 'MA',
+  y: 5.24,
+  z: 100,
+  color: "#2D1336"
 }, {
-    name: 'MMA',
-    y: 55.67,
-    z: 100,
-    color: "#842EA3"
+  name: 'MMA',
+  y: 55.67,
+  z: 100,
+  color: "#842EA3"
 }, {
-    name: 'LEG',
-    y: 3.03,
-    z: 100,
-    color: "#5BDE60"
+  name: 'LEG',
+  y: 3.03,
+  z: 100,
+  color: "#5BDE60"
 }, {
-    name: 'INT',
-    y: 23.03,
-    z: 100,
-    color: "#2C7259"
+  name: 'INT',
+  y: 23.03,
+  z: 100,
+  color: "#2C7259"
 }, {
-    name: 'TXN',
-    y: 7.11,
-    z: 100,
-    color: "#FFEB34"
+  name: 'TXN',
+  y: 7.11,
+  z: 100,
+  color: "#FFEB34"
 }, {
-    name: 'TCKO',
-    y: 8.25,
-    z: 100,
-    color: "#B22D2D"
+  name: 'TCKO',
+  y: 8.25,
+  z: 100,
+  color: "#B22D2D"
 }, {
-    name: 'Pool',
-    y: 3.03,
-    z: 100,
-    color: "#BC5BDE"
+  name: 'Pool',
+  y: 3.03,
+  z: 100,
+  color: "#BC5BDE"
 }, {
-    name: 'MA',
-    y: 5.24,
-    z: 100,
-    color: "#2D1336"
+  name: 'MA',
+  y: 5.24,
+  z: 100,
+  color: "#2D1336"
 }, {
-    name: 'MMA',
-    y: 55.67,
-    z: 100,
-    color: "#842EA3"
+  name: 'MMA',
+  y: 55.67,
+  z: 100,
+  color: "#842EA3"
 }, {
-    name: 'LEG',
-    y: 3.03,
-    z: 100,
-    color: "#5BDE60"
+  name: 'LEG',
+  y: 3.03,
+  z: 100,
+  color: "#5BDE60"
 }, {
-    name: 'INT',
-    y: 23.03,
-    z: 100,
-    color: "#2C7259"
+  name: 'INT',
+  y: 23.03,
+  z: 100,
+  color: "#2C7259"
 }, {
-    name: 'TXN',
-    y: 7.11,
-    z: 100,
-    color: "#FFEB34"
+  name: 'TXN',
+  y: 7.11,
+  z: 100,
+  color: "#FFEB34"
 }, {
-    name: 'TCKO',
-    y: 8.25,
-    z: 100,
-    color: "#B22D2D"
+  name: 'TCKO',
+  y: 8.25,
+  z: 100,
+  color: "#B22D2D"
 }, {
-    name: 'Pool',
-    y: 3.03,
-    z: 100,
-    color: "#BC5BDE"
+  name: 'Pool',
+  y: 3.03,
+  z: 100,
+  color: "#BC5BDE"
 }, {
-    name: 'MA',
-    y: 5.24,
-    z: 100,
-    color: "#2D1336"
+  name: 'MA',
+  y: 5.24,
+  z: 100,
+  color: "#2D1336"
 }, {
-    name: 'MMA',
-    y: 55.67,
-    z: 100,
-    color: "#842EA3"
+  name: 'MMA',
+  y: 55.67,
+  z: 100,
+  color: "#842EA3"
 }, {
-    name: 'LEG',
-    y: 3.03,
-    z: 100,
-    color: "#5BDE60"
+  name: 'LEG',
+  y: 3.03,
+  z: 100,
+  color: "#5BDE60"
 }];
 
 const separation_graph_5_data = [{
-    name: 'Financial',
-    y: 5,
-    z: 100,
-    color: "#5BDE60"
+  name: 'Financial',
+  y: 5,
+  z: 100,
+  color: "#5BDE60"
 }, {
-    name: 'Technology',
-    y: 33.03,
-    z: 100,
-    color: "#5B97DE"
+  name: 'Technology',
+  y: 33.03,
+  z: 100,
+  color: "#5B97DE"
 }, {
-    name: 'Tractor supply',
-    y: 17.11,
-    z: 100,
-    color: "#DE5B5B"
+  name: 'Tractor supply',
+  y: 17.11,
+  z: 100,
+  color: "#DE5B5B"
 }, {
-    name: 'Pool',
-    y: 28.25,
-    z: 100,
-    color: "#DEAA5B"
+  name: 'Pool',
+  y: 28.25,
+  z: 100,
+  color: "#DEAA5B"
 }, {
-    name: 'ZM company',
-    y: 13.03,
-    z: 100,
-    color: "#5E5BDE"
+  name: 'ZM company',
+  y: 13.03,
+  z: 100,
+  color: "#5E5BDE"
 }, {
-    name: 'Industrial goods',
-    y: 5.24,
-    z: 100,
-    color: "#BC5BDE"
+  name: 'Industrial goods',
+  y: 5.24,
+  z: 100,
+  color: "#BC5BDE"
 }];
 
 const separation_graph_6_data = [{
-    name: 'Акции',
-    y: 80,
-    z: 100,
-    color: "#5E5BDE"
+  name: 'Акции',
+  y: 80,
+  z: 100,
+  color: "#5E5BDE"
 }, {
-    name: 'ETFS',
-    y: 0,
-    z: 100,
-    color: "#5B97DE"
+  name: 'ETFS',
+  y: 0,
+  z: 100,
+  color: "#5B97DE"
 }, {
-    name: 'Фонды',
-    y: 20,
-    z: 100,
-    color: "#DE5B5B"
+  name: 'Фонды',
+  y: 20,
+  z: 100,
+  color: "#DE5B5B"
 }, {
-    name: 'Денежные средства',
-    y: 0,
-    z: 100,
-    color: "#DEAA5B"
+  name: 'Денежные средства',
+  y: 0,
+  z: 100,
+  color: "#DEAA5B"
+}];
+const separation_graph_7_data = [{
+  name: 'Нидерланды',
+  y: 5,
+  z: 100,
+  color: "#5BDE60"
+}, {
+  name: 'США',
+  y: 23.03,
+  z: 100,
+  color: "#5B97DE"
+}, {
+  name: 'Россия',
+  y: 7.11,
+  z: 100,
+  color: "#DE5B5B"
+}, {
+  name: 'Нидерланды',
+  y: 8.25,
+  z: 100,
+  color: "#DEAA5B"
+},
+{
+  name: 'Россия',
+  y: 3.03,
+  z: 100,
+  color: "#5E5BDE"
+},
+{
+  name: 'США',
+  y: 5.24,
+  z: 100,
+  color: "#BC5BDE"
+}];
+const separation_graph_8_data = [{
+  name: 'Нидерланды',
+  y: 5,
+  z: 100,
+  color: "#5BDE60"
+}, {
+  name: 'США',
+  y: 23.03,
+  z: 100,
+  color: "#5B97DE"
+}, {
+  name: 'Россия',
+  y: 7.11,
+  z: 100,
+  color: "#DE5B5B"
+}, {
+  name: 'Нидерланды',
+  y: 8.25,
+  z: 100,
+  color: "#DEAA5B"
+},
+{
+  name: 'Россия',
+  y: 3.03,
+  z: 100,
+  color: "#5E5BDE"
+},
+{
+  name: 'США',
+  y: 5.24,
+  z: 100,
+  color: "#BC5BDE"
 }];
 
 const separation_graph_1 = document.querySelector("#separation_graph_1");
@@ -861,128 +927,132 @@ const separation_graph_3 = document.querySelector("#separation_graph_3");
 const separation_graph_4 = document.querySelector("#separation_graph_4");
 const separation_graph_5 = document.querySelector("#separation_graph_5");
 const separation_graph_6 = document.querySelector("#separation_graph_6");
+const separation_graph_7 = document.querySelector("#separation_graph_7");
+const separation_graph_8 = document.querySelector("#separation_graph_8");
 
 addPerformanceGraph(separation_graph_1, "separation_graph_1", separation_graph_1_data, false, "60%");
 addPerformanceGraph(separation_graph_2, "separation_graph_2", separation_graph_2_data, false, "60%");
-addPerformanceGraph(separation_graph_3, "separation_graph_3", separation_graph_3_data, false,"60%");
+addPerformanceGraph(separation_graph_3, "separation_graph_3", separation_graph_3_data, false, "60%");
 addPerformanceGraph(separation_graph_4, "separation_graph_4", separation_graph_4_data, false, "70%");
 addPerformanceGraph(separation_graph_5, "separation_graph_5", separation_graph_5_data, true, "60%");
 addPerformanceGraph(separation_graph_6, "separation_graph_6", separation_graph_6_data, true, "60%");
+addPerformanceGraph(separation_graph_7, "separation_graph_7", separation_graph_7_data, false, "60%");
+addPerformanceGraph(separation_graph_8, "separation_graph_8", separation_graph_8_data, false, "60%");
 
 function addPerformanceGraph(node, id, data, isInput, size) {
-    if (node !== null) {
-        Highcharts.chart(id, {
-            chart: {
-                type: 'variablepie',
-                backgroundColor: 'transparent'
-            },
-            title: {
-                text: ''
-            },
-            tooltip: {
-                headerFormat: '',
-                pointFormat: `
+  if (node !== null) {
+    Highcharts.chart(id, {
+      chart: {
+        type: 'variablepie',
+        backgroundColor: 'transparent'
+      },
+      title: {
+        text: ''
+      },
+      tooltip: {
+        headerFormat: '',
+        pointFormat: `
             <div style="text-align: center;">
               <h5>{point.name}</h5>
               <span>{point.y}%</span>
             </div>
           `,
-                useHTML: true
-            },
-            series: [{
-                innerSize: size,
-                zMin: 1,
-                name: 'countries',
-                borderWidth: 0,
-                borderColor: null,
-                data: data
-            }]
-        });
+        useHTML: true
+      },
+      series: [{
+        innerSize: size,
+        zMin: 1,
+        name: 'countries',
+        borderWidth: 0,
+        borderColor: null,
+        data: data
+      }]
+    });
 
-        if (isInput) {
-            addPerformanceGraphLabelsRadio(node.nextElementSibling, data, id);
-        }
-        else {
-            if (size === "70%") {
-                addPerformanceGraphLabels(document.querySelector(".content-graphInfo"), data);
-            }
-            else {
-                addPerformanceGraphLabels(node.nextElementSibling, data);
-            }
-        }
-        
-        
+    if (isInput) {
+      addPerformanceGraphLabelsRadio(node.nextElementSibling, data, id);
     }
+    else {
+      if (size === "70%") {
+        addPerformanceGraphLabels(document.querySelector(".content-graphInfo"), data);
+      }
+      else {
+        addPerformanceGraphLabels(node.nextElementSibling, data);
+      }
+    }
+
+
+  }
 }
 
 function addPerformanceGraphLabels(node, data) {
 
-    data.forEach(item => {
-        let graphContent = document.createElement("div");
-        graphContent.classList.add("graphContent");
+  data.forEach(item => {
+    let graphContent = document.createElement("div");
+    graphContent.classList.add("graphContent");
 
-        let graphContentName = document.createElement("div");
-        graphContentName.classList.add("graphContent-name");
+    let graphContentName = document.createElement("div");
+    graphContentName.classList.add("graphContent-name");
 
-        let graphRound = document.createElement("div");
-        graphRound.style.backgroundColor = item.color;
+    let graphRound = document.createElement("div");
+    graphRound.style.backgroundColor = item.color;
 
-        let graphName = document.createElement("span");
-        graphName.innerHTML = item.name;
+    let graphName = document.createElement("span");
+    graphName.innerHTML = item.name;
 
-        graphContentName.appendChild(graphRound);
-        graphContentName.appendChild(graphName);
-    
-        let graphValue = document.createElement("strong");
-        graphValue.classList.add("graphContent-value");
-        graphValue.innerHTML = item.y + "%";
+    graphContentName.appendChild(graphRound);
+    graphContentName.appendChild(graphName);
 
-        graphContent.appendChild(graphContentName);
-        graphContent.appendChild(graphValue);
+    let graphValue = document.createElement("strong");
+    graphValue.classList.add("graphContent-value");
+    graphValue.innerHTML = item.y + "%";
 
-        node.appendChild(graphContent);
-    });
+    graphContent.appendChild(graphContentName);
+    graphContent.appendChild(graphValue);
+
+    node.appendChild(graphContent);
+  });
 
 }
 
 function addPerformanceGraphLabelsRadio(node, data, name) {
 
-    data.forEach(item => {
-        let graphContent = document.createElement("div");
-        graphContent.classList.add("graphContent");
+  data.forEach(item => {
+    let graphContent = document.createElement("div");
+    graphContent.classList.add("graphContent");
 
-        let graphContentName = document.createElement("label");
-        graphContentName.classList.add("graphContent-name");
-        graphContentName.classList.add("label");
+    let graphContentName = document.createElement("label");
+    graphContentName.classList.add("graphContent-name");
+    graphContentName.classList.add("label");
 
-        let graphRound = document.createElement("div");
-        graphRound.style.backgroundColor = item.color;
+    let graphRound = document.createElement("div");
+    graphRound.style.backgroundColor = item.color;
 
-        let graphRadio = document.createElement("input");
-        graphRadio.setAttribute("type", "radio");
-        graphRadio.setAttribute("name", name);
-        graphRadio.classList.add("visually_hidden");
-        graphRadio.classList.add("radio_custom");
+    let graphRadio = document.createElement("input");
+    graphRadio.setAttribute("type", "radio");
+    graphRadio.setAttribute("name", name);
+    graphRadio.classList.add("visually_hidden");
+    graphRadio.classList.add("radio_custom");
 
-        let graphName = document.createElement("span");
-        graphName.innerHTML = item.name;
+    let graphName = document.createElement("span");
+    graphName.innerHTML = item.name;
 
-        graphContentName.appendChild(graphRound);
-        graphContentName.appendChild(graphRadio);
-        graphContentName.appendChild(graphName);
-    
-        let graphValue = document.createElement("strong");
-        graphValue.classList.add("graphContent-value");
-        graphValue.innerHTML = item.y + "%";
+    graphContentName.appendChild(graphRound);
+    graphContentName.appendChild(graphRadio);
+    graphContentName.appendChild(graphName);
 
-        graphContent.appendChild(graphContentName);
-        graphContent.appendChild(graphValue);
+    let graphValue = document.createElement("strong");
+    graphValue.classList.add("graphContent-value");
+    graphValue.innerHTML = item.y + "%";
 
-        node.appendChild(graphContent);
-    });
+    graphContent.appendChild(graphContentName);
+    graphContent.appendChild(graphValue);
+
+    node.appendChild(graphContent);
+  });
 
 }
-    function initDateRangePicker() {
+  function initDateRangePicker() {
 
     rusLocale = {
         "format": 'DD.MM.YYYY',
@@ -1058,7 +1128,7 @@ function addPerformanceGraphLabelsRadio(node, data, name) {
 }
 
 initDateRangePicker();
-    function initTableMain() {
+  function initTableMain() {
     let commentTableText = document.querySelectorAll(".modal-content-simpleText");
 
     document.querySelectorAll(".statTable__content").forEach(item => {
@@ -1091,7 +1161,7 @@ initDateRangePicker();
 }
 
 initTableMain();
-    // contenteditable
+  // contenteditable
 
 let pens = document.querySelectorAll('.js-contenteditable-btn');
 
@@ -1240,7 +1310,7 @@ if (document.querySelector('#adv-prtf-ready__comparison-chart')) {
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 
-    function initOnBoard(isOnBoard) { // isOnBoard - опция показа
+  function initOnBoard(isOnBoard) { // isOnBoard - опция показа
     let body = document.body;
     let html = document.documentElement;
     let scrollBarWidth = 0
@@ -1431,14 +1501,14 @@ if (document.querySelector('#adv-prtf-ready__comparison-chart')) {
 }
 
 initOnBoard(true); // ЕСЛИ TRUE - ИНИЦИАЛИЗИРУЕМ, ИНАЧЕ НЕТ 
-    function initTicketSelect() {
+  function initTicketSelect() {
     $('.inputSelect__radio').on('change', function(){
         $('.inputSelect__value').html($(this).next().html());
     });
 }
 
 initTicketSelect();
-    function initMonthCashGraph() {
+  function initMonthCashGraph() {
 
     let colorPaybackDividends = "#47B252";
     let colorOverallDividends = "#E6EEFF";
@@ -1622,7 +1692,7 @@ initTicketSelect();
 }
 
 initMonthCashGraph()
-    const cryptAnalyticsGraphData = [{
+  const cryptAnalyticsGraphData = [{
     name: 'BTC',
     y: 23.03,
     z: 100,
@@ -1732,7 +1802,7 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
         
     }
 }
-    function initDemoGraph() {
+  function initDemoGraph() {
 
     const graphs = ["demoGraph-1", "demoGraph-2", "demoGraph-3", "demoGraph-4", "demoGraph-5", "demoGraph-6"];
 
@@ -1833,7 +1903,7 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
 }
 
 initDemoGraph();
-    function initMainFactorsGraph() {
+  function initMainFactorsGraph() {
     let baseWidth = 22;
 
     if (document.body.offsetWidth < 1500) {
@@ -1924,7 +1994,7 @@ initDemoGraph();
 }
 
 initMainFactorsGraph()
-    function initSubscribeChanger() {
+  function initSubscribeChanger() {
     let toggler = document.querySelector(".subscribe-changer input[type='checkbox']");
 
     if (toggler !== null) {
@@ -1950,7 +2020,7 @@ initMainFactorsGraph()
 }
 
 initSubscribeChanger();
-    function dopFunctional() {
+  function dopFunctional() {
     let brokerContainer = document.querySelectorAll(".broker-container");
 
     brokerContainer.forEach((item) => {
@@ -2011,7 +2081,7 @@ initSubscribeChanger();
 }
 
 dopFunctional();
-    function mainPromoGraph() {
+  function mainPromoGraph() {
 
     const banchGraphData = { // общие данные для промо графика (линейного и столбчатого)
         names: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
@@ -2312,7 +2382,7 @@ dopFunctional();
 
 mainPromoGraph();
 
-    function initGrowthPaymentsGraph() {
+  function initGrowthPaymentsGraph() {
 
     let colorPaybackDividends = "#47B252";
     let graphBgColor = "#F5F6FD";
@@ -2442,7 +2512,7 @@ mainPromoGraph();
 }
 
 initGrowthPaymentsGraph()
-    // link: http://sachinchoolur.github.io/lightslider/
+  // link: http://sachinchoolur.github.io/lightslider/
 
 function initSlider() {
     // data-slider="4,2,1" (СТРОКА, ГДЕ ЧИСЛА ЧЕРЕЗ ЗАПЯТУЮ БЕЗ ПРОБЕЛОВ: число элементов на компе, на планшете, на мобилках)
@@ -2486,7 +2556,7 @@ function initSlider() {
 }
 
 initSlider();
-    function initAverageGrowthGraph() {
+  function initAverageGrowthGraph() {
     let baseWidth = 22;
     let chartDataLabels = ["Янв.", "Фев.", "Март", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Нояб.", "Дек."];
     let chartDataNames = ["TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER"];
@@ -2780,7 +2850,7 @@ initSlider();
 }
 
 initAverageGrowthGraph();
-    function initGrowthOfDividendsGraph() {
+  function initGrowthOfDividendsGraph() {
     let baseWidth = 14;
     let chartDataLabels = ["Янв.", "Фев.", "Март", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Нояб.", "Дек."];
     let chartDataNames = ["TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER"];
@@ -3061,7 +3131,7 @@ initAverageGrowthGraph();
 }
 
 initGrowthOfDividendsGraph();
-    function initPortfolioProfitGraph() {
+  function initPortfolioProfitGraph() {
     let baseWidth = 14;
     let chartDataNames = ["ERT", "QRT", "RTE", "ERT", "QRT", "RTE", "ERT", "QRT", "RTE", "ERT", "QRT", "RTE"];
     let chartData = [17, 14, 12, 8, 7, 6 , 5, 4, 3, 2, 1, 1];
@@ -3146,150 +3216,151 @@ initGrowthOfDividendsGraph();
 
 initPortfolioProfitGraph();
 
-    document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
-        item.addEventListener("click", (e) => {
-            item.classList.toggle("shown")
-        });
+  document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
+    item.addEventListener("click", (e) => {
+      item.classList.toggle("shown")
     });
+  });
 
-    document.querySelectorAll(".myStrategy-items-item").forEach(item => {
-        let indicatorTable = document.querySelectorAll(".myStrategy-indicators-container .table-scroll");
-        indicatorTable.forEach(elem => {
-            elem.style.width = `${item.offsetWidth-2}px`
-        });
+  document.querySelectorAll(".myStrategy-items-item").forEach(item => {
+    let indicatorTable = document.querySelectorAll(".myStrategy-indicators-container .table-scroll");
+    indicatorTable.forEach(elem => {
+      elem.style.width = `${item.offsetWidth - 2}px`
     });
+  });
 
-    $(".strategyCards-card-range").slider();
+  $(".strategyCards-card-range").slider();
 
-    document.querySelectorAll(".myStrategy-items-item-header-toggle").forEach(item => { // открытие/закрытие стратегий
-        item.addEventListener("click", () => {
-            item.classList.toggle("active");
-            const content = item.parentNode.nextElementSibling;
-            if (content !== null) {
-                content.classList.toggle("hidden");
-            }
-        });
+  document.querySelectorAll(".myStrategy-items-item-header-toggle").forEach(item => { // открытие/закрытие стратегий
+    item.addEventListener("click", () => {
+      item.classList.toggle("active");
+      const content = item.parentNode.nextElementSibling;
+      if (content !== null) {
+        content.classList.toggle("hidden");
+      }
     });
+  });
 
-    const myHeader = document.querySelector(".section-header");
-    if (myHeader !== null && window.innerWidth >= 768) {
-        const myNav = document.querySelector(".main-menu-nav.nav");
-        if (myNav !== null) {
-            let atStart = true;
+  const myHeader = document.querySelector(".section-header");
+  if (myHeader !== null && window.innerWidth >= 768) {
+    const myNav = document.querySelector(".main-menu-nav.nav");
+    if (myNav !== null) {
+      let atStart = true;
 
-            if (pageYOffset >= myHeader.clientHeight) {
-                atStart = false;
-                myNav.classList.add("fixed");
-            }
-    
-            window.addEventListener('scroll', () => {
-                if (pageYOffset >= myHeader.clientHeight && atStart) {
-                    atStart = false;
-                    myNav.classList.add("fixed");
-                }
-                if (pageYOffset <= myHeader.clientHeight && !atStart) {
-                    atStart = true;
-                    myNav.classList.remove("fixed");
-                }
-            });
+      if (pageYOffset >= myHeader.clientHeight) {
+        atStart = false;
+        myNav.classList.add("fixed");
+      }
+
+      window.addEventListener('scroll', () => {
+        if (pageYOffset >= myHeader.clientHeight && atStart) {
+          atStart = false;
+          myNav.classList.add("fixed");
         }
+        if (pageYOffset <= myHeader.clientHeight && !atStart) {
+          atStart = true;
+          myNav.classList.remove("fixed");
+        }
+      });
+    }
+  }
+
+  document.querySelectorAll(".eye").forEach(item => {
+    item.addEventListener("click", () => {
+      let input = item.parentNode;
+      input.classList.toggle("visible");
+
+      let input_text = input.querySelector(".input_text");
+      if (input.classList.contains("visible")) {
+        input_text.setAttribute("type", "text");
+      }
+      else {
+        input_text.setAttribute("type", "password");
+      }
+    });
+  });
+
+  $(".btn_addOperation").click(function () {
+    $(this).parent().next().toggleClass("active");
+  });
+
+  $("#tabs").tabs();
+  $(".tabs").tabs();
+
+  document.querySelectorAll("[data-contentShower]").forEach(item => {
+    function changeVisibilityElems() {
+      hiddenElems.forEach(item => {
+        if (item.style.display === "") {
+          item.style.display = "none";
+        }
+        else {
+          item.style.display = "";
+        }
+      });
     }
 
-    document.querySelectorAll(".eye").forEach(item => {
-        item.addEventListener("click", () => {
-            let input = item.parentNode;
-            input.classList.toggle("visible");
+    let btn = item.querySelector(".btnShowAll");
+    let btn_text = item.querySelector(".btnShowAll__text");
+    let hiddenElems = item.querySelectorAll("[data-contentShowerHidden]");
+    changeVisibilityElems();
 
-            let input_text = input.querySelector(".input_text");
-            if (input.classList.contains("visible")) {
-                input_text.setAttribute("type", "text");
-            }
-            else {
-                input_text.setAttribute("type", "password");
-            }
-        });
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("btnShowAll--active");
+      changeVisibilityElems();
+
+      if (btn.classList.contains("btnShowAll--active")) {
+        btn_text.innerHTML = "Скрыть";
+      }
+      else {
+        btn_text.innerHTML = "Показать все";
+      }
+    });
+  });
+
+  $(".customRange .customRange__slider").each((_, elem) => {
+    $(elem).slider({
+      range: true,
+      min: 0,
+      max: 100,
+      values: [12, 88],
+    });
+  });
+
+  $(".modal-content-toggle").each((_, elem) => {
+    let btn = $(elem).find(".btnShowAll");
+    let content = $(elem).find(".toggleOverlay");
+
+    btn.click(() => {
+      content.slideToggle();
+      btn.toggleClass("btnShowAll--active");
+    });
+  });
+
+  document.querySelectorAll(".tablePaymentSchedule").forEach(table => {
+    let tableItems = table.querySelectorAll(".table-content-item:not(.table-content-item.bottom)");
+    let tableItemsFixed = table.querySelectorAll(".table-fixed-item.inline:not(.table-fixed-item.bottom)");
+
+    tableItems.forEach((tableItem, id) => {
+      tableItem.addEventListener("click", () => {
+        clickToTableElem(id);
+      });
     });
 
-    $(".btn_addOperation").click(function() {
-        $(this).parent().next().toggleClass("active");
+    tableItemsFixed.forEach((tableItemFixed, id) => {
+      tableItemFixed.addEventListener("click", () => {
+        clickToTableElem(id);
+      });
     });
 
-    $("#tabs").tabs();
-    $(".tabs").tabs();
-
-    document.querySelectorAll("[data-contentShower]").forEach(item => {
-        function changeVisibilityElems() {
-            hiddenElems.forEach(item => {
-                if (item.style.display === "") {
-                    item.style.display = "none";
-                }
-                else {
-                    item.style.display = "";
-                }
-            });
-        }
-
-        let btn = item.querySelector(".btnShowAll");
-        let btn_text = item.querySelector(".btnShowAll__text");
-        let hiddenElems = item.querySelectorAll("[data-contentShowerHidden]");
-        changeVisibilityElems();
-
-        btn.addEventListener("click", () => {
-            btn.classList.toggle("btnShowAll--active");
-            changeVisibilityElems();
-
-            if (btn.classList.contains("btnShowAll--active")) {
-                btn_text.innerHTML = "Скрыть";
-            }
-            else {
-                btn_text.innerHTML = "Показать все";
-            }
-        });
-    });
-
-    $(".customRange .customRange__slider").each((_, elem) => {
-        $(elem).slider({
-            range: true,
-            min: 0,
-            max: 100,
-            values: [12, 88],
-        });
-    });
-
-    $(".modal-content-toggle").each((_, elem) => {
-        let btn = $(elem).find(".btnShowAll");
-        let content = $(elem).find(".toggleOverlay");
-
-        btn.click(() => {
-            content.slideToggle();
-            btn.toggleClass("btnShowAll--active");
-        });
-    });
-
-    document.querySelectorAll(".tablePaymentSchedule").forEach(table => {
-        let tableItems = table.querySelectorAll(".table-content-item:not(.table-content-item.bottom)");
-        let tableItemsFixed = table.querySelectorAll(".table-fixed-item.inline:not(.table-fixed-item.bottom)");
-
-        tableItems.forEach((tableItem, id) => {
-            tableItem.addEventListener("click", () => {
-                clickToTableElem(id);
-            });
-        });
-
-        tableItemsFixed.forEach((tableItemFixed, id) => {
-            tableItemFixed.addEventListener("click", () => {
-                clickToTableElem(id);
-            });
-        });
-
-        function clickToTableElem(id) {
-            let growthDividendPayments = tableItems[id].querySelector(".growthDividendPayments");
-            if (growthDividendPayments !== null) {
-                tableItems[id].classList.toggle("opened");
-                tableItemsFixed[id].classList.toggle("opened");
-                //console.log(id);
-            }
-        }
-    });
+    function clickToTableElem(id) {
+      let growthDividendPayments = tableItems[id].querySelector(".growthDividendPayments");
+      if (growthDividendPayments !== null) {
+        tableItems[id].classList.toggle("opened");
+        tableItemsFixed[id].classList.toggle("opened");
+        //console.log(id);
+      }
+    }
+  });
 
 });
+
