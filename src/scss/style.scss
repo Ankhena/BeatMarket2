@@ -1237,3 +1237,95 @@ body.viewProfile {
     }
   }
 }
+
+.analyticRatings {
+
+
+  &__block {
+    background-color: #FFFFFF;
+    border: 1px solid #D3E3FF;
+    border-radius: 18px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+
+    &+& {
+      margin-top: 40px;
+    }
+  }
+
+  &__left {
+    border-right: 1px solid #D3E3FF;
+    padding-right: 40px;
+    margin-right: 81px;
+    flex-basis: 50%;
+  }
+
+  &__right {
+    flex-basis: 50%;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  &__ratings {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.block-rating {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 18px;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-left: 16px;
+  }
+
+  // .block-rating__position
+
+  &__position {
+    font-weight: 600;
+    font-size: 14px;
+    color: #DE4355;
+    margin-right: 8px;
+  }
+
+  // .block-rating__content
+
+  &__content {
+    display: flex;
+
+    .myStrategy-scoring__diagram {
+      height: 51px;
+    }
+  }
+
+  // .block-rating__info
+
+  &__info {
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  // .block-rating__text
+
+  &__text {
+    font-weight: 600;
+    color: #373943;
+    margin-left: 16px;
+  }
+
+  // .block-rating__icon
+
+  &__icon {}
+}
