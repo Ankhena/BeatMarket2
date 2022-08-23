@@ -84,19 +84,46 @@
       }
 
       &-settings {
+        display: flex;
+        align-items: center;
+        color: #3E54D8;
+        transition: color .3s;
+
+        &:hover {
+          color: $color_blue_hover;
+        }
+
+        label {
+          font-size: 16px;
+          font-weight: 500;
+          cursor: pointer;
+        }
 
         button {
-          border: none;
+          border: 1px solid #D3E3FF;
+          border-radius: 6px;
           outline: none;
-          background-color: transparent;
+          background-color: #fff;
           cursor: pointer;
           display: flex;
           align-items: center;
+          padding: 8px;
+
+          &:not(:first-child) {
+            margin-left: 16px;
+          }
+
+          &:hover {
+            svg {
+              stroke: $color_blue_hover;
+            }
+          }
 
           svg {
-            stroke: $color_grey;
+            stroke: $color_blue;
             width: 24px;
             height: 24px;
+            transition: stroke .3s;
           }
 
           span {
@@ -104,16 +131,6 @@
             margin-left: 0.5rem;
             font-size: 0.9rem;
             font-weight: 500;
-          }
-
-          &:hover {
-            svg {
-              stroke: $color_blue;
-            }
-
-            span {
-              color: $color_blue;
-            }
           }
         }
       }
@@ -142,6 +159,8 @@
     }
 
     &-block {
+
+      margin-right: 16px;
 
       h5 {
         font-weight: 500;
@@ -229,10 +248,12 @@
   height: 7px;
   background: var(--bgi) no-repeat center / contain;
   color: var(--color);
+
   &--positive {
     --color: #{$color_green};
     --bgi: var(--arrow-up-icon)
   }
+
   &--negative {
     --color: #{$color_red};
     --bgi: var(--arrow-down-icon);
@@ -286,6 +307,7 @@
     stroke-dashoffset: 25;
     stroke-dasharray: var(--persent), calc(100 - var(--persent));
   }
+
   text {
     font-size: 16px;
     font-weight: 600;

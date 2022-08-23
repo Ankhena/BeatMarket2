@@ -1,920 +1,953 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
 
-		@@include('_head.html', {
-			"title": "BeatMarket - Эффективность"
-		})
+<head>
 
-	</head>
-	<body>
+  @@include('_head.html', {
+  "title": "BeatMarket - Эффективность"
+  })
 
-		@@include("_header.html", {
-			"title": "Мой портфель"
-		})
+</head>
 
-		<section class="section-outer section-main">
-			<div class="main">
+<body>
 
-				@@include("_menu.html", {
-					"title": "Мой портфель"
-				})
+  @@include("_header.html", {
+  "title": "Мой портфель"
+  })
 
-				<div class="main-content">
-                    <div class="main-content emptyPortfolio main-contentPadding">
+  <section class="section-outer section-main">
+    <div class="main">
 
-                        @@include("_strategyPromo.html")
+      @@include("_menu.html", {
+      "title": "Мой портфель"
+      })
 
-						<div class="myStrategy">
-							<div class="myStrategy-header">
-								<h2>Мои стратегии</h2>
-								<button class="btn btn_primary">
-									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
-									<span>Изменить порядок</span>
-								</button>
-							</div>
-							<div class="myStrategy-items">
+      <div class="main-content">
+        <div class="main-content emptyPortfolio main-contentPadding">
 
-								<div class="myStrategy-items-item">
+          @@include("_strategyPromo.html")
 
-									@@include("_myStrategyHeader.html", {
-										"title": "Удачливая стратегия",
-										"cashStatus": "error",
-										"cashValue": "-66%",
-										"toggleActive": "active"
-									})
+          <div class="myStrategy">
+            <div class="myStrategy-header">
+              <h2>Мои стратегии</h2>
+              <button class="btn btn_primary">
+                <svg>
+                  <use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use>
+                </svg>
+                <span>Изменить порядок</span>
+              </button>
+            </div>
+            <div class="myStrategy-items">
 
-									<div class="myStrategy-items-item-content">
+              <div class="myStrategy-items-item">
 
-                                        @@include("_myStrategyNav.html", {
-                                            "myPapers": "",
-                                            "addCompany": "",
-                                            "indicators": "",
-                                            "perfomance": "active",
-                                            "dividents": "",
-                                            "news": "",
-                                            "history": ""
-                                        })
+                @@include("_myStrategyHeader.html", {
+                "title": "Удачливая стратегия",
+                "cashStatus": "error",
+                "cashValue": "-66%",
+                "toggleActive": "active"
+                })
 
-										<div class="myStrategy-indicators-container the_table">
+                <div class="myStrategy-items-item-content">
 
-                                            @@include("_tableIndicators.html")
+                  @@include("_myStrategyNav.html", {
+                  "myPapers": "",
+                  "addCompany": "",
+                  "indicators": "",
+                  "perfomance": "active",
+                  "dividents": "",
+                  "news": "",
+                  "history": ""
+                  })
 
-                                            <div class="performance">
-                                                <div class="performance-info">
-                                                    <div class="performance-info-cards">
-                                                        <div class="card">
-                                                            <div class="card-header">
-                                                                <h4>О портфеле</h4>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span>Активен с <strong>17 ноября 2019 г</strong></span>
-                                                                <span>Бета портфеля <strong>1.08</strong></span>
-                                                                <span>Дивидендная доходность <strong class="success">+2%</strong></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card">
-                                                            <div class="card-header">
-                                                                <h4>Доходность портфеля</h4>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span>6 / 12 месяцев <strong class="success">+10.5% / +7.53%</strong></span>
-                                                                <span>Все время <strong class="success">+3.21%</strong></span>
-                                                                <span>Среднегодовая доходность <strong class="success">+5.21%</strong></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card">
-                                                            <div class="card-header">
-                                                                <h4>Лучшая сделка</h4>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span>Бумага <strong class="primary">Kia-Tencor (KLAC)</strong></span>
-                                                                <span>Дата сделки <strong>17 ноября 2019 г</strong></span>
-                                                                <span>Доход <strong class="success">+71.53%</strong></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                  <div class="myStrategy-indicators-container the_table">
 
-                                                <div class="performance-separation">
-                                                    <div class="header">
-                                                        <h3>Разделение</h3>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-block">
-                                                            <div class="card-header">
-                                                                <h4>По отраслям</h4>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <div class="card-content-graph graph" id="separation_graph_1"></div>
-                                                                <div class="card-content-info">
-                                                                    <!-- <div class="graphContent">
+                    @@include("_tableIndicators.html")
+
+                    <div class="performance">
+                      <div class="performance-info">
+                        <div class="performance-info-cards">
+                          <div class="card">
+                            <div class="card-header">
+                              <h4>О портфеле</h4>
+                            </div>
+                            <div class="card-content">
+                              <span>Активен с <strong>17 ноября 2019 г</strong></span>
+                              <span>Бета портфеля <strong>1.08</strong></span>
+                              <span>Дивидендная доходность <strong class="success">+2%</strong></span>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header">
+                              <h4>Доходность портфеля</h4>
+                            </div>
+                            <div class="card-content">
+                              <span>6 / 12 месяцев <strong class="success">+10.5% / +7.53%</strong></span>
+                              <span>Все время <strong class="success">+3.21%</strong></span>
+                              <span>Среднегодовая доходность <strong class="success">+5.21%</strong></span>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header">
+                              <h4>Лучшая сделка</h4>
+                            </div>
+                            <div class="card-content">
+                              <span>Бумага <strong class="primary">Kia-Tencor (KLAC)</strong></span>
+                              <span>Дата сделки <strong>17 ноября 2019 г</strong></span>
+                              <span>Доход <strong class="success">+71.53%</strong></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="performance-separation">
+                        <div class="header">
+                          <h3>Разделение</h3>
+                        </div>
+                        <div class="card">
+                          <div class="card-block">
+                            <div class="card-header">
+                              <h4>По отраслям</h4>
+                            </div>
+                            <div class="card-content">
+                              <div class="card-content-graph graph" id="separation_graph_1"></div>
+                              <div class="card-content-info">
+                                <!-- <div class="graphContent">
                                                                         <div class="graphContent-name">
                                                                             <div></div>
                                                                             <span>Financial</span>
                                                                         </div>
                                                                         <strong class="graphContent-value">25.01%</strong>
                                                                     </div> -->
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card-block">
-                                                            <div class="card-header">
-                                                                <h4>По секторам</h4>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <div class="card-content-graph graph" id="separation_graph_2"></div>
-                                                                <div class="card-content-info"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card-block">
-                                                            <div class="card-header">
-                                                                <h4>По активам</h4>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <div class="card-content-graph graph" id="separation_graph_3"></div>
-                                                                <div class="card-content-info"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="performance-structure">
-                                                    <div class="header">
-                                                        <h3>Состав портфеля</h3>
-                                                    </div>
-                                                    <div class="performance-structure-content">
-                                                        <div class="card">
-                                                            <div class="card-content-graph graph graph-big" id="separation_graph_4"></div>
-                                                        </div>
-                                                        <div class="content">
-                                                            <div class="content-header card-header">
-                                                                <h4>Общая сумма</h4>
-                                                            </div>
-                                                            <div class="content-data">
-                                                                <div class="content-data-cost">
-                                                                    <span>33 621 $</span>
-                                                                </div>
-                                                                <div class="content-data-pager pagination">
-                                                                    <ul>
-                                                                        <li class="prev">
-                                                                            <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
-                                                                        </li>
-                                                                        <li class="current"><a href="#">1/7</a></li>
-                                                                        <li class="next">
-                                                                            <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="content-graphInfo">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="performance-item">
-                                                    <div class="header">
-                                                        <h3>Распределение активов по капитализации</h3>
-                                                    </div>
-                                                    <div class="blockSection blockSection--card">
-                                                        <div class="blockSection__content">
-                                                            <div class="tabs">
-                                                                <ul class="tabs__switcher tabsSwitcher">
-                                                                    <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-1">Мега (3%)</a></li>
-                                                                    <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-2">Большие (23%)</a></li>
-                                                                    <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-3">Средние (15%)</a></li>
-                                                                    <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-4">Малые (22%)</a></li>
-                                                                </ul>
-                        
-                                                                <div class="tabs__content">
-                                                                    <div class="coinRangs" id="coinRangs-1" data-contentShower>
-                                                                        <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
-                                                                        <div class="coinRangs__content">
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin11</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="coinRangs__button">
-                                                                            <button class="btnShowAll">
-                                                                                <span class="btnShowAll__text">Показать все</span>
-                                                                                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="coinRangs" id="coinRangs-2" data-contentShower>
-                                                                        <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
-                                                                        <div class="coinRangs__content">
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin22</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="coinRangs__button">
-                                                                            <button class="btnShowAll">
-                                                                                <span class="btnShowAll__text">Показать все</span>
-                                                                                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="coinRangs" id="coinRangs-3" data-contentShower>
-                                                                        <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
-                                                                        <div class="coinRangs__content">
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin33</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="coinRangs__button">
-                                                                            <button class="btnShowAll">
-                                                                                <span class="btnShowAll__text">Показать все</span>
-                                                                                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="coinRangs" id="coinRangs-4" data-contentShower>
-                                                                        <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
-                                                                        <div class="coinRangs__content">
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin44</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo">
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="coinInfo" data-contentShowerHidden>
-
-                                                                                <div class="coinInfo__content">
-                                                                                    <span class="coinInfo__label">BTC</span>
-                                                                                    <span class="coinInfo__name">Bitcoin</span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="coinRangs__button">
-                                                                            <button class="btnShowAll">
-                                                                                <span class="btnShowAll__text">Показать все</span>
-                                                                                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="performance-sectors">
-                                                    <div class="header">
-                                                        <h3>Распределение акций по секторам</h3>
-                                                        <label class="strategyCards-card-header-icon">
-                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
-                                                            <input type="checkbox" class="visually_hidden">
-                                                            <div class="dropdown">
-                                                                Данный обзор посвящен секторам американского рынка акций. 
-                                                                Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11. 
-                                                                Каждый сектор, в свою очередь, подразделяется на индустрии.
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-block border">
-                                                            <div class="card-content">
-                                                                <div class="card-content-graph graph" id="separation_graph_5"></div>
-                                                                <div class="card-content-info"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card-block">
-                                                            <div class="card-header">
-                                                                <h4>Крупные холдинги <span class="primary">промышленных товаров</span></h4>
-                                                            </div>
-                                                            <div class="card-list">
-                                                                <ol>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Intel</span>
-                                                                            <strong class="primary">(MMM)</strong>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>23.03%</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Texas instrumental</span>
-                                                                            <strong class="primary">(AMAT)</strong>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>7.11%</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Tractor supply</span>
-                                                                            <strong class="primary">(CMI)</strong>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>8.25%</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Pool</span>
-                                                                            <strong class="primary">(POOL)</strong>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>3.03%</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>ZM company</span>
-                                                                            <strong class="primary">(ROCK)</strong>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>5.24%</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="performance-assets">
-                                                    <div class="header">
-                                                        <h3>Размещение активов</h3>
-                                                        <label class="strategyCards-card-header-icon">
-                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
-                                                            <input type="checkbox" class="visually_hidden">
-                                                            <div class="dropdown">
-                                                                Данный обзор посвящен секторам американского рынка акций. 
-                                                                Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11. 
-                                                                Каждый сектор, в свою очередь, подразделяется на индустрии.
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-block border">
-                                                            <div class="card-header">
-                                                                <h4>Мои активы</h4>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <div class="card-content-graph graph" id="separation_graph_6"></div>
-                                                                <div class="card-content-info"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card-block">
-                                                            <div class="card-header">
-                                                                <h4>Всего 19 акций</h4>
-                                                            </div>
-                                                            <div class="card-list">
-                                                                <ol>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Financial</span>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>6</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Services</span>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>3</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Consumer Goods</span>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>2</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Materials</span>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>4</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Industrial goods</span>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>2</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="name">
-                                                                            <span>Other</span>
-                                                                        </div>
-                                                                        <div class="value">
-                                                                            <strong>1</strong>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="perfomance-profitabilityActive">
-                                                    <div class="blockSection">
-                                                        <div class="blockSection__content">
-                                                            <div class="blockSection__row">
-                                                                <div class="blockSection__fill">
-                                                            
-                                                                    <div class="stategyPromo-graph-info">
-
-                                                                        <h3 class="blockSection__title">Прибыльность активов</h3>
-
-                                                                        <div class="stategyPromo-graph-info-content borderNone">
-                                                                            <div class="stategyPromo-graph-info-content-choose">
-                                                                                <div class="stategyPromo-graph-info-content-choose-item active">
-                                                                                    <span>Неделя</span>
-                                                                                </div>
-                                                                                <div class="stategyPromo-graph-info-content-choose-item">
-                                                                                    <span>Месяц</span>
-                                                                                </div>
-                                                                                <div class="stategyPromo-graph-info-content-choose-item">
-                                                                                    <span>Год</span>
-                                                                                </div>
-                                                                                <div class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
-                                                                                    <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="blockSection__content blockSection__content--scroll customScroll">
-                                                                        <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow" id="portfolioProfitGraph"></div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                        
-                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="perfomance-profitability">
-                                                    <div class="blockSection">
-                                                        <div class="blockSection__content">
-                                                            <div class="blockSection__row">
-                                                                <div class="blockSection__fill">
-                                                            
-                                                                    <div class="stategyPromo-graph-info">
-
-                                                                        <h3 class="blockSection__title">Прибыль портфеля</h3>
-
-                                                                        <div class="stategyPromo-graph-info-content borderNone">
-                                                                            <div class="stategyPromo-graph-info-content-choose">
-                                                                                <div class="stategyPromo-graph-info-content-choose-item active">
-                                                                                    <span>Неделя</span>
-                                                                                </div>
-                                                                                <div class="stategyPromo-graph-info-content-choose-item">
-                                                                                    <span>Месяц</span>
-                                                                                </div>
-                                                                                <div class="stategyPromo-graph-info-content-choose-item">
-                                                                                    <span>Год</span>
-                                                                                </div>
-                                                                                <div class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
-                                                                                    <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                            
-                                                                    <div class="blockSection__graph">
-                                                                        <div class="stategyPromo-graph-chart mainGraphBlock" id="demoGraph-6"></div>
-                                                                        <span class="stategyPromo-graph-dates strategyViewDateChoose">21.11.2021 - 28.11.2021</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                        
-                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-										</div>
-									</div>
-
-								</div>
-							</div>
-						</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-block">
+                            <div class="card-header">
+                              <h4>По секторам</h4>
+                            </div>
+                            <div class="card-content">
+                              <div class="card-content-graph graph" id="separation_graph_2"></div>
+                              <div class="card-content-info"></div>
+                            </div>
+                          </div>
+                          <div class="card-block">
+                            <div class="card-header">
+                              <h4>По активам</h4>
+                            </div>
+                            <div class="card-content">
+                              <div class="card-content-graph graph" id="separation_graph_3"></div>
+                              <div class="card-content-info"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="performance-structure">
+                        <div class="header">
+                          <h3>Состав портфеля</h3>
+                        </div>
+                        <div class="performance-structure-content">
+                          <div class="card">
+                            <div class="card-content-graph graph graph-big" id="separation_graph_4"></div>
+                          </div>
+                          <div class="content">
+                            <div class="content-header card-header">
+                              <h4>Общая сумма</h4>
+                            </div>
+                            <div class="content-data">
+                              <div class="content-data-cost">
+                                <span>33 621 $</span>
+                              </div>
+                              <div class="content-data-pager pagination">
+                                <ul>
+                                  <li class="prev">
+                                    <a href="#"><svg>
+                                        <use xlink:href="img/main.svg#icon-caret-pagination"></use>
+                                      </svg></a>
+                                  </li>
+                                  <li class="current"><a href="#">1/7</a></li>
+                                  <li class="next">
+                                    <a href="#"><svg>
+                                        <use xlink:href="img/main.svg#icon-caret-pagination"></use>
+                                      </svg></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="content-graphInfo">
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="performance-item">
+                        <div class="header">
+                          <h3>Распределение активов по капитализации</h3>
+                        </div>
+                        <div class="blockSection blockSection--card">
+                          <div class="blockSection__content">
+                            <div class="tabs">
+                              <ul class="tabs__switcher tabsSwitcher">
+                                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-1">Мега
+                                    (3%)</a></li>
+                                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-2">Большие
+                                    (23%)</a></li>
+                                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-3">Средние
+                                    (15%)</a></li>
+                                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#coinRangs-4">Малые
+                                    (22%)</a></li>
+                              </ul>
+
+                              <div class="tabs__content">
+                                <div class="coinRangs" id="coinRangs-1" data-contentShower>
+                                  <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
+                                  <div class="coinRangs__content">
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin11</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="coinRangs__button">
+                                    <button class="btnShowAll">
+                                      <span class="btnShowAll__text">Показать все</span>
+                                      <svg class="btnShowAll__icon">
+                                        <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="coinRangs" id="coinRangs-2" data-contentShower>
+                                  <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
+                                  <div class="coinRangs__content">
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin22</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="coinRangs__button">
+                                    <button class="btnShowAll">
+                                      <span class="btnShowAll__text">Показать все</span>
+                                      <svg class="btnShowAll__icon">
+                                        <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="coinRangs" id="coinRangs-3" data-contentShower>
+                                  <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
+                                  <div class="coinRangs__content">
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin33</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="coinRangs__button">
+                                    <button class="btnShowAll">
+                                      <span class="btnShowAll__text">Показать все</span>
+                                      <svg class="btnShowAll__icon">
+                                        <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="coinRangs" id="coinRangs-4" data-contentShower>
+                                  <h5 class="coinRangs__title">Монеты с рангом 1-50</h5>
+                                  <div class="coinRangs__content">
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin44</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo">
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                    <div class="coinInfo" data-contentShowerHidden>
+
+                                      <div class="coinInfo__content">
+                                        <span class="coinInfo__label">BTC</span>
+                                        <span class="coinInfo__name">Bitcoin</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="coinRangs__button">
+                                    <button class="btnShowAll">
+                                      <span class="btnShowAll__text">Показать все</span>
+                                      <svg class="btnShowAll__icon">
+                                        <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="performance-sectors">
+                        <div class="header">
+                          <h3>Распределение акций по секторам</h3>
+                          <label class="strategyCards-card-header-icon">
+                            <svg>
+                              <use xlink:href="img/main.svg#icon-info-2"></use>
+                            </svg>
+                            <input type="checkbox" class="visually_hidden">
+                            <div class="dropdown">
+                              Данный обзор посвящен секторам американского рынка акций.
+                              Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11.
+                              Каждый сектор, в свою очередь, подразделяется на индустрии.
+                            </div>
+                          </label>
+                        </div>
+                        <div class="card">
+                          <div class="card-block border">
+                            <div class="card-content">
+                              <div class="card-content-graph graph" id="separation_graph_5"></div>
+                              <div class="card-content-info"></div>
+                            </div>
+                          </div>
+                          <div class="card-block">
+                            <div class="card-header">
+                              <h4>Крупные холдинги <span class="primary">промышленных товаров</span></h4>
+                            </div>
+                            <div class="card-list">
+                              <ol>
+                                <li>
+                                  <div class="name">
+                                    <span>Intel</span>
+                                    <strong class="primary">(MMM)</strong>
+                                  </div>
+                                  <div class="value">
+                                    <strong>23.03%</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>Texas instrumental</span>
+                                    <strong class="primary">(AMAT)</strong>
+                                  </div>
+                                  <div class="value">
+                                    <strong>7.11%</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>Tractor supply</span>
+                                    <strong class="primary">(CMI)</strong>
+                                  </div>
+                                  <div class="value">
+                                    <strong>8.25%</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>Pool</span>
+                                    <strong class="primary">(POOL)</strong>
+                                  </div>
+                                  <div class="value">
+                                    <strong>3.03%</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>ZM company</span>
+                                    <strong class="primary">(ROCK)</strong>
+                                  </div>
+                                  <div class="value">
+                                    <strong>5.24%</strong>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="performance-assets">
+                        <div class="header">
+                          <h3>Размещение активов</h3>
+                          <label class="strategyCards-card-header-icon">
+                            <svg>
+                              <use xlink:href="img/main.svg#icon-info-2"></use>
+                            </svg>
+                            <input type="checkbox" class="visually_hidden">
+                            <div class="dropdown">
+                              Данный обзор посвящен секторам американского рынка акций.
+                              Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11.
+                              Каждый сектор, в свою очередь, подразделяется на индустрии.
+                            </div>
+                          </label>
+                        </div>
+                        <div class="card">
+                          <div class="card-block border">
+                            <div class="card-header">
+                              <h4>Мои активы</h4>
+                            </div>
+                            <div class="card-content">
+                              <div class="card-content-graph graph" id="separation_graph_6"></div>
+                              <div class="card-content-info"></div>
+                            </div>
+                          </div>
+                          <div class="card-block">
+                            <div class="card-header">
+                              <h4>Всего 19 акций</h4>
+                            </div>
+                            <div class="card-list">
+                              <ol>
+                                <li>
+                                  <div class="name">
+                                    <span>Financial</span>
+                                  </div>
+                                  <div class="value">
+                                    <strong>6</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>Services</span>
+                                  </div>
+                                  <div class="value">
+                                    <strong>3</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>Consumer Goods</span>
+                                  </div>
+                                  <div class="value">
+                                    <strong>2</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>Materials</span>
+                                  </div>
+                                  <div class="value">
+                                    <strong>4</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>Industrial goods</span>
+                                  </div>
+                                  <div class="value">
+                                    <strong>2</strong>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="name">
+                                    <span>Other</span>
+                                  </div>
+                                  <div class="value">
+                                    <strong>1</strong>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="perfomance-profitabilityActive">
+                        <div class="blockSection">
+                          <div class="blockSection__content">
+                            <div class="blockSection__row">
+                              <div class="blockSection__fill">
+
+                                <div class="stategyPromo-graph-info">
+
+                                  <h3 class="blockSection__title">Прибыльность активов</h3>
+
+                                  <div class="stategyPromo-graph-info-content borderNone">
+                                    <div class="stategyPromo-graph-info-content-choose">
+                                      <div class="stategyPromo-graph-info-content-choose-item active">
+                                        <span>Неделя</span>
+                                      </div>
+                                      <div class="stategyPromo-graph-info-content-choose-item">
+                                        <span>Месяц</span>
+                                      </div>
+                                      <div class="stategyPromo-graph-info-content-choose-item">
+                                        <span>Год</span>
+                                      </div>
+                                      <div
+                                        class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
+                                        <svg>
+                                          <use xlink:href="img/main.svg#icon-dottes"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="blockSection__content blockSection__content--scroll customScroll">
+                                  <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
+                                    id="portfolioProfitGraph"></div>
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="perfomance-profitability">
+                        <div class="blockSection">
+                          <div class="blockSection__content">
+                            <div class="blockSection__row">
+                              <div class="blockSection__fill">
+
+                                <div class="stategyPromo-graph-info">
+
+                                  <h3 class="blockSection__title">Прибыль портфеля</h3>
+
+                                  <div class="stategyPromo-graph-info-content borderNone">
+                                    <div class="stategyPromo-graph-info-content-choose">
+                                      <div class="stategyPromo-graph-info-content-choose-item active">
+                                        <span>Неделя</span>
+                                      </div>
+                                      <div class="stategyPromo-graph-info-content-choose-item">
+                                        <span>Месяц</span>
+                                      </div>
+                                      <div class="stategyPromo-graph-info-content-choose-item">
+                                        <span>Год</span>
+                                      </div>
+                                      <div
+                                        class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
+                                        <svg>
+                                          <use xlink:href="img/main.svg#icon-dottes"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="blockSection__graph">
+                                  <div class="stategyPromo-graph-chart mainGraphBlock" id="demoGraph-6"></div>
+                                  <span class="stategyPromo-graph-dates strategyViewDateChoose">21.11.2021 -
+                                    28.11.2021</span>
+                                </div>
+                              </div>
+                            </div>
+
+
+                          </div>
+                        </div>
+                      </div>
 
                     </div>
 
-				</div>
-			</div>
-		</section>
+                  </div>
+                </div>
 
-        @@include("_footer.html")
+              </div>
+            </div>
+          </div>
 
-	</body>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  @@include("_footer.html")
+
+</body>
+
 </html>

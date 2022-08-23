@@ -1,199 +1,304 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
 
-		@@include('_head.html', {
-			"title": "BeatMarket - Показатели"
-		})
+<head>
 
-	</head>
-	<body>
+  @@include('_head.html', {
+  "title": "BeatMarket - Показатели"
+  })
 
-		@@include("_header.html", {
-			"title": "Мой портфель"
-		})
+</head>
 
-		<section class="section-outer section-main">
-			<div class="main">
+<body>
 
-				@@include("_menu.html", {
-					"title": "Мой портфель"
-				})
+  @@include("_header.html", {
+  "title": "Мой портфель"
+  })
 
-				<div class="main-content">
-                    <div class="main-content emptyPortfolio main-contentPadding">
+  <section class="section-outer section-main">
+    <div class="main">
 
-                        @@include("_strategyPromo.html")
+      @@include("_menu.html", {
+      "title": "Мой портфель"
+      })
 
-						<div class="myStrategy">
-							<div class="myStrategy-header">
-								<h2>Мои стратегии</h2>
-								<button class="btn btn_primary">
-									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
-									<span>Изменить порядок</span>
-								</button>
-							</div>
-							<div class="myStrategy-items">
+      <div class="main-content">
+        <div class="main-content emptyPortfolio main-contentPadding">
 
-								<div class="myStrategy-items-item">
+          @@include("_strategyPromo.html")
 
-									@@include("_myStrategyHeader.html", {
-										"title": "Удачливая стратегия",
-										"cashStatus": "error",
-										"cashValue": "-66%",
-										"toggleActive": "active"
-									})
+          <div class="myStrategy">
+            <div class="myStrategy-header">
+              <h2>Мои стратегии</h2>
+              <button class="btn btn_primary">
+                <svg>
+                  <use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use>
+                </svg>
+                <span>Изменить порядок</span>
+              </button>
+            </div>
+            <div class="myStrategy-items">
 
-									<div class="myStrategy-items-item-content">
-                                        @@include("_myStrategyNav.html", {
-                                            "myPapers": "",
-                                            "addCompany": "",
-                                            "indicators": "active",
-                                            "perfomance": "",
-                                            "dividents": "",
-                                            "news": "",
-                                            "history": ""
-                                        })
-										<div class="myStrategy-indicators-container the_table">
+              <div class="myStrategy-items-item">
 
-                                            <div class="strategyCards">
-                                                <div class="strategyCards-card">
-                                                    <div class="strategyCards-card-header">
-                                                        <h3>P/E портфеля</h3>
-                                                        <label class="strategyCards-card-header-icon">
-                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
-                                                            <input type="checkbox" class="visually_hidden">
-                                                            <div class="dropdown">
-                                                                <p>
-                                                                    Коэффициент Р/Е (Price/Earnings per share) - это отношение цены акции к прибыли на акцию. 
-                                                                    При прочих равных, выгоднее покупать акции с низким Р/Е, так как такие акции стоят дешевле, иными словами, 
-                                                                    вы получаете больше прибыли в расчете на одну акцию.
-                                                                </p>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="strategyCards-card-coef">
-                                                        <span>27.65</span>
-                                                    </div>
-                                                    <div class="strategyCards-card-range"></div>
-                                                    <div class="strategyCards-card-text">
-                                                        <span>0</span>
-                                                        <span>100 <strong>(272.11)</strong></span>
-                                                    </div>
-                                                </div>
+                @@include("_myStrategyHeader.html", {
+                "title": "Удачливая стратегия",
+                "cashStatus": "error",
+                "cashValue": "-66%",
+                "toggleActive": "active"
+                })
 
-                                                <div class="strategyCards-card">
-                                                    <div class="strategyCards-card-header">
-                                                        <h3>Волатильность портфеля</h3>
-                                                        <label class="strategyCards-card-header-icon">
-                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
-                                                            <input type="checkbox" class="visually_hidden">
-                                                            <div class="dropdown">
-                                                                <p>
-                                                                    Бета-коэффициент (англ. beta coefficient) – это показатель степени риска применительно к инвестиционному портфелю. Если ваша доходность выше среднерыночной, а коэффициент Бета при этом ниже, чем Бета Бенчмарка, это означает, что вам удалось собрать очень сбалансированный и эффективный портфель.
-                                                                    <br>
-                                                                    <br>
-                                                                    Базово 
-                                                                    <br>
-                                                                    Beta больше 1 – повышенный риск
-                                                                    <br>
-                                                                    Beta меньше 1 и больше 0 – пониженный риск
-                                                                    <br>
-                                                                    Beta меньше 0 – портфель никак не коррелирует с индексом
+                <div class="myStrategy-items-item-content">
+                  @@include("_myStrategyNav.html", {
+                  "myPapers": "",
+                  "addCompany": "",
+                  "indicators": "active",
+                  "perfomance": "",
+                  "dividents": "",
+                  "news": "",
+                  "history": ""
+                  })
 
-                                                                </p>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="strategyCards-card-coef">
-                                                        <span>1.05</span>
-                                                    </div>
-                                                    <div class="strategyCards-card-range multicolor"></div>
-                                                    <div class="strategyCards-card-text">
-                                                        <span>Мин. риск</span>
-                                                        <span>Выс. риск</span>
-                                                    </div>
-                                                </div>
+                  <h2 class="indicators-title">Сводка по стратегии</h2>
+                  <div class="myStrategy-indicators__block">
+                    <div class="tabs ui-tabs ui-corner-all ui-widget ui-widget-content">
+                      <ul
+                        class="tabs__switcher tabsSwitcher tabsSwitcher--buttons ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header"
+                        role="tablist">
+                        <li
+                          class="tabsSwitcher__item ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active"
+                          role="tab" tabindex="0" aria-controls="tabs-10" aria-labelledby="ui-id-5" aria-selected="true"
+                          aria-expanded="true"><a class="tabsSwitcher__link ui-tabs-anchor" href="#tabs-10"
+                            role="presentation" tabindex="-1" id="ui-id-5">Мега (3%)</a></li>
+                        <li class="tabsSwitcher__item ui-tabs-tab ui-corner-top ui-state-default ui-tab" role="tab"
+                          tabindex="-1" aria-controls="tabs-20" aria-labelledby="ui-id-6" aria-selected="false"
+                          aria-expanded="false"><a class="tabsSwitcher__link ui-tabs-anchor" href="#tabs-20"
+                            role="presentation" tabindex="-1" id="ui-id-6">Большие
+                            (23%)</a></li>
+                      </ul>
 
-                                                <div class="strategyCards-card">
-                                                    <div class="strategyCards-card-header">
-                                                        <h3>Коэффициент Шарпа</h3>
-                                                        <label class="strategyCards-card-header-icon">
-                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
-                                                            <input type="checkbox" class="visually_hidden">
-                                                            <div class="dropdown last">
-                                                                <p>
-                                                                    Коэффициент Шарпа — показатель эффективности инвестиционного портфеля
-                                                                    <br>
-                                                                    <br>
-                                                                    •	«1 и выше» — оптимальное значение коэффициента, обозначающее хорошую стратегию или высокую результативность управления портфелем ценных бумаг;
-                                                                    <br>
-                                                                    •	«0-1» — нельзя сказать, что стратегия очень хорошая, поскольку завышены риски, но её применение возможно;
-                                                                    <br>
-                                                                    •	«0 и ниже» — стратегию лучше не использовать, при фондовом инвестировании целесообразнее выбрать другой портфель.
+                      <div class="tabs__content">
+                        <div id="tabs-10" aria-labelledby="ui-id-5" role="tabpanel"
+                          class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false" style="">
+                          <div class="tarifs-cards">
+                            <div class="tarif__block">
+                              <div class="tarif-block__item"><span>222 222 $</span> Инвестировано</div>
+                              <div class="tarif-block__currentResult"><span>515 527 $</span> Текущий результат</div>
+                            </div>
+                            <div class="tarif__block green">
+                              <div class="tarif-block__item"><span>230</span> Единиц активов куплено</div>
+                              <div class="tarif-block__item"><span>13</span> Компаний</div>
+                              <div class="tarif-block__item"><span>222 $</span> Принесли за все время дивиденды</div>
+                            </div>
+                            <div class="tarif__block red">
+                              <div class="tarif-block__item"><span>230 $</span> Расходы на комиссию</div>
+                              <div class="tarif-block__item"><span>13 $</span> Налоги</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="tabs-20" aria-labelledby="ui-id-6" role="tabpanel"
+                          class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true"
+                          style="display: none;">
+                          <div class="tarifs-cards">
+                            <div class="tarif__block">
+                              <div class="tarif-block__item"><span>222 222 $</span> Инвестировано</div>
+                              <div class="tarif-block__currentResult"><span>515 527 $</span> Текущий результат</div>
+                            </div>
+                            <div class="tarif__block green">
+                              <div class="tarif-block__item"><span>230</span> Единиц активов куплено</div>
+                              <div class="tarif-block__item"><span>13</span> Компаний</div>
+                              <div class="tarif-block__item"><span>222 $</span> Принесли за все время дивиденды</div>
+                            </div>
+                            <div class="tarif__block red">
+                              <div class="tarif-block__item"><span>230 $</span> Расходы на комиссию</div>
+                              <div class="tarif-block__item"><span>13 $</span> Налоги</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                                                                </p>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="strategyCards-card-coef">
-                                                        <span>0.81</span>
-                                                    </div>
-                                                    <div class="strategyCards-card-text">
-                                                        <span>Рейтинг среднего значения коэффициента Шарпа <b>1.51</b></span>
-                                                    </div>
-                                                </div>
+                  <div class="myStrategy-indicators-container the_table">
 
-                                                <div class="strategyCards-card">
-                                                    <div class="strategyCards-card-header">
-                                                        <h3>Коэффициент Сортино</h3>
-                                                        <label class="strategyCards-card-header-icon">
-                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
-                                                            <input type="checkbox" class="visually_hidden">
-                                                            <div class="dropdown last">
-                                                                <p>
-                                                                    Коэффициент Шарпа — показатель эффективности инвестиционного портфеля
-                                                                    <br>
-                                                                    <br>
-                                                                    •	«1 и выше» — оптимальное значение коэффициента, обозначающее хорошую стратегию или высокую результативность управления портфелем ценных бумаг;
-                                                                    <br>
-                                                                    •	«0-1» — нельзя сказать, что стратегия очень хорошая, поскольку завышены риски, но её применение возможно;
-                                                                    <br>
-                                                                    •	«0 и ниже» — стратегию лучше не использовать, при фондовом инвестировании целесообразнее выбрать другой портфель.
+                    <div class="strategyCards">
+                      <div class="strategyCards-card">
+                        <div class="strategyCards-card-header">
+                          <h3>P/E портфеля</h3>
+                          <label class="strategyCards-card-header-icon">
+                            <svg>
+                              <use xlink:href="img/main.svg#icon-info-2"></use>
+                            </svg>
+                            <input type="checkbox" class="visually_hidden">
+                            <div class="dropdown">
+                              <p>
+                                Коэффициент Р/Е (Price/Earnings per share) - это отношение цены акции к прибыли на
+                                акцию.
+                                При прочих равных, выгоднее покупать акции с низким Р/Е, так как такие акции стоят
+                                дешевле, иными словами,
+                                вы получаете больше прибыли в расчете на одну акцию.
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="strategyCards-card-coef">
+                          <span>27.65</span>
+                          <div class="hint green">
+                            Хороший показатель
+                          </div>
+                        </div>
+                        <div class="strategyCards-card-range"></div>
+                        <div class="strategyCards-card-text">
+                          <span>0</span>
+                          <span>100 <strong>(272.11)</strong></span>
+                        </div>
+                      </div>
 
-                                                                </p>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="strategyCards-card-coef">
-                                                        <span>0.81</span>
-                                                    </div>
-                                                    <div class="strategyCards-card-text">
-                                                        <span>Рейтинг среднего значения коэффициента Сортино <b>1.51</b></span>
-                                                    </div>
-                                                </div>
+                      <div class="strategyCards-card">
+                        <div class="strategyCards-card-header">
+                          <h3>Волатильность портфеля</h3>
+                          <label class="strategyCards-card-header-icon">
+                            <svg>
+                              <use xlink:href="img/main.svg#icon-info-2"></use>
+                            </svg>
+                            <input type="checkbox" class="visually_hidden">
+                            <div class="dropdown">
+                              <p>
+                                Бета-коэффициент (англ. beta coefficient) – это показатель степени риска применительно к
+                                инвестиционному портфелю. Если ваша доходность выше среднерыночной, а коэффициент Бета
+                                при этом ниже, чем Бета Бенчмарка, это означает, что вам удалось собрать очень
+                                сбалансированный и эффективный портфель.
+                                <br>
+                                <br>
+                                Базово
+                                <br>
+                                Beta больше 1 – повышенный риск
+                                <br>
+                                Beta меньше 1 и больше 0 – пониженный риск
+                                <br>
+                                Beta меньше 0 – портфель никак не коррелирует с индексом
 
-                                            </div>
-                                            
-                                            @@include("_tableIndicators.html")
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="strategyCards-card-coef">
+                          <span>1.05</span>
+                          <div class="hint green">
+                            Сильно ниже рынка
+                          </div>
+                        </div>
+                        <div class="strategyCards-card-range multicolor"></div>
+                        <div class="strategyCards-card-text">
+                          <span>Мин. риск</span>
+                          <span>Выс. риск</span>
+                        </div>
+                      </div>
 
-                                            @@include("_tableIndicatorsETF.html")
+                      <div class="strategyCards-card">
+                        <div class="strategyCards-card-header">
+                          <h3>Коэффициент Шарпа</h3>
+                          <label class="strategyCards-card-header-icon">
+                            <svg>
+                              <use xlink:href="img/main.svg#icon-info-2"></use>
+                            </svg>
+                            <input type="checkbox" class="visually_hidden">
+                            <div class="dropdown last">
+                              <p>
+                                Коэффициент Шарпа — показатель эффективности инвестиционного портфеля
+                                <br>
+                                <br>
+                                • «1 и выше» — оптимальное значение коэффициента, обозначающее хорошую стратегию или
+                                высокую результативность управления портфелем ценных бумаг;
+                                <br>
+                                • «0-1» — нельзя сказать, что стратегия очень хорошая, поскольку завышены риски, но её
+                                применение возможно;
+                                <br>
+                                • «0 и ниже» — стратегию лучше не использовать, при фондовом инвестировании
+                                целесообразнее выбрать другой портфель.
 
+                              </p>
+                            </div>
+                          </label>
+                          <div class="sp">
+                            S&P 500
+                            <span>1.81</span>
+                          </div>
+                        </div>
+                        <div class="strategyCards-card-coef">
+                          <span>0.81</span>
+                          <div class="hint green">
+                            Среднее значение
+                          </div>
+                        </div>
+                        <div class="strategyCards-card-text">
+                          <span>Рейтинг среднего значения коэффициента Шарпа <b>1.51</b></span>
+                        </div>
+                      </div>
 
-										</div>
-									</div>
+                      <div class="strategyCards-card">
+                        <div class="strategyCards-card-header">
+                          <h3>Коэффициент Сортино</h3>
+                          <label class="strategyCards-card-header-icon">
+                            <svg>
+                              <use xlink:href="img/main.svg#icon-info-2"></use>
+                            </svg>
+                            <input type="checkbox" class="visually_hidden">
+                            <div class="dropdown last">
+                              <p>
+                                Коэффициент Шарпа — показатель эффективности инвестиционного портфеля
+                                <br>
+                                <br>
+                                • «1 и выше» — оптимальное значение коэффициента, обозначающее хорошую стратегию или
+                                высокую результативность управления портфелем ценных бумаг;
+                                <br>
+                                • «0-1» — нельзя сказать, что стратегия очень хорошая, поскольку завышены риски, но её
+                                применение возможно;
+                                <br>
+                                • «0 и ниже» — стратегию лучше не использовать, при фондовом инвестировании
+                                целесообразнее выбрать другой портфель.
 
-								</div>
-							</div>
-						</div>
+                              </p>
+                            </div>
+                          </label>
+                          <div class="sp">
+                            S&P 500
+                            <span>1.81</span>
+                          </div>
+                        </div>
+                        <div class="strategyCards-card-coef">
+                          <span>0.81</span>
+                          <div class="hint red">
+                            Сильно ниже рынка
+                          </div>
+                        </div>
+                        <div class="strategyCards-card-text">
+                          <span>Рейтинг среднего значения коэффициента Сортино <b>1.51</b></span>
+                        </div>
+                      </div>
 
                     </div>
 
-				</div>
-			</div>
-		</section>
+                    @@include("_tableIndicators.html")
 
-        @@include("_footer.html")
+                    @@include("_tableIndicatorsETF.html")
 
-	</body>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  @@include("_footer.html")
+
+</body>
+
 </html>

@@ -23,7 +23,8 @@
         background-color: lighten($color_blue, 25%);
       }
 
-      .statTable__row, .statTable__content {
+      .statTable__row,
+      .statTable__content {
         width: fit-content;
       }
 
@@ -191,7 +192,7 @@
 
     &--opened {
 
-      > .statTable__row {
+      >.statTable__row {
         .statSticker__arrow {
           transform: rotate(180deg);
           fill: $color_blue;
@@ -221,13 +222,25 @@
         }
       }
 
-      > .statTable__subtable {
+      >.statTable__subtable {
         display: block;
       }
 
-      @media ($media_sm) {
+      @media (max-width: $screen_sm) {
+        >.statTable__row {
+          .statTable__item {
+            display: flex;
+          }
+  
+          .statTable__item--label {
+            display: block;
+          }
+        }
+      }
 
-        > .statTable__row {
+      @media (max-width: $screen_sm) {
+
+        >.statTable__row {
           .statTable__item--sticker {
             background-color: $color_blue;
           }
@@ -254,16 +267,8 @@
             color: $color_green_light_table_header;
           }
         }
-
-        .statTable__item {
-          display: flex;
-
-        }
-        .statTable__item--label {
-          display: block;
-        }
-
       }
+
     }
 
     &--danger {
@@ -371,6 +376,7 @@
 
     .statTable__content--opened & {
       display: flex;
+
       @media ($media_sm) {
         display: none;
       }
@@ -640,6 +646,13 @@
     }
 
   }
+
+  // .statSticker__block
+
+  &__block {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .statStickerInfo {
@@ -804,7 +817,7 @@
           color: $color_black_title;
           display: flex;
 
-          > span {
+          >span {
             position: relative;
             padding-left: 1.2rem;
 
@@ -844,16 +857,16 @@
           position: relative;
 
           input[type="checkbox"]:checked {
-            ~ .selectDropdown {
+            ~.selectDropdown {
               display: block;
             }
 
-            ~ svg {
+            ~svg {
               transform: rotate(180deg);
             }
           }
 
-          > span {
+          >span {
             font-weight: 500;
             color: $color_grey;
             font-size: 0.8rem;
@@ -984,7 +997,8 @@
 
           &.dotted {
 
-            &:hover, &.active {
+            &:hover,
+            &.active {
               border-bottom: 3px solid transparent;
             }
 
@@ -994,7 +1008,8 @@
             }
           }
 
-          &:hover, &.active {
+          &:hover,
+          &.active {
             border-color: $color_blue;
 
             span {
@@ -1287,7 +1302,7 @@ $banch_items_space: 0.8rem;
   &:hover {
 
     .paperDontTrade__icon {
-      ~ .paperDontTrade__popup {
+      ~.paperDontTrade__popup {
         opacity: 1;
         visibility: visible;
       }
@@ -1296,9 +1311,7 @@ $banch_items_space: 0.8rem;
 
   // .paperDontTrade__icon
 
-  &__icon {
-
-  }
+  &__icon {}
 
   // .paperDontTrade__popup
 
@@ -1377,9 +1390,7 @@ $banch_items_space: 0.8rem;
     margin-right: 0;
   }
 
-  @media (min-width: 1150px) {
-
-  }
+  @media (min-width: 1150px) {}
 
   .statTable-scoring__diagram {
     grid-column: span 1;
@@ -1468,8 +1479,3 @@ $banch_items_space: 0.8rem;
     font-weight: 600;
   }
 }
-
-
-
-
-
