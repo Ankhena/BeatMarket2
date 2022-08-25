@@ -28,15 +28,26 @@
     justify-content: space-between;
     margin-bottom: 40px;
 
+    @media($media_sm) {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
     h2 {
       font-size: 40px;
       line-height: 48px;
       margin-right: 16px;
+
+      @media($media_sm) {
+        margin-bottom: 45px;
+        margin-right: 0;
+      }
     }
 
     .btn {
       display: flex;
-      align-items: center; 
+      justify-content: center;
+      align-items: center;
 
       span {
         margin-left: 12px;

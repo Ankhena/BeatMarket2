@@ -95,8 +95,8 @@
 
       &.active,
       &:hover {
-        
-        @media(min-width: 1050px) {
+
+        @media(min-width: 1290px) {
           padding: 3rem 2rem 3rem 7rem;
         }
 
@@ -212,6 +212,7 @@
         height: 50px;
         margin-top: 63px;
         transform: translateX(-5px);
+        cursor: pointer;
 
         @media ($media_lg) {
           display: none;
@@ -1269,11 +1270,17 @@ body.viewProfile {
 
   .btn {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-left: 16px;
 
     span {
       margin-left: 12px;
+    }
+
+    @media($media_sm) {
+      margin-top: 45px;
+      margin-left: 0;
     }
   }
 }
@@ -1395,4 +1402,65 @@ body.viewProfile {
   // .block-rating__icon
 
   &__icon {}
+}
+
+.range-number {
+
+  // .range-number__block
+
+  &__block {
+    flex-grow: 1;
+    color: #929398;
+    font-weight: 500;
+    font-size: 18px;
+
+    span {
+      color: #3E54D8;
+    }
+
+    &:first-child {
+      border-right: 1px solid #D3E3FF;
+      padding-right: 16px;
+      text-align: center;
+    }
+
+    &:last-child {
+      margin-left: 16px;
+      text-align: center;
+    }
+  }
+
+  .customRange {
+
+    // .customRange__info
+
+    &__info {
+      background-color: #FCFDFF;
+      border: 1px solid #D3E3FF;
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    // .customRange__value
+
+    &__value {}
+
+    // .customRange__slider
+
+    &__slider {
+      margin-left: 8px;
+      margin-right: 8px;
+      height: 0.17rem;
+      margin-top: -2px;
+
+      .ui-slider-range {
+        background-color: #8C9BEA;
+      }
+
+      .ui-slider-handle {
+        background-color: #FFFFFF;
+        border: 3px solid #8C9BEA;
+      }
+    }
+  }
 }
