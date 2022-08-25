@@ -3365,10 +3365,15 @@ initPortfolioProfitGraph();
 });
 
 //function tableScroll() {
-//  const table = document.querySelector(".table-scroll")
+//  const table = document.querySelector(".table")
+//  const tableScroll = document.querySelector(".table-scroll")
 //  let mouseOverBox = false
+//  let abroadElement = false;
+//  const tableWitdh = table.offsetWidth;
+//  console.log(tableWitdh);
 
 //  table.addEventListener("mousedown", clickTable)
+//  table.addEventListener("mouseup", upClickTable)
 
 
 //  function clickTable() {
@@ -3378,14 +3383,17 @@ initPortfolioProfitGraph();
 //    console.log("Нажата")
 //  }
 
-//  table.addEventListener("mouseup", upClickTable)
 
 //  function moveTable(e) {
 //    if (mouseOverBox) {
 //      console.log('Вошел');
 //      let x = e.clientX
 
-//        table.scroll(x, 0)
+//      if (tableWitdh < tableScroll.offsetWidth) {
+//        return 
+//      } else {
+//        tableScroll.style.transform = `translate3d(${x}px, 0, 0)`
+//      }
 
 //    }
 //  }
@@ -3398,3 +3406,7 @@ initPortfolioProfitGraph();
 //}
 
 //tableScroll()
+
+document.querySelector(".main-menu-btn").addEventListener("click", () => {
+  document.querySelector(".main-menu").classList.toggle("active")
+})

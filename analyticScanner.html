@@ -279,6 +279,13 @@
                 </a>
             </li>
         </ul>
+        <button class="main-menu-btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.6066 8.87867L18.1924 10.2929L17.4853 9.58577L13.2426 13.8284L12.5355 17.3639L11.1213 18.7782L6.87865 14.5355L1.9289 19.4853L0.51469 18.0711L5.46444 13.1213L1.2218 8.87867L2.63601 7.46445L6.17154 6.75735L10.4142 2.51471L9.70708 1.8076L11.1213 0.393386L19.6066 8.87867ZM11.8284 3.92892L7.15725 8.60007L4.33589 9.16434L10.8356 15.6641L11.3999 12.8427L16.071 8.17156L11.8284 3.92892Z"
+              fill="#8C9BEA" />
+          </svg>
+        </button>
     </nav>
 </div>
 
@@ -327,21 +334,22 @@
               <div class="inputGroup">
                 <span class="inputGroup__label">Статус</span>
                 <div class="inputGroup__item">
-  
+
                   <div class="inputGroup__control inputSelect">
-  
+
                     <input class="inputSelect__checkbox visually_hidden" id="analyticScanner1" type="checkbox">
-  
+
                     <label class="inputSelect__container" for="analyticScanner1">
                       <span class="inputSelect__value">Все статусы</span>
                       <svg class="inputSelect__icon">
                         <use xlink:href="img/main.svg#icon-arrow-down"></use>
                       </svg>
                     </label>
-  
+
                     <div class="inputSelect__dropdown inputSelect__dropdown">
                       <label class="inputSelect__item">
-                        <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked="">
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem"
+                          checked="">
                         <span class="inputSelect__choose radio_custom">Все статусы</span>
                       </label>
                       <label class="inputSelect__item">
@@ -363,21 +371,22 @@
               <div class="inputGroup">
                 <span class="inputGroup__label">Статус</span>
                 <div class="inputGroup__item">
-  
+
                   <div class="inputGroup__control inputSelect">
-  
+
                     <input class="inputSelect__checkbox visually_hidden" id="analyticScanner2" type="checkbox">
-  
+
                     <label class="inputSelect__container" for="analyticScanner2">
                       <span class="inputSelect__value">Все статусы</span>
                       <svg class="inputSelect__icon">
                         <use xlink:href="img/main.svg#icon-arrow-down"></use>
                       </svg>
                     </label>
-  
+
                     <div class="inputSelect__dropdown inputSelect__dropdown">
                       <label class="inputSelect__item">
-                        <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked="">
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem"
+                          checked="">
                         <span class="inputSelect__choose radio_custom">Все статусы</span>
                       </label>
                       <label class="inputSelect__item">
@@ -404,6 +413,30 @@
                 <div class="analyticScanner__count">
                   <span>до</span>
                   99
+                </div>
+              </div>
+            </div>
+            <div class="main-content-controlls">
+              <div class="inputGroup">
+                <span class="inputGroup__label">P/E</span>
+                <div class="inputGroup__item">
+
+                  <div class="range-number">
+                    <div class="customRange">
+                      <div class="customRange__info">
+                        <div class="range-number__block">
+                          от
+                          <span class="customRange__value">1</span>
+                        </div>
+                        <div class="range-number__block">
+                          до
+                          <span class="customRange__value">120</span>
+                        </div>
+                      </div>
+                      <div class="customRange__slider">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -485,7 +518,7 @@
                       <div class="statSticker__content statStickerInfo">
                         <h3 class="statStickerInfo__title">PCG</h3>
                         <span class="statStickerInfo__cost">422.21 P</span>
-            
+
                         <div class="paperDontTrade">
                           <svg class="paperDontTrade__icon statStickerInfo__icon">
                             <use xlink:href="img/main.svg#icon-trendUp"></use>
@@ -493,16 +526,16 @@
                           <div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
                               бумаги</a></div>
                         </div>
-            
+
                         <span class="statStickerInfo__subtitle">Microsoft Company</span>
                       </div>
                       <div class="statSticker__percent statSticker__percent--success">
                         <span>+1.56%</span>
                       </div>
                     </div>
-            
+
                     <!--                         111-->
-            
+
                     <div class="statTable-scoring statTable-scoring--in-header">
                       <span class="statTable-scoring__value statTable-scoring__value--positive">21</span>
                       <div class="statTable-scoring__diagram" style="--persent: 60px;
@@ -515,23 +548,24 @@
                           </text>
                         </svg>
                       </div>
-            
+
                       <div class="statTable-scoring__content">
                         <p class="statTable-scoring__bms">BMS</p>
                         <p class="statTable-scoring__safely">Безопасно</p>
                       </div>
-            
+
                       <span class="myStrategy-scoring__type myStrategy-scoring__type--home"></span>
-            
+
                     </div>
-            
-            
-            
+
+
+
                   </div>
-                  <div class="statTable__item statTable__item--only-desktop statTable__item--shrink statTable__item--success">
+                  <div
+                    class="statTable__item statTable__item--only-desktop statTable__item--shrink statTable__item--success">
                     <span class="statTable__description">BMS local</span>
                     <div class="statTable-scoring">
-            
+
                       <div class="statTable-scoring__diagram" style="--persent: 60px;
               --diagram-color: #de4355;">
                         <svg width="51" height="51" viewBox="0,0,38.16, 38.16">
@@ -542,10 +576,11 @@
                           </text>
                         </svg>
                       </div>
-            
+
                     </div>
                   </div>
-                  <div class="statTable__item  statTable__item--only-desktop statTable__item--shrink statTable__item--success">
+                  <div
+                    class="statTable__item  statTable__item--only-desktop statTable__item--shrink statTable__item--success">
                     <span class="statTable__description">День %</span>
                     <span class="statTable__value">+12.41%</span>
                   </div>
@@ -567,7 +602,8 @@
                       <span class="statTable__valueMin">111.21 USD Вложено</span>
                     </span>
                   </div>
-                  <div class="statTable__item statTable__item--comment statTable__item--grow" data-modal="modal_comment_table">
+                  <div class="statTable__item statTable__item--comment statTable__item--grow"
+                    data-modal="modal_comment_table">
                     <span class="statTable__description">Сектор / отрасль</span>
                     <span class="statTable__value">Название сектора / пример названия..</span>
                   </div>
@@ -772,7 +808,7 @@
                     <div class="statSticker__content statStickerInfo">
                       <h3 class="statStickerInfo__title">VIAC</h3>
                       <span class="statStickerInfo__cost">422.21 P</span>
-            
+
                       <div class="paperDontTrade">
                         <svg class="paperDontTrade__icon statStickerInfo__icon">
                           <use xlink:href="img/main.svg#icon-trendUp"></use>
@@ -780,7 +816,7 @@
                         <div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
                             бумаги</a></div>
                       </div>
-            
+
                       <span class="statStickerInfo__subtitle">Microsoft Company</span>
                     </div>
                     <div class="statSticker__percent statSticker__percent--error">
@@ -801,7 +837,7 @@
                           </text>
                         </svg>
                       </div>
-            
+
                     </div>
                   </div>
                   <div class="statTable__item statTable__item--shrink statTable__item--success">
@@ -828,7 +864,8 @@
                       <span class="statTable__valueMin">111.21 USD Вложено</span>
                     </span>
                   </div>
-                  <div class="statTable__item statTable__item--comment statTable__item--grow" data-modal="modal_comment_table">
+                  <div class="statTable__item statTable__item--comment statTable__item--grow"
+                    data-modal="modal_comment_table">
                     <span class="statTable__description">Сектор / отрасль</span>
                     <span class="statTable__value">Название сектора / пример названия..</span>
                   </div>
@@ -922,7 +959,7 @@
                     <div class="statSticker__content statStickerInfo">
                       <h3 class="statStickerInfo__title">PCG</h3>
                       <span class="statStickerInfo__cost">422.21 P</span>
-            
+
                       <div class="paperDontTrade">
                         <svg class="paperDontTrade__icon statStickerInfo__icon">
                           <use xlink:href="img/main.svg#icon-dangerCircle"></use>
@@ -930,7 +967,7 @@
                         <div class="paperDontTrade__popup">Текст о том, что данная бумага больше не торгуется
                         </div>
                       </div>
-            
+
                       <span class="statStickerInfo__subtitle">Microsoft Company</span>
                     </div>
                     <div class="statSticker__percent statSticker__percent--error">
@@ -951,7 +988,7 @@
                           </text>
                         </svg>
                       </div>
-            
+
                     </div>
                   </div>
                   <div class="statTable__item statTable__item--shrink statTable__item--success">
@@ -976,7 +1013,8 @@
                       <span class="statTable__valueMin">111.21 USD Вложено</span>
                     </span>
                   </div>
-                  <div class="statTable__item statTable__item--comment statTable__item--grow" data-modal="modal_comment_table">
+                  <div class="statTable__item statTable__item--comment statTable__item--grow"
+                    data-modal="modal_comment_table">
                     <span class="statTable__description">Сектор / отрасль</span>
                     <span class="statTable__value">Название сектора / пример названия..</span>
                   </div>
@@ -1056,7 +1094,7 @@
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
             <div class="pagination">
               <ul>
                 <li class="prev">
@@ -2586,8 +2624,55 @@
 
                 <div id="tabs-broker">
                     <h3 class="broker-title">Выберите брокера</h3>
+                    <div class="broker-inputs">
+                      <div class="inputGroup">
+                        <span class="inputGroup__label">Название брокера</span>
+                        <div class="inputGroup__item">
+                          <input class="inputGroup__control inputGroup__control--padding" type="text"
+                            placeholder="Например, Сбербанк">
+                          <svg class="inputGroup__icon">
+                            <use xlink:href="img/main.svg#icon-searchTicket"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="inputGroup">
+                        <span class="inputGroup__label">Страна</span>
+                        <div class="inputGroup__item">
+          
+                          <div class="inputGroup__control inputSelect">
+          
+                            <input class="inputSelect__checkbox visually_hidden" id="analyticScanner1" type="checkbox">
+          
+                            <label class="inputSelect__container" for="analyticScanner1">
+                              <span class="inputSelect__value">Все Страны</span>
+                              <svg class="inputSelect__icon">
+                                <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                              </svg>
+                            </label>
+          
+                            <div class="inputSelect__dropdown inputSelect__dropdown">
+                              <label class="inputSelect__item">
+                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked="">
+                                <span class="inputSelect__choose radio_custom">Россия</span>
+                              </label>
+                              <label class="inputSelect__item">
+                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                                <span class="inputSelect__choose radio_custom">США</span>
+                              </label>
+                              <label class="inputSelect__item">
+                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                                <span class="inputSelect__choose radio_custom">Германия</span>
+                              </label>
+                              <label class="inputSelect__item">
+                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                                <span class="inputSelect__choose radio_custom">Украина</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="broker-container">
-
                         <label class="broker-choose">
                             <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
                             <div class="broker-choose__container">

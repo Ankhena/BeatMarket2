@@ -275,6 +275,13 @@
                 </a>
             </li>
         </ul>
+        <button class="main-menu-btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.6066 8.87867L18.1924 10.2929L17.4853 9.58577L13.2426 13.8284L12.5355 17.3639L11.1213 18.7782L6.87865 14.5355L1.9289 19.4853L0.51469 18.0711L5.46444 13.1213L1.2218 8.87867L2.63601 7.46445L6.17154 6.75735L10.4142 2.51471L9.70708 1.8076L11.1213 0.393386L19.6066 8.87867ZM11.8284 3.92892L7.15725 8.60007L4.33589 9.16434L10.8356 15.6641L11.3999 12.8427L16.071 8.17156L11.8284 3.92892Z"
+              fill="#8C9BEA" />
+          </svg>
+        </button>
     </nav>
 </div>
 
@@ -2410,8 +2417,55 @@
 
                 <div id="tabs-broker">
                     <h3 class="broker-title">Выберите брокера</h3>
+                    <div class="broker-inputs">
+                      <div class="inputGroup">
+                        <span class="inputGroup__label">Название брокера</span>
+                        <div class="inputGroup__item">
+                          <input class="inputGroup__control inputGroup__control--padding" type="text"
+                            placeholder="Например, Сбербанк">
+                          <svg class="inputGroup__icon">
+                            <use xlink:href="img/main.svg#icon-searchTicket"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="inputGroup">
+                        <span class="inputGroup__label">Страна</span>
+                        <div class="inputGroup__item">
+          
+                          <div class="inputGroup__control inputSelect">
+          
+                            <input class="inputSelect__checkbox visually_hidden" id="analyticScanner1" type="checkbox">
+          
+                            <label class="inputSelect__container" for="analyticScanner1">
+                              <span class="inputSelect__value">Все Страны</span>
+                              <svg class="inputSelect__icon">
+                                <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                              </svg>
+                            </label>
+          
+                            <div class="inputSelect__dropdown inputSelect__dropdown">
+                              <label class="inputSelect__item">
+                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked="">
+                                <span class="inputSelect__choose radio_custom">Россия</span>
+                              </label>
+                              <label class="inputSelect__item">
+                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                                <span class="inputSelect__choose radio_custom">США</span>
+                              </label>
+                              <label class="inputSelect__item">
+                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                                <span class="inputSelect__choose radio_custom">Германия</span>
+                              </label>
+                              <label class="inputSelect__item">
+                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                                <span class="inputSelect__choose radio_custom">Украина</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="broker-container">
-
                         <label class="broker-choose">
                             <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
                             <div class="broker-choose__container">
