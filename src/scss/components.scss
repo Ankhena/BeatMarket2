@@ -1576,6 +1576,27 @@ $base_transition: 0.4s ease-in-out;
   }
 }
 
+.broker-inputs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  .inputSelect__dropdown {
+    z-index: 1;
+  }
+
+  .inputGroup {
+    &:first-child {
+      width: 90%;
+    }
+
+    &:last-child {
+      margin-left: 16px;
+      width: 30%;
+    }
+  }
+}
+
 .broker-choose {
 
   // .broker-choose__radio

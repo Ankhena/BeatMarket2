@@ -65,10 +65,12 @@
 .section-main {
 
   .main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 11fr;
     min-height: calc(100vh - var(--header_height) - 1px);
 
     @media ($media_sm) {
+      display: flex;
       flex-direction: column;
     }
 
@@ -83,20 +85,27 @@
     }
 
     &-menu {
-      flex-basis: 21rem;
-      min-width: 21rem;
-      background: $color_menu_bg;
-      padding: 3rem 1.4rem 3rem var(--section_padding);
+      background: linear-gradient(180deg, #EEF3FE 0%, #F5F9FF 100%);
+      padding: 3rem 1rem 3rem 1rem;
       border-right: 2px solid #D3E3FF;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
 
-      @media ($media_md_lg) {
-        flex-basis: 6.5rem;
-        min-width: 6.5rem;
-      }
+      &.active,
+      &:hover {
+        
+        @media(min-width: 1050px) {
+          padding: 3rem 2rem 3rem 7rem;
+        }
 
-      @media ($media_xl) {
-        flex-basis: 15rem;
-        min-width: 15rem;
+        .nav ul li a span {
+          opacity: 1;
+          width: 100%;
+          pointer-events: all;
+          transition: opacity .3s, width .3s;
+        }
       }
 
       @media ($media_sm) {
@@ -106,6 +115,7 @@
         padding: 3rem 1.4rem 3rem calc(var(--section_padding) + 0.8rem);
         transform: translateX(-100%);
         z-index: 1;
+        display: block;
 
         &.active {
           transform: translateX(0);
@@ -115,7 +125,7 @@
       .nav {
 
         &.fixed {
-          position: fixed;
+          position: sticky;
           top: 3rem;
         }
 
@@ -133,6 +143,8 @@
             svg {
               width: 1.5rem;
               height: 1.5rem;
+              min-width: 1.5rem;
+              min-height: 1.5rem;
               stroke: $color_black_main;
               margin-right: 0.8rem;
 
@@ -156,6 +168,12 @@
               }
 
               span {
+                opacity: 0;
+                width: 0;
+                pointer-events: none;
+                white-space: nowrap;
+                transition: opacity .3s, width .3s;
+
                 @media ($media_md_lg) {
                   display: none;
                 }
@@ -179,6 +197,24 @@
               }
             }
           }
+        }
+      }
+
+      &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-color: #FFFFFF;
+        border: 1px solid #D3E3FF;
+        border-radius: 8px;
+        width: 50px;
+        height: 50px;
+        margin-top: 63px;
+        transform: translateX(-5px);
+
+        @media ($media_lg) {
+          display: none;
         }
       }
     }
@@ -805,6 +841,10 @@ body.viewProfile {
 
 
 .page-without-menu {
+  .main {
+    display: flex;
+  }
+
   .page_title {
     display: none;
   }
@@ -1256,8 +1296,8 @@ body.viewProfile {
 
   &__left {
     border-right: 1px solid #D3E3FF;
-    padding-right: 40px;
-    margin-right: 81px;
+    padding-right: 25px;
+    margin-right: 25px;
     flex-basis: 50%;
   }
 
@@ -1266,14 +1306,31 @@ body.viewProfile {
   }
 
   &__name {
-    font-weight: 600;
-    font-size: 20px;
+
     margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      font-weight: 600;
+      font-size: 20px;
+      margin-right: 16px;
+    }
+
+    .btn {
+      padding: 0.6em 1em;
+    }
   }
 
   &__ratings {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+
+    &.blur {
+      filter: blur(12px);
+    }
   }
 }
 
@@ -1286,17 +1343,27 @@ body.viewProfile {
   border-radius: 18px;
   width: 100%;
 
-  &:not(:last-child) {
-    margin-left: 16px;
-  }
-
   // .block-rating__position
 
   &__position {
     font-weight: 600;
     font-size: 14px;
-    color: #DE4355;
     margin-right: 8px;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+
+    span {
+      margin-right: 2.5px;
+    }
+
+    &.negative {
+      color: #DE4355;
+    }
+
+    &.positive {
+      color: #199F27;
+    }
   }
 
   // .block-rating__content
