@@ -2,6 +2,10 @@
   &-controlls {
     display: flex;
     margin-bottom: 32px;
+
+    @media($media_sm) {
+      flex-direction: column;
+    }
   }
 
   &-analyticScanner {
@@ -16,12 +20,23 @@
 
       &:not(:first-child) {
         margin-left: 20px;
+
+        @media($media_sm) {
+          margin-left: 0;
+          margin-top: 16px;
+        }
       }
     }
   }
 }
 
 .analyticScanner {
+  display: flex;
+
+  @media($media_sm) {
+    justify-content: center;
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -60,7 +75,7 @@
     border: 1px solid #D3E3FF;
     border-radius: 10px;
     max-height: 55px;
-    margin-top: 30px;
+    margin-top: 27px;
     max-width: 191px;
     width: 100%;
     justify-content: center;
@@ -92,6 +107,26 @@
 
     .btn {
       margin-right: 16px;
+
+      @media($media_xs) {
+        margin-right: 0;
+        margin-top: 8px;
+      }
+    }
+
+    @media($media_xs) {
+      flex-direction: column;
+    }
+  }
+
+  .pagination {
+
+    @media($media_sm) {
+      text-align: center;
+  
+      & > span {
+        display: none;
+      }
     }
   }
 }

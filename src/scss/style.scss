@@ -1464,3 +1464,361 @@ body.viewProfile {
     }
   }
 }
+
+.table-ticker {
+  margin-bottom: 32px;
+
+  .inputGroup {
+    display: none;
+    margin-bottom: 24px;
+
+    @media($media_sm) {
+      display: block;
+    }
+  }
+
+  // .table-ticker__header
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    background-color: #F5F6FD;
+    border: 1px solid #E6EEFF;
+    margin: 0 -32px 23px;
+    padding: 0 32px;
+
+    @media($media_sm) {
+      display: none;
+    }
+  }
+
+  // .table-ticker__content
+
+  &__content {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    border-bottom: 1px solid #E6EEFF;
+    margin-left: -32px;
+    margin-right: -32px;
+    padding: 0 32px 22px;
+
+    @media($media_sm) {
+      border-bottom: none;
+      align-items: stretch;
+      grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1.5fr;
+      gap: 20px 16px;
+    }
+
+    @media(max-width: 768px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &+& {
+      margin-top: 25px;
+    }
+  }
+
+  // .table-ticker__block
+
+  &__block {
+    font-weight: 500;
+    color: #373943;
+    padding: 0 16px;
+
+    &:first-child {
+      @media($media_sm) {
+        grid-column: 1 / -1;
+        background-color: #F5F6FD;
+        border-width: 1px 0px;
+        border-style: solid;
+        border-color: #E6EEFF;
+        margin: 0 -32px;
+        padding: 14px 54px;
+      }
+
+      @media($media_xs) {
+        padding: 14px 27px;
+      }
+    }
+
+    @media($media_xs) {
+      padding: 0;
+    }
+
+    .mobile-info {
+      display: none;
+      color: #606371;
+      font-weight: 500;
+      font-size: 13px;
+      margin-bottom: 4px;
+
+      @media($media_sm) {
+        display: block;
+      }
+    }
+
+    &.percent {
+      color: #199F27;
+    }
+
+    &.onlyText {
+      text-align: center;
+
+      @media($media_sm) {
+        text-align: left;
+      }
+    }
+  }
+
+  .inputGroup {
+    .inputSelect {
+      &__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 16px;
+        background-color: #E6EEFF;
+        border-radius: 5px;
+        border: none;
+        svg {
+          margin-left: 4px;
+  
+          path {
+            stroke: #8C9BEA;
+  
+  
+            &:nth-child(3),
+            &:nth-child(4) {
+              stroke: #3E54D8;
+            }
+          }
+        }
+      }
+
+      &__value {
+        font-weight: 500;
+        color: #3E54D8;
+      }
+    }
+  }
+}
+
+.table-ticker-header {
+
+  // .table-ticker-header__item
+
+  &__item {
+    padding: 16px;
+    background-color: #F5F6FD;
+    border-left: 1px solid #E6EEFF;
+    border-right: 1px solid #E6EEFF;
+    border-top: none;
+    border-bottom: none;
+    outline: none;
+    font-weight: 500;
+    color: #24252E;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &.sort {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        margin-right: 4px;
+      }
+
+      &.active {
+        background-color: #E6EEFF;
+
+        svg {
+          path {
+            stroke: #8C9BEA;
+
+
+            &:nth-child(3),
+            &:nth-child(4) {
+              stroke: #3E54D8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.table-ticker-block {
+
+  // .table-ticker-block__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  // .table-ticker-block__img
+
+  &__img {
+    margin-right: 11px;
+    height: 40px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  // .table-ticker-block__content
+
+  &__content {}
+
+  // .table-ticker-block__info
+
+  &__info {}
+
+  // .table-ticker-block__paperDontTrade
+
+  &__paperDontTrade {
+    height: 20px;
+  }
+
+  // .table-ticker-block__subtitle
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    color: #929398;
+  }
+}
+
+.table-ticker-block-info {
+
+  // .table-ticker-block-info__content
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  // .table-ticker-block-info__title
+
+  &__title {
+    font-weight: 600;
+    color: #3E54D8;
+    margin-right: 4px;
+  }
+}
+
+.table-ticker-block-paperDontTrade {
+
+  // .table-ticker-block-paperDontTrade__icon
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+.table-ticket {
+
+  // .table-ticket__scoring
+
+  &__scoring {
+    max-width: 80px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr -webkit-min-content 1fr;
+    grid-template-columns: 1fr min-content 1fr;
+    gap: 1px;
+    padding: 2px 4px;
+    background: #ffffff;
+    box-shadow: 0 3px 9px 0 rgb(62 84 216 / 14%);
+    border-radius: 8px;
+    margin: 0 auto;
+
+    @media($media_sm) {
+      margin: 0;
+    }
+  }
+}
+
+.table-ticket-scoring {
+
+  // .table-ticket-scoring__value
+
+  &__value {
+
+
+    &--negative {
+      --color: #ED6373;
+      --bgi: var(--arrow-down-icon);
+    }
+
+    &--positiv {
+      --color: #199F27;
+      --bgi: var(--arrow-up-icon);
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 6px;
+      height: 4px;
+      background-color: var(--color);
+      -webkit-mask: var(--bgi) no-repeat center/contain;
+      mask: var(--bgi) no-repeat center/contain;
+      margin-right: 2px;
+    }
+
+    display: block;
+    font-size: 12px;
+    white-space: nowrap;
+    color: var(--color);
+  }
+
+  // .table-ticket-scoring__diagram
+
+  &__diagram {
+    grid-column: 2/3;
+    margin-top: 5px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+
+      circle {
+        fill: transparent;
+
+        &:nth-child(1) {
+          stroke: #e8f5ff;
+          stroke-width: 2;
+        }
+
+        &:nth-child(2) {
+          stroke: var(--diagram-color);
+          stroke-width: 2;
+          stroke-dashoffset: 25;
+          stroke-dasharray: var(--persent), calc(100px - var(--persent));
+        }
+      }
+
+      text {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1;
+      }
+    }
+  }
+}
