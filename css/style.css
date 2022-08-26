@@ -7899,6 +7899,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   max-width: 191px;
   width: 100%;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .analyticScanner__count {
@@ -14288,6 +14289,21 @@ body.viewProfile .header-controls-links-link.auth span {
   color: #3E54D8;
 }
 
+.table-ticker .inputGroup .inputSelect__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-ticker .inputGroup .inputSelect__choose {
+  padding-left: 0;
+}
+
+.table-ticker .inputGroup .inputSelect__choose::after,
+.table-ticker .inputGroup .inputSelect__choose::before {
+  display: none;
+}
+
 .table-ticker-header__item {
   padding: 16px;
   background-color: #F5F6FD;
@@ -17931,6 +17947,10 @@ body.viewProfile .header-controls-links-link.auth span {
     max-width: 12rem;
   }
 
+  .analyticScanner__count {
+    font-size: 16px;
+  }
+
   .analyticScanner__btn-list .btn {
     margin-right: 0;
     margin-top: 8px;
@@ -17983,6 +18003,32 @@ body.viewProfile .header-controls-links-link.auth span {
   .tarif-block__currentResult span {
     margin-right: 0;
     margin-top: 8px;
+  }
+
+  .statTable__content--opened > .statTable__row .statTable__item--sticker {
+    background-color: #3E54D8;
+  }
+
+  .statTable__content--opened > .statTable__row .statSticker__arrow {
+    fill: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statStickerInfo__changeStock {
+    color: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statStickerInfo__changeStock .btnShowAll {
+    color: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statStickerInfo__title,
+  .statTable__content--opened > .statTable__row .statStickerInfo__cost,
+  .statTable__content--opened > .statTable__row .statStickerInfo__subtitle {
+    color: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statSticker__percent--success {
+    color: #1BD32F;
   }
 }
 
