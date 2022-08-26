@@ -79,6 +79,7 @@
     max-width: 191px;
     width: 100%;
     justify-content: center;
+    white-space: nowrap;
   }
 
   &__count {
@@ -86,6 +87,10 @@
     font-weight: 500;
     color: $color_blue;
     padding: 16px 26px;
+
+    @media($media_xs) {
+      font-size: 16px;
+    }
 
     span {
       color: #929398;
@@ -123,8 +128,8 @@
 
     @media($media_sm) {
       text-align: center;
-  
-      & > span {
+
+      &>span {
         display: none;
       }
     }

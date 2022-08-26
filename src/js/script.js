@@ -179,48 +179,32 @@ $(document).ready(function () {
 
 });
 
-//function tableScroll() {
-//  const table = document.querySelector(".table")
-//  const tableScroll = document.querySelector(".table-scroll")
-//  let mouseOverBox = false
-//  let abroadElement = false;
-//  const tableWitdh = table.offsetWidth;
-//  console.log(tableWitdh);
+function tabsScroll(table) {
+  let speed = 2; // Скорость скролла.
 
-//  table.addEventListener("mousedown", clickTable)
-//  table.addEventListener("mouseup", upClickTable)
+  let scroll = document.querySelector(`.${table}`);
 
+  let left = 0; // отпустили мышку - сохраняем положение скролла
+  let drag = false;
+  let coorX = 0; // нажали мышку - сохраняем координаты.
 
-//  function clickTable() {
-//    table.addEventListener("mousemove", moveTable)
-//    mouseOverBox = true
+  scroll.addEventListener('mousedown', function (e) {
+    drag = true;
+    coorX = e.pageX - this.offsetLeft;
+  });
+  document.addEventListener('mouseup', function () {
+    drag = false;
+    left = scroll.scrollLeft;
+  });
+  scroll.addEventListener('mousemove', function (e) {
+    if (drag) {
+      this.scrollLeft = left + (e.pageX - this.offsetLeft - coorX) * speed;
+    }
+  });
+}
 
-//    console.log("Нажата")
-//  }
-
-
-//  function moveTable(e) {
-//    if (mouseOverBox) {
-//      console.log('Вошел');
-//      let x = e.clientX
-
-//      if (tableWitdh < tableScroll.offsetWidth) {
-//        return 
-//      } else {
-//        tableScroll.style.transform = `translate3d(${x}px, 0, 0)`
-//      }
-
-//    }
-//  }
-
-//  function upClickTable(e) {
-//    console.log('Ушел');
-//    mouseOverBox = false
-//  }
-
-//}
-
-//tableScroll()
+tabsScroll("statTable--scroll")
+tabsScroll("table-scroll")
 
 document.querySelector(".main-menu-btn").addEventListener("click", () => {
   document.querySelector(".main-menu").classList.toggle("active")

@@ -231,7 +231,7 @@
           .statTable__item {
             display: flex;
           }
-  
+
           .statTable__item--label {
             display: block;
           }
@@ -269,6 +269,35 @@
         }
       }
 
+      @media(max-width: $media_xs) {
+        >.statTable__row {
+          .statTable__item--sticker {
+            background-color: $color_blue;
+          }
+
+          .statSticker__arrow {
+            fill: $color_white;
+          }
+
+          .statStickerInfo__changeStock {
+            color: $color_white;
+
+            .btnShowAll {
+              color: $color_white;
+            }
+          }
+
+          .statStickerInfo__title,
+          .statStickerInfo__cost,
+          .statStickerInfo__subtitle {
+            color: $color_white;
+          }
+
+          .statSticker__percent--success {
+            color: $color_green_light_table_header;
+          }
+        }
+      }
     }
 
     &--danger {

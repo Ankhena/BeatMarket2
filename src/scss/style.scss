@@ -1581,13 +1581,14 @@ body.viewProfile {
         background-color: #E6EEFF;
         border-radius: 5px;
         border: none;
+
         svg {
           margin-left: 4px;
-  
+
           path {
             stroke: #8C9BEA;
-  
-  
+
+
             &:nth-child(3),
             &:nth-child(4) {
               stroke: #3E54D8;
@@ -1599,6 +1600,23 @@ body.viewProfile {
       &__value {
         font-weight: 500;
         color: #3E54D8;
+      }
+
+      &__dropdown {}
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__choose {
+        padding-left: 0;
+
+        &::after,
+        &::before {
+          display: none;
+        }
       }
     }
   }
