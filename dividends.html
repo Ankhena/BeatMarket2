@@ -513,13 +513,34 @@
         <h5>Общий доход</h5>
         <span class="error">-66%</span>
       </div>
-      <div class="myStrategy-items-item-header-info-content-settings">
+      <div
+        class="myStrategy-items-item-header-info-content-settings myStrategy-items-item-header-info-content-settings--only-desktop">
         <label for="modal-strategy-settings-btn">+ Компаний</label>
         <button data-modal="modal_strategy_settings" id="modal-strategy-settings-btn">
           <svg>
             <use xlink:href="img/main.svg#icon-gearSix"></use>
           </svg>
         </button>
+      </div>
+      <div class="myStrategy-items-item-header-info-content-scoring--only-mobile">
+        <div class="myStrategy-scoring">
+          <span class="myStrategy-scoring__trend myStrategy-scoring__trend--negative"></span>
+          <!--       myStrategy-scoring__trend--positive  класс для зеленой вверх-->
+          <div class="myStrategy-scoring__diagram" style="--persent: 85;
+                --diagram-color: #73B845;">
+            <svg width="51" height="51" viewbox="0,0,38.16, 38.16">
+              <circle r="15.9" cx="19.08" cy="19.08" />
+              <circle r="15.9" cx="19.08" cy="19.08" style="" />
+              <text id="text" x="50%" y="50%" dy="0.35em" text-anchor="middle" style="font-size: 16px; line-height: 1">
+                85
+              </text>
+            </svg>
+          </div>
+
+          <span class="myStrategy-scoring__type myStrategy-scoring__type--home"></span>
+          <!--  заменить класс myStrategy-scoring__type--home на myStrategy-scoring__type--global, чтобы был глобус    -->
+          <p class="myStrategy-scoring__text">Безопасно</p>
+        </div>
       </div>
     </div>
   </div>
@@ -536,23 +557,23 @@
       <h5>Дневной доход</h5>
       <span class="success">+5 621 $</span>
     </div>
-    <div class="myStrategy-items-item-header-stat-block">
+    <div class="myStrategy-items-item-header-stat-block myStrategy-items-item-header-stat-block--only-desktop">
       <div class="myStrategy-scoring">
         <span class="myStrategy-scoring__trend myStrategy-scoring__trend--negative"></span>
-<!--       myStrategy-scoring__trend--positive  класс для зеленой вверх-->
+        <!--       myStrategy-scoring__trend--positive  класс для зеленой вверх-->
         <div class="myStrategy-scoring__diagram" style="--persent: 85;
   --diagram-color: #73B845;">
           <svg width="51" height="51" viewbox="0,0,38.16, 38.16">
-            <circle r="15.9" cx="19.08" cy="19.08"/>
-            <circle r="15.9" cx="19.08" cy="19.08" style=""/>
-            <text id="text" x="50%" y="50%" dy="0.35em" text-anchor="middle" style="font-size: 16px; line-height: 1">
+            <circle r="15.9" cx="19.08" cy="19.08" />
+            <circle r="15.9" cx="19.08" cy="19.08" style="" />
+            <text id="text" x="50%" y="50%" dy="0.35em" text-anchor="middle" style="line-height: 1">
               85
             </text>
           </svg>
         </div>
 
         <span class="myStrategy-scoring__type myStrategy-scoring__type--home"></span>
-<!--  заменить класс myStrategy-scoring__type--home на myStrategy-scoring__type--global, чтобы был глобус    -->
+        <!--  заменить класс myStrategy-scoring__type--home на myStrategy-scoring__type--global, чтобы был глобус    -->
         <p class="myStrategy-scoring__text">Безопасно</p>
       </div>
     </div>
@@ -564,7 +585,6 @@
     </svg>
   </button>
 </div>
-
 
 									<div class="myStrategy-items-item-content">
                                         <nav class="nav">

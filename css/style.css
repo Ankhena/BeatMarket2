@@ -4908,6 +4908,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-top: 1.5rem;
 }
 
+.myStrategy-items-item-header-info-content-cash {
+  margin-right: 16px;
+}
+
 .myStrategy-items-item-header-info-content-cash h5 {
   font-weight: 500;
   font-size: 0.77rem;
@@ -4984,6 +4988,44 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-left: 0.5rem;
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+.myStrategy-items-item-header-info-content-scoring--only-mobile {
+  display: none;
+}
+
+.myStrategy-items-item-header-info-content-scoring--only-mobile .myStrategy-scoring {
+  display: grid;
+  grid-template-columns: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-columns: min-content min-content min-content min-content;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  background: #ffffff;
+  box-shadow: 0 3px 9px 0 rgba(62, 84, 216, 0.14);
+  border-radius: 8px;
+  flex-direction: row;
+}
+
+.myStrategy-items-item-header-info-content-scoring--only-mobile .myStrategy-scoring .myStrategy-scoring__text {
+  grid-column: 3;
+  align-self: center;
+  font-size: 13px;
+}
+
+.myStrategy-items-item-header-info-content-scoring--only-mobile .myStrategy-scoring .myStrategy-scoring__type {
+  order: 2;
+  width: 14px;
+  height: 14px;
+}
+
+.myStrategy-items-item-header-info-content-scoring--only-mobile .myStrategy-scoring__diagram svg {
+  width: 40px;
+  height: 40px;
+}
+
+.myStrategy-items-item-header-info-content-scoring--only-mobile .myStrategy-scoring__diagram svg text {
+  font-size: 12px;
 }
 
 .myStrategy-items-item-header-stat {
@@ -16348,6 +16390,14 @@ body.viewProfile .header-controls-links-link.auth span {
     width: 70%;
   }
 
+  .myStrategy-items-item-header-info-content-settings--only-desktop {
+    display: none;
+  }
+
+  .myStrategy-items-item-header-info-content-scoring--only-mobile {
+    display: block;
+  }
+
   .myStrategy-items-item-header-stat.paddingBase {
     padding: 0;
   }
@@ -16356,10 +16406,15 @@ body.viewProfile .header-controls-links-link.auth span {
     padding: 0;
     flex-wrap: wrap;
     margin-top: 1rem;
+    margin-bottom: 8px;
   }
 
   .myStrategy-items-item-header-stat-block {
     margin-bottom: 1rem;
+  }
+
+  .myStrategy-items-item-header-stat-block--only-desktop {
+    display: none;
   }
 
   .myStrategy-items-item-header-toggle {
