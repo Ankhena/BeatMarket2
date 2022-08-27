@@ -236,43 +236,17 @@
             display: block;
           }
         }
-      }
 
-      @media (max-width: $screen_sm) {
-
-        >.statTable__row {
-          .statTable__item--sticker {
-            background-color: $color_blue;
-          }
-
-          .statSticker__arrow {
-            fill: $color_white;
-          }
-
-          .statStickerInfo__changeStock {
-            color: $color_white;
-
-            .btnShowAll {
-              color: $color_white;
-            }
-          }
-
-          .statStickerInfo__title,
-          .statStickerInfo__cost,
-          .statStickerInfo__subtitle {
-            color: $color_white;
-          }
-
-          .statSticker__percent--success {
-            color: $color_green_light_table_header;
-          }
+        .statStickerInfo__icon--only-mobile {
+          stroke: #fff;
         }
       }
 
-      @media(max-width: $media_xs) {
+      @media (max-width: $screen_sm) {
         >.statTable__row {
           .statTable__item--sticker {
             background-color: $color_blue;
+
           }
 
           .statSticker__arrow {
@@ -339,6 +313,33 @@
       flex-direction: column;
       flex-basis: 50%;
       justify-content: space-between;
+    }
+
+    @media($media_xs) {
+      &:nth-child(1) {
+        order: -1;
+        margin-bottom: 8px;
+      }
+
+      &:nth-child(2) {
+        order: -1;
+      }
+
+      &:nth-child(3) {
+        order: 1;
+      }
+
+      &:nth-child(6) {
+        order: 1;
+      }
+
+      &:nth-child(8) {
+        order: -1;
+      }
+
+      &:nth-child(13) {
+        order: 1;
+      }
     }
 
     &--grow {
@@ -408,6 +409,38 @@
 
       @media ($media_sm) {
         display: none;
+      }
+    }
+
+  }
+
+  &__item--only-mobile {
+    display: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #3E54D8;
+
+
+    span {
+      margin-right: 8px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transform: translateY(0);
+    }
+
+
+    .statTable__content--opened & {
+      @media($media_sm) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      @media($media_xs) {
+        flex-basis: 100%;
       }
     }
   }
@@ -646,6 +679,10 @@
     img {
       max-width: 100%;
     }
+
+    @media($media_xs) {
+      display: none;
+    }
   }
 
   // .statSticker__content
@@ -674,6 +711,17 @@
       color: $color_red;
     }
 
+    span {
+      display: block;
+
+
+      &:first-child {
+        font-weight: 600;
+        font-size: 10px;
+        text-align: right;
+      }
+    }
+
   }
 
   // .statSticker__block
@@ -681,6 +729,10 @@
   &__block {
     display: flex;
     align-items: center;
+
+    @media($media_xs) {
+      flex-grow: 1;
+    }
   }
 }
 
@@ -781,6 +833,7 @@
 
     @media ($media_sm) {
       display: inline;
+      color: #929398;
     }
   }
 
@@ -801,6 +854,26 @@
     height: 1.3rem;
     transform: translateY(20%);
     margin-left: 0.2rem;
+
+    &--only {
+      &-desktop {
+        @media($media_sm) {
+          display: none;
+        }
+      }
+
+      &-mobile {
+        display: none;
+        height: 20px;
+        width: 20px;
+        transform: translateY(4px);
+        margin-left: 6px;
+
+        @media($media_sm) {
+          display: block;
+        }
+      }
+    }
   }
 }
 
@@ -1417,6 +1490,10 @@ $banch_items_space: 0.8rem;
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  @media($media_xs) {
+    max-width: none;
   }
 
   @media (min-width: 1150px) {}

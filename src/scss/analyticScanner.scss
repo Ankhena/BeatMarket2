@@ -80,6 +80,10 @@
     width: 100%;
     justify-content: center;
     white-space: nowrap;
+
+    @media($media_xs) {
+      margin-top: 23px;
+    }
   }
 
   &__count {
@@ -133,5 +137,9 @@
         display: none;
       }
     }
+  }
+
+  .inputSelect__container {
+    white-space: nowrap;
   }
 }
