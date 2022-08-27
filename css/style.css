@@ -6208,6 +6208,23 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   display: flex;
 }
 
+.statTable__item--only-mobile {
+  display: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: #3E54D8;
+}
+
+.statTable__item--only-mobile span {
+  margin-right: 8px;
+}
+
+.statTable__item--only-mobile svg {
+  width: 20px;
+  height: 20px;
+  transform: translateY(0);
+}
+
 .statTable__description {
   display: none;
   margin-bottom: 0.4rem;
@@ -6393,6 +6410,16 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   color: #ED6373;
 }
 
+.statSticker__percent span {
+  display: block;
+}
+
+.statSticker__percent span:first-child {
+  font-weight: 600;
+  font-size: 10px;
+  text-align: right;
+}
+
 .statSticker__block {
   display: flex;
   align-items: center;
@@ -6471,6 +6498,14 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   height: 1.3rem;
   transform: translateY(20%);
   margin-left: 0.2rem;
+}
+
+.statStickerInfo__icon--only-mobile {
+  display: none;
+  height: 20px;
+  width: 20px;
+  transform: translateY(4px);
+  margin-left: 6px;
 }
 
 .compare {
@@ -7929,6 +7964,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .analyticScanner__btn-list .btn {
   margin-right: 16px;
+}
+
+.analyticScanner .inputSelect__container {
+  white-space: nowrap;
 }
 
 .support__write {
@@ -16564,6 +16603,10 @@ body.viewProfile .header-controls-links-link.auth span {
     display: block;
   }
 
+  .statTable__content--opened .statStickerInfo__icon--only-mobile {
+    stroke: #fff;
+  }
+
   .statTable__content--opened > .statTable__row .statTable__item--sticker {
     background-color: #3E54D8;
   }
@@ -16638,6 +16681,12 @@ body.viewProfile .header-controls-links-link.auth span {
     display: none;
   }
 
+  .statTable__content--opened .statTable__item--only-mobile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
   .statTable__description {
     display: inline-block;
   }
@@ -16709,6 +16758,15 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statStickerInfo__cost {
     display: inline;
+    color: #929398;
+  }
+
+  .statStickerInfo__icon--only-desktop {
+    display: none;
+  }
+
+  .statStickerInfo__icon--only-mobile {
+    display: block;
   }
 
   .compare-menu {
@@ -17943,8 +18001,53 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 16px;
   }
 
+  .statTable__item:nth-child(1) {
+    order: -1;
+    margin-bottom: 8px;
+  }
+
+  .statTable__item:nth-child(2) {
+    order: -1;
+  }
+
+  .statTable__item:nth-child(3) {
+    order: 1;
+  }
+
+  .statTable__item:nth-child(6) {
+    order: 1;
+  }
+
+  .statTable__item:nth-child(8) {
+    order: -1;
+  }
+
+  .statTable__item:nth-child(13) {
+    order: 1;
+  }
+
+  .statTable__content--opened .statTable__item--only-mobile {
+    flex-basis: 100%;
+  }
+
+  .statSticker__img {
+    display: none;
+  }
+
+  .statSticker__block {
+    flex-grow: 1;
+  }
+
   .paperDontTrade__popup {
     max-width: 12rem;
+  }
+
+  .statTable-scoring--in-header {
+    max-width: none;
+  }
+
+  .analyticScanner__counts {
+    margin-top: 23px;
   }
 
   .analyticScanner__count {
@@ -18003,32 +18106,6 @@ body.viewProfile .header-controls-links-link.auth span {
   .tarif-block__currentResult span {
     margin-right: 0;
     margin-top: 8px;
-  }
-
-  .statTable__content--opened > .statTable__row .statTable__item--sticker {
-    background-color: #3E54D8;
-  }
-
-  .statTable__content--opened > .statTable__row .statSticker__arrow {
-    fill: #fff;
-  }
-
-  .statTable__content--opened > .statTable__row .statStickerInfo__changeStock {
-    color: #fff;
-  }
-
-  .statTable__content--opened > .statTable__row .statStickerInfo__changeStock .btnShowAll {
-    color: #fff;
-  }
-
-  .statTable__content--opened > .statTable__row .statStickerInfo__title,
-  .statTable__content--opened > .statTable__row .statStickerInfo__cost,
-  .statTable__content--opened > .statTable__row .statStickerInfo__subtitle {
-    color: #fff;
-  }
-
-  .statTable__content--opened > .statTable__row .statSticker__percent--success {
-    color: #1BD32F;
   }
 }
 
