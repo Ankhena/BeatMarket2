@@ -15067,10 +15067,6 @@ body.viewProfile .header-controls-links-link.auth span {
     right: 50px;
     background-size: 40% auto;
   }
-
-  .section-main .main-menu-btn {
-    display: none;
-  }
 }
 
 @media (max-width: 1150px) {
@@ -15658,6 +15654,14 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .adv-portfolio-settings__table .td-summ::before {
     content: "Сумма ";
+  }
+
+  .section-main .main-menu .nav.fixed {
+    top: 1rem;
+  }
+
+  .section-main .main-menu-btn {
+    margin-top: 20px;
   }
 }
 
@@ -17786,6 +17790,10 @@ body.viewProfile .header-controls-links-link.auth span {
     font-size: 1.25rem;
   }
 
+  .section-main .main-menu-btn {
+    display: none;
+  }
+
   .myStrategy__btnContainer {
     margin-bottom: 1.5rem;
   }
@@ -18181,11 +18189,5 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .referrals__descr-item {
     align-items: center;
-  }
-}
-
-@media (min-width: 1051px) and (max-width: 1289px) {
-  .section-main .main-menu .nav ul li a span {
-    display: none;
   }
 }

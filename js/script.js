@@ -3367,17 +3367,21 @@ initPortfolioProfitGraph();
 function tabsScroll(table) {
   let speed = 2; // Скорость скролла.
 
+  
   let scroll = document.querySelector(`.${table}`);
 
   let left = 0; // отпустили мышку - сохраняем положение скролла
   let drag = false;
   let coorX = 0; // нажали мышку - сохраняем координаты.
-
+  
+  if (!scroll) {
+    return false
+  }
   scroll.addEventListener('mousedown', function (e) {
     drag = true;
     coorX = e.pageX - this.offsetLeft;
   });
-  document.addEventListener('mouseup', function () {
+  scroll.addEventListener('mouseup', function () {
     drag = false;
     left = scroll.scrollLeft;
   });
