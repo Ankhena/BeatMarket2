@@ -13378,26 +13378,9 @@ td {
 }
 
 .section-main .main-menu .nav {
-  overflow-x: clip;
-  overflow-y: auto;
   height: 93vh;
   padding-bottom: 20px;
   padding-right: 1rem;
-}
-
-.section-main .main-menu .nav::-webkit-scrollbar {
-  height: 2px;
-  width: 9px;
-  background-color: #F5F5F5;
-}
-
-.section-main .main-menu .nav::-webkit-scrollbar-thumb {
-  background-color: #a8b2ed;
-}
-
-.section-main .main-menu .nav::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #F5F5F5;
 }
 
 .section-main .main-menu .nav.fixed {
