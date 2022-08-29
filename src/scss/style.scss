@@ -127,6 +127,10 @@
         &.fixed {
           position: sticky;
           top: 3rem;
+
+          @media($media_md) {
+            top: 1rem;
+          }
         }
 
         ul {
@@ -173,10 +177,6 @@
                 pointer-events: none;
                 white-space: nowrap;
                 transition: opacity .3s, width .3s;
-
-                @media ($media_md_lg) {
-                  display: none;
-                }
               }
             }
 
@@ -214,7 +214,11 @@
         transform: translateX(-5px);
         cursor: pointer;
 
-        @media ($media_lg) {
+        @media($media_md) {
+          margin-top: 20px;
+        }
+
+        @media ($media_sm) {
           display: none;
         }
       }
