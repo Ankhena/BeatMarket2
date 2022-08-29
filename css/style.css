@@ -13373,6 +13373,11 @@ td {
   transition: opacity 0.3s, width 0.3s;
 }
 
+.section-main .main-menu.active .main-menu-btn,
+.section-main .main-menu:hover .main-menu-btn {
+  display: flex;
+}
+
 .section-main .main-menu.active .main-menu-btn svg path {
   fill: #3E54D8;
 }
@@ -13443,7 +13448,7 @@ td {
 }
 
 .section-main .main-menu-btn {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 10px;
