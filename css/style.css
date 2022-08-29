@@ -13357,7 +13357,7 @@ td {
 
 .section-main .main-menu {
   background: linear-gradient(180deg, #EEF3FE 0%, #F5F9FF 100%);
-  padding: 3rem 1rem 3rem 1rem;
+  padding: 3rem 0 3rem 1rem;
   border-right: 2px solid #D3E3FF;
   transition: all 0.3s;
   display: flex;
@@ -13371,6 +13371,33 @@ td {
   width: 100%;
   pointer-events: all;
   transition: opacity 0.3s, width 0.3s;
+}
+
+.section-main .main-menu.active .main-menu-btn svg path {
+  fill: #3E54D8;
+}
+
+.section-main .main-menu .nav {
+  overflow-x: clip;
+  overflow-y: auto;
+  height: 93vh;
+  padding-bottom: 20px;
+  padding-right: 1rem;
+}
+
+.section-main .main-menu .nav::-webkit-scrollbar {
+  height: 2px;
+  width: 9px;
+  background-color: #F5F5F5;
+}
+
+.section-main .main-menu .nav::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
+}
+
+.section-main .main-menu .nav::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
 }
 
 .section-main .main-menu .nav.fixed {
@@ -13443,8 +13470,12 @@ td {
   width: 50px;
   height: 50px;
   margin-top: 63px;
-  transform: translateX(-5px);
   cursor: pointer;
+}
+
+.section-main .main-menu-btn:focus,
+.section-main .main-menu-btn:active {
+  outline: none;
 }
 
 .section-main .main-content {
@@ -14783,7 +14814,12 @@ body.viewProfile .header-controls-links-link.auth span {
 @media (min-width: 1290px) {
   .section-main .main-menu.active,
   .section-main .main-menu:hover {
-    padding: 3rem 2rem 3rem 7rem;
+    padding: 3rem 0 3rem 7rem;
+  }
+
+  .section-main .main-menu.active .nav,
+  .section-main .main-menu:hover .nav {
+    padding-right: 2rem;
   }
 }
 
@@ -15066,6 +15102,14 @@ body.viewProfile .header-controls-links-link.auth span {
     top: 50px;
     right: 50px;
     background-size: 40% auto;
+  }
+
+  .section-main .main-menu .nav.fixed {
+    top: 1.5rem;
+  }
+
+  .section-main .main-menu-btn {
+    margin-top: 30px;
   }
 }
 
@@ -15654,10 +15698,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .adv-portfolio-settings__table .td-summ::before {
     content: "Сумма ";
-  }
-
-  .section-main .main-menu .nav.fixed {
-    top: 1rem;
   }
 
   .section-main .main-menu-btn {
@@ -17779,6 +17819,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .section-main .main-menu.active {
     transform: translateX(0);
+  }
+
+  .section-main .main-menu .nav {
+    padding-right: 0;
   }
 
   .section-main .main-menu .nav ul li svg {
