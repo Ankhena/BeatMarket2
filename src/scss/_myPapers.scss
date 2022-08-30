@@ -64,18 +64,10 @@
         stroke: $breadcrumb_border;
       }
 
-      .paperDontTrade__popup {
-        transform: translateY(100%) translateX(-90%);
-      }
-
       @media ($media_sm) {
         padding: 0;
         flex-direction: row;
         justify-content: flex-start;
-
-        .paperDontTrade__popup {
-          transform: translateY(100%) translateX(-20%);
-        }
       }
     }
 
@@ -1422,7 +1414,7 @@ $banch_items_space: 0.8rem;
     position: absolute;
     //bottom: -0.5rem;
     left: 0;
-    transform: translateY(100%);
+    transform: translateY(21%);
     background: $color_block_bg;
     border: 1px solid $color_block_border;
     box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
