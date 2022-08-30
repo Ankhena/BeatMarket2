@@ -6120,10 +6120,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   stroke: #8C9BEA;
 }
 
-.statTable--scroll .statTable__item--withIcon .paperDontTrade__popup {
-  transform: translateY(100%) translateX(-90%);
-}
-
 .statTable--scroll .statTable__value {
   white-space: initial;
   display: inline-block;
@@ -6956,7 +6952,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   transition: 0.3s ease-in-out;
   position: absolute;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(21%);
   background: #FCFDFF;
   border: 1px solid #D3E3FF;
   box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
@@ -16635,10 +16631,6 @@ body.viewProfile .header-controls-links-link.auth span {
     padding: 0;
     flex-direction: row;
     justify-content: flex-start;
-  }
-
-  .statTable--scroll .statTable__item--withIcon .paperDontTrade__popup {
-    transform: translateY(100%) translateX(-20%);
   }
 
   .statTable--scroll .statTable__item--comment .statTable__value {
