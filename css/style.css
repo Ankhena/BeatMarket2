@@ -7938,6 +7938,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .analyticScanner {
   display: flex;
+  align-items: flex-end;
 }
 
 .analyticScanner__header {
@@ -7968,7 +7969,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   border: 1px solid #D3E3FF;
   border-radius: 10px;
   max-height: 55px;
-  margin-top: 27px;
   max-width: 191px;
   width: 100%;
   justify-content: center;
@@ -18131,10 +18131,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable-scoring--in-header {
     max-width: none;
-  }
-
-  .analyticScanner__counts {
-    margin-top: 23px;
   }
 
   .analyticScanner__count {
