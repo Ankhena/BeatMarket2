@@ -32,6 +32,7 @@
 
 .analyticScanner {
   display: flex;
+  align-items: flex-end;
 
   @media($media_sm) {
     justify-content: center;
@@ -75,15 +76,10 @@
     border: 1px solid #D3E3FF;
     border-radius: 10px;
     max-height: 55px;
-    margin-top: 27px;
     max-width: 191px;
     width: 100%;
     justify-content: center;
     white-space: nowrap;
-
-    @media($media_xs) {
-      margin-top: 23px;
-    }
   }
 
   &__count {
