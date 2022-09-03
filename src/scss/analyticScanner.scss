@@ -2,6 +2,10 @@
   &-controlls {
     display: flex;
     margin-bottom: 32px;
+    
+    &:empty {
+      margin-bottom: 0;
+    }
 
     @media($media_sm) {
       flex-direction: column;

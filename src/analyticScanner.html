@@ -66,9 +66,9 @@
 
                   <div class="inputGroup__control inputSelect">
 
-                    <input class="inputSelect__checkbox visually_hidden" id="analyticScanner1" type="checkbox">
+                    <input class="inputSelect__checkbox visually_hidden" id="analyticScannerContinent" type="checkbox">
 
-                    <label class="inputSelect__container" for="analyticScanner1">
+                    <label class="inputSelect__container" for="analyticScannerContinent">
                       <span class="inputSelect__value">Всe</span>
                       <svg class="inputSelect__icon">
                         <use xlink:href="img/main.svg#icon-arrow-down"></use>
@@ -78,7 +78,7 @@
                     <div class="inputSelect__dropdown inputSelect__dropdown">
                       <label class="inputSelect__item">
                         <input class="inputSelect__radio visually_hidden" type="radio" name="continent"
-                          checked="">
+                          >
                         <span class="inputSelect__choose radio_custom">Азия</span>
                       </label>
                       <label class="inputSelect__item">
@@ -96,9 +96,9 @@
 
                     <div class="inputGroup__control inputSelect">
 
-                      <input class="inputSelect__checkbox visually_hidden" id="analyticScanner2" type="checkbox">
+                      <input class="inputSelect__checkbox visually_hidden" id="analyticScannerScoring" type="checkbox">
 
-                      <label class="inputSelect__container" for="analyticScanner2">
+                      <label class="inputSelect__container" for="analyticScannerScoring">
                         <span class="inputSelect__value">Все</span>
                         <svg class="inputSelect__icon">
                           <use xlink:href="img/main.svg#icon-arrow-down"></use>
@@ -108,12 +108,12 @@
                       <div class="inputSelect__dropdown inputSelect__dropdown">
                         <label class="inputSelect__item">
                           <input class="inputSelect__radio visually_hidden" type="radio" name="scoring"
-                            checked="">
+                            >
                           <span class="inputSelect__choose radio_custom">BMS global</span>
                         </label>
                         <label class="inputSelect__item">
                           <input class="inputSelect__radio visually_hidden" type="radio" name="scoring"
-                            checked="">
+                            >
                           <span class="inputSelect__choose radio_custom">BMS local</span>
                         </label>
                       </div>
@@ -132,80 +132,82 @@
                 </div>
               </div>
             </div>
-            <div class="main-content-controlls">
-              <div class="inputGroup">
-                <span class="inputGroup__label">P/E</span>
-                <div class="inputGroup__item">
-
-                  <div class="range-number">
-                    <div class="customRange">
-                      <div class="customRange__info">
-                        <div class="range-number__block">
-                          от
-                          <span class="customRange__value">1</span>
+            <div class="ui-tabs-panel ui-corner-bottom ui-widget-content" data-contentshower>
+              <div class="main-content-controlls" data-contentshowerhidden>
+                <div class="inputGroup">
+                  <span class="inputGroup__label">P/E</span>
+                  <div class="inputGroup__item">
+  
+                    <div class="range-number">
+                      <div class="customRange">
+                        <div class="customRange__info">
+                          <div class="range-number__block">
+                            от
+                            <span class="customRange__value">1</span>
+                          </div>
+                          <div class="range-number__block">
+                            до
+                            <span class="customRange__value">120</span>
+                          </div>
                         </div>
-                        <div class="range-number__block">
-                          до
-                          <span class="customRange__value">120</span>
+                        <div class="customRange__slider">
                         </div>
                       </div>
-                      <div class="customRange__slider">
+                    </div>
+                  </div>
+                </div>
+                <div class="inputGroup">
+                  <span class="inputGroup__label">P/S</span>
+                  <div class="inputGroup__item">
+  
+                    <div class="range-number">
+                      <div class="customRange">
+                        <div class="customRange__info">
+                          <div class="range-number__block">
+                            от
+                            <span class="customRange__value">1</span>
+                          </div>
+                          <div class="range-number__block">
+                            до
+                            <span class="customRange__value">120</span>
+                          </div>
+                        </div>
+                        <div class="customRange__slider">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputGroup">
+                  <span class="inputGroup__label">Дивидендная доходность %</span>
+                  <div class="inputGroup__item">
+  
+                    <div class="range-number">
+                      <div class="customRange">
+                        <div class="customRange__info">
+                          <div class="range-number__block">
+                            от
+                            <span class="customRange__value">1</span>
+                          </div>
+                          <div class="range-number__block">
+                            до
+                            <span class="customRange__value">120</span>
+                          </div>
+                        </div>
+                        <div class="customRange__slider">
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="inputGroup">
-                <span class="inputGroup__label">P/S</span>
-                <div class="inputGroup__item">
-
-                  <div class="range-number">
-                    <div class="customRange">
-                      <div class="customRange__info">
-                        <div class="range-number__block">
-                          от
-                          <span class="customRange__value">1</span>
-                        </div>
-                        <div class="range-number__block">
-                          до
-                          <span class="customRange__value">120</span>
-                        </div>
-                      </div>
-                      <div class="customRange__slider">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="inputGroup">
-                <span class="inputGroup__label">Дивидендная доходность %</span>
-                <div class="inputGroup__item">
-
-                  <div class="range-number">
-                    <div class="customRange">
-                      <div class="customRange__info">
-                        <div class="range-number__block">
-                          от
-                          <span class="customRange__value">1</span>
-                        </div>
-                        <div class="range-number__block">
-                          до
-                          <span class="customRange__value">120</span>
-                        </div>
-                      </div>
-                      <div class="customRange__slider">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <button class="btnShowAll">
+                <span class="btnShowAll__text">Показать все</span>
+                <svg class="btnShowAll__icon">
+                  <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
             </div>
-            <button class="btnShowAll">
-              <span class="btnShowAll__text">Показать все</span>
-              <svg class="btnShowAll__icon">
-                <use xlink:href="img/main.svg#icon-arrow-down"></use>
-              </svg>
-            </button>
             <div class="analyticScanner__btn-list">
               <button class="btn btn_blue">Найти</button>
               <button class="btn btn_primary">Сбросить фильтр</button>
