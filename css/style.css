@@ -7920,6 +7920,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-bottom: 32px;
 }
 
+.main-content-controlls:empty {
+  margin-bottom: 0;
+}
+
 .main-content-analyticScanner {
   width: 100%;
   background-color: #FFFFFF;
