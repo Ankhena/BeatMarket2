@@ -13,28 +13,16 @@ function filterScanner() {
       continent: 'Азия'
     },
     {
-      img: "pcg.png",
-      imgAlt: 'Иконка PCG',
-      title: 'PCG',
-      subtitle: 'Microsoft',
-      price: '123.23 USD',
-      percent: '+1.23%',
+      img: "viac.svg",
+      imgAlt: 'Иконка VIAC',
+      title: 'VIAC',
+      subtitle: 'Microsoft company',
+      price: '883.23 USD',
+      percent: '+11.2%',
       exchange: "NYSE",
-      globalScoring: 75,
-      localScoring: 65,
-      continent: 'Азия'
-    },
-    {
-      img: "pcg.png",
-      imgAlt: 'Иконка PCG',
-      title: 'PCG',
-      subtitle: 'Microsoft',
-      price: '123.23 USD',
-      percent: '+1.23%',
-      exchange: "NYSE",
-      globalScoring: 75,
-      localScoring: 65,
-      continent: 'Азия'
+      globalScoring: 85,
+      localScoring: 55,
+      continent: 'Европа'
     },
   ]
 
@@ -42,10 +30,33 @@ function filterScanner() {
   const btns = document.querySelectorAll(".table-ticker-header__item")
   const filterContinent = document.querySelector("#analyticScannerContinent")
   const filterScoring = document.querySelector("#analyticScannerScoring")
+  const inputSearch = document.querySelector("#search-company")
 
-  function renderCompanies() {
+
+  //function searchCompany(companies) {
+
+  //  inputSearch.addEventListener("input", (e) => {
+  //    const input = e.target.value
+
+  //    companies.filter(company => {
+  //      if(company.title == input) {
+  //        renderCompanies(company)
+  //      }
+  //    })
+  //  })
+  //}
+
+  //searchCompany(companies)
+
+  function listCompanies() {
     companies.forEach(company => {
-      const htmlElement = `
+      renderCompanies(company)
+    })
+  }
+
+  
+  function renderCompanies(company) {
+    const htmlElement = `
               <div class="table-ticker__content">
                 <div class="table-ticker__block">
                   <div class="table-ticker-block__item">
@@ -113,12 +124,10 @@ function filterScanner() {
                 </div>
               </div>
       `
-
-      content.insertAdjacentHTML("beforeend", htmlElement)
-    })
+    content.insertAdjacentHTML("beforeend", htmlElement)
   }
 
-  renderCompanies()
+  listCompanies()
 }
 
 filterScanner()
