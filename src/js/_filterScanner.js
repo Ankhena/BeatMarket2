@@ -32,29 +32,13 @@ function filterScanner() {
   const filterScoring = document.querySelector("#analyticScannerScoring")
   const inputSearch = document.querySelector("#search-company")
 
-
-  //function searchCompany(companies) {
-
-  //  inputSearch.addEventListener("input", (e) => {
-  //    const input = e.target.value
-
-  //    companies.filter(company => {
-  //      if(company.title == input) {
-  //        renderCompanies(company)
-  //      }
-  //    })
-  //  })
-  //}
-
-  //searchCompany(companies)
-
   function listCompanies() {
     companies.forEach(company => {
       renderCompanies(company)
     })
   }
 
-  
+
   function renderCompanies(company) {
     const htmlElement = `
               <div class="table-ticker__content">

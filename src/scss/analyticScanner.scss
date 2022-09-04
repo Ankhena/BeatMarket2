@@ -35,12 +35,15 @@
 }
 
 .analyticScanner {
-  display: flex;
-  align-items: flex-end;
-
-  @media($media_sm) {
-    justify-content: center;
+  
+  &__input {
+    display: flex;
+    align-items: flex-end;
+    @media($media_sm) {
+      justify-content: center;
+    }
   }
+
 
   &__header {
     display: flex;
