@@ -5394,7 +5394,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .myStrategy-indicators-container .table-scroll {
   overflow-x: auto;
-  width: 15rem;
 }
 
 .myStrategy-indicators-container .table-fixed {
