@@ -7939,7 +7939,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-left: 20px;
 }
 
-.analyticScanner {
+.analyticScanner__input {
   display: flex;
   align-items: flex-end;
 }
@@ -7991,6 +7991,22 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .analyticScanner__count:last-child {
   border-left: 1px solid #D3E3FF;
+}
+
+.analyticScanner__count input {
+  font-weight: inherit;
+  font-size: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: inherit;
+}
+
+.analyticScanner__count input:focus,
+.analyticScanner__count input:active,
+.analyticScanner__count input:hover {
+  border: none;
 }
 
 .analyticScanner .btnShowAll {
@@ -8265,6 +8281,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .inputSelect__choose {
   padding-left: 1.8rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .dialogData__title {
@@ -17041,7 +17058,7 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 16px;
   }
 
-  .analyticScanner {
+  .analyticScanner__input {
     justify-content: center;
   }
 
