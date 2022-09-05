@@ -133,24 +133,36 @@ $(document).ready(function () {
     });
   });
 
-  $(".customRange .customRange__slider").each((_, elem) => {
-    $(elem).slider({
-      range: true,
-      min: 0,
-      max: 100,
-      values: [12, 88],
-    });
-  });
 
-  $(".modal-content-toggle").each((_, elem) => {
-    let btn = $(elem).find(".btnShowAll");
-    let content = $(elem).find(".toggleOverlay");
-
-    btn.click(() => {
-      content.slideToggle();
-      btn.toggleClass("btnShowAll--active");
-    });
-  });
+  $(".customRange").each((i, mainElem) => {
+    if (mainElem) {
+      if ($(".customRange__info")) {
+        const elemMain = mainElem.getAttribute("id");
+        $(`#${elemMain} .customRange__slider`).each((_, elem) => {
+          $(elem).slider({
+            range: true,
+            min: 0,
+            max: 120,
+            values: [1, 120],
+  
+            slide: function (event, ui) {
+              $(`#${elemMain} #min`).text(ui.values[0])
+              $(`#${elemMain} #max`).text(ui.values[1])
+            }
+          });
+        });
+      } else {
+        $(`.customRange__slider`).each((_, elem) => {
+          $(elem).slider({
+            range: true,
+            min: 0,
+            max: 100,
+            values: [2, 48],
+          });
+        });
+      }
+    }
+  })
 
   document.querySelectorAll(".tablePaymentSchedule").forEach(table => {
     let tableItems = table.querySelectorAll(".table-content-item:not(.table-content-item.bottom)");
@@ -183,13 +195,13 @@ $(document).ready(function () {
 function tabsScroll(table) {
   let speed = 2; // Скорость скролла.
 
-  
+
   let scroll = document.querySelector(`.${table}`);
 
   let left = 0; // отпустили мышку - сохраняем положение скролла
   let drag = false;
   let coorX = 0; // нажали мышку - сохраняем координаты.
-  
+
   if (!scroll) {
     return false
   }

@@ -2,7 +2,7 @@
   &-controlls {
     display: flex;
     margin-bottom: 32px;
-    
+
     &:empty {
       margin-bottom: 0;
     }
@@ -35,10 +35,11 @@
 }
 
 .analyticScanner {
-  
+
   &__input {
     display: flex;
     align-items: flex-end;
+
     @media($media_sm) {
       justify-content: center;
     }
@@ -105,6 +106,22 @@
 
     &:last-child {
       border-left: 1px solid #D3E3FF;
+    }
+
+    input {
+      font-weight: inherit;
+      font-size: inherit;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+      color: inherit;
+
+      &:focus,
+      &:active,
+      &:hover {
+        border: none;
+      }
     }
   }
 

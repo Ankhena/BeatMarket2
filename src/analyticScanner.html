@@ -85,6 +85,18 @@
                         <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
                         <span class="inputSelect__choose radio_custom">Европа</span>
                       </label>
+                      <label class="inputSelect__item">
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
+                        <span class="inputSelect__choose radio_custom">Северная Америка</span>
+                      </label>
+                      <label class="inputSelect__item">
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
+                        <span class="inputSelect__choose radio_custom">Южная Америка</span>
+                      </label>
+                      <label class="inputSelect__item">
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
+                        <span class="inputSelect__choose radio_custom">Австралия</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -99,7 +111,7 @@
                       <input class="inputSelect__checkbox visually_hidden" id="analyticScannerScoring" type="checkbox">
 
                       <label class="inputSelect__container" for="analyticScannerScoring">
-                        <span class="inputSelect__value">Все</span>
+                        <span class="inputSelect__value">BMS global</span>
                         <svg class="inputSelect__icon">
                           <use xlink:href="img/main.svg#icon-arrow-down"></use>
                         </svg>
@@ -107,7 +119,7 @@
 
                       <div class="inputSelect__dropdown inputSelect__dropdown">
                         <label class="inputSelect__item">
-                          <input class="inputSelect__radio visually_hidden" type="radio" name="scoring"
+                          <input class="inputSelect__radio visually_hidden" type="radio" name="scoring" checked
                             >
                           <span class="inputSelect__choose radio_custom">BMS global</span>
                         </label>
@@ -116,6 +128,16 @@
                             >
                           <span class="inputSelect__choose radio_custom">BMS local</span>
                         </label>
+                        <label class="inputSelect__item">
+                          <input class="inputSelect__radio visually_hidden" type="radio" name="scoring"
+                            >
+                          <span class="inputSelect__choose radio_custom">BMD local</span>
+                        </label>
+                        <label class="inputSelect__item">
+                          <input class="inputSelect__radio visually_hidden" type="radio" name="scoring"
+                            >
+                          <span class="inputSelect__choose radio_custom">BMD local</span>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -123,11 +145,11 @@
                 <div class="analyticScanner__counts">
                   <div class="analyticScanner__count">
                     <span>от</span>
-                    1
+                    <input type="text" value="1">
                   </div>
                   <div class="analyticScanner__count">
                     <span>до</span>
-                    99
+                    <input type="text" value="99">
                   </div>
                 </div>
               </div>
@@ -139,15 +161,15 @@
                   <div class="inputGroup__item">
   
                     <div class="range-number">
-                      <div class="customRange">
+                      <div class="customRange" id="PE">
                         <div class="customRange__info">
                           <div class="range-number__block">
                             от
-                            <span class="customRange__value">1</span>
+                            <span class="customRange__value" id="min">1</span>
                           </div>
                           <div class="range-number__block">
                             до
-                            <span class="customRange__value">120</span>
+                            <span class="customRange__value" id="max">120</span>
                           </div>
                         </div>
                         <div class="customRange__slider">
@@ -161,15 +183,15 @@
                   <div class="inputGroup__item">
   
                     <div class="range-number">
-                      <div class="customRange">
+                      <div class="customRange" id="PS">
                         <div class="customRange__info">
                           <div class="range-number__block">
                             от
-                            <span class="customRange__value">1</span>
+                            <span class="customRange__value" id="min">1</span>
                           </div>
                           <div class="range-number__block">
                             до
-                            <span class="customRange__value">120</span>
+                            <span class="customRange__value" id="max">120</span>
                           </div>
                         </div>
                         <div class="customRange__slider">
@@ -183,15 +205,15 @@
                   <div class="inputGroup__item">
   
                     <div class="range-number">
-                      <div class="customRange">
+                      <div class="customRange" id="Income">
                         <div class="customRange__info">
                           <div class="range-number__block">
                             от
-                            <span class="customRange__value">1</span>
+                            <span class="customRange__value" id="min">1</span>
                           </div>
                           <div class="range-number__block">
                             до
-                            <span class="customRange__value">1234</span>
+                            <span class="customRange__value" id='max'>1234</span>
                           </div>
                         </div>
                         <div class="customRange__slider">
