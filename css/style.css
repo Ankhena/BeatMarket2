@@ -7999,7 +7999,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   background: transparent;
   border: none;
   outline: none;
-  padding: 0;
+  padding: 0 5px 0 0;
   color: inherit;
 }
 
@@ -14327,6 +14327,20 @@ body.viewProfile .header-controls-links-link.auth span {
   margin-bottom: 32px;
 }
 
+.table-ticker::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.table-ticker::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+.table-ticker::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
+}
+
 .table-ticker .inputGroup {
   display: none;
   margin-bottom: 24px;
@@ -14334,7 +14348,7 @@ body.viewProfile .header-controls-links-link.auth span {
 
 .table-ticker__header {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
   background-color: #F5F6FD;
   border: 1px solid #E6EEFF;
   margin: 0 -32px 23px;
@@ -14344,11 +14358,12 @@ body.viewProfile .header-controls-links-link.auth span {
 .table-ticker__content {
   display: grid;
   align-items: center;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
   border-bottom: 1px solid #E6EEFF;
   margin-left: -32px;
   margin-right: -32px;
   padding: 0 32px 22px;
+  cursor: pointer;
 }
 
 .table-ticker__content + .table-ticker__content {
@@ -14359,6 +14374,7 @@ body.viewProfile .header-controls-links-link.auth span {
   font-weight: 500;
   color: #373943;
   padding: 0 16px;
+  white-space: nowrap;
 }
 
 .table-ticker__block .mobile-info {
@@ -14444,6 +14460,7 @@ body.viewProfile .header-controls-links-link.auth span {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -14487,6 +14504,7 @@ body.viewProfile .header-controls-links-link.auth span {
   font-weight: 500;
   font-size: 14px;
   color: #929398;
+  white-space: nowrap;
 }
 
 .table-ticker-block-info__content {
@@ -14653,6 +14671,12 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .daterangepicker .drp-calendar.left {
     clear: none !important;
+  }
+}
+
+@media (min-width: 1051px) {
+  .table-ticker {
+    overflow-x: auto;
   }
 }
 
@@ -17988,7 +18012,7 @@ body.viewProfile .header-controls-links-link.auth span {
   .table-ticker__content {
     border-bottom: none;
     align-items: stretch;
-    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1.5fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr 1.5fr;
     gap: 20px 16px;
   }
 
