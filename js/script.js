@@ -3237,8 +3237,8 @@ initPortfolioProfitGraph();
       exchange: "NYSE",
       globalScoring: 93,
       localScoring: 62,
-      pe: "P/aE",
-      ps: "P/rS",
+      pe: "P/E",
+      ps: "P/S",
       continent: 'Азия'
     },
     {
@@ -3251,8 +3251,8 @@ initPortfolioProfitGraph();
       exchange: "NYSE",
       globalScoring: 95,
       localScoring: 45,
-      pe: "P/xE",
-      ps: "P/tS",
+      pe: "P/E",
+      ps: "P/S",
       continent: 'Европа'
     },
     {
@@ -3265,8 +3265,8 @@ initPortfolioProfitGraph();
       exchange: "NYSE",
       globalScoring: 75,
       localScoring: 65,
-      pe: "P/eE",
-      ps: "P/tS",
+      pe: "P/E",
+      ps: "P/S",
       continent: 'Северная Америка'
     },
     {
@@ -3279,8 +3279,8 @@ initPortfolioProfitGraph();
       exchange: "NYSEGE",
       globalScoring: 15,
       localScoring: 25,
-      pe: "P/eE",
-      ps: "P/tS",
+      pe: "P/E",
+      ps: "P/S",
       continent: 'Южная Америка'
     },
 
@@ -3294,8 +3294,8 @@ initPortfolioProfitGraph();
       exchange: "NYSEGE",
       globalScoring: 55,
       localScoring: 35,
-      pe: "P/eE",
-      ps: "P/tSb",
+      pe: "P/E",
+      ps: "P/S",
       continent: 'Австралия'
     },
 
@@ -3337,20 +3337,38 @@ initPortfolioProfitGraph();
 
   function sortedList(dataName, element, event) {
     const activesBtn = tableHeader.getElementsByClassName("active")
+    let currentActive = activesBtn[0]
+
     for (let i = 0; i < box.children.length; i++) {
       for (let j = i; j < box.children.length; j++) {
-        if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
-          let currentActive = activesBtn[0]
-          if (currentActive) {
-            currentActive.classList.remove("active");
-          }
+        if (!currentActive.classList.contains('active') || element.classList.contains("bottom")) {
+          if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
+            if (currentActive) {
+              currentActive.classList.remove("active");
+            }
 
-          if (currentActive !== element || !currentActive.classList.contains('active')) {
-            element.classList.add("active")
-            let replacedNode = box.replaceChild(box.children[j], box.children[i])
-            insertAfter(replacedNode, box.children[i])
-          }
+            if (currentActive !== element || !currentActive.classList.contains('active')) {
+              element.classList.add("active")
+              element.classList.remove("bottom")
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
 
+          }
+        } else if (currentActive.classList.contains('active') || !element.classList.contains("bottom")) {
+          if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
+            if (currentActive) {
+              currentActive.classList.remove("active");
+            }
+
+            if (currentActive !== element || !currentActive.classList.contains('active')) {
+              element.classList.add("active")
+              element.classList.add("bottom")
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
+
+          }
         }
       }
     }
