@@ -1505,6 +1505,24 @@ body.viewProfile {
 
 .table-ticker {
   margin-bottom: 32px;
+  
+  @media(min-width: 1051px) {
+    overflow-x: auto;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten($color_blue, 25%);
+  }
 
   .inputGroup {
     display: none;
@@ -1519,7 +1537,7 @@ body.viewProfile {
 
   &__header {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
     background-color: #F5F6FD;
     border: 1px solid #E6EEFF;
     margin: 0 -32px 23px;
@@ -1535,16 +1553,17 @@ body.viewProfile {
   &__content {
     display: grid;
     align-items: center;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
     border-bottom: 1px solid #E6EEFF;
     margin-left: -32px;
     margin-right: -32px;
     padding: 0 32px 22px;
+    cursor: pointer;
 
     @media($media_sm) {
       border-bottom: none;
       align-items: stretch;
-      grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1.5fr;
+      grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr 1.5fr;
       gap: 20px 16px;
     }
 
@@ -1563,6 +1582,7 @@ body.viewProfile {
     font-weight: 500;
     color: #373943;
     padding: 0 16px;
+    white-space: nowrap;
 
     &:first-child {
       @media($media_sm) {
@@ -1687,6 +1707,7 @@ body.viewProfile {
       display: flex;
       justify-content: center;
       align-items: center;
+      white-space: nowrap;
       cursor: pointer;
 
       span {
@@ -1754,6 +1775,7 @@ body.viewProfile {
     font-weight: 500;
     font-size: 14px;
     color: #929398;
+    white-space: nowrap;
   }
 }
 

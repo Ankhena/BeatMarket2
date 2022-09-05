@@ -5,11 +5,13 @@ function filterScanner() {
       imgAlt: 'Иконка PCG',
       title: 'PCG',
       subtitle: 'Microsoft',
-      price: '123.23 USD',
-      percent: '+1.23%',
+      price: '126.23 USD',
+      percent: '1.13',
       exchange: "NYSE",
-      globalScoring: 75,
-      localScoring: 65,
+      globalScoring: 93,
+      localScoring: 62,
+      pe: "P/aE",
+      ps: "P/rS",
       continent: 'Азия'
     },
     {
@@ -18,19 +20,127 @@ function filterScanner() {
       title: 'VIAC',
       subtitle: 'Microsoft company',
       price: '883.23 USD',
-      percent: '+11.2%',
+      percent: '8.2',
       exchange: "NYSE",
-      globalScoring: 85,
-      localScoring: 55,
+      globalScoring: 95,
+      localScoring: 45,
+      pe: "P/xE",
+      ps: "P/tS",
       continent: 'Европа'
     },
+    {
+      img: "pcg.png",
+      imgAlt: 'Иконка PCG',
+      title: 'PCG',
+      subtitle: 'Microsoft',
+      price: '123.23 USD',
+      percent: '1.23',
+      exchange: "NYSE",
+      globalScoring: 75,
+      localScoring: 65,
+      pe: "P/eE",
+      ps: "P/tS",
+      continent: 'Северная Америка'
+    },
+    {
+      img: "viac.svg",
+      imgAlt: 'Иконка VIAC',
+      title: 'VIAC',
+      subtitle: 'Microsoft company',
+      price: '85.23 USD',
+      percent: '1.2',
+      exchange: "NYSEGE",
+      globalScoring: 15,
+      localScoring: 25,
+      pe: "P/eE",
+      ps: "P/tS",
+      continent: 'Южная Америка'
+    },
+
+    {
+      img: "viac.svg",
+      imgAlt: 'Иконка VIAC',
+      title: 'VIAC',
+      subtitle: 'Microsoft company',
+      price: '82.23 USD',
+      percent: '1.2',
+      exchange: "NYSEGE",
+      globalScoring: 55,
+      localScoring: 35,
+      pe: "P/eE",
+      ps: "P/tSb",
+      continent: 'Австралия'
+    },
+
   ]
 
   const content = document.querySelector(".table-ticker")
+  const tableHeader = document.querySelector(".table-ticker__header")
+  const box = document.querySelector(".table-ticker__box")
   const btns = document.querySelectorAll(".table-ticker-header__item")
   const filterContinent = document.querySelector("#analyticScannerContinent")
   const filterScoring = document.querySelector("#analyticScannerScoring")
   const inputSearch = document.querySelector("#search-company")
+  const inputCounts = document.querySelectorAll('.analyticScanner__count input')
+  const resetBtnElement = document.querySelector("#reset-filter")
+  const sortedPriceBtn = document.querySelector("#sorted-price")
+  const sortedPercentBtn = document.querySelector("#sorted-percent")
+  const sortedExChangeBtn = document.querySelector("#sorted-exChange")
+  const sortedBmsGlobalBtn = document.querySelector("#sorted-bmsGlobal")
+  const sortedBmsLocalBtn = document.querySelector("#sorted-bmsLocal")
+  const sortedPEBtn = document.querySelector("#sorted-PE")
+  const sortedPSBtn = document.querySelector("#sorted-PS")
+  const sortedContinentBtn = document.querySelector("#sorted-continent")
+
+  inputCounts.forEach(inputCount => {
+    inputCount.addEventListener("input", (e) => {
+      let pattern = /[^\d.]/
+
+      e.target.value = e.target.value.replace(pattern, '')
+    })
+  })
+
+  btns.forEach(btn => {
+    function sortedList(dataName, element, event) {
+      const activesBtn = tableHeader.getElementsByClassName("active")
+      for (let i = 0; i < box.children.length; i++) {
+        for (let j = i; j < box.children.length; j++) {
+          if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
+            let currentActive = activesBtn[0]
+            if(currentActive) {
+              currentActive.classList.remove("active");
+            }
+
+            if (currentActive !== element) {
+              element.classList.add("active")
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
+            
+          }
+        }
+      }
+    }
+
+    function insertAfter(elem, refElem) {
+      return refElem.parentNode.insertBefore(elem, refElem.nextSibling)
+    }
+
+    sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
+    sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
+    sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
+    sortedBmsLocalBtn.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtn))
+    sortedPEBtn.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtn))
+    sortedPSBtn.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtn))
+    sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn))
+    sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn))
+  })
+
+  function resetBtn() {
+    inputSearch.value = ""
+  }
+
+  resetBtnElement.addEventListener("click", resetBtn)
 
   function listCompanies() {
     companies.forEach(company => {
@@ -41,7 +151,7 @@ function filterScanner() {
 
   function renderCompanies(company) {
     const htmlElement = `
-              <div class="table-ticker__content">
+              <div class="table-ticker__content" data-price=${company.price} data-title=${company.title} data-percent=${company.percent} data-exChange=${company.exchange} data-bmsGlobal=${company.globalScoring} data-bmsLocal=${company.localScoring} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent}>
                 <div class="table-ticker__block">
                   <div class="table-ticker-block__item">
                     <div class="table-ticker-block__img">
@@ -65,8 +175,8 @@ function filterScanner() {
                   ${company.price}
                 </div>
                 <div class="table-ticker__block percent onlyText">
-                  <span class="mobile-info">${company.percent}</span>
-                  ${company.percent}
+                  <span class="mobile-info">+${company.percent}%</span>
+                  +${company.percent}%
                 </div>
                 <div class="table-ticker__block onlyText">
                   <span class="mobile-info">${company.exchange}</span>
@@ -103,12 +213,20 @@ function filterScanner() {
                   </div>
                 </div>
                 <div class="table-ticker__block onlyText">
-                  <span class="mobile-info">${company.continent}</span>
-                  ${company.continent}
+                  <span class="mobile-info">${company.pe}</span>
+                  ${company.pe}
                 </div>
+                <div class="table-ticker__block onlyText">
+                  <span class="mobile-info">${company.ps}</span>
+                  ${company.ps}
+                  </div>
+                  <div class="table-ticker__block onlyText">
+                    <span class="mobile-info">${company.continent}</span>
+                    ${company.continent}
+                  </div>
               </div>
       `
-    content.insertAdjacentHTML("beforeend", htmlElement)
+    box.insertAdjacentHTML("beforeend", htmlElement)
   }
 
   listCompanies()

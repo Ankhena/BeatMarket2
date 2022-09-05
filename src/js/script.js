@@ -144,7 +144,7 @@ $(document).ready(function () {
             min: 0,
             max: 120,
             values: [1, 120],
-  
+
             slide: function (event, ui) {
               $(`#${elemMain} #min`).text(ui.values[0])
               $(`#${elemMain} #max`).text(ui.values[1])
@@ -222,6 +222,7 @@ function tabsScroll(table) {
 
 tabsScroll("statTable--scroll")
 tabsScroll("table-scroll")
+tabsScroll("table-ticker")
 
 document.querySelector(".main-menu-btn").addEventListener("click", () => {
   document.querySelector(".main-menu").classList.toggle("active")
