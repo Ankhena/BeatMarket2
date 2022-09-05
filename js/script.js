@@ -3318,6 +3318,14 @@ initPortfolioProfitGraph();
   const sortedPEBtn = document.querySelector("#sorted-PE")
   const sortedPSBtn = document.querySelector("#sorted-PS")
   const sortedContinentBtn = document.querySelector("#sorted-continent")
+  const sortedPriceBtnMobile = document.querySelector(".sorted-price")
+  const sortedPercentBtnMobile = document.querySelector(".sorted-percent")
+  const sortedExChangeBtnMobile = document.querySelector(".sorted-exChange")
+  const sortedBmsGlobalBtnMobile = document.querySelector(".sorted-bmsGlobal")
+  const sortedBmsLocalBtnMobile = document.querySelector(".sorted-bmsLocal")
+  const sortedPEBtnMobile = document.querySelector(".sorted-PE")
+  const sortedPSBtnMobile = document.querySelector(".sorted-PS")
+  const sortedContinentBtnMobile = document.querySelector(".sorted-continent")
 
   inputCounts.forEach(inputCount => {
     inputCount.addEventListener("input", (e) => {
@@ -3327,44 +3335,52 @@ initPortfolioProfitGraph();
     })
   })
 
-  btns.forEach(btn => {
-    function sortedList(dataName, element, event) {
-      const activesBtn = tableHeader.getElementsByClassName("active")
-      for (let i = 0; i < box.children.length; i++) {
-        for (let j = i; j < box.children.length; j++) {
-          if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
-            let currentActive = activesBtn[0]
-            if(currentActive) {
-              currentActive.classList.remove("active");
-            }
-
-            if (currentActive !== element) {
-              element.classList.add("active")
-              let replacedNode = box.replaceChild(box.children[j], box.children[i])
-              insertAfter(replacedNode, box.children[i])
-            }
-            
+  function sortedList(dataName, element, event) {
+    const activesBtn = tableHeader.getElementsByClassName("active")
+    for (let i = 0; i < box.children.length; i++) {
+      for (let j = i; j < box.children.length; j++) {
+        if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
+          let currentActive = activesBtn[0]
+          if (currentActive) {
+            currentActive.classList.remove("active");
           }
+
+          if (currentActive !== element || !currentActive.classList.contains('active')) {
+            element.classList.add("active")
+            let replacedNode = box.replaceChild(box.children[j], box.children[i])
+            insertAfter(replacedNode, box.children[i])
+          }
+
         }
       }
     }
+  }
 
-    function insertAfter(elem, refElem) {
-      return refElem.parentNode.insertBefore(elem, refElem.nextSibling)
-    }
+  function insertAfter(elem, refElem) {
+    return refElem.parentNode.insertBefore(elem, refElem.nextSibling)
+  }
 
-    sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
-    sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
-    sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
-    sortedBmsLocalBtn.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtn))
-    sortedPEBtn.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtn))
-    sortedPSBtn.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtn))
-    sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn))
-    sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn))
-  })
+  sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
+  sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
+  sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
+  sortedBmsLocalBtn.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtn))
+  sortedPEBtn.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtn))
+  sortedPSBtn.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtn))
+  sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn))
+  sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn))
+  sortedPriceBtnMobile.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtnMobile))
+  sortedPercentBtnMobile.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtnMobile))
+  sortedBmsGlobalBtnMobile.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtnMobile))
+  sortedBmsLocalBtnMobile.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtnMobile))
+  sortedPEBtnMobile.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtnMobile))
+  sortedPSBtnMobile.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtnMobile))
+  sortedContinentBtnMobile.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtnMobile))
+  sortedExChangeBtnMobile.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtnMobile))
 
   function resetBtn() {
     inputSearch.value = ""
+    removeCompanies()
+    listCompanies()
   }
 
   resetBtnElement.addEventListener("click", resetBtn)
@@ -3454,6 +3470,10 @@ initPortfolioProfitGraph();
               </div>
       `
     box.insertAdjacentHTML("beforeend", htmlElement)
+  }
+
+  function removeCompanies(company) {
+    box.innerHTML = ""
   }
 
   listCompanies()
