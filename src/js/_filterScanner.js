@@ -106,6 +106,13 @@ function filterScanner() {
 
       e.target.value = e.target.value.replace(pattern, '')
     })
+
+    inputCount.addEventListener("click",  (e) => {
+      e.target.focus()
+      let value = e.target.value
+      e.target.value = ""
+      e.target.value = value
+    })
   })
 
   function sortedList(dataName, element, event) {
