@@ -18271,7 +18271,7 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 @media (max-width: 425px) {
-  .analyticScanner .inputSelect__value {
+  .analyticScanner .inputSelect__value--overflow {
     width: 69px;
     margin-right: 5px;
     overflow-y: clip;
