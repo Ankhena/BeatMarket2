@@ -3276,7 +3276,7 @@ initPortfolioProfitGraph();
       subtitle: 'Microsoft company',
       price: '85.23 USD',
       percent: '1.2',
-      exchange: "NYSEGE",
+      exchange: "NYSE",
       globalScoring: 15,
       localScoring: 25,
       pe: "P/E",
@@ -3291,7 +3291,7 @@ initPortfolioProfitGraph();
       subtitle: 'Microsoft company',
       price: '82.23 USD',
       percent: '1.2',
-      exchange: "NYSEGE",
+      exchange: "NYSE",
       globalScoring: 55,
       localScoring: 35,
       pe: "P/E",
@@ -3341,38 +3341,38 @@ initPortfolioProfitGraph();
 
     for (let i = 0; i < box.children.length; i++) {
       for (let j = i; j < box.children.length; j++) {
-        if (!currentActive.classList.contains('active') || element.classList.contains("bottom")) {
-          if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
-            if (currentActive) {
-              currentActive.classList.remove("active");
-            }
+        if (!element.classList.contains('active') && !element.classList.contains("bottom")) {
+          if (currentActive) {
+            currentActive.classList.remove("active");
+            currentActive.classList.remove("bottom");
+          }
 
-            if (currentActive !== element || !currentActive.classList.contains('active')) {
-              element.classList.add("active")
-              element.classList.remove("bottom")
-              let replacedNode = box.replaceChild(box.children[j], box.children[i])
-              insertAfter(replacedNode, box.children[i])
-            }
+          if (currentActive !== element || !currentActive.classList.contains('active')) {
+            element.classList.add("active")
+            element.classList.remove("bottom")
+          }
+
+          if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
+            let replacedNode = box.replaceChild(box.children[j], box.children[i])
+            insertAfter(replacedNode, box.children[i])
 
           }
-        } else if (currentActive.classList.contains('active') || !element.classList.contains("bottom")) {
+        } else if (element.classList.contains('active') && !element.classList.contains("bottom")) {
+          element.classList.add("bottom")
+          if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
+            let replacedNode = box.replaceChild(box.children[j], box.children[i])
+            insertAfter(replacedNode, box.children[i])
+          }
+
+        } else if (element.classList.contains('active') && element.classList.contains("bottom")) {
+          element.classList.remove("bottom")
           if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
-            if (currentActive) {
-              currentActive.classList.remove("active");
-            }
-
-            if (currentActive !== element || !currentActive.classList.contains('active')) {
-              element.classList.add("active")
-              element.classList.add("bottom")
-              let replacedNode = box.replaceChild(box.children[j], box.children[i])
-              insertAfter(replacedNode, box.children[i])
-            }
-
           }
         }
       }
     }
   }
+
 
   function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling)

@@ -8023,6 +8023,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-right: 16px;
 }
 
+.analyticScanner .inputSelect__value {
+  margin-right: 10px;
+}
+
 .analyticScanner .inputSelect__container {
   white-space: nowrap;
 }
@@ -14481,6 +14485,16 @@ body.viewProfile .header-controls-links-link.auth span {
   stroke: #3E54D8;
 }
 
+.table-ticker-header__item.sort.bottom svg path:nth-child(3),
+.table-ticker-header__item.sort.bottom svg path:nth-child(4) {
+  stroke: #8C9BEA;
+}
+
+.table-ticker-header__item.sort.bottom svg path:nth-child(1),
+.table-ticker-header__item.sort.bottom svg path:nth-child(2) {
+  stroke: #3E54D8;
+}
+
 .table-ticker-block__item {
   display: flex;
   align-items: center;
@@ -18253,5 +18267,15 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .referrals__descr-item {
     align-items: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .analyticScanner .inputSelect__value {
+    width: 69px;
+    margin-right: 5px;
+    overflow-y: clip;
+    text-overflow: ellipsis;
+    display: inline-block;
   }
 }
