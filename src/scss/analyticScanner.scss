@@ -159,7 +159,22 @@
     }
   }
 
-  .inputSelect__container {
-    white-space: nowrap;
+  .inputSelect {
+
+    &__value {
+      margin-right: 10px;
+
+      @media(max-width: 425px) {
+        width: 69px;
+        margin-right: 5px;
+        overflow-y: clip;
+        text-overflow: ellipsis;
+        display: inline-block;
+      }
+    }
+
+    &__container {
+      white-space: nowrap;
+    }
   }
 }

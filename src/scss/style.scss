@@ -1505,7 +1505,7 @@ body.viewProfile {
 
 .table-ticker {
   margin-bottom: 32px;
-  
+
   @media(min-width: 1051px) {
     overflow-x: auto;
   }
@@ -1724,6 +1724,23 @@ body.viewProfile {
 
             &:nth-child(3),
             &:nth-child(4) {
+              stroke: #3E54D8;
+            }
+          }
+        }
+      }
+
+      &.bottom {
+
+        svg {
+          path {  
+            &:nth-child(3),
+            &:nth-child(4) {
+              stroke: #8C9BEA;
+            }
+    
+            &:nth-child(1),
+            &:nth-child(2) {
               stroke: #3E54D8;
             }
           }
