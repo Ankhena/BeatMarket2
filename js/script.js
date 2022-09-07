@@ -3302,11 +3302,8 @@ initPortfolioProfitGraph();
   ]
 
   const content = document.querySelector(".table-ticker")
-  const tableHeader = document.querySelector(".table-ticker__header")
   const box = document.querySelector(".table-ticker__box")
-  const btns = document.querySelectorAll(".table-ticker-header__item")
-  const filterContinent = document.querySelector("#analyticScannerContinent")
-  const filterScoring = document.querySelector("#analyticScannerScoring")
+  const fixedBox = document.querySelector(".table-ticker-fixed__box")
   const inputSearch = document.querySelector("#search-company")
   const inputCounts = document.querySelectorAll('.analyticScanner__count input')
   const resetBtnElement = document.querySelector("#reset-filter")
@@ -3336,6 +3333,7 @@ initPortfolioProfitGraph();
     })
   })
 
+
   function sortedList(dataName, element, numberElement = true, event) {
     const activesBtn = content.getElementsByClassName("active")
     let currentActive = activesBtn[0]
@@ -3354,41 +3352,53 @@ initPortfolioProfitGraph();
           }
 
           if (numberElement) {
-            if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`)) {
+            if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) > +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
               let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
               insertAfter(replacedNode, box.children[i])
+              insertAfter(replacedNodeFixed, fixedBox.children[i])
             }
           } else {
-            if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
+            if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`) || fixedBox.children[i].getAttribute(`data-${dataName}`) > fixedBox.children[j].getAttribute(`data-${dataName}`)) {
               let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
               insertAfter(replacedNode, box.children[i])
+              insertAfter(replacedNodeFixed, fixedBox.children[i])
             }
           }
         } else if (element.classList.contains('active') && !element.classList.contains("bottom")) {
           element.classList.add("bottom")
           if (numberElement) {
-            if (+box.children[i].getAttribute(`data-${dataName}`) < +box.children[j].getAttribute(`data-${dataName}`)) {
+            if (+box.children[i].getAttribute(`data-${dataName}`) < +box.children[j].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) < +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
               let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
               insertAfter(replacedNode, box.children[i])
+              insertAfter(replacedNodeFixed, fixedBox.children[i])
             }
           } else {
-            if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
+            if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`) || fixedBox.children[i].getAttribute(`data-${dataName}`) < fixedBox.children[j].getAttribute(`data-${dataName}`)) {
               let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
               insertAfter(replacedNode, box.children[i])
+              insertAfter(replacedNodeFixed, fixedBox.children[i])
             }
           }
 
         } else if (element.classList.contains('active') && element.classList.contains("bottom")) {
           element.classList.remove("bottom")
           if (numberElement) {
-            if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`)) {
+            if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) > +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
               let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
               insertAfter(replacedNode, box.children[i])
+              insertAfter(replacedNodeFixed, fixedBox.children[i])
             }
           } else {
-            if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
+            if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`) || fixedBox.children[i].getAttribute(`data-${dataName}`) > fixedBox.children[j].getAttribute(`data-${dataName}`)) {
               let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
               insertAfter(replacedNode, box.children[i])
+              insertAfter(replacedNodeFixed, fixedBox.children[i])
             }
           }
         }
@@ -3450,8 +3460,6 @@ initPortfolioProfitGraph();
                 </div>
       </div>
     `
-
-    const fixedBox = document.querySelector(".table-ticker-fixed__box")
 
     const htmlElement = `
               <div class="table-ticker__content" data-price=${company.price} data-title=${company.title} data-percent=${company.percent} data-exChange=${company.exchange} data-bmsGlobal=${company.globalScoring} data-bmsLocal=${company.localScoring} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent}>
