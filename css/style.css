@@ -14327,9 +14327,15 @@ body.viewProfile .header-controls-links-link.auth span {
   border: 3px solid #8C9BEA;
 }
 
+.table-overflow {
+  margin-left: -32px;
+  margin-right: -32px;
+}
+
 .table-ticker {
   margin-bottom: 32px;
   overflow-x: auto;
+  position: relative;
 }
 
 .table-ticker::-webkit-scrollbar-track {
@@ -14356,8 +14362,16 @@ body.viewProfile .header-controls-links-link.auth span {
   grid-template-columns: 229px repeat(8, 154px);
   background-color: #F5F6FD;
   border: 1px solid #E6EEFF;
-  margin: 0 -32px 23px;
+  margin: 0 0 23px;
   padding: 0 32px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.table-ticker__box {
+  position: relative;
 }
 
 .table-ticker__content {
@@ -14365,10 +14379,11 @@ body.viewProfile .header-controls-links-link.auth span {
   align-items: center;
   grid-template-columns: 229px repeat(8, 154px);
   border-bottom: 1px solid #E6EEFF;
-  margin-left: -32px;
-  margin-right: -32px;
   padding: 0 32px 22px;
   cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .table-ticker__content + .table-ticker__content {
@@ -14379,6 +14394,9 @@ body.viewProfile .header-controls-links-link.auth span {
   font-weight: 500;
   color: #373943;
   padding: 0 16px;
+}
+
+.table-ticker__block.whnr {
   white-space: nowrap;
 }
 
@@ -14388,6 +14406,7 @@ body.viewProfile .header-controls-links-link.auth span {
 
 .table-ticker__block.onlyText {
   text-align: center;
+  font-size: 16px;
 }
 
 .table-ticker .inputGroup .inputSelect__container {
@@ -14442,6 +14461,7 @@ body.viewProfile .header-controls-links-link.auth span {
   border-bottom: none;
   outline: none;
   font-weight: 500;
+  font-size: 16px;
   color: #24252E;
 }
 
@@ -14461,12 +14481,22 @@ body.viewProfile .header-controls-links-link.auth span {
   cursor: pointer;
 }
 
+.table-ticker-header__item.sort:first-child {
+  justify-content: flex-start;
+  margin-left: -32px;
+  padding-left: 41px;
+}
+
 .table-ticker-header__item.sort span {
   margin-right: 4px;
 }
 
 .table-ticker-header__item.sort.active {
   background-color: #E6EEFF;
+}
+
+.table-ticker-header__item.sort.active:first-child {
+  background-color: #fff;
 }
 
 .table-ticker-header__item.sort.active svg path {
@@ -14508,10 +14538,13 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 .table-ticker-block__subtitle {
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   color: #929398;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .table-ticker-block-info__content {
@@ -18006,10 +18039,6 @@ body.viewProfile .header-controls-links-link.auth span {
     display: block;
   }
 
-  .table-ticker__block.onlyText {
-    text-align: left;
-  }
-
   .table-ticket__scoring {
     margin: 0;
   }
@@ -18019,6 +18048,51 @@ body.viewProfile .header-controls-links-link.auth span {
   .prompt.prompt--blockSetting > div {
     margin-top: 4.5rem;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-ticker::before {
+    content: "";
+    background-color: #FFFFFF;
+    box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
+    border-radius: 0px 8px 8px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 171px;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .table-ticker__header {
+    grid-template-columns: 139px repeat(8, 137px);
+  }
+
+  .table-ticker__content {
+    grid-template-columns: 139px repeat(8, 137px);
+  }
+
+  .table-ticker__block:first-child {
+    margin-left: -30px;
+  }
+
+  .table-ticker__block.onlyText {
+    font-size: 14px;
+  }
+
+  .table-ticker-header__item:first-child {
+    background-color: #fff;
+    margin-left: -32px;
+  }
+
+  .table-ticker-header__item {
+    font-size: 14px;
+  }
+
+  .table-ticker-block__img {
+    margin-right: 8px;
   }
 }
 
@@ -18189,6 +18263,24 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .strategyCards-card-header {
     flex-wrap: wrap;
+  }
+
+  .table-ticker-block__img {
+    height: 32px;
+  }
+
+  .table-ticker-block__img img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .table-ticker-block__subtitle {
+    width: 90px;
+    font-size: 12px;
+  }
+
+  .table-ticker-block-info__title {
+    font-size: 14px;
   }
 }
 
