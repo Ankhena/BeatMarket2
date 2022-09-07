@@ -83,6 +83,7 @@ function filterScanner() {
   const inputSearch = document.querySelector("#search-company")
   const inputCounts = document.querySelectorAll('.analyticScanner__count input')
   const resetBtnElement = document.querySelector("#reset-filter")
+  const sortedTitleBtn = document.querySelector("#sorted-title")
   const sortedPriceBtn = document.querySelector("#sorted-price")
   const sortedPercentBtn = document.querySelector("#sorted-percent")
   const sortedExChangeBtn = document.querySelector("#sorted-exChange")
@@ -172,6 +173,7 @@ function filterScanner() {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling)
   }
 
+  sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
   sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
   sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
   sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
@@ -217,10 +219,10 @@ function filterScanner() {
                     </div>
                   </div>
                 </div>
-                <div class="table-ticker__block onlyText">
+                <div class="table-ticker__block onlyText whnr">
                   ${company.price} USD
                 </div>
-                <div class="table-ticker__block percent onlyText">
+                <div class="table-ticker__block percent onlyText whnr">
                   +${company.percent}%
                 </div>
                 <div class="table-ticker__block onlyText">
