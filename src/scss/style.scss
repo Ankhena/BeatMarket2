@@ -1725,6 +1725,10 @@ body.viewProfile {
         justify-content: flex-start;
         margin-left: -32px;
         padding-left: 41px;
+
+        @media(max-width: 768px) {
+          padding-left: 16px;
+        }
       }
 
       span {
@@ -1790,9 +1794,6 @@ body.viewProfile {
 
     @media(max-width: 768px) {
       margin-right: 8px;
-    }
-
-    @media($media_xs) {
       height: 32px;
     }
 
@@ -1800,7 +1801,7 @@ body.viewProfile {
       width: 40px;
       height: 40px;
 
-      @media($media_xs) {
+      @media(max-width: 768px) {
         height: 32px;
         width: 32px;
       }
@@ -1832,7 +1833,7 @@ body.viewProfile {
     overflow: hidden;
     text-overflow: ellipsis;
 
-    @media($media_xs) {
+    @media(max-width: 768px) {
       width: 90px;
       font-size: 12px;
     }
@@ -1855,7 +1856,7 @@ body.viewProfile {
     color: #3E54D8;
     margin-right: 4px;
 
-    @media($media_xs) {
+    @media(max-width: 768px) {
       font-size: 14px;
     }
   }
