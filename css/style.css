@@ -18091,8 +18091,27 @@ body.viewProfile .header-controls-links-link.auth span {
     font-size: 14px;
   }
 
+  .table-ticker-header__item.sort:first-child {
+    padding-left: 16px;
+  }
+
   .table-ticker-block__img {
     margin-right: 8px;
+    height: 32px;
+  }
+
+  .table-ticker-block__img img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .table-ticker-block__subtitle {
+    width: 90px;
+    font-size: 12px;
+  }
+
+  .table-ticker-block-info__title {
+    font-size: 14px;
   }
 }
 
@@ -18263,24 +18282,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .strategyCards-card-header {
     flex-wrap: wrap;
-  }
-
-  .table-ticker-block__img {
-    height: 32px;
-  }
-
-  .table-ticker-block__img img {
-    height: 32px;
-    width: 32px;
-  }
-
-  .table-ticker-block__subtitle {
-    width: 90px;
-    font-size: 12px;
-  }
-
-  .table-ticker-block-info__title {
-    font-size: 14px;
   }
 }
 
