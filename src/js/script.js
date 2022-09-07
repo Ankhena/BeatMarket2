@@ -223,7 +223,7 @@ function tabsScroll(table) {
 tabsScroll("statTable--scroll")
 tabsScroll("table-scroll")
 tabsScroll("table-scroll")
-tabsScroll("table-ticker")
+tabsScroll("table-ticker__scroll")
 
 document.querySelector(".main-menu-btn").addEventListener("click", () => {
   document.querySelector(".main-menu").classList.toggle("active")

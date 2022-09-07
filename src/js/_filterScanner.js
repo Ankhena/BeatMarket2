@@ -84,6 +84,7 @@ function filterScanner() {
   const inputCounts = document.querySelectorAll('.analyticScanner__count input')
   const resetBtnElement = document.querySelector("#reset-filter")
   const sortedTitleBtn = document.querySelector("#sorted-title")
+  const sortedTitleBtnMobile = document.querySelector("#sorted-title-mobile")
   const sortedPriceBtn = document.querySelector("#sorted-price")
   const sortedPercentBtn = document.querySelector("#sorted-percent")
   const sortedExChangeBtn = document.querySelector("#sorted-exChange")
@@ -109,7 +110,7 @@ function filterScanner() {
   })
 
   function sortedList(dataName, element, numberElement = true, event) {
-    const activesBtn = tableHeader.getElementsByClassName("active")
+    const activesBtn = content.getElementsByClassName("active")
     let currentActive = activesBtn[0]
 
     for (let i = 0; i < box.children.length; i++) {
@@ -174,6 +175,7 @@ function filterScanner() {
   }
 
   sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
+  sortedTitleBtnMobile.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtnMobile, false))
   sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
   sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
   sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
@@ -199,9 +201,34 @@ function filterScanner() {
 
 
   function renderCompanies(company) {
+    const fixedHtmlElement = `
+      <div class="table-ticker-fixed__block" data-title=${company.title}>
+                          <div class="table-ticker__block">
+                  <div class="table-ticker-block__item">
+                    <div class="table-ticker-block__img">
+                      <img src="./img/statTable__icons/${company.img}" alt="${company.imgAlt}">
+                    </div>
+                    <div class="table-ticker-block__content table-ticker-block__info">
+                      <div class="table-ticker-block-info__content">
+                        <h3 class="table-ticker-block-info__title">${company.title}</h3>
+                        <div class="table-ticker-block__paperDontTrade">
+                          <svg class="table-ticker-block-paperDontTrade__icon">
+                            <use xlink:href="img/main.svg#icon-trendUp"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <span class="table-ticker-block__subtitle">${company.subtitle}</span>
+                    </div>
+                  </div>
+                </div>
+      </div>
+    `
+
+    const fixedBox = document.querySelector(".table-ticker-fixed__box")
+
     const htmlElement = `
               <div class="table-ticker__content" data-price=${company.price} data-title=${company.title} data-percent=${company.percent} data-exChange=${company.exchange} data-bmsGlobal=${company.globalScoring} data-bmsLocal=${company.localScoring} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent}>
-                <div class="table-ticker__block">
+                <div class="table-ticker__block table-ticker__block--moving">
                   <div class="table-ticker-block__item">
                     <div class="table-ticker-block__img">
                       <img src="./img/statTable__icons/${company.img}" alt="${company.imgAlt}">
@@ -267,6 +294,7 @@ function filterScanner() {
                   </div>
               </div>
       `
+    fixedBox.insertAdjacentHTML("beforeend", fixedHtmlElement)
     box.insertAdjacentHTML("beforeend", htmlElement)
   }
 
