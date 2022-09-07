@@ -5,13 +5,13 @@ function filterScanner() {
       imgAlt: 'Иконка PCG',
       title: 'PCG',
       subtitle: 'Microsoft',
-      price: '126.23 USD',
+      price: '126.23',
       percent: '1.13',
       exchange: "NYSE",
       globalScoring: 93,
       localScoring: 62,
-      pe: "P/E",
-      ps: "P/S",
+      pe: "3.5",
+      ps: "1.2",
       continent: 'Азия'
     },
     {
@@ -19,13 +19,13 @@ function filterScanner() {
       imgAlt: 'Иконка VIAC',
       title: 'VIAC',
       subtitle: 'Microsoft company',
-      price: '883.23 USD',
+      price: '100.23',
       percent: '8.2',
       exchange: "NYSE",
       globalScoring: 95,
       localScoring: 45,
-      pe: "P/E",
-      ps: "P/S",
+      pe: "1.23",
+      ps: "1.67",
       continent: 'Европа'
     },
     {
@@ -33,13 +33,13 @@ function filterScanner() {
       imgAlt: 'Иконка PCG',
       title: 'PCG',
       subtitle: 'Microsoft',
-      price: '123.23 USD',
+      price: '123.23',
       percent: '1.23',
       exchange: "NYSE",
       globalScoring: 75,
       localScoring: 65,
-      pe: "P/E",
-      ps: "P/S",
+      pe: "2.98",
+      ps: "1.78",
       continent: 'Северная Америка'
     },
     {
@@ -47,13 +47,13 @@ function filterScanner() {
       imgAlt: 'Иконка VIAC',
       title: 'VIAC',
       subtitle: 'Microsoft company',
-      price: '85.23 USD',
+      price: '85.23',
       percent: '1.2',
       exchange: "NYSE",
       globalScoring: 15,
       localScoring: 25,
-      pe: "P/E",
-      ps: "P/S",
+      pe: "2.35",
+      ps: "2.85",
       continent: 'Южная Америка'
     },
 
@@ -62,13 +62,13 @@ function filterScanner() {
       imgAlt: 'Иконка VIAC',
       title: 'VIAC',
       subtitle: 'Microsoft company',
-      price: '82.23 USD',
-      percent: '1.2',
+      price: '82.23',
+      percent: '1.28',
       exchange: "NYSE",
       globalScoring: 55,
       localScoring: 35,
-      pe: "P/E",
-      ps: "P/S",
+      pe: "2.75",
+      ps: "2.15",
       continent: 'Австралия'
     },
 
@@ -91,14 +91,6 @@ function filterScanner() {
   const sortedPEBtn = document.querySelector("#sorted-PE")
   const sortedPSBtn = document.querySelector("#sorted-PS")
   const sortedContinentBtn = document.querySelector("#sorted-continent")
-  const sortedPriceBtnMobile = document.querySelector(".sorted-price")
-  const sortedPercentBtnMobile = document.querySelector(".sorted-percent")
-  const sortedExChangeBtnMobile = document.querySelector(".sorted-exChange")
-  const sortedBmsGlobalBtnMobile = document.querySelector(".sorted-bmsGlobal")
-  const sortedBmsLocalBtnMobile = document.querySelector(".sorted-bmsLocal")
-  const sortedPEBtnMobile = document.querySelector(".sorted-PE")
-  const sortedPSBtnMobile = document.querySelector(".sorted-PS")
-  const sortedContinentBtnMobile = document.querySelector(".sorted-continent")
 
   inputCounts.forEach(inputCount => {
     inputCount.addEventListener("input", (e) => {
@@ -107,7 +99,7 @@ function filterScanner() {
       e.target.value = e.target.value.replace(pattern, '')
     })
 
-    inputCount.addEventListener("click",  (e) => {
+    inputCount.addEventListener("click", (e) => {
       e.target.focus()
       let value = e.target.value
       e.target.value = ""
@@ -115,7 +107,7 @@ function filterScanner() {
     })
   })
 
-  function sortedList(dataName, element, event) {
+  function sortedList(dataName, element, numberElement = true, event) {
     const activesBtn = tableHeader.getElementsByClassName("active")
     let currentActive = activesBtn[0]
 
@@ -132,21 +124,43 @@ function filterScanner() {
             element.classList.remove("bottom")
           }
 
-          if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
-            let replacedNode = box.replaceChild(box.children[j], box.children[i])
-            insertAfter(replacedNode, box.children[i])
-
+          if (numberElement) {
+            if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`)) {
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
+          } else {
+            if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
           }
         } else if (element.classList.contains('active') && !element.classList.contains("bottom")) {
           element.classList.add("bottom")
-          if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
-            let replacedNode = box.replaceChild(box.children[j], box.children[i])
-            insertAfter(replacedNode, box.children[i])
+          if (numberElement) {
+            if (+box.children[i].getAttribute(`data-${dataName}`) < +box.children[j].getAttribute(`data-${dataName}`)) {
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
+          } else {
+            if (box.children[i].getAttribute(`data-${dataName}`) < box.children[j].getAttribute(`data-${dataName}`)) {
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
           }
 
         } else if (element.classList.contains('active') && element.classList.contains("bottom")) {
           element.classList.remove("bottom")
-          if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
+          if (numberElement) {
+            if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`)) {
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
+          } else {
+            if (box.children[i].getAttribute(`data-${dataName}`) > box.children[j].getAttribute(`data-${dataName}`)) {
+              let replacedNode = box.replaceChild(box.children[j], box.children[i])
+              insertAfter(replacedNode, box.children[i])
+            }
           }
         }
       }
@@ -164,16 +178,8 @@ function filterScanner() {
   sortedBmsLocalBtn.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtn))
   sortedPEBtn.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtn))
   sortedPSBtn.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtn))
-  sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn))
-  sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn))
-  sortedPriceBtnMobile.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtnMobile))
-  sortedPercentBtnMobile.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtnMobile))
-  sortedBmsGlobalBtnMobile.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtnMobile))
-  sortedBmsLocalBtnMobile.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtnMobile))
-  sortedPEBtnMobile.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtnMobile))
-  sortedPSBtnMobile.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtnMobile))
-  sortedContinentBtnMobile.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtnMobile))
-  sortedExChangeBtnMobile.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtnMobile))
+  sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn, false))
+  sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn, false))
 
   function resetBtn() {
     inputSearch.value = ""
@@ -212,19 +218,15 @@ function filterScanner() {
                   </div>
                 </div>
                 <div class="table-ticker__block onlyText">
-                  <span class="mobile-info">${company.price}</span>
-                  ${company.price}
+                  ${company.price} USD
                 </div>
                 <div class="table-ticker__block percent onlyText">
-                  <span class="mobile-info">+${company.percent}%</span>
                   +${company.percent}%
                 </div>
                 <div class="table-ticker__block onlyText">
-                  <span class="mobile-info">${company.exchange}</span>
                   ${company.exchange}
                 </div>
                 <div class="table-ticker__block">
-                  <span class="mobile-info">BMS global</span>
                   <div class="table-ticket__scoring">
                     <div class="table-ticket-scoring__value table-ticket-scoring__value--negative">21</div>
                     <div class="table-ticket-scoring__diagram" style="--persent: ${company.globalScoring}px; --diagram-color: #de4355;">
@@ -239,7 +241,6 @@ function filterScanner() {
                   </div>
                 </div>
                 <div class="table-ticker__block">
-                  <span class="mobile-info">BMS local</span>
                   <div class="table-ticket__scoring">
                     <div class="table-ticket-scoring__value table-ticket-scoring__value--negative">21</div>
                     <div class="table-ticket-scoring__diagram" style="--persent: ${company.localScoring}px; --diagram-color: #de4355;">
@@ -254,15 +255,12 @@ function filterScanner() {
                   </div>
                 </div>
                 <div class="table-ticker__block onlyText">
-                  <span class="mobile-info">${company.pe}</span>
                   ${company.pe}
                 </div>
                 <div class="table-ticker__block onlyText">
-                  <span class="mobile-info">${company.ps}</span>
                   ${company.ps}
                   </div>
                   <div class="table-ticker__block onlyText">
-                    <span class="mobile-info">${company.continent}</span>
                     ${company.continent}
                   </div>
               </div>
