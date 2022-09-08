@@ -18305,6 +18305,16 @@ body.viewProfile .header-controls-links-link.auth span {
     max-width: none;
   }
 
+  .analyticScanner__input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .analyticScanner__counts {
+    max-width: 100%;
+    margin-top: 25px;
+  }
+
   .analyticScanner__count {
     font-size: 16px;
     padding: 15px 26px;
