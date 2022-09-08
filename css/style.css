@@ -13417,9 +13417,8 @@ td {
 .section-main .main-menu.active .nav ul li a span,
 .section-main .main-menu:hover .nav ul li a span {
   opacity: 1;
-  width: 100%;
+  font-size: inherit;
   pointer-events: all;
-  transition: opacity 0.3s, width 0.3s;
 }
 
 .section-main .main-menu.active .main-menu-btn,
@@ -13473,10 +13472,10 @@ td {
 
 .section-main .main-menu .nav ul li a span {
   opacity: 0;
-  width: 0;
+  font-size: 0;
   pointer-events: none;
   white-space: nowrap;
-  transition: opacity 0.3s, width 0.3s;
+  transition: all 0.3s;
 }
 
 .section-main .main-menu .nav ul li:not(:last-child) {
@@ -14969,14 +14968,13 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 @media (min-width: 1290px) {
-  .section-main .main-menu.active,
-  .section-main .main-menu:hover {
-    padding: 3rem 0 3rem 7rem;
-  }
-
   .section-main .main-menu.active .nav,
   .section-main .main-menu:hover .nav {
-    padding-right: 2rem;
+    margin-right: 7px;
+  }
+
+  .section-main .main-menu .nav {
+    margin-left: 5rem;
   }
 }
 
@@ -17988,7 +17986,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .section-main .main-menu-btn {
-    display: none;
+    display: none !important;
   }
 
   .myStrategy__btnContainer {
@@ -18431,6 +18429,13 @@ body.viewProfile .header-controls-links-link.auth span {
     overflow-y: clip;
     text-overflow: ellipsis;
     display: inline-block;
+  }
+}
+
+@media (y) {
+  .section-main .main-menu.active .nav,
+  .section-main .main-menu:hover .nav {
+    padding-right: 2rem;
   }
 }
 
