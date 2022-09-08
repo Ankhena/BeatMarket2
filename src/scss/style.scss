@@ -96,20 +96,19 @@
       &.active,
       &:hover {
 
-        @media(min-width: 1290px) {
-          padding: 3rem 0 3rem 7rem;
-        }
-
         .nav ul li a span {
           opacity: 1;
-          width: 100%;
+          font-size: inherit;
           pointer-events: all;
-          transition: opacity .3s, width .3s;
         }
 
         .nav {
-          @media(min-width: 1290px) {
+          @media(y) {
             padding-right: 2rem;
+          }
+
+          @media(min-width: 1290px) {
+            margin-right: 7px;
           }
         }
 
@@ -144,6 +143,10 @@
         height: 93vh;
         padding-bottom: 20px;
         padding-right: 1rem;
+      
+        @media(min-width: 1290px) {
+          margin-left: 5rem;
+        }
 
         @media ($media_sm) {
           padding-right: 0;
@@ -199,10 +202,10 @@
 
               span {
                 opacity: 0;
-                width: 0;
+                font-size: 0;
                 pointer-events: none;
                 white-space: nowrap;
-                transition: opacity .3s, width .3s;
+                transition: all .3s;
               }
             }
 
@@ -248,7 +251,7 @@
         }
 
         @media ($media_sm) {
-          display: none;
+          display: none !important;
         }
 
         &:focus,

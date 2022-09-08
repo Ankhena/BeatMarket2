@@ -168,12 +168,28 @@ $(document).ready(function () {
             let pattern = /[^\d.]/
 
             e.target.value = e.target.value.replace(pattern, '')
-          })
 
+          })
+          
+          $(`#${elemMain} #min`).on("click", (e) => {
+            e.target.focus()
+            let value = e.target.value
+            e.target.value = ""
+            e.target.value = value
+          })
+          
+          $(`#${elemMain} #max`).on("click", (e) => {
+            e.target.focus()
+            let value = e.target.value
+            e.target.value = ""
+            e.target.value = value
+          })
+          
           $(`#${elemMain} #max`).on("input", (e) => {
             let pattern = /[^\d.]/
 
             e.target.value = e.target.value.replace(pattern, '')
+
           })
 
           $(`#${elemMain} #min`).change(function () {
