@@ -43,6 +43,11 @@
     @media($media_sm) {
       justify-content: center;
     }
+    
+    @media($media_xs) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
 
@@ -88,6 +93,11 @@
     width: 100%;
     justify-content: center;
     white-space: nowrap;
+
+    @media($media_xs) {
+      max-width: 100%;
+      margin-top: 25px;
+    }
   }
 
   &__count {
