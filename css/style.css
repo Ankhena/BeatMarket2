@@ -8031,6 +8031,35 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   white-space: nowrap;
 }
 
+.range-number__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range-number__block span,
+.range-number__block input {
+  margin-left: 12px;
+}
+
+.range-number__block input {
+  color: #3E54D8;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  display: inline-block;
+  width: 56px;
+}
+
+.range-number__block input:focus,
+.range-number__block input:active,
+.range-number__block input:hover {
+  outline: none;
+  border: none;
+  border-radius: none;
+}
+
 .support__write {
   margin-bottom: 1.4rem;
   background-color: #fff;
