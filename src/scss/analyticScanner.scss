@@ -43,7 +43,7 @@
     @media($media_sm) {
       justify-content: center;
     }
-    
+
     @media($media_xs) {
       flex-direction: column;
       align-items: stretch;
@@ -188,6 +188,35 @@
 
     &__container {
       white-space: nowrap;
+    }
+  }
+}
+
+.range-number__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span,
+  input {
+    margin-left: 12px;
+  }
+
+  input {
+    color: #3E54D8;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    display: inline-block;
+    width: 56px;
+
+    &:focus,
+    &:active,
+    &:hover {
+      outline: none;
+      border: none;
+      border-radius: none;
     }
   }
 }

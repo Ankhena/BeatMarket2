@@ -139,17 +139,57 @@ $(document).ready(function () {
       if ($(".customRange__info")) {
         const elemMain = mainElem.getAttribute("id");
         $(`#${elemMain} .customRange__slider`).each((_, elem) => {
+          const dataMin = document.querySelector('[data-min]');
+          const dataMax = document.querySelector('[data-max]');
+
           $(elem).slider({
             range: true,
             min: 0,
             max: 120,
-            values: [1, 120],
+            values: [0, 120],
 
             slide: function (event, ui) {
-              $(`#${elemMain} #min`).text(ui.values[0])
-              $(`#${elemMain} #max`).text(ui.values[1])
+              $(`#${elemMain} #min`).val(ui.values[0])
+              $(`#${elemMain} #max`).val(ui.values[1])
+              dataMin.setAttribute("data-min", ui.values[0])
+              dataMax.setAttribute("data-max", ui.values[1])
+            },
+
+            change: function (event, ui) {
+              console.log(ui.values);
+              $(`#${elemMain} #min`).val(ui.values[0])
+              $(`#${elemMain} #max`).val(ui.values[1])
+              dataMin.setAttribute("data-min", ui.values[0])
+              dataMax.setAttribute("data-max", ui.values[1])
             }
           });
+
+          $(`#${elemMain} #min`).on("input", (e) => {
+            let pattern = /[^\d.]/
+
+            e.target.value = e.target.value.replace(pattern, '')
+          })
+
+          $(`#${elemMain} #max`).on("input", (e) => {
+            let pattern = /[^\d.]/
+
+            e.target.value = e.target.value.replace(pattern, '')
+          })
+
+          $(`#${elemMain} #min`).change(function () {
+            let val = $(this).val()
+
+            dataMin.dataset.min = val
+            $(elem).slider("values", [val, dataMax.dataset.max])
+          })
+
+          $(`#${elemMain} #max`).change(function () {
+            let val = $(this).val()
+
+            dataMax.dataset.max = val
+            $(elem).slider("values", [dataMin.dataset.min, val])
+          })
+
         });
       } else {
         $(`.customRange__slider`).each((_, elem) => {
