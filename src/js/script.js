@@ -156,7 +156,6 @@ $(document).ready(function () {
             },
 
             change: function (event, ui) {
-              console.log(ui.values);
               $(`#${elemMain} #min`).val(ui.values[0])
               $(`#${elemMain} #max`).val(ui.values[1])
               dataMin.setAttribute("data-min", ui.values[0])

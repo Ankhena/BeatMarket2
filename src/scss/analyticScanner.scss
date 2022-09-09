@@ -7,7 +7,7 @@
       margin-bottom: 0;
     }
 
-    @media($media_sm) {
+    @media($media_lg) {
       flex-direction: column;
     }
   }
@@ -25,7 +25,7 @@
       &:not(:first-child) {
         margin-left: 20px;
 
-        @media($media_sm) {
+        @media($media_lg) {
           margin-left: 0;
           margin-top: 16px;
         }
@@ -111,7 +111,8 @@
       padding: 15px 26px;
     }
 
-    span {
+    span,
+    label {
       color: #929398;
     }
 
@@ -173,17 +174,9 @@
   .inputSelect {
 
     &__value {
+      display: inline-block;
+      width: 60px;
       margin-right: 10px;
-
-      &--overflow {
-        @media(max-width: 425px) {
-          width: 69px;
-          margin-right: 16px;
-          overflow-y: clip;
-          text-overflow: ellipsis;
-          display: inline-block;
-        }
-      }
     }
 
     &__container {
@@ -199,7 +192,7 @@
 
   span,
   input {
-    margin-left: 12px;
+    margin-left: 5px;
   }
 
   input {
@@ -210,6 +203,8 @@
     padding: 0;
     display: inline-block;
     width: 56px;
+    font-weight: inherit;
+    font-size: 16px;
 
     &:focus,
     &:active,
