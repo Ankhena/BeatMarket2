@@ -3334,6 +3334,7 @@ initPortfolioProfitGraph();
     const content = document.querySelector(".table-ticker")
     const box = document.querySelector(".table-ticker__box")
     const fixedBox = document.querySelector(".table-ticker-fixed__box")
+    const btnsSorted = content.querySelectorAll(".sort")
     const inputSearch = document.querySelector("#search-company")
     const inputCounts = document.querySelectorAll('.analyticScanner__count input')
     const resetBtnElement = document.querySelector("#reset-filter")
@@ -3362,8 +3363,7 @@ initPortfolioProfitGraph();
         e.target.value = ""
         e.target.value = value
       })
-    })
-  
+    })  
   
     function sortedList(dataName, element, numberElement = true, event) {
       const activesBtn = content.getElementsByClassName("active")
@@ -3383,7 +3383,7 @@ initPortfolioProfitGraph();
             }
   
             if (numberElement) {
-              if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[i].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) > +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
+              if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) > +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
                 let replacedNode = box.replaceChild(box.children[j], box.children[i])
                 let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
                 insertAfter(replacedNode, box.children[i])
@@ -3442,20 +3442,24 @@ initPortfolioProfitGraph();
       return refElem.parentNode.insertBefore(elem, refElem.nextSibling)
     }
   
-    sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
-    sortedTitleBtnMobile.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtnMobile, false))
+    //sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
+    //sortedTitleBtnMobile.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtnMobile, false))
     sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
-    sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
-    sortedIncomeBtn.addEventListener("click", sortedList.bind(null, "income", sortedIncomeBtn))
-    sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
-    sortedBmsLocalBtn.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtn))
-    sortedPEBtn.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtn))
-    sortedPSBtn.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtn))
-    sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn, false))
-    sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn, false))
+    //sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
+    //sortedIncomeBtn.addEventListener("click", sortedList.bind(null, "income", sortedIncomeBtn))
+    //sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
+    //sortedBmsLocalBtn.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtn))
+    //sortedPEBtn.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtn))
+    //sortedPSBtn.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtn))
+    //sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn, false))
+    //sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn, false))
   
     function resetBtn() {
       inputSearch.value = ""
+      btnsSorted.forEach(btn => {
+        btn.classList.remove("active")
+        btn.classList.remove("bottom")
+      })
       removeCompanies()
       listCompanies()
     }
@@ -3494,7 +3498,7 @@ initPortfolioProfitGraph();
       `
   
       const htmlElement = `
-                <div class="table-ticker__content" data-price=${company.price} data-title=${company.title} data-income=${company.income} data-percent=${company.percent} data-exChange=${company.exchange} data-bmsGlobal=${company.globalScoring} data-bmsLocal=${company.localScoring} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent}>
+                <div class="table-ticker__content" data-price=${company.price}>
                   <div class="table-ticker__block table-ticker__block--moving">
                     <div class="table-ticker-block__item">
                       <div class="table-ticker-block__img">
