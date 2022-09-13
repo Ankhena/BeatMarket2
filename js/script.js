@@ -3312,7 +3312,7 @@ initPortfolioProfitGraph();
         ps: 2.85,
         continent: 'Южная Америка'
       },
-  
+
       {
         img: "viac.svg",
         imgAlt: 'Иконка VIAC',
@@ -3328,9 +3328,9 @@ initPortfolioProfitGraph();
         ps: 2.15,
         continent: 'Австралия'
       },
-  
+
     ]
-  
+
     const content = document.querySelector(".table-ticker")
     const box = document.querySelector(".table-ticker__box")
     const fixedBox = document.querySelector(".table-ticker-fixed__box")
@@ -3349,26 +3349,26 @@ initPortfolioProfitGraph();
     const sortedPSBtn = document.querySelector("#sorted-PS")
     const sortedContinentBtn = document.querySelector("#sorted-continent")
     const sortedIncomeBtn = document.querySelector("#sorted-income")
-  
+
     inputCounts.forEach(inputCount => {
       inputCount.addEventListener("input", (e) => {
         let pattern = /[^\d.]/
-  
+
         e.target.value = e.target.value.replace(pattern, '')
       })
-  
+
       inputCount.addEventListener("click", (e) => {
         e.target.focus()
         let value = e.target.value
         e.target.value = ""
         e.target.value = value
       })
-    })  
-  
+    })
+
     function sortedList(dataName, element, numberElement = true, event) {
       const activesBtn = content.getElementsByClassName("active")
       let currentActive = activesBtn[0]
-  
+
       for (let i = 0; i < box.children.length; i++) {
         for (let j = i; j < box.children.length; j++) {
           if (!element.classList.contains('active') && !element.classList.contains("bottom")) {
@@ -3376,12 +3376,12 @@ initPortfolioProfitGraph();
               currentActive.classList.remove("active");
               currentActive.classList.remove("bottom");
             }
-  
+
             if (currentActive !== element || !currentActive.classList.contains('active')) {
               element.classList.add("active")
               element.classList.remove("bottom")
             }
-  
+
             if (numberElement) {
               if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) > +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
                 let replacedNode = box.replaceChild(box.children[j], box.children[i])
@@ -3414,7 +3414,7 @@ initPortfolioProfitGraph();
                 insertAfter(replacedNodeFixed, fixedBox.children[i])
               }
             }
-  
+
           } else if (element.classList.contains('active') && element.classList.contains("bottom")) {
             element.classList.remove("bottom")
             if (numberElement) {
@@ -3436,24 +3436,24 @@ initPortfolioProfitGraph();
         }
       }
     }
-  
-  
+
+
     function insertAfter(elem, refElem) {
       return refElem.parentNode.insertBefore(elem, refElem.nextSibling)
     }
-  
-    //sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
-    //sortedTitleBtnMobile.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtnMobile, false))
+
+    sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
+    sortedTitleBtnMobile.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtnMobile, false))
     sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
-    //sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
-    //sortedIncomeBtn.addEventListener("click", sortedList.bind(null, "income", sortedIncomeBtn))
-    //sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
-    //sortedBmsLocalBtn.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtn))
-    //sortedPEBtn.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtn))
-    //sortedPSBtn.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtn))
-    //sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn, false))
-    //sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn, false))
-  
+    sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
+    sortedIncomeBtn.addEventListener("click", sortedList.bind(null, "income", sortedIncomeBtn))
+    sortedBmsGlobalBtn.addEventListener("click", sortedList.bind(null, "bmsGlobal", sortedBmsGlobalBtn))
+    sortedBmsLocalBtn.addEventListener("click", sortedList.bind(null, "bmsLocal", sortedBmsLocalBtn))
+    sortedPEBtn.addEventListener("click", sortedList.bind(null, "PE", sortedPEBtn))
+    sortedPSBtn.addEventListener("click", sortedList.bind(null, "PS", sortedPSBtn))
+    sortedContinentBtn.addEventListener("click", sortedList.bind(null, "continent", sortedContinentBtn, false))
+    sortedExChangeBtn.addEventListener("click", sortedList.bind(null, "exChange", sortedExChangeBtn, false))
+
     function resetBtn() {
       inputSearch.value = ""
       btnsSorted.forEach(btn => {
@@ -3463,19 +3463,19 @@ initPortfolioProfitGraph();
       removeCompanies()
       listCompanies()
     }
-  
+
     resetBtnElement.addEventListener("click", resetBtn)
-  
+
     function listCompanies() {
       companies.forEach(company => {
         renderCompanies(company)
       })
     }
-  
-  
+
+
     function renderCompanies(company) {
       const fixedHtmlElement = `
-        <div class="table-ticker-fixed__block" data-title=${company.title}>
+        <div class="table-ticker-fixed__block" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.sortedBmsGlobalBtn} data-bmsLocal=${company.sortedBmsLocalBtn} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
                             <div class="table-ticker__block">
                     <div class="table-ticker-block__item">
                       <div class="table-ticker-block__img">
@@ -3484,11 +3484,13 @@ initPortfolioProfitGraph();
                       <div class="table-ticker-block__content table-ticker-block__info">
                         <div class="table-ticker-block-info__content">
                           <h3 class="table-ticker-block-info__title">${company.title}</h3>
-                          <div class="table-ticker-block__paperDontTrade">
-                            <svg class="table-ticker-block-paperDontTrade__icon">
-                              <use xlink:href="img/main.svg#icon-trendUp"></use>
-                            </svg>
-                          </div>
+                            <div class="table-ticker-block__paperDontTrade paperDontTrade">
+                              <svg class="table-ticker-block-paperDontTrade__icon paperDontTrade__icon statStickerInfo__icon">
+                                <use xlink:href="img/main.svg#icon-trendUp"></use>
+                              </svg>
+                                <div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
+                                    бумаги</a></div>
+                              </div>
                         </div>
                         <span class="table-ticker-block__subtitle">${company.subtitle}</span>
                       </div>
@@ -3496,9 +3498,9 @@ initPortfolioProfitGraph();
                   </div>
         </div>
       `
-  
+
       const htmlElement = `
-                <div class="table-ticker__content" data-price=${company.price}>
+                <div class="table-ticker__content" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.sortedBmsGlobalBtn} data-bmsLocal=${company.sortedBmsLocalBtn} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
                   <div class="table-ticker__block table-ticker__block--moving">
                     <div class="table-ticker-block__item">
                       <div class="table-ticker-block__img">
@@ -3507,11 +3509,13 @@ initPortfolioProfitGraph();
                       <div class="table-ticker-block__content table-ticker-block__info">
                         <div class="table-ticker-block-info__content">
                           <h3 class="table-ticker-block-info__title">${company.title}</h3>
-                          <div class="table-ticker-block__paperDontTrade">
-                            <svg class="table-ticker-block-paperDontTrade__icon">
-                              <use xlink:href="img/main.svg#icon-trendUp"></use>
-                            </svg>
-                          </div>
+                            <div class="table-ticker-block__paperDontTrade paperDontTrade">
+                              <svg class="table-ticker-block-paperDontTrade__icon paperDontTrade__icon statStickerInfo__icon">
+                                <use xlink:href="img/main.svg#icon-trendUp"></use>
+                              </svg>
+                                <div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
+                                    бумаги</a></div>
+                              </div>
                         </div>
                         <span class="table-ticker-block__subtitle">${company.subtitle}</span>
                       </div>
@@ -3571,14 +3575,14 @@ initPortfolioProfitGraph();
       fixedBox.insertAdjacentHTML("beforeend", fixedHtmlElement)
       box.insertAdjacentHTML("beforeend", htmlElement)
     }
-  
+
     function removeCompanies(company) {
       box.innerHTML = ""
     }
-  
+
     listCompanies()
   }
-  
+
   filterScanner()
 }
 
