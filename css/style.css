@@ -14413,7 +14413,7 @@ body.viewProfile .header-controls-links-link.auth span {
 
 .table-ticker__header {
   display: grid;
-  grid-template-columns: 229px repeat(9, 154px);
+  grid-template-columns: 271px repeat(11, 154px);
   background-color: #F5F6FD;
   border: 1px solid #E6EEFF;
   margin: 0 0 23px;
@@ -14445,12 +14445,16 @@ body.viewProfile .header-controls-links-link.auth span {
 .table-ticker__content {
   display: grid;
   align-items: center;
-  grid-template-columns: 229px repeat(9, 154px);
+  grid-template-columns: 260px repeat(11, 154px);
   padding: 0 32px 22px;
   cursor: pointer;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.table-ticker__content.blur {
+  filter: blur(6px);
 }
 
 .table-ticker__content:not(:last-child) {
@@ -14625,7 +14629,7 @@ body.viewProfile .header-controls-links-link.auth span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 140px;
+  width: 200px;
 }
 
 .table-ticker-block-info__content {
@@ -14769,6 +14773,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
 .table-ticker-fixed__block {
   padding: 0 32px 25px;
+}
+
+.table-ticker-fixed__block.blur {
+  filter: blur(6px);
 }
 
 .table-ticker-fixed__block:not(:last-child) {
@@ -18221,10 +18229,6 @@ body.viewProfile .header-controls-links-link.auth span {
     display: block;
   }
 
-  .table-ticket__scoring {
-    margin: 0;
-  }
-
   .main-contentPadding--adaptive {
     padding: 1rem !important;
   }
@@ -18243,12 +18247,12 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .table-ticker__header {
-    grid-template-columns: repeat(9, 137px);
+    grid-template-columns: repeat(11, 137px);
     margin-left: 139px;
   }
 
   .table-ticker__content {
-    grid-template-columns: repeat(9, 137px);
+    grid-template-columns: repeat(11, 137px);
     margin-left: 139px;
   }
 
@@ -18525,13 +18529,13 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .table-ticker__header {
-    grid-template-columns: 112px 112px 150px 112px 112px 112px 112px 112px 150px;
+    grid-template-columns: 112px 112px 150px 112px 130px 130px 130px 130px 112px 112px 150px;
     margin-left: 107px;
     margin-bottom: 10px;
   }
 
   .table-ticker__content {
-    grid-template-columns: 112px 112px 150px 112px 112px 112px 112px 112px 150px;
+    grid-template-columns: 112px 112px 150px 112px 130px 130px 130px 130px 112px 112px 150px;
     margin-left: 107px;
     padding: 0px 32px 12px;
   }
