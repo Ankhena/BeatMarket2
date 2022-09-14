@@ -14471,8 +14471,12 @@ body.viewProfile .header-controls-links-link.auth span {
   white-space: nowrap;
 }
 
-.table-ticker__block.percent {
+.table-ticker__block.percent--success {
   color: #199F27;
+}
+
+.table-ticker__block.percent--error {
+  color: #ED6373;
 }
 
 .table-ticker__block.onlyText {
@@ -14621,6 +14625,7 @@ body.viewProfile .header-controls-links-link.auth span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 140px;
 }
 
 .table-ticker-block-info__content {
