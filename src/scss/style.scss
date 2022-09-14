@@ -1706,7 +1706,14 @@ body.viewProfile {
     }
 
     &.percent {
-      color: #199F27;
+      
+      &--success {
+        color: #199F27;
+      }
+
+      &--error {
+        color: #ED6373;
+      }
     }
 
     &.onlyText {
@@ -1933,6 +1940,8 @@ body.viewProfile {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 140px;
+
 
     @media(max-width: 768px) {
       width: 90px;

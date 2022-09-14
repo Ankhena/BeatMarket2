@@ -8,6 +8,7 @@ if (document.querySelector(".analyticScanner")) {
         subtitle: 'Microsoft',
         price: 126.23,
         percent: 1.13,
+        isPercent: "error",
         income: 1.6,
         exchange: "NYSE",
         globalScoring: 93,
@@ -23,6 +24,7 @@ if (document.querySelector(".analyticScanner")) {
         subtitle: 'Microsoft company',
         price: 100.23,
         percent: 8.2,
+        isPercent: "error",
         income: 1.5,
         exchange: "NYSE",
         globalScoring: 95,
@@ -38,6 +40,7 @@ if (document.querySelector(".analyticScanner")) {
         subtitle: 'Microsoft',
         price: 123.23,
         percent: 1.23,
+        isPercent: "success",
         income: 1.4,
         exchange: "NYSE",
         globalScoring: 75,
@@ -53,6 +56,7 @@ if (document.querySelector(".analyticScanner")) {
         subtitle: 'Microsoft company',
         price: 85.23,
         percent: 1.2,
+        isPercent: "success",
         income: 1.3,
         exchange: "NYSE",
         globalScoring: 15,
@@ -69,6 +73,7 @@ if (document.querySelector(".analyticScanner")) {
         subtitle: 'Microsoft company',
         price: 82.23,
         percent: 1.28,
+        isPercent: "error",
         income: 1.2,
         exchange: "NYSE",
         globalScoring: 55,
@@ -273,7 +278,7 @@ if (document.querySelector(".analyticScanner")) {
                   <div class="table-ticker__block onlyText whnr">
                     ${company.price} USD
                   </div>
-                  <div class="table-ticker__block percent onlyText whnr">
+                  <div class="table-ticker__block percent percent--${company.isPercent} onlyText whnr">
                     +${company.percent}%
                   </div>
                   <div class="table-ticker__block income onlyText whnr">
