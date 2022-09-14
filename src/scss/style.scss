@@ -1602,7 +1602,7 @@ body.viewProfile {
 
   &__header {
     display: grid;
-    grid-template-columns: 229px repeat(9, 154px);
+    grid-template-columns: 271px repeat(11, 154px);
     background-color: #F5F6FD;
     border: 1px solid #E6EEFF;
     margin: 0 0 23px;
@@ -1610,12 +1610,12 @@ body.viewProfile {
     width: fit-content;
 
     @media(max-width: 768px) {
-      grid-template-columns: repeat(9, 137px);
+      grid-template-columns: repeat(11, 137px);
       margin-left: 139px;
     }
 
     @media(max-width: 425px) {
-      grid-template-columns: 112px 112px 150px 112px 112px 112px 112px 112px 150px;
+      grid-template-columns: 112px 112px 150px 112px 130px 130px 130px 130px 112px 112px 150px;
       margin-left: 107px;
       margin-bottom: 10px;
     }
@@ -1647,18 +1647,22 @@ body.viewProfile {
   &__content {
     display: grid;
     align-items: center;
-    grid-template-columns: 229px repeat(9, 154px);
+    grid-template-columns: 260px repeat(11, 154px);
     padding: 0 32px 22px;
     cursor: pointer;
     width: fit-content;
 
+    &.blur {
+      filter: blur(6px);
+    }
+
     @media(max-width: 768px) {
-      grid-template-columns: repeat(9, 137px);
+      grid-template-columns: repeat(11, 137px);
       margin-left: 139px;
     }
 
     @media(max-width: 425px) {
-      grid-template-columns: 112px 112px 150px 112px 112px 112px 112px 112px 150px;
+      grid-template-columns: 112px 112px 150px 112px 130px 130px 130px 130px 112px 112px 150px;
       margin-left: 107px;
       padding: 0px 32px 12px;
     }
@@ -1706,7 +1710,7 @@ body.viewProfile {
     }
 
     &.percent {
-      
+
       &--success {
         color: #199F27;
       }
@@ -1940,7 +1944,7 @@ body.viewProfile {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 140px;
+    width: 200px;
 
 
     @media(max-width: 768px) {
@@ -2005,10 +2009,6 @@ body.viewProfile {
     box-shadow: 0 3px 9px 0 rgb(62 84 216 / 14%);
     border-radius: 8px;
     margin: 0 auto;
-
-    @media($media_sm) {
-      margin: 0;
-    }
   }
 }
 
@@ -2152,6 +2152,10 @@ body.viewProfile {
 
   &__block {
     padding: 0 32px 25px;
+
+    &.blur {
+      filter: blur(6px);
+    }
 
     &:not(:last-child) {
       border-bottom: 1px solid #E6EEFF;
