@@ -283,3 +283,9 @@ tabsScroll("table-ticker__scroll")
 document.querySelector(".main-menu-btn").addEventListener("click", () => {
   document.querySelector(".main-menu").classList.toggle("active")
 })
+
+document.querySelectorAll('.modal-content-toggle').forEach(toggleElement => {
+  toggleElement.querySelector(".selectDropdownMenu__toggler").addEventListener("click", () => {
+    toggleElement.querySelector(".toggleOverlay").classList.toggle("active")
+  })
+})

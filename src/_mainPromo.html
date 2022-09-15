@@ -46,6 +46,54 @@
                     <div>
                         <div class="modal-content-toggle selectDropdownMenu__content">
                             <button class="btnShowAll selectDropdownMenu__toggler">
+                                <span class="btnShowAll__text">Настройки портфеля</span>
+                                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                            </button>
+                            <div class="toggleOverlay">
+                                <div class="selectDropdownMenu__item">
+                                    <h4 class="selectDropdownMenu__title">Валюта</h4>
+                                    <div class="selectDropdownMenu__elem">
+                                        <select>
+                                            <option selected value="USD">Американский доллар</option>
+                                            <option value="RUB">Российский рубль</option>
+                                            <option value="EURO">Европейский евро</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="selectDropdownMenu__item">  
+                                  <div class="selectDropdownMenu-item__row">
+                                    <h4 class="selectDropdownMenu__title">Расчет общего дохода</h4>
+                                    <div class="paperDontTrade">
+                                      <svg class="paperDontTrade__icon table-fixed-item-name__icon">
+                                        <use xlink:href="img/main.svg#icon-WarningCircle"></use>
+                                      </svg>
+                                      <div class="paperDontTrade__popup">
+                                        <p>Как будут рассчитываться поля "общий доход" в портфеле.</p>
+                                        <p><span>Нереализованная прибыль.</span> Показывает сколько прибыли/убытка вы получите при закрытии позиции. Учитываются только
+                                        непроданные акции. Проданные акции списываются по методу FIFO.</p>
+                                        <p><span>Реализованная прибыль.</span> Показывает сколько прибыли/убытка вы уже получили. Учитывает только проданные акции. Проданные
+                                        акции списываются по методу FIFO.</p>
+                                        <p><span>Общая прибыль по позиции.</span> Сумма колонокРП + НП. Другими словами сколько прибыли/убытка вы уже получили от продаж плюс
+                                        сколько можете получить при закрытии позиции.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                    <div class="selectDropdownMenu__elem">
+                                        <select>
+                                            <option selected value="SP 500">Нереализованная прибыль</option>
+                                            <option value="Nasdaq">Реализованная прибыль</option>
+                                            <option value="Dow Jones">Общая прибыль по позиции</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class="selectDropdownMenu__item selectDropdown-item">
+                                    <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                                    <span class="checkbox_custom">С учетом дивидендов</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-content-toggle selectDropdownMenu__content">
+                            <button class="btnShowAll selectDropdownMenu__toggler">
                                 <span class="btnShowAll__text">Настройки графика</span>
                                 <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
                             </button>

@@ -1444,6 +1444,18 @@ $banch_items_space: 0.8rem;
       }
     }
 
+    p {
+      display: block;
+
+      span {
+        font-weight: 600;
+      }
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+
     @media ($media_xs) {
       max-width: 12rem;
     }

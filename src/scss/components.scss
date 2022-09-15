@@ -2656,9 +2656,43 @@ $base_transition: 0.4s ease-in-out;
 
 .selectDropdownMenu {
 
+  .selectDropdownMenu-item__row {
+    display: flex;
+    align-items: center;
+
+    .paperDontTrade {
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      margin-left: 10px;
+
+      &__popup {
+        transform: translateY(5%);
+        width: 492px;
+        padding: 20px;
+        max-width: none;
+        z-index: 10000;
+        
+        span {
+          margin-right: 2px;
+        }
+
+        p {
+          font-size: inherit;
+        }
+      }
+    }
+  }
+
   @media ($media_sm) {
     min-width: calc(100vw - 2rem);
     max-width: calc(100vw - 2rem);
+  }
+
+  .toggleOverlay {
+    &.active {
+      display: block;
+    }
   }
 
   // .selectDropdownMenu__content
