@@ -3266,7 +3266,10 @@ initPortfolioProfitGraph();
         bmsLocal: 62,
         bmdGlobal: 45,
         bmdLocal: 25,
-        isBlur: true,
+        isBluBmsGlobalr: true,
+        isBluBmsLocalr: true,
+        isBluBmdGlobalr: true,
+        isBluBmdLocalr: false,
         pe: 3.5,
         ps: 1.2,
         continent: 'Азия'
@@ -3281,7 +3284,10 @@ initPortfolioProfitGraph();
         isPercent: "error",
         income: 1.5,
         exchange: "NYSE",
-        isBlur: false,
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: false,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
         bmsGlobal: 95,
         bmsLocal: 45,
         bmdGlobal: 51,
@@ -3298,7 +3304,10 @@ initPortfolioProfitGraph();
         price: 123.23,
         percent: 1.23,
         isPercent: "success",
-        isBlur: false,
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
         income: 1.4,
         exchange: "NYSE",
         bmsGlobal: 75,
@@ -3317,7 +3326,10 @@ initPortfolioProfitGraph();
         price: 85.23,
         percent: 1.2,
         isPercent: "success",
-        isBlur: false,
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
         income: 1.3,
         exchange: "NYSE",
         bmsGlobal: 15,
@@ -3338,7 +3350,10 @@ initPortfolioProfitGraph();
         percent: 1.28,
         isPercent: "error",
         income: 1.2,
-        isBlur: false,
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
         exchange: "NYSE",
         bmsGlobal: 55,
         bmsLocal: 35,
@@ -3499,7 +3514,7 @@ initPortfolioProfitGraph();
 
     function renderCompanies(company) {
       const fixedHtmlElement = `
-        <div class="table-ticker-fixed__block ${company.isBlur ? 'blur' : ''}" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.bmsGlobal} data-bmsLocal=${company.bmsLocal} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
+        <div class="table-ticker-fixed__block" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.bmsGlobal} data-bmsLocal=${company.bmsLocal} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
                             <div class="table-ticker__block">
                     <div class="table-ticker-block__item">
                       <div class="table-ticker-block__img">
@@ -3524,7 +3539,7 @@ initPortfolioProfitGraph();
       `
 
       const htmlElement = `
-                <div class="table-ticker__content ${company.isBlur ? 'blur': ''}" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.sortedBmsGlobalBtn} data-bmsLocal=${company.sortedBmsLocalBtn} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
+                <div class="table-ticker__content" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.sortedBmsGlobalBtn} data-bmsLocal=${company.sortedBmsLocalBtn} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
                   <div class="table-ticker__block table-ticker__block--moving">
                     <div class="table-ticker-block__item">
                       <div class="table-ticker-block__img">
@@ -3557,7 +3572,7 @@ initPortfolioProfitGraph();
                   <div class="table-ticker__block onlyText">
                     ${company.exchange}
                   </div>
-                  <div class="table-ticker__block">
+                  <div class="table-ticker__block ${company.isBlurBmsGlobal ? 'blur' : ''}">
                     <div class="table-ticket__scoring">
                       <div class="table-ticket-scoring__value table-ticket-scoring__value--negative">21</div>
                       <div class="table-ticket-scoring__diagram" style="--persent: ${company.bmsGlobal}px; --diagram-color: #de4355;">
@@ -3571,7 +3586,7 @@ initPortfolioProfitGraph();
                       </div>
                     </div>
                   </div>
-                  <div class="table-ticker__block">
+                  <div class="table-ticker__block ${company.isBlurBmsLocal ? 'blur' : ''}">
                     <div class="table-ticket__scoring">
                       <div class="table-ticket-scoring__value table-ticket-scoring__value--negative">21</div>
                       <div class="table-ticket-scoring__diagram" style="--persent: ${company.bmsLocal}px; --diagram-color: #de4355;">
@@ -3585,7 +3600,7 @@ initPortfolioProfitGraph();
                       </div>
                     </div>
                   </div>
-                  <div class="table-ticker__block">
+                  <div class="table-ticker__block ${company.isBlurBmdGlobal ? 'blur' : ''}">
                     <div class="table-ticket__scoring">
                       <div class="table-ticket-scoring__value table-ticket-scoring__value--negative">21</div>
                       <div class="table-ticket-scoring__diagram" style="--persent: ${company.bmdGlobal}px; --diagram-color: #de4355;">
@@ -3599,7 +3614,7 @@ initPortfolioProfitGraph();
                       </div>
                     </div>
                   </div>
-                  <div class="table-ticker__block">
+                  <div class="table-ticker__block ${company.isBlurBmdLocal ? 'blur' : ''}">
                     <div class="table-ticket__scoring">
                       <div class="table-ticket-scoring__value table-ticket-scoring__value--negative">21</div>
                       <div class="table-ticket-scoring__diagram" style="--persent: ${company.bmdLocal}px; --diagram-color: #de4355;">
