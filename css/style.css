@@ -6983,6 +6983,18 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   text-decoration: none;
 }
 
+.paperDontTrade__popup p {
+  display: block;
+}
+
+.paperDontTrade__popup p span {
+  font-weight: 600;
+}
+
+.paperDontTrade__popup p:not(:first-child) {
+  margin-top: 12px;
+}
+
 .statTable-scoring {
   min-width: 89px;
   align-self: center;
@@ -10477,6 +10489,38 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .forecastGraph__question .paperDontTrade__popup {
   transform: translate(-50%, 100%);
+}
+
+.selectDropdownMenu .selectDropdownMenu-item__row {
+  display: flex;
+  align-items: center;
+}
+
+.selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup {
+  transform: translateY(5%);
+  width: 492px;
+  padding: 20px;
+  max-width: none;
+  z-index: 10000;
+}
+
+.selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup span {
+  margin-right: 2px;
+}
+
+.selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup p {
+  font-size: inherit;
+}
+
+.selectDropdownMenu .toggleOverlay.active {
+  display: block;
 }
 
 .selectDropdownMenu__toggler.btnShowAll {
