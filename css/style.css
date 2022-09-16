@@ -14486,6 +14486,28 @@ body.viewProfile .header-controls-links-link.auth span {
   background-color: #C6CCF4;
 }
 
+.table-ticker__negative {
+  font-weight: 600;
+  text-align: center;
+  font-size: 32px;
+  color: #929398;
+  padding: 127px 0 150px;
+  pointer-events: none;
+  display: none;
+}
+
+.table-ticker__negative::-moz-selection {
+  color: inherit;
+}
+
+.table-ticker__negative::selection {
+  color: inherit;
+}
+
+.table-ticker__negative--active {
+  display: block;
+}
+
 .table-ticker__content {
   display: grid;
   align-items: center;
@@ -18535,8 +18557,12 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 21px;
   }
 
+  .table-ticker-fixed__item {
+    margin-bottom: 27px;
+  }
+
   .table-ticker-fixed__block + * {
-    margin-top: 25px;
+    margin-top: 24.4px;
   }
 }
 
@@ -18601,7 +18627,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .table-ticker-fixed__block + * {
-    margin-top: 14px;
+    margin-top: 14.4px;
   }
 }
 
