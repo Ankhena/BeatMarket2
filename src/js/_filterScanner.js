@@ -1,117 +1,117 @@
 if (document.querySelector(".analyticScanner")) {
   function filterScanner() {
     const companies = [
-      //{
-      //  img: "pcg.png",
-      //  imgAlt: 'Иконка PCG',
-      //  title: 'PCG',
-      //  subtitle: 'Microsoft',
-      //  price: 126.23,
-      //  percent: 1.13,
-      //  isPercent: "error",
-      //  income: 1.6,
-      //  exchange: "NYSE",
-      //  bmsGlobal: 93,
-      //  bmsLocal: 62,
-      //  bmdGlobal: 45,
-      //  bmdLocal: 25,
-      //  isBluBmsGlobalr: true,
-      //  isBluBmsLocalr: true,
-      //  isBluBmdGlobalr: true,
-      //  isBluBmdLocalr: false,
-      //  pe: 3.5,
-      //  ps: 1.2,
-      //  continent: 'Азия'
-      //},
-      //{
-      //  img: "viac.svg",
-      //  imgAlt: 'Иконка VIAC',
-      //  title: 'VIAC',
-      //  subtitle: 'Microsoft company',
-      //  price: 100.23,
-      //  percent: 8.2,
-      //  isPercent: "error",
-      //  income: 1.5,
-      //  exchange: "NYSE",
-      //  isBlurBmsGlobal: false,
-      //  isBlurBmsLocal: false,
-      //  isBlurBmdGlobal: true,
-      //  isBlurBmdLocal: false,
-      //  bmsGlobal: 95,
-      //  bmsLocal: 45,
-      //  bmdGlobal: 51,
-      //  bmdLocal: 31,
-      //  pe: 1.23,
-      //  ps: 1.67,
-      //  continent: 'Европа'
-      //},
-      //{
-      //  img: "pcg.png",
-      //  imgAlt: 'Иконка PCG',
-      //  title: 'PCG',
-      //  subtitle: 'Microsoft',
-      //  price: 123.23,
-      //  percent: 1.23,
-      //  isPercent: "success",
-      //  isBlurBmsGlobal: false,
-      //  isBlurBmsLocal: true,
-      //  isBlurBmdGlobal: true,
-      //  isBlurBmdLocal: false,
-      //  income: 1.4,
-      //  exchange: "NYSE",
-      //  bmsGlobal: 75,
-      //  bmsLocal: 65,
-      //  bmdGlobal: 52,
-      //  bmdLocal: 32,
-      //  pe: 2.98,
-      //  ps: 1.78,
-      //  continent: 'Северная Америка'
-      //},
-      //{
-      //  img: "viac.svg",
-      //  imgAlt: 'Иконка VIAC',
-      //  title: 'VIAC',
-      //  subtitle: 'Microsoft company',
-      //  price: 85.23,
-      //  percent: 1.2,
-      //  isPercent: "success",
-      //  isBlurBmsGlobal: false,
-      //  isBlurBmsLocal: true,
-      //  isBlurBmdGlobal: false,
-      //  isBlurBmdLocal: true,
-      //  income: 1.3,
-      //  exchange: "NYSE",
-      //  bmsGlobal: 15,
-      //  bmsLocal: 25,
-      //  bmdGlobal: 53,
-      //  bmdLocal: 33,
-      //  pe: 2.35,
-      //  ps: 2.85,
-      //  continent: 'Южная Америка'
-      //},
+      {
+        img: "pcg.png",
+        imgAlt: 'Иконка PCG',
+        title: 'PCG',
+        subtitle: 'Microsoft',
+        price: 126.23,
+        percent: 1.13,
+        isPercent: "error",
+        income: 1.6,
+        exchange: "NYSE",
+        bmsGlobal: 93,
+        bmsLocal: 62,
+        bmdGlobal: 45,
+        bmdLocal: 25,
+        isBluBmsGlobalr: true,
+        isBluBmsLocalr: true,
+        isBluBmdGlobalr: true,
+        isBluBmdLocalr: false,
+        pe: 3.5,
+        ps: 1.2,
+        continent: 'Азия'
+      },
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 100.23,
+        percent: 8.2,
+        isPercent: "error",
+        income: 1.5,
+        exchange: "NYSE",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: false,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
+        bmsGlobal: 95,
+        bmsLocal: 45,
+        bmdGlobal: 51,
+        bmdLocal: 31,
+        pe: 1.23,
+        ps: 1.67,
+        continent: 'Европа'
+      },
+      {
+        img: "pcg.png",
+        imgAlt: 'Иконка PCG',
+        title: 'PCG',
+        subtitle: 'Microsoft',
+        price: 123.23,
+        percent: 1.23,
+        isPercent: "success",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
+        income: 1.4,
+        exchange: "NYSE",
+        bmsGlobal: 75,
+        bmsLocal: 65,
+        bmdGlobal: 52,
+        bmdLocal: 32,
+        pe: 2.98,
+        ps: 1.78,
+        continent: 'Северная Америка'
+      },
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 85.23,
+        percent: 1.2,
+        isPercent: "success",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
+        income: 1.3,
+        exchange: "NYSE",
+        bmsGlobal: 15,
+        bmsLocal: 25,
+        bmdGlobal: 53,
+        bmdLocal: 33,
+        pe: 2.35,
+        ps: 2.85,
+        continent: 'Южная Америка'
+      },
 
-      //{
-      //  img: "viac.svg",
-      //  imgAlt: 'Иконка VIAC',
-      //  title: 'VIAC',
-      //  subtitle: 'Microsoft company',
-      //  price: 82.23,
-      //  percent: 1.28,
-      //  isPercent: "error",
-      //  income: 1.2,
-      //  isBlurBmsGlobal: false,
-      //  isBlurBmsLocal: true,
-      //  isBlurBmdGlobal: false,
-      //  isBlurBmdLocal: true,
-      //  exchange: "NYSE",
-      //  bmsGlobal: 55,
-      //  bmsLocal: 35,
-      //  bmdGlobal: 54,
-      //  bmdLocal: 34,
-      //  pe: 2.75,
-      //  ps: 2.15,
-      //  continent: 'Австралия'
-      //},
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 82.23,
+        percent: 1.28,
+        isPercent: "error",
+        income: 1.2,
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
+        exchange: "NYSE",
+        bmsGlobal: 55,
+        bmsLocal: 35,
+        bmdGlobal: 54,
+        bmdLocal: 34,
+        pe: 2.75,
+        ps: 2.15,
+        continent: 'Австралия'
+      },
 
     ]
 
@@ -135,6 +135,7 @@ if (document.querySelector(".analyticScanner")) {
     const sortedPSBtn = document.querySelector("#sorted-PS")
     const sortedContinentBtn = document.querySelector("#sorted-continent")
     const sortedIncomeBtn = document.querySelector("#sorted-income")
+    
 
     inputCounts.forEach(inputCount => {
       inputCount.addEventListener("input", (e) => {
@@ -388,8 +389,14 @@ if (document.querySelector(".analyticScanner")) {
                     </div>
                 </div>
         `
-      fixedBox.insertAdjacentHTML("beforeend", fixedHtmlElement)
-      box.insertAdjacentHTML("beforeend", htmlElement)
+
+      if(fixedBox) {
+        fixedBox.insertAdjacentHTML("beforeend", fixedHtmlElement)
+      }
+
+      if(box) {
+        box.insertAdjacentHTML("beforeend", htmlElement)
+      }
     }
 
     function removeCompanies(company) {
