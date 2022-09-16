@@ -1642,6 +1642,24 @@ body.viewProfile {
     }
   }
 
+  &__negative {
+    font-weight: 600;
+    text-align: center;
+    font-size: 32px;
+    color: #929398;
+    padding: 127px 0 150px;
+    pointer-events: none;
+    display: none;
+
+    &::selection {
+      color: inherit;
+    }
+
+    &--active {
+      display: block;
+    }
+  }
+
   // .table-ticker__content
 
   &__content {
@@ -2113,6 +2131,10 @@ body.viewProfile {
       display: inline-block;
     }
 
+    @media($media_xs) {
+      margin-bottom: 27px;
+    }
+
     @media(max-width: 425px) {
       margin-bottom: 16px;
     }
@@ -2169,11 +2191,11 @@ body.viewProfile {
       margin-top: 28px;
 
       @media($media_xs) {
-        margin-top: 25px;
+        margin-top: 24.4px;
       }
 
       @media(max-width: 425px) {
-        margin-top: 14px;
+        margin-top: 14.4px;
       }
     }
   }
