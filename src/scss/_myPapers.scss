@@ -666,14 +666,12 @@
   &__img {
     width: 1.8rem;
     height: 1.8rem;
+    min-width: 1.8rem;
+    min-height: 1.8rem;
     margin-right: 0.6rem;
 
     img {
       max-width: 100%;
-    }
-
-    @media($media_xs) {
-      display: none;
     }
   }
 
