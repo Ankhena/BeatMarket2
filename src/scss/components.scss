@@ -2655,6 +2655,8 @@ $base_transition: 0.4s ease-in-out;
 }
 
 .selectDropdownMenu {
+  max-width: 411px;
+  width: 100vw;
 
   .selectDropdownMenu-item__row {
     display: flex;
@@ -2667,12 +2669,27 @@ $base_transition: 0.4s ease-in-out;
       margin-left: 10px;
 
       &__popup {
-        transform: translateY(5%);
-        width: 492px;
+        transform: translateY(8%);
+        width: 100vw;
         padding: 20px;
-        max-width: none;
+        max-width: 492px;
         z-index: 10000;
-        
+
+        @media(max-width: 768px) {
+          transform: translateY(8%) translateX(-38%);
+        }
+
+        @media($media_xs) {
+          transform: translateY(8%) translateX(-45%);
+          max-width: 363px;
+        }
+
+        @media(max-width: 425px) {
+          transform: translateY(8%) translateX(-62%);
+          max-width: 264px;
+          font-size: 11px;
+        }
+
         span {
           margin-right: 2px;
         }
