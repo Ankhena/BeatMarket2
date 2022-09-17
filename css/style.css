@@ -6421,6 +6421,8 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .statSticker__img {
   width: 1.8rem;
   height: 1.8rem;
+  min-width: 1.8rem;
+  min-height: 1.8rem;
   margin-right: 0.6rem;
 }
 
@@ -18481,10 +18483,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable__content--opened .statTable__item--only-mobile {
     flex-basis: 100%;
-  }
-
-  .statSticker__img {
-    display: none;
   }
 
   .statSticker__block {
