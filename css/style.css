@@ -10493,6 +10493,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   transform: translate(-50%, 100%);
 }
 
+.selectDropdownMenu {
+  max-width: 411px;
+  width: 100vw;
+}
+
 .selectDropdownMenu .selectDropdownMenu-item__row {
   display: flex;
   align-items: center;
@@ -10506,10 +10511,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup {
-  transform: translateY(5%);
-  width: 492px;
+  transform: translateY(8%);
+  width: 100vw;
   padding: 20px;
-  max-width: none;
+  max-width: 492px;
   z-index: 10000;
 }
 
@@ -18310,6 +18315,10 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 @media (max-width: 768px) {
+  .selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup {
+    transform: translateY(8%) translateX(-38%);
+  }
+
   .table-ticker__fixed {
     display: block;
   }
@@ -18526,6 +18535,11 @@ body.viewProfile .header-controls-links-link.auth span {
     letter-spacing: -0.2px;
   }
 
+  .selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup {
+    transform: translateY(8%) translateX(-45%);
+    max-width: 363px;
+  }
+
   .dividendsTarget__labelInfo {
     margin-left: 2rem;
   }
@@ -18592,6 +18606,12 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 @media (max-width: 425px) {
+  .selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup {
+    transform: translateY(8%) translateX(-62%);
+    max-width: 264px;
+    font-size: 11px;
+  }
+
   .table-ticker__fixed {
     width: 139px;
   }
