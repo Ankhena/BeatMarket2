@@ -14495,12 +14495,11 @@ body.viewProfile .header-controls-links-link.auth span {
   box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
   border-radius: 0px 8px 8px 0px;
   width: 171px;
-  height: 98.7%;
   display: none;
   position: absolute;
   z-index: 100;
   top: 0;
-  bottom: 0;
+  bottom: 7px;
   left: 0;
 }
 
