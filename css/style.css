@@ -13477,12 +13477,15 @@ td {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .section-main .main-menu.active .nav ul li a span {
   opacity: 1;
   font-size: inherit;
-  pointer-events: all;
+  pointer-events: allж;
 }
 
 .section-main .main-menu.active .main-menu-btn {
@@ -15113,12 +15116,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   body.topNav .main-contentPadding {
     padding: 2.8rem var(--section_padding);
-  }
-}
-
-@media (min-width: 1290px) {
-  .section-main .main-menu .nav {
-    margin-left: 5rem;
   }
 }
 
