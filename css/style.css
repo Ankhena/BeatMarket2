@@ -2722,6 +2722,26 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   z-index: 21;
 }
 
+.modal .selectDropdown-item {
+  padding-top: 38px;
+  border-top: 1px solid #E6EEFF;
+}
+
+.modal .modal-content-switcher-button span {
+  padding: 0.8rem 0;
+}
+
+.modal .paperDontTrade {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  position: static;
+}
+
+.modal .paperDontTrade__popup {
+  max-width: 492px;
+}
+
 .modal.visible {
   top: 50%;
 }
@@ -2730,6 +2750,8 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   display: inline-block;
   color: #929398;
   margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
 }
 
 .modal .use_mt {
@@ -9970,6 +9992,9 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .mainPromo__settings .stategyPromo-graph-values-btn {
   display: flex;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .mainPromo__moneyInfo {
@@ -10270,10 +10295,29 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .promoGraphArea__chooseDate {
   height: 100%;
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .promoGraphArea__chooseDate .stategyPromo-graph-info-content-choose {
   height: 100%;
+}
+
+.promoGraphArea__chooseDate .stategyPromo-graph-info-content_settings {
+  margin-left: 24px;
+  background-color: #FFFFFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 5.12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.promoGraphArea__chooseDate .stategyPromo-graph-info-content_settings svg {
+  stroke: #8C9BEA;
+  width: 24px;
+  height: 24px;
 }
 
 .promoGraphArea__dividends {
