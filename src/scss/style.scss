@@ -92,6 +92,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      max-width: fit-content;
 
       &.active {
 
@@ -136,10 +137,6 @@
         height: 93vh;
         padding-bottom: 20px;
         padding-right: 1rem;
-
-        @media(min-width: 1290px) {
-          margin-left: 5rem;
-        }
 
         @media(min-width: 1000px) {
           margin-left: 2rem;
