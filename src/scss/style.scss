@@ -1570,12 +1570,11 @@ body.viewProfile {
     box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
     border-radius: 0px 8px 8px 0px;
     width: 171px;
-    height: 98.7%;
     display: none;
     position: absolute;
     z-index: 100;
     top: 0;
-    bottom: 0;
+    bottom: 7px;
     left: 0;
 
     @media(max-width: 768px) {
@@ -1585,8 +1584,6 @@ body.viewProfile {
     @media(max-width: 425px) {
       width: 139px;
     }
-
-
   }
 
   .inputGroup {
