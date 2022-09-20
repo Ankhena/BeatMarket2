@@ -33,362 +33,297 @@
   </div>
 </div>-->
 <div class="mainPromo">
-    <div class="mainPromo__stat">
-        <div class="mainPromo__settings">
-            <div class="stategyPromo-graph-values-btn">
-              <label class="" for="strategyPromo__checkbox">
-                <span class="btn btn_primary">
-                  <svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
-                </span>
+  <div class="mainPromo__stat">
+    <div class="mainPromo__settings">
+      <button class="stategyPromo-graph-values-btn" data-modal="stategyPromo-graph-info-content_settings-2">
+        <span class="btn btn_primary">
+          <svg>
+            <use xlink:href="img/main.svg#icon-gearSix"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="mainPromo__moneyInfo">
+      <div class="mainPromo__moneyItem mainPromo__moneyItem--xl moneyStat">
+        <h5 class="moneyStat__name">Инвестировано</h5>
+        <span class="moneyStat__value">$ 123 505 231</span>
+      </div>
+      <div class="mainPromo__moneyItem moneyStat">
+        <h5 class="moneyStat__name">Наличные</h5>
+        <span class="moneyStat__value moneyStat__value--gray">$ 50 232</span>
+      </div>
+      <div class="mainPromo__moneyItem moneyStat">
+        <h5 class="moneyStat__name">Общий доход</h5>
+        <span class="moneyStat__value moneyStat__value--success">+11 553,29 (+7,83%)</span>
+      </div>
+      <div class="mainPromo__moneyItem moneyStat">
+        <h5 class="moneyStat__name">Дневной доход</h5>
+        <span class="moneyStat__value moneyStat__value--error">–10 171,38 (-0,74%)</span>
+      </div>
+    </div>
+    <div class="mainPromo__mention">
+      <div class="mainPromo-mention__text">Данные по портфелю и стратегиям обновляются раз в 15 минут</div>
+      <button class="mainPromo-mention__btn">
+        <span></span>
+      </button>
+    </div>
+    <div class="mainPromo__buttons">
+
+      <button class="mainPromo__button btn btn_primary btnAddStrategy">
+        <svg>
+          <use xlink:href="img/main.svg#icon-PlusCircle"></use>
+        </svg>
+        <span>Добавить стратегию</span>
+      </button>
+
+      <label class="mainPromo__button btn btn_primary btnShare">
+        <svg>
+          <use xlink:href="img/main.svg#icon-ShareNetworkWhite"></use>
+        </svg>
+
+        <input type="checkbox" class="visually_hidden">
+        <div class="dropdown">
+          <div class="dropdown-social">
+            <a href="#" class="dropdown-social-icon">
+              <svg>
+                <use xlink:href="img/main.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href="#" class="dropdown-social-icon">
+              <svg>
+                <use xlink:href="img/main.svg#icon-telegram"></use>
+              </svg>
+            </a>
+            <a href="#" class="dropdown-social-icon">
+              <svg>
+                <use xlink:href="img/main.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a href="#" class="dropdown-social-icon">
+              <svg>
+                <use xlink:href="img/main.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="dropdown-link">
+            <div class="dropdown-link-title">
+              <h5>Ссылка на портфель</h5>
+            </div>
+            <div class="dropdown-link-form">
+              <input type="text" value="https://beatmarket.one/portfolio">
+              <button class="btn btn_primary">
+                <svg class="top-left">
+                  <use xlink:href="img/main.svg#icon-link"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="dropdown-share">
+            <h5>Ссылка доступна для всех</h5>
+            <div class="dropdown-share-toggle">
+              <input type="checkbox" id="checkbox-1" checked="">
+              <label for="checkbox-1"></label>
+            </div>
+          </div>
+        </div>
+      </label>
+
+    </div>
+  </div>
+  <div class="mainPromo__graphArea blockSection blockSection--card promoGraphArea">
+    <div class="promoGraphArea__content">
+      <div class="promoGraphArea__settings">
+        <div class="promoGraphArea__chooseInfo">
+          <label class="stategyPromo-graph-info-btn btn_mainCash" for="mainCash">
+
+            <input id="mainCash" type="checkbox" class="visually_hidden">
+
+            <span>Общий доход</span>
+            <svg>
+              <use xlink:href="img/main.svg#icon-arrow-down"></use>
+            </svg>
+
+            <div class="selectDropdown">
+              <label class="selectDropdown-item border">
+                <input type="checkbox" name="mainCashItems" class=" visually_hidden">
+                <span class="checkbox_custom">Общий доход</span>
               </label>
-              <input type="checkbox" class="visually_hidden" id="strategyPromo__checkbox">
-              <div class="selectDropdown selectDropdownMenu">
-                  <div>
-                      <div class="modal-content-toggle selectDropdownMenu__content">
-                          <button class="btnShowAll selectDropdownMenu__toggler">
-                              <span class="btnShowAll__text">Настройки портфеля</span>
-                              <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                          </button>
-                          <div class="toggleOverlay">
-                              <div class="selectDropdownMenu__item">
-                                  <h4 class="selectDropdownMenu__title">Валюта</h4>
-                                  <div class="selectDropdownMenu__elem">
-                                      <select>
-                                          <option selected value="USD">Американский доллар</option>
-                                          <option value="RUB">Российский рубль</option>
-                                          <option value="EURO">Европейский евро</option>
-                                      </select>
-                                  </div>
-                              </div>
-                              <div class="selectDropdownMenu__item">  
-                                <div class="selectDropdownMenu-item__row">
-                                  <h4 class="selectDropdownMenu__title">Расчет общего дохода</h4>
-                                  <div class="paperDontTrade">
-                                    <svg class="paperDontTrade__icon table-fixed-item-name__icon">
-                                      <use xlink:href="img/main.svg#icon-WarningCircle"></use>
-                                    </svg>
-                                    <div class="paperDontTrade__popup">
-                                      <p>Как будут рассчитываться поля "общий доход" в портфеле.</p>
-                                      <p><span>Нереализованная прибыль.</span> Показывает сколько прибыли/убытка вы получите при закрытии позиции. Учитываются только
-                                      непроданные акции. Проданные акции списываются по методу FIFO.</p>
-                                      <p><span>Реализованная прибыль.</span> Показывает сколько прибыли/убытка вы уже получили. Учитывает только проданные акции. Проданные
-                                      акции списываются по методу FIFO.</p>
-                                      <p><span>Общая прибыль по позиции.</span> Сумма колонокРП + НП. Другими словами сколько прибыли/убытка вы уже получили от продаж плюс
-                                      сколько можете получить при закрытии позиции.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                  <div class="selectDropdownMenu__elem">
-                                      <select>
-                                          <option selected value="SP 500">Нереализованная прибыль</option>
-                                          <option value="Nasdaq">Реализованная прибыль</option>
-                                          <option value="Dow Jones">Общая прибыль по позиции</option>
-                                      </select>
-                                  </div>
-                              </div>
-                              <label class="selectDropdownMenu__item selectDropdown-item">
-                                  <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
-                                  <span class="checkbox_custom">С учетом дивидендов</span>
-                              </label>
-                          </div>
-                      </div>
-                      <div class="modal-content-toggle selectDropdownMenu__content">
-                          <button class="btnShowAll selectDropdownMenu__toggler">
-                              <span class="btnShowAll__text">Настройки графика</span>
-                              <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                          </button>
-                          <div class="toggleOverlay">
-                              <div class="selectDropdownMenu__item">
-                                  <h4 class="selectDropdownMenu__title">Отображать стратегии</h4>
-                                  <div class="selectDropdownMenu__elem">
-                                      <select>
-                                          <option selected value="SP 500">Стратегии (2)</option>
-                                          <option value="Nasdaq">Стратегии (1)</option>
-                                          <option value="Dow Jones">Стратегии (3)</option>
-                                      </select>
-                                  </div>
-                              </div>
-                              <div class="selectDropdownMenu__item">
-                                  <h4 class="selectDropdownMenu__title">Сравнивать с индексом</h4>
-                                  <div class="selectDropdownMenu__elem">
-                                      <select>
-                                          <option selected value="SP 500">Не сравнивать</option>
-                                          <option value="Nasdaq">Сравнивать</option>
-                                      </select>
-                                  </div>
-                              </div>
-                              <div class="selectDropdownMenu__item">
-                                  <h4 class="selectDropdownMenu__title">Период по умолчанию</h4>
-                                  <div class="selectDropdownMenu__elem modal-content-switcher-button">
-                                      <label>
-                                          <input type="radio" name="switcherPaybackWhat" class="visually_hidden">
-                                          <span>Неделя</span>
-                                      </label>
-                                      <label>
-                                          <input type="radio" name="switcherPaybackWhat" class="visually_hidden" checked="">
-                                          <span>Месяц</span>
-                                      </label>
-                                      <label>
-                                          <input type="radio" name="switcherPaybackWhat" class="visually_hidden">
-                                          <span>Год</span>
-                                      </label>
-                                  </div>
-                              </div>
-                              <label class="selectDropdownMenu__item selectDropdown-item">
-                                  <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
-                                  <span class="checkbox_custom">С учетом дивидендов</span>
-                              </label>
-                          </div>
-                      </div>
-                      <div class="selectDropdown-item buttons">
-                          <button class="btn btn_blue">Сохранить настройки</button>
-                          <button class="btn btn_gray">Сбросить</button>
-                      </div>
-                  </div>
+              <label class="selectDropdown-item">
+                <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                <span class="checkbox_custom">Стратегия удачи</span>
+              </label>
+              <label class="selectDropdown-item">
+                <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                <span class="checkbox_custom">Стратегия 2</span>
+              </label>
+              <label class="selectDropdown-item">
+                <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                <span class="checkbox_custom">Максимальный выкуп по акциям</span>
+              </label>
+              <div class="selectDropdown-item">
+                <button class="btn btn_blue">Применить</button>
               </div>
-              </div>
+            </div>
+          </label>
         </div>
-        <div class="mainPromo__moneyInfo">
-            <div class="mainPromo__moneyItem mainPromo__moneyItem--xl moneyStat">
-                <h5 class="moneyStat__name">Инвестировано</h5>
-                <span class="moneyStat__value">$ 123 505 231</span>
-            </div>
-            <div class="mainPromo__moneyItem moneyStat">
-                <h5 class="moneyStat__name">Наличные</h5>
-                <span class="moneyStat__value moneyStat__value--gray">$ 50 232</span>
-            </div>
-            <div class="mainPromo__moneyItem moneyStat">
-                <h5 class="moneyStat__name">Общий доход</h5>
-                <span class="moneyStat__value moneyStat__value--success">+11 553,29 (+7,83%)</span>
-            </div>
-            <div class="mainPromo__moneyItem moneyStat">
-                <h5 class="moneyStat__name">Дневной доход</h5>
-                <span class="moneyStat__value moneyStat__value--error">–10 171,38 (-0,73%)</span>
-            </div>
-        </div>
-        <div class="mainPromo__mention">
-          <div class="mainPromo-mention__text">Данные по портфелю и стратегиям обновляются раз в 15 минут</div>
-          <button class="mainPromo-mention__btn">
-            <span></span>
-          </button>
-        </div>
-        <div class="mainPromo__buttons">
+        <div class="promoGraphArea__options">
+          <div class="promoGraphArea__graphParams">
 
-            <button class="mainPromo__button btn btn_primary btnAddStrategy">
-                <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
-                <span>Добавить стратегию</span>
-            </button>
-
-            <label class="mainPromo__button btn btn_primary btnShare">
-                <svg><use xlink:href="img/main.svg#icon-ShareNetworkWhite"></use></svg>
-
-                <input type="checkbox" class="visually_hidden">
-                <div class="dropdown">
-                    <div class="dropdown-social">
-                        <a href="#" class="dropdown-social-icon">
-                            <svg><use xlink:href="img/main.svg#icon-facebook"></use></svg>
-                        </a>
-                        <a href="#" class="dropdown-social-icon">
-                            <svg><use xlink:href="img/main.svg#icon-telegram"></use></svg>
-                        </a>
-                        <a href="#" class="dropdown-social-icon">
-                            <svg><use xlink:href="img/main.svg#icon-instagram"></use></svg>
-                        </a>
-                        <a href="#" class="dropdown-social-icon">
-                            <svg><use xlink:href="img/main.svg#icon-twitter"></use></svg>
-                        </a>
-                    </div>
-                    <div class="dropdown-link">
-                        <div class="dropdown-link-title">
-                            <h5>Ссылка на портфель</h5>
-                        </div>
-                        <div class="dropdown-link-form">
-                            <input type="text" value="https://beatmarket.one/portfolio">
-                            <button class="btn btn_primary">
-                                <svg class="top-left"><use xlink:href="img/main.svg#icon-link"></use></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="dropdown-share">
-                        <h5>Ссылка доступна для всех</h5>
-                        <div class="dropdown-share-toggle">
-                            <input type="checkbox" id="checkbox-1" checked="">
-                            <label for="checkbox-1"></label>
-                        </div>
-                    </div>
+            <label class="promoGraphArea__selector mainGraphTypeChoose">
+              <input class="mainGraphTypeChoose__switcher visually_hidden" type="checkbox">
+              <div class="mainGraphTypeChoose__header">
+                <div class="mainGraphTypeChoose__item mainGraphTypeChoose__item--header">
+                  <svg class="mainGraphTypeChoose__icon">
+                    <use xlink:href="img/main.svg#icon-graphChartLine"></use>
+                  </svg>
+                  <span class="mainGraphTypeChoose__name">Линейный</span>
                 </div>
+                <div class="mainGraphTypeChoose__arrow">
+                  <svg>
+                    <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="mainGraphTypeChoose__content">
+                <div class="mainGraphTypeChoose__item mainGraphTypeChoose__item--active">
+                  <svg class="mainGraphTypeChoose__icon">
+                    <use xlink:href="img/main.svg#icon-graphChartLine"></use>
+                  </svg>
+                  <span class="mainGraphTypeChoose__name">Линейный</span>
+                </div>
+                <div class="mainGraphTypeChoose__item">
+                  <svg class="mainGraphTypeChoose__icon">
+                    <use xlink:href="img/main.svg#icon-graphChartBar"></use>
+                  </svg>
+                  <span class="mainGraphTypeChoose__name">Столбчатый</span>
+                </div>
+              </div>
             </label>
 
+            <div class="promoGraphArea__selector forecastGraph">
+              <div class="forecastGraph__content">
+                <svg class="forecastGraph__icon">
+                  <use xlink:href="img/main.svg#icon-graphChartForecast"></use>
+                </svg>
+                <span class="forecastGraph__name">Прогноз</span>
+              </div>
+              <div class="forecastGraph__question paperDontTrade">
+                <svg class="paperDontTrade__icon table-fixed-item-name__icon">
+                  <use xlink:href="img/main.svg#icon-info-2"></use>
+                </svg>
+                <div class="paperDontTrade__popup">На основе прошлых результатов и доходностей компаний в вашем
+                  портфеле\стратегии будет сформирован прогноз динамики прироста инвестиций</div>
+              </div>
+            </div>
+          </div>
+          <div class="promoGraphArea__chooseDate">
+            <div class="stategyPromo-graph-info-content-choose">
+              <div class="stategyPromo-graph-info-content-choose-item active">
+                <span>Неделя</span>
+              </div>
+              <div class="stategyPromo-graph-info-content-choose-item">
+                <span>Месяц</span>
+              </div>
+              <div class="stategyPromo-graph-info-content-choose-item">
+                <span>Год</span>
+              </div>
+              <div class="stategyPromo-graph-info-content-choose-item dotted" id="chooseDataStrategy">
+                <svg>
+                  <use xlink:href="img/main.svg#icon-dottes"></use>
+                </svg>
+              </div>
+
+            </div>
+            <button class="stategyPromo-graph-info-content_settings"
+              data-modal="stategyPromo-graph-info-content_settings">
+              <svg>
+                <use xlink:href="img/main.svg#icon-gearSix"></use>
+              </svg>
+            </button>
+          </div>
         </div>
-    </div>
-    <div class="mainPromo__graphArea blockSection blockSection--card promoGraphArea">
-        <div class="promoGraphArea__content">
-            <div class="promoGraphArea__settings">
-                <div class="promoGraphArea__chooseInfo">
-                    <label class="stategyPromo-graph-info-btn btn_mainCash" for="mainCash">
-    
-                        <input id="mainCash" type="checkbox" class="visually_hidden">
-        
-                        <span>Общий доход</span>
-                        <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-        
-                        <div class="selectDropdown">
-                            <label class="selectDropdown-item border">
-                                <input type="checkbox" name="mainCashItems" class=" visually_hidden">
-                                <span class="checkbox_custom">Общий доход</span>
-                            </label>
-                            <label class="selectDropdown-item">
-                                <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                <span class="checkbox_custom">Стратегия удачи</span>
-                            </label>
-                            <label class="selectDropdown-item">
-                                <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                <span class="checkbox_custom">Стратегия 2</span>
-                            </label>
-                            <label class="selectDropdown-item">
-                                <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                <span class="checkbox_custom">Максимальный выкуп по акциям</span>
-                            </label>
-                            <div class="selectDropdown-item">
-                                <button class="btn btn_blue">Применить</button>
-                            </div>
-                        </div>
-                    </label>
+      </div>
+
+      <div class="promoGraphArea__dividends">
+        <label class="selectDropdown-item">
+          <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+          <span class="checkbox_custom">С учетом дивидендов</span>
+        </label>
+      </div>
+
+      <div class="promoGraphArea__forecast" style="display: none;">
+        <div class="forecastArea blockSection blockSection--card blockSection--paddingMin">
+          <div class="forecastArea__header">
+            <div class="forecastArea__switcher stategyPromo-graph-info-content-choose">
+              <div class="stategyPromo-graph-info-content-choose-item active">
+                <span>12 мес.</span>
+              </div>
+              <div class="stategyPromo-graph-info-content-choose-item">
+                <span>36 мес.</span>
+              </div>
+              <div class="stategyPromo-graph-info-content-choose-item">
+                <span>60 мес.</span>
+              </div>
+            </div>
+            <div class="forecastArea__close">
+              <svg>
+                <use xlink:href="img/main.svg#icon-closeModal"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="forecastArea__body">
+            <div class="forecastArea__options">
+              <label class="selectDropdown-item">
+                <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                <span class="checkbox_custom">Сравнить с бенчмарком</span>
+              </label>
+            </div>
+            <div class="forecastArea__form">
+              <div class="forecastArea__inputs">
+                <div class="forecastArea__input">
+                  <input type="text" value="200$">
                 </div>
-                <div class="promoGraphArea__options">
-                    <div class="promoGraphArea__graphParams">
-
-                        <label class="promoGraphArea__selector mainGraphTypeChoose">
-                            <input class="mainGraphTypeChoose__switcher visually_hidden" type="checkbox">
-                            <div class="mainGraphTypeChoose__header">
-                                <div class="mainGraphTypeChoose__item mainGraphTypeChoose__item--header">
-                                    <svg class="mainGraphTypeChoose__icon"><use xlink:href="img/main.svg#icon-graphChartLine"></use></svg>
-                                    <span class="mainGraphTypeChoose__name">Линейный</span>
-                                </div>
-                                <div class="mainGraphTypeChoose__arrow">
-                                    <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                </div>
-                            </div>
-                            <div class="mainGraphTypeChoose__content">
-                                <div class="mainGraphTypeChoose__item mainGraphTypeChoose__item--active">
-                                    <svg class="mainGraphTypeChoose__icon"><use xlink:href="img/main.svg#icon-graphChartLine"></use></svg>
-                                    <span class="mainGraphTypeChoose__name">Линейный</span>
-                                </div>
-                                <div class="mainGraphTypeChoose__item">
-                                    <svg class="mainGraphTypeChoose__icon"><use xlink:href="img/main.svg#icon-graphChartBar"></use></svg>
-                                    <span class="mainGraphTypeChoose__name">Столбчатый</span>
-                                </div>
-                            </div>
-                        </label>
-
-                        <div class="promoGraphArea__selector forecastGraph">
-                            <div class="forecastGraph__content">
-                                <svg class="forecastGraph__icon"><use xlink:href="img/main.svg#icon-graphChartForecast"></use></svg>
-                                <span class="forecastGraph__name">Прогноз</span>
-                            </div>
-                            <div class="forecastGraph__question paperDontTrade">
-                                <svg class="paperDontTrade__icon table-fixed-item-name__icon"><use xlink:href="img/main.svg#icon-info-2"></use></svg>
-                                <div class="paperDontTrade__popup">На основе прошлых результатов и доходностей компаний в вашем портфеле\стратегии будет сформирован прогноз динамики прироста инвестиций</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="promoGraphArea__chooseDate">
-                        <div class="stategyPromo-graph-info-content-choose">
-                            <div class="stategyPromo-graph-info-content-choose-item active">
-                                <span>Неделя</span>
-                            </div>
-                            <div class="stategyPromo-graph-info-content-choose-item">
-                                <span>Месяц</span>
-                            </div>
-                            <div class="stategyPromo-graph-info-content-choose-item">
-                                <span>Год</span>
-                            </div>
-                            <div class="stategyPromo-graph-info-content-choose-item dotted" id="chooseDataStrategy">
-                                <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
-                            </div>
-                        </div>
-                    </div>
+                <div class="forecastArea__dateChoose modal-content-switcher-button">
+                  <label>
+                    <input type="radio" name="switcherPaybackWhat" class="visually_hidden" checked="">
+                    <span>Месяц</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="switcherPaybackWhat" class="visually_hidden">
+                    <span>Год</span>
+                  </label>
                 </div>
+              </div>
+              <div class="forecastArea__buttons">
+                <button class="btn btn_blue">Применить</button>
+                <button class="btn btn_gray">Сбросить прогноз</button>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="promoGraphArea__dividends">
-                <label class="selectDropdown-item">
-                    <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
-                    <span class="checkbox_custom">С учетом дивидендов</span>
-                </label>
+      <div class="promoGraphArea__graphs">
+
+        <div class="promoGraphArea__graphContent promoGraphArea__graphLinear" id="mainPromoGraph"></div>
+
+        <div class="promoGraphArea__graphContent promoGraphArea__graphContent--disabled promoGraphArea__graphBar">
+          <div class="banchGraph-descr">
+            <div class="banchGraph-descr-summary">
+              <h3 class="banchGraph-descr-summary-title">Итого</h3>
+              <div class="banchGraph-descr-summary-content"></div>
             </div>
-
-            <div class="promoGraphArea__forecast" style="display: none;">
-                <div class="forecastArea blockSection blockSection--card blockSection--paddingMin">
-                    <div class="forecastArea__header">
-                        <div class="forecastArea__switcher stategyPromo-graph-info-content-choose">
-                            <div class="stategyPromo-graph-info-content-choose-item active">
-                                <span>12 мес.</span>
-                            </div>
-                            <div class="stategyPromo-graph-info-content-choose-item">
-                                <span>36 мес.</span>
-                            </div>
-                            <div class="stategyPromo-graph-info-content-choose-item">
-                                <span>60 мес.</span>
-                            </div>
-                        </div>
-                        <div class="forecastArea__close">
-                            <svg><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
-                        </div>
-                    </div>
-                    <div class="forecastArea__body">
-                        <div class="forecastArea__options">
-                            <label class="selectDropdown-item">
-                                <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                <span class="checkbox_custom">Сравнить с бенчмарком</span>
-                            </label>
-                        </div>
-                        <div class="forecastArea__form">
-                            <div class="forecastArea__inputs">
-                                <div class="forecastArea__input">
-                                    <input type="text" value="200$">
-                                </div>
-                                <div class="forecastArea__dateChoose modal-content-switcher-button">
-                                    <label>
-                                        <input type="radio" name="switcherPaybackWhat" class="visually_hidden" checked="">
-                                        <span>Месяц</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="switcherPaybackWhat" class="visually_hidden">
-                                        <span>Год</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="forecastArea__buttons">
-                                <button class="btn btn_blue">Применить</button>
-                                <button class="btn btn_gray">Сбросить прогноз</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="promoGraphArea__graphs">
-
-                <div class="promoGraphArea__graphContent promoGraphArea__graphLinear" id="mainPromoGraph"></div>
-
-                <div class="promoGraphArea__graphContent promoGraphArea__graphContent--disabled promoGraphArea__graphBar">
-                    <div class="banchGraph-descr">
-                        <div class="banchGraph-descr-summary">
-                            <h3 class="banchGraph-descr-summary-title">Итого</h3>
-                            <div class="banchGraph-descr-summary-content"></div>
-                        </div>
-                        <div class="banchGraph-descr-items"></div>
-                    </div>
-                    <div class="banchGraph-content"></div>
-                </div>
-
-            </div>
-
-            <div class="promoGraphArea__date">
-                <span class="stategyPromo-graph-dates" id="chooseDataStrategyValue">21.11.2021 - 28.11.2021</span>
-            </div>
+            <div class="banchGraph-descr-items"></div>
+          </div>
+          <div class="banchGraph-content"></div>
         </div>
 
+      </div>
+
+      <div class="promoGraphArea__date">
+        <span class="stategyPromo-graph-dates" id="chooseDataStrategyValue">21.11.2021 - 28.11.2021</span>
+      </div>
     </div>
+
+  </div>
 </div>

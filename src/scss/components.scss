@@ -1895,6 +1895,9 @@ $base_transition: 0.4s ease-in-out;
 
     .stategyPromo-graph-values-btn {
       display: flex;
+      background-color: transparent;
+      border: none;
+      outline: none;
 
       @media ($media_sm) {
         transform: translateX(50%);
@@ -2327,12 +2330,32 @@ $base_transition: 0.4s ease-in-out;
     height: 100%;
     margin-left: auto;
 
+    display: flex;
+    align-items: center;
+
     .stategyPromo-graph-info-content-choose {
       height: 100%;
     }
 
     @media ($media_sm) {
       width: 100%;
+    }
+
+    .stategyPromo-graph-info-content_settings {
+      margin-left: 24px;
+      background-color: #FFFFFF;
+      border: 1px solid #D3E3FF;
+      border-radius: 5.12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 8px;
+
+      svg {
+        stroke: #8C9BEA;
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
