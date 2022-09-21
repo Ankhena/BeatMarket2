@@ -14891,6 +14891,10 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 .table-ticker-fixed__block {
+  padding: 0 32px 0;
+}
+
+.table-ticker-fixed__block:not(:last-child) {
   padding: 0 32px 25px;
 }
 
@@ -18613,6 +18617,10 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-bottom: 27px;
   }
 
+  .table-ticker-fixed__block:not(:last-child) {
+    padding: 0 32px 25.2px;
+  }
+
   .table-ticker-fixed__block + * {
     margin-top: 24.4px;
   }
@@ -18680,8 +18688,12 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-bottom: 16px;
   }
 
+  .table-ticker-fixed__block:not(:last-child) {
+    padding: 0 31px 13.2px;
+  }
+
   .table-ticker-fixed__block {
-    padding: 0 31px 13px;
+    padding: 0 31px 0;
   }
 
   .table-ticker-fixed__block + * {
