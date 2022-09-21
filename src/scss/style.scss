@@ -1666,6 +1666,7 @@ body.viewProfile {
     padding: 0 32px 22px;
     cursor: pointer;
     width: fit-content;
+    position: relative;
 
     &.blur {
       filter: blur(6px);
@@ -1683,7 +1684,23 @@ body.viewProfile {
     }
 
     &:not(:last-child) {
-      border-bottom: 1px solid #E6EEFF;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #E6EEFF;
+        z-index: 101;
+      }
+
+      &::before {
+        left: -80%;
+      }
     }
 
     &+& {
@@ -2186,10 +2203,6 @@ body.viewProfile {
 
     &.blur {
       filter: blur(6px);
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid #E6EEFF;
     }
 
     @media(max-width: 425px) {
