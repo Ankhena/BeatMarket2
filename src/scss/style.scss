@@ -2170,7 +2170,19 @@ body.viewProfile {
   }
 
   &__block {
-    padding: 0 32px 25px;
+    padding: 0 32px 0;
+
+    &:not(:last-child) {
+      padding: 0 32px 25px;
+
+      @media($media_xs) {
+        padding: 0 32px 25.2px;
+      }
+
+      @media(max-width: 425px) {
+        padding: 0 31px 13.2px;
+      }
+    }
 
     &.blur {
       filter: blur(6px);
@@ -2181,7 +2193,7 @@ body.viewProfile {
     }
 
     @media(max-width: 425px) {
-      padding: 0 31px 13px;
+      padding: 0 31px 0;
     }
 
     &+* {
