@@ -145,7 +145,21 @@ $base_transition: 0.4s ease-in-out;
     border-radius: 1rem;
     padding: 1.66rem;
     transition: $base_transition;
-    overflow: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+      height: 6px;
+      background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: lighten($color_blue, 25%);
+    }
 
     &:hover {
       box-shadow: $card_box_shadow;
@@ -2332,6 +2346,7 @@ $base_transition: 0.4s ease-in-out;
 
     display: flex;
     align-items: center;
+    margin-right: 1rem;
 
     .stategyPromo-graph-info-content-choose {
       height: 100%;
