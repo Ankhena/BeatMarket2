@@ -2739,7 +2739,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .modal .paperDontTrade__popup {
-  max-width: 492px;
+  max-width: 99%;
+  left: 36%;
+  overflow: auto;
+  bottom: -6%;
+  transform: translateY(0);
 }
 
 .modal.visible {
@@ -2811,6 +2815,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   overflow-y: auto;
   padding: 0 1.8rem;
   margin-bottom: 1.8rem;
+  max-height: min(70vh, 38rem);
 }
 
 .modal-content--withoutHeader {
@@ -8728,7 +8733,21 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   border-radius: 1rem;
   padding: 1.66rem;
   transition: 0.4s ease-in-out;
-  overflow: hidden;
+  overflow: auto;
+}
+
+.blockSection--card::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.blockSection--card::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+.blockSection--card::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
 }
 
 .blockSection--card:hover {
@@ -10297,6 +10316,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-left: auto;
   display: flex;
   align-items: center;
+  margin-right: 1rem;
 }
 
 .promoGraphArea__chooseDate .stategyPromo-graph-info-content-choose {
@@ -13613,6 +13633,7 @@ td {
   height: 32px;
   margin-bottom: 32px;
   cursor: pointer;
+  margin-left: -1px;
 }
 
 .section-main .main-menu-btn span {
@@ -15002,7 +15023,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .section-main .main-menu .nav {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 
@@ -16289,6 +16310,11 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .burger {
     display: flex;
+  }
+
+  .modal .paperDontTrade__popup {
+    left: 1%;
+    bottom: -13%;
   }
 
   .modal .use_mt {
