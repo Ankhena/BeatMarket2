@@ -14515,9 +14515,9 @@ body.viewProfile .header-controls-links-link.auth span {
   background-color: #FFFFFF;
   box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
   border-radius: 0px 8px 8px 0px;
-  width: 171px;
-  display: none;
+  display: block;
   position: absolute;
+  width: 310px;
   z-index: 100;
   top: 0;
   bottom: 7px;
@@ -14531,7 +14531,7 @@ body.viewProfile .header-controls-links-link.auth span {
 
 .table-ticker__header {
   display: grid;
-  grid-template-columns: 271px repeat(11, 154px);
+  grid-template-columns: repeat(11, 154px);
   background-color: #F5F6FD;
   border: 1px solid #E6EEFF;
   margin: 0 0 23px;
@@ -14539,6 +14539,7 @@ body.viewProfile .header-controls-links-link.auth span {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-left: 278px;
 }
 
 .table-ticker__scroll {
@@ -14585,13 +14586,14 @@ body.viewProfile .header-controls-links-link.auth span {
 .table-ticker__content {
   display: grid;
   align-items: center;
-  grid-template-columns: 260px repeat(11, 154px);
-  padding: 0 32px 22px;
+  grid-template-columns: repeat(11, 154px);
+  padding: 0 30px 22px;
   cursor: pointer;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
+  margin-left: 278px;
 }
 
 .table-ticker__content.blur {
@@ -14712,12 +14714,6 @@ body.viewProfile .header-controls-links-link.auth span {
   align-items: center;
   white-space: nowrap;
   cursor: pointer;
-}
-
-.table-ticker-header__item.sort:first-child {
-  justify-content: flex-start;
-  margin-left: -32px;
-  padding-left: 41px;
 }
 
 .table-ticker-header__item.sort span {
@@ -14930,7 +14926,7 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 .table-ticker-fixed__block:not(:last-child) {
-  padding: 0 32px 25px;
+  padding: 0px 32px 26.7px;
 }
 
 .table-ticker-fixed__block.blur {
@@ -14938,7 +14934,7 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 .table-ticker-fixed__block + * {
-  margin-top: 28px;
+  margin-top: 19px;
 }
 
 @media (min-width: 564px) {
@@ -15412,6 +15408,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .strategyCards-card-header h3 {
     font-size: 0.9rem;
     margin-right: 0.5rem;
+  }
+
+  .table-ticker-fixed__block + * {
+    margin-top: 22px;
   }
 }
 
@@ -18382,6 +18382,14 @@ body.viewProfile .header-controls-links-link.auth span {
     display: block;
   }
 
+  .table-ticker-fixed__block:not(:last-child) {
+    padding: 0 32px 25.6px;
+  }
+
+  .table-ticker-fixed__block + * {
+    margin-top: 23px;
+  }
+
   .main-contentPadding--adaptive {
     padding: 1rem !important;
   }
@@ -18400,17 +18408,17 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .table-ticker__fixed {
-    display: block;
+    width: 171px;
   }
 
   .table-ticker__header {
     grid-template-columns: repeat(11, 137px);
-    margin-left: 139px;
+    margin-left: 171px;
   }
 
   .table-ticker__content {
     grid-template-columns: repeat(11, 137px);
-    margin-left: 139px;
+    margin-left: 171px;
   }
 
   .table-ticker__block:first-child {
@@ -18437,10 +18445,6 @@ body.viewProfile .header-controls-links-link.auth span {
     display: none !important;
   }
 
-  .table-ticker-header__item.sort:first-child {
-    padding-left: 16px;
-  }
-
   .table-ticker-block__img {
     margin-right: 8px;
     height: 32px;
@@ -18462,6 +18466,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .table-ticker-block-info__title {
     font-size: 14px;
+  }
+
+  .table-ticker-fixed__block + * {
+    margin-top: 28px;
   }
 }
 
@@ -18702,13 +18710,13 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .table-ticker__header {
     grid-template-columns: 112px 112px 150px 112px 130px 130px 130px 130px 112px 112px 150px;
-    margin-left: 107px;
+    margin-left: 139px;
     margin-bottom: 10px;
   }
 
   .table-ticker__content {
     grid-template-columns: 112px 112px 150px 112px 130px 130px 130px 130px 112px 112px 150px;
-    margin-left: 107px;
+    margin-left: 139px;
     padding: 0px 32px 12px;
   }
 
