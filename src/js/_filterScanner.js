@@ -456,7 +456,6 @@ if (document.querySelector(".analyticScanner")) {
     const inputCounts = document.querySelectorAll('.analyticScanner__count input')
     const resetBtnElement = document.querySelector("#reset-filter")
     const sortedTitleBtn = document.querySelector("#sorted-title")
-    const sortedTitleBtnMobile = document.querySelector("#sorted-title-mobile")
     const sortedPriceBtn = document.querySelector("#sorted-price")
     const sortedPercentBtn = document.querySelector("#sorted-percent")
     const sortedExChangeBtn = document.querySelector("#sorted-exChange")
@@ -563,7 +562,6 @@ if (document.querySelector(".analyticScanner")) {
     }
 
     sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
-    sortedTitleBtnMobile.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtnMobile, false))
     sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
     sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
     sortedIncomeBtn.addEventListener("click", sortedList.bind(null, "income", sortedIncomeBtn))
@@ -623,26 +621,6 @@ if (document.querySelector(".analyticScanner")) {
 
       const htmlElement = `
                 <div class="table-ticker__content" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.bmsGlobal} data-bmsLocal=${company.bmsLocal} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
-                  <div class="table-ticker__block table-ticker__block--moving">
-                    <div class="table-ticker-block__item">
-                      <div class="table-ticker-block__img">
-                        <img src="./img/statTable__icons/${company.img}" alt="${company.imgAlt}">
-                      </div>
-                      <div class="table-ticker-block__content table-ticker-block__info">
-                        <div class="table-ticker-block-info__content">
-                          <h3 class="table-ticker-block-info__title">${company.title}</h3>
-                            <div class="table-ticker-block__paperDontTrade paperDontTrade">
-                              <svg class="table-ticker-block-paperDontTrade__icon paperDontTrade__icon statStickerInfo__icon">
-                                <use xlink:href="img/main.svg#icon-trendUp"></use>
-                              </svg>
-                                <div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
-                                    бумаги</a></div>
-                              </div>
-                        </div>
-                        <span class="table-ticker-block__subtitle">${company.subtitle}</span>
-                      </div>
-                    </div>
-                  </div>
                   <div class="table-ticker__block onlyText whnr">
                     ${company.price} USD
                   </div>

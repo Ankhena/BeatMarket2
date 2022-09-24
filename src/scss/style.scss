@@ -1568,16 +1568,16 @@ body.viewProfile {
     background-color: #FFFFFF;
     box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
     border-radius: 0px 8px 8px 0px;
-    width: 171px;
-    display: none;
+    display: block;
     position: absolute;
+    width: 310px;
     z-index: 100;
     top: 0;
     bottom: 7px;
     left: 0;
 
     @media(max-width: 768px) {
-      display: block;
+      width: 171px;
     }
 
     @media(max-width: 425px) {
@@ -1598,21 +1598,22 @@ body.viewProfile {
 
   &__header {
     display: grid;
-    grid-template-columns: 271px repeat(11, 154px);
+    grid-template-columns: repeat(11, 154px);
     background-color: #F5F6FD;
     border: 1px solid #E6EEFF;
     margin: 0 0 23px;
     padding: 0 32px;
     width: fit-content;
+    margin-left: 278px;
 
     @media(max-width: 768px) {
       grid-template-columns: repeat(11, 137px);
-      margin-left: 139px;
+      margin-left: 171px;
     }
 
     @media(max-width: 425px) {
       grid-template-columns: 112px 112px 150px 112px 130px 130px 130px 130px 112px 112px 150px;
-      margin-left: 107px;
+      margin-left: 139px;
       margin-bottom: 10px;
     }
   }
@@ -1661,11 +1662,12 @@ body.viewProfile {
   &__content {
     display: grid;
     align-items: center;
-    grid-template-columns: 260px repeat(11, 154px);
-    padding: 0 32px 22px;
+    grid-template-columns: repeat(11, 154px);
+    padding: 0 30px 22px;
     cursor: pointer;
     width: fit-content;
     position: relative;
+    margin-left: 278px;
 
     &.blur {
       filter: blur(6px);
@@ -1673,12 +1675,12 @@ body.viewProfile {
 
     @media(max-width: 768px) {
       grid-template-columns: repeat(11, 137px);
-      margin-left: 139px;
+      margin-left: 171px;
     }
 
     @media(max-width: 425px) {
       grid-template-columns: 112px 112px 150px 112px 130px 130px 130px 130px 112px 112px 150px;
-      margin-left: 107px;
+      margin-left: 139px;
       padding: 0px 32px 12px;
     }
 
@@ -1858,16 +1860,6 @@ body.viewProfile {
       align-items: center;
       white-space: nowrap;
       cursor: pointer;
-
-      &:first-child {
-        justify-content: flex-start;
-        margin-left: -32px;
-        padding-left: 41px;
-
-        @media(max-width: 768px) {
-          padding-left: 16px;
-        }
-      }
 
       span {
         margin-right: 4px;
@@ -2189,7 +2181,11 @@ body.viewProfile {
     padding: 0 32px 0;
 
     &:not(:last-child) {
-      padding: 0 32px 25px;
+      padding: 0px 32px 26.7px;
+
+      @media($media_sm) {
+        padding: 0 32px 25.6px;
+      }
 
       @media($media_xs) {
         padding: 0 32px 25.2px;
@@ -2209,7 +2205,19 @@ body.viewProfile {
     }
 
     &+* {
-      margin-top: 28px;
+      margin-top: 19px;
+
+      @media($media_xl) {
+        margin-top: 22px;
+      }
+
+      @media($media_sm) {
+        margin-top: 23px;
+      }
+
+      @media(max-width: 768px) {
+        margin-top: 28px;
+      }
 
       @media($media_xs) {
         margin-top: 24.4px;
