@@ -8943,6 +8943,20 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .blockSection__content--scroll {
   overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.blockSection__content--scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.blockSection__content--scroll::-webkit-scrollbar {
+  height: 5px;
+  background-color: transparent;
+}
+
+.blockSection__content--scroll::-webkit-scrollbar-thumb {
+  background-color: #C6CCF4;
 }
 
 .blockSection__period {

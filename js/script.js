@@ -3754,7 +3754,7 @@ initPortfolioProfitGraph();
 
             if (numberElement) {
               if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) > +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
-                let replacedNode = box.replaceChild(box.children[j], box.children[i])
+                let replacedNode = box.replaceChild(box.children[i], box.children[j])
                 let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
                 insertAfter(replacedNode, box.children[i])
                 insertAfter(replacedNodeFixed, fixedBox.children[i])
