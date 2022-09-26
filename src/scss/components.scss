@@ -419,6 +419,20 @@ $base_transition: 0.4s ease-in-out;
 
     &--scroll {
       overflow-x: auto;
+      overflow-y: hidden;
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar {
+        height: 5px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #C6CCF4;
+      }
     }
   }
 
