@@ -11621,6 +11621,12 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   transition: background-color 0.3s;
 }
 
+.highcharts-negative {
+  transform: rotate(179deg);
+  transform-box: fill-box;
+  transform-origin: initial;
+}
+
 input[type=radio],
 input[type=checkbox] {
   vertical-align: middle;
