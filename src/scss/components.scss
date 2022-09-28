@@ -4349,3 +4349,9 @@ $base_transition: 0.4s ease-in-out;
     }
   }
 }
+
+.highcharts-negative {
+  transform: rotate(179deg);
+  transform-box: fill-box;
+  transform-origin: initial;
+}
