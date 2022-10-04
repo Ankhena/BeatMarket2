@@ -32,6 +32,15 @@ body.app .section-header {
   display: flex;
   padding: 0.75rem 0;
   max-height: 64.39px;
+  overflow: hidden;
+  resize: none;
+  app-region: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  clear: none;
+  scale: none;
+  perspective: none;
 }
 
 .appMenu__item {
