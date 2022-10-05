@@ -31,16 +31,9 @@ body.app .section-header {
   z-index: 6;
   display: flex;
   padding: 0.75rem 0;
-  max-height: 64.39px;
   overflow: hidden;
-  resize: none;
-  app-region: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  clear: none;
-  scale: none;
-  perspective: none;
+  -webkit-overflow-scrolling: touch;
+  transform: translateY(0px);
 }
 
 .appMenu__item {
