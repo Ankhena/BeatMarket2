@@ -220,13 +220,190 @@
 
                     </section>
 
-
-
                     <section class="dividends__item month-cash">
                       <h3 class="month-cash__title">Ежемесячный доход</h3>
                       <span class="month-cash__date">Янв 2021 - Янв 2022</span>
                       <div class="month-cash__overlay">
                         <div class="month-cash__graph" id="monthCashGraph"></div>
+                      </div>
+                    </section>
+
+                    <section class="dividends__item blockSection">
+                      <div class="blockSection__header">
+                        <h3 class="blockSection__title">Дивидендная аналитика <span
+                            class="blockSection__ticket">VIAC</span></h3>
+                      </div>
+                      <div class="blockSection__alert">
+                        <svg>
+                          <use xlink:href="img/main.svg#icon-dangerCircle"></use>
+                        </svg>
+                        <span>В стратегии есть компании, которые не платят или прекратили платить дивиденды</span>
+                      </div>
+                      <div class="blockSection__content">
+
+                        <!-- <div class="blockSection__cardAnalytics">
+                                                        <div class="cardAnalytic cardAnalytic--simple">
+                                                            <h4 class="cardAnalytic__title">Дивидендный рост за 5 лет</h4>
+                                                            <span class="cardAnalytic__value">17.32 %</span>
+                                                        </div>
+                                                        <div class="cardAnalytic cardAnalytic--simple">
+                                                            <h4 class="cardAnalytic__title">Непрерывный рост</h4>
+                                                            <span class="cardAnalytic__value">7 лет</span>
+                                                        </div>
+                                                        <div class="cardAnalytic cardAnalytic--simple">
+                                                            <h4 class="cardAnalytic__title">Payout Ratio</h4>
+                                                            <span class="cardAnalytic__value">21.22 %</span>
+                                                        </div>
+                                                    </div> -->
+
+                        <div class="blockSection__cardAnalytics">
+                          <div class="cardAnalytic cardAnalytic--simple">
+                            <h4 class="cardAnalytic__title">Payout Ratio</h4>
+                            <span class="cardAnalytic__value">21.22 %</span>
+                          </div>
+                          <div class="cardAnalytic cardAnalytic--simple cardAnalytic--grow">
+                            <h4 class="cardAnalytic__title">Темпы роста</h4>
+
+                            <div class="ratesOfGrowth">
+                              <div class="ratesOfGrowth__row">
+                                <span class="ratesOfGrowth__col"></span>
+                                <span class="ratesOfGrowth__col ratesOfGrowth__col--title">Стратегия</span>
+                                <span class="ratesOfGrowth__col ratesOfGrowth__col--title">Бенчмарк</span>
+                              </div>
+                              <div class="ratesOfGrowth__row">
+                                <span class="ratesOfGrowth__col">1 год</span>
+                                <span class="ratesOfGrowth__col ratesOfGrowth__col--success">+17.32 %</span>
+                                <span class="ratesOfGrowth__col ratesOfGrowth__col--danger">-6.32 %</span>
+                              </div>
+                              <div class="ratesOfGrowth__row">
+                                <span class="ratesOfGrowth__col">5 лет</span>
+                                <span class="ratesOfGrowth__col ratesOfGrowth__col--success">+17.32 %</span>
+                                <span class="ratesOfGrowth__col ratesOfGrowth__col--danger">-6.32 %</span>
+                              </div>
+                              <div class="ratesOfGrowth__row">
+                                <span class="ratesOfGrowth__col">10 лет</span>
+                                <span class="ratesOfGrowth__col ratesOfGrowth__col--success">+17.32 %</span>
+                                <span class="ratesOfGrowth__col ratesOfGrowth__col--danger">-6.32 %</span>
+                              </div>
+                            </div>
+
+                            <!-- <div class="cardAnalytic__content">
+                                                                <div class="cardAnalytic__item">
+                                                                    <h4 class="cardAnalytic__subtitle">Стратегия</h4>
+                                                                    <span class="cardAnalytic__value cardAnalytic__value--success">+17.32 %</span>
+                                                                </div>
+                                                                <div class="cardAnalytic__item">
+                                                                    <h4 class="cardAnalytic__subtitle">Бенчмарк</h4>
+                                                                    <span class="cardAnalytic__value cardAnalytic__value--error">-6.32 %</span>
+                                                                </div>
+                                                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="dividends__item blockSection">
+                      <div class="blockSection__header">
+                        <h3 class="blockSection__title blockSection__title--flex">
+                          Динамика выплат
+                          <span class="blockSection__ticket">IEF</span>
+
+                          <div class="forecastGraph">
+                            <div class="forecastGraph__content">
+                              <svg class="forecastGraph__icon">
+                                <use xlink:href="img/main.svg#icon-graphChartForecast"></use>
+                              </svg>
+                              <span class="forecastGraph__name">Прогноз</span>
+                            </div>
+                            <div class="forecastGraph__question paperDontTrade">
+                              <svg class="paperDontTrade__icon table-fixed-item-name__icon">
+                                <use xlink:href="img/main.svg#icon-info-2"></use>
+                              </svg>
+                              <div class="paperDontTrade__popup">На основе прошлых результатов и доходностей компаний в
+                                вашем портфеле\стратегии будет сформирован прогноз динамики прироста инвестиций</div>
+                            </div>
+                          </div>
+
+                        </h3>
+                      </div>
+
+                      <div class="forecastArea blockSection blockSection--card blockSection--paddingMin">
+                        <div class="forecastArea__header">
+                          <div class="forecastArea__switcher stategyPromo-graph-info-content-choose">
+                            <div class="stategyPromo-graph-info-content-choose-item active">
+                              <span>12 мес.</span>
+                            </div>
+                            <div class="stategyPromo-graph-info-content-choose-item">
+                              <span>36 мес.</span>
+                            </div>
+                            <div class="stategyPromo-graph-info-content-choose-item">
+                              <span>60 мес.</span>
+                            </div>
+                          </div>
+                          <div class="forecastArea__close">
+                            <svg>
+                              <use xlink:href="img/main.svg#icon-closeModal"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="forecastArea__body">
+                          <div class="forecastArea__options">
+                            <label class="selectDropdown-item">
+                              <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                              <span class="checkbox_custom">Дополнительные вложения</span>
+                            </label>
+                            <label class="selectDropdown-item">
+                              <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                              <span class="checkbox_custom">Сравнить с бенчмарком</span>
+                            </label>
+                          </div>
+                          <div class="forecastArea__form">
+                            <div class="forecastArea__inputs">
+                              <div class="forecastArea__input">
+                                <input type="text" value="200$">
+                              </div>
+                              <div class="forecastArea__dateChoose modal-content-switcher-button">
+                                <label>
+                                  <input type="radio" name="switcherPaybackWhat" class="visually_hidden" checked="">
+                                  <span>Месяц</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="switcherPaybackWhat" class="visually_hidden">
+                                  <span>Год</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="forecastArea__buttons">
+                              <button class="btn btn_blue">Применить</button>
+                              <button class="btn btn_gray">Сбросить прогноз</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="blockSection__content dividends">
+
+                        <div class="blockSection__period period">
+                          <div class="period-info">
+                            <h4>Период</h4>
+                            <div class="period-info-date strategyViewDateChoose">
+                              <span>21.11.2020 - 21.11.2021</span>+
+                              <svg>
+                                <use xlink:href="img/main.svg#icon-CalendarBlank"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="period-status">
+                            <div class="period-status-checkbox">
+                              <input id="=" type="checkbox" checked=""> Показать вложения
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="blockSection__graph">
+                          <div class="stategyPromo-graph-chart mainGraphBlock" id="demoGraph-4"></div>
+                        </div>
+
                       </div>
                     </section>
 
@@ -525,213 +702,6 @@
 
                     <section class="dividends__item blockSection">
                       <div class="blockSection__header">
-                        <h3 class="blockSection__title blockSection__title--flex">
-                          Динамика выплат
-                          <span class="blockSection__ticket">IEF</span>
-
-                          <div class="forecastGraph">
-                            <div class="forecastGraph__content">
-                              <svg class="forecastGraph__icon">
-                                <use xlink:href="img/main.svg#icon-graphChartForecast"></use>
-                              </svg>
-                              <span class="forecastGraph__name">Прогноз</span>
-                            </div>
-                            <div class="forecastGraph__question paperDontTrade">
-                              <svg class="paperDontTrade__icon table-fixed-item-name__icon">
-                                <use xlink:href="img/main.svg#icon-info-2"></use>
-                              </svg>
-                              <div class="paperDontTrade__popup">На основе прошлых результатов и доходностей компаний в
-                                вашем портфеле\стратегии будет сформирован прогноз динамики прироста инвестиций</div>
-                            </div>
-                          </div>
-
-                        </h3>
-                      </div>
-
-                      <div class="forecastArea blockSection blockSection--card blockSection--paddingMin">
-                        <div class="forecastArea__header">
-                          <div class="forecastArea__switcher stategyPromo-graph-info-content-choose">
-                            <div class="stategyPromo-graph-info-content-choose-item active">
-                              <span>12 мес.</span>
-                            </div>
-                            <div class="stategyPromo-graph-info-content-choose-item">
-                              <span>36 мес.</span>
-                            </div>
-                            <div class="stategyPromo-graph-info-content-choose-item">
-                              <span>60 мес.</span>
-                            </div>
-                          </div>
-                          <div class="forecastArea__close">
-                            <svg>
-                              <use xlink:href="img/main.svg#icon-closeModal"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="forecastArea__body">
-                          <div class="forecastArea__options">
-                            <label class="selectDropdown-item">
-                              <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                              <span class="checkbox_custom">Дополнительные вложения</span>
-                            </label>
-                            <label class="selectDropdown-item">
-                              <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                              <span class="checkbox_custom">Сравнить с бенчмарком</span>
-                            </label>
-                          </div>
-                          <div class="forecastArea__form">
-                            <div class="forecastArea__inputs">
-                              <div class="forecastArea__input">
-                                <input type="text" value="200$">
-                              </div>
-                              <div class="forecastArea__dateChoose modal-content-switcher-button">
-                                <label>
-                                  <input type="radio" name="switcherPaybackWhat" class="visually_hidden" checked="">
-                                  <span>Месяц</span>
-                                </label>
-                                <label>
-                                  <input type="radio" name="switcherPaybackWhat" class="visually_hidden">
-                                  <span>Год</span>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="forecastArea__buttons">
-                              <button class="btn btn_blue">Применить</button>
-                              <button class="btn btn_gray">Сбросить прогноз</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="blockSection__content dividends">
-
-                        <div class="blockSection__period period">
-                          <div class="period-info">
-                            <h4>Период</h4>
-                            <div class="period-info-date strategyViewDateChoose">
-                              <span>21.11.2020 - 21.11.2021</span>+
-                              <svg>
-                                <use xlink:href="img/main.svg#icon-CalendarBlank"></use>
-                              </svg>
-                            </div>
-                          </div>
-                          <div class="period-status">
-                            <div class="period-status-checkbox">
-                              <input id="=" type="checkbox" checked=""> Показать вложения
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="blockSection__graph">
-                          <div class="stategyPromo-graph-chart mainGraphBlock" id="demoGraph-4"></div>
-                        </div>
-
-                      </div>
-                    </section>
-
-
-                    <section class="dividends__item blockSection">
-                      <div class="blockSection__header">
-<!--                        <h3 class="blockSection__title">Рост дивидендов</h3>-->
-                        <h3 class="blockSection__title">Выплаты по месяцам и среднегодовые выплаты</h3>
-                      </div>
-                      <div class="blockSection__content blockSection__content--scroll customScroll">
-                        <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
-                             id="growthOfDividendsGraph"></div>
-                      </div>
-                    </section>
-
-                    <section class="dividends__item blockSection">
-                      <div class="blockSection__header">
-                        <h3 class="blockSection__title">Среднегодовое изменение выплат</h3>
-                      </div>
-                      <div class="blockSection__content blockSection__content--scroll customScroll">
-                        <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
-                             id="averageGrowthGraph"></div>
-                      </div>
-                    </section>
-
-                    <hr style="border: 2px solid red">
-
-                    <section class="dividends__item blockSection">
-                      <div class="blockSection__header">
-                        <h3 class="blockSection__title">Дивидендная аналитика <span
-                            class="blockSection__ticket">VIAC</span></h3>
-                      </div>
-                      <div class="blockSection__alert">
-                        <svg>
-                          <use xlink:href="img/main.svg#icon-dangerCircle"></use>
-                        </svg>
-                        <span>В стратегии есть компании, которые не платят или прекратили платить дивиденды</span>
-                      </div>
-                      <div class="blockSection__content">
-
-                        <!-- <div class="blockSection__cardAnalytics">
-                                                        <div class="cardAnalytic cardAnalytic--simple">
-                                                            <h4 class="cardAnalytic__title">Дивидендный рост за 5 лет</h4>
-                                                            <span class="cardAnalytic__value">17.32 %</span>
-                                                        </div>
-                                                        <div class="cardAnalytic cardAnalytic--simple">
-                                                            <h4 class="cardAnalytic__title">Непрерывный рост</h4>
-                                                            <span class="cardAnalytic__value">7 лет</span>
-                                                        </div>
-                                                        <div class="cardAnalytic cardAnalytic--simple">
-                                                            <h4 class="cardAnalytic__title">Payout Ratio</h4>
-                                                            <span class="cardAnalytic__value">21.22 %</span>
-                                                        </div>
-                                                    </div> -->
-
-                        <div class="blockSection__cardAnalytics">
-                          <div class="cardAnalytic cardAnalytic--simple">
-                            <h4 class="cardAnalytic__title">Payout Ratio</h4>
-                            <span class="cardAnalytic__value">21.22 %</span>
-                          </div>
-                          <div class="cardAnalytic cardAnalytic--simple cardAnalytic--grow">
-                            <h4 class="cardAnalytic__title">Темпы роста</h4>
-
-                            <div class="ratesOfGrowth">
-                              <div class="ratesOfGrowth__row">
-                                <span class="ratesOfGrowth__col"></span>
-                                <span class="ratesOfGrowth__col ratesOfGrowth__col--title">Стратегия</span>
-                                <span class="ratesOfGrowth__col ratesOfGrowth__col--title">Бенчмарк</span>
-                              </div>
-                              <div class="ratesOfGrowth__row">
-                                <span class="ratesOfGrowth__col">1 год</span>
-                                <span class="ratesOfGrowth__col ratesOfGrowth__col--success">+17.32 %</span>
-                                <span class="ratesOfGrowth__col ratesOfGrowth__col--danger">-6.32 %</span>
-                              </div>
-                              <div class="ratesOfGrowth__row">
-                                <span class="ratesOfGrowth__col">5 лет</span>
-                                <span class="ratesOfGrowth__col ratesOfGrowth__col--success">+17.32 %</span>
-                                <span class="ratesOfGrowth__col ratesOfGrowth__col--danger">-6.32 %</span>
-                              </div>
-                              <div class="ratesOfGrowth__row">
-                                <span class="ratesOfGrowth__col">10 лет</span>
-                                <span class="ratesOfGrowth__col ratesOfGrowth__col--success">+17.32 %</span>
-                                <span class="ratesOfGrowth__col ratesOfGrowth__col--danger">-6.32 %</span>
-                              </div>
-                            </div>
-
-                            <!-- <div class="cardAnalytic__content">
-                                                                <div class="cardAnalytic__item">
-                                                                    <h4 class="cardAnalytic__subtitle">Стратегия</h4>
-                                                                    <span class="cardAnalytic__value cardAnalytic__value--success">+17.32 %</span>
-                                                                </div>
-                                                                <div class="cardAnalytic__item">
-                                                                    <h4 class="cardAnalytic__subtitle">Бенчмарк</h4>
-                                                                    <span class="cardAnalytic__value cardAnalytic__value--error">-6.32 %</span>
-                                                                </div>
-                                                            </div> -->
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-
-
-
-
-
-                    <section class="dividends__item blockSection">
-                      <div class="blockSection__header">
                         <h3 class="blockSection__title">Рост дивидендного дохода по секторам</h3>
                       </div>
                       <div class="blockSection__content">
@@ -925,6 +895,26 @@
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </section>
+
+                    <section class="dividends__item blockSection">
+                      <div class="blockSection__header">
+                        <h3 class="blockSection__title">Среднегодовой рост</h3>
+                      </div>
+                      <div class="blockSection__content blockSection__content--scroll customScroll">
+                        <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
+                          id="averageGrowthGraph"></div>
+                      </div>
+                    </section>
+
+                    <section class="dividends__item blockSection">
+                      <div class="blockSection__header">
+                        <h3 class="blockSection__title">Рост дивидендов</h3>
+                      </div>
+                      <div class="blockSection__content blockSection__content--scroll customScroll">
+                        <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
+                          id="growthOfDividendsGraph"></div>
                       </div>
                     </section>
 
