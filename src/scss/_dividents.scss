@@ -304,11 +304,16 @@
     padding: 1.35rem;
 
     @media ($media_xl) {
+      //grid-template-columns: repeat(2, auto);
+      //justify-content: space-between;
+    }
+
+    @media ($media_sm) {
       grid-template-columns: repeat(2, auto);
       justify-content: space-between;
     }
 
-    @media ($media_lg) {
+    @media ($media_xs) {
       grid-template-columns: 1fr;
       justify-content: stretch;
     }
