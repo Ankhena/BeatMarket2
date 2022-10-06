@@ -6187,6 +6187,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   color: #3E54D8;
 }
 
+.dividends .dividendsTarget__detailInfo {
+  justify-content: space-around;
+}
+
 .statTable {
   margin: 2.2rem -1.5rem;
   width: calc(100% + 3rem);
