@@ -294,6 +294,20 @@
 
   .strategyCards {
 
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+
+    @media ($media_xl) {
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+    }
+
+    @media ($media_lg) {
+      grid-template-columns: 1fr;
+      justify-content: stretch;
+    }
+
     &-card {
       flex-basis: 49%;
       display: flex;
