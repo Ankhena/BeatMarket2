@@ -6151,6 +6151,38 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   background: transparent;
 }
 
+.dividends .blockSection__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dividends .dividends__switcher {
+  display: flex;
+  -moz-column-gap: 1.1111111111rem;
+       column-gap: 1.1111111111rem;
+}
+
+.dividends .dividends__switcher-btn {
+  padding: 0.8rem 0;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  font-size: 0.8888888889rem;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dividends .dividends__switcher-btn.active {
+  border-color: #3E54D8;
+  color: #3E54D8;
+}
+
+.dividends .dividends__switcher-btn:hover {
+  border-color: #3E54D8;
+  color: #3E54D8;
+}
+
 .statTable {
   margin: 2.2rem -1.5rem;
   width: calc(100% + 3rem);

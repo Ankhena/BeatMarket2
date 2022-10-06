@@ -1183,10 +1183,10 @@
 
 
                     <section class="dividends__item blockSection">
-                      <div class="blockSection__header">
+                      <header class="blockSection__header">
 <!--                        <h3 class="blockSection__title">Рост дивидендов</h3>-->
                         <h3 class="blockSection__title">Выплаты по месяцам и среднегодовые выплаты</h3>
-                      </div>
+                      </header>
                       <div class="blockSection__content blockSection__content--scroll customScroll">
                         <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
                              id="growthOfDividendsGraph"></div>
@@ -1194,9 +1194,14 @@
                     </section>
 
                     <section class="dividends__item blockSection">
-                      <div class="blockSection__header">
+                      <header class="blockSection__header">
                         <h3 class="blockSection__title">Среднегодовое изменение выплат</h3>
-                      </div>
+                        <div class="dividends__switcher">
+                          <button class="dividends__switcher-btn active">1 год</button>
+                          <button class="dividends__switcher-btn">5 лет</button>
+                          <button class="dividends__switcher-btn">10 лет</button>
+                        </div>
+                      </header>
                       <div class="blockSection__content blockSection__content--scroll customScroll">
                         <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
                              id="averageGrowthGraph"></div>
