@@ -5948,6 +5948,12 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   justify-content: center;
 }
 
+.dividends .strategyCards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+}
+
 .dividends .strategyCards-card {
   flex-basis: 49%;
   display: flex;
@@ -13845,7 +13851,7 @@ td {
 }
 
 .strategyCards-card:hover {
-  box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  box-shadow: 0 18px 16px -13px rgba(62, 84, 216, 0.1);
   background-color: #FCFDFF;
 }
 
@@ -15274,6 +15280,11 @@ body.viewProfile .header-controls-links-link.auth span {
     transform: scale(0.75);
   }
 
+  .dividends .strategyCards {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+  }
+
   .dividends .strategyCards-card-content-graph #dividendsGraph {
     transform: scale(1.3);
   }
@@ -15458,6 +15469,11 @@ body.viewProfile .header-controls-links-link.auth span {
 @media (max-width: 1289px) {
   .section-inner {
     max-width: 950px;
+  }
+
+  .dividends .strategyCards {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
   }
 
   .main-content-controlls {
