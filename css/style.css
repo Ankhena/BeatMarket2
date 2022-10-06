@@ -5733,8 +5733,8 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .dividends .period-info-filter {
   display: inline-block;
-  background-color: #FCFDFF;
-  border: 1px solid #D3E3FF;
+  background-color: #fcfdff;
+  border: 1px solid #d3e3ff;
   border-radius: 6px;
   margin-left: 32px;
   padding: 5px 16px;
@@ -5952,24 +5952,17 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-content: space-between;
+  background: #fff;
+  border: 1px solid #D3E3FF;
+  border-radius: 1rem;
+  padding: 1.35rem;
 }
 
 .dividends .strategyCards-card {
   flex-basis: 49%;
   display: flex;
   flex-direction: column;
-}
-
-.dividends .strategyCards-card-coef {
-  display: flex;
-}
-
-.dividends .strategyCards-card-coef span {
-  color: #fff;
-  background-color: #3E54D8;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
+  border: none;
 }
 
 .dividends .strategyCards-card-cash {
@@ -6133,6 +6126,29 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .dividends .strategyCards-card-content-info-item span {
   font-weight: 600;
   color: #24252E;
+}
+
+.dividends .strategyCards-card-coef {
+  display: flex;
+}
+
+.dividends .strategyCards-card-value {
+  --color: #fff;
+  color: var(--color);
+  background-color: #3E54D8;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.dividends .strategyCards-card-value--positive {
+  --color: #199F27;
+  background: transparent;
+}
+
+.dividends .strategyCards-card-value--negative {
+  --color: #ED6373;
+  background: transparent;
 }
 
 .statTable {
