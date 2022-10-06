@@ -5930,6 +5930,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   align-items: center;
 }
 
+.dividends .table-content-item-info span:first-child {
+  font-weight: 600;
+}
+
 .dividends .table-content-item-info span.success {
   background-color: rgba(25, 159, 39, 0.5);
   color: #fff;
