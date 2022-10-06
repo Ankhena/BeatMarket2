@@ -269,6 +269,10 @@
             display: flex;
             align-items: center;
 
+            &:first-child {
+              font-weight: 600;
+            }
+
             &.success {
               background-color: $color_green_light;
               color: $color_white;
