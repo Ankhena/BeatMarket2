@@ -549,4 +549,36 @@
     }
   }
 
+  .blockSection__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .dividends__switcher {
+    display: flex;
+    column-gap: rem(20, 18);
+  }
+
+  .dividends__switcher-btn {
+    padding: 0.8rem 0;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    font-size: rem(16, 18);
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+
+    &.active {
+      border-color: $color_blue;
+      color: $color_blue;
+    }
+
+    &:hover {
+      border-color: $color_blue;
+      color: $color_blue;
+    }
+
+  }
+
 }

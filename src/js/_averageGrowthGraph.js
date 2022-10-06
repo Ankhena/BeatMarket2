@@ -172,12 +172,12 @@ function initAverageGrowthGraph() {
     function average(arr) {
         if(arr.length === 0)
             return 0;
-    
+
         let sum = 0;
-    
+
         for(let i = 0; i < arr.length; i++) {
             sum += arr[i];
-        } 
+        }
         return sum / arr.length;
     }
 
@@ -189,7 +189,7 @@ function initAverageGrowthGraph() {
         yData[0].forEach((elem, index) => {
             needArray.push(average([yData[0][index], yData[1][index], yData[2][index]]));
         });
-        
+
         return needArray;
     }
 
@@ -285,7 +285,7 @@ function initAverageGrowthGraph() {
                 name: "name",
                 states: { hover: { enabled: false } },
                 data: averageGrowthGraphData(),
-                color: "#3E54D8",
+                color: "#199F27",
             },
         ]
     });
