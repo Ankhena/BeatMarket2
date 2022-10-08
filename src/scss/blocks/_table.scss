@@ -8,6 +8,10 @@
   }
 }
 
+.paperDontTrade__popup {
+	transform: translateY(32%);
+}
+
 .table--radius {
   @include block-beauty;
   overflow: hidden;
