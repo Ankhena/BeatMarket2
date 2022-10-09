@@ -513,7 +513,7 @@
 
 		&-header {
 			display: flex;
-			align-items: flex-start;
+			align-items: center;
 
 			@media ($media_sm) {
 				justify-content: space-between;
@@ -521,6 +521,16 @@
 
 			@media($media_xs) {
 				flex-wrap: wrap;
+			}
+
+			&-row {
+				display: flex;
+				align-items: center;
+				flex-grow: 1;
+
+				@media ($media_sm) {
+					justify-content: space-between;
+				}
 			}
 
 
@@ -581,7 +591,11 @@
 						transform: translate(0, 100%);
 
 						@media ($media_sm) {
-							transform: translate(0, 100%);
+							transform: translate(79%, 100%);
+						}
+
+						@media ($media_xs) {
+							transform: translate(12%, 100%);
 						}
 					}
 
@@ -592,7 +606,11 @@
 					}
 
 					@media ($media_sm) {
-						transform: translate(35%, 100%);
+						transform: translate(85%, 100%);
+					}
+
+					@media ($media_xs) {
+						transform: translate(11%, 100%);
 					}
 				}
 			}
