@@ -14,55 +14,6 @@
       flex-direction: column;
     }
 
-    &-info {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
-      h4 {
-        font-weight: 600;
-        color: $color_black_title;
-        margin-right: 0.9rem;
-      }
-
-      &-date {
-        display: flex;
-        align-items: center;
-        padding: 0.2rem 0;
-        border-bottom: 1px dashed lighten($color_blue, 10%);
-
-        span {
-          font-weight: 600;
-          color: $color_blue;
-          line-height: 1.4;
-        }
-
-        svg {
-          width: 20px;
-          height: 20px;
-          margin-left: 0.5rem;
-        }
-      }
-
-      &-filter {
-        display: inline-block;
-        background-color: #fcfdff;
-        border: 1px solid #d3e3ff;
-        border-radius: 6px;
-        margin-left: 32px;
-        padding: 5px 16px;
-        font-weight: 600;
-        font-size: 14px;
-        color: $color_blue;
-        transition: background-color .3s;
-
-        &:hover {
-          background-color: $color_blue_hover;
-          color: $color_white;
-        }
-      }
-    }
-
     &-status {
       display: flex;
       align-items: center;
@@ -115,6 +66,60 @@
           transform: translateY(-50%);
           border-radius: 50%;
         }
+      }
+    }
+  }
+
+  .period-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media ($media_sm) {
+      order: -1;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-weight: 600;
+      color: $color_black_title;
+      margin-right: 0.9rem;
+    }
+
+    &-date {
+      display: flex;
+      align-items: center;
+      padding: 0.2rem 0;
+      border-bottom: 1px dashed lighten($color_blue, 10%);
+
+      span {
+        font-weight: 600;
+        color: $color_blue;
+        line-height: 1.4;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-left: 0.5rem;
+      }
+    }
+
+    &-filter {
+      display: inline-block;
+      background-color: #fcfdff;
+      border: 1px solid #d3e3ff;
+      border-radius: 6px;
+      margin-left: 32px;
+      padding: 5px 16px;
+      font-weight: 600;
+      font-size: 14px;
+      color: $color_blue;
+      transition: background-color .3s;
+
+      &:hover {
+        background-color: $color_blue_hover;
+        color: $color_white;
       }
     }
   }
@@ -331,6 +336,13 @@
 
     border: none;
 
+    @media ($media_sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
     &-cash {
       display: flex;
       justify-content: space-between;
@@ -531,6 +543,10 @@
 
   .strategyCards-card-coef {
     display: flex;
+
+    @media ($media_sm) {
+      margin-bottom: 0;
+    }
   }
 
   .strategyCards-card-value {
@@ -544,11 +560,13 @@
 
     &--positive {
       --color: #{$color_green};
+      padding-block: 0;
       background: transparent;
     }
 
     &--negative {
       --color: #{$color_red};
+      padding-block: 0;
       background: transparent;
     }
   }
@@ -557,6 +575,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media ($media_sm) {
+
+    }
+
+    .dividends__switcher {
+      @media ($media_sm) {
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      &::before {
+        @media ($media_sm) {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 1px;
+          transform: translateX(-50%);
+          width: 100vw;
+          height: 1px;
+          background: $selectric-border-color;
+        }
+      }
+
+    }
   }
 
   .dividends__switcher {
@@ -565,6 +609,7 @@
   }
 
   .dividends__switcher-btn {
+    position: relative;
     padding: 0.8rem 0;
     border: 0;
     border-bottom: 3px solid transparent;
