@@ -2956,7 +2956,25 @@ initSlider();
         data: averageGrowthGraphData(),
         color: "#199f27",
       },
-    ]
+    ],
+
+    responsive: {
+      rules: [{
+        condition: {
+          maxWidth: 700
+        },
+
+        chartOptions: {
+          chart: {
+            type: 'bar'
+          },
+          legend: {
+            enabled: false
+          }
+        }
+      }]
+    }
+
   });
 }
 

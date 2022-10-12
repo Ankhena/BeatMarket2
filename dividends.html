@@ -628,10 +628,10 @@
                             <h4 class="dividendsTarget__subtitle">Фактические дивиденды</h4>
                             <span class="dividendsTarget__label dividendsTarget__label--primary">421 USD&nbsp;/&nbsp;мес.</span>
                           </div>
-                  <!--        <div class="dividendsTarget__detailItem">
-                            <h4 class="dividendsTarget__subtitle">Прогресс</h4>
-                            <span class="dividendsTarget__label">25 %</span>
-                          </div>-->
+                          <!--        <div class="dividendsTarget__detailItem">
+                                    <h4 class="dividendsTarget__subtitle">Прогресс</h4>
+                                    <span class="dividendsTarget__label">25 %</span>
+                                  </div>-->
                           <div class="dividendsTarget__detailItem">
                             <h4 class="dividendsTarget__subtitle">Осталось до цели</h4>
                             <span class="dividendsTarget__label">933 дня</span>
@@ -645,8 +645,8 @@
                         <div class="dividendsTarget__progressBar">
                           <div class="dividendsTarget__progressBarTrack dividendsTarget__progressBarTrack--success"
                                style="--progressStart: 0%; --progressLength: 40%;"></div>
-<!--                          <div class="dividendsTarget__progressBarTrack dividendsTarget__progressBarTrack&#45;&#45;danger"-->
-<!--                               style="&#45;&#45;progressStart: 60%; &#45;&#45;progressLength: 10%;"></div>-->
+                          <!--                          <div class="dividendsTarget__progressBarTrack dividendsTarget__progressBarTrack&#45;&#45;danger"-->
+                          <!--                               style="&#45;&#45;progressStart: 60%; &#45;&#45;progressLength: 10%;"></div>-->
                           <div class="dividendsTarget__progressBarTrack" style="--progressLength: 32%;">
                           </div>
                           <div class="dividendsTarget__progressBarDescription" style="--progressLength: 32%;">
@@ -1198,284 +1198,12 @@
                       </div>
                     </header>
                     <div class="blockSection__content blockSection__content--scroll customScroll">
-                      <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
+                      <!--mainFactorsGraph--grow добавить если нужно задать мин ширину и прокрутку для графика-->
+                      <div class="stategyPromo-graph-chart mainFactorsGraph "
                            id="averageGrowthGraph"></div>
                     </div>
                   </section>
 
-
-                  <!--<section class="dividends__item blockSection">
-                    <div class="blockSection__header">
-                      <h3 class="blockSection__title">Дивидендная аналитика <span
-                          class="blockSection__ticket">VIAC</span></h3>
-                    </div>
-                    <div class="blockSection__alert">
-                      <svg>
-                        <use xlink:href="img/main.svg#icon-dangerCircle"></use>
-                      </svg>
-                      <span>В стратегии есть компании, которые не платят или прекратили платить дивиденды</span>
-                    </div>
-                    <div class="blockSection__content">
-
-                      &lt;!&ndash; <div class="blockSection__cardAnalytics">
-                                                      <div class="cardAnalytic cardAnalytic&#45;&#45;simple">
-                                                          <h4 class="cardAnalytic__title">Дивидендный рост за 5 лет</h4>
-                                                          <span class="cardAnalytic__value">17.32 %</span>
-                                                      </div>
-                                                      <div class="cardAnalytic cardAnalytic&#45;&#45;simple">
-                                                          <h4 class="cardAnalytic__title">Непрерывный рост</h4>
-                                                          <span class="cardAnalytic__value">7 лет</span>
-                                                      </div>
-                                                      <div class="cardAnalytic cardAnalytic&#45;&#45;simple">
-                                                          <h4 class="cardAnalytic__title">Payout Ratio</h4>
-                                                          <span class="cardAnalytic__value">21.22 %</span>
-                                                      </div>
-                                                  </div> &ndash;&gt;
-
-                      <div class="blockSection__cardAnalytics">
-                        <div class="cardAnalytic cardAnalytic&#45;&#45;simple">
-                          <h4 class="cardAnalytic__title">Payout Ratio</h4>
-                          <span class="cardAnalytic__value">21.22 %</span>
-                        </div>
-                        <div class="cardAnalytic cardAnalytic&#45;&#45;simple cardAnalytic&#45;&#45;grow">
-                          <h4 class="cardAnalytic__title">Темпы роста</h4>
-
-                          <div class="ratesOfGrowth">
-                            <div class="ratesOfGrowth__row">
-                              <span class="ratesOfGrowth__col"></span>
-                              <span class="ratesOfGrowth__col ratesOfGrowth__col&#45;&#45;title">Стратегия</span>
-                              <span class="ratesOfGrowth__col ratesOfGrowth__col&#45;&#45;title">Бенчмарк</span>
-                            </div>
-                            <div class="ratesOfGrowth__row">
-                              <span class="ratesOfGrowth__col">1 год</span>
-                              <span class="ratesOfGrowth__col ratesOfGrowth__col&#45;&#45;success">+17.32 %</span>
-                              <span class="ratesOfGrowth__col ratesOfGrowth__col&#45;&#45;danger">-6.32 %</span>
-                            </div>
-                            <div class="ratesOfGrowth__row">
-                              <span class="ratesOfGrowth__col">5 лет</span>
-                              <span class="ratesOfGrowth__col ratesOfGrowth__col&#45;&#45;success">+17.32 %</span>
-                              <span class="ratesOfGrowth__col ratesOfGrowth__col&#45;&#45;danger">-6.32 %</span>
-                            </div>
-                            <div class="ratesOfGrowth__row">
-                              <span class="ratesOfGrowth__col">10 лет</span>
-                              <span class="ratesOfGrowth__col ratesOfGrowth__col&#45;&#45;success">+17.32 %</span>
-                              <span class="ratesOfGrowth__col ratesOfGrowth__col&#45;&#45;danger">-6.32 %</span>
-                            </div>
-                          </div>
-
-                          &lt;!&ndash; <div class="cardAnalytic__content">
-                                                              <div class="cardAnalytic__item">
-                                                                  <h4 class="cardAnalytic__subtitle">Стратегия</h4>
-                                                                  <span class="cardAnalytic__value cardAnalytic__value&#45;&#45;success">+17.32 %</span>
-                                                              </div>
-                                                              <div class="cardAnalytic__item">
-                                                                  <h4 class="cardAnalytic__subtitle">Бенчмарк</h4>
-                                                                  <span class="cardAnalytic__value cardAnalytic__value&#45;&#45;error">-6.32 %</span>
-                                                              </div>
-                                                          </div> &ndash;&gt;
-                        </div>
-                      </div>
-                    </div>
-                  </section>-->
-
-
-                  <!--<section class="dividends__item blockSection">
-                    <div class="blockSection__header">
-                      <h3 class="blockSection__title">Рост дивидендного дохода по секторам</h3>
-                    </div>
-                    <div class="blockSection__content">
-                      <div class="statTable">
-                        <div class="statTable__row statTable__row&#45;&#45;header">
-                          <span class="statTable__item">Сектор</span>
-                          <span class="statTable__item">Прирост выплат</span>
-                          <span class="statTable__item">Доля портфеля</span>
-                          <span class="statTable__item">Сумма выплат</span>
-                          <span class="statTable__item statTable__item&#45;&#45;shrink">Акции</span>
-                        </div>
-                        <div class="statTable__content">
-                          <div class="statTable__row statTable__row&#45;&#45;content">
-                            <div class="statTable__item statTable__item&#45;&#45;sticker statSticker">
-                              <div class="statSticker__icon">
-                                <svg class="statSticker__arrow">
-                                  <use xlink:href="img/main.svg#icon-arrow-down"></use>
-                                </svg>
-                              </div>
-                              <div class="statSticker__content">
-                                <h3 class="statSticker__title">Банковская сфера</h3>
-                              </div>
-                              <div class="statSticker__percent statSticker__percent&#45;&#45;success">
-                                <span>+4.21%</span>
-                              </div>
-                            </div>
-                            <div class="statTable__item statTable__item&#45;&#45;error">
-                              <span class="statTable__description">Прирост выплат</span>
-                              <span class="statTable__value">-1.52%</span>
-                            </div>
-                            <div class="statTable__item">
-                              <span class="statTable__description">Доля портфеля</span>
-                              <span class="statTable__value">5</span>
-                            </div>
-                            <div class="statTable__item">
-                              <span class="statTable__description">Сумма выплат</span>
-                              <span class="statTable__value">25.5%</span>
-                            </div>
-                            <div class="statTable__item statTable__item&#45;&#45;shrink">
-                              <span class="statTable__description">Акции</span>
-                              <span class="statTable__value">4</span>
-                            </div>
-                          </div>
-                          <div class="statTable__subtable statSubtable">
-                            <div class="statSubtable__table statTable statTable&#45;&#45;empty">
-                              <div class="statTable__row statTable__row&#45;&#45;content">
-                                <span class="statTable__item statTable__item&#45;&#45;mobDate">Отрасль 1</span>
-                                <div class="statTable__item statTable__item&#45;&#45;error">
-                                  <span class="statTable__description">Прирост выплат</span>
-                                  <span class="statTable__value">-1.52%</span>
-                                </div>
-                                <div class="statTable__item">
-                                  <span class="statTable__description">Доля портфеля</span>
-                                  <span class="statTable__value">5</span>
-                                </div>
-                                <div class="statTable__item">
-                                  <span class="statTable__description">Сумма выплат</span>
-                                  <span class="statTable__value">25.5%</span>
-                                </div>
-                                <div class="statTable__item statTable__item&#45;&#45;shrink">
-                                  <span class="statTable__description">Акции</span>
-                                  <span class="statTable__value">7</span>
-                                </div>
-                              </div>
-                              <div class="statTable__row statTable__row&#45;&#45;content">
-                                <span class="statTable__item statTable__item&#45;&#45;mobDate">Отрасль 2</span>
-                                <div class="statTable__item statTable__item&#45;&#45;error">
-                                  <span class="statTable__description">Прирост выплат</span>
-                                  <span class="statTable__value">-1.52%</span>
-                                </div>
-                                <div class="statTable__item">
-                                  <span class="statTable__description">Доля портфеля</span>
-                                  <span class="statTable__value">5</span>
-                                </div>
-                                <div class="statTable__item">
-                                  <span class="statTable__description">Сумма выплат</span>
-                                  <span class="statTable__value">25.5%</span>
-                                </div>
-                                <div class="statTable__item statTable__item&#45;&#45;shrink">
-                                  <span class="statTable__description">Акции</span>
-                                  <span class="statTable__value">8</span>
-                                </div>
-                              </div>
-                              <div class="statTable__row statTable__row&#45;&#45;content">
-                                <span class="statTable__item statTable__item&#45;&#45;mobDate">Отрасль 3</span>
-                                <div class="statTable__item statTable__item&#45;&#45;error">
-                                  <span class="statTable__description">Прирост выплат</span>
-                                  <span class="statTable__value">-1.52%</span>
-                                </div>
-                                <div class="statTable__item">
-                                  <span class="statTable__description">Доля портфеля</span>
-                                  <span class="statTable__value">5</span>
-                                </div>
-                                <div class="statTable__item">
-                                  <span class="statTable__description">Сумма выплат</span>
-                                  <span class="statTable__value">25.5%</span>
-                                </div>
-                                <div class="statTable__item statTable__item&#45;&#45;shrink">
-                                  <span class="statTable__description">Акции</span>
-                                  <span class="statTable__value">2</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="statTable__content">
-                          <div class="statTable__row statTable__row&#45;&#45;content">
-                            <div class="statTable__item statTable__item&#45;&#45;sticker statSticker">
-                              <div class="statSticker__icon">
-                                <svg class="statSticker__arrow">
-                                  <use xlink:href="img/main.svg#icon-arrow-down"></use>
-                                </svg>
-                              </div>
-                              <div class="statSticker__content">
-                                <h3 class="statSticker__title">Производство</h3>
-                              </div>
-                              <div class="statSticker__percent statSticker__percent&#45;&#45;error">
-                                <span>+1.56%</span>
-                              </div>
-                            </div>
-                            <div class="statTable__item statTable__item&#45;&#45;success">
-                              <span class="statTable__description">Прирост выплат</span>
-                              <span class="statTable__value">+3.72%</span>
-                            </div>
-                            <div class="statTable__item">
-                              <span class="statTable__description">Доля портфеля</span>
-                              <span class="statTable__value">5</span>
-                            </div>
-                            <div class="statTable__item">
-                              <span class="statTable__description">Сумма выплат</span>
-                              <span class="statTable__value">25.5%</span>
-                            </div>
-                            <div class="statTable__item statTable__item&#45;&#45;shrink">
-                              <span class="statTable__description">Акции</span>
-                              <span class="statTable__value">3</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="statTable__content">
-                          <div class="statTable__row statTable__row&#45;&#45;content">
-                            <div class="statTable__item statTable__item&#45;&#45;sticker statSticker">
-                              <div class="statSticker__icon">
-                                <svg class="statSticker__arrow">
-                                  <use xlink:href="img/main.svg#icon-arrow-down"></use>
-                                </svg>
-                              </div>
-                              <div class="statSticker__content">
-                                <h3 class="statSticker__title">Здравоохранение</h3>
-                              </div>
-                              <div class="statSticker__percent statSticker__percent&#45;&#45;error">
-                                <span>+1.56%</span>
-                              </div>
-                            </div>
-                            <div class="statTable__item statTable__item&#45;&#45;error">
-                              <span class="statTable__description">Прирост выплат</span>
-                              <span class="statTable__value">-1.52%</span>
-                            </div>
-                            <div class="statTable__item">
-                              <span class="statTable__description">Доля портфеля</span>
-                              <span class="statTable__value">5</span>
-                            </div>
-                            <div class="statTable__item">
-                              <span class="statTable__description">Сумма выплат</span>
-                              <span class="statTable__value">25.5%</span>
-                            </div>
-                            <div class="statTable__item statTable__item&#45;&#45;shrink">
-                              <span class="statTable__description">Акции</span>
-                              <span class="statTable__value">1</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="statTable__content statTable__content&#45;&#45;opened statTable__content&#45;&#45;disabled">
-                          <div class="statTable__row statTable__row&#45;&#45;content">
-                            <span class="statTable__item statTable__item&#45;&#45;mobDate">Итого</span>
-                            <div class="statTable__item statTable__item&#45;&#45;success">
-                              <span class="statTable__description">Прирост выплат</span>
-                              <span class="statTable__value">+0.32%</span>
-                            </div>
-                            <div class="statTable__item">
-                              <span class="statTable__description">Доля портфеля</span>
-                              <span class="statTable__value">5</span>
-                            </div>
-                            <div class="statTable__item">
-                              <span class="statTable__description">Сумма выплат</span>
-                              <span class="statTable__value">25.5%</span>
-                            </div>
-                            <div class="statTable__item statTable__item&#45;&#45;shrink">
-                              <span class="statTable__description">Акции</span>
-                              <span class="statTable__value">2</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>-->
 
                 </div>
               </div>
