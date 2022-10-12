@@ -14179,6 +14179,17 @@ body.viewProfile .header-controls-links-link.auth span {
   display: none;
 }
 
+.month-cash .month-cash__graph .customTooltip__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.month-cash .month-cash__graph h6 {
+  margin-top: 0;
+}
+
 .month-cash__title {
   font-size: 1.1rem;
   font-weight: 600;
@@ -14227,13 +14238,14 @@ body.viewProfile .header-controls-links-link.auth span {
 .month-cash__graph .highcharts-tooltip > span {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid #D3E3FF;
-  box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
+  box-shadow: 0 12px 23px -9px rgba(152, 170, 203, 0.3);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 1.3rem;
   padding: 1rem 1.2rem;
   font-size: 0.9rem !important;
   font-weight: 500;
+  transform: translateY(4px);
 }
 
 .month-cash__graph .highcharts-tooltip > span span:first-child {
