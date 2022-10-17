@@ -342,6 +342,18 @@
 			flex-basis: 60%;
 		}
 
+		&--fixed {
+			@media(min-width: 1150px) {
+				position: absolute;
+				background: #fff;
+				z-index: 9999;
+				box-shadow: 9px 7px 8px rgb(62 84 216 / 10%);
+				transform: translate(-27px, -1.7px);
+				padding-left: 1rem;
+			}
+
+		}
+
 		&--success {
 			color: $color_green;
 		}
