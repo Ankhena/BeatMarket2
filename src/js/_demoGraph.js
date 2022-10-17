@@ -1,6 +1,6 @@
 function initDemoGraph() {
 
-    const graphs = ["demoGraph-1", "demoGraph-2", "demoGraph-3", "demoGraph-4", "demoGraph-5", "demoGraph-6"];
+    const graphs = ["demoGraph-1", "demoGraph-2", "demoGraph-3", "demoGraph-5", "demoGraph-6"];
 
     const myRenderGraphCategories = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
     const myRenderShowYLine = true; // если нужен показ верт. линий в графе, ставим true
@@ -19,7 +19,7 @@ function initDemoGraph() {
                 },
                 legend: {
                     enabled: false,
-    
+
                     useHTML: true,
                     align: "left",
                     verticalAlign: "top",
@@ -71,7 +71,7 @@ function initDemoGraph() {
                     }
                 },
                 series: [
-            
+
                     {
                         name: 'VIAC',
                         marker: {
@@ -80,22 +80,22 @@ function initDemoGraph() {
                         data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
                         color: "#3E54D8"
                     }
-            
+
                 ]
             });
-        
+
             if (myRenderShowYLine) {
                 let renderChartWidth = +document.querySelector(`#${item} .highcharts-plot-background`).getAttributeNode("width").value;
                 let renderChartOffsetX = (renderChartWidth / myRenderGraphCategories.length) / 2;
-            
+
                 document.querySelectorAll(`#${item} .highcharts-xaxis-grid .highcharts-grid-line`).forEach(item => {
                     item.style.transform = 'translateX(' + renderChartOffsetX + 'px)';
                 });
             }
-            
+
         }
     });
-    
+
 }
 
 initDemoGraph();
