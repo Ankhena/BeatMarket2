@@ -1,7 +1,7 @@
 // === Modal ===
 
 .modal-content::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   background-color: #F5F5F5;
 }
 
@@ -26,37 +26,6 @@
   transition: 0.3s ease-in-out;
   z-index: 21;
 
-  .selectDropdown-item {
-    padding-top: 38px;
-    border-top: 1px solid #E6EEFF;
-  }
-
-  .modal-content-switcher-button {
-    span {
-      padding: 0.8rem 0;
-    }
-  }
-
-  .paperDontTrade {
-    width: 24px;
-    height: 24px;
-    margin-left: 8px;
-    position: static;
-
-    &__popup {
-      max-width: 99%;
-      left: 36%;
-      overflow: auto;
-      bottom: -6%;
-      transform: translateY(0);
-
-      @media($media_sm) {
-        left: 1%;
-        bottom: -13%;
-      }
-    }
-  }
-
   &.visible {
     top: 50%;
   }
@@ -65,8 +34,6 @@
     display: inline-block;
     color: $color_grey;
     margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
   }
 
   .use_mt {
@@ -172,7 +139,6 @@
     overflow-y: auto;
     padding: 0 1.8rem;
     margin-bottom: 1.8rem;
-    max-height: min(70vh, 38rem);
 
     @media ($media_xs) {
       padding: 0 1.5rem;
@@ -257,9 +223,7 @@
         }
 
         &.inline {
-
-          label,
-          li {
+          label, li {
             &:not(:last-child) {
               @media ($media_sm) {
                 border-bottom: none;
@@ -268,8 +232,7 @@
           }
         }
 
-        label,
-        li {
+        label, li {
           flex-basis: 50%;
           text-align: center;
           transition: 0.3s ease-in-out;
@@ -286,8 +249,7 @@
             }
           }
 
-          input[type='radio']:checked~span,
-          &.ui-tabs-active {
+          input[type='radio']:checked ~ span, &.ui-tabs-active {
             background-color: $color_blue;
             color: $color_white;
 
@@ -296,8 +258,7 @@
             }
           }
 
-          span,
-          a {
+          span, a {
             text-decoration: none;
             display: flex;
             justify-content: center;
@@ -480,8 +441,7 @@
         }
       }
 
-      &-cost,
-      &-count {
+      &-cost, &-count {
 
         input {
           padding: 16px;
@@ -506,8 +466,7 @@
         }
       }
 
-      &-count,
-      &-date {
+      &-count, &-date {
         flex-basis: 24%;
       }
 
@@ -563,8 +522,7 @@
             border: 1px solid transparent;
             border-radius: 5px;
 
-            &:hover,
-            &:focus {
+            &:hover, &:focus {
               background-color: $color_white;
             }
 
@@ -834,8 +792,7 @@
           flex-basis: auto;
         }
 
-        &.gray,
-        &.red {
+        &.gray, &.red {
           background-color: unset;
         }
 
