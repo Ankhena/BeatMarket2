@@ -112,6 +112,339 @@ if (document.querySelector(".analyticScanner")) {
         ps: 2.15,
         continent: 'Австралия'
       },
+      {
+        img: "pcg.png",
+        imgAlt: 'Иконка PCG',
+        title: 'PCG',
+        subtitle: 'Microsoft',
+        price: 126.23,
+        percent: 1.13,
+        isPercent: "error",
+        income: 1.6,
+        exchange: "NYSE",
+        bmsGlobal: 93,
+        bmsLocal: 62,
+        bmdGlobal: 45,
+        bmdLocal: 25,
+        isBluBmsGlobalr: true,
+        isBluBmsLocalr: true,
+        isBluBmdGlobalr: true,
+        isBluBmdLocalr: false,
+        pe: 3.5,
+        ps: 1.2,
+        continent: 'Азия'
+      },
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 100.23,
+        percent: 8.2,
+        isPercent: "error",
+        income: 1.5,
+        exchange: "NYSE",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: false,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
+        bmsGlobal: 95,
+        bmsLocal: 45,
+        bmdGlobal: 51,
+        bmdLocal: 31,
+        pe: 1.23,
+        ps: 1.67,
+        continent: 'Европа'
+      },
+      {
+        img: "pcg.png",
+        imgAlt: 'Иконка PCG',
+        title: 'PCG',
+        subtitle: 'Microsoft',
+        price: 123.23,
+        percent: 1.23,
+        isPercent: "success",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
+        income: 1.4,
+        exchange: "NYSE",
+        bmsGlobal: 75,
+        bmsLocal: 65,
+        bmdGlobal: 52,
+        bmdLocal: 32,
+        pe: 2.98,
+        ps: 1.78,
+        continent: 'Северная Америка'
+      },
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 85.23,
+        percent: 1.2,
+        isPercent: "success",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
+        income: 1.3,
+        exchange: "NYSE",
+        bmsGlobal: 15,
+        bmsLocal: 25,
+        bmdGlobal: 53,
+        bmdLocal: 33,
+        pe: 2.35,
+        ps: 2.85,
+        continent: 'Южная Америка'
+      },
+
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 82.23,
+        percent: 1.28,
+        isPercent: "error",
+        income: 1.2,
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
+        exchange: "NYSE",
+        bmsGlobal: 55,
+        bmsLocal: 35,
+        bmdGlobal: 54,
+        bmdLocal: 34,
+        pe: 2.75,
+        ps: 2.15,
+        continent: 'Австралия'
+      },
+      {
+        img: "pcg.png",
+        imgAlt: 'Иконка PCG',
+        title: 'PCG',
+        subtitle: 'Microsoft',
+        price: 126.23,
+        percent: 1.13,
+        isPercent: "error",
+        income: 1.6,
+        exchange: "NYSE",
+        bmsGlobal: 93,
+        bmsLocal: 62,
+        bmdGlobal: 45,
+        bmdLocal: 25,
+        isBluBmsGlobalr: true,
+        isBluBmsLocalr: true,
+        isBluBmdGlobalr: true,
+        isBluBmdLocalr: false,
+        pe: 3.5,
+        ps: 1.2,
+        continent: 'Азия'
+      },
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 100.23,
+        percent: 8.2,
+        isPercent: "error",
+        income: 1.5,
+        exchange: "NYSE",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: false,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
+        bmsGlobal: 95,
+        bmsLocal: 45,
+        bmdGlobal: 51,
+        bmdLocal: 31,
+        pe: 1.23,
+        ps: 1.67,
+        continent: 'Европа'
+      },
+      {
+        img: "pcg.png",
+        imgAlt: 'Иконка PCG',
+        title: 'PCG',
+        subtitle: 'Microsoft',
+        price: 123.23,
+        percent: 1.23,
+        isPercent: "success",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
+        income: 1.4,
+        exchange: "NYSE",
+        bmsGlobal: 75,
+        bmsLocal: 65,
+        bmdGlobal: 52,
+        bmdLocal: 32,
+        pe: 2.98,
+        ps: 1.78,
+        continent: 'Северная Америка'
+      },
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 85.23,
+        percent: 1.2,
+        isPercent: "success",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
+        income: 1.3,
+        exchange: "NYSE",
+        bmsGlobal: 15,
+        bmsLocal: 25,
+        bmdGlobal: 53,
+        bmdLocal: 33,
+        pe: 2.35,
+        ps: 2.85,
+        continent: 'Южная Америка'
+      },
+
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 82.23,
+        percent: 1.28,
+        isPercent: "error",
+        income: 1.2,
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
+        exchange: "NYSE",
+        bmsGlobal: 55,
+        bmsLocal: 35,
+        bmdGlobal: 54,
+        bmdLocal: 34,
+        pe: 2.75,
+        ps: 2.15,
+        continent: 'Австралия'
+      },
+      {
+        img: "pcg.png",
+        imgAlt: 'Иконка PCG',
+        title: 'PCG',
+        subtitle: 'Microsoft',
+        price: 126.23,
+        percent: 1.13,
+        isPercent: "error",
+        income: 1.6,
+        exchange: "NYSE",
+        bmsGlobal: 93,
+        bmsLocal: 62,
+        bmdGlobal: 45,
+        bmdLocal: 25,
+        isBluBmsGlobalr: true,
+        isBluBmsLocalr: true,
+        isBluBmdGlobalr: true,
+        isBluBmdLocalr: false,
+        pe: 3.5,
+        ps: 1.2,
+        continent: 'Азия'
+      },
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 100.23,
+        percent: 8.2,
+        isPercent: "error",
+        income: 1.5,
+        exchange: "NYSE",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: false,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
+        bmsGlobal: 95,
+        bmsLocal: 45,
+        bmdGlobal: 51,
+        bmdLocal: 31,
+        pe: 1.23,
+        ps: 1.67,
+        continent: 'Европа'
+      },
+      {
+        img: "pcg.png",
+        imgAlt: 'Иконка PCG',
+        title: 'PCG',
+        subtitle: 'Microsoft',
+        price: 123.23,
+        percent: 1.23,
+        isPercent: "success",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: true,
+        isBlurBmdLocal: false,
+        income: 1.4,
+        exchange: "NYSE",
+        bmsGlobal: 75,
+        bmsLocal: 65,
+        bmdGlobal: 52,
+        bmdLocal: 32,
+        pe: 2.98,
+        ps: 1.78,
+        continent: 'Северная Америка'
+      },
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 85.23,
+        percent: 1.2,
+        isPercent: "success",
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
+        income: 1.3,
+        exchange: "NYSE",
+        bmsGlobal: 15,
+        bmsLocal: 25,
+        bmdGlobal: 53,
+        bmdLocal: 33,
+        pe: 2.35,
+        ps: 2.85,
+        continent: 'Южная Америка'
+      },
+
+      {
+        img: "viac.svg",
+        imgAlt: 'Иконка VIAC',
+        title: 'VIAC',
+        subtitle: 'Microsoft company',
+        price: 82.23,
+        percent: 1.28,
+        isPercent: "error",
+        income: 1.2,
+        isBlurBmsGlobal: false,
+        isBlurBmsLocal: true,
+        isBlurBmdGlobal: false,
+        isBlurBmdLocal: true,
+        exchange: "NYSE",
+        bmsGlobal: 55,
+        bmsLocal: 35,
+        bmdGlobal: 54,
+        bmdLocal: 34,
+        pe: 2.75,
+        ps: 2.15,
+        continent: 'Австралия'
+      },
 
     ]
 
@@ -123,7 +456,6 @@ if (document.querySelector(".analyticScanner")) {
     const inputCounts = document.querySelectorAll('.analyticScanner__count input')
     const resetBtnElement = document.querySelector("#reset-filter")
     const sortedTitleBtn = document.querySelector("#sorted-title")
-    const sortedTitleBtnMobile = document.querySelector("#sorted-title-mobile")
     const sortedPriceBtn = document.querySelector("#sorted-price")
     const sortedPercentBtn = document.querySelector("#sorted-percent")
     const sortedExChangeBtn = document.querySelector("#sorted-exChange")
@@ -171,7 +503,7 @@ if (document.querySelector(".analyticScanner")) {
 
             if (numberElement) {
               if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) > +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
-                let replacedNode = box.replaceChild(box.children[j], box.children[i])
+                let replacedNode = box.replaceChild(box.children[i], box.children[j])
                 let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
                 insertAfter(replacedNode, box.children[i])
                 insertAfter(replacedNodeFixed, fixedBox.children[i])
@@ -230,7 +562,6 @@ if (document.querySelector(".analyticScanner")) {
     }
 
     sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
-    sortedTitleBtnMobile.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtnMobile, false))
     sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
     sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
     sortedIncomeBtn.addEventListener("click", sortedList.bind(null, "income", sortedIncomeBtn))
@@ -289,27 +620,7 @@ if (document.querySelector(".analyticScanner")) {
       `
 
       const htmlElement = `
-                <div class="table-ticker__content" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.sortedBmsGlobalBtn} data-bmsLocal=${company.sortedBmsLocalBtn} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
-                  <div class="table-ticker__block table-ticker__block--moving">
-                    <div class="table-ticker-block__item">
-                      <div class="table-ticker-block__img">
-                        <img src="./img/statTable__icons/${company.img}" alt="${company.imgAlt}">
-                      </div>
-                      <div class="table-ticker-block__content table-ticker-block__info">
-                        <div class="table-ticker-block-info__content">
-                          <h3 class="table-ticker-block-info__title">${company.title}</h3>
-                            <div class="table-ticker-block__paperDontTrade paperDontTrade">
-                              <svg class="table-ticker-block-paperDontTrade__icon paperDontTrade__icon statStickerInfo__icon">
-                                <use xlink:href="img/main.svg#icon-trendUp"></use>
-                              </svg>
-                                <div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
-                                    бумаги</a></div>
-                              </div>
-                        </div>
-                        <span class="table-ticker-block__subtitle">${company.subtitle}</span>
-                      </div>
-                    </div>
-                  </div>
+                <div class="table-ticker__content" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.bmsGlobal} data-bmsLocal=${company.bmsLocal} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
                   <div class="table-ticker__block onlyText whnr">
                     ${company.price} USD
                   </div>
