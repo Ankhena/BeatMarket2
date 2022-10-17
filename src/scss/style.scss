@@ -144,7 +144,6 @@
 				@media(min-width: 1000px) {
 					margin-left: 2rem;
 				}
-
 				@media ($media_sm) {
 					padding-right: 0;
 				}
@@ -522,7 +521,6 @@
 			@media($media_xs) {
 				flex-wrap: wrap;
 			}
-
 			&-row {
 				display: flex;
 				align-items: center;
