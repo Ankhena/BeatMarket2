@@ -1,0 +1,199 @@
+@import "./lib/colors";
+
+body.app {
+
+	&.blockScroll {
+		overflow: hidden;
+	}
+
+	.header-logo {
+		.logo {
+			left: 0;
+			transform: translateX(1rem);
+		}
+	}
+
+	.section-app {
+		margin: calc(var(--header_height) + 1rem) 0 calc(4.5rem + 1rem) 0;
+		padding: 0 var(--section_padding);
+	}
+
+	.section-header {
+		background: $color_app_fixed_menus;
+		position: fixed;
+		width: 100%;
+		z-index: 6;
+
+		left: 0;
+		top: 0;
+	}
+}
+
+.appMenu {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: $color_app_fixed_menus;
+	box-shadow: 0px -10px 20px -13px rgba(62, 84, 216, 0.3);
+	z-index: 6;
+
+	display: flex;
+	padding: 0.75rem 0;
+
+
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	transform: translateY(0px);
+
+	// .appMenu__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-basis: 100%;
+
+		text-decoration: none;
+		color: $color_black_main;
+
+		&--active {
+
+			.appMenu__icon {
+				stroke: $color_blue;
+			}
+
+			.appMenu__name {
+				color: $color_blue;
+			}
+		}
+	}
+
+	// .appMenu__icon
+
+	&__icon {
+		width: 1.7rem;
+		height: 1.7rem;
+		stroke: $color_black_main;
+	}
+
+	// .appMenu__name
+
+	&__name {
+		font-weight: 500;
+		font-size: 0.75rem;
+		margin-top: 0.5rem;
+	}
+}
+
+.appOverlay {
+	position: fixed;
+	z-index: 5;
+	padding: 6.5rem var(--section_padding);
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background-color: $color_body_bg;
+
+	// .appOverlay__content
+
+	&__content {
+		overflow-y: auto;
+		max-height: calc(100vh - 13rem);
+	}
+
+	// .appOverlay__item
+
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		color: $color_black_main;
+		text-decoration: none;
+		align-items: center;
+		padding: 1.5rem 0;
+
+		&--active {
+
+			.appOverlay__icon {
+				stroke: $color_blue;
+			}
+
+			.appOverlay__name {
+				color: $color_blue;
+			}
+		}
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $color_block_border;
+		}
+	}
+
+	// .appOverlay__icon
+
+	&__icon {
+		transition: 0.3s ease-in-out;
+		width: 1.7rem;
+		height: 1.7rem;
+		stroke: $color_black_main;
+		margin-right: 1rem;
+
+		&--caret {
+			width: 0.9rem;
+			height: 0.9rem;
+			margin: 0 0 0 0.7rem;
+		}
+	}
+
+	// .appOverlay__name
+
+	&__name {
+		font-size: 1.3rem;
+		font-weight: 500;
+	}
+
+	&__switcher {
+		width: 100%;
+	}
+
+	// .appOverlay__checkbox
+
+	&__checkbox {
+		&:checked {
+			~.appOverlay__container {
+				display: flex;
+			}
+
+			~.appOverlay__switcher {
+				.appOverlay__icon {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	// .appOverlay__container
+
+	&__container {
+		margin-top: 1.2rem;
+		flex-basis: 100%;
+		display: none;
+	}
+
+	&__elems {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.4rem 2.6rem;
+	}
+
+	&__elem {
+		font-size: 1.1rem;
+		color: $color_black_main;
+		text-decoration: none;
+
+		&--active {
+			font-weight: 600;
+			color: $color_blue;
+		}
+	}
+}

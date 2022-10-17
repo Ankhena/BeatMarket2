@@ -1,0 +1,1093 @@
+.myStrategy-myPapers-container {
+
+    &.crypt {
+
+        .table {
+
+            &-header h5, &-content-item-header .action, &-content-item-header .changeble, 
+            &-content-item-header-nums span, &-content-item-content-table span, &-content-item-main span {
+    
+                width: 7.7rem;
+                margin-right: 0.2rem;
+    
+                @media ($media_xl) {
+                    width: 6.2rem;
+                    margin-right: 0.2rem;
+                }
+    
+                @media ($media_sm) {
+                    width: 30%;
+                    margin-right: 0.4rem;
+                }
+            }
+
+            &-header h5:first-child, &-content-item-header .action {
+                width: 12rem;
+
+                @media ($media_xl) {
+                    width: 11rem;
+                }
+            }
+
+            .table-content-item-content-table .table-header h5, 
+            .table-content-item-content-table .table-content span {
+                width: 9.5rem;
+
+                @media ($media_xl) {
+                    width: 8rem;
+                }
+            }
+
+            .table-content-item span.comment {
+                white-space: initial;
+            }
+
+            .table-content-item-content-table .table-content span {
+
+                @media ($media_sm) {
+                    width: 35%;
+
+                    &.comment {
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            // .table-content-item-content-table .table-content-item {
+            //     @media ($media_sm) {
+            //         justify-content: space-between;
+            //     }
+            // }
+
+            &-content-item {
+
+                &-header {
+
+                    &-main {
+
+                        .action {
+                            @media ($media_sm) {
+                                width: 100%;
+                            }
+
+                            &-text {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+    
+                                svg {
+                                    width: 1.8rem;
+                                    height: 1.8rem;
+                                }
+    
+                                strong {
+                                    color: $color_black_title;
+                                    margin: 0 0.5rem;
+
+                                    @media ($media_sm) {
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .table {
+
+        &-header h5, &-content-item-header .action, &-content-item-header .changeble, 
+        &-content-item-header-nums span, &-content-item-content-table span, &-content-item-main span {
+
+            width: 6.5rem;
+            margin-right: 0.75rem;
+
+            @media ($media_xl) {
+                width: 5.5rem;
+                margin-right: 0.55rem;
+            }
+
+            @media ($media_sm) {
+                width: 30%;
+                margin-right: 0.55rem;
+            }
+        }
+
+        &-header h5:first-child, &-content-item-header .action, .table-content-item-content-table .table-header h5, 
+        .table-content-item-content-table .table-content span {
+            width: 7.7rem;
+
+            @media ($media_xl) {
+                width: 6.5rem;
+            }
+
+            @media ($media_sm) {
+                width: 30%;
+                margin-right: 0.4rem;
+            }
+        }
+
+        &-header {
+
+            h5 {
+
+            }
+        }
+
+        &-content {
+
+            &-item {
+                padding: 0 1.5rem;
+                align-items: center;
+                border-bottom: 1px solid $color_block_border;
+
+                flex-direction: column;
+                align-items: stretch;
+
+                &.opened {
+                    .table-content-item-content {
+                        display: block;
+                    }
+
+                    .table-content-item-header {
+                        &-main {
+                            @media ($media_sm) {
+                                background-color: $color_blue;
+                                border-color: transparent;
+
+                                .action-text {
+                                    span, strong {
+                                        color: $color_white;
+                                    }
+                                }
+
+                                .changeble {
+                                    span {
+                                        &::before {
+                                            color: $color_white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .action {
+                            > svg {
+                                fill: $color_blue;
+                                transform: rotate(0deg);
+    
+                                @media ($media_sm) {
+                                    fill: $color_white;
+                                }
+                            }
+                        }
+
+                        .changeble {
+
+                            @media ($media_sm) {
+                                span.success {
+                                    color: $color_green_light_table_header;
+                                }
+                            }
+                        
+                        }
+                    }
+
+                    .table-content-item-header-nums {
+                        height: initial;
+                        margin-bottom: 0;
+                    }
+                }
+
+                @media ($media_sm) {
+                    padding: 0 1.5rem .9rem 1.5rem;
+                    align-items: center;
+                    border-bottom: none;
+
+                    &:hover {
+                        box-shadow: unset;
+                        border: none;
+                    }
+
+                    &:last-child {
+                        border-bottom: 1px solid $color_block_border;
+                    }
+                }
+
+                span {
+
+                    &.success {
+                        color: $color_green;
+                    }
+
+                    &.error {
+                        color: $color_red;
+                    }
+
+                    &.comment {
+                        color: $color_grey;
+                        word-wrap: break-word;
+                        line-height: 1.35;
+                        width: 11rem !important;
+                        margin: 0;
+
+                        @media ($media_xl) {
+                            white-space: initial;
+                            width: 10rem !important;
+                        }
+
+                        @media ($media_sm) {
+                            margin-top: 1.2rem;
+                            width: 100% !important;
+                            max-height: initial;
+                            line-height: 1.5;
+
+                            &::before {
+                                content: "Коммент.";
+                            }
+                        }
+
+                        &:hover {
+                            color: $color_blue;
+                        }
+
+                        svg {
+                            stroke: lighten($color_blue, 15%);
+                            width: 1.3rem;
+                            height: 1.3rem;
+                            cursor: pointer;
+
+                            &:hover {
+                                stroke: $color_blue;
+                            }
+                        }
+                    }
+
+                    @media ($media_sm) {
+                        display: flex;
+                        flex-direction: column;
+
+                        &::before {
+                            color: $color_grey;
+                            font-size: 0.8rem;
+                            margin-bottom: 0.2rem;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    &.owned {
+                        font-weight: 600;
+                    }
+
+                    &.count {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "Кол-во";
+                            }
+                        }
+                    }
+
+                    &.cost {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "Цена";
+                            }
+                        }
+                    }
+
+                    &.money {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "Общ. стоимость";
+                            }
+                        }
+                    }
+
+                    &.daily {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "Дн. доход";
+                            }
+                        }
+                    }
+
+                    &.cash {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "Общ. доход";
+                            }
+                        }
+                    }
+
+                    &.cash-percent {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "Общ. доход %";
+                            }
+                        }
+                    }
+
+                    &.type {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "Тип. бумаги";
+                            }
+                        }
+                    }
+
+                    &.comment {
+                        transition: 0.3s ease-in-out;
+                        max-height: 3.5rem;
+                        overflow-y: hidden;
+
+                        &::-webkit-scrollbar-track {
+                            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                            background-color: #F5F5F5;
+                        }
+                        
+                        &::-webkit-scrollbar {
+                            width: 6px;
+                            background-color: #F5F5F5;
+                        }
+                        
+                        &::-webkit-scrollbar-thumb {
+                            background-color: lighten($color_blue, 25%);
+                        }
+                    }
+
+                    &.percent-hour {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "24ч. %";
+                            }
+                        }
+                    }
+
+                    &.percent-week {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "7д. %";
+                            }
+                        }
+                    }
+
+                    &.owned {
+                        @media ($media_sm) {
+                            &::before {
+                                font-weight: 500;
+                                content: "Во владении";
+                            }
+                        }
+                    }
+                }
+
+                &-header {
+                    display: flex;
+                    padding: 0.9rem 0;
+
+                    @media ($media_sm) {
+                        flex-direction: column;
+                        padding: 0;
+                    }
+
+                    &-main {
+                        display: flex;
+                        align-items: center;
+
+                        @media ($media_sm) {
+                            background: $color_table_header;
+                            border: 1px solid $color_block_border;
+                            padding: 1rem 1.5rem;
+                            margin: 0 calc(-1.5rem - 1px);
+                            justify-content: space-between;
+                        }
+
+                        .action, .changeble {
+                            @media ($media_sm) {
+                                width: auto;
+                            }
+                        }
+
+                        .action {
+                            display: flex;
+                            align-items: center;
+
+                            > svg {
+                                min-width: .8rem;
+                                min-height: .8rem;
+                                max-width: .8rem;
+                                max-height: .8rem;
+                                fill: lighten($color_blue, 15%);
+                                transform: rotate(-90deg);
+                            }
+                        
+                            &-text {
+                                display: flex;
+                                flex-direction: column;
+                                margin-left: 0.7rem;
+
+                                @media ($media_sm) {
+                                    // flex-direction: row;
+                                    // align-items: center;
+                                }
+
+                                strong {
+                                    font-weight: 600;
+                                    color: $color_blue;
+                                    margin-bottom: 0.2rem;
+
+                                    span {
+                                        display: none;
+                                        color: $color_grey;
+                                        font-weight: 400;
+                                        font-size: 0.85rem;
+
+                                        @media ($media_sm) {
+                                            display: inline;
+                                        }
+                                    }
+
+                                    @media ($media_sm) {
+                                        font-size: 1.6rem;
+                                        font-weight: bold;
+                                    }
+                                }
+
+                                span {
+                                    color: $color_grey;
+                                    font-size: 0.8rem;
+
+                                    display: inline-block;
+                                    white-space: nowrap;
+                                    max-width: 6rem;
+                                    overflow-x: hidden;
+                                    text-overflow: ellipsis;
+
+                                    @media ($media_xl) {
+                                        max-width: 5rem;
+                                    }
+
+                                    @media ($media_sm) {
+                                        max-width: 8rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        .changeble {
+                            span {
+                                @media ($media_sm) {
+                                    font-size: 1.3rem;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+
+                    &-nums {
+                        display: flex;
+                        align-items: center;
+
+                        @media ($media_sm) {
+                            height: 0;
+                            overflow: hidden;
+                            margin-bottom: -1.05rem;
+
+                            flex-wrap: wrap;
+                            align-items: baseline;
+
+                            span {
+                                margin-top: 1.2rem;
+                            }
+                        }
+                    }
+
+                }
+
+                &-content {
+                    padding: 1.5rem;
+                    background-color: $color_table_header;
+                    border-bottom: 1px solid $color_block_border;
+                    margin: 0 -1.5rem;
+                    display: none;
+
+                    @media ($media_sm) {
+                        margin: 1.5rem -1.5rem;
+                    }
+
+                    &-buttons {
+                        display: flex;
+
+                        .btn {
+                            font-size: 0.9rem;
+                            padding: 0.9rem 3.2rem;
+
+                            &:first-child {
+                                margin-right: 1rem;
+                            }
+
+                            &.btn_redInverse {
+                                margin-left: auto;
+                            }
+                        }
+
+                        @media ($media_sm) {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            .btn {
+                                padding: 0.9rem 0;
+                                width: 47%;
+                            }
+
+                            .btn_redInverse {
+                                width: 80%;
+                                border: none;
+                                background-color: transparent;
+                                margin: 1rem auto 0 auto;
+                            }
+                        }
+                    }
+
+                    &-table {
+
+                        .table {
+                            margin-top: 1rem;
+                            //border-bottom: 1px solid $color_block_border;
+
+                            &-content {
+                                margin: 0 -1.5rem;
+                                padding: 0 1.5rem;
+
+                                &-item {
+                                    display: flex;
+                                    flex-direction: row;
+                                    padding: 0.9rem 0;
+                                    margin: 0;
+                                    border-top: 1px solid $color_block_border;
+                                    align-items: center;
+
+                                    &:hover {
+                                        background: unset;
+                                        border-top: 1px solid $color_block_border;
+                                        box-shadow: none;
+                                    }
+
+                                    @media ($media_sm) {
+                                        flex-wrap: wrap;
+            
+                                        span {
+                                            margin-top: 1.1rem;
+                                        }
+                                    }
+
+                                    .comment {
+                                        @media ($media_sm) {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    &-main {
+                                        display: flex;
+
+                                        @media ($media_sm) {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: space-between;
+
+                                            span {
+                                                margin: 0;
+
+                                                &.count {
+                                                    font-size: 1.7rem;
+                                                    font-weight: bold;
+
+                                                    &::before {
+                                                        content: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .operation {
+
+                                            strong {
+                                                font-size: 0.8rem;
+                                                color: $color_white;
+                                                padding: 0.4rem 0.7rem;
+                                                background-color: $color_grey;
+                                                font-weight: 600;
+                                                border-radius: 0.5rem;
+                                                text-align: center;
+                                            }
+                    
+                                            &.success {
+                                                strong {
+                                                    background-color: $color_green;
+                                                }
+                                            }
+                    
+                                            &.error {
+                                                strong {
+                                                    background-color: $color_red;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination {
+        margin-top: 1.5rem;
+
+        @media ($media_sm) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ul {
+            margin-right: 1.8rem;
+
+            @media ($media_sm) {
+                margin: 0 0 1rem 0;
+            }
+        }
+    }
+}
+
+.compare {
+    margin-top: 3.33rem;
+    margin-bottom: 2.77rem;
+
+    &-header {
+        margin-bottom: 2.22rem;
+
+        h3 {
+            font-size: 1.33rem;
+            color: $color_black_title;
+            font-weight: 600;
+        }
+    }
+
+    &-menu {
+        display: flex;
+        border-bottom: 1px solid $color_block_border;
+        justify-content: space-between;
+
+        @media ($media_sm) {
+            margin: 0 -1.5rem;
+            padding: 0 1.5rem;
+            flex-direction: column;
+        }
+
+        &-choose {
+            display: flex;
+
+            @media ($media_sm) {
+                flex-direction: column;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+
+                &-name {
+                    margin-right: 1rem;
+                    font-weight: 600;
+                    color: $color_black_title;
+
+                    @media ($media_sm) {
+                        display: flex;
+                    }
+
+                    > span {
+                        position: relative;
+                        padding-left: 1.2rem;
+
+                        &::before {
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+
+                            content: "";
+                            min-width: 0.8rem;
+                            min-height: 0.8rem;
+                            background-color: red;
+                            border-radius: 0.25rem;
+                        }
+
+                        &.success {
+                            &::before {
+                                background-color: $color_green;
+                            }
+                        }
+
+                        &.primary {
+                            &::before {
+                                background-color: lighten($color_blue, 10%);
+                            }
+                        }
+                    }
+                }
+
+                &-btn {
+                    border: 1px solid $color_border_dop;
+                    background-color: $color_block_bg;
+                    padding: 0.5rem 0.9rem;
+                    min-width: unset;
+
+                    > span {
+                        font-weight: 500;
+                        color: $color_grey;
+                        font-size: 0.8rem;
+
+                        &.selected {
+                            color: $color_black_main;
+                        }
+                    }
+
+                    svg {
+                        fill: lighten($color_blue, 15%);
+                        margin-left: 2rem;
+
+                        @media ($media_xl) {
+                            margin-left: 1rem;
+                        }
+                    }
+
+                    &:hover {
+                        border-color: lighten($color_blue, 30%);
+                    }
+
+                    .dropdown {
+
+                        @media ($media_sm) {
+                            width: 15rem;
+
+                            &-item {
+
+                                span {
+                                    white-space: initial;
+                                }
+
+                                input[type='radio'] {
+                                    &::before {
+                                        width: 1.36rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 2rem;
+
+                    @media ($media_xl) {
+                        margin-right: 1rem;
+                    }
+
+                    @media ($media_sm) {
+                        margin: 0 0 1rem 0;
+
+                        .dropdown {
+                            transform: translate(-50%, 100%);
+                        }
+                    }
+                }
+            }
+        }
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 0.8rem;
+
+            @media ($media_sm) {
+                margin-left: 0;
+            }
+
+            &-date {
+                display: flex;
+                align-items: center;
+                margin-right: 3.33rem;
+
+                @media ($media_xl) {
+                    margin-right: 2rem;
+                }
+
+                @media ($media_sm) {
+                    display: none;
+                }
+
+                span {
+                    font-size: 0.9rem;
+                    color: $color_grey;
+                    font-weight: 500;
+                }
+            }
+
+            &-choose {
+                display: flex;
+
+                @media ($media_sm) {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+
+                @media ($media_sm) {
+                    margin-top: 0.5rem;
+                }
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    border-bottom: 3px solid transparent;
+
+                    @media ($media_sm) {
+                        padding: 0.5rem 0;
+                        justify-content: center;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+
+                        @media ($media_sm) {
+                            margin-right: 0;
+                        }
+                    }
+
+                    span {
+                        font-weight: 500;
+                        font-size: 0.9rem;
+                        padding: 1.2rem 0;
+                    }
+
+                    &.dotted {
+
+                        &:hover, &.active {
+                            border-bottom: 3px solid transparent;
+                        }
+
+                        svg {
+                            width: 25px;
+                            height: 5px;
+                        }
+                    }
+
+                    &:hover, &.active {
+                        border-color: $color_blue;
+
+                        span {
+                            color: $color_blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+$banch_info_height: 160px;
+$banch_items_height: 60px;
+
+.banchGraph {
+    display: flex;
+
+    @media ($media_sm) {
+        margin: 0 -1.5rem;
+    }
+
+    &-descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        flex-basis: 8.5rem;
+        margin-right: 1rem;
+        padding: 0.6rem 0;
+
+        @media ($media_xl) {
+            flex-basis: 9.5rem;
+            padding: 0.6rem;
+        }
+
+        @media ($media_sm) {
+            background: $color_white;
+            box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
+            border-radius: 0px 8px 8px 0px;
+        }
+
+        &-percent {
+            height: $banch_info_height;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            span {
+                color: $color_grey;
+                font-weight: 500;
+                font-size: 0.8rem;
+            }
+        }
+
+        &-items {
+            height: $banch_items_height;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media ($media_sm) {
+                align-items: center;
+            }
+
+            &-item {
+                color: $color_black_title;
+                font-size: 0.9rem;
+                font-weight: 500;
+                white-space: nowrap;
+
+                span {
+                    position: relative;
+                    padding-left: 1.2rem;
+
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        content: "";
+                        min-width: 0.8rem;
+                        min-height: 0.8rem;
+                        background-color: red;
+                        border-radius: 0.25rem;
+                    }
+
+                    &.success {
+                        &::before {
+                            background-color: $color_green;
+                        }
+                    }
+
+                    &.primary {
+                        &::before {
+                            background-color: lighten($color_blue, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-content {
+        flex-grow: 1;
+        display: flex;
+
+        @media ($media_sm) {
+            overflow-x: auto;
+            padding: 0.3rem;
+        }
+
+        &-item {
+            padding: 0.6rem;
+            cursor: pointer;
+
+            @media ($media_xl) {
+                padding: 0.3rem;
+            }
+
+            @media ($media_sm) {
+                min-width: 6rem;
+            }
+
+            &:hover {
+                background-color: $color_block_bg;
+                box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+                border-radius: 0.25rem;
+            }
+
+            &-graph {
+                height: $banch_info_height;
+                background: lighten($color_grey_counter, 0.8%);
+                border-radius: 0.33rem;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+
+                &-half {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: flex-end;
+
+                    height: 50%;
+                    border-bottom: 2px solid $color_border_graph_banch;
+
+                    &-item {
+                        width: 1.2rem;
+                        height: 50%;
+                        border-radius: 3px 3px 0px 0px;
+
+                        @media ($media_sm) {
+                            width: 1.5rem;
+                        }
+
+                        &.success {
+                            background-color: $color_green;
+                            filter: drop-shadow(0px 1px 1px $color_green);
+                        }
+
+                        &.primary {
+                            background-color: lighten($color_blue, 10%);
+                            filter: drop-shadow(0px 1px 1px lighten($color_blue, 10%));
+                        }
+                    }
+                }
+            }
+
+            &-date {
+                margin: 1rem 0;
+
+                span {
+                    color: darken($color_grey, 10%);
+                    font-weight: 500;
+                    font-size: 0.8rem;
+                }
+            }
+
+            &-stat {
+                font-size: 0.9rem;
+                height: $banch_items_height;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                span {
+                    font-weight: 500;
+
+                    &.success {
+                        color: $color_green;
+                    }
+
+                    &.error {
+                        color: $color_red;
+                    }
+                }
+            }
+        }
+    }
+}

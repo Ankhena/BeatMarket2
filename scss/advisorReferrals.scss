@@ -1,0 +1,220 @@
+@mixin referrals-block {
+    @include block-beauty;
+    //padding: 40/18 * 1rem 32/18 * 1rem;
+    padding: rem(40,18) rem(32,18);
+}
+
+.referrals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //gap: 32/18 * 1rem;
+    gap: rem(32,18);
+    @media ($media_md) {
+        grid-template-columns: 1fr;
+    }
+
+    //h3 {
+    //  margin-bottom: 32/18*1rem;
+    //}
+
+    .checkbox-toggle {
+        @media ($media_sm) {
+            display: flex;
+        }
+    }
+    .checkbox-toggle__toggle {
+        @media ($media_md) {
+            margin-right: 0.8rem;
+        }
+    }
+}
+
+.referrals__title {
+    grid-column: 1/-1;
+}
+
+.referrals__stats {
+    grid-column: 1/-1;
+    position: relative;
+    @include referrals-block;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 60px;
+        transform: translateY(-50%);
+        display: block;
+        width: 109px;
+        height: 109px;
+        border-radius: 50%;
+        background: $color_yellow;
+
+        @media ($media_sm) {
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
+
+.referrals__description {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    justify-content: space-between;
+    //padding-bottom: 32/18 * 1rem;
+    padding-bottom: rem(32,18);
+    border-bottom: 1px solid $color_block_border;
+
+    @media ($media_md) {
+        grid-template-columns: repeat(2, min-content);
+        row-gap: 1rem;
+    }
+
+    @media (max-width: 450px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+
+        dt {
+            width: auto;
+            text-align: center;
+        }
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
+
+.referrals__descr-item {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 450px) {
+        align-items: center;
+    }
+
+    dt {
+        display: block;
+        width: max-content;
+        margin-top: 0.4rem;
+    }
+
+    dd {
+        order: -1;
+        display: block;
+        margin-right: 12px;
+        font-size: 37px;
+        line-height: 1;
+        font-weight: 600;
+        color: $color_blue;
+    }
+}
+
+.referrals__descr-item--zero {
+    dd {
+        color: $color_grey;
+    }
+}
+
+.referrals__link {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.75rem;
+
+    @include referrals-block;
+
+    h3, h4 {
+        color: $color_black_title;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+}
+
+.referrals__link--ref {
+    background: $color_lighten_grey;
+}
+
+.referrals__link--strategy {
+    grid-column: 1/-1;
+
+    .referrals__btns {
+        margin-bottom: 0.9rem;
+    }
+}
+
+.referrals__text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $color_grey;
+    line-height: 1.6;
+
+    display: flex;
+    align-items: center;
+
+    .checkbox-toggle__toggle {
+        margin-right: 0.8rem;
+    }
+}
+
+.referrals__btns {
+    display: grid;
+    grid-template-columns: auto 56px;
+    column-gap: 8px;
+
+    input[type="url"] {
+        color: $color_blue;
+    }
+}
+
+.referrals {
+    &__settings {
+        display: flex;
+        align-items: center;
+
+        &--min {
+            margin-bottom: 0.9rem;
+
+            @media ($media_sm) {
+                margin-bottom: 1.2rem;
+            }
+        }
+    }
+
+    &__dropdown {
+        margin-left: 0.9rem;
+
+        .btn {
+            padding: 0.5rem;
+
+            svg {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+
+        @media ($media_sm) {
+            position: relative;
+            top: unset;
+            right: unset;
+
+            margin-left: auto;
+        }
+    }
+
+    &__headerSpace {
+        margin-top: 1.2rem;
+    }
+}

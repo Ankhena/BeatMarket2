@@ -1,0 +1,72 @@
+.form {
+
+
+  select {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+}
+
+.form__fieldset {
+  padding: 0;
+  border: none;
+
+  legend {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-size: 27px;
+  }
+}
+
+.form__field-comment {
+  margin-top: 6px;
+}
+
+.form__item {
+  margin-bottom: 18px;
+
+  &--btn {
+    margin-top: 30px;
+  }
+}
+
+.form__textTitle {
+  margin-top: 2rem;
+  color: $color_black_title;
+  line-height: 1.5;
+}
+
+.form__item--radio {
+  display: flex;
+
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+}
+
+.form__label {
+  display: block;
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.form__btn {
+  width: 100%;
+}
+
+.form__agreement {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 24px;
+}
+
+.form__agreement-checkbox {
+  margin-right: 6px;
+}
+
+

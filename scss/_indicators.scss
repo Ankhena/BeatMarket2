@@ -1,0 +1,368 @@
+$indicator_item_width: 11.2rem;
+$indicator_item_margin-right: 2rem;
+
+.table-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.table-scroll::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: lighten($color_blue, 25%);
+}
+
+.myStrategy-indicators-container {
+
+  &-title {
+    font-size: 1.35rem;
+    color: $color_black_title;
+    margin-top: 2.2rem;
+    font-weight: 600;
+  }
+
+  .table {
+    position: relative;
+    border-top: 1px solid $color_border_dop;
+
+    margin: 2.2rem -1.5rem 0 -1.5rem;
+
+    &-scroll {
+      overflow-x: auto;
+    }
+
+    &-fixed {
+      position: absolute;
+      background-color: $color_white;
+      box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
+      z-index: 1;
+      margin-top: -1px;
+
+      h5 {
+        font-size: inherit;
+        font-weight: inherit;
+        padding: 0.5rem 0;
+        color: $color_blue;
+      }
+
+      &-title,
+      &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding-left: 1.2rem;
+      }
+
+      &-title {
+        height: 4.6rem;
+
+        h5 {
+          color: $color_black_title;
+          font-weight: 600;
+        }
+      }
+
+      &-item {
+        height: 3.35rem;
+        width: 11rem;
+        border-top: 1px solid $color_border_dop;
+        padding-right: 0.5rem;
+
+        &__disabled {
+          background-color: $color_border_graph_banch;
+        }
+
+        span {
+          font-size: 0.7rem;
+          color: $color_grey;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: inline-block;
+        }
+
+        h5 {
+          padding: 0;
+          font-weight: 600;
+        }
+
+        &-name {
+          display: flex;
+          align-items: center;
+
+          &__icon {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-left: 0.2rem;
+            cursor: pointer;
+
+            @media ($media_sm) {
+              cursor: initial;
+            }
+          }
+        }
+      }
+
+    }
+
+    &-header {
+      height: 4.6rem;
+      padding-left: 14.5rem;
+      margin-right: 0;
+      display: flex;
+      align-items: center;
+      min-width: calc(100% + 1.5rem);
+      width: fit-content;
+      border-right: 2px solid $color_table_header;
+
+      @media ($media_sm) {
+        display: flex;
+      }
+
+      h5 {
+        min-width: $indicator_item_width;
+        max-width: $indicator_item_width;
+        margin-right: $indicator_item_margin-right;
+        color: $color_black_title;
+        font-weight: 600;
+      }
+    }
+
+    &-content {
+      padding-left: 12rem;
+
+      &-item {
+        height: 3.35rem;
+        padding: 0 1.5rem 0 2.5rem;
+        align-items: center;
+        border-bottom: 1px solid $color_block_border;
+        margin-right: 0;
+
+        min-width: calc(100% + 1.5rem);
+        width: fit-content;
+
+        &__disabled {
+          background-color: $color_border_graph_banch;
+
+          &:hover {
+            background-color: $color_border_graph_banch;
+          }
+        }
+
+        &-info {
+          display: flex;
+
+          span {
+            min-width: $indicator_item_width;
+            margin-right: $indicator_item_margin-right;
+
+            &.success {
+              color: $color_green;
+            }
+
+            &.error {
+              color: $color_red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.myStrategy-indicators__block {
+  background-color: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 18px;
+  padding: 32px;
+
+  @media($media_xs) {
+    padding: 16px 12px;
+  }
+}
+
+.tarif {
+
+  // .tarif__block
+
+  &__block {
+    background-color: #FCFDFF;
+    border: 1px solid #E6EEFF;
+    box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+    border-radius: 12px;
+    padding: 32px 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    @media($media_xs) {
+      padding: 16px 12px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      right: 0;
+      top: 0;
+      transform: translate(50%, -50%);
+      transition: 0.3s ease-in-out;
+    }
+
+    &.green {
+      &::before {
+        background-color: #199F27;
+      }
+    }
+
+    &.red {
+      &::before {
+        background-color: #ED6373;
+      }
+    }
+
+  }
+}
+
+.tarifs-cards {
+  display: grid;
+  grid-auto-rows: minmax(170px, auto);
+  gap: 20px;
+
+  @media(min-width: 1600px) {
+      grid-template-columns: 1.5fr 2fr 2fr;
+  }
+
+  @media(max-width: 1599px) {
+    grid-template-columns: repeat(auto-fit, 1fr);
+  }
+}
+
+.tarif-block {
+
+  // .tarif-block__item
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 500;
+    color: #373943;
+    white-space: nowrap;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 24px;
+      color: #3E54D8;
+      margin-right: 8px;
+
+      @media($media_xs) {
+        margin-right: 0;
+        margin-top: 8px;
+      }
+    }
+
+    @media($media_xs) {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
+  }
+
+  // .tarif-block__currentResult
+
+  &__currentResult {
+    background-color: #3E54D8;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 26px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    white-space: nowrap;
+
+    @media($media_xs) {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
+
+    span {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 24px;
+      color: #FFFFFF;
+      margin-right: 8px;
+
+      @media(max-width: $media_xs) {
+        margin-right: 0;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.indicators-title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #24252E;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.hint {
+  padding: 4px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-left: 16px;
+
+  &.green {
+    background-color: rgba(25, 159, 39, 0.24);
+    color: #199F27;
+  }
+
+  &.red {
+    background-color: rgba(222, 67, 85, 0.24);
+    color: #DE4355;
+  }
+
+  &.blue {
+    background-color: #D3E3FF;
+    color: #3E54D8;
+  }
+}
+
+.sp {
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  background-color: #F0F5FF;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 16px;
+
+  span {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #3E54D8;
+  }
+
+  @media($media_xs) {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}

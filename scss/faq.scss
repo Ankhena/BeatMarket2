@@ -1,0 +1,110 @@
+.faq {
+  position: relative;
+  line-height: 1.5;
+  //margin-left: 221/18*1rem;
+  //margin-right: 350/18*1rem;
+  margin-left: rem(221,18);
+  margin-right: rem(350,18);
+  z-index: 0;
+
+  //@media ($media_lg)  {
+  @media (max-width: 1460px) {
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+
+  @media ($media_md) {
+    margin-left: 0;
+  }
+
+  .details {
+    border-bottom: 1px solid $color_block_border;
+  }
+
+  .details--open {
+    .details__title {
+      color: $color_blue;
+    }
+  }
+}
+
+.faq__subtitle {
+  //margin-bottom: 70/18*1rem;
+  margin-bottom: rem(70, 18);
+  //font-size: 20/18*1rem;
+  font-size: rem(20, 18);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.faq__content {
+  @include block-beauty;
+  position: relative;
+  //padding-left: 90/18*1rem;
+  //padding-right: 110/18*1rem;
+  //padding-bottom: 70/18*1rem;
+  //margin-bottom: 64/18*1rem;
+  padding-left: rem(90, 18);
+  padding-right: rem(110, 18);
+  padding-bottom: rem(70, 18);
+  margin-bottom: rem(64, 18);
+  background: $color-inverse;
+
+  @media ($media_lg) {
+    //padding-left: 60/16*1rem;
+    //padding-right: 60/16*1rem;
+    padding-left: rem(60, 16);
+    padding-right: rem(60, 16);
+  }
+  @media ($media_lg) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -90px;
+    right: -110px;
+    display: block;
+    //width: 1172px;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='1172' height='1356' viewBox='0 0 1172 1356' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='89.5' cy='633.5' r='89.5' fill='%23199F27'/%3E%3C/svg%3E%0A") no-repeat top left,
+    url("data:image/svg+xml,%3Csvg width='1172' height='1356' viewBox='0 0 1172 1356' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1063.5' cy='1247.5' r='108.5' fill='%233E54D8'/%3E%3Ccircle cx='1076' cy='73' r='73' fill='%23F3B63F'/%3E%3C/svg%3E%0A") no-repeat top right;
+    z-index: -1;
+    @media (max-width: 1460px) {
+      top: -25px;
+      left: -30px;
+      right: -40px;
+      background-size: 50%;
+    }
+    @media ($media_md) {
+      display: none;
+    }
+  }
+}
+
+.faq__details-list {
+  //margin-bottom: 64/18*1rem;
+  margin-bottom: rem(64, 18);
+}
+
+.faq__more {
+  a {
+    font-weight: 600;
+    color: $color_blue;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: $color_blue_hover;
+    }
+  }
+}
+
+.faq__more-title {
+  margin-bottom: 1em;
+  //font-size: 22/18*1rem;
+  font-size: rem(22, 18);
+  font-weight: 600;
+}

@@ -1,0 +1,599 @@
+.support {
+
+  // .support__write
+
+  &__write {
+    margin-bottom: 1.4rem;
+
+    background-color: $color_white;
+    border: 1px solid $color_block_border;
+    border-radius: 1rem;
+  }
+
+  // .support__add
+
+  &__add {
+    margin-bottom: 2.8rem;
+  }
+
+  // .support__ticket
+
+  &__ticket {}
+}
+
+.supportWrite {
+  padding: 2.2rem 1.4rem;
+
+  // .supportWrite__header
+
+  &__header {
+    position: relative;
+    margin-bottom: 2.2rem;
+  }
+
+  // .supportWrite__title
+
+  &__title {
+    font-size: 1.33rem;
+    font-weight: 500;
+    color: $color_black_title;
+    padding-right: 1.6rem;
+  }
+
+  // .supportWrite__close
+
+  &__close {
+    position: absolute;
+    display: inline-flex;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+  }
+
+  // .supportWrite__icon
+
+  &__icon {
+    width: 1.45rem;
+    height: 1.45rem;
+  }
+
+  // .supportWrite__content
+
+  &__content {}
+
+  // .supportWrite__item
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 1.1rem;
+    }
+
+    // .supportWrite__item--btn
+
+    &--btn {}
+  }
+}
+
+
+.ticketTable {
+  color: $color_black_title;
+  font-weight: 500;
+  background-color: $color_white;
+
+  // .ticketTable__row
+
+  &__row {
+    padding: 1.8rem 0;
+    margin: 0 1.4rem;
+    display: flex;
+    align-items: center;
+
+    // .ticketTable__row--header
+
+    &--header {
+      background-color: $color_table_header;
+      border-top: 1px solid $color_border_dop;
+      border-bottom: 1px solid $color_border_dop;
+      padding: 0.9rem 1.4rem;
+      margin: 0;
+
+      @media ($media_sm) {
+        display: none;
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color_border_dop;
+    }
+
+    @media ($media_sm) {
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      align-items: flex-end;
+
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  // .ticketTable__title
+
+  &__title {}
+
+  // .ticketTable__link
+
+  &__link {
+    align-self: start;
+    color: $color_blue;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+
+    &:hover {
+      border-color: $color_blue;
+    }
+  }
+
+  // .ticketTable__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-basis: 100%;
+
+    @media ($media_sm) {
+      flex-basis: 50%;
+      margin-bottom: 1.3rem;
+      padding: 0 1rem;
+    }
+
+    // .ticketTable__item--mobile
+
+    &--mobile {
+      display: none;
+
+      @media ($media_sm) {
+        display: flex;
+      }
+    }
+
+    // .ticketTable__item--header
+
+    &--header {
+
+      @media ($media_sm) {
+        flex-basis: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.4;
+
+        background-color: $color_table_header;
+        border-top: 1px solid $color_border_dop;
+        border-bottom: 1px solid $color_border_dop;
+      }
+    }
+
+    // .ticketTable__item--grow
+
+    &--grow {
+      flex-basis: 350%;
+    }
+
+    // .ticketTable__item--grow
+
+    &--theme {
+      line-height: 1.4;
+
+      @media ($media_sm) {
+        display: none;
+      }
+    }
+  }
+
+  // .ticketTable__subtitle
+
+  &__subtitle {
+    display: none;
+    margin-bottom: 0.3rem;
+
+    @media ($media_sm) {
+      display: block;
+    }
+  }
+
+  // .ticketTable__value
+
+  &__value {
+
+    // .ticketTable__value--num
+
+    &--num {
+      color: $color_grey;
+    }
+  }
+}
+
+.ticketTableStatus {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+
+  &--wait {
+    color: $color_yellow;
+  }
+
+  &--archive {
+    color: $color_grey;
+  }
+
+  &--answer {
+    color: $color_blue;
+  }
+
+  // .ticketTableStatus__text
+
+  &__text {}
+
+  // .ticketTableStatus__icon
+
+  &__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0.4rem;
+  }
+}
+
+.ticket {
+  background-color: $color_white;
+  border: 1px solid $color_block_border;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  // .ticket__content
+
+  &__content {
+    padding: 2.2rem 1.4rem;
+  }
+
+  // .ticket__header
+
+  &__header {
+    margin-bottom: 2.2rem;
+  }
+
+  // .ticket__title
+
+  &__title {
+    font-size: 2.2rem;
+    color: $color_black_title;
+
+    @media ($media_sm) {
+      font-size: 2rem;
+    }
+  }
+
+  // .ticket__controls
+
+  &__controls {
+    display: flex;
+
+    @media ($media_sm) {
+      flex-direction: column;
+    }
+  }
+
+  // .ticket__control
+
+  &__control {
+    flex-basis: 100%;
+
+    &:not(:last-child) {
+      margin-right: 1.1rem;
+
+      @media ($media_sm) {
+        margin: 0 0 1.3rem 0;
+      }
+    }
+
+    &--theme {
+      flex-basis: 180%;
+
+      @media ($media_lg) {
+        flex-basis: 120%;
+      }
+    }
+  }
+
+  // .ticket__table
+
+  &__table {}
+}
+
+.inputGroup {
+
+  // .inputGroup__label
+
+  &__label {
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  // .inputGroup__item
+
+  &__item {
+    position: relative;
+  }
+
+  // .inputGroup__control
+
+  &__control {
+
+    &.inputGroup__control--padding {
+      padding-right: 3.5rem;
+    }
+  }
+
+  // .inputGroup__icon
+
+  &__icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    stroke: $breadcrumb_border;
+
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.inputSelect {
+  position: relative;
+
+  // .inputSelect__container
+
+  &__container {
+    position: relative;
+    display: inline-block;
+    background-color: $color_grey_counter;
+    border: 1px solid $color_block_border;
+    border-radius: 10px;
+    outline: 0;
+    padding: 16px 25px;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  // .inputSelect__value
+
+  &__value {}
+
+  // .inputSelect__icon
+
+  &__icon {
+    width: 0.5rem;
+    height: 0.5rem;
+    stroke: $breadcrumb_border;
+    fill: $breadcrumb_border;
+
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // .inputSelect__checkbox
+
+  &__checkbox {
+
+    &:checked {
+
+      &~.inputSelect__container {
+
+        .inputSelect__icon {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &~.inputSelect__dropdown {
+        display: flex;
+      }
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    bottom: -0.5rem;
+    transform: translateY(100%);
+    width: 100%;
+
+    background-color: $color_block_bg;
+    border: 1px solid $color_block_border;
+    box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    display: none;
+    z-index: 1;
+    flex-direction: column;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+
+  // .inputSelect__item
+
+  &__item {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  // .inputSelect__radio
+
+  &__radio {
+    &:checked {
+      &~.inputSelect__choose {
+        color: $color_blue;
+      }
+    }
+  }
+
+  // .inputSelect__choose
+
+  &__choose {
+    padding-left: 1.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+}
+
+.dialogData {
+
+  // .dialogData__link
+
+  &__link {
+    @media ($media_sm) {
+      margin-top: 1rem;
+
+      .backlink {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  // .dialogData__header
+
+  &__header {}
+
+  // .dialogData__title
+
+  &__title {
+    font-size: 2.2rem;
+    color: $color_black_title;
+
+    @media ($media_sm) {
+      font-size: 2rem;
+    }
+  }
+
+  // .dialogData__name
+
+  &__name {
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin: 2.7rem 0 1.5rem 0;
+    line-height: 1.4;
+  }
+
+  // .dialogData__status
+
+  &__status {
+    color: $color_blue;
+    font-weight: 500;
+  }
+
+  // .dialogData__number
+
+  &__number {
+    color: $color_grey;
+    font-size: 1rem;
+  }
+
+  // .dialogData__data
+
+  &__data {
+    color: $color_black_main;
+  }
+}
+
+.dialogContent {
+  background-color: $color_white;
+  border: 1px solid $color_block_border;
+  border-radius: 1rem;
+  margin-top: 2.7rem;
+
+  // .dialogContent__messages
+
+  &__messages {}
+
+  // .dialogContent__write
+
+  &__write {}
+}
+
+.dialogMessages {
+  padding: 2.2rem 0;
+  margin: 0 1.4rem;
+  border-bottom: 1px solid $color_block_border;
+
+  // .dialogMessages__message
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 1.8rem;
+    }
+
+    // .dialogMessages__message--author
+
+    &--author {
+      align-items: flex-end;
+
+      .dialogMessages__content {
+        color: $color_white;
+        background-color: $color_blue;
+        border-color: $color_blue;
+      }
+    }
+  }
+
+  // .dialogMessages__header
+
+  &__header {
+    margin-bottom: 1.3rem;
+  }
+
+  // .dialogMessages__author
+
+  &__author {
+    font-weight: 600;
+    color: $color_blue;
+  }
+
+  // .dialogMessages__date
+
+  &__date {
+    color: $color_grey;
+    font-weight: 500;
+  }
+
+  // .dialogMessages__content
+
+  &__content {
+    background-color: $color_white;
+    border: 1px solid $color_block_border;
+    border-radius: 0.5rem;
+    padding: 1.1rem 1.35rem;
+    line-height: 1.6;
+
+    width: 70%;
+
+    @media ($media_lg) {
+      width: 100%;
+    }
+
+  }
+}
