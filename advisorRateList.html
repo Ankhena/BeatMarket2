@@ -742,132 +742,132 @@
 </div> -->
 
 <div class="modal" id="modal_add_crypt">
-    <div class="modal-header">
-        <h2>Добавление транзакции</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Добавление транзакции</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-switcher use_mt_first">
+      <div class="modal-content-switcher-button">
+        <label>
+          <input type="radio" name="switcher_crypt" class="visually_hidden" checked>
+          <span>Купить</span>
+        </label>
+        <label>
+          <input type="radio" name="switcher_crypt" class="visually_hidden">
+          <span>Продать</span>
+        </label>
+      </div>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-switcher use_mt_first">
-            <div class="modal-content-switcher-button">
-                <label>
-                    <input type="radio" name="switcher_crypt" class="visually_hidden" checked>
-                    <span>Купить</span>
-                </label>
-                <label>
-                    <input type="radio" name="switcher_crypt" class="visually_hidden">
-                    <span>Продать</span>
-                </label>
-            </div>
-        </div>
-        <div class="modal-content-banner crypt use_mt">
-            <svg class="edit"><use xlink:href="img/main.svg#icon-BCH"></use></svg>
-            <h3>Bitcoin</h3>
-            <span>BTC</span>
-        </div>
-        <div class="modal-content-papers use_mt">
-            <div class="modal-content-papers-cost">
-                <label class="label_modal">Цена бумаги</label>
-                <input type="text" placeholder="0%">
-            </div>
-            <div class="modal-content-papers-count crypt">
-                <label class="label_modal">Количество</label>
-                <input type="text" value="0.0055">
-                <span>BTC</span>
-            </div>
-            <div class="modal-content-papers-date">
-                <label class="label_modal">Дата</label>
-                <input type="text" placeholder="24/01/2021" disabled>
-            </div>
-        </div>
-        <div class="modal-content-total use_mt">
-            <label class="label_modal">Итого</label>
-            <span>3 621 $</span>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
+    <div class="modal-content-banner crypt use_mt">
+      <svg class="edit"><use xlink:href="img/main.svg#icon-BCH"></use></svg>
+      <h3>Bitcoin</h3>
+      <span>BTC</span>
     </div>
+    <div class="modal-content-papers use_mt">
+      <div class="modal-content-papers-cost">
+        <label class="label_modal">Цена бумаги</label>
+        <input type="text" placeholder="0%">
+      </div>
+      <div class="modal-content-papers-count crypt">
+        <label class="label_modal">Количество</label>
+        <input type="text" value="0.0055">
+        <span>BTC</span>
+      </div>
+      <div class="modal-content-papers-date">
+        <label class="label_modal">Дата</label>
+        <input type="text" placeholder="24/01/2021" disabled>
+      </div>
+    </div>
+    <div class="modal-content-total use_mt">
+      <label class="label_modal">Итого</label>
+      <span>3 621 $</span>
+    </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_edit">
-    <div class="modal-header">
-        <h2>Редактирование сделки</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Редактирование сделки</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-banner use_mt_first">
+      <h3>TSCO</h3>
+      <span>Tractor Supply</span>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-banner use_mt_first">
-            <h3>TSCO</h3>
-            <span>Tractor Supply</span>
+    <div class="modal-content-papers use_mt">
+      <div class="modal-content-papers-cost">
+        <label class="label_modal">Цена бумаги</label>
+        <input type="text" placeholder="0%">
+      </div>
+      <div class="modal-content-papers-count">
+        <label class="label_modal">Количество</label>
+        <div class="input_counter">
+          <button data-counter="counter_add" data-operation="plus" aria-label="Увеличить число">
+            <svg><use xlink:href="img/main.svg#icon-plus"></use></svg>
+          </button>
+          <span id="counter_add">0</span>
+          <button data-counter="counter_add" data-operation="minus" aria-label="Уменьшить число">
+            <svg><use xlink:href="img/main.svg#icon-minus"></use></svg>
+          </button>
         </div>
-        <div class="modal-content-papers use_mt">
-            <div class="modal-content-papers-cost">
-                <label class="label_modal">Цена бумаги</label>
-                <input type="text" placeholder="0%">
-            </div>
-            <div class="modal-content-papers-count">
-                <label class="label_modal">Количество</label>
-                <div class="input_counter">
-                    <button data-counter="counter_add" data-operation="plus" aria-label="Увеличить число">
-                        <svg><use xlink:href="img/main.svg#icon-plus"></use></svg>
-                    </button>
-                    <span id="counter_add">0</span>
-                    <button data-counter="counter_add" data-operation="minus" aria-label="Уменьшить число">
-                        <svg><use xlink:href="img/main.svg#icon-minus"></use></svg>
-                    </button>
-                </div>
-            </div>
-            <div class="modal-content-papers-date">
-                <label class="label_modal">Дата</label>
-                <input type="text" placeholder="24/01/2021" disabled>
-            </div>
-        </div>
-        <div class="modal-content-total use_mt">
-            <label class="label_modal">Итого</label>
-            <span>3 621 $</span>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
+      </div>
+      <div class="modal-content-papers-date">
+        <label class="label_modal">Дата</label>
+        <input type="text" placeholder="24/01/2021" disabled>
+      </div>
     </div>
+    <div class="modal-content-total use_mt">
+      <label class="label_modal">Итого</label>
+      <span>3 621 $</span>
+    </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_edit_crypt">
-    <div class="modal-header">
-        <h2>Редактирование сделки</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Редактирование сделки</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-banner crypt use_mt_first">
+      <svg class="edit"><use xlink:href="img/main.svg#icon-BCH"></use></svg>
+      <h3>Bitcoin</h3>
+      <span>BTC</span>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-banner crypt use_mt_first">
-            <svg class="edit"><use xlink:href="img/main.svg#icon-BCH"></use></svg>
-            <h3>Bitcoin</h3>
-            <span>BTC</span>
-        </div>
-        <div class="modal-content-papers use_mt">
-            <div class="modal-content-papers-cost">
-                <label class="label_modal">Цена бумаги</label>
-                <input type="text" placeholder="0%">
-            </div>
-            <div class="modal-content-papers-count crypt">
-                <label class="label_modal">Количество</label>
-                <input type="text" value="0.0055">
-                <span>BTC</span>
-            </div>
-            <div class="modal-content-papers-date">
-                <label class="label_modal">Дата</label>
-                <input type="text" placeholder="24/01/2021" disabled>
-            </div>
-        </div>
-        <div class="modal-content-total use_mt">
-            <label class="label_modal">Итого</label>
-            <span>3 621 $</span>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
+    <div class="modal-content-papers use_mt">
+      <div class="modal-content-papers-cost">
+        <label class="label_modal">Цена бумаги</label>
+        <input type="text" placeholder="0%">
+      </div>
+      <div class="modal-content-papers-count crypt">
+        <label class="label_modal">Количество</label>
+        <input type="text" value="0.0055">
+        <span>BTC</span>
+      </div>
+      <div class="modal-content-papers-date">
+        <label class="label_modal">Дата</label>
+        <input type="text" placeholder="24/01/2021" disabled>
+      </div>
     </div>
+    <div class="modal-content-total use_mt">
+      <label class="label_modal">Итого</label>
+      <span>3 621 $</span>
+    </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
+    </div>
+  </div>
 </div>
 
 <!-- <div class="modal" id="modal_settings">
@@ -904,370 +904,1340 @@
 </div> -->
 
 <div class="modal" id="modal_comment">
-    <div class="modal-header">
-        <h2>Добавить комментарий</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Добавить комментарий</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-input use_mt_first">
+      <label class="label_modal">Введите комментарий</label>
+      <input type="text" value="Продам после 20.04.2022">
     </div>
-    <div class="modal-content">
-        <div class="modal-content-input use_mt_first">
-            <label class="label_modal">Введите комментарий</label>
-            <input type="text" value="Продам после 20.04.2022">
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
     </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_comment_table">
-    <div class="modal-header">
-        <h2>Комментарий</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Комментарий</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content use_mt">
+    <div class="modal-content-simpleText">
+      <p>Это текст!</p>
     </div>
-    <div class="modal-content use_mt">
-        <div class="modal-content-simpleText">
-            <p>Это текст!</p>
-        </div>
-    </div>
+  </div>
 </div>
 
 <div class="modal notify" id="modal_some_error">
-    <div class="modal-header">
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-img use_mt_first">
+      <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-img use_mt_first">
-            <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
-        </div>
-        <div class="modal-content-header use_mt">
-            <h2>Произошла ошибка</h2>
-        </div>
-        <div class="modal-content-text use_mt regular">
-            <p>Проверьте баланс и платежные данные или повторите попытку оплаты позже</p>
-        </div>
-        <div class="modal-content-buttons use_mt full">
-            <button class="btn btn_blue" data-closeModal>Повторить попытку</button>
-            <button class="btn gray" data-closeModal>Вернуться на главную</button>
-        </div>
+    <div class="modal-content-header use_mt">
+      <h2>Произошла ошибка</h2>
     </div>
+    <div class="modal-content-text use_mt regular">
+      <p>Проверьте баланс и платежные данные или повторите попытку оплаты позже</p>
+    </div>
+    <div class="modal-content-buttons use_mt full">
+      <button class="btn btn_blue" data-closeModal>Повторить попытку</button>
+      <button class="btn gray" data-closeModal>Вернуться на главную</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal notify" id="modal_test_period">
-    <div class="modal-header">
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-img use_mt_first">
+      <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-img use_mt_first">
-            <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
-        </div>
-        <div class="modal-content-header use_mt">
-            <h2>Тестовый период закончился</h2>
-        </div>
-        <div class="modal-content-text use_mt regular">
-            <p>Оформите подписку на один из тарифов для продолжения работы</p>
-        </div>
-        <div class="modal-content-buttons use_mt full">
-            <button class="btn btn_blue" data-closeModal>Выбрать тариф</button>
-        </div>
+    <div class="modal-content-header use_mt">
+      <h2>Тестовый период закончился</h2>
     </div>
+    <div class="modal-content-text use_mt regular">
+      <p>Оформите подписку на один из тарифов для продолжения работы</p>
+    </div>
+    <div class="modal-content-buttons use_mt full">
+      <button class="btn btn_blue" data-closeModal>Выбрать тариф</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal notify" id="modal_thank">
-    <div class="modal-header">
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-img use_mt_first">
+      <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-thank"></use></svg>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-img use_mt_first">
-            <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-thank"></use></svg>
-        </div>
-        <div class="modal-content-header use_mt">
-            <h2>Спасибо!</h2>
-        </div>
-        <div class="modal-content-text use_mt regular center">
-            <p>Оплата тарифа успешно совершена</p>
-        </div>
-        <div class="modal-content-buttons use_mt full">
-            <button class="btn btn_blue" data-closeModal>Вернуться на главную</button>
-        </div>
+    <div class="modal-content-header use_mt">
+      <h2>Спасибо!</h2>
     </div>
+    <div class="modal-content-text use_mt regular center">
+      <p>Оплата тарифа успешно совершена</p>
+    </div>
+    <div class="modal-content-buttons use_mt full">
+      <button class="btn btn_blue" data-closeModal>Вернуться на главную</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_subscribe_end">
-    <div class="modal-header">
-        <h2>Срок подписки истек</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Срок подписки истек</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-banner use_mt_first">
+      <div class="modal-content-banner-info">
+        <p>Оплатите подписку на тариф <strong>Советник</strong> для продолжения работы</p>
+        <button class="btn btn_link">Условия подписки</button>
+      </div>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-banner use_mt_first">
-            <div class="modal-content-banner-info">
-                <p>Оплатите подписку на тариф <strong>Советник</strong> для продолжения работы</p>
-                <button class="btn btn_link">Условия подписки</button>
-            </div>
-        </div>
-        <div class="modal-content-cost use_mt">
-            <h3>Стоимость подписки</h3>
-            <div class="modal-content-cost-info">
-                <strong>690 руб.</strong>
-                <span>/ месяц</span>
-            </div>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Оплатить</button>
-        </div>
+    <div class="modal-content-cost use_mt">
+      <h3>Стоимость подписки</h3>
+      <div class="modal-content-cost-info">
+        <strong>690 руб.</strong>
+        <span>/ месяц</span>
+      </div>
     </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Оплатить</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_subscribe_create">
-    <div class="modal-header">
-        <h2>Оформление подписки</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Оформление подписки</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-banner use_mt_first">
+      <div class="modal-content-banner-info">
+        <p>Вы собираетесь оформить подписку на тариф <strong>Советник</strong></p>
+        <button class="btn btn_link">Условия подписки</button>
+      </div>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-banner use_mt_first">
-            <div class="modal-content-banner-info">
-                <p>Вы собираетесь оформить подписку на тариф <strong>Советник</strong></p>
-                <button class="btn btn_link">Условия подписки</button>
-            </div>
-        </div>
-        <div class="modal-content-cost use_mt">
-            <h3>Стоимость подписки</h3>
-            <div class="modal-content-cost-info">
-                <strong>690 руб.</strong>
-                <span>/ месяц</span>
-            </div>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Оплатить</button>
-        </div>
+    <div class="modal-content-cost use_mt">
+      <h3>Стоимость подписки</h3>
+      <div class="modal-content-cost-info">
+        <strong>690 руб.</strong>
+        <span>/ месяц</span>
+      </div>
     </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Оплатить</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_subscribe_tariff">
-    <div class="modal-header">
-        <h2>Тариф “Советник”</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Тариф “Советник”</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-cost use_mt_first">
+      <h3>Стоимость подписки</h3>
+      <div class="modal-content-cost-info">
+        <strong>690 руб.</strong>
+        <span>/ месяц</span>
+      </div>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-cost use_mt_first">
-            <h3>Стоимость подписки</h3>
-            <div class="modal-content-cost-info">
-                <strong>690 руб.</strong>
-                <span>/ месяц</span>
-            </div>
-        </div>
-        <div class="modal-content-buttons use_mt full">
-            <button class="btn btn_blue" data-closeModal>Оплатить</button>
-        </div>
-        <div class="modal-content-toggle use_mt">
-            <button class="btnShowAll">
-                <span class="btnShowAll__text">Промокод</span>
-                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-            </button>
-            <div class="toggleOverlay">
-                <div class="modal-content-papers use_mt">
-                    <div class="modal-content-papers-promo">
-                        <label class="label_modal">Введите промокод</label>
-                        <input type="text" placeholder="Промокод">
-                    </div>
-                    <div class="modal-content-papers-btn">
-                        <button class="btn btn_blue" data-closeModal>Применить</button>
-                    </div>
-                    <p class="modal-content-papers-status success">Промокод успешно применен</p>
-                </div>
-            </div>
-        </div>
+    <div class="modal-content-buttons use_mt full">
+      <button class="btn btn_blue" data-closeModal>Оплатить</button>
     </div>
+    <div class="modal-content-toggle use_mt">
+      <button class="btnShowAll">
+        <span class="btnShowAll__text">Промокод</span>
+        <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+      </button>
+      <div class="toggleOverlay">
+        <div class="modal-content-papers use_mt">
+          <div class="modal-content-papers-promo">
+            <label class="label_modal">Введите промокод</label>
+            <input type="text" placeholder="Промокод">
+          </div>
+          <div class="modal-content-papers-btn">
+            <button class="btn btn_blue" data-closeModal>Применить</button>
+          </div>
+          <p class="modal-content-papers-status success">Промокод успешно применен</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_test_period_tarrifs">
-    <div class="modal-header">
-        <h2>Тестовый период закончился</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Тестовый период закончился</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-banner use_mt_first">
+      <div class="modal-content-banner-info">
+        <p>Оформите подписку на один из тарифово для продолжения работы</p>
+      </div>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-banner use_mt_first">
-            <div class="modal-content-banner-info">
-                <p>Оформите подписку на один из тарифово для продолжения работы</p>
-            </div>
+    <div class="modal-content-tarrifs use_mt">
+      <h3>Тарифы</h3>
+
+      <div class="tarrifs-cards">
+
+        <div class="tarrifsCard green">
+          <div class="tarrifsCard-header">
+            <h3>Свой портфель</h3>
+          </div>
+          <div class="tarrifsCard-cost">
+            <p>
+              <strong>290 руб.</strong>
+              <span>/ месяц</span>
+            </p>
+          </div>
+          <div class="tarrifsCard-text">
+            <p>
+              Заведите свой собственный портфель из акций и ETF, следите за своими инвестициями в режиме онлайн,
+              анализируйте данные и сравнивайте результаты с Бенчмарком. Просто, наглядно, удобно.
+            </p>
+          </div>
+          <div class="tarrifsCard-btn">
+            <button class="btn btn_tarrifs">Оформить подписку</button>
+          </div>
         </div>
-        <div class="modal-content-tarrifs use_mt">
-            <h3>Тарифы</h3>
 
-            <div class="tarrifs-cards">
-
-                <div class="tarrifsCard green">
-                    <div class="tarrifsCard-header">
-                        <h3>Свой портфель</h3>
-                    </div>
-                    <div class="tarrifsCard-cost">
-                        <p>
-                            <strong>290 руб.</strong>
-                            <span>/ месяц</span>
-                        </p>
-                    </div>
-                    <div class="tarrifsCard-text">
-                        <p>
-                            Заведите свой собственный портфель из акций и ETF, следите за своими инвестициями в режиме онлайн,
-                            анализируйте данные и сравнивайте результаты с Бенчмарком. Просто, наглядно, удобно.
-                        </p>
-                    </div>
-                    <div class="tarrifsCard-btn">
-                        <button class="btn btn_tarrifs">Оформить подписку</button>
-                    </div>
-                </div>
-
-                <div class="tarrifsCard red">
-                    <div class="tarrifsCard-header">
-                        <h3>Советник</h3>
-                    </div>
-                    <div class="tarrifsCard-cost">
-                        <p>
-                            <strong>690 руб.</strong>
-                            <span>/ месяц</span>
-                        </p>
-                    </div>
-                    <div class="tarrifsCard-text">
-                        <p>
-                            Управляйте портфелем на автопилоте.
-                            Платформа поможет с выбором, проследит за купленными акциями, покажет, на что обратить внимание.
-                        </p>
-                    </div>
-                    <div class="tarrifsCard-btn">
-                        <button class="btn btn_tarrifs">Оформить подписку</button>
-                    </div>
-                </div>
-
-                <div class="tarrifsCard yellow">
-                    <div class="tarrifsCard-header">
-                        <h3>Все включено</h3>
-                    </div>
-                    <div class="tarrifsCard-cost">
-                        <p>
-                            <strong>890 руб.</strong>
-                            <span>/ месяц</span>
-                        </p>
-                    </div>
-                    <div class="tarrifsCard-text">
-                        <p>Все функции платформы по выгодной цене. Легко и удобно. Никаких ограничений.</p>
-                    </div>
-                    <div class="tarrifsCard-btn">
-                        <button class="btn btn_tarrifs">Оформить подписку</button>
-                    </div>
-                </div>
-
-            </div>
+        <div class="tarrifsCard red">
+          <div class="tarrifsCard-header">
+            <h3>Советник</h3>
+          </div>
+          <div class="tarrifsCard-cost">
+            <p>
+              <strong>690 руб.</strong>
+              <span>/ месяц</span>
+            </p>
+          </div>
+          <div class="tarrifsCard-text">
+            <p>
+              Управляйте портфелем на автопилоте.
+              Платформа поможет с выбором, проследит за купленными акциями, покажет, на что обратить внимание.
+            </p>
+          </div>
+          <div class="tarrifsCard-btn">
+            <button class="btn btn_tarrifs">Оформить подписку</button>
+          </div>
         </div>
+
+        <div class="tarrifsCard yellow">
+          <div class="tarrifsCard-header">
+            <h3>Все включено</h3>
+          </div>
+          <div class="tarrifsCard-cost">
+            <p>
+              <strong>890 руб.</strong>
+              <span>/ месяц</span>
+            </p>
+          </div>
+          <div class="tarrifsCard-text">
+            <p>Все функции платформы по выгодной цене. Легко и удобно. Никаких ограничений.</p>
+          </div>
+          <div class="tarrifsCard-btn">
+            <button class="btn btn_tarrifs">Оформить подписку</button>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_subscribe_cancel">
-    <div class="modal-header">
-        <h2>Отмена подписки</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Отмена подписки</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-banner use_mt_first">
+      <div class="modal-content-banner-info">
+        <p>Вы собираетесь отменить подписку на тариф <strong>Советник</strong></p>
+        <button class="btn btn_link">Условия подписки</button>
+      </div>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-banner use_mt_first">
-            <div class="modal-content-banner-info">
-                <p>Вы собираетесь отменить подписку на тариф <strong>Советник</strong></p>
-                <button class="btn btn_link">Условия подписки</button>
-            </div>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_red" data-closeModal>Отменить подписку</button>
-        </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_red" data-closeModal>Отменить подписку</button>
     </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_delete_portfolio">
-    <div class="modal-header">
-        <h2>Подтверждение удаления</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Подтверждение удаления</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-text use_mt_first">
+      <p>Вы собираетесь удалить свой портфель, это действие будет необратимо.</p>
+      <br>
+      <strong>Хотите продолжить?</strong>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-text use_mt_first">
-            <p>Вы собираетесь удалить свой портфель, это действие будет необратимо.</p>
-            <br>
-            <strong>Хотите продолжить?</strong>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_red" data-closeModal>Удалить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_red" data-closeModal>Удалить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
     </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_delete">
-    <div class="modal-header">
-        <h2>Подтверждение удаления</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Подтверждение удаления</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-text use_mt_first">
+      <p>Вы собираетесь удалить свою стратегию, это действие будет необратимо.</p>
+      <br>
+      <strong>Хотите продолжить?</strong>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-text use_mt_first">
-            <p>Вы собираетесь удалить свою стратегию, это действие будет необратимо.</p>
-            <br>
-            <strong>Хотите продолжить?</strong>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_red" data-closeModal>Удалить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_red" data-closeModal>Удалить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
     </div>
+  </div>
 </div>
 
 <div class="modal import" id="modal_import">
-    <div class="modal-header">
-        <h2>Импорт из файла</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Импорт из файла</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-text use_mt_first">
+      <p>Для импорта компаний используйте установленный формат</p>
+      <br>
+      <a href="#">Скачать формат для импорта</a>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-text use_mt_first">
-            <p>Для импорта компаний используйте установленный формат</p>
-            <br>
-            <a href="#">Скачать формат для импорта</a>
-        </div>
 
-        <form class="modal-content-form use_mt dropzone" action="/index.html">
-            <div class="dz-message" data-dz-message>
-                <div class="dropzone__message">
-                    <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
-                    <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
+    <form class="modal-content-form use_mt dropzone" action="/index.html">
+      <div class="dz-message" data-dz-message>
+        <div class="dropzone__message">
+          <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
+          <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
+        </div>
+      </div>
+      <div class="fallback">
+        <input name="file" type="file" multiple />
+      </div>
+    </form>
+
+    <div class="modal-content-import use_mt">
+      <div class="modal-content-import-spinner">
+        <div class="double-spinner">
+          <div class="dbl-spinner"></div>
+          <div class="dbl-spinner dbl-spinner--2"></div>
+        </div>
+        <span>Осуществляется импорт компаний</span>
+      </div>
+    </div>
+
+    <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+      <div>Не похоже, что это формат установленного образца. Проверьте правильность заполнения данных и повторите попытку</div>
+    </div>
+
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue btn_short" disabled>Импортировать</button>
+      <button class="btn gray btn_short">Отменить</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal import" id="modal_import_table">
+  <div class="modal-header">
+    <h2>Импорт из файла</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+
+    <div class="modal-content-import use_mt_first">
+      <div class="statTable__content">
+    <div class="statTable__row">
+        <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
+            <div class="statSticker__icon">
+                <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+            </div>
+            <div class="statSticker__content statStickerInfo statStickerInfo--import statStickerInfo--nested">
+                <div class="statStickerInfo__container">
+                    <h3 class="statStickerInfo__title">TSLA</h3>
+                    <span class="statStickerInfo__subtitle">Tesla Motors</span>
+                </div>
+                <div class="statStickerInfo__changeStock">
+                    <span>Этот тикер доступен на нескольких биржах. Можно изменить биржу.</span>
+                    <button class="btnShowAll">
+                        <span class="btnShowAll__text">Просмотреть</span>
+                        <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                    </button>
                 </div>
             </div>
-            <div class="fallback">
-                <input name="file" type="file" multiple />
+            <div class="statSticker__delete">
+                <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
             </div>
-        </form>
+        </div>
+    </div>
+    <div class="statTable__subtable statSubtable statSubtable--noPaddingAbsolute">
 
-        <div class="modal-content-import use_mt">
-            <div class="modal-content-import-spinner">
-                <div class="double-spinner">
-                    <div class="dbl-spinner"></div>
-                    <div class="dbl-spinner dbl-spinner--2"></div>
+        <div class="statTable__content">
+            <div class="statTable__row">
+                <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
+                    <div class="statSticker__icon">
+                        <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                    </div>
+                    <div class="statSticker__content statStickerInfo statStickerInfo--import">
+                        <h3 class="statStickerInfo__title">TSLA [NYSE]</h3>
+                        <span class="statStickerInfo__subtitle">Tesla Motors</span>
+                    </div>
+                    <div class="statSticker__delete">
+                        <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                    </div>
                 </div>
-                <span>Осуществляется импорт компаний</span>
+            </div>
+            <div class="statTable__subtable statSubtable statSubtable--noPadding">
+                <div class="statSubtable__table statSubtable__table--noMargin statTable">
+                    <div class="statTable__row statTable__row--header">
+                        <span class="statTable__item">Дата</span>
+                        <span class="statTable__item">Операция</span>
+                        <span class="statTable__item statTable__item--shrink">Кол-во</span>
+                        <span class="statTable__item">Цена</span>
+                        <span class="statTable__item statTable__item--shrink">Валюта</span>
+                        <span class="statTable__item statTable__item--grow">Комментарий</span>
+                    </div>
+                    <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">1</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
+                        </div>
+                    </div>
+                    <div class="statTable__row statTable__row--content">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">2</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
+                        </div>
+                    </div>
+                    <div class="statTable__row">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">3</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="statTable__content">
+            <div class="statTable__row">
+                <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
+                    <div class="statSticker__icon">
+                        <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                    </div>
+                    <div class="statSticker__content statStickerInfo statStickerInfo--import">
+                        <h3 class="statStickerInfo__title">TSLA [LSE]</h3>
+                        <span class="statStickerInfo__subtitle">Tesla Motors</span>
+                    </div>
+                    <div class="statSticker__delete">
+                        <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="statTable__subtable statSubtable statSubtable--noPadding">
+                <div class="statSubtable__table statSubtable__table--noMargin statTable">
+                    <div class="statTable__row statTable__row--header">
+                        <span class="statTable__item">Дата</span>
+                        <span class="statTable__item">Операция</span>
+                        <span class="statTable__item statTable__item--shrink">Кол-во</span>
+                        <span class="statTable__item">Цена</span>
+                        <span class="statTable__item statTable__item--shrink">Валюта</span>
+                        <span class="statTable__item statTable__item--grow">Комментарий</span>
+                    </div>
+                    <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">1</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
+                        </div>
+                    </div>
+                    <div class="statTable__row statTable__row--content">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">2</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
+                        </div>
+                    </div>
+                    <div class="statTable__row">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">3</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="statTable__content">
+            <div class="statTable__row">
+                <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
+                    <div class="statSticker__icon">
+                        <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                    </div>
+                    <div class="statSticker__content statStickerInfo statStickerInfo--import">
+                        <h3 class="statStickerInfo__title">TSLA [TO]</h3>
+                        <span class="statStickerInfo__subtitle">Tesla Motors</span>
+                    </div>
+                    <div class="statSticker__delete">
+                        <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="statTable__subtable statSubtable statSubtable--noPadding">
+                <div class="statSubtable__table statSubtable__table--noMargin statTable">
+                    <div class="statTable__row statTable__row--header">
+                        <span class="statTable__item">Дата</span>
+                        <span class="statTable__item">Операция</span>
+                        <span class="statTable__item statTable__item--shrink">Кол-во</span>
+                        <span class="statTable__item">Цена</span>
+                        <span class="statTable__item statTable__item--shrink">Валюта</span>
+                        <span class="statTable__item statTable__item--grow">Комментарий</span>
+                    </div>
+                    <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">1</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
+                        </div>
+                    </div>
+                    <div class="statTable__row statTable__row--content">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">2</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
+                        </div>
+                    </div>
+                    <div class="statTable__row">
+                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                        <div class="statTable__item statTable__item--label">
+                            <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Кол-во</span>
+                            <span class="statTable__value">3</span>
+                        </div>
+                        <div class="statTable__item">
+                            <span class="statTable__description">Цена</span>
+                            <span class="statTable__value">0.0000312</span>
+                        </div>
+                        <div class="statTable__item statTable__item--shrink">
+                            <span class="statTable__description">Валюта</span>
+                            <span class="statTable__value">USD</span>
+                        </div>
+                        <div class="statTable__item statTable__item--grow">
+                            <span class="statTable__description">Комментарий</span>
+                            <span class="statTable__value statTable__value--wrap">-</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
-            <div>Не похоже, что это формат установленного образца. Проверьте правильность заполнения данных и повторите попытку</div>
-        </div>
+    </div>
+</div>
 
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue btn_short" disabled>Импортировать</button>
-            <button class="btn gray btn_short">Отменить</button>
+<div class="statTable__content statTable__content--danger">
+    <div class="statTable__row">
+        <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
+            <div class="statSticker__icon">
+                <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+            </div>
+            <div class="statSticker__content statStickerInfo statStickerInfo--import">
+                <h3 class="statStickerInfo__title">AMGN</h3>
+                <span class="statStickerInfo__subtitle">Applied Molecular Genesis</span>
+            </div>
+            <div class="statSticker__delete">
+                <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+            </div>
+        </div>
+    </div>
+    <div class="statTable__subtable statSubtable statSubtable--noPadding">
+        <div class="statSubtable__table statSubtable__table--noMargin statTable">
+            <div class="statTable__row statTable__row--header">
+                <span class="statTable__item">Дата</span>
+                <span class="statTable__item">Операция</span>
+                <span class="statTable__item statTable__item--shrink">Кол-во</span>
+                <span class="statTable__item">Цена</span>
+                <span class="statTable__item statTable__item--shrink">Валюта</span>
+                <span class="statTable__item statTable__item--grow">Комментарий</span>
+            </div>
+            <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
+                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                <div class="statTable__item statTable__item--label">
+                    <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Кол-во</span>
+                    <span class="statTable__value">1</span>
+                </div>
+                <div class="statTable__item">
+                    <span class="statTable__description">Цена</span>
+                    <span class="statTable__value">0.0000312</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Валюта</span>
+                    <span class="statTable__value">USD</span>
+                </div>
+                <div class="statTable__item statTable__item--grow">
+                    <span class="statTable__description">Комментарий</span>
+                    <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
+                </div>
+            </div>
+            <div class="statTable__row statTable__row--content">
+                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                <div class="statTable__item statTable__item--label">
+                    <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Кол-во</span>
+                    <span class="statTable__value">2</span>
+                </div>
+                <div class="statTable__item">
+                    <span class="statTable__description">Цена</span>
+                    <span class="statTable__value">0.0000312</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Валюта</span>
+                    <span class="statTable__value">USD</span>
+                </div>
+                <div class="statTable__item statTable__item--grow">
+                    <span class="statTable__description">Комментарий</span>
+                    <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
+                </div>
+            </div>
+            <div class="statTable__row">
+                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                <div class="statTable__item statTable__item--label">
+                    <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Кол-во</span>
+                    <span class="statTable__value">3</span>
+                </div>
+                <div class="statTable__item">
+                    <span class="statTable__description">Цена</span>
+                    <span class="statTable__value">0.0000312</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Валюта</span>
+                    <span class="statTable__value">USD</span>
+                </div>
+                <div class="statTable__item statTable__item--grow">
+                    <span class="statTable__description">Комментарий</span>
+                    <span class="statTable__value statTable__value--wrap">-</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="modal import" id="modal_import_table">
-    <div class="modal-header">
-        <h2>Импорт из файла</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+<div class="statTable__content">
+    <div class="statTable__row">
+        <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
+            <div class="statSticker__icon">
+                <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+            </div>
+            <div class="statSticker__content statStickerInfo statStickerInfo--import">
+                <h3 class="statStickerInfo__title">BAT</h3>
+                <span class="statStickerInfo__subtitle">Basic Attention Token</span>
+            </div>
+            <div class="statSticker__delete">
+                <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
+            </div>
+        </div>
     </div>
-    <div class="modal-content">
+    <div class="statTable__subtable statSubtable statSubtable--noPadding">
+        <div class="statSubtable__table statSubtable__table--noMargin statTable">
+            <div class="statTable__row statTable__row--header">
+                <span class="statTable__item">Дата</span>
+                <span class="statTable__item">Операция</span>
+                <span class="statTable__item statTable__item--shrink">Кол-во</span>
+                <span class="statTable__item">Цена</span>
+                <span class="statTable__item statTable__item--shrink">Валюта</span>
+                <span class="statTable__item statTable__item--grow">Комментарий</span>
+            </div>
+            <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
+                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                <div class="statTable__item statTable__item--label">
+                    <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Кол-во</span>
+                    <span class="statTable__value">1</span>
+                </div>
+                <div class="statTable__item">
+                    <span class="statTable__description">Цена</span>
+                    <span class="statTable__value">0.0000312</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Валюта</span>
+                    <span class="statTable__value">USD</span>
+                </div>
+                <div class="statTable__item statTable__item--grow">
+                    <span class="statTable__description">Комментарий</span>
+                    <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
+                </div>
+            </div>
+            <div class="statTable__row statTable__row--content">
+                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                <div class="statTable__item statTable__item--label">
+                    <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Кол-во</span>
+                    <span class="statTable__value">2</span>
+                </div>
+                <div class="statTable__item">
+                    <span class="statTable__description">Цена</span>
+                    <span class="statTable__value">0.0000312</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Валюта</span>
+                    <span class="statTable__value">USD</span>
+                </div>
+                <div class="statTable__item statTable__item--grow">
+                    <span class="statTable__description">Комментарий</span>
+                    <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
+                </div>
+            </div>
+            <div class="statTable__row">
+                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                <div class="statTable__item statTable__item--label">
+                    <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Кол-во</span>
+                    <span class="statTable__value">3</span>
+                </div>
+                <div class="statTable__item">
+                    <span class="statTable__description">Цена</span>
+                    <span class="statTable__value">0.0000312</span>
+                </div>
+                <div class="statTable__item statTable__item--shrink">
+                    <span class="statTable__description">Валюта</span>
+                    <span class="statTable__value">USD</span>
+                </div>
+                <div class="statTable__item statTable__item--grow">
+                    <span class="statTable__description">Комментарий</span>
+                    <span class="statTable__value statTable__value--wrap">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
 
-        <div class="modal-content-import use_mt_first">
+    <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+      <div>Компании обозначенные красным цветом не удалось импортировать. Попробуйте внести их вручную или напишите нам - <a href="#">support@beatmarket.one</a></div>
+    </div>
+
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue btn_short" disabled>Сохранить</button>
+      <button class="btn gray btn_short">Отменить</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal import" id="modal_import_fields">
+  <div class="modal-header">
+    <h2>Импорт из файла</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+
+    <div class="modal-content-text use_mt_first">
+      <p>Для импорта компаний используйте установленный формат или созданный вами</p>
+      <br>
+      <a href="#">Скачать базовый формат для импорта <span>(с примером заполнения)</span></a>
+    </div>
+
+    <div class="modal-content-details">
+      <div class="details">
+        <div class="details__header">
+          <h2 class="details__title">Создать свой формат</h2>
+          <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
+        </div>
+        <div class="details__text modal-content-text">
+          <p>Отметьте все необходимые поля и скачайте файл</p>
+          <div class="label-fields">
+            <div class="label-fields__item">
+              <span class="label-fields__title">Обязательные поля</span>
+              <div class="label-fields__labels label-fields__labels--readonly">
+                <label class="checkbox-label">
+                  <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
+                  <div class="checkbox-label__area">
+                    <span class="checkbox-label__name">ISIN</span>
+                  </div>
+                </label>
+
+                <label class="checkbox-label">
+                  <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
+                  <div class="checkbox-label__area">
+                    <span class="checkbox-label__name">Тикер</span>
+                  </div>
+                </label>
+
+                <label class="checkbox-label">
+                  <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
+                  <div class="checkbox-label__area">
+                    <span class="checkbox-label__name">Кол-во</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="label-fields__item">
+              <span class="label-fields__title">Поля по выбору</span>
+              <div class="label-fields__labels">
+                <label class="checkbox-label">
+                  <input class="checkbox-label__input visually_hidden" type="checkbox">
+                  <div class="checkbox-label__area">
+                    <span class="checkbox-label__name">Дата</span>
+                  </div>
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox-label__input visually_hidden" type="checkbox">
+                  <div class="checkbox-label__area">
+                    <span class="checkbox-label__name">Операция</span>
+                    <span class="checkbox-label__descr">Buy / sell</span>
+                  </div>
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox-label__input visually_hidden" type="checkbox">
+                  <div class="checkbox-label__area">
+                    <span class="checkbox-label__name">Цена</span>
+                  </div>
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox-label__input visually_hidden" type="checkbox">
+                  <div class="checkbox-label__area">
+                    <span class="checkbox-label__name">Комментарий</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <a href="#">Скачать созданный формат для импорта <span>(с примером заполнения)</span></a>
+        </div>
+      </div>
+    </div>
+
+    <form class="modal-content-form use_mt dropzone" action="/index.html">
+      <div class="dz-message" data-dz-message>
+        <div class="dropzone__message">
+          <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
+          <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
+        </div>
+      </div>
+      <div class="fallback">
+        <input name="file" type="file" multiple />
+      </div>
+    </form>
+
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue btn_short" disabled>Импортировать</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal import" id="modal_import_combo">
+  <div class="modal-header modal-header--mob">
+    <h2>Импорт</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="tabs">
+      <ul class="tabs__switcher tabsSwitcher tabsSwitcher--buttons">
+        <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-broker">Брокерский отчет</a></li>
+        <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-import">Импорт из файла</a></li>
+      </ul>
+
+      <div class="tabs__content">
+
+        <div id="tabs-import">
+
+          <div class="modal-content-text use_mt_first">
+            <p>Для импорта компаний используйте установленный формат или созданный вами</p>
+            <br>
+            <a href="#">Скачать базовый формат для импорта <span>(с примером заполнения)</span></a>
+          </div>
+
+          <div class="modal-content-details">
+            <div class="details">
+              <div class="details__header">
+                <h2 class="details__title">Создать свой формат</h2>
+                <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
+              </div>
+              <div class="details__text modal-content-text">
+                <p>Отметьте все необходимые поля и скачайте файл</p>
+                <div class="label-fields">
+                  <div class="label-fields__item">
+                    <span class="label-fields__title">Обязательные поля</span>
+                    <div class="label-fields__labels label-fields__labels--readonly">
+                      <label class="checkbox-label">
+                        <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
+                        <div class="checkbox-label__area">
+                          <span class="checkbox-label__name">ISIN</span>
+                        </div>
+                      </label>
+
+                      <label class="checkbox-label">
+                        <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
+                        <div class="checkbox-label__area">
+                          <span class="checkbox-label__name">Тикер</span>
+                        </div>
+                      </label>
+
+                      <label class="checkbox-label">
+                        <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
+                        <div class="checkbox-label__area">
+                          <span class="checkbox-label__name">Кол-во</span>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="label-fields__item">
+                    <span class="label-fields__title">Поля по выбору</span>
+                    <div class="label-fields__labels">
+                      <label class="checkbox-label">
+                        <input class="checkbox-label__input visually_hidden" type="checkbox">
+                        <div class="checkbox-label__area">
+                          <span class="checkbox-label__name">Дата</span>
+                        </div>
+                      </label>
+                      <label class="checkbox-label">
+                        <input class="checkbox-label__input visually_hidden" type="checkbox">
+                        <div class="checkbox-label__area">
+                          <span class="checkbox-label__name">Операция</span>
+                          <span class="checkbox-label__descr">Buy / sell</span>
+                        </div>
+                      </label>
+                      <label class="checkbox-label">
+                        <input class="checkbox-label__input visually_hidden" type="checkbox">
+                        <div class="checkbox-label__area">
+                          <span class="checkbox-label__name">Цена</span>
+                        </div>
+                      </label>
+                      <label class="checkbox-label">
+                        <input class="checkbox-label__input visually_hidden" type="checkbox">
+                        <div class="checkbox-label__area">
+                          <span class="checkbox-label__name">Комментарий</span>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <a href="#">Скачать созданный формат для импорта <span>(с примером заполнения)</span></a>
+              </div>
+            </div>
+          </div>
+
+          <form class="modal-content-form use_mt dropzone" action="/index.html">
+            <div class="dz-message" data-dz-message>
+              <div class="dropzone__message">
+                <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
+                <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
+              </div>
+            </div>
+            <div class="fallback">
+              <input name="file" type="file" multiple />
+            </div>
+          </form>
+
+          <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue btn_short" disabled>Импортировать</button>
+          </div>
+        </div>
+
+        <div id="tabs-broker">
+          <h3 class="broker-title">Выберите брокера</h3>
+          <div class="broker-inputs">
+            <div class="inputGroup">
+              <span class="inputGroup__label">Название брокера</span>
+              <div class="inputGroup__item">
+                <input class="inputGroup__control inputGroup__control--padding" type="text"
+                       placeholder="Например, Сбербанк">
+                <svg class="inputGroup__icon">
+                  <use xlink:href="img/main.svg#icon-searchTicket"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="inputGroup">
+              <span class="inputGroup__label">Страна</span>
+              <div class="inputGroup__item">
+
+                <div class="inputGroup__control inputSelect">
+
+                  <input class="inputSelect__checkbox visually_hidden" id="analyticScanner1" type="checkbox">
+
+                  <label class="inputSelect__container" for="analyticScanner1">
+                    <span class="inputSelect__value">Все Страны</span>
+                    <svg class="inputSelect__icon">
+                      <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                    </svg>
+                  </label>
+
+                  <div class="inputSelect__dropdown inputSelect__dropdown">
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked="">
+                      <span class="inputSelect__choose radio_custom">Россия</span>
+                    </label>
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                      <span class="inputSelect__choose radio_custom">США</span>
+                    </label>
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                      <span class="inputSelect__choose radio_custom">Германия</span>
+                    </label>
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+                      <span class="inputSelect__choose radio_custom">Украина</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="broker-container">
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/bks.svg" alt="БКС">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/int_brokers.svg" alt="Interactive brokers">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/finam.png" alt="Финам">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/tinkoff.svg" alt="Тинькофф">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/vtb.svg" alt="ВТБ">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/alpha_bank.svg" alt="Альфа банк">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/sber.svg" alt="Сбербанк">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/bks.svg" alt="БКС">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/int_brokers.svg" alt="Interactive brokers">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/finam.png" alt="Финам">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/tinkoff.svg" alt="Тинькофф">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/vtb.svg" alt="ВТБ">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/alpha_bank.svg" alt="Альфа банк">
+                </div>
+              </div>
+            </label>
+
+            <label class="broker-choose">
+              <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+              <div class="broker-choose__container">
+                <div class="broker-choose__img">
+                  <img src="./img/broker/sber.svg" alt="Сбербанк">
+                </div>
+              </div>
+            </label>
+
+            <!-- <label class="broker-choose">
+                <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                <div class="broker-choose__container">
+                    <div class="broker-choose__img">
+                        <img src="./img/broker/alpha_bank.svg" alt="Альфа банк">
+                    </div>
+                </div>
+            </label>
+
+            <label class="broker-choose">
+                <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                <div class="broker-choose__container">
+                    <div class="broker-choose__img">
+                        <img src="./img/broker/sber.svg" alt="Сбербанк">
+                    </div>
+                </div>
+            </label> -->
+
+
+          </div>
+
+          <h3 class="broker-title use_mt">Загрузите отчет <span class="broker-title__primary">Interactive Brokers</span></h3>
+
+          <form class="modal-content-form use_mt dropzone" action="/index.html">
+            <div class="dz-message" data-dz-message>
+              <div class="dropzone__message">
+                <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
+                <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
+              </div>
+            </div>
+            <div class="fallback">
+              <input name="file" type="file" multiple />
+            </div>
+          </form>
+
+          <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+            <div>Не похоже, что это формат выбранного брокера. Проверьте файл брокера и повторите попытку</div>
+          </div>
+
+          <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue btn_short">Импортировать</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal import" id="modal_import_combo_table">
+  <div class="modal-header modal-header--mob">
+    <h2>Импорт</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="tabs">
+      <ul class="tabs__switcher tabsSwitcher tabsSwitcher--buttons">
+        <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-broker">Брокерский отчет</a></li>
+        <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-import">Импорт из файла</a></li>
+      </ul>
+
+      <div class="tabs__content">
+
+        <div id="tabs-import">
+
+          <div class="modal-content-import use_mt_first">
             <div class="statTable__content">
     <div class="statTable__row">
         <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
@@ -1771,474 +2741,42 @@
         </div>
     </div>
 </div>
-        </div>
+          </div>
 
-        <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+          <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
             <div>Компании обозначенные красным цветом не удалось импортировать. Попробуйте внести их вручную или напишите нам - <a href="#">support@beatmarket.one</a></div>
-        </div>
+          </div>
 
-        <div class="modal-content-buttons use_mt">
+          <div class="modal-content-buttons use_mt">
             <button class="btn btn_blue btn_short" disabled>Сохранить</button>
             <button class="btn gray btn_short">Отменить</button>
-        </div>
-    </div>
-</div>
-
-<div class="modal import" id="modal_import_fields">
-    <div class="modal-header">
-        <h2>Импорт из файла</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
-    </div>
-    <div class="modal-content">
-
-        <div class="modal-content-text use_mt_first">
-            <p>Для импорта компаний используйте установленный формат или созданный вами</p>
-            <br>
-            <a href="#">Скачать базовый формат для импорта <span>(с примером заполнения)</span></a>
+          </div>
         </div>
 
-        <div class="modal-content-details">
-            <div class="details">
-                <div class="details__header">
-                    <h2 class="details__title">Создать свой формат</h2>
-                    <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
-                </div>
-                <div class="details__text modal-content-text">
-                    <p>Отметьте все необходимые поля и скачайте файл</p>
-                    <div class="label-fields">
-                        <div class="label-fields__item">
-                            <span class="label-fields__title">Обязательные поля</span>
-                            <div class="label-fields__labels label-fields__labels--readonly">
-                                <label class="checkbox-label">
-                                    <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
-                                    <div class="checkbox-label__area">
-                                        <span class="checkbox-label__name">ISIN</span>
-                                    </div>
-                                </label>
+        <div id="tabs-broker">
 
-                                <label class="checkbox-label">
-                                    <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
-                                    <div class="checkbox-label__area">
-                                        <span class="checkbox-label__name">Тикер</span>
-                                    </div>
-                                </label>
-
-                                <label class="checkbox-label">
-                                    <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
-                                    <div class="checkbox-label__area">
-                                        <span class="checkbox-label__name">Кол-во</span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="label-fields__item">
-                            <span class="label-fields__title">Поля по выбору</span>
-                            <div class="label-fields__labels">
-                                <label class="checkbox-label">
-                                    <input class="checkbox-label__input visually_hidden" type="checkbox">
-                                    <div class="checkbox-label__area">
-                                        <span class="checkbox-label__name">Дата</span>
-                                    </div>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input class="checkbox-label__input visually_hidden" type="checkbox">
-                                    <div class="checkbox-label__area">
-                                        <span class="checkbox-label__name">Операция</span>
-                                        <span class="checkbox-label__descr">Buy / sell</span>
-                                    </div>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input class="checkbox-label__input visually_hidden" type="checkbox">
-                                    <div class="checkbox-label__area">
-                                        <span class="checkbox-label__name">Цена</span>
-                                    </div>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input class="checkbox-label__input visually_hidden" type="checkbox">
-                                    <div class="checkbox-label__area">
-                                        <span class="checkbox-label__name">Комментарий</span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">Скачать созданный формат для импорта <span>(с примером заполнения)</span></a>
+          <div class="broker-whatImport contentSwitcher">
+            <h3 class="broker-title">Что импортируем</h3>
+            <div class="broker-whatImport__items">
+              <label class="broker-whatImport__item">
+                <input class="contentSwitcher__selector broker-whatImport__checkbox visually_hidden" type="checkbox">
+                <div class="broker-whatImport__choose">
+                  <span class="broker-whatImport__text">Остаток активов на начало периода</span>
                 </div>
+              </label>
+              <label class="broker-whatImport__item">
+                <input class="contentSwitcher__selector broker-whatImport__checkbox visually_hidden" type="checkbox">
+                <div class="broker-whatImport__choose">
+                  <span class="broker-whatImport__text">Операции за отчетный период</span>
+                </div>
+              </label>
             </div>
-        </div>
+          </div>
 
-        <form class="modal-content-form use_mt dropzone" action="/index.html">
-            <div class="dz-message" data-dz-message>
-                <div class="dropzone__message">
-                    <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
-                    <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
-                </div>
-            </div>
-            <div class="fallback">
-                <input name="file" type="file" multiple />
-            </div>
-        </form>
-
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue btn_short" disabled>Импортировать</button>
-        </div>
-    </div>
-</div>
-
-<div class="modal import" id="modal_import_combo">
-    <div class="modal-header modal-header--mob">
-        <h2>Импорт</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
-    </div>
-    <div class="modal-content">
-        <div class="tabs">
-            <ul class="tabs__switcher tabsSwitcher tabsSwitcher--buttons">
-                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-broker">Брокерский отчет</a></li>
-                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-import">Импорт из файла</a></li>
-            </ul>
-
-            <div class="tabs__content">
-
-                <div id="tabs-import">
-
-                    <div class="modal-content-text use_mt_first">
-                        <p>Для импорта компаний используйте установленный формат или созданный вами</p>
-                        <br>
-                        <a href="#">Скачать базовый формат для импорта <span>(с примером заполнения)</span></a>
-                    </div>
-
-                    <div class="modal-content-details">
-                        <div class="details">
-                            <div class="details__header">
-                                <h2 class="details__title">Создать свой формат</h2>
-                                <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
-                            </div>
-                            <div class="details__text modal-content-text">
-                                <p>Отметьте все необходимые поля и скачайте файл</p>
-                                <div class="label-fields">
-                                    <div class="label-fields__item">
-                                        <span class="label-fields__title">Обязательные поля</span>
-                                        <div class="label-fields__labels label-fields__labels--readonly">
-                                            <label class="checkbox-label">
-                                                <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
-                                                <div class="checkbox-label__area">
-                                                    <span class="checkbox-label__name">ISIN</span>
-                                                </div>
-                                            </label>
-
-                                            <label class="checkbox-label">
-                                                <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
-                                                <div class="checkbox-label__area">
-                                                    <span class="checkbox-label__name">Тикер</span>
-                                                </div>
-                                            </label>
-
-                                            <label class="checkbox-label">
-                                                <input class="checkbox-label__input visually_hidden" type="checkbox" checked>
-                                                <div class="checkbox-label__area">
-                                                    <span class="checkbox-label__name">Кол-во</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="label-fields__item">
-                                        <span class="label-fields__title">Поля по выбору</span>
-                                        <div class="label-fields__labels">
-                                            <label class="checkbox-label">
-                                                <input class="checkbox-label__input visually_hidden" type="checkbox">
-                                                <div class="checkbox-label__area">
-                                                    <span class="checkbox-label__name">Дата</span>
-                                                </div>
-                                            </label>
-                                            <label class="checkbox-label">
-                                                <input class="checkbox-label__input visually_hidden" type="checkbox">
-                                                <div class="checkbox-label__area">
-                                                    <span class="checkbox-label__name">Операция</span>
-                                                    <span class="checkbox-label__descr">Buy / sell</span>
-                                                </div>
-                                            </label>
-                                            <label class="checkbox-label">
-                                                <input class="checkbox-label__input visually_hidden" type="checkbox">
-                                                <div class="checkbox-label__area">
-                                                    <span class="checkbox-label__name">Цена</span>
-                                                </div>
-                                            </label>
-                                            <label class="checkbox-label">
-                                                <input class="checkbox-label__input visually_hidden" type="checkbox">
-                                                <div class="checkbox-label__area">
-                                                    <span class="checkbox-label__name">Комментарий</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#">Скачать созданный формат для импорта <span>(с примером заполнения)</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form class="modal-content-form use_mt dropzone" action="/index.html">
-                        <div class="dz-message" data-dz-message>
-                            <div class="dropzone__message">
-                                <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
-                                <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
-                            </div>
-                        </div>
-                        <div class="fallback">
-                            <input name="file" type="file" multiple />
-                        </div>
-                    </form>
-
-                    <div class="modal-content-buttons use_mt">
-                        <button class="btn btn_blue btn_short" disabled>Импортировать</button>
-                    </div>
-                </div>
-
-                <div id="tabs-broker">
-                    <h3 class="broker-title">Выберите брокера</h3>
-                    <div class="broker-inputs">
-                      <div class="inputGroup">
-                        <span class="inputGroup__label">Название брокера</span>
-                        <div class="inputGroup__item">
-                          <input class="inputGroup__control inputGroup__control--padding" type="text"
-                            placeholder="Например, Сбербанк">
-                          <svg class="inputGroup__icon">
-                            <use xlink:href="img/main.svg#icon-searchTicket"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="inputGroup">
-                        <span class="inputGroup__label">Страна</span>
-                        <div class="inputGroup__item">
-          
-                          <div class="inputGroup__control inputSelect">
-          
-                            <input class="inputSelect__checkbox visually_hidden" id="analyticScanner1" type="checkbox">
-          
-                            <label class="inputSelect__container" for="analyticScanner1">
-                              <span class="inputSelect__value">Все Страны</span>
-                              <svg class="inputSelect__icon">
-                                <use xlink:href="img/main.svg#icon-arrow-down"></use>
-                              </svg>
-                            </label>
-          
-                            <div class="inputSelect__dropdown inputSelect__dropdown">
-                              <label class="inputSelect__item">
-                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked="">
-                                <span class="inputSelect__choose radio_custom">Россия</span>
-                              </label>
-                              <label class="inputSelect__item">
-                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
-                                <span class="inputSelect__choose radio_custom">США</span>
-                              </label>
-                              <label class="inputSelect__item">
-                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
-                                <span class="inputSelect__choose radio_custom">Германия</span>
-                              </label>
-                              <label class="inputSelect__item">
-                                <input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
-                                <span class="inputSelect__choose radio_custom">Украина</span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="broker-container">
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/bks.svg" alt="БКС">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/int_brokers.svg" alt="Interactive brokers">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/finam.png" alt="Финам">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/tinkoff.svg" alt="Тинькофф">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/vtb.svg" alt="ВТБ">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/alpha_bank.svg" alt="Альфа банк">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/sber.svg" alt="Сбербанк">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/bks.svg" alt="БКС">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/int_brokers.svg" alt="Interactive brokers">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/finam.png" alt="Финам">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/tinkoff.svg" alt="Тинькофф">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/vtb.svg" alt="ВТБ">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/alpha_bank.svg" alt="Альфа банк">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/sber.svg" alt="Сбербанк">
-                                </div>
-                            </div>
-                        </label>
-
-                        <!-- <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/alpha_bank.svg" alt="Альфа банк">
-                                </div>
-                            </div>
-                        </label>
-
-                        <label class="broker-choose">
-                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
-                            <div class="broker-choose__container">
-                                <div class="broker-choose__img">
-                                    <img src="./img/broker/sber.svg" alt="Сбербанк">
-                                </div>
-                            </div>
-                        </label> -->
-
-
-                    </div>
-
-                    <h3 class="broker-title use_mt">Загрузите отчет <span class="broker-title__primary">Interactive Brokers</span></h3>
-
-                    <form class="modal-content-form use_mt dropzone" action="/index.html">
-                        <div class="dz-message" data-dz-message>
-                            <div class="dropzone__message">
-                                <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
-                                <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
-                            </div>
-                        </div>
-                        <div class="fallback">
-                            <input name="file" type="file" multiple />
-                        </div>
-                    </form>
-
-                    <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
-                        <div>Не похоже, что это формат выбранного брокера. Проверьте файл брокера и повторите попытку</div>
-                    </div>
-
-                    <div class="modal-content-buttons use_mt">
-                        <button class="btn btn_blue btn_short">Импортировать</button>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal import" id="modal_import_combo_table">
-    <div class="modal-header modal-header--mob">
-        <h2>Импорт</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
-    </div>
-    <div class="modal-content">
-        <div class="tabs">
-            <ul class="tabs__switcher tabsSwitcher tabsSwitcher--buttons">
-                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-broker">Брокерский отчет</a></li>
-                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-import">Импорт из файла</a></li>
-            </ul>
-
-            <div class="tabs__content">
-
-                <div id="tabs-import">
-
-                    <div class="modal-content-import use_mt_first">
-                        <div class="statTable__content">
+          <div class="contentSwitcher__container use_mt">
+            <h3 class="broker-title">Остаток активов на начало периода</h3>
+            <div class="modal-content-import">
+              <div class="statTable__content">
     <div class="statTable__row">
         <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
             <div class="statSticker__icon">
@@ -2741,42 +3279,19 @@
         </div>
     </div>
 </div>
-                    </div>
+            </div>
+            <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+              <div> Найдено несколько компаний с одинаковым тикером <a href="#">AMGN</a>. Удалите часть из них, если это ошибка</div>
+            </div>
+            <div class="modal-content-prompt portfolio__prompt-sticky prompt prompt--danger">
+              <div>Компании обозначенные красным цветом не удалось импортировать. Попробуйте внести их вручную или напишите нам - <a href="#">support@beatmarket.one</a></div>
+            </div>
+          </div>
 
-                    <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
-                        <div>Компании обозначенные красным цветом не удалось импортировать. Попробуйте внести их вручную или напишите нам - <a href="#">support@beatmarket.one</a></div>
-                    </div>
-
-                    <div class="modal-content-buttons use_mt">
-                        <button class="btn btn_blue btn_short" disabled>Сохранить</button>
-                        <button class="btn gray btn_short">Отменить</button>
-                    </div>
-                </div>
-
-                <div id="tabs-broker">
-
-                    <div class="broker-whatImport contentSwitcher">
-                        <h3 class="broker-title">Что импортируем</h3>
-                        <div class="broker-whatImport__items">
-                            <label class="broker-whatImport__item">
-                                <input class="contentSwitcher__selector broker-whatImport__checkbox visually_hidden" type="checkbox">
-                                <div class="broker-whatImport__choose">
-                                    <span class="broker-whatImport__text">Остаток активов на начало периода</span>
-                                </div>
-                            </label>
-                            <label class="broker-whatImport__item">
-                                <input class="contentSwitcher__selector broker-whatImport__checkbox visually_hidden" type="checkbox">
-                                <div class="broker-whatImport__choose">
-                                    <span class="broker-whatImport__text">Операции за отчетный период</span>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="contentSwitcher__container use_mt">
-                        <h3 class="broker-title">Остаток активов на начало периода</h3>
-                        <div class="modal-content-import">
-                            <div class="statTable__content">
+          <div class="contentSwitcher__container use_mt">
+            <h3 class="broker-title">Операции за отчетный период</h3>
+            <div class="modal-content-import">
+              <div class="statTable__content">
     <div class="statTable__row">
         <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
             <div class="statSticker__icon">
@@ -3279,1068 +3794,553 @@
         </div>
     </div>
 </div>
-                        </div>
-                        <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
-                            <div> Найдено несколько компаний с одинаковым тикером <a href="#">AMGN</a>. Удалите часть из них, если это ошибка</div>
-                        </div>
-                        <div class="modal-content-prompt portfolio__prompt-sticky prompt prompt--danger">
-                            <div>Компании обозначенные красным цветом не удалось импортировать. Попробуйте внести их вручную или напишите нам - <a href="#">support@beatmarket.one</a></div>
-                        </div>
-                    </div>
+            </div>
+          </div>
 
-                    <div class="contentSwitcher__container use_mt">
-                        <h3 class="broker-title">Операции за отчетный период</h3>
-                        <div class="modal-content-import">
-                            <div class="statTable__content">
-    <div class="statTable__row">
-        <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
-            <div class="statSticker__icon">
-                <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-            </div>
-            <div class="statSticker__content statStickerInfo statStickerInfo--import statStickerInfo--nested">
-                <div class="statStickerInfo__container">
-                    <h3 class="statStickerInfo__title">TSLA</h3>
-                    <span class="statStickerInfo__subtitle">Tesla Motors</span>
-                </div>
-                <div class="statStickerInfo__changeStock">
-                    <span>Этот тикер доступен на нескольких биржах. Можно изменить биржу.</span>
-                    <button class="btnShowAll">
-                        <span class="btnShowAll__text">Просмотреть</span>
-                        <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                    </button>
-                </div>
-            </div>
-            <div class="statSticker__delete">
-                <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
-            </div>
+          <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue btn_short" disabled>Сохранить</button>
+            <button class="btn gray btn_short" disabled>Отменить</button>
+          </div>
+
         </div>
+
+      </div>
     </div>
-    <div class="statTable__subtable statSubtable statSubtable--noPaddingAbsolute">
-
-        <div class="statTable__content">
-            <div class="statTable__row">
-                <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
-                    <div class="statSticker__icon">
-                        <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                    </div>
-                    <div class="statSticker__content statStickerInfo statStickerInfo--import">
-                        <h3 class="statStickerInfo__title">TSLA [NYSE]</h3>
-                        <span class="statStickerInfo__subtitle">Tesla Motors</span>
-                    </div>
-                    <div class="statSticker__delete">
-                        <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="statTable__subtable statSubtable statSubtable--noPadding">
-                <div class="statSubtable__table statSubtable__table--noMargin statTable">
-                    <div class="statTable__row statTable__row--header">
-                        <span class="statTable__item">Дата</span>
-                        <span class="statTable__item">Операция</span>
-                        <span class="statTable__item statTable__item--shrink">Кол-во</span>
-                        <span class="statTable__item">Цена</span>
-                        <span class="statTable__item statTable__item--shrink">Валюта</span>
-                        <span class="statTable__item statTable__item--grow">Комментарий</span>
-                    </div>
-                    <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">1</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
-                        </div>
-                    </div>
-                    <div class="statTable__row statTable__row--content">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">2</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
-                        </div>
-                    </div>
-                    <div class="statTable__row">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">3</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">-</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="statTable__content">
-            <div class="statTable__row">
-                <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
-                    <div class="statSticker__icon">
-                        <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                    </div>
-                    <div class="statSticker__content statStickerInfo statStickerInfo--import">
-                        <h3 class="statStickerInfo__title">TSLA [LSE]</h3>
-                        <span class="statStickerInfo__subtitle">Tesla Motors</span>
-                    </div>
-                    <div class="statSticker__delete">
-                        <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="statTable__subtable statSubtable statSubtable--noPadding">
-                <div class="statSubtable__table statSubtable__table--noMargin statTable">
-                    <div class="statTable__row statTable__row--header">
-                        <span class="statTable__item">Дата</span>
-                        <span class="statTable__item">Операция</span>
-                        <span class="statTable__item statTable__item--shrink">Кол-во</span>
-                        <span class="statTable__item">Цена</span>
-                        <span class="statTable__item statTable__item--shrink">Валюта</span>
-                        <span class="statTable__item statTable__item--grow">Комментарий</span>
-                    </div>
-                    <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">1</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
-                        </div>
-                    </div>
-                    <div class="statTable__row statTable__row--content">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">2</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
-                        </div>
-                    </div>
-                    <div class="statTable__row">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">3</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">-</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="statTable__content">
-            <div class="statTable__row">
-                <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
-                    <div class="statSticker__icon">
-                        <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                    </div>
-                    <div class="statSticker__content statStickerInfo statStickerInfo--import">
-                        <h3 class="statStickerInfo__title">TSLA [TO]</h3>
-                        <span class="statStickerInfo__subtitle">Tesla Motors</span>
-                    </div>
-                    <div class="statSticker__delete">
-                        <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="statTable__subtable statSubtable statSubtable--noPadding">
-                <div class="statSubtable__table statSubtable__table--noMargin statTable">
-                    <div class="statTable__row statTable__row--header">
-                        <span class="statTable__item">Дата</span>
-                        <span class="statTable__item">Операция</span>
-                        <span class="statTable__item statTable__item--shrink">Кол-во</span>
-                        <span class="statTable__item">Цена</span>
-                        <span class="statTable__item statTable__item--shrink">Валюта</span>
-                        <span class="statTable__item statTable__item--grow">Комментарий</span>
-                    </div>
-                    <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">1</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
-                        </div>
-                    </div>
-                    <div class="statTable__row statTable__row--content">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">2</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
-                        </div>
-                    </div>
-                    <div class="statTable__row">
-                        <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                        <div class="statTable__item statTable__item--label">
-                            <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Кол-во</span>
-                            <span class="statTable__value">3</span>
-                        </div>
-                        <div class="statTable__item">
-                            <span class="statTable__description">Цена</span>
-                            <span class="statTable__value">0.0000312</span>
-                        </div>
-                        <div class="statTable__item statTable__item--shrink">
-                            <span class="statTable__description">Валюта</span>
-                            <span class="statTable__value">USD</span>
-                        </div>
-                        <div class="statTable__item statTable__item--grow">
-                            <span class="statTable__description">Комментарий</span>
-                            <span class="statTable__value statTable__value--wrap">-</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="statTable__content statTable__content--danger">
-    <div class="statTable__row">
-        <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
-            <div class="statSticker__icon">
-                <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-            </div>
-            <div class="statSticker__content statStickerInfo statStickerInfo--import">
-                <h3 class="statStickerInfo__title">AMGN</h3>
-                <span class="statStickerInfo__subtitle">Applied Molecular Genesis</span>
-            </div>
-            <div class="statSticker__delete">
-                <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
-            </div>
-        </div>
-    </div>
-    <div class="statTable__subtable statSubtable statSubtable--noPadding">
-        <div class="statSubtable__table statSubtable__table--noMargin statTable">
-            <div class="statTable__row statTable__row--header">
-                <span class="statTable__item">Дата</span>
-                <span class="statTable__item">Операция</span>
-                <span class="statTable__item statTable__item--shrink">Кол-во</span>
-                <span class="statTable__item">Цена</span>
-                <span class="statTable__item statTable__item--shrink">Валюта</span>
-                <span class="statTable__item statTable__item--grow">Комментарий</span>
-            </div>
-            <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
-                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                <div class="statTable__item statTable__item--label">
-                    <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Кол-во</span>
-                    <span class="statTable__value">1</span>
-                </div>
-                <div class="statTable__item">
-                    <span class="statTable__description">Цена</span>
-                    <span class="statTable__value">0.0000312</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Валюта</span>
-                    <span class="statTable__value">USD</span>
-                </div>
-                <div class="statTable__item statTable__item--grow">
-                    <span class="statTable__description">Комментарий</span>
-                    <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
-                </div>
-            </div>
-            <div class="statTable__row statTable__row--content">
-                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                <div class="statTable__item statTable__item--label">
-                    <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Кол-во</span>
-                    <span class="statTable__value">2</span>
-                </div>
-                <div class="statTable__item">
-                    <span class="statTable__description">Цена</span>
-                    <span class="statTable__value">0.0000312</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Валюта</span>
-                    <span class="statTable__value">USD</span>
-                </div>
-                <div class="statTable__item statTable__item--grow">
-                    <span class="statTable__description">Комментарий</span>
-                    <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
-                </div>
-            </div>
-            <div class="statTable__row">
-                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                <div class="statTable__item statTable__item--label">
-                    <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Кол-во</span>
-                    <span class="statTable__value">3</span>
-                </div>
-                <div class="statTable__item">
-                    <span class="statTable__description">Цена</span>
-                    <span class="statTable__value">0.0000312</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Валюта</span>
-                    <span class="statTable__value">USD</span>
-                </div>
-                <div class="statTable__item statTable__item--grow">
-                    <span class="statTable__description">Комментарий</span>
-                    <span class="statTable__value statTable__value--wrap">-</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="statTable__content">
-    <div class="statTable__row">
-        <div class="statTable__item statTable__item--sticker statSticker statSticker--import">
-            <div class="statSticker__icon">
-                <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-            </div>
-            <div class="statSticker__content statStickerInfo statStickerInfo--import">
-                <h3 class="statStickerInfo__title">BAT</h3>
-                <span class="statStickerInfo__subtitle">Basic Attention Token</span>
-            </div>
-            <div class="statSticker__delete">
-                <svg class="statSticker__trash"><use xlink:href="img/main.svg#icon-trash"></use></svg>
-            </div>
-        </div>
-    </div>
-    <div class="statTable__subtable statSubtable statSubtable--noPadding">
-        <div class="statSubtable__table statSubtable__table--noMargin statTable">
-            <div class="statTable__row statTable__row--header">
-                <span class="statTable__item">Дата</span>
-                <span class="statTable__item">Операция</span>
-                <span class="statTable__item statTable__item--shrink">Кол-во</span>
-                <span class="statTable__item">Цена</span>
-                <span class="statTable__item statTable__item--shrink">Валюта</span>
-                <span class="statTable__item statTable__item--grow">Комментарий</span>
-            </div>
-            <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
-                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                <div class="statTable__item statTable__item--label">
-                    <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Кол-во</span>
-                    <span class="statTable__value">1</span>
-                </div>
-                <div class="statTable__item">
-                    <span class="statTable__description">Цена</span>
-                    <span class="statTable__value">0.0000312</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Валюта</span>
-                    <span class="statTable__value">USD</span>
-                </div>
-                <div class="statTable__item statTable__item--grow">
-                    <span class="statTable__description">Комментарий</span>
-                    <span class="statTable__value statTable__value--wrap">Комментарий опционально</span>
-                </div>
-            </div>
-            <div class="statTable__row statTable__row--content">
-                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                <div class="statTable__item statTable__item--label">
-                    <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Кол-во</span>
-                    <span class="statTable__value">2</span>
-                </div>
-                <div class="statTable__item">
-                    <span class="statTable__description">Цена</span>
-                    <span class="statTable__value">0.0000312</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Валюта</span>
-                    <span class="statTable__value">USD</span>
-                </div>
-                <div class="statTable__item statTable__item--grow">
-                    <span class="statTable__description">Комментарий</span>
-                    <span class="statTable__value statTable__value--wrap">Комментарий опционально ла-ла-ла-ла-ла</span>
-                </div>
-            </div>
-            <div class="statTable__row">
-                <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
-                <div class="statTable__item statTable__item--label">
-                    <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Кол-во</span>
-                    <span class="statTable__value">3</span>
-                </div>
-                <div class="statTable__item">
-                    <span class="statTable__description">Цена</span>
-                    <span class="statTable__value">0.0000312</span>
-                </div>
-                <div class="statTable__item statTable__item--shrink">
-                    <span class="statTable__description">Валюта</span>
-                    <span class="statTable__value">USD</span>
-                </div>
-                <div class="statTable__item statTable__item--grow">
-                    <span class="statTable__description">Комментарий</span>
-                    <span class="statTable__value statTable__value--wrap">-</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                        </div>
-                    </div>
-
-                    <div class="modal-content-buttons use_mt">
-                        <button class="btn btn_blue btn_short" disabled>Сохранить</button>
-                        <button class="btn gray btn_short" disabled>Отменить</button>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_settings">
-    <div class="modal-header">
-        <h2>Настройки</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Настройки</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-input use_mt_first">
+      <label class="label_modal">Название стратегии</label>
+      <input type="text">
     </div>
-    <div class="modal-content">
-        <div class="modal-content-input use_mt_first">
-            <label class="label_modal">Название стратегии</label>
-            <input type="text">
-        </div>
-        <div class="modal-content-input use_mt">
-            <label class="label_modal">Бенчмарк портфеля</label>
-            <select>
-                <option selected value="SP 500">SP 500</option>
-                <option value="Nasdaq">Nasdaq</option>
-                <option value="Dow Jones">Dow Jones</option>
-            </select>
-        </div>
-        <div class="modal-content-input use_mt">
-            <label class="label_modal">Валюта портфеля</label>
-            <select>
-                <option selected value="Российский рубль">Российский рубль</option>
-                <option value="Американский доллар">Американский доллар</option>
-                <option value="Казахский тенге">Казахский тенге</option>
-            </select>
-        </div>
-
-        <div class="settings-comission use_mt">
-            <div class="settings-comission__elem">
-                <h3 class="settings-comission__title">Налоги и комиссии</h3>
-            </div>
-            <div class="settings-comission__elem settings-comission__elem--title">
-                <label class="checkbox-toggle blockSettings__checkbox">
-                    <input class="checkbox-toggle__input" type="checkbox">
-                    <span class="checkbox-toggle__toggle"></span> Налог на прибыль
-                </label>
-            </div>
-            <div class="settings-comission__elem">
-                <input type="text" placeholder="3.33%">
-            </div>
-            <div class="settings-comission__elem">
-                <label class="checkbox-toggle blockSettings__checkbox">
-                    <input class="checkbox-toggle__input" type="checkbox">
-                    <span class="checkbox-toggle__toggle"></span> Налог на дивиденды
-                </label>
-            </div>
-            <div class="settings-comission__elem">
-                <label class="checkbox-toggle blockSettings__checkbox">
-                    <input class="checkbox-toggle__input" type="checkbox">
-                    <span class="checkbox-toggle__toggle"></span> Комиссии по сделкам
-                </label>
-            </div>
-        </div>
-
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
-        </div>
+    <div class="modal-content-input use_mt">
+      <label class="label_modal">Бенчмарк портфеля</label>
+      <select>
+        <option selected value="SP 500">SP 500</option>
+        <option value="Nasdaq">Nasdaq</option>
+        <option value="Dow Jones">Dow Jones</option>
+      </select>
     </div>
+    <div class="modal-content-input use_mt">
+      <label class="label_modal">Валюта портфеля</label>
+      <select>
+        <option selected value="Российский рубль">Российский рубль</option>
+        <option value="Американский доллар">Американский доллар</option>
+        <option value="Казахский тенге">Казахский тенге</option>
+      </select>
+    </div>
+
+    <div class="settings-comission use_mt">
+      <div class="settings-comission__elem">
+        <h3 class="settings-comission__title">Налоги и комиссии</h3>
+      </div>
+      <div class="settings-comission__elem settings-comission__elem--title">
+        <label class="checkbox-toggle blockSettings__checkbox">
+          <input class="checkbox-toggle__input" type="checkbox">
+          <span class="checkbox-toggle__toggle"></span> Налог на прибыль
+        </label>
+      </div>
+      <div class="settings-comission__elem">
+        <input type="text" placeholder="3.33%">
+      </div>
+      <div class="settings-comission__elem">
+        <label class="checkbox-toggle blockSettings__checkbox">
+          <input class="checkbox-toggle__input" type="checkbox">
+          <span class="checkbox-toggle__toggle"></span> Налог на дивиденды
+        </label>
+      </div>
+      <div class="settings-comission__elem">
+        <label class="checkbox-toggle blockSettings__checkbox">
+          <input class="checkbox-toggle__input" type="checkbox">
+          <span class="checkbox-toggle__toggle"></span> Комиссии по сделкам
+        </label>
+      </div>
+    </div>
+
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_strategy_settings">
-    <div class="modal-header">
-        <h2>Настройки</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Настройки</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-input use_mt_first">
+      <label class="label_modal">Название стратегии</label>
+      <input type="text">
     </div>
-    <div class="modal-content">
-        <div class="modal-content-input use_mt_first">
-            <label class="label_modal">Название стратегии</label>
-            <input type="text">
-        </div>
-        <div class="modal-content-input use_mt">
-            <label class="label_modal">Бенчмарк портфеля</label>
-            <select>
-                <option selected value="SP 500">SP 500</option>
-                <option value="Nasdaq">Nasdaq</option>
-                <option value="Dow Jones">Dow Jones</option>
-            </select>
-        </div>
-        <div class="modal-content-input use_mt">
-            <label class="label_modal">Валюта портфеля</label>
-            <select>
-                <option selected value="Российский рубль">Российский рубль</option>
-                <option value="Американский доллар">Американский доллар</option>
-                <option value="Казахский тенге">Казахский тенге</option>
-            </select>
-        </div>
-        <div class="modal-content-input use_mt">
-            <label class="label_modal">Основной скоринг</label>
-            <select>
-                <option selected value="BMS global">BMS global</option>
-                <option value="BMS local">BMS local</option>
-                <option value="BMD global">BMD global</option>
-                <option value="BMD local">BMD local</option>
-            </select>
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
-        </div>
+    <div class="modal-content-input use_mt">
+      <label class="label_modal">Бенчмарк портфеля</label>
+      <select>
+        <option selected value="SP 500">SP 500</option>
+        <option value="Nasdaq">Nasdaq</option>
+        <option value="Dow Jones">Dow Jones</option>
+      </select>
     </div>
+    <div class="modal-content-input use_mt">
+      <label class="label_modal">Валюта портфеля</label>
+      <select>
+        <option selected value="Российский рубль">Российский рубль</option>
+        <option value="Американский доллар">Американский доллар</option>
+        <option value="Казахский тенге">Казахский тенге</option>
+      </select>
+    </div>
+    <div class="modal-content-input use_mt">
+      <label class="label_modal">Основной скоринг</label>
+      <select>
+        <option selected value="BMS global">BMS global</option>
+        <option value="BMS local">BMS local</option>
+        <option value="BMD global">BMD global</option>
+        <option value="BMD local">BMD local</option>
+      </select>
+    </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_add">
-    <div class="modal-header">
-        <h2>Добавление транзакции</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Добавление транзакции</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-switcher use_mt_first">
+      <div class="modal-content-switcher-button">
+        <label>
+          <input type="radio" name="switcher" class="visually_hidden" checked>
+          <span>Купить</span>
+        </label>
+        <label>
+          <input type="radio" name="switcher" class="visually_hidden">
+          <span>Продать</span>
+        </label>
+      </div>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-switcher use_mt_first">
-            <div class="modal-content-switcher-button">
-                <label>
-                    <input type="radio" name="switcher" class="visually_hidden" checked>
-                    <span>Купить</span>
-                </label>
-                <label>
-                    <input type="radio" name="switcher" class="visually_hidden">
-                    <span>Продать</span>
-                </label>
-            </div>
-        </div>
 
-        <div class="modal-content-banner use_mt">
-            <h3>TSCO</h3>
-            <span>Tractor Supply</span>
-        </div>
-
-        <div class="modal-content-addOperation use_mt">
-            <div class="modal-content-addOperation-langOperation">
-
-                <button class="btn btn_blue btn_addOperation">
-                    <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
-                    <span>Добавить операцию</span>
-                </button>
-
-                <div class="section-header">
-                    <div class="header-controls-links-link withCaret currency">
-                        <input type="checkbox" id="currencyDesktopModal" class="visually_hidden">
-
-                        <label for="currencyDesktopModal">
-                            <span>$ USD</span>
-                            <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
-                        </label>
-
-                        <div class="dropdown">
-                            <div class="content">
-                                <span class="active">$ USD</span>
-                                <span>₽ RUB</span>
-                                <span>€ EUR</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="modal-content-addOperation-group">
-                <button class="btn_group success">Покупка</button>
-                <button class="btn_group error">Продажа</button>
-            </div>
-        </div>
-
-        <div class="modal-content-papers use_mt">
-            <div class="modal-content-papers-cost">
-                <label class="label_modal">Цена бумаги</label>
-                <input type="text" placeholder="0%">
-            </div>
-            <div class="modal-content-papers-count">
-                <label class="label_modal">Количество</label>
-                <div class="input_counter">
-                    <button data-counter="counter_add" data-operation="plus" aria-label="Увеличить число">
-                        <svg><use xlink:href="img/main.svg#icon-plus"></use></svg>
-                    </button>
-                    <span id="counter_add">0</span>
-                    <button data-counter="counter_add" data-operation="minus" aria-label="Уменьшить число">
-                        <svg><use xlink:href="img/main.svg#icon-minus"></use></svg>
-                    </button>
-                </div>
-            </div>
-            <div class="modal-content-papers-date">
-                <label class="label_modal">Дата</label>
-                <input type="text" placeholder="24/01/2021" disabled>
-            </div>
-            <div class="modal-content-papers-delete">
-                <span>Удалить операцию</span>
-            </div>
-        </div>
-
-        <div class="modal-content-total use_mt">
-            <label class="label_modal">Итого</label>
-            <span>3 621 $</span>
-        </div>
-
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
-
-        <div class="modal-content-toggle use_mt">
-            <button class="btnShowAll">
-                <span class="btnShowAll__text">Комиссия</span>
-                <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-            </button>
-            <div class="toggleOverlay">
-                <div class="settings-comission use_mt">
-                    <div class="settings-comission__elem">
-                        <h3 class="settings-comission__title">Комиссия по этой сделке в %</h3>
-                    </div>
-                    <div class="settings-comission__elem">
-                        <input type="text" placeholder="3.33%">
-                    </div>
-                    <div class="settings-comission__elem">
-                        <p class="settings-comission__text">В настройках профиля вы можете указать ставку налога и комиссий для всего портфеля. В настройках стратегии, персонально для каждой стратегии, а в сделках можно указывать персональную комиссию для сделки.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="modal-content-banner use_mt">
+      <h3>TSCO</h3>
+      <span>Tractor Supply</span>
     </div>
+
+    <div class="modal-content-addOperation use_mt">
+      <div class="modal-content-addOperation-langOperation">
+
+        <button class="btn btn_blue btn_addOperation">
+          <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
+          <span>Добавить операцию</span>
+        </button>
+
+        <div class="section-header">
+          <div class="header-controls-links-link withCaret currency">
+            <input type="checkbox" id="currencyDesktopModal" class="visually_hidden">
+
+            <label for="currencyDesktopModal">
+              <span>$ USD</span>
+              <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
+            </label>
+
+            <div class="dropdown">
+              <div class="content">
+                <span class="active">$ USD</span>
+                <span>₽ RUB</span>
+                <span>€ EUR</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-content-addOperation-group">
+        <button class="btn_group success">Покупка</button>
+        <button class="btn_group error">Продажа</button>
+      </div>
+    </div>
+
+    <div class="modal-content-papers use_mt">
+      <div class="modal-content-papers-cost">
+        <label class="label_modal">Цена бумаги</label>
+        <input type="text" placeholder="0%">
+      </div>
+      <div class="modal-content-papers-count">
+        <label class="label_modal">Количество</label>
+        <div class="input_counter">
+          <button data-counter="counter_add" data-operation="plus" aria-label="Увеличить число">
+            <svg><use xlink:href="img/main.svg#icon-plus"></use></svg>
+          </button>
+          <span id="counter_add">0</span>
+          <button data-counter="counter_add" data-operation="minus" aria-label="Уменьшить число">
+            <svg><use xlink:href="img/main.svg#icon-minus"></use></svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-content-papers-date">
+        <label class="label_modal">Дата</label>
+        <input type="text" placeholder="24/01/2021" disabled>
+      </div>
+      <div class="modal-content-papers-delete">
+        <span>Удалить операцию</span>
+      </div>
+    </div>
+
+    <div class="modal-content-total use_mt">
+      <label class="label_modal">Итого</label>
+      <span>3 621 $</span>
+    </div>
+
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
+    </div>
+
+    <div class="modal-content-toggle use_mt">
+      <button class="btnShowAll">
+        <span class="btnShowAll__text">Комиссия</span>
+        <svg class="btnShowAll__icon"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+      </button>
+      <div class="toggleOverlay">
+        <div class="settings-comission use_mt">
+          <div class="settings-comission__elem">
+            <h3 class="settings-comission__title">Комиссия по этой сделке в %</h3>
+          </div>
+          <div class="settings-comission__elem">
+            <input type="text" placeholder="3.33%">
+          </div>
+          <div class="settings-comission__elem">
+            <p class="settings-comission__text">В настройках профиля вы можете указать ставку налога и комиссий для всего портфеля. В настройках стратегии, персонально для каждой стратегии, а в сделках можно указывать персональную комиссию для сделки.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <div class="modal" id="modal_target_edit">
-    <div class="modal-header">
-        <h2>Редактирование цели</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Редактирование цели</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-input use_mt_first">
+      <label class="label_modal">Название цели</label>
+      <input type="text">
     </div>
-    <div class="modal-content">
-        <div class="modal-content-input use_mt_first">
-            <label class="label_modal">Название цели</label>
-            <input type="text">
-        </div>
-        <div class="modal-content-input use_mt">
-            <label class="label_modal">Сумма дивидендов за месяц</label>
-            <input type="text">
-        </div>
+    <div class="modal-content-input use_mt">
+      <label class="label_modal">Сумма дивидендов за месяц</label>
+      <input type="text">
+    </div>
 
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn red" data-changeModal="modal_delete">Удалить цель</button>
-        </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn red" data-changeModal="modal_delete">Удалить цель</button>
     </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_target">
-    <div class="modal-header">
-        <h2>Цель по дивидендам</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Цель по дивидендам</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-banner use_mt_first">
+      <div class="modal-content-banner-info withIcon">
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-target"></use></svg>
+        <p>Добавьте цель по дивидендам за месяц для удобного отслеживания прогресса</p>
+      </div>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-banner use_mt_first">
-            <div class="modal-content-banner-info withIcon">
-                <svg data-closeModal><use xlink:href="img/main.svg#icon-target"></use></svg>
-                <p>Добавьте цель по дивидендам за месяц для удобного отслеживания прогресса</p>
-            </div>
-        </div>
-        <div class="modal-content-input use_mt_first">
-            <label class="label_modal">Название цели</label>
-            <input type="text">
-        </div>
-        <div class="modal-content-input use_mt">
-            <label class="label_modal">Сумма дивидендов за месяц</label>
-            <input type="text">
-        </div>
+    <div class="modal-content-input use_mt_first">
+      <label class="label_modal">Название цели</label>
+      <input type="text">
+    </div>
+    <div class="modal-content-input use_mt">
+      <label class="label_modal">Сумма дивидендов за месяц</label>
+      <input type="text">
+    </div>
 
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn red" data-changeModal="modal_delete">Удалить цель</button>
-        </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn red" data-changeModal="modal_delete">Удалить цель</button>
     </div>
+  </div>
 </div>
 
 <div class="modal notify" id="modal_company_split">
-    <div class="modal-header">
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-img use_mt_first">
+      <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-img use_mt_first">
-            <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
-        </div>
-        <div class="modal-content-header use_mt">
-            <h2>Скоро произойдет сплит по компании <span class="blockSection__title--primary">AMAT</span></h2>
-        </div>
-        <div class="modal-content-text use_mt regular">
-            <p>Мы автоматически внесем все изменения</p>
-        </div>
-        <div class="modal-content-buttons use_mt full">
-            <button class="btn btn_blue" data-closeModal>Продолжить работу</button>
-        </div>
+    <div class="modal-content-header use_mt">
+      <h2>Скоро произойдет сплит по компании <span class="blockSection__title--primary">AMAT</span></h2>
     </div>
+    <div class="modal-content-text use_mt regular">
+      <p>Мы автоматически внесем все изменения</p>
+    </div>
+    <div class="modal-content-buttons use_mt full">
+      <button class="btn btn_blue" data-closeModal>Продолжить работу</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_cashMoney">
-    <div class="modal-header">
-        <h2>Введите сумму наличных</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Введите сумму наличных</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-input use_mt_first">
+      <label class="label_modal">Наличные</label>
+      <input type="text" value="2321">
     </div>
-    <div class="modal-content">
-        <div class="modal-content-input use_mt_first">
-            <label class="label_modal">Наличные</label>
-            <input type="text" value="2321">
-        </div>
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
     </div>
+  </div>
 </div>
 
 <div class="modal notify" id="modal_advisorLimit">
-    <div class="modal-header">
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-img use_mt_first">
+      <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
     </div>
-    <div class="modal-content">
-        <div class="modal-content-img use_mt_first">
-            <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
-        </div>
-        <div class="modal-content-header use_mt">
-            <h2>Вы привысили лимит доступных стратегий в советнике</h2>
-        </div>
-        <div class="modal-content-text use_mt regular">
-            <p>Оформите подписку на другой тариф для создания новых стратегий</p>
-        </div>
-        <div class="modal-content-buttons use_mt full">
-            <button class="btn btn_blue" data-closeModal>Выбрать тариф</button>
-        </div>
+    <div class="modal-content-header use_mt">
+      <h2>Вы привысили лимит доступных стратегий в советнике</h2>
     </div>
+    <div class="modal-content-text use_mt regular">
+      <p>Оформите подписку на другой тариф для создания новых стратегий</p>
+    </div>
+    <div class="modal-content-buttons use_mt full">
+      <button class="btn btn_blue" data-closeModal>Выбрать тариф</button>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="modal_mailingSetting">
-    <div class="modal-header">
-        <h2>Настройки рассылки</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Настройки рассылки</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+
+    <div class="settings-comission__elem use_mt_first">
+      <h3 class="settings-comission__title">Рассылка оповещений</h3>
     </div>
-    <div class="modal-content">
 
-        <div class="settings-comission__elem use_mt_first">
-            <h3 class="settings-comission__title">Рассылка оповещений</h3>
-        </div>
-
-        <div class="modal-content-switcher">
-            <div class="modal-content-switcher-button">
-                <label>
-                    <input type="radio" name="switcherMailingSetting" class="visually_hidden" checked>
-                    <span>Телеграм</span>
-                </label>
-                <label>
-                    <input type="radio" name="switcherMailingSetting" class="visually_hidden">
-                    <span>Email</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="settings-comission__elem use_mt">
-            <label class="checkbox-toggle blockSettings__checkbox">
-                <input class="checkbox-toggle__input" type="checkbox">
-                <span class="checkbox-toggle__toggle"></span> Оповещения в телеграм
-            </label>
-        </div>
-
-        <div class="modal-content-text use_mt accent_gray">
-            <p class="label_modal">При включении вы будете перенаправлены на телеграм бота</p>
-        </div>
-
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-        </div>
-
+    <div class="modal-content-switcher">
+      <div class="modal-content-switcher-button">
+        <label>
+          <input type="radio" name="switcherMailingSetting" class="visually_hidden" checked>
+          <span>Телеграм</span>
+        </label>
+        <label>
+          <input type="radio" name="switcherMailingSetting" class="visually_hidden">
+          <span>Email</span>
+        </label>
+      </div>
     </div>
+
+    <div class="settings-comission__elem use_mt">
+      <label class="checkbox-toggle blockSettings__checkbox">
+        <input class="checkbox-toggle__input" type="checkbox">
+        <span class="checkbox-toggle__toggle"></span> Оповещения в телеграм
+      </label>
+    </div>
+
+    <div class="modal-content-text use_mt accent_gray">
+      <p class="label_modal">При включении вы будете перенаправлены на телеграм бота</p>
+    </div>
+
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+    </div>
+
+  </div>
 </div>
 
 <!-- new BeatMarket 6 (09.04.2022) -->
 
 <div class="modal" id="modal_newPublicAsset">
-    <div class="modal-header">
-        <h2>Новый произвольный актив</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Новый произвольный актив</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+
+    <div class="modal-content-input use_mt_first">
+      <label class="label_modal">Название актива</label>
+      <input type="text">
     </div>
-    <div class="modal-content">
 
-        <div class="modal-content-input use_mt_first">
-            <label class="label_modal">Название актива</label>
-            <input type="text">
+    <div class="modal-content-addOperation use_mt">
+      <div class="modal-content-addOperation-langOperation">
+
+        <div class="modal-content-input">
+          <label class="label_modal">Сумма актива</label>
+          <input type="text">
         </div>
 
-        <div class="modal-content-addOperation use_mt">
-            <div class="modal-content-addOperation-langOperation">
+        <div class="modal-content-input inputCurrency">
+          <label class="label_modal">Валюта</label>
+          <div class="section-header">
+            <div class="header-controls-links-link withCaret currency">
+              <input type="checkbox" id="currencyDesktopModalOne" class="visually_hidden">
 
-                <div class="modal-content-input">
-                    <label class="label_modal">Сумма актива</label>
-                    <input type="text">
+              <label for="currencyDesktopModalOne">
+                <span>$ USD</span>
+                <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
+              </label>
+
+              <div class="dropdown">
+                <div class="content">
+                  <span class="active">$ USD</span>
+                  <span>₽ RUB</span>
+                  <span>€ EUR</span>
                 </div>
-
-                <div class="modal-content-input inputCurrency">
-                    <label class="label_modal">Валюта</label>
-                    <div class="section-header">
-                        <div class="header-controls-links-link withCaret currency">
-                            <input type="checkbox" id="currencyDesktopModalOne" class="visually_hidden">
-
-                            <label for="currencyDesktopModalOne">
-                                <span>$ USD</span>
-                                <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
-                            </label>
-
-                            <div class="dropdown">
-                                <div class="content">
-                                    <span class="active">$ USD</span>
-                                    <span>₽ RUB</span>
-                                    <span>€ EUR</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+              </div>
 
             </div>
-
-            <div class="modal-content-addOperation-group">
-                <button class="btn_group success">Покупка</button>
-                <button class="btn_group error">Продажа</button>
-            </div>
+          </div>
         </div>
 
-        <div class="modal-content-input use_mt">
-            <label class="label_modal">Актив приносит доход?</label>
-            <div class="modal-content-switcher-button short">
-                <label>
-                    <input type="radio" name="hasCash" class="visually_hidden" checked>
-                    <span>Да</span>
-                </label>
-                <label>
-                    <input type="radio" name="hasCash" class="visually_hidden">
-                    <span>Нет</span>
-                </label>
-            </div>
-        </div>
+      </div>
 
-        <div class="settings-comission use_mt">
-            <div class="settings-comission__elem">
-                <div class="modal-content-input">
-                    <label class="label_modal">Тип дохода</label>
-                    <div class="modal-content-switcher-button">
-                        <label>
-                            <input type="radio" name="comeCash" class="visually_hidden" checked>
-                            <span>Фиксированные выплаты</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="comeCash" class="visually_hidden">
-                            <span>% от капитала</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="settings-comission__elem settings-comission__elem--title">
-                <div class="modal-content-input">
-                    <label class="label_modal">Размер дохода</label>
-                    <input type="text">
-                </div>
-            </div>
-            <div class="settings-comission__elem settings-comission__elem--title">
-                <div class="modal-content-input">
-                    <label class="label_modal">Периодичность начислений</label>
-                    <select>
-                        <option selected value="Раз в месяц">Раз в месяц</option>
-                        <option value="Раз в неделю">Раз в неделю</option>
-                        <option value="Раз в день">Раз в день</option>
-                    </select>
-                </div>
-            </div>
-            <div class="settings-comission__elem">
-                <div class="modal-content-papers mobColumn">
-                    <div class="modal-content-papers-cost">
-                        <label class="label_modal">Первое начисление</label>
-                        <input type="text" placeholder="24.01.2021" disabled>
-                        <svg class="modal-content-papers-cost-calendar"><use xlink:href="img/main.svg#icon-CalendarBlank"></use></svg>
-                    </div>
-                    <div class="modal-content-papers-cost">
-                        <label class="label_modal">Следующее начисление</label>
-                        <input type="text" placeholder="24.01.2021" disabled>
-                        <svg class="modal-content-papers-cost-calendar"><use xlink:href="img/main.svg#icon-CalendarBlank"></use></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="settings-comission__elem">
-                <p class="settings-comission__text">Эти параметры будут автоматически обновляться со временем</p>
-            </div>
-        </div>
-
-        <div class="modal-content-buttons use_mt">
-            <button class="btn btn_blue" data-closeModal>Сохранить</button>
-            <button class="btn gray" data-closeModal>Отменить</button>
-        </div>
-
+      <div class="modal-content-addOperation-group">
+        <button class="btn_group success">Покупка</button>
+        <button class="btn_group error">Продажа</button>
+      </div>
     </div>
+
+    <div class="modal-content-input use_mt">
+      <label class="label_modal">Актив приносит доход?</label>
+      <div class="modal-content-switcher-button short">
+        <label>
+          <input type="radio" name="hasCash" class="visually_hidden" checked>
+          <span>Да</span>
+        </label>
+        <label>
+          <input type="radio" name="hasCash" class="visually_hidden">
+          <span>Нет</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="settings-comission use_mt">
+      <div class="settings-comission__elem">
+        <div class="modal-content-input">
+          <label class="label_modal">Тип дохода</label>
+          <div class="modal-content-switcher-button">
+            <label>
+              <input type="radio" name="comeCash" class="visually_hidden" checked>
+              <span>Фиксированные выплаты</span>
+            </label>
+            <label>
+              <input type="radio" name="comeCash" class="visually_hidden">
+              <span>% от капитала</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="settings-comission__elem settings-comission__elem--title">
+        <div class="modal-content-input">
+          <label class="label_modal">Размер дохода</label>
+          <input type="text">
+        </div>
+      </div>
+      <div class="settings-comission__elem settings-comission__elem--title">
+        <div class="modal-content-input">
+          <label class="label_modal">Периодичность начислений</label>
+          <select>
+            <option selected value="Раз в месяц">Раз в месяц</option>
+            <option value="Раз в неделю">Раз в неделю</option>
+            <option value="Раз в день">Раз в день</option>
+          </select>
+        </div>
+      </div>
+      <div class="settings-comission__elem">
+        <div class="modal-content-papers mobColumn">
+          <div class="modal-content-papers-cost">
+            <label class="label_modal">Первое начисление</label>
+            <input type="text" placeholder="24.01.2021" disabled>
+            <svg class="modal-content-papers-cost-calendar"><use xlink:href="img/main.svg#icon-CalendarBlank"></use></svg>
+          </div>
+          <div class="modal-content-papers-cost">
+            <label class="label_modal">Следующее начисление</label>
+            <input type="text" placeholder="24.01.2021" disabled>
+            <svg class="modal-content-papers-cost-calendar"><use xlink:href="img/main.svg#icon-CalendarBlank"></use></svg>
+          </div>
+        </div>
+      </div>
+      <div class="settings-comission__elem">
+        <p class="settings-comission__text">Эти параметры будут автоматически обновляться со временем</p>
+      </div>
+    </div>
+
+    <div class="modal-content-buttons use_mt">
+      <button class="btn btn_blue" data-closeModal>Сохранить</button>
+      <button class="btn gray" data-closeModal>Отменить</button>
+    </div>
+
+  </div>
 </div>
 
 <div class="modal" id="modal_paymentOfDividends">
-    <div class="modal-header">
-        <h2>Выплата дивидендов</h2>
-        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  <div class="modal-header">
+    <h2>Выплата дивидендов</h2>
+    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+  </div>
+  <div class="modal-content">
+
+    <div class="modal-content-banner use_mt">
+      <h3>TSCO</h3>
+      <span>Tractor Supply</span>
     </div>
-    <div class="modal-content">
 
-        <div class="modal-content-banner use_mt">
-            <h3>TSCO</h3>
-            <span>Tractor Supply</span>
+    <div class="dividends use_mt">
+      <div class="strategyCards-card-cash">
+        <div class="strategyCards-card-cash-item">
+          <h5>Выплата на акцию</h5>
+          <span>0.2 $</span>
         </div>
-
-        <div class="dividends use_mt">
-            <div class="strategyCards-card-cash">
-                <div class="strategyCards-card-cash-item">
-                    <h5>Выплата на акцию</h5>
-                    <span>0.2 $</span>
-                </div>
-                <div class="strategyCards-card-cash-item">
-                    <h5>Количество акций</h5>
-                    <span>24</span>
-                </div>
-                <div class="strategyCards-card-cash-item">
-                    <h5>Дата выплаты</h5>
-                    <span>21.11.2021</span>
-                </div>
-            </div>
+        <div class="strategyCards-card-cash-item">
+          <h5>Количество акций</h5>
+          <span>24</span>
         </div>
-
-        <div class="modal-content-total use_mt">
-            <label class="label_modal">Итого</label>
-            <span>21.2 $</span>
+        <div class="strategyCards-card-cash-item">
+          <h5>Дата выплаты</h5>
+          <span>21.11.2021</span>
         </div>
-
+      </div>
     </div>
+
+    <div class="modal-content-total use_mt">
+      <label class="label_modal">Итого</label>
+      <span>21.2 $</span>
+    </div>
+
+  </div>
 </div>
 
 <div class="overlay overlay_modal" data-closeModal></div>
