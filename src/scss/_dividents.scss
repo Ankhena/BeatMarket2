@@ -188,7 +188,7 @@
             align-items: center;
 
             & > span {
-              max-width: 75px;
+              max-width: 100%;
             }
           }
         }
@@ -558,15 +558,17 @@
     border-radius: 0.5rem;
     font-size: 1.6rem;
 
+    &--mini {
+      padding: 0;
+    }
+
     &--positive {
       --color: #{$color_green};
-      padding-block: 0;
       background: transparent;
     }
 
     &--negative {
       --color: #{$color_red};
-      padding-block: 0;
       background: transparent;
     }
   }

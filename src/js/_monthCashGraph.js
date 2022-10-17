@@ -120,7 +120,7 @@ function initMonthCashGraph() {
       innerHTML += `
             <div class="customTooltip__item">
                 <span class="customTooltip__key">${yearsArrayData[i]}</span>
-                <span class="customTooltip__value ${className}">${costArrayData[i]} $</span>
+                <span class="customTooltip__value ${className}">${costArrayData[i]} USD</span>
             </div>`
     });
     return innerHTML;
