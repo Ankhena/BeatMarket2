@@ -1544,262 +1544,188 @@ initTicketSelect();
 
   function initMonthCashGraph() {
 
-  let colorPaybackDividends = "#47b252";
-  let colorOverallDividends = "#e6eeff";
-  let widthGraphPoint = 80;
-  let labelsStyle = {
-    fontFamily: "Montserrat",
-    fontWeight: "500",
-    fontSize: '0.9rem'
-  }
+    let colorPaybackDividends = "#47B252";
+    let colorOverallDividends = "#E6EEFF";
+    let widthGraphPoint = 80;
+    let labelsStyle = {
+        fontFamily: "Montserrat",
+        fontWeight: "500",
+        fontSize: '0.9rem'
+    }
 
-  if (document.body.offsetWidth < 1500) {
-    widthGraphPoint = 65;
-  }
+    if (document.body.offsetWidth < 1500) {
+        widthGraphPoint = 65;
+    }
 
-  // общее кол-во дивидендов
-  let dataPrev = [
-    ['Янв', 19.12, "Январь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Фев', 24.12, "Февраль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Мар', 38.12, "Март", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Апр', 11.12, "Апрель", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Май', 24.12, "Май", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Июн', 38.12, "Июнь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Июл', 29.12, "Июль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Авг', 46.12, "Август", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Сен', 24.12, "Сентябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Окт', 38.12, "Октябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Ноя', 29.12, "Ноябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Дек', 46.12, "Декабрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]]
-  ];
+    // общее кол-во дивидендов
+    let dataPrev = [
+        ['Янв', 19.12, "Январь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Фев', 24.12, "Февраль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Мар', 38.12, "Март", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Апр', 11.12, "Апрель", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Май', 24.12, "Май", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Июн', 38.12, "Июнь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Июл', 29.12, "Июль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Авг', 46.12, "Август", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Сен', 24.12, "Сентябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Окт', 38.12, "Октябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Ноя', 29.12, "Ноябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Дек', 46.12, "Декабрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]]
+    ];
 
-  // выплаченные дивиденды
-  let data = [
-    ['Янв', 15.12, "Январь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Фев', 19.12, "Февраль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Мар', 26.12, "Март", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Апр', 17.12, "Апрель", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Май', 19.12, "Май", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Июн', 0, "Июнь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-    ['Июл', 27.12, "Июль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Авг', 46.12, "Август", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Сен', 24.12, "Сентябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Окт', 38.12, "Октябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Ноя', 29.12, "Ноябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]],
-    ['Дек', 46.12, "Декабрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
-      name: "TSLA",
-      payment: 32.44
-    }]]
-  ];
+    // выплаченные дивиденды
+    let data = [
+        ['Янв', 15.12, "Январь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Фев', 19.12, "Февраль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Мар', 26.12, "Март", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Апр', 17.12, "Апрель", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Май', 19.12, "Май", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Июн', 0, "Июнь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Июл', 27.12, "Июль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Авг', 46.12, "Август", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Сен', 24.12, "Сентябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Окт', 38.12, "Октябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Ноя', 29.12, "Ноябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Дек', 46.12, "Декабрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]]
+    ];
 
-  function generateDataObject(yearsArrayData, costArrayData, className) {
-    let innerHTML = ``;
-    yearsArrayData.forEach((data, i) => {
-      innerHTML += `
+    function generateDataObject(yearsArrayData, costArrayData, className) {
+        let innerHTML = ``;
+        yearsArrayData.forEach((data, i) => {
+            innerHTML += `
             <div class="customTooltip__item">
                 <span class="customTooltip__key">${yearsArrayData[i]}</span>
                 <span class="customTooltip__value ${className}">${costArrayData[i]} $</span>
             </div>`
-    });
-    return innerHTML;
-  }
+        });
+        return innerHTML;
+    }
 
-  function getData(data) {
-    return data.map(function (country, i) {
-      return {
-        name: country[0],
-        y: country[1],
-        color: colorPaybackDividends
-      };
-    });
-  }
+    function getData(data) {
+        return data.map(function (country, i) {
+            return {
+                name: country[0],
+                y: country[1],
+                color: colorPaybackDividends
+            };
+        });
+    }
 
-  let elem = document.querySelector("#monthCashGraph");
-  if (elem !== null) {
-    var chart = Highcharts.chart('monthCashGraph', {
-      chart: {
-        type: 'column',
-        style: {"fontFamily": ""},
-      },
-      credits: {
-        enabled: false
-      },
-      title: {
-        text: '',
-      },
-      legend: {
-        enabled: false
-      },
-      tooltip: {
-        // enabled: false
-      },
-      xAxis: {
-        type: 'category',
-        labels: {
-          useHTML: true,
-          animate: true,
-          style: {
-            ...labelsStyle,
-            color: "#606371",
-          }
-        }
-      },
-      yAxis: [{
-        labels: {
-          enabled: false,
-        },
-        title: {
-          text: ''
-        },
-        showFirstLabel: false,
-        gridLineWidth: 0,
-      }],
-      tooltip: {
-        crosshairs: true,
-        shared: true,
-        useHTML: true,
-        formatter: function () {
-          let index = this.points[0].point.index;
-          let yearsArrayData = data[index][3].map(item => item.name);
-          let costArrayData = data[index][3].map(item => item.payment);
+    let elem = document.querySelector("#monthCashGraph");
+    if (elem !== null) {
+        var chart = Highcharts.chart('monthCashGraph', {
+            chart: {
+                type: 'column',
+                style: { "fontFamily": "" },
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: '',
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                // enabled: false
+            },
+            xAxis: {
+                type: 'category',
+                labels: {
+                    useHTML: true,
+                    animate: true,
+                    style: {
+                        ...labelsStyle,
+                        color: "#606371",
+                    }
+                }
+            },
+            yAxis: [{
+                labels: {
+                    enabled: false,
+                },
+                title: {
+                    text: ''
+                },
+                showFirstLabel: false,
+                gridLineWidth: 0,
+            }],
+            tooltip: {
+                crosshairs: true,
+                shared: true,
+                useHTML: true,
+                formatter: function() {
+                    let index = this.points[0].point.index;
+                    let yearsArrayData = data[index][3].map(item => item.name);
+                    let costArrayData = data[index][3].map(item => item.payment);
 
-          let yearsArrayDataOld = dataPrev[index][3].map(item => item.name);
-          let costArrayDataOld = dataPrev[index][3].map(item => item.payment);
-
-          return `
+                    let yearsArrayDataOld = dataPrev[index][3].map(item => item.name);
+                    let costArrayDataOld = dataPrev[index][3].map(item => item.payment);
+    
+                    return `
                         <div class="customTooltip">
-                         <!--   <h5 class="customTooltip__title">Дивиденды, ${data[index][2]} <span class="customTooltip__label">82.12 $</span></h5> -->
+                            <h5 class="customTooltip__title">Дивиденды, ${data[index][2]} <span class="customTooltip__label">82.12 $</span></h5>
                             <div class="customTooltip__grid">
-                              <div>
-                                <h6 class="customTooltip__subtitle">Подтверждено:</h6>
+                                <h6 class="customTooltip__subtitle">Выплачено:</h6>
                                 ${generateDataObject(yearsArrayData, costArrayData, "success")}
-                              </div>
-                              <div>
-                                  <h6 class="customTooltip__subtitle">Прогноз:</h6>
-                                    ${generateDataObject(yearsArrayDataOld, costArrayDataOld, "secondary")}
-                              </div>
+                                <h6 class="customTooltip__subtitle">Ожидается:</h6>
+                                ${generateDataObject(yearsArrayDataOld, costArrayDataOld, "secondary")}
                             </div>
                         </div>
                     `;
-        }
-      },
-      plotOptions: {
-        series: {
-          grouping: false,
-          borderWidth: 0,
-        },
-        column: {
-          borderWidth: 1,
-          pointWidth: widthGraphPoint,
-          //enableMouseTracking: false,
-          borderRadiusTopLeft: widthGraphPoint / 15,
-          borderRadiusTopRight: widthGraphPoint / 15,
-        }
-      },
-      series: [
-        {
-          name: 'Ож.дивиденды',
-          states: {hover: {enabled: false}},
-          color: colorOverallDividends, // ожидаемые дивиденды
-          borderColor: "#d3e3ff",
-          linkedTo: 'main',
-          data: dataPrev.slice(),
-        },
-        {
-          name: 'Выпл. дивиденды',
-          states: {hover: {enabled: false}},
-          borderColor: colorPaybackDividends,
-          id: 'main',
-          dataLabels: [{
-            enabled: true,
-            inside: true,
-            useHTML: true,
-            verticalAlign: "bottom",
-            style: {
-              ...labelsStyle,
-              color: "#24252e",
+                }
             },
-            formatter: function (e) {
-              return dataPrev[this.x][1] + "$";
+            plotOptions: {
+                series: {
+                    grouping: false,
+                    borderWidth: 0,
+                },
+                column: {
+                    borderWidth: 1,
+                    pointWidth: widthGraphPoint,
+                    //enableMouseTracking: false,
+                    borderRadiusTopLeft: widthGraphPoint / 15,
+                    borderRadiusTopRight: widthGraphPoint / 15,
+                }
+            },
+            series: [
+            {
+                name: 'Ож.дивиденды',
+                states: { hover: { enabled: false } },
+                color: colorOverallDividends, // ожидаемые дивиденды
+                borderColor: "#D3E3FF",
+                linkedTo: 'main',
+                data: dataPrev.slice(),
+            }, 
+            {
+                name: 'Выпл. дивиденды',
+                states: { hover: { enabled: false } },
+                borderColor: colorPaybackDividends,
+                id: 'main',
+                dataLabels: [{
+                    enabled: true,
+                    inside: true,
+                    useHTML: true,
+                    verticalAlign: "bottom",
+                    style: {
+                        ...labelsStyle,
+                        color: "#24252E",
+                    },
+                    formatter: function(e) {
+                        return dataPrev[this.x][1] + "$";
+                    }
+                }],
+                data: getData(data).slice(),
+            }],
+            exporting: {
+                allowHTML: true
             }
-          }],
-          data: getData(data).slice(),
-        }],
-      exporting: {
-        allowHTML: true
-      }
-    });
-  }
+        });
+    }
 }
 
 initMonthCashGraph()
-
   const cryptAnalyticsGraphData = [{
     name: 'BTC',
     y: 23.03,
@@ -2665,321 +2591,299 @@ function initSlider() {
 
 initSlider();
   function initAverageGrowthGraph() {
-  let baseWidth = 22;
-  let chartDataLabels = ["TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER"];
-  let chartDataNames = ["TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER"];
-  let chartDataNamesFull = ["Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell"];
-  let chartDataYears = [2021, 2020, 2019];
-  let chartData = [
-    [
-      {
-        y: 49.9,
-        cost: 1.12
-      },
-      {
-        y: 71.5,
-        cost: 1.12
-      },
-      {
-        y: 106.4,
-        cost: 1.12
-      },
-      {
-        y: 49.9,
-        cost: 1.12
-      },
-      {
-        y: 71.5,
-        cost: 1.12
-      },
-      {
-        y: 106.4,
-        cost: 1.12
-      },
-      {
-        y: 49.9,
-        cost: 1.12
-      },
-      {
-        y: 71.5,
-        cost: 1.12
-      },
-      {
-        y: 106.4,
-        cost: 1.12
-      },
-      {
-        y: 49.9,
-        cost: 1.12
-      },
-      {
-        y: 71.5,
-        cost: 1.12
-      },
-      {
-        y: 106.4,
-        cost: 1.12
-      },
-    ],
-    [
-      {
-        y: 29.9,
-        cost: 1.12
-      },
-      {
-        y: 41.5,
-        cost: 7.12
-      },
-      {
-        y: 76.4,
-        cost: 3.12
-      },
-      {
-        y: 29.9,
-        cost: 1.12
-      },
-      {
-        y: 41.5,
-        cost: 7.12
-      },
-      {
-        y: 76.4,
-        cost: 3.12
-      },
-      {
-        y: 29.9,
-        cost: 1.12
-      },
-      {
-        y: 41.5,
-        cost: 7.12
-      },
-      {
-        y: 76.4,
-        cost: 3.12
-      },
-      {
-        y: 29.9,
-        cost: 1.12
-      },
-      {
-        y: 41.5,
-        cost: 7.12
-      },
-      {
-        y: 76.4,
-        cost: 3.12
-      },
-    ],
-    [
-      {
-        y: 64.9,
-        cost: 8.12
-      },
-      {
-        y: 14.5,
-        cost: 12.12
-      },
-      {
-        y: 56.4,
-        cost: 2.12
-      },
-      {
-        y: 64.9,
-        cost: 8.12
-      },
-      {
-        y: 14.5,
-        cost: 12.12
-      },
-      {
-        y: 56.4,
-        cost: 2.12
-      },
-      {
-        y: 64.9,
-        cost: 8.12
-      },
-      {
-        y: 14.5,
-        cost: 12.12
-      },
-      {
-        y: 56.4,
-        cost: 2.12
-      },
-      {
-        y: 64.9,
-        cost: 8.12
-      },
-      {
-        y: 14.5,
-        cost: 12.12
-      },
-      {
-        y: 56.4,
-        cost: 2.12
-      },
-    ]
-  ];
+    let baseWidth = 22;
+    let chartDataLabels = ["Янв.", "Фев.", "Март", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Нояб.", "Дек."];
+    let chartDataNames = ["TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER"];
+    let chartDataNamesFull = ["Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell"];
+    let chartDataYears = [2021, 2020, 2019];
+    let chartData = [
+        [
+            {
+                y: 49.9,
+                cost: 1.12
+            },
+            {
+                y: 71.5,
+                cost: 1.12
+            },
+            {
+                y: 106.4,
+                cost: 1.12
+            },
+            {
+                y: 49.9,
+                cost: 1.12
+            },
+            {
+                y: 71.5,
+                cost: 1.12
+            },
+            {
+                y: 106.4,
+                cost: 1.12
+            },
+            {
+                y: 49.9,
+                cost: 1.12
+            },
+            {
+                y: 71.5,
+                cost: 1.12
+            },
+            {
+                y: 106.4,
+                cost: 1.12
+            },
+            {
+                y: 49.9,
+                cost: 1.12
+            },
+            {
+                y: 71.5,
+                cost: 1.12
+            },
+            {
+                y: 106.4,
+                cost: 1.12
+            },
+        ],
+        [
+            {
+                y: 29.9,
+                cost: 1.12
+            },
+            {
+                y: 41.5,
+                cost: 7.12
+            },
+            {
+                y: 76.4,
+                cost: 3.12
+            },
+            {
+                y: 29.9,
+                cost: 1.12
+            },
+            {
+                y: 41.5,
+                cost: 7.12
+            },
+            {
+                y: 76.4,
+                cost: 3.12
+            },
+            {
+                y: 29.9,
+                cost: 1.12
+            },
+            {
+                y: 41.5,
+                cost: 7.12
+            },
+            {
+                y: 76.4,
+                cost: 3.12
+            },
+            {
+                y: 29.9,
+                cost: 1.12
+            },
+            {
+                y: 41.5,
+                cost: 7.12
+            },
+            {
+                y: 76.4,
+                cost: 3.12
+            },
+        ],
+        [
+            {
+                y: 64.9,
+                cost: 8.12
+            },
+            {
+                y: 14.5,
+                cost: 12.12
+            },
+            {
+                y: 56.4,
+                cost: 2.12
+            },
+            {
+                y: 64.9,
+                cost: 8.12
+            },
+            {
+                y: 14.5,
+                cost: 12.12
+            },
+            {
+                y: 56.4,
+                cost: 2.12
+            },
+            {
+                y: 64.9,
+                cost: 8.12
+            },
+            {
+                y: 14.5,
+                cost: 12.12
+            },
+            {
+                y: 56.4,
+                cost: 2.12
+            },
+            {
+                y: 64.9,
+                cost: 8.12
+            },
+            {
+                y: 14.5,
+                cost: 12.12
+            },
+            {
+                y: 56.4,
+                cost: 2.12
+            },
+        ]
+    ];
 
-  function generateDataObject(yearsArrayData, costArrayData) {
-    let innerHTML = ``;
-    yearsArrayData.forEach((data, i) => {
-      innerHTML += `
+    function generateDataObject(yearsArrayData, costArrayData) {
+        let innerHTML = ``;
+        yearsArrayData.forEach((data, i) => {
+            innerHTML += `
             <div class="customTooltip__item">
                 <span class="customTooltip__key">${yearsArrayData[i]}</span>
-                <span class="customTooltip__value">${costArrayData[i]} USD</span>
+                <span class="customTooltip__value">${costArrayData[i]} $</span>
             </div>`
-    });
-    return innerHTML;
-  }
-
-  function average(arr) {
-    if (arr.length === 0)
-      return 0;
-
-    let sum = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-      sum += arr[i];
+        });
+        return innerHTML;
     }
-    return sum / arr.length;
-  }
 
-  function averageGrowthGraphData() {
-    let needArray = [];
-    let yData = chartData.map(data => data.map(elem => elem.y));
-    //console.log(yData);
+    function average(arr) {
+        if(arr.length === 0)
+            return 0;
+    
+        let sum = 0;
+    
+        for(let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        } 
+        return sum / arr.length;
+    }
 
-    yData[0].forEach((elem, index) => {
-      needArray.push(average([yData[0][index], yData[1][index], yData[2][index]]));
-    });
+    function averageGrowthGraphData() {
+        let needArray = [];
+        let yData = chartData.map(data => data.map(elem => elem.y));
+        //console.log(yData);
 
-    return needArray;
-  }
+        yData[0].forEach((elem, index) => {
+            needArray.push(average([yData[0][index], yData[1][index], yData[2][index]]));
+        });
+        
+        return needArray;
+    }
 
-  if (document.body.offsetWidth < 1500) {
-    baseWidth = 10;
-  }
+    if (document.body.offsetWidth < 1500) {
+        baseWidth = 10;
+    }
 
-  if (document.body.offsetWidth < 576) {
-    baseWidth = 22;
-  }
+    if (document.body.offsetWidth < 576) {
+        baseWidth = 22;
+    }
 
-  if (document.querySelector("#averageGrowthGraph") === null) {
-    return false;
-  }
+    if (document.querySelector("#averageGrowthGraph") === null) {
+        return false;
+    }
 
-  Highcharts.chart('averageGrowthGraph', {
-    chart: {
-      type: 'column',
-      style: {"fontFamily": ""},
-    },
-    credits: {
-      enabled: false
-    },
-    legend: {
-      enabled: false
-    },
-    title: {
-      text: ''
-    },
-    subtitle: {
-      text: ''
-    },
-    xAxis: {
-      categories: chartDataLabels,
-      crosshair: true,
-      labels: {
-        enabled: true,
-        type: 'category',
-        style: {
-          fontSize: "16px",
-          color: "#373943"
-        }
-      },
-      visible: true
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: ''
-      },
-      labels: {
-        formatter: function () {
-          return (this.value) + '%';
+    Highcharts.chart('averageGrowthGraph', {
+        chart: {
+            type: 'column',
+            style: { "fontFamily": "" },
         },
-        style: {
-          fontSize: "0.9rem",
-          color: "#373943"
-        }
-      },
-    },
-    tooltip: {
-      crosshairs: true,
-      shared: true,
-      useHTML: true,
-      formatter: function () {
-        let index = this.points[0].point.index;
-        //let costArrayData = chartData.map(item => item.point.cost);
+        credits: {
+            enabled: false
+        },
+        legend: {
+            enabled: false
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: chartDataLabels,
+            crosshair: true,
+            labels: {
+                enabled: true,
+                type: 'category',
+                style: {
+                    fontSize: "16px",
+                    color: "#373943"
+                }
+            },
+            visible: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return (this.value) + '%';
+                },
+                style: {
+                    fontSize: "0.9rem",
+                    color: "#373943"
+                }
+            },
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true,
+            useHTML: true,
+            formatter: function() {
+                let index = this.points[0].point.index;
+                //let costArrayData = chartData.map(item => item.point.cost);
 
-        let costArrayData = chartData.map(item => item.filter((elem, i) => i === index).map(elem => elem.cost)[0]);
-        let yearsArrayData = chartDataYears;
+                let costArrayData = chartData.map(item => item.filter((elem, i) => i === index).map(elem => elem.cost)[0]);
+                let yearsArrayData = chartDataYears;
 
-        return `
+                return `
                     <div class="customTooltip">
                         <h5 class="customTooltip__title">${chartDataNames[index]} <span>${chartDataNamesFull[index]}</span></h5>
-                  <!--      <div class="customTooltip__grid">
+                        <div class="customTooltip__grid">
                             ${generateDataObject(yearsArrayData, costArrayData)}
-                        </div> -->
-                        <div class="customTooltip__percent customTooltip__percent--positive">
-                            ${chartData[0][index].y} %
                         </div>
                     </div>
                 `;
-      }
-    },
-    plotOptions: {
-      column: {
-        pointPadding: 0.2,
-        borderWidth: 0,
-        pointWidth: baseWidth,
-        borderRadiusTopLeft: baseWidth / 2,
-        borderRadiusTopRight: baseWidth / 2,
-      }
-    },
-    series: [
-      {
-        name: "name",
-        states: {hover: {enabled: false}},
-        data: averageGrowthGraphData(),
-        color: "#199f27",
-      },
-    ],
-
-    responsive: {
-      rules: [{
-        condition: {
-          maxWidth: 700
+            }
         },
-
-        chartOptions: {
-          chart: {
-            type: 'bar'
-          },
-          legend: {
-            enabled: false
-          }
-        }
-      }]
-    }
-
-  });
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0,
+                pointWidth: baseWidth,
+                borderRadiusTopLeft: baseWidth / 2,
+                borderRadiusTopRight: baseWidth / 2,
+            }
+        },
+        series: [
+            {
+                name: "name",
+                states: { hover: { enabled: false } },
+                data: averageGrowthGraphData(),
+                color: "#3E54D8",
+            },
+        ]
+    });
 }
 
 initAverageGrowthGraph();
-
   function initGrowthOfDividendsGraph() {
     let baseWidth = 14;
     let chartDataLabels = ["Янв.", "Фев.", "Март", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Нояб.", "Дек."];
@@ -3262,431 +3166,92 @@ initAverageGrowthGraph();
 
 initGrowthOfDividendsGraph();
   function initPortfolioProfitGraph() {
-  let baseWidth = 14;
-  let chartDataNames = ["ERT", "QRT", "RTE", "ERT", "QRT", "RTE", "ERT", "QRT", "RTE", "ERT", "QRT", "RTE", "RTE", "RTE"];
-  let chartData = [17, 14, 12, 8, 7, 6, 5, 4, 3, 2, 1, 1, -5, -15];
+    let baseWidth = 14;
+    let chartDataNames = ["ERT", "QRT", "RTE", "ERT", "QRT", "RTE", "ERT", "QRT", "RTE", "ERT", "QRT", "RTE"];
+    let chartData = [17, 14, 12, 8, 7, 6 , 5, 4, 3, 2, 1, 1];
 
-  if (document.body.offsetWidth < 1500) {
-    baseWidth = 12;
-  }
+    if (document.body.offsetWidth < 1500) {
+        baseWidth = 12;
+    }
 
-  if (document.body.offsetWidth < 576) {
-    baseWidth = 12;
-  }
+    if (document.body.offsetWidth < 576) {
+        baseWidth = 12;
+    }
 
-  if (document.querySelector("#portfolioProfitGraph") === null) {
-    return false;
-  }
+    if (document.querySelector("#portfolioProfitGraph") === null) {
+        return false;
+    }
 
-  Highcharts.chart('portfolioProfitGraph', {
-    chart: {
-      type: 'column',
-      style: { "fontFamily": "" },
-    },
-    credits: {
-      enabled: false
-    },
-    legend: {
-      enabled: false
-    },
-    title: {
-      text: ''
-    },
-    subtitle: {
-      text: ''
-    },
-    xAxis: {
-      categories: chartDataNames,
-      crosshair: true,
-      labels: {
-        enabled: true,
-        type: 'category',
-        style: {
-          fontSize: "16px",
-          color: "#373943"
-        }
-      },
-      visible: true
-    },
-    yAxis: {
-      //min: 0,
-      title: {
-        text: ''
-      },
-      labels: {
-        formatter: function () {
-          return (this.value) + '%';
+    Highcharts.chart('portfolioProfitGraph', {
+        chart: {
+            type: 'column',
+            style: { "fontFamily": "" },
         },
-        style: {
-          fontSize: "0.9rem",
-          color: "#373943"
-        }
-      },
-    },
-    plotOptions: {
-      column: {
-        pointPadding: 0.2,
-        borderWidth: 0,
-        pointWidth: baseWidth,
-        enableMouseTracking: false,
-        borderRadiusTopRight: baseWidth / 2,
-        borderRadiusTopLeft: baseWidth / 2,
-      },
-    },
-
-
-
-    series: [
-      {
-        name: "data",
-        states: { hover: { enabled: false } },
-        data: chartData,
-        color: "#46B151",
-        negativeColor: "#DE4355"
-      },
-
-
-    ]
-  })
+        credits: {
+            enabled: false
+        },
+        legend: {
+            enabled: false
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: chartDataNames,
+            crosshair: true,
+            labels: {
+                enabled: true,
+                type: 'category',
+                style: {
+                    fontSize: "16px",
+                    color: "#373943"
+                }
+            },
+            visible: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return (this.value) + '%';
+                },
+                style: {
+                    fontSize: "0.9rem",
+                    color: "#373943"
+                }
+            },
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0,
+                pointWidth: baseWidth,
+                borderRadiusTopLeft: baseWidth / 2,
+                borderRadiusTopRight: baseWidth / 2,
+                enableMouseTracking: false,
+            }
+        },
+        series: [
+            {
+                name: "data",
+                states: { hover: { enabled: false } },
+                data: chartData,
+                color: "#46B151",
+            },
+        ]
+    });
 }
 
 initPortfolioProfitGraph();
   if (document.querySelector(".analyticScanner")) {
   function filterScanner() {
     const companies = [
-      {
-        img: "pcg.png",
-        imgAlt: 'Иконка PCG',
-        title: 'PCG',
-        subtitle: 'Microsoft',
-        price: 126.23,
-        percent: 1.13,
-        isPercent: "error",
-        income: 1.6,
-        exchange: "NYSE",
-        bmsGlobal: 93,
-        bmsLocal: 62,
-        bmdGlobal: 45,
-        bmdLocal: 25,
-        isBluBmsGlobalr: true,
-        isBluBmsLocalr: true,
-        isBluBmdGlobalr: true,
-        isBluBmdLocalr: false,
-        pe: 3.5,
-        ps: 1.2,
-        continent: 'Азия'
-      },
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 100.23,
-        percent: 8.2,
-        isPercent: "error",
-        income: 1.5,
-        exchange: "NYSE",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: false,
-        isBlurBmdGlobal: true,
-        isBlurBmdLocal: false,
-        bmsGlobal: 95,
-        bmsLocal: 45,
-        bmdGlobal: 51,
-        bmdLocal: 31,
-        pe: 1.23,
-        ps: 1.67,
-        continent: 'Европа'
-      },
-      {
-        img: "pcg.png",
-        imgAlt: 'Иконка PCG',
-        title: 'PCG',
-        subtitle: 'Microsoft',
-        price: 123.23,
-        percent: 1.23,
-        isPercent: "success",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: true,
-        isBlurBmdLocal: false,
-        income: 1.4,
-        exchange: "NYSE",
-        bmsGlobal: 75,
-        bmsLocal: 65,
-        bmdGlobal: 52,
-        bmdLocal: 32,
-        pe: 2.98,
-        ps: 1.78,
-        continent: 'Северная Америка'
-      },
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 85.23,
-        percent: 1.2,
-        isPercent: "success",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: false,
-        isBlurBmdLocal: true,
-        income: 1.3,
-        exchange: "NYSE",
-        bmsGlobal: 15,
-        bmsLocal: 25,
-        bmdGlobal: 53,
-        bmdLocal: 33,
-        pe: 2.35,
-        ps: 2.85,
-        continent: 'Южная Америка'
-      },
-
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 82.23,
-        percent: 1.28,
-        isPercent: "error",
-        income: 1.2,
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: false,
-        isBlurBmdLocal: true,
-        exchange: "NYSE",
-        bmsGlobal: 55,
-        bmsLocal: 35,
-        bmdGlobal: 54,
-        bmdLocal: 34,
-        pe: 2.75,
-        ps: 2.15,
-        continent: 'Австралия'
-      },
-      {
-        img: "pcg.png",
-        imgAlt: 'Иконка PCG',
-        title: 'PCG',
-        subtitle: 'Microsoft',
-        price: 126.23,
-        percent: 1.13,
-        isPercent: "error",
-        income: 1.6,
-        exchange: "NYSE",
-        bmsGlobal: 93,
-        bmsLocal: 62,
-        bmdGlobal: 45,
-        bmdLocal: 25,
-        isBluBmsGlobalr: true,
-        isBluBmsLocalr: true,
-        isBluBmdGlobalr: true,
-        isBluBmdLocalr: false,
-        pe: 3.5,
-        ps: 1.2,
-        continent: 'Азия'
-      },
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 100.23,
-        percent: 8.2,
-        isPercent: "error",
-        income: 1.5,
-        exchange: "NYSE",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: false,
-        isBlurBmdGlobal: true,
-        isBlurBmdLocal: false,
-        bmsGlobal: 95,
-        bmsLocal: 45,
-        bmdGlobal: 51,
-        bmdLocal: 31,
-        pe: 1.23,
-        ps: 1.67,
-        continent: 'Европа'
-      },
-      {
-        img: "pcg.png",
-        imgAlt: 'Иконка PCG',
-        title: 'PCG',
-        subtitle: 'Microsoft',
-        price: 123.23,
-        percent: 1.23,
-        isPercent: "success",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: true,
-        isBlurBmdLocal: false,
-        income: 1.4,
-        exchange: "NYSE",
-        bmsGlobal: 75,
-        bmsLocal: 65,
-        bmdGlobal: 52,
-        bmdLocal: 32,
-        pe: 2.98,
-        ps: 1.78,
-        continent: 'Северная Америка'
-      },
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 85.23,
-        percent: 1.2,
-        isPercent: "success",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: false,
-        isBlurBmdLocal: true,
-        income: 1.3,
-        exchange: "NYSE",
-        bmsGlobal: 15,
-        bmsLocal: 25,
-        bmdGlobal: 53,
-        bmdLocal: 33,
-        pe: 2.35,
-        ps: 2.85,
-        continent: 'Южная Америка'
-      },
-
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 82.23,
-        percent: 1.28,
-        isPercent: "error",
-        income: 1.2,
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: false,
-        isBlurBmdLocal: true,
-        exchange: "NYSE",
-        bmsGlobal: 55,
-        bmsLocal: 35,
-        bmdGlobal: 54,
-        bmdLocal: 34,
-        pe: 2.75,
-        ps: 2.15,
-        continent: 'Австралия'
-      },
-      {
-        img: "pcg.png",
-        imgAlt: 'Иконка PCG',
-        title: 'PCG',
-        subtitle: 'Microsoft',
-        price: 126.23,
-        percent: 1.13,
-        isPercent: "error",
-        income: 1.6,
-        exchange: "NYSE",
-        bmsGlobal: 93,
-        bmsLocal: 62,
-        bmdGlobal: 45,
-        bmdLocal: 25,
-        isBluBmsGlobalr: true,
-        isBluBmsLocalr: true,
-        isBluBmdGlobalr: true,
-        isBluBmdLocalr: false,
-        pe: 3.5,
-        ps: 1.2,
-        continent: 'Азия'
-      },
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 100.23,
-        percent: 8.2,
-        isPercent: "error",
-        income: 1.5,
-        exchange: "NYSE",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: false,
-        isBlurBmdGlobal: true,
-        isBlurBmdLocal: false,
-        bmsGlobal: 95,
-        bmsLocal: 45,
-        bmdGlobal: 51,
-        bmdLocal: 31,
-        pe: 1.23,
-        ps: 1.67,
-        continent: 'Европа'
-      },
-      {
-        img: "pcg.png",
-        imgAlt: 'Иконка PCG',
-        title: 'PCG',
-        subtitle: 'Microsoft',
-        price: 123.23,
-        percent: 1.23,
-        isPercent: "success",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: true,
-        isBlurBmdLocal: false,
-        income: 1.4,
-        exchange: "NYSE",
-        bmsGlobal: 75,
-        bmsLocal: 65,
-        bmdGlobal: 52,
-        bmdLocal: 32,
-        pe: 2.98,
-        ps: 1.78,
-        continent: 'Северная Америка'
-      },
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 85.23,
-        percent: 1.2,
-        isPercent: "success",
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: false,
-        isBlurBmdLocal: true,
-        income: 1.3,
-        exchange: "NYSE",
-        bmsGlobal: 15,
-        bmsLocal: 25,
-        bmdGlobal: 53,
-        bmdLocal: 33,
-        pe: 2.35,
-        ps: 2.85,
-        continent: 'Южная Америка'
-      },
-
-      {
-        img: "viac.svg",
-        imgAlt: 'Иконка VIAC',
-        title: 'VIAC',
-        subtitle: 'Microsoft company',
-        price: 82.23,
-        percent: 1.28,
-        isPercent: "error",
-        income: 1.2,
-        isBlurBmsGlobal: false,
-        isBlurBmsLocal: true,
-        isBlurBmdGlobal: false,
-        isBlurBmdLocal: true,
-        exchange: "NYSE",
-        bmsGlobal: 55,
-        bmsLocal: 35,
-        bmdGlobal: 54,
-        bmdLocal: 34,
-        pe: 2.75,
-        ps: 2.15,
-        continent: 'Австралия'
-      },
       {
         img: "pcg.png",
         imgAlt: 'Иконка PCG',
@@ -3809,6 +3374,7 @@ initPortfolioProfitGraph();
     const inputCounts = document.querySelectorAll('.analyticScanner__count input')
     const resetBtnElement = document.querySelector("#reset-filter")
     const sortedTitleBtn = document.querySelector("#sorted-title")
+    const sortedTitleBtnMobile = document.querySelector("#sorted-title-mobile")
     const sortedPriceBtn = document.querySelector("#sorted-price")
     const sortedPercentBtn = document.querySelector("#sorted-percent")
     const sortedExChangeBtn = document.querySelector("#sorted-exChange")
@@ -3856,7 +3422,7 @@ initPortfolioProfitGraph();
 
             if (numberElement) {
               if (+box.children[i].getAttribute(`data-${dataName}`) > +box.children[j].getAttribute(`data-${dataName}`) || +fixedBox.children[i].getAttribute(`data-${dataName}`) > +fixedBox.children[j].getAttribute(`data-${dataName}`)) {
-                let replacedNode = box.replaceChild(box.children[i], box.children[j])
+                let replacedNode = box.replaceChild(box.children[j], box.children[i])
                 let replacedNodeFixed = fixedBox.replaceChild(fixedBox.children[j], fixedBox.children[i])
                 insertAfter(replacedNode, box.children[i])
                 insertAfter(replacedNodeFixed, fixedBox.children[i])
@@ -3915,6 +3481,7 @@ initPortfolioProfitGraph();
     }
 
     sortedTitleBtn.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtn, false))
+    sortedTitleBtnMobile.addEventListener("click", sortedList.bind(null, "title", sortedTitleBtnMobile, false))
     sortedPriceBtn.addEventListener("click", sortedList.bind(null, "price", sortedPriceBtn))
     sortedPercentBtn.addEventListener("click", sortedList.bind(null, "percent", sortedPercentBtn))
     sortedIncomeBtn.addEventListener("click", sortedList.bind(null, "income", sortedIncomeBtn))
@@ -3973,7 +3540,27 @@ initPortfolioProfitGraph();
       `
 
       const htmlElement = `
-                <div class="table-ticker__content" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.bmsGlobal} data-bmsLocal=${company.bmsLocal} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
+                <div class="table-ticker__content" data-title=${company.title} data-price=${company.price} data-percent=${company.percent} data-income=${company.income} data-bmsGlobal=${company.sortedBmsGlobalBtn} data-bmsLocal=${company.sortedBmsLocalBtn} data-bmdGlobal=${company.bmdGlobal} data-bmdLocal=${company.bmdLocal} data-PE=${company.pe} data-PS=${company.ps} data-continent=${company.continent} data-exChange=${company.exchange}>
+                  <div class="table-ticker__block table-ticker__block--moving">
+                    <div class="table-ticker-block__item">
+                      <div class="table-ticker-block__img">
+                        <img src="./img/statTable__icons/${company.img}" alt="${company.imgAlt}">
+                      </div>
+                      <div class="table-ticker-block__content table-ticker-block__info">
+                        <div class="table-ticker-block-info__content">
+                          <h3 class="table-ticker-block-info__title">${company.title}</h3>
+                            <div class="table-ticker-block__paperDontTrade paperDontTrade">
+                              <svg class="table-ticker-block-paperDontTrade__icon paperDontTrade__icon statStickerInfo__icon">
+                                <use xlink:href="img/main.svg#icon-trendUp"></use>
+                              </svg>
+                                <div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
+                                    бумаги</a></div>
+                              </div>
+                        </div>
+                        <span class="table-ticker-block__subtitle">${company.subtitle}</span>
+                      </div>
+                    </div>
+                  </div>
                   <div class="table-ticker__block onlyText whnr">
                     ${company.price} USD
                   </div>
