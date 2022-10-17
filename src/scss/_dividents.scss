@@ -342,9 +342,23 @@
       margin-top: 0;
       margin-bottom: 0;
     }
+    
+     &-coef {
+      display: flex;
+      
+      span {
+          color: $color_white;
+          background-color: $color_blue;
+          padding: 0.8rem 1.6rem;
+          border-radius: 0.5rem;
+          font-size: 1.6rem;
+     }
+     }
 
     &-cash {
       display: flex;
+      flex-direction: column;
+
       justify-content: space-between;
 
       &-item {
