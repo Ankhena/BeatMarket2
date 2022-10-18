@@ -387,7 +387,8 @@ $base_transition: 0.4s ease-in-out;
 
 		// .blockSection__dividendStatusIcon--TopHat
 
-		&--TopHat {}
+    &--TopHat {
+    }
 
 		// .blockSection__dividendStatusIcon--Trophy
 
@@ -1907,7 +1908,7 @@ $base_transition: 0.4s ease-in-out;
 		top: 0;
 		z-index: 1;
 
-		.stategyPromo-graph-values-btn {
+   	.stategyPromo-graph-values-btn {
 			display: flex;
 
 			@media ($media_sm) {
@@ -2373,7 +2374,7 @@ $base_transition: 0.4s ease-in-out;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
-		padding: 8px;
+		padding: 8px 8px;
 
 		svg {
 			stroke: #8c9bea;
@@ -3396,7 +3397,6 @@ $base_transition: 0.4s ease-in-out;
 		color: $color_white;
 		border-color: $color_yellow;
 	}
-
 }
 
 .dividendsTarget__progress {
