@@ -7,429 +7,429 @@
 
 <body>
 
-  @@include("_header.html", {
-  "title": "Аналитика",
-  "searchBar": "true",
-  "searchBarClass": "headerSearchBar"
-  })
+@@include("_header.html", {
+"title": "Аналитика",
+"searchBar": "true",
+"searchBarClass": "headerSearchBar"
+})
 
-  <section class="section-outer section-main">
-    <div class="main">
-      @@include("_menu.html", {
-      "title": "Аналитика",
-      "analyticMenu": "active"
-      })
+<section class="section-outer section-main">
+  <div class="main">
+    @@include("_menu.html", {
+    "title": "Аналитика",
+    "analyticMenu": "active"
+    })
 
-      <div class="main-content analyticScanner">
-        <div class="main-contentPadding">
-          <div class="analyticScanner__header">
-            <h2>Сканер</h2>
-            <a href="analyticStock.html" class="btn btn_blue">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.25V20.25" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 3.75V8.25" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M18.75 18.75V20.25" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M18.75 3.75V15.75" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M21 15.75H16.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M5.25 15.75V20.25" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M5.25 3.75V12.75" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M3 12.75H7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M14.25 8.25H9.75" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <span>Закрыть сканер</span>
-            </a>
-          </div>
-          <div class="main-content-analyticScanner">
-            <div class="main-content-controlls">
-              <div class="inputGroup">
-                <span class="inputGroup__label">Название или тикер</span>
-                <div class="inputGroup__item">
-                  <input class="inputGroup__control inputGroup__control--padding" id="search-company" type="text"
-                    placeholder="Поиск тикера">
-                  <svg class="inputGroup__icon">
-                    <use xlink:href="img/main.svg#icon-searchTicket"></use>
-                  </svg>
+    <div class="main-content analyticScanner">
+      <div class="main-contentPadding">
+        <div class="analyticScanner__header">
+          <h2>Сканер</h2>
+          <a href="analyticStock.html" class="btn btn_blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 11.25V20.25" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M12 3.75V8.25" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M18.75 18.75V20.25" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M18.75 3.75V15.75" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M21 15.75H16.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M5.25 15.75V20.25" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M5.25 3.75V12.75" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M3 12.75H7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M14.25 8.25H9.75" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>Закрыть сканер</span>
+          </a>
+        </div>
+        <div class="main-content-analyticScanner">
+          <div class="main-content-controlls">
+            <div class="inputGroup">
+              <span class="inputGroup__label">Название или тикер</span>
+              <div class="inputGroup__item">
+                <input class="inputGroup__control inputGroup__control--padding" id="search-company" type="text"
+                       placeholder="Поиск тикера">
+                <svg class="inputGroup__icon">
+                  <use xlink:href="img/main.svg#icon-searchTicket"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="inputGroup">
+              <span class="inputGroup__label">Континент</span>
+              <div class="inputGroup__item">
+
+                <div class="inputGroup__control inputSelect">
+
+
+                  <label class="inputSelect__container" for="analyticScannerContinent">
+                    <span class="inputSelect__value">Всe</span>
+                    <svg class="inputSelect__icon">
+                      <use xlink:href="img/main.svg#icon-arrow-down"></use>
+                    </svg>
+                  </label>
+
+                  <input class="inputSelect__checkbox visually_hidden" id="analyticScannerContinent" type="checkbox">
+
+                  <div class="inputSelect__dropdown">
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
+                      <span class="inputSelect__choose radio_custom">Азия</span>
+                    </label>
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
+                      <span class="inputSelect__choose radio_custom">Европа</span>
+                    </label>
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
+                      <span class="inputSelect__choose radio_custom">Северная Америка</span>
+                    </label>
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
+                      <span class="inputSelect__choose radio_custom">Южная Америка</span>
+                    </label>
+                    <label class="inputSelect__item">
+                      <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
+                      <span class="inputSelect__choose radio_custom">Австралия</span>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div class="inputGroup">
-                <span class="inputGroup__label">Континент</span>
+            </div>
+            <div class="inputGroup analyticScanner__input">
+              <div style="flex-grow: 1">
+                <span class="inputGroup__label">Скоринг</span>
                 <div class="inputGroup__item">
 
                   <div class="inputGroup__control inputSelect">
 
 
-                    <label class="inputSelect__container" for="analyticScannerContinent">
-                      <span class="inputSelect__value">Всe</span>
+                    <label class="inputSelect__container" for="analyticScannerScoring">
+                      <span class="inputSelect__value">BMS global</span>
                       <svg class="inputSelect__icon">
                         <use xlink:href="img/main.svg#icon-arrow-down"></use>
                       </svg>
                     </label>
 
-                    <input class="inputSelect__checkbox visually_hidden" id="analyticScannerContinent" type="checkbox">
-
+                    <input class="inputSelect__checkbox visually_hidden" id="analyticScannerScoring" type="checkbox">
                     <div class="inputSelect__dropdown">
                       <label class="inputSelect__item">
-                        <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
-                        <span class="inputSelect__choose radio_custom">Азия</span>
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="scoring" checked>
+                        <span class="inputSelect__choose radio_custom">BMS global</span>
                       </label>
                       <label class="inputSelect__item">
-                        <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
-                        <span class="inputSelect__choose radio_custom">Европа</span>
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="scoring">
+                        <span class="inputSelect__choose radio_custom">BMS local</span>
                       </label>
                       <label class="inputSelect__item">
-                        <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
-                        <span class="inputSelect__choose radio_custom">Северная Америка</span>
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="scoring">
+                        <span class="inputSelect__choose radio_custom">BMD local</span>
                       </label>
                       <label class="inputSelect__item">
-                        <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
-                        <span class="inputSelect__choose radio_custom">Южная Америка</span>
-                      </label>
-                      <label class="inputSelect__item">
-                        <input class="inputSelect__radio visually_hidden" type="radio" name="continent">
-                        <span class="inputSelect__choose radio_custom">Австралия</span>
+                        <input class="inputSelect__radio visually_hidden" type="radio" name="scoring">
+                        <span class="inputSelect__choose radio_custom">BMD local</span>
                       </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="inputGroup analyticScanner__input">
-                <div style="flex-grow: 1">
-                  <span class="inputGroup__label">Скоринг</span>
-                  <div class="inputGroup__item">
-
-                    <div class="inputGroup__control inputSelect">
-
-
-                      <label class="inputSelect__container" for="analyticScannerScoring">
-                        <span class="inputSelect__value">BMS global</span>
-                        <svg class="inputSelect__icon">
-                          <use xlink:href="img/main.svg#icon-arrow-down"></use>
-                        </svg>
-                      </label>
-
-                      <input class="inputSelect__checkbox visually_hidden" id="analyticScannerScoring" type="checkbox">
-                      <div class="inputSelect__dropdown">
-                        <label class="inputSelect__item">
-                          <input class="inputSelect__radio visually_hidden" type="radio" name="scoring" checked>
-                          <span class="inputSelect__choose radio_custom">BMS global</span>
-                        </label>
-                        <label class="inputSelect__item">
-                          <input class="inputSelect__radio visually_hidden" type="radio" name="scoring">
-                          <span class="inputSelect__choose radio_custom">BMS local</span>
-                        </label>
-                        <label class="inputSelect__item">
-                          <input class="inputSelect__radio visually_hidden" type="radio" name="scoring">
-                          <span class="inputSelect__choose radio_custom">BMD local</span>
-                        </label>
-                        <label class="inputSelect__item">
-                          <input class="inputSelect__radio visually_hidden" type="radio" name="scoring">
-                          <span class="inputSelect__choose radio_custom">BMD local</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+              <div class="analyticScanner__counts">
+                <div class="analyticScanner__count">
+                  <label for="count1">от</label>
+                  <input type="text" value="1" id="count1">
                 </div>
-                <div class="analyticScanner__counts">
-                  <div class="analyticScanner__count">
-                    <label for="count1">от</label>
-                    <input type="text" value="1" id="count1">
-                  </div>
-                  <div class="analyticScanner__count">
-                    <label for="count2">до</label>
-                    <input type="text" value="99" id="count2">
-                  </div>
+                <div class="analyticScanner__count">
+                  <label for="count2">до</label>
+                  <input type="text" value="99" id="count2">
                 </div>
               </div>
             </div>
-            <div class="ui-tabs-panel ui-corner-bottom ui-widget-content" data-contentshower>
-              <div class="main-content-controlls" data-contentshowerhidden>
-                <div class="inputGroup">
-                  <span class="inputGroup__label">P/E</span>
-                  <div class="inputGroup__item">
+          </div>
+          <div class="ui-tabs-panel ui-corner-bottom ui-widget-content" data-contentshower>
+            <div class="main-content-controlls" data-contentshowerhidden>
+              <div class="inputGroup">
+                <span class="inputGroup__label">P/E</span>
+                <div class="inputGroup__item">
 
-                    <div class="range-number">
-                      <div class="customRange" id="PE">
-                        <div class="customRange__info">
-                          <div class="range-number__block">
-                            <label for="min">от</label>
-                            <input type="text" class="customRange__value" id="min" value="0" data-min="0">
-                          </div>
-                          <div class="range-number__block">
-                            <label for="max">до</label>
-                            <input type="text" class="customRange__value" id="max" value="120" data-max="120">
-                          </div>
+                  <div class="range-number">
+                    <div class="customRange" id="PE">
+                      <div class="customRange__info">
+                        <div class="range-number__block">
+                          <label for="min">от</label>
+                          <input type="text" class="customRange__value" id="min" value="0" data-min="0">
                         </div>
-                        <div class="customRange__slider">
+                        <div class="range-number__block">
+                          <label for="max">до</label>
+                          <input type="text" class="customRange__value" id="max" value="120" data-max="120">
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="inputGroup">
-                  <span class="inputGroup__label">P/S</span>
-                  <div class="inputGroup__item">
-
-                    <div class="range-number">
-                      <div class="customRange" id="PS">
-                        <div class="customRange__info">
-                          <div class="range-number__block">
-                            <label for="min">от</label>
-                            <input type="text" class="customRange__value" id="min" value="0" data-min="0">
-                          </div>
-                          <div class="range-number__block">
-                            <label for="max">до</label>
-                            <input type="text" class="customRange__value" id="max" value="120" data-max="120">
-                          </div>
-                        </div>
-                        <div class="customRange__slider">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="inputGroup">
-                  <span class="inputGroup__label">Дивидендная доходность %</span>
-                  <div class="inputGroup__item">
-
-                    <div class="range-number">
-                      <div class="customRange" id="Income">
-                        <div class="customRange__info">
-                          <div class="range-number__block">
-                            от
-                            <input type="text" class="customRange__value" id="min" value="0" data-min="0">
-                          </div>
-                          <div class="range-number__block">
-                            до
-                            <input type="text" class="customRange__value" id="max" value="120" data-max="120">
-                          </div>
-                        </div>
-                        <div class="customRange__slider">
-                        </div>
+                      <div class="customRange__slider">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btnShowAll">
-                <span class="btnShowAll__text">Показать все</span>
-                <svg class="btnShowAll__icon">
-                  <use xlink:href="img/main.svg#icon-arrow-down"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="analyticScanner__btn-list">
-              <button class="btn btn_blue">Найти</button>
-              <button class="btn btn_primary" id="reset-filter">Сбросить фильтр</button>
-            </div>
-            <div class="table-overflow">
-              <div class="table-ticker">
+              <div class="inputGroup">
+                <span class="inputGroup__label">P/S</span>
+                <div class="inputGroup__item">
 
-                <div class="table-ticker__fixed">
-                  <div class="table-ticker-fixed__inner">
-                    <button class="table-ticker-fixed__item sort" id="sorted-title-mobile" data-mobileTitle>
-                      <span>Тикер</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
+                  <div class="range-number">
+                    <div class="customRange" id="PS">
+                      <div class="customRange__info">
+                        <div class="range-number__block">
+                          <label for="min">от</label>
+                          <input type="text" class="customRange__value" id="min" value="0" data-min="0">
+                        </div>
+                        <div class="range-number__block">
+                          <label for="max">до</label>
+                          <input type="text" class="customRange__value" id="max" value="120" data-max="120">
+                        </div>
+                      </div>
+                      <div class="customRange__slider">
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="table-ticker__scroll">
-                  <div class="table-ticker__header">
-                    <button class="table-ticker-header__item sort" id="sorted-price">
-                      <span>Цена</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-percent">
-                      <span>День %</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-income">
-                      <span>Доходность</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-exChange">
-                      <span>Биржа</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-bmsGlobal">
-                      <span>BMS global</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-bmsLocal">
-                      <span>BMS local</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-bmdGlobal">
-                      <span>BMD Global</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-bmdLocal">
-                      <span>BMD local</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-PE">
-                      <span>P/E</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-PS">
-                      <span>P/S</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="table-ticker-header__item sort" id="sorted-continent">
-                      <span>Континент</span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
+              </div>
+              <div class="inputGroup">
+                <span class="inputGroup__label">Дивидендная доходность %</span>
+                <div class="inputGroup__item">
+
+                  <div class="range-number">
+                    <div class="customRange" id="Income">
+                      <div class="customRange__info">
+                        <div class="range-number__block">
+                          от
+                          <input type="text" class="customRange__value" id="min" value="0" data-min="0">
+                        </div>
+                        <div class="range-number__block">
+                          до
+                          <input type="text" class="customRange__value" id="max" value="120" data-max="120">
+                        </div>
+                      </div>
+                      <div class="customRange__slider">
+                      </div>
+                    </div>
                   </div>
-                  <div class="table-ticker__negative table-ticker__negative--active">По выбранным фильтрам ничего не
-                    найдено</div>
                 </div>
               </div>
             </div>
-            <div class="pagination">
-              <ul>
-                <li class="prev">
-                  <a href="#"><svg>
-                      <use xlink:href="img/main.svg#icon-caret-pagination"></use>
-                    </svg></a>
-                </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">...</a></li>
-                <li><a href="#">4</a></li>
-                <li class="active"><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">...</a></li>
-                <li><a href="#">12</a></li>
-                <li class="next">
-                  <a href="#"><svg>
-                      <use xlink:href="img/main.svg#icon-caret-pagination"></use>
-                    </svg></a>
-                </li>
-              </ul>
-              <span>Показано 90-105 из 210</span>
+            <button class="btnShowAll">
+              <span class="btnShowAll__text">Показать все</span>
+              <svg class="btnShowAll__icon">
+                <use xlink:href="img/main.svg#icon-arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="analyticScanner__btn-list">
+            <button class="btn btn_blue">Найти</button>
+            <button class="btn btn_primary" id="reset-filter">Сбросить фильтр</button>
+          </div>
+          <div class="table-overflow">
+            <div class="table-ticker">
+
+              <div class="table-ticker__fixed">
+                <div class="table-ticker-fixed__inner">
+                  <button class="table-ticker-fixed__item sort" id="sorted-title-mobile" data-mobileTitle>
+                    <span>Тикер</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="table-ticker__scroll">
+                <div class="table-ticker__header">
+                  <button class="table-ticker-header__item sort" id="sorted-price">
+                    <span>Цена</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-percent">
+                    <span>День %</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-income">
+                    <span>Доходность</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-exChange">
+                    <span>Биржа</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-bmsGlobal">
+                    <span>BMS global</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-bmsLocal">
+                    <span>BMS local</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-bmdGlobal">
+                    <span>BMD Global</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-bmdLocal">
+                    <span>BMD local</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-PE">
+                    <span>P/E</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-PS">
+                    <span>P/S</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="table-ticker-header__item sort" id="sorted-continent">
+                    <span>Континент</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.75 13.75L6.25 16.25L3.75 13.75" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.25 3.75V16.25" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                      <path d="M11.25 6.25L13.75 3.75L16.25 6.25" stroke="#D3E3FF" stroke-width="1.25"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M13.75 16.25V3.75" stroke="#D3E3FF" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="table-ticker__negative table-ticker__negative--active">По выбранным фильтрам ничего не
+                  найдено</div>
+              </div>
             </div>
+          </div>
+          <div class="pagination">
+            <ul>
+              <li class="prev">
+                <a href="#"><svg>
+                  <use xlink:href="img/main.svg#icon-caret-pagination"></use>
+                </svg></a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">...</a></li>
+              <li><a href="#">4</a></li>
+              <li class="active"><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">...</a></li>
+              <li><a href="#">12</a></li>
+              <li class="next">
+                <a href="#"><svg>
+                  <use xlink:href="img/main.svg#icon-caret-pagination"></use>
+                </svg></a>
+              </li>
+            </ul>
+            <span>Показано 90-105 из 210</span>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  @@include("_footer.html")
+@@include("_footer.html")
 </body>
 
 </html>
