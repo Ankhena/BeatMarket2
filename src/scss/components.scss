@@ -252,7 +252,6 @@ $base_transition: 0.4s ease-in-out;
 		}
 	}
 
-
 	// .blockSection__fill
 
 	&__fill {
@@ -387,8 +386,7 @@ $base_transition: 0.4s ease-in-out;
 
 		// .blockSection__dividendStatusIcon--TopHat
 
-    &--TopHat {
-    }
+		&--TopHat {}
 
 		// .blockSection__dividendStatusIcon--Trophy
 
@@ -1778,6 +1776,7 @@ $base_transition: 0.4s ease-in-out;
 			background-color: $color_white;
 		}
 	}
+
 }
 
 .contentSwitcher {
@@ -1908,7 +1907,7 @@ $base_transition: 0.4s ease-in-out;
 		top: 0;
 		z-index: 1;
 
-   	.stategyPromo-graph-values-btn {
+		.stategyPromo-graph-values-btn {
 			display: flex;
 
 			@media ($media_sm) {
@@ -2064,7 +2063,6 @@ $base_transition: 0.4s ease-in-out;
 			}
 		}
 	}
-
 }
 
 .btnShare {
@@ -2353,38 +2351,6 @@ $base_transition: 0.4s ease-in-out;
 	}
 
 	// .promoGraphArea__dividends 
-
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-
-    .stategyPromo-graph-info-content-choose {
-      height: 100%;
-    }
-
-    @media ($media_sm) {
-      width: 100%;
-    }
-
-    .stategyPromo-graph-info-content_settings {
-      margin-left: 24px;
-      background-color: #ffffff;
-      border: 1px solid #d3e3ff;
-      border-radius: 5.12px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      padding: 8px;
-
-      svg {
-        stroke: #8c9bea;
-        width: 24px;
-        height: 24px;
-      }
-    }
-  }
-
-  // .promoGraphArea__dividends
 
 	&__dividends {
 		display: flex;
@@ -3245,269 +3211,6 @@ $base_transition: 0.4s ease-in-out;
 	}
 }
 
-.dividendsTarget__info {
-  display: flex;
-
-  @media ($media_sm) {
-    flex-direction: column;
-  }
-}
-
-.dividendsTarget__mainInfo {
-  flex-basis: 30%;
-}
-
-.dividendsTarget__detailInfo {
-  flex-basis: 70%;
-  margin-left: 1.5rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background-color: $color_blue;
-  border-radius: 0.9rem;
-  padding: 1.5rem;
-  color: $color_white;
-
-  @media ($media_sm) {
-    margin: 1rem 0 0;
-    flex-direction: column;
-  }
-}
-
-.dividendsTarget__header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dividendsTarget__icon {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-
-.dividendsTarget__title {
-  font-size: 1.1rem;
-  margin-left: 0.8rem;
-}
-
-.dividendsTarget__content {
-  margin-top: 1.2rem;
-
-  .dividendsTarget__label {
-    background-color: $color_blue;
-    width: 100%;
-    color: $color_white;
-    font-size: 1.33rem;
-    text-align: center;
-
-    @media ($media_sm) {
-      padding: 0.8rem 1.75rem;
-    }
-  }
-}
-
-.dividendsTarget__subtitle {
-  font-weight: 500;
-}
-
-.dividendsTarget__label {
-  font-size: 1.55rem;
-  font-weight: 700;
-
-  display: inline-block;
-  padding: 0.8rem 1.75rem;
-  border-radius: 0.5rem;
-  margin-top: 0.9rem;
-
-  @media ($media_sm) {
-    padding: 0.2rem 1.75rem;
-  }
-
-  // .dividendsTarget__label--primary
-
-  &--primary {
-    color: $color_blue;
-    background-color: $color_white;
-
-    @media ($media_sm) {
-      padding: 0.8rem 1.75rem;
-    }
-  }
-}
-
-.dividendsTarget__btn {
-  padding: 1.2rem 0;
-  width: 100%;
-}
-
-.dividendsTarget__detailItem {
-  text-align: center;
-
-  @media ($media_sm) {
-    &:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
-  }
-}
-
-.dividendsTarget__labelInfo {
-  background: $color_block_bg;
-  border: 1px solid $color_block_border;
-  box-shadow: 0 18px 16px -13px rgba(62, 84, 216, 0.22);
-  border-radius: 0.4rem;
-  padding: 0.8rem 0.9rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-
-  @media ($media_sm) {
-    //margin-left: 4rem;
-  }
-
-  @media ($media_xs) {
-    //margin-left: 2rem;
-  }
-
-  svg {
-    min-width: 18px;
-    min-height: 18px;
-    width: 18px;
-    height: 18px;
-  }
-
-  span {
-    @media ($media_sm) {
-      display: none;
-    }
-  }
-
-  // .dividendsTarget__labelInfo--primary
-
-  &--primary {
-    color: $color_blue;
-  }
-
-  // .dividendsTarget__labelInfo--success
-
-  &--success {
-    background-color: $color_yellow;
-    color: $color_white;
-    border-color: $color_yellow;
-  }
-
-}
-
-.dividendsTarget__progress {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 4rem;
-
-  @media ($media_sm) {
-    margin-top: 2rem;
-    margin-bottom: 4.5rem;
-  }
-}
-
-.dividendsTarget__progressBar {
-  position: relative;
-  height: 8px;
-  width: 100%;
-  border-radius: 4px;
-  background-color: $color_block_border;
-  margin: 0 0.9rem;
-
-  @media ($media_sm) {
-    //position: absolute;
-    //width: 15px;
-    //height: inherit;
-    //margin: 0;
-    //border-radius: 8px;
-    //left: 4rem;
-  }
-}
-
-.dividendsTarget__progressBarTrack {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: var(--progressLength);
-  border-radius: 4px;
-  background-color: $color_blue;
-
-  @media ($media_sm) {
-    //border-radius: 8px;
-    //height: var(--progressLength);
-    //width: 15px;
-  }
-
-  &--success {
-    background-color: $color_green;
-    left: var(--progressStart);
-
-    @media ($media_sm) {
-      top: var(--progressStart);
-      left: 0;
-    }
-  }
-
-  &--danger {
-    background-color: $color_red;
-    left: var(--progressStart);
-
-    @media ($media_sm) {
-      left: 0;
-      top: var(--progressStart);
-    }
-  }
-}
-
-.dividendsTarget__progressBarDescription {
-  position: absolute;
-  left: var(--progressLength);
-  bottom: calc(100% + 12px);
-  transform: translateX(-50%);
-  width: fit-content;
-  padding: 0.8rem 0.9rem;
-  border: 1px solid #d3e3ff;
-  border-radius: 0.4rem;
-  font-size: 18px;
-  font-weight: 500;
-  background: #fcfdff;
-  box-shadow: 0 18px 16px -13px rgb(62 84 216 / 22%);
-  white-space: nowrap;
-
-  @media ($media_sm) {
-    left: 50%;
-    top: calc(100% + 12px);
-    bottom: initial;
-    font-size: 14px;
-  }
-}
-
-.dividendsTarget__progressBarDescriptionValue {
-  font-weight: 700;
-  color: var(--color);
-
-  @media ($media_sm) {
-    display: block;
-  }
-
-  &--positive {
-    --color: #{$color_green};
-    background: transparent;
-  }
-
-  &--negative {
-    --color: #{$color_red};
-    background: transparent;
-  }
-}
-
 .pageGetPortfolio {
 
 	// .pageGetPortfolio__container
@@ -4298,21 +4001,7 @@ $base_transition: 0.4s ease-in-out;
 	&__grid {
 		margin-top: 0.4rem;
 	}
-}
 
-.customTooltip__percent {
-  color: var(--color, #{$color_black_title});
-  font-weight: 600;
-
-  &--positive {
-    --color: #{$color_green};
-    background: transparent;
-  }
-
-  &--negative {
-    --color: #{$color_red};
-    background: transparent;
-  }
 }
 
 .baseList {
