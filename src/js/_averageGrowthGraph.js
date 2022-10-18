@@ -269,6 +269,7 @@ function initAverageGrowthGraph() {
                         </div>
                     </div>
                 `;
+<<<<<<< HEAD
             }
         },
         plotOptions: {
@@ -289,6 +290,28 @@ function initAverageGrowthGraph() {
             },
         ]
     });
+=======
+      }
+    },
+    plotOptions: {
+      column: {
+        pointPadding: 0.2,
+        borderWidth: 0,
+        pointWidth: baseWidth,
+        borderRadiusTopLeft: baseWidth / 2,
+        borderRadiusTopRight: baseWidth / 2,
+      }
+    },
+    series: [
+      {
+        name: "name",
+        states: {hover: {enabled: false}},
+        data: averageGrowthGraphData(),
+        color: "#199f27",
+      },
+    ]
+  });
+>>>>>>> parent of 1deb2bb (Responsive averageGrowthGraph)
 }
 
 initAverageGrowthGraph();
