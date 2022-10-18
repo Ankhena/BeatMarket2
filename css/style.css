@@ -5673,55 +5673,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   cursor: pointer;
 }
 
-.dividends .period-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.dividends .period-info h4 {
-  font-weight: 600;
-  color: #24252E;
-  margin-right: 0.9rem;
-}
-
-.dividends .period-info-date {
-  display: flex;
-  align-items: center;
-  padding: 0.2rem 0;
-  border-bottom: 1px dashed #687ae1;
-}
-
-.dividends .period-info-date span {
-  font-weight: 600;
-  color: #3E54D8;
-  line-height: 1.4;
-}
-
-.dividends .period-info-date svg {
-  width: 20px;
-  height: 20px;
-  margin-left: 0.5rem;
-}
-
-.dividends .period-info-filter {
-  display: inline-block;
-  background-color: #FCFDFF;
-  border: 1px solid #D3E3FF;
-  border-radius: 6px;
-  margin-left: 32px;
-  padding: 5px 16px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #3E54D8;
-  transition: background-color 0.3s;
-}
-
-.dividends .period-info-filter:hover {
-  background-color: #1B2D9D;
-  color: #fff;
-}
-
 .dividends .period-status {
   display: flex;
   align-items: center;
@@ -5763,6 +5714,55 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
+}
+
+.dividends .period-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dividends .period-info h4 {
+  font-weight: 600;
+  color: #24252E;
+  margin-right: 0.9rem;
+}
+
+.dividends .period-info-date {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-bottom: 1px dashed #687ae1;
+}
+
+.dividends .period-info-date span {
+  font-weight: 600;
+  color: #3E54D8;
+  line-height: 1.4;
+}
+
+.dividends .period-info-date svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
+.dividends .period-info-filter {
+  display: inline-block;
+  background-color: #fcfdff;
+  border: 1px solid #d3e3ff;
+  border-radius: 6px;
+  margin-left: 32px;
+  padding: 5px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3E54D8;
+  transition: background-color 0.3s;
+}
+
+.dividends .period-info-filter:hover {
+  background-color: #1B2D9D;
+  color: #fff;
 }
 
 .dividends .table-fixed-title h5 {
@@ -5821,7 +5821,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .dividends .table-fixed-item-content-second > span {
-  max-width: 75px;
+  max-width: 100%;
 }
 
 .dividends .table-fixed-item-price {
@@ -5903,6 +5903,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   align-items: center;
 }
 
+.dividends .table-content-item-info span:first-child {
+  font-weight: 600;
+}
+
 .dividends .table-content-item-info span.success {
   background-color: rgba(25, 159, 39, 0.5);
   color: #fff;
@@ -5921,10 +5925,21 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   justify-content: center;
 }
 
+.dividends .strategyCards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #D3E3FF;
+  border-radius: 1rem;
+  padding: 1.35rem;
+}
+
 .dividends .strategyCards-card {
   flex-basis: 49%;
   display: flex;
   flex-direction: column;
+  border: none;
 }
 
 .dividends .strategyCards-card-coef {
@@ -5937,11 +5952,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   padding: 0.8rem 1.6rem;
   border-radius: 0.5rem;
   font-size: 1.6rem;
-  content: "";
 }
 
 .dividends .strategyCards-card-cash {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -6101,6 +6116,70 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .dividends .strategyCards-card-content-info-item span {
   font-weight: 600;
   color: #24252E;
+}
+
+.dividends .strategyCards-card-coef {
+  display: flex;
+}
+
+.dividends .strategyCards-card-value {
+  --color: #fff;
+  color: var(--color);
+  background-color: #3E54D8;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.dividends .strategyCards-card-value--mini {
+  padding: 0;
+}
+
+.dividends .strategyCards-card-value--positive {
+  --color: #199F27;
+  background: transparent;
+}
+
+.dividends .strategyCards-card-value--negative {
+  --color: #ED6373;
+  background: transparent;
+}
+
+.dividends .blockSection__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dividends .dividends__switcher {
+  display: flex;
+  -moz-column-gap: 1.1111111111rem;
+       column-gap: 1.1111111111rem;
+}
+
+.dividends .dividends__switcher-btn {
+  position: relative;
+  padding: 0.8rem 0;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  font-size: 0.8888888889rem;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dividends .dividends__switcher-btn.active {
+  border-color: #3E54D8;
+  color: #3E54D8;
+}
+
+.dividends .dividends__switcher-btn:hover {
+  border-color: #3E54D8;
+  color: #3E54D8;
+}
+
+.dividends .dividendsTarget__detailInfo {
+  justify-content: space-around;
 }
 
 .statTable {
@@ -10257,6 +10336,12 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   border: 2px solid #3E54D8;
 }
 
+.promoGraphArea {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
 .promoGraphArea__content {
   display: flex;
   flex-direction: column;
@@ -10289,6 +10374,27 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .promoGraphArea__chooseDate .stategyPromo-graph-info-content-choose {
   height: 100%;
+}
+
+.promoGraphArea .stategyPromo-graph-info-content-choose {
+  height: 100%;
+}
+
+.promoGraphArea .stategyPromo-graph-info-content_settings {
+  margin-left: 24px;
+  background-color: #ffffff;
+  border: 1px solid #d3e3ff;
+  border-radius: 5.12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px 8px;
+}
+
+.promoGraphArea .stategyPromo-graph-info-content_settings svg {
+  stroke: #8c9bea;
+  width: 24px;
+  height: 24px;
 }
 
 .promoGraphArea__dividends {
@@ -10816,6 +10922,179 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   left: var(--progressStart);
 }
 
+.dividendsTarget__info {
+  display: flex;
+}
+
+.dividendsTarget__mainInfo {
+  flex-basis: 30%;
+}
+
+.dividendsTarget__detailInfo {
+  flex-basis: 70%;
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3E54D8;
+  border-radius: 0.9rem;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.dividendsTarget__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dividendsTarget__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.dividendsTarget__title {
+  font-size: 1.1rem;
+  margin-left: 0.8rem;
+}
+
+.dividendsTarget__content {
+  margin-top: 1.2rem;
+}
+
+.dividendsTarget__content .dividendsTarget__label {
+  background-color: #3E54D8;
+  width: 100%;
+  color: #fff;
+  font-size: 1.33rem;
+  text-align: center;
+}
+
+.dividendsTarget__subtitle {
+  font-weight: 500;
+}
+
+.dividendsTarget__label {
+  font-size: 1.55rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  border-radius: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.dividendsTarget__label--primary {
+  color: #3E54D8;
+  background-color: #fff;
+}
+
+.dividendsTarget__btn {
+  padding: 1.2rem 0;
+  width: 100%;
+}
+
+.dividendsTarget__detailItem {
+  text-align: center;
+}
+
+.dividendsTarget__labelInfo {
+  background: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  box-shadow: 0 18px 16px -13px rgba(62, 84, 216, 0.22);
+  border-radius: 0.4rem;
+  padding: 0.8rem 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.dividendsTarget__labelInfo svg {
+  min-width: 18px;
+  min-height: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.dividendsTarget__labelInfo--primary {
+  color: #3E54D8;
+}
+
+.dividendsTarget__labelInfo--success {
+  background-color: #F3B63F;
+  color: #fff;
+  border-color: #F3B63F;
+}
+
+.dividendsTarget__progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.dividendsTarget__progressBar {
+  position: relative;
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #D3E3FF;
+  margin: 0 0.9rem;
+}
+
+.dividendsTarget__progressBarTrack {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--progressLength);
+  border-radius: 4px;
+  background-color: #3E54D8;
+}
+
+.dividendsTarget__progressBarTrack--success {
+  background-color: #199F27;
+  left: var(--progressStart);
+}
+
+.dividendsTarget__progressBarTrack--danger {
+  background-color: #ED6373;
+  left: var(--progressStart);
+}
+
+.dividendsTarget__progressBarDescription {
+  position: absolute;
+  left: var(--progressLength);
+  bottom: calc(100% + 12px);
+  transform: translateX(-50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #d3e3ff;
+  border-radius: 0.4rem;
+  font-size: 18px;
+  font-weight: 500;
+  background: #fcfdff;
+  box-shadow: 0 18px 16px -13px rgba(62, 84, 216, 0.22);
+  white-space: nowrap;
+}
+
+.dividendsTarget__progressBarDescriptionValue {
+  font-weight: 700;
+  color: var(--color);
+}
+
+.dividendsTarget__progressBarDescriptionValue--positive {
+  --color: #199F27;
+  background: transparent;
+}
+
+.dividendsTarget__progressBarDescriptionValue--negative {
+  --color: #ED6373;
+  background: transparent;
+}
+
 .pageGetPortfolio__container {
   position: relative;
   z-index: 1;
@@ -11332,6 +11611,21 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .customTooltip__grid {
   margin-top: 0.4rem;
+}
+
+.customTooltip__percent {
+  color: var(--color, #24252E);
+  font-weight: 600;
+}
+
+.customTooltip__percent--positive {
+  --color: #199F27;
+  background: transparent;
+}
+
+.customTooltip__percent--negative {
+  --color: #ED6373;
+  background: transparent;
 }
 
 .baseList li {
@@ -16979,6 +17273,23 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 1rem;
   }
 
+  .dividends .period-info {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .dividends .strategyCards {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+  }
+
+  .dividends .strategyCards-card {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .dividends .strategyCards-card-content {
     flex-wrap: wrap;
   }
@@ -16994,6 +17305,27 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .dividends .strategyCards-card-content-info-item:not(:last-child) {
     margin-bottom: 1rem;
+  }
+
+  .dividends .strategyCards-card-coef {
+    margin-bottom: 0;
+  }
+
+  .dividends .blockSection__header .dividends__switcher {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dividends .blockSection__header .dividends__switcher::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background: #D3E3FF;
   }
 
   .statTable--scroll .statTable__item--withIcon {
@@ -17705,6 +18037,10 @@ body.viewProfile .header-controls-links-link.auth span {
     width: 100%;
   }
 
+  .promoGraphArea {
+    width: 100%;
+  }
+
   .promoGraphArea__dividends {
     justify-content: flex-start;
   }
@@ -17802,6 +18138,61 @@ body.viewProfile .header-controls-links-link.auth span {
   .dividendsTarget__progressBarTrack--danger {
     left: 0;
     top: var(--progressStart);
+  }
+
+  .dividendsTarget__info {
+    flex-direction: column;
+  }
+
+  .dividendsTarget__detailInfo {
+    margin: 1rem 0 0;
+    flex-direction: column;
+  }
+
+  .dividendsTarget__content .dividendsTarget__label {
+    padding: 0.8rem 1.75rem;
+  }
+
+  .dividendsTarget__label {
+    padding: 0.2rem 1.75rem;
+  }
+
+  .dividendsTarget__label--primary {
+    padding: 0.8rem 1.75rem;
+  }
+
+  .dividendsTarget__detailItem:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .dividendsTarget__labelInfo span {
+    display: none;
+  }
+
+  .dividendsTarget__progress {
+    margin-top: 2rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .dividendsTarget__progressBarTrack--success {
+    top: var(--progressStart);
+    left: 0;
+  }
+
+  .dividendsTarget__progressBarTrack--danger {
+    left: 0;
+    top: var(--progressStart);
+  }
+
+  .dividendsTarget__progressBarDescription {
+    left: 50%;
+    top: calc(100% + 12px);
+    bottom: initial;
+    font-size: 14px;
+  }
+
+  .dividendsTarget__progressBarDescriptionValue {
+    display: block;
   }
 
   .pageGetPortfolio__info {
@@ -18527,6 +18918,11 @@ body.viewProfile .header-controls-links-link.auth span {
   .sp {
     margin-left: 0;
     margin-top: 16px;
+  }
+
+  .dividends .strategyCards {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
   }
 
   .statTable__item:nth-child(1) {

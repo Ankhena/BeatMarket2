@@ -1544,188 +1544,262 @@ initTicketSelect();
 
   function initMonthCashGraph() {
 
-    let colorPaybackDividends = "#47B252";
-    let colorOverallDividends = "#E6EEFF";
-    let widthGraphPoint = 80;
-    let labelsStyle = {
-        fontFamily: "Montserrat",
-        fontWeight: "500",
-        fontSize: '0.9rem'
-    }
+  let colorPaybackDividends = "#47b252";
+  let colorOverallDividends = "#e6eeff";
+  let widthGraphPoint = 80;
+  let labelsStyle = {
+    fontFamily: "Montserrat",
+    fontWeight: "500",
+    fontSize: '0.9rem'
+  }
 
-    if (document.body.offsetWidth < 1500) {
-        widthGraphPoint = 65;
-    }
+  if (document.body.offsetWidth < 1500) {
+    widthGraphPoint = 65;
+  }
 
-    // общее кол-во дивидендов
-    let dataPrev = [
-        ['Янв', 19.12, "Январь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Фев', 24.12, "Февраль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Мар', 38.12, "Март", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Апр', 11.12, "Апрель", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Май', 24.12, "Май", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Июн', 38.12, "Июнь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Июл', 29.12, "Июль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Авг', 46.12, "Август", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Сен', 24.12, "Сентябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Окт', 38.12, "Октябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Ноя', 29.12, "Ноябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Дек', 46.12, "Декабрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]]
-    ];
+  // общее кол-во дивидендов
+  let dataPrev = [
+    ['Янв', 19.12, "Январь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Фев', 24.12, "Февраль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Мар', 38.12, "Март", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Апр', 11.12, "Апрель", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Май', 24.12, "Май", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Июн', 38.12, "Июнь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Июл', 29.12, "Июль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Авг', 46.12, "Август", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Сен', 24.12, "Сентябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Окт', 38.12, "Октябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Ноя', 29.12, "Ноябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Дек', 46.12, "Декабрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]]
+  ];
 
-    // выплаченные дивиденды
-    let data = [
-        ['Янв', 15.12, "Январь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Фев', 19.12, "Февраль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Мар', 26.12, "Март", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Апр', 17.12, "Апрель", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Май', 19.12, "Май", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Июн', 0, "Июнь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Июл', 27.12, "Июль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Авг', 46.12, "Август", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Сен', 24.12, "Сентябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Окт', 38.12, "Октябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Ноя', 29.12, "Ноябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
-        ['Дек', 46.12, "Декабрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]]
-    ];
+  // выплаченные дивиденды
+  let data = [
+    ['Янв', 15.12, "Январь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Фев', 19.12, "Февраль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Мар', 26.12, "Март", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Апр', 17.12, "Апрель", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Май', 19.12, "Май", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Июн', 0, "Июнь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+    ['Июл', 27.12, "Июль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Авг', 46.12, "Август", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Сен', 24.12, "Сентябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Окт', 38.12, "Октябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Ноя', 29.12, "Ноябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]],
+    ['Дек', 46.12, "Декабрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {
+      name: "TSLA",
+      payment: 32.44
+    }]]
+  ];
 
-    function generateDataObject(yearsArrayData, costArrayData, className) {
-        let innerHTML = ``;
-        yearsArrayData.forEach((data, i) => {
-            innerHTML += `
+  function generateDataObject(yearsArrayData, costArrayData, className) {
+    let innerHTML = ``;
+    yearsArrayData.forEach((data, i) => {
+      innerHTML += `
             <div class="customTooltip__item">
                 <span class="customTooltip__key">${yearsArrayData[i]}</span>
-                <span class="customTooltip__value ${className}">${costArrayData[i]} $</span>
+                <span class="customTooltip__value ${className}">${costArrayData[i]} USD</span>
             </div>`
-        });
-        return innerHTML;
-    }
+    });
+    return innerHTML;
+  }
 
-    function getData(data) {
-        return data.map(function (country, i) {
-            return {
-                name: country[0],
-                y: country[1],
-                color: colorPaybackDividends
-            };
-        });
-    }
+  function getData(data) {
+    return data.map(function (country, i) {
+      return {
+        name: country[0],
+        y: country[1],
+        color: colorPaybackDividends
+      };
+    });
+  }
 
-    let elem = document.querySelector("#monthCashGraph");
-    if (elem !== null) {
-        var chart = Highcharts.chart('monthCashGraph', {
-            chart: {
-                type: 'column',
-                style: { "fontFamily": "" },
-            },
-            credits: {
-                enabled: false
-            },
-            title: {
-                text: '',
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                // enabled: false
-            },
-            xAxis: {
-                type: 'category',
-                labels: {
-                    useHTML: true,
-                    animate: true,
-                    style: {
-                        ...labelsStyle,
-                        color: "#606371",
-                    }
-                }
-            },
-            yAxis: [{
-                labels: {
-                    enabled: false,
-                },
-                title: {
-                    text: ''
-                },
-                showFirstLabel: false,
-                gridLineWidth: 0,
-            }],
-            tooltip: {
-                crosshairs: true,
-                shared: true,
-                useHTML: true,
-                formatter: function() {
-                    let index = this.points[0].point.index;
-                    let yearsArrayData = data[index][3].map(item => item.name);
-                    let costArrayData = data[index][3].map(item => item.payment);
+  let elem = document.querySelector("#monthCashGraph");
+  if (elem !== null) {
+    var chart = Highcharts.chart('monthCashGraph', {
+      chart: {
+        type: 'column',
+        style: {"fontFamily": ""},
+      },
+      credits: {
+        enabled: false
+      },
+      title: {
+        text: '',
+      },
+      legend: {
+        enabled: false
+      },
+      tooltip: {
+        // enabled: false
+      },
+      xAxis: {
+        type: 'category',
+        labels: {
+          useHTML: true,
+          animate: true,
+          style: {
+            ...labelsStyle,
+            color: "#606371",
+          }
+        }
+      },
+      yAxis: [{
+        labels: {
+          enabled: false,
+        },
+        title: {
+          text: ''
+        },
+        showFirstLabel: false,
+        gridLineWidth: 0,
+      }],
+      tooltip: {
+        crosshairs: true,
+        shared: true,
+        useHTML: true,
+        formatter: function () {
+          let index = this.points[0].point.index;
+          let yearsArrayData = data[index][3].map(item => item.name);
+          let costArrayData = data[index][3].map(item => item.payment);
 
-                    let yearsArrayDataOld = dataPrev[index][3].map(item => item.name);
-                    let costArrayDataOld = dataPrev[index][3].map(item => item.payment);
-    
-                    return `
+          let yearsArrayDataOld = dataPrev[index][3].map(item => item.name);
+          let costArrayDataOld = dataPrev[index][3].map(item => item.payment);
+
+          return `
                         <div class="customTooltip">
-                            <h5 class="customTooltip__title">Дивиденды, ${data[index][2]} <span class="customTooltip__label">82.12 $</span></h5>
+                         <!--   <h5 class="customTooltip__title">Дивиденды, ${data[index][2]} <span class="customTooltip__label">82.12 $</span></h5> -->
                             <div class="customTooltip__grid">
-                                <h6 class="customTooltip__subtitle">Выплачено:</h6>
+                              <div>
+                                <h6 class="customTooltip__subtitle">Подтверждено:</h6>
                                 ${generateDataObject(yearsArrayData, costArrayData, "success")}
-                                <h6 class="customTooltip__subtitle">Ожидается:</h6>
-                                ${generateDataObject(yearsArrayDataOld, costArrayDataOld, "secondary")}
+                              </div>
+                              <div>
+                                  <h6 class="customTooltip__subtitle">Прогноз:</h6>
+                                    ${generateDataObject(yearsArrayDataOld, costArrayDataOld, "secondary")}
+                              </div>
                             </div>
                         </div>
                     `;
-                }
+        }
+      },
+      plotOptions: {
+        series: {
+          grouping: false,
+          borderWidth: 0,
+        },
+        column: {
+          borderWidth: 1,
+          pointWidth: widthGraphPoint,
+          //enableMouseTracking: false,
+          borderRadiusTopLeft: widthGraphPoint / 15,
+          borderRadiusTopRight: widthGraphPoint / 15,
+        }
+      },
+      series: [
+        {
+          name: 'Ож.дивиденды',
+          states: {hover: {enabled: false}},
+          color: colorOverallDividends, // ожидаемые дивиденды
+          borderColor: "#d3e3ff",
+          linkedTo: 'main',
+          data: dataPrev.slice(),
+        },
+        {
+          name: 'Выпл. дивиденды',
+          states: {hover: {enabled: false}},
+          borderColor: colorPaybackDividends,
+          id: 'main',
+          dataLabels: [{
+            enabled: true,
+            inside: true,
+            useHTML: true,
+            verticalAlign: "bottom",
+            style: {
+              ...labelsStyle,
+              color: "#24252e",
             },
-            plotOptions: {
-                series: {
-                    grouping: false,
-                    borderWidth: 0,
-                },
-                column: {
-                    borderWidth: 1,
-                    pointWidth: widthGraphPoint,
-                    //enableMouseTracking: false,
-                    borderRadiusTopLeft: widthGraphPoint / 15,
-                    borderRadiusTopRight: widthGraphPoint / 15,
-                }
-            },
-            series: [
-            {
-                name: 'Ож.дивиденды',
-                states: { hover: { enabled: false } },
-                color: colorOverallDividends, // ожидаемые дивиденды
-                borderColor: "#D3E3FF",
-                linkedTo: 'main',
-                data: dataPrev.slice(),
-            }, 
-            {
-                name: 'Выпл. дивиденды',
-                states: { hover: { enabled: false } },
-                borderColor: colorPaybackDividends,
-                id: 'main',
-                dataLabels: [{
-                    enabled: true,
-                    inside: true,
-                    useHTML: true,
-                    verticalAlign: "bottom",
-                    style: {
-                        ...labelsStyle,
-                        color: "#24252E",
-                    },
-                    formatter: function(e) {
-                        return dataPrev[this.x][1] + "$";
-                    }
-                }],
-                data: getData(data).slice(),
-            }],
-            exporting: {
-                allowHTML: true
+            formatter: function (e) {
+              return dataPrev[this.x][1] + "$";
             }
-        });
-    }
+          }],
+          data: getData(data).slice(),
+        }],
+      exporting: {
+        allowHTML: true
+      }
+    });
+  }
 }
 
 initMonthCashGraph()
+
   const cryptAnalyticsGraphData = [{
     name: 'BTC',
     y: 23.03,
@@ -1838,7 +1912,7 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
 }
   function initDemoGraph() {
 
-    const graphs = ["demoGraph-1", "demoGraph-2", "demoGraph-3", "demoGraph-4", "demoGraph-5", "demoGraph-6"];
+    const graphs = ["demoGraph-1", "demoGraph-2", "demoGraph-3", "demoGraph-5", "demoGraph-6"];
 
     const myRenderGraphCategories = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
     const myRenderShowYLine = true; // если нужен показ верт. линий в графе, ставим true
@@ -1857,7 +1931,7 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
                 },
                 legend: {
                     enabled: false,
-    
+
                     useHTML: true,
                     align: "left",
                     verticalAlign: "top",
@@ -1909,7 +1983,7 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
                     }
                 },
                 series: [
-            
+
                     {
                         name: 'VIAC',
                         marker: {
@@ -1918,25 +1992,139 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
                         data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
                         color: "#3E54D8"
                     }
-            
+
                 ]
             });
-        
+
             if (myRenderShowYLine) {
                 let renderChartWidth = +document.querySelector(`#${item} .highcharts-plot-background`).getAttributeNode("width").value;
                 let renderChartOffsetX = (renderChartWidth / myRenderGraphCategories.length) / 2;
-            
+
                 document.querySelectorAll(`#${item} .highcharts-xaxis-grid .highcharts-grid-line`).forEach(item => {
                     item.style.transform = 'translateX(' + renderChartOffsetX + 'px)';
                 });
             }
-            
+
         }
     });
-    
+
 }
 
 initDemoGraph();
+
+  function initDemoGraph() {
+
+  const graphs = ["demoGraph-4"];
+
+  const myRenderGraphCategories = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+  const myRenderShowYLine = true; // если нужен показ верт. линий в графе, ставим true
+
+  graphs.forEach(item => {
+    let myRenderGraph = document.querySelector(`#${item}`);
+
+    if (myRenderGraph !== null) {
+      Highcharts.chart(item, {
+        chart: {
+          type: "spline",
+          style: { "fontFamily": "" },
+        },
+        credits: {
+          enabled: false
+        },
+        legend: {
+          enabled: false,
+
+          useHTML: true,
+          align: "left",
+          verticalAlign: "top",
+          itemStyle: {"fontSize": "0.85rem", "fontWeight": "400", "paddingLeft": "0.5rem"},
+          x: -8,
+          margin: 35,
+          symbolWidth: 0,
+        },
+        title: {
+          text: ''
+        },
+        xAxis: {
+          categories: myRenderGraphCategories,
+          labels: {
+            style: {
+              fontSize: "16px",
+              color: "#373943"
+            }
+          },
+          gridLineWidth: (myRenderShowYLine ? 1 : 0)
+        },
+        yAxis: {
+          title: {
+            text: ''
+          },
+          labels: {
+            formatter: function () {
+              return (this.value / 1000) + 'к';
+            },
+            style: {
+              fontSize: "16px",
+              color: "#373943"
+            }
+          },
+        },
+        tooltip: {
+          crosshairs: true,
+          shared: true,
+          useHTML: true,
+          valueSuffix: '$'
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              radius: 4,
+              lineColor: 'transparent',
+              lineWidth: 1
+            }
+          }
+        },
+        series: [
+
+          {
+            name: 'VIAC',
+            marker: {
+              symbol: 'circle'
+            },
+            data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
+            color: "#3E54D8",
+            dataLabels: [{
+              enabled: true,
+              inside: true,
+              useHTML: true,
+              verticalAlign: "bottom",
+              style: {
+
+                color: "#24252e",
+              },
+              format:'{y:0.2f} USD'
+            }]
+          }
+
+        ]
+      });
+
+      if (myRenderShowYLine) {
+        let renderChartWidth = +document.querySelector(`#${item} .highcharts-plot-background`).getAttributeNode("width").value;
+        let renderChartOffsetX = (renderChartWidth / myRenderGraphCategories.length) / 2;
+
+        document.querySelectorAll(`#${item} .highcharts-xaxis-grid .highcharts-grid-line`).forEach(item => {
+          item.style.transform = 'translateX(' + renderChartOffsetX + 'px)';
+        });
+      }
+
+    }
+  });
+
+}
+
+initDemoGraph();
+
   function initMainFactorsGraph() {
     let baseWidth = 22;
 
@@ -2591,299 +2779,303 @@ function initSlider() {
 
 initSlider();
   function initAverageGrowthGraph() {
-    let baseWidth = 22;
-    let chartDataLabels = ["Янв.", "Фев.", "Март", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Нояб.", "Дек."];
-    let chartDataNames = ["TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER"];
-    let chartDataNamesFull = ["Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell"];
-    let chartDataYears = [2021, 2020, 2019];
-    let chartData = [
-        [
-            {
-                y: 49.9,
-                cost: 1.12
-            },
-            {
-                y: 71.5,
-                cost: 1.12
-            },
-            {
-                y: 106.4,
-                cost: 1.12
-            },
-            {
-                y: 49.9,
-                cost: 1.12
-            },
-            {
-                y: 71.5,
-                cost: 1.12
-            },
-            {
-                y: 106.4,
-                cost: 1.12
-            },
-            {
-                y: 49.9,
-                cost: 1.12
-            },
-            {
-                y: 71.5,
-                cost: 1.12
-            },
-            {
-                y: 106.4,
-                cost: 1.12
-            },
-            {
-                y: 49.9,
-                cost: 1.12
-            },
-            {
-                y: 71.5,
-                cost: 1.12
-            },
-            {
-                y: 106.4,
-                cost: 1.12
-            },
-        ],
-        [
-            {
-                y: 29.9,
-                cost: 1.12
-            },
-            {
-                y: 41.5,
-                cost: 7.12
-            },
-            {
-                y: 76.4,
-                cost: 3.12
-            },
-            {
-                y: 29.9,
-                cost: 1.12
-            },
-            {
-                y: 41.5,
-                cost: 7.12
-            },
-            {
-                y: 76.4,
-                cost: 3.12
-            },
-            {
-                y: 29.9,
-                cost: 1.12
-            },
-            {
-                y: 41.5,
-                cost: 7.12
-            },
-            {
-                y: 76.4,
-                cost: 3.12
-            },
-            {
-                y: 29.9,
-                cost: 1.12
-            },
-            {
-                y: 41.5,
-                cost: 7.12
-            },
-            {
-                y: 76.4,
-                cost: 3.12
-            },
-        ],
-        [
-            {
-                y: 64.9,
-                cost: 8.12
-            },
-            {
-                y: 14.5,
-                cost: 12.12
-            },
-            {
-                y: 56.4,
-                cost: 2.12
-            },
-            {
-                y: 64.9,
-                cost: 8.12
-            },
-            {
-                y: 14.5,
-                cost: 12.12
-            },
-            {
-                y: 56.4,
-                cost: 2.12
-            },
-            {
-                y: 64.9,
-                cost: 8.12
-            },
-            {
-                y: 14.5,
-                cost: 12.12
-            },
-            {
-                y: 56.4,
-                cost: 2.12
-            },
-            {
-                y: 64.9,
-                cost: 8.12
-            },
-            {
-                y: 14.5,
-                cost: 12.12
-            },
-            {
-                y: 56.4,
-                cost: 2.12
-            },
-        ]
-    ];
+  let baseWidth = 22;
+  let chartDataLabels = ["TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER"];
+  let chartDataNames = ["TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER", "TSLA", "FBA", "DPD", "OQER"];
+  let chartDataNamesFull = ["Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell", "Opel autosell"];
+  let chartDataYears = [2021, 2020, 2019];
+  let chartData = [
+    [
+      {
+        y: 49.9,
+        cost: 1.12
+      },
+      {
+        y: 71.5,
+        cost: 1.12
+      },
+      {
+        y: 106.4,
+        cost: 1.12
+      },
+      {
+        y: 49.9,
+        cost: 1.12
+      },
+      {
+        y: 71.5,
+        cost: 1.12
+      },
+      {
+        y: 106.4,
+        cost: 1.12
+      },
+      {
+        y: 49.9,
+        cost: 1.12
+      },
+      {
+        y: 71.5,
+        cost: 1.12
+      },
+      {
+        y: 106.4,
+        cost: 1.12
+      },
+      {
+        y: 49.9,
+        cost: 1.12
+      },
+      {
+        y: 71.5,
+        cost: 1.12
+      },
+      {
+        y: 106.4,
+        cost: 1.12
+      },
+    ],
+    [
+      {
+        y: 29.9,
+        cost: 1.12
+      },
+      {
+        y: 41.5,
+        cost: 7.12
+      },
+      {
+        y: 76.4,
+        cost: 3.12
+      },
+      {
+        y: 29.9,
+        cost: 1.12
+      },
+      {
+        y: 41.5,
+        cost: 7.12
+      },
+      {
+        y: 76.4,
+        cost: 3.12
+      },
+      {
+        y: 29.9,
+        cost: 1.12
+      },
+      {
+        y: 41.5,
+        cost: 7.12
+      },
+      {
+        y: 76.4,
+        cost: 3.12
+      },
+      {
+        y: 29.9,
+        cost: 1.12
+      },
+      {
+        y: 41.5,
+        cost: 7.12
+      },
+      {
+        y: 76.4,
+        cost: 3.12
+      },
+    ],
+    [
+      {
+        y: 64.9,
+        cost: 8.12
+      },
+      {
+        y: 14.5,
+        cost: 12.12
+      },
+      {
+        y: 56.4,
+        cost: 2.12
+      },
+      {
+        y: 64.9,
+        cost: 8.12
+      },
+      {
+        y: 14.5,
+        cost: 12.12
+      },
+      {
+        y: 56.4,
+        cost: 2.12
+      },
+      {
+        y: 64.9,
+        cost: 8.12
+      },
+      {
+        y: 14.5,
+        cost: 12.12
+      },
+      {
+        y: 56.4,
+        cost: 2.12
+      },
+      {
+        y: 64.9,
+        cost: 8.12
+      },
+      {
+        y: 14.5,
+        cost: 12.12
+      },
+      {
+        y: 56.4,
+        cost: 2.12
+      },
+    ]
+  ];
 
-    function generateDataObject(yearsArrayData, costArrayData) {
-        let innerHTML = ``;
-        yearsArrayData.forEach((data, i) => {
-            innerHTML += `
+  function generateDataObject(yearsArrayData, costArrayData) {
+    let innerHTML = ``;
+    yearsArrayData.forEach((data, i) => {
+      innerHTML += `
             <div class="customTooltip__item">
                 <span class="customTooltip__key">${yearsArrayData[i]}</span>
-                <span class="customTooltip__value">${costArrayData[i]} $</span>
+                <span class="customTooltip__value">${costArrayData[i]} USD</span>
             </div>`
-        });
-        return innerHTML;
+    });
+    return innerHTML;
+  }
+
+  function average(arr) {
+    if (arr.length === 0)
+      return 0;
+
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
     }
+    return sum / arr.length;
+  }
 
-    function average(arr) {
-        if(arr.length === 0)
-            return 0;
-    
-        let sum = 0;
-    
-        for(let i = 0; i < arr.length; i++) {
-            sum += arr[i];
-        } 
-        return sum / arr.length;
-    }
+  function averageGrowthGraphData() {
+    let needArray = [];
+    let yData = chartData.map(data => data.map(elem => elem.y));
+    //console.log(yData);
 
-    function averageGrowthGraphData() {
-        let needArray = [];
-        let yData = chartData.map(data => data.map(elem => elem.y));
-        //console.log(yData);
+    yData[0].forEach((elem, index) => {
+      needArray.push(average([yData[0][index], yData[1][index], yData[2][index]]));
+    });
 
-        yData[0].forEach((elem, index) => {
-            needArray.push(average([yData[0][index], yData[1][index], yData[2][index]]));
-        });
-        
-        return needArray;
-    }
+    return needArray;
+  }
 
-    if (document.body.offsetWidth < 1500) {
-        baseWidth = 10;
-    }
+  if (document.body.offsetWidth < 1500) {
+    baseWidth = 10;
+  }
 
-    if (document.body.offsetWidth < 576) {
-        baseWidth = 22;
-    }
+  if (document.body.offsetWidth < 576) {
+    baseWidth = 22;
+  }
 
-    if (document.querySelector("#averageGrowthGraph") === null) {
-        return false;
-    }
+  if (document.querySelector("#averageGrowthGraph") === null) {
+    return false;
+  }
 
-    Highcharts.chart('averageGrowthGraph', {
-        chart: {
-            type: 'column',
-            style: { "fontFamily": "" },
+  Highcharts.chart('averageGrowthGraph', {
+    chart: {
+      type: 'column',
+      style: {"fontFamily": ""},
+    },
+    credits: {
+      enabled: false
+    },
+    legend: {
+      enabled: false
+    },
+    title: {
+      text: ''
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: chartDataLabels,
+      crosshair: true,
+      labels: {
+        enabled: true,
+        type: 'category',
+        style: {
+          fontSize: "16px",
+          color: "#373943"
+        }
+      },
+      visible: true
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: ''
+      },
+      labels: {
+        formatter: function () {
+          return (this.value) + '%';
         },
-        credits: {
-            enabled: false
-        },
-        legend: {
-            enabled: false
-        },
-        title: {
-            text: ''
-        },
-        subtitle: {
-            text: ''
-        },
-        xAxis: {
-            categories: chartDataLabels,
-            crosshair: true,
-            labels: {
-                enabled: true,
-                type: 'category',
-                style: {
-                    fontSize: "16px",
-                    color: "#373943"
-                }
-            },
-            visible: true
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: ''
-            },
-            labels: {
-                formatter: function () {
-                    return (this.value) + '%';
-                },
-                style: {
-                    fontSize: "0.9rem",
-                    color: "#373943"
-                }
-            },
-        },
-        tooltip: {
-            crosshairs: true,
-            shared: true,
-            useHTML: true,
-            formatter: function() {
-                let index = this.points[0].point.index;
-                //let costArrayData = chartData.map(item => item.point.cost);
+        style: {
+          fontSize: "0.9rem",
+          color: "#373943"
+        }
+      },
+    },
+    tooltip: {
+      crosshairs: true,
+      shared: true,
+      useHTML: true,
+      formatter: function () {
+        let index = this.points[0].point.index;
+        //let costArrayData = chartData.map(item => item.point.cost);
 
-                let costArrayData = chartData.map(item => item.filter((elem, i) => i === index).map(elem => elem.cost)[0]);
-                let yearsArrayData = chartDataYears;
+        let costArrayData = chartData.map(item => item.filter((elem, i) => i === index).map(elem => elem.cost)[0]);
+        let yearsArrayData = chartDataYears;
 
-                return `
+        return `
                     <div class="customTooltip">
                         <h5 class="customTooltip__title">${chartDataNames[index]} <span>${chartDataNamesFull[index]}</span></h5>
-                        <div class="customTooltip__grid">
+                  <!--      <div class="customTooltip__grid">
                             ${generateDataObject(yearsArrayData, costArrayData)}
+                        </div> -->
+                        <div class="customTooltip__percent customTooltip__percent--positive">
+                            ${chartData[0][index].y} %
                         </div>
                     </div>
                 `;
-            }
-        },
-        plotOptions: {
-            column: {
-                pointPadding: 0.2,
-                borderWidth: 0,
-                pointWidth: baseWidth,
-                borderRadiusTopLeft: baseWidth / 2,
-                borderRadiusTopRight: baseWidth / 2,
-            }
-        },
-        series: [
-            {
-                name: "name",
-                states: { hover: { enabled: false } },
-                data: averageGrowthGraphData(),
-                color: "#3E54D8",
-            },
-        ]
-    });
+      }
+    },
+    plotOptions: {
+      column: {
+        pointPadding: 0.2,
+        borderWidth: 0,
+        pointWidth: baseWidth,
+        borderRadiusTopLeft: baseWidth / 2,
+        borderRadiusTopRight: baseWidth / 2,
+      }
+    },
+    series: [
+      {
+        name: "name",
+        states: {hover: {enabled: false}},
+        data: averageGrowthGraphData(),
+        color: "#199f27",
+      },
+    ]
+  });
 }
 
 initAverageGrowthGraph();
+
   function initGrowthOfDividendsGraph() {
     let baseWidth = 14;
     let chartDataLabels = ["Янв.", "Фев.", "Март", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Нояб.", "Дек."];
@@ -3255,6 +3447,7 @@ initGrowthOfDividendsGraph();
 }
 
 initPortfolioProfitGraph();
+
   if (document.querySelector(".analyticScanner")) {
   function filterScanner() {
     const companies = [
@@ -3724,7 +3917,7 @@ initPortfolioProfitGraph();
     const sortedPSBtn = document.querySelector("#sorted-PS")
     const sortedContinentBtn = document.querySelector("#sorted-continent")
     const sortedIncomeBtn = document.querySelector("#sorted-income")
-    
+
 
     inputCounts.forEach(inputCount => {
       inputCount.addEventListener("input", (e) => {
@@ -4115,21 +4308,21 @@ initPortfolioProfitGraph();
             e.target.value = e.target.value.replace(pattern, '')
 
           })
-          
+
           $(`#${elemMain} #min`).on("click", (e) => {
             e.target.focus()
             let value = e.target.value
             e.target.value = ""
             e.target.value = value
           })
-          
+
           $(`#${elemMain} #max`).on("click", (e) => {
             e.target.focus()
             let value = e.target.value
             e.target.value = ""
             e.target.value = value
           })
-          
+
           $(`#${elemMain} #max`).on("input", (e) => {
             let pattern = /[^\d.]/
 
