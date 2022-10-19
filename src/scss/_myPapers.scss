@@ -126,6 +126,14 @@
 			}
 		}
 
+		&--only-table {
+			display: none;
+
+			@media(max-width: 1150px) {
+				display: block;
+			}
+		}
+
 		&--header {
 			background-color: $color_table_header;
 			border-top: 1px solid $color_border_dop;
@@ -343,18 +351,21 @@
 		}
 
 		&--fixed {
-			@media(min-width: 1150px) {
+			@media(min-width: 1151px) {
 				position: absolute;
 				background: #fff;
-				z-index: 9999;
+				z-index: 999;
 				box-shadow: 9px 7px 8px rgb(62 84 216 / 10%);
-				transform: translate(-27px, -1.7px);
 				padding-left: 1rem;
+			}
+
+			@media(max-width: 1150px) {
+				display: none;
 			}
 		}
 
 		&--onlyDesktop {
-			@media(max-width: 1149px) {
+			@media(max-width: 1150px) {
 				display: none;
 			}
 		}
