@@ -5,7 +5,7 @@
 	// .statTable--scroll
 
 	&--scroll {
-		@media ($media_full) {
+		@media (min-width: 1052px) {
 			overflow-x: auto;
 			overflow-y: hidden;
 
@@ -351,7 +351,12 @@
 				transform: translate(-27px, -1.7px);
 				padding-left: 1rem;
 			}
+		}
 
+		&--onlyDesktop {
+			@media(max-width: 1149px) {
+				display: none;
+			}
 		}
 
 		&--success {
