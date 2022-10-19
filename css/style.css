@@ -15291,7 +15291,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1052px) {
   .statTable--scroll {
     overflow-x: auto;
     overflow-y: hidden;
@@ -15339,7 +15339,9 @@ body.viewProfile .header-controls-links-link.auth span {
     min-width: 120px;
     max-width: 120px;
   }
+}
 
+@media (min-width: 1150px) {
   .statTable__item--fixed {
     position: absolute;
     background: #fff;
@@ -16349,6 +16351,12 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .adv-portfolio-settings__table .td-summ::before {
     content: "Сумма ";
+  }
+}
+
+@media (max-width: 1149px) {
+  .statTable__item--onlyDesktop {
+    display: none;
   }
 }
 
