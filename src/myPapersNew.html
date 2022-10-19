@@ -60,9 +60,9 @@
 									})
 
 									<div class="statTable statTable--scroll">
+										<span class="statTable__item statTable__item--fixed statTable__item--grow">Акция</span>
 										<div class="statTable__row statTable__row--header">
-											<span class="statTable__item statTable__item--fixed statTable__item--grow">Акция</span>
-											<span class="statTable__item statTable__item--onlyDesktop statTable__item--grow"></span>
+											<span class="statTable__item statTable__item--only-table statTable__item--grow">Акция</span>
 											<span class="statTable__item statTable__item--shrink">BMS local</span>
 											<span class="statTable__item statTable__item--shrink">День</span>
 											<span class="statTable__item statTable__item--shrink">Кол-во</span>
@@ -114,9 +114,72 @@
 											<span class="statTable__item">Комментарий</span>
 										</div>
 										<div class="statTable__content">
+											<div
+												class="statTable__item statTable__item--fixed statTable__item--sticker statTable__item--grow statSticker">
+												<div class="statSticker__block">
+													<div class="statSticker__icon">
+														<svg class="statSticker__arrow">
+															<use xlink:href="img/main.svg#icon-arrow-down"></use>
+														</svg>
+													</div>
+													<div class="statSticker__img">
+														<img src="./img/statTable__icons/pcg.png" alt="Иконка PCG">
+													</div>
+													<div class="statSticker__content statStickerInfo">
+														<h3 class="statStickerInfo__title">PCG</h3>
+														<span class="statStickerInfo__cost">422.21 P</span>
+
+														<div class="paperDontTrade">
+															<svg
+																class="paperDontTrade__icon statStickerInfo__icon statStickerInfo__icon--only-desktop">
+																<use xlink:href="img/main.svg#icon-trendUp"></use>
+															</svg>
+															<svg class="paperDontTrade__icon statTable__icon statStickerInfo__icon--only-mobile">
+																<use xlink:href="img/main.svg#icon-info-2"></use>
+															</svg>
+															<div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
+																	бумаги</a></div>
+														</div>
+
+														<span class="statStickerInfo__subtitle">Microsoft Company</span>
+													</div>
+													<div class="statSticker__percent statSticker__percent--success">
+														<span>+1.23%</span>
+														<span>+1.56%</span>
+													</div>
+												</div>
+
+												<!--                         111-->
+
+												<div class="statTable-scoring statTable-scoring--in-header">
+													<span class="statTable-scoring__value statTable-scoring__value--positive">21</span>
+													<div class="statTable-scoring__diagram" style="--persent: 60px;
+--diagram-color: #de4355;">
+														<svg width="51" height="51" viewbox="0,0,38.16, 38.16">
+															<circle r="15.9" cx="19.08" cy="19.08" />
+															<circle r="15.9" cx="19.08" cy="19.08" style="" />
+															<text id="text" x="50%" y="50%" dy="0.35em" text-anchor="middle"
+																style=" line-height: 1">
+																60
+															</text>
+														</svg>
+													</div>
+
+													<div class="statTable-scoring__content">
+														<p class="statTable-scoring__bms">BMS</p>
+														<p class="statTable-scoring__safely">Безопасно</p>
+													</div>
+
+													<span class="myStrategy-scoring__type myStrategy-scoring__type--home"></span>
+
+												</div>
+
+
+
+											</div>
 											<div class="statTable__row statTable__row--content statTable__row--mobileBorder">
 												<div
-													class="statTable__item statTable__item--fixed statTable__item--sticker statTable__item--grow statSticker">
+													class="statTable__item statTable__item--only-table statTable__item--sticker statTable__item--grow statSticker">
 													<div class="statSticker__block">
 														<div class="statSticker__icon">
 															<svg class="statSticker__arrow">
@@ -174,11 +237,6 @@
 														<span class="myStrategy-scoring__type myStrategy-scoring__type--home"></span>
 
 													</div>
-
-
-
-												</div>
-												<div class="statTable__item statTable__item--onlyDesktop statTable__item--grow">
 												</div>
 												<div class="statTable__item statTable__item--only-mobile">
 													<span>Аналитика бумаги</span>
@@ -421,9 +479,38 @@
 											</div>
 										</div>
 										<div class="statTable__content">
+											<div
+												class="statTable__item statTable__item--fixed statTable__item--sticker statTable__item--grow statSticker">
+												<div class="statSticker__icon">
+													<svg class="statSticker__arrow">
+														<use xlink:href="img/main.svg#icon-arrow-down"></use>
+													</svg>
+												</div>
+												<div class="statSticker__img">
+													<img src="./img/statTable__icons/viac.svg" alt="Иконка VIAC">
+												</div>
+												<div class="statSticker__content statStickerInfo">
+													<h3 class="statStickerInfo__title">VIAC</h3>
+													<span class="statStickerInfo__cost">422.21 P</span>
+
+													<div class="paperDontTrade">
+														<svg class="paperDontTrade__icon statStickerInfo__icon">
+															<use xlink:href="img/main.svg#icon-trendUp"></use>
+														</svg>
+														<div class="paperDontTrade__popup paperDontTrade__popup--link"><a href="#">Аналитика
+																бумаги</a></div>
+													</div>
+
+													<span class="statStickerInfo__subtitle">Microsoft Company</span>
+												</div>
+												<div class="statSticker__percent statSticker__percent--error">
+													<span>+1.23%</span>
+													<span>-1.56%</span>
+												</div>
+											</div>
 											<div class="statTable__row statTable__row--content">
 												<div
-													class="statTable__item statTable__item--fixed statTable__item--sticker statTable__item--grow statSticker">
+													class="statTable__item statTable__item--only-table statTable__item--sticker statTable__item--grow statSticker">
 													<div class="statSticker__icon">
 														<svg class="statSticker__arrow">
 															<use xlink:href="img/main.svg#icon-arrow-down"></use>
@@ -450,8 +537,6 @@
 														<span>+1.23%</span>
 														<span>-1.56%</span>
 													</div>
-												</div>
-												<div class="statTable__item statTable__item--onlyDesktop statTable__item--grow">
 												</div>
 												<div class="statTable__item statTable__item--shrink statTable__item--success">
 													<span class="statTable__description">BMS local</span>
@@ -577,9 +662,38 @@
 											</div>
 										</div>
 										<div class="statTable__content statTable__content--disabled">
+											<div
+												class="statTable__item statTable__item--fixed statTable__item--sticker statTable__item--grow statSticker">
+												<div class="statSticker__icon">
+													<svg class="statSticker__arrow">
+														<use xlink:href="img/main.svg#icon-arrow-down"></use>
+													</svg>
+												</div>
+												<div class="statSticker__img">
+													<img src="./img/statTable__icons/pcg.png" alt="Иконка PCG">
+												</div>
+												<div class="statSticker__content statStickerInfo">
+													<h3 class="statStickerInfo__title">PCG</h3>
+													<span class="statStickerInfo__cost">422.21 P</span>
+
+													<div class="paperDontTrade">
+														<svg class="paperDontTrade__icon statStickerInfo__icon">
+															<use xlink:href="img/main.svg#icon-dangerCircle"></use>
+														</svg>
+														<div class="paperDontTrade__popup">Текст о том, что данная бумага больше не торгуется
+														</div>
+													</div>
+
+													<span class="statStickerInfo__subtitle">Microsoft Company</span>
+												</div>
+												<div class="statSticker__percent statSticker__percent--error">
+													<span>+1.23%</span>
+													<span>-1.56%</span>
+												</div>
+											</div>
 											<div class="statTable__row statTable__row--content">
 												<div
-													class="statTable__item statTable__item--fixed statTable__item--sticker statTable__item--grow statSticker">
+													class="statTable__item statTable__item--only-table statTable__item--sticker statTable__item--grow statSticker">
 													<div class="statSticker__icon">
 														<svg class="statSticker__arrow">
 															<use xlink:href="img/main.svg#icon-arrow-down"></use>
@@ -606,8 +720,6 @@
 														<span>+1.23%</span>
 														<span>-1.56%</span>
 													</div>
-												</div>
-												<div class="statTable__item statTable__item--onlyDesktop statTable__item--grow">
 												</div>
 												<div class="statTable__item statTable__item--shrink statTable__item--success">
 													<span class="statTable__description">BMS local</span>
