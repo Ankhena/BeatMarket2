@@ -6231,6 +6231,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   font-size: 0.9rem;
 }
 
+.statTable__row--only-table {
+  display: none;
+}
+
 .statTable__row--header {
   background-color: #F5F6FD;
   border-top: 1px solid #E6EEFF;
@@ -15342,15 +15346,6 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 @media (min-width: 1150px) {
-  .statTable__item--fixed {
-    position: absolute;
-    background: #fff;
-    z-index: 9999;
-    box-shadow: 9px 7px 8px rgba(62, 84, 216, 0.1);
-    transform: translate(-27px, -1.7px);
-    padding-left: 1rem;
-  }
-
   .cardAnalytic {
     cursor: pointer;
   }
@@ -15458,6 +15453,16 @@ body.viewProfile .header-controls-links-link.auth span {
 
   body.topNav .main-contentPadding {
     padding: 2.8rem var(--section_padding);
+  }
+}
+
+@media (min-width: 1151px) {
+  .statTable__item--fixed {
+    position: absolute;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 9px 7px 8px rgba(62, 84, 216, 0.1);
+    padding-left: 1rem;
   }
 }
 
@@ -15773,6 +15778,18 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-scoring {
     margin-left: 0;
+  }
+
+  .statTable__row--only-table {
+    display: block;
+  }
+
+  .statTable__item--fixed {
+    display: none;
+  }
+
+  .statTable__item--onlyDesktop {
+    display: none;
   }
 
   .backlink {
@@ -16351,12 +16368,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .adv-portfolio-settings__table .td-summ::before {
     content: "Сумма ";
-  }
-}
-
-@media (max-width: 1149px) {
-  .statTable__item--onlyDesktop {
-    display: none;
   }
 }
 
