@@ -15785,7 +15785,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .statTable__item--fixed {
-    display: none;
+    display: none !important;
   }
 
   .statTable__item--onlyDesktop {
