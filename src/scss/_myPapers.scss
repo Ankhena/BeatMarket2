@@ -351,16 +351,46 @@
 		}
 
 		&--fixed {
+			transform: translate(-27px, 0px);
+
 			@media(min-width: 1151px) {
 				position: absolute;
 				background: #fff;
 				z-index: 999;
 				box-shadow: 9px 7px 8px rgb(62 84 216 / 10%);
 				padding-left: 1rem;
+				padding-bottom: 0.98em;
+				padding-top: 1em;
+			}
+
+			@media($media_xl) {
+				transform: translate(-24.5px, 0px);
 			}
 
 			@media(max-width: 1150px) {
-				display: none !important;
+				transform: none;
+			}
+		}
+
+		&--fixedHeader {
+			transform: translate(-27px, -3px);
+
+			@media($media_xl) {
+				transform: translate(-24.5px, -3px);
+			}
+
+			@media(max-width: 1150px) {
+				transform: none;
+			}
+
+			@media(min-width: 1151px) {
+				padding-bottom: 1.7em;
+			}
+		}
+
+		&--not {
+			@media(max-width: 1150px) {
+				display: none;
 			}
 		}
 
