@@ -30,6 +30,7 @@ $(document).ready(function () {
   --include("_averageGrowthGraph.js")
   --include("_growthOfDividendsGraph.js")
   --include("_portfolioProfitGraph.js")
+  --include("_averageDividentsGraph.js")
   --include("_filterScanner.js")
 
   document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
