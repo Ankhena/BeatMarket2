@@ -21,7 +21,6 @@ $(document).ready(function () {
   --include("_monthCashGraph.js")
   --include("_cryptAnalyticsGraph.js")
   --include("_demoGraph.js")
-  --include("_demoGraph-4.js")
   --include("_mainFactorsGraph.js")
   --include("_subscribeChanger.js")
   --include("_dopFunctional.js")
