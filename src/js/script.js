@@ -21,6 +21,7 @@ $(document).ready(function () {
   --include("_monthCashGraph.js")
   --include("_cryptAnalyticsGraph.js")
   --include("_demoGraph.js")
+  --include("_demoGraph-4.js")
   --include("_mainFactorsGraph.js")
   --include("_subscribeChanger.js")
   --include("_dopFunctional.js")
@@ -170,21 +171,21 @@ $(document).ready(function () {
             e.target.value = e.target.value.replace(pattern, '')
 
           })
-          
+
           $(`#${elemMain} #min`).on("click", (e) => {
             e.target.focus()
             let value = e.target.value
             e.target.value = ""
             e.target.value = value
           })
-          
+
           $(`#${elemMain} #max`).on("click", (e) => {
             e.target.focus()
             let value = e.target.value
             e.target.value = ""
             e.target.value = value
           })
-          
+
           $(`#${elemMain} #max`).on("input", (e) => {
             let pattern = /[^\d.]/
 

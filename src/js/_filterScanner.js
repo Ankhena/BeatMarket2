@@ -467,7 +467,7 @@ if (document.querySelector(".analyticScanner")) {
     const sortedPSBtn = document.querySelector("#sorted-PS")
     const sortedContinentBtn = document.querySelector("#sorted-continent")
     const sortedIncomeBtn = document.querySelector("#sorted-income")
-    
+
 
     inputCounts.forEach(inputCount => {
       inputCount.addEventListener("input", (e) => {
