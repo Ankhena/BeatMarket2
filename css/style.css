@@ -4259,6 +4259,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .section-table-sort {
   margin-top: 100px;
+  padding: 0 30px;
   position: relative;
 }
 
