@@ -4087,7 +4087,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .footer {
   background-color: #fff;
-  padding: 2.7rem 0;
+  padding: 2.7rem 15px;
 }
 
 .footer-inner {
@@ -17072,7 +17072,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .footer {
-    padding: 2.7rem 0 3rem 0;
+    padding: 2.7rem 15px 3rem;
   }
 
   .footer-inner {
