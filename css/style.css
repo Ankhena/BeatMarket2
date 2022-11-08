@@ -5831,6 +5831,55 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   cursor: pointer;
 }
 
+.dividends .period-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dividends .period-info h4 {
+  font-weight: 600;
+  color: #24252E;
+  margin-right: 0.9rem;
+}
+
+.dividends .period-info-date {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-bottom: 1px dashed #687ae1;
+}
+
+.dividends .period-info-date span {
+  font-weight: 600;
+  color: #3E54D8;
+  line-height: 1.4;
+}
+
+.dividends .period-info-date svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
+.dividends .period-info-filter {
+  display: inline-block;
+  background-color: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 6px;
+  margin-left: 32px;
+  padding: 5px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3E54D8;
+  transition: background-color 0.3s;
+}
+
+.dividends .period-info-filter:hover {
+  background-color: #1B2D9D;
+  color: #fff;
+}
+
 .dividends .period-status {
   display: flex;
   align-items: center;
@@ -5872,55 +5921,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-}
-
-.dividends .period-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.dividends .period-info h4 {
-  font-weight: 600;
-  color: #24252E;
-  margin-right: 0.9rem;
-}
-
-.dividends .period-info-date {
-  display: flex;
-  align-items: center;
-  padding: 0.2rem 0;
-  border-bottom: 1px dashed #687ae1;
-}
-
-.dividends .period-info-date span {
-  font-weight: 600;
-  color: #3E54D8;
-  line-height: 1.4;
-}
-
-.dividends .period-info-date svg {
-  width: 20px;
-  height: 20px;
-  margin-left: 0.5rem;
-}
-
-.dividends .period-info-filter {
-  display: inline-block;
-  background-color: #fcfdff;
-  border: 1px solid #d3e3ff;
-  border-radius: 6px;
-  margin-left: 32px;
-  padding: 5px 16px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #3E54D8;
-  transition: background-color 0.3s;
-}
-
-.dividends .period-info-filter:hover {
-  background-color: #1B2D9D;
-  color: #fff;
 }
 
 .dividends .table-fixed-title h5 {
@@ -5979,7 +5979,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .dividends .table-fixed-item-content-second > span {
-  max-width: 100%;
+  max-width: 75px;
 }
 
 .dividends .table-fixed-item-price {
@@ -6061,10 +6061,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   align-items: center;
 }
 
-.dividends .table-content-item-info span:first-child {
-  font-weight: 600;
-}
-
 .dividends .table-content-item-info span.success {
   background-color: rgba(25, 159, 39, 0.5);
   color: #fff;
@@ -6083,21 +6079,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   justify-content: center;
 }
 
-.dividends .strategyCards {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: space-between;
-  background: #fff;
-  border: 1px solid #D3E3FF;
-  border-radius: 1rem;
-  padding: 1.35rem;
-}
-
 .dividends .strategyCards-card {
   flex-basis: 49%;
   display: flex;
   flex-direction: column;
-  border: none;
 }
 
 .dividends .strategyCards-card-coef {
@@ -6110,12 +6095,16 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   padding: 0.8rem 1.6rem;
   border-radius: 0.5rem;
   font-size: 1.6rem;
+  content: "";
 }
 
 .dividends .strategyCards-card-cash {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+}
+
+.dividends .strategyCards-card-cash-item {
+  white-space: nowrap;
 }
 
 .dividends .strategyCards-card-cash-item h5 {
@@ -6274,70 +6263,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .dividends .strategyCards-card-content-info-item span {
   font-weight: 600;
   color: #24252E;
-}
-
-.dividends .strategyCards-card-coef {
-  display: flex;
-}
-
-.dividends .strategyCards-card-value {
-  --color: #fff;
-  color: var(--color);
-  background-color: #3E54D8;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
-}
-
-.dividends .strategyCards-card-value--mini {
-  padding: 0;
-}
-
-.dividends .strategyCards-card-value--positive {
-  --color: #199F27;
-  background: transparent;
-}
-
-.dividends .strategyCards-card-value--negative {
-  --color: #ED6373;
-  background: transparent;
-}
-
-.dividends .blockSection__header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.dividends .dividends__switcher {
-  display: flex;
-  -moz-column-gap: 1.1111111111rem;
-       column-gap: 1.1111111111rem;
-}
-
-.dividends .dividends__switcher-btn {
-  position: relative;
-  padding: 0.8rem 0;
-  border: 0;
-  border-bottom: 3px solid transparent;
-  font-size: 0.8888888889rem;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-}
-
-.dividends .dividends__switcher-btn.active {
-  border-color: #3E54D8;
-  color: #3E54D8;
-}
-
-.dividends .dividends__switcher-btn:hover {
-  border-color: #3E54D8;
-  color: #3E54D8;
-}
-
-.dividends .dividendsTarget__detailInfo {
-  justify-content: space-around;
 }
 
 .statTable {
@@ -6724,6 +6649,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .statStickerInfo--nested {
   flex-direction: column;
+}
+
+.statStickerInfo__row {
+  display: flex;
+  align-items: baseline;
 }
 
 .statStickerInfo__container {
@@ -17514,23 +17444,6 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 1rem;
   }
 
-  .dividends .period-info {
-    order: -1;
-    margin-bottom: 1rem;
-  }
-
-  .dividends .strategyCards {
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
-  }
-
-  .dividends .strategyCards-card {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   .dividends .strategyCards-card-content {
     flex-wrap: wrap;
   }
@@ -17546,27 +17459,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .dividends .strategyCards-card-content-info-item:not(:last-child) {
     margin-bottom: 1rem;
-  }
-
-  .dividends .strategyCards-card-coef {
-    margin-bottom: 0;
-  }
-
-  .dividends .blockSection__header .dividends__switcher {
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .dividends .blockSection__header .dividends__switcher::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 1px;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 1px;
-    background: #D3E3FF;
   }
 
   .statTable--scroll .statTable__item--withIcon {
@@ -18109,7 +18001,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .blockSection__dividendStatusList {
-    margin: 1rem 0 0;
+    margin: 1rem 0 0 0.8rem;
   }
 
   .blockSection__period {
@@ -19166,9 +19058,17 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 16px;
   }
 
-  .dividends .strategyCards {
-    grid-template-columns: 1fr;
-    justify-content: stretch;
+  .dividends .strategyCards-card-cash {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dividends .strategyCards-card-cash-item {
+    flex-basis: 22%;
+  }
+
+  .dividends .strategyCards-card-cash-item span {
+    font-size: 1rem;
   }
 
   .statTable__item:nth-child(1) {
@@ -19241,6 +19141,12 @@ body.viewProfile .header-controls-links-link.auth span {
     letter-spacing: -0.2px;
   }
 
+  .blockSection__dividendStatus .paperDontTrade__popup {
+    max-width: 9rem;
+    font-size: 0.9rem;
+    left: -4px;
+  }
+
   .forecastGraph__question .paperDontTrade__popup {
     left: unset;
     transform: translateY(15%);
@@ -19249,6 +19155,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup {
     transform: translateY(8%) translateX(-45%);
     max-width: 363px;
+  }
+
+  .dividendsTarget__labelInfo {
+    font-size: 0.9rem;
   }
 
   .dividendsTarget__labelInfo {
