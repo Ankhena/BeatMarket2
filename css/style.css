@@ -18001,6 +18001,10 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .blockSection__dividendStatusList {
+    flex-basis: 50%;
+  }
+
+  .blockSection__dividendStatusList {
     margin: 1rem 0 0 0.8rem;
   }
 
@@ -19137,12 +19141,6 @@ body.viewProfile .header-controls-links-link.auth span {
     letter-spacing: -0.2px;
   }
 
-  .blockSection__dividendStatus .paperDontTrade__popup {
-    max-width: 9rem;
-    font-size: 0.9rem;
-    left: -4px;
-  }
-
   .forecastGraph__question .paperDontTrade__popup {
     left: unset;
     transform: translateY(15%);
@@ -19279,6 +19277,14 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .table-ticker-fixed__block + * {
     margin-top: 14.4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .blockSection__dividendStatus .paperDontTrade__popup {
+    max-width: 9rem;
+    font-size: 0.9rem;
+    left: -4px;
   }
 }
 
