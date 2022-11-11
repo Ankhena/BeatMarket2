@@ -6080,7 +6080,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .dividends .strategyCards-card {
-  flex-basis: 49%;
+  flex-basis: 48%;
   display: flex;
   flex-direction: column;
 }
@@ -18296,10 +18296,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .dividendsTarget__detailItem:not(:last-child) {
     margin-bottom: 1.5rem;
-  }
-
-  .dividendsTarget__labelInfo span {
-    display: none;
   }
 
   .dividendsTarget__progress {
