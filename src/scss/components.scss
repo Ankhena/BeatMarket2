@@ -346,6 +346,10 @@ $base_transition: 0.4s ease-in-out;
 		display: flex;
 		margin-left: 1.5rem;
 
+		@media($media_sm) {
+			flex-basis: 50%;
+		}
+		
 		@media ($media_sm) {
 			margin: 1rem 0 0 0.8rem;
 		}
@@ -372,7 +376,7 @@ $base_transition: 0.4s ease-in-out;
 		}
 
 		.paperDontTrade__popup {
-			@media($media_xs) {
+			@media(max-width: 360px) {
 				max-width: 9rem;
 				font-size: 0.9rem;
 				left: -4px;
