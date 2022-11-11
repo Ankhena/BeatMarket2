@@ -803,6 +803,11 @@
 		flex-direction: column;
 	}
 
+	&__row {
+		display: flex;
+		align-items: baseline;
+	}
+
 	&__container {
 		display: flex;
 		align-items: baseline;
