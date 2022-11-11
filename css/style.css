@@ -4076,101 +4076,125 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-left: 2rem;
 }
 
-.section-footer {
-  position: relative;
-  padding: 2.7rem 0;
-  background-color: #fff;
-  z-index: 11;
+:root {
+  --icon-phone: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.67187 11.6998C9.44364 13.2935 10.7324 14.579 12.3281 15.3467C12.4458 15.4024 12.576 15.4265 12.7059 15.4167C12.8358 15.4068 12.9608 15.3633 13.0687 15.2904L15.4125 13.7248C15.516 13.6546 15.6357 13.6117 15.7603 13.6002C15.8849 13.5887 16.0104 13.609 16.125 13.6592L20.5125 15.5435C20.6625 15.6059 20.7877 15.7159 20.869 15.8565C20.9504 15.9971 20.9832 16.1606 20.9625 16.3217C20.8234 17.407 20.2937 18.4046 19.4723 19.1276C18.6509 19.8506 17.5943 20.2495 16.5 20.2498C13.1185 20.2498 9.87548 18.9065 7.48439 16.5154C5.0933 14.1243 3.75 10.8813 3.75 7.49979C3.75025 6.40553 4.1492 5.34886 4.87221 4.5275C5.59522 3.70613 6.59274 3.17635 7.67812 3.03729C7.83922 3.01659 8.00266 3.04943 8.14326 3.13074C8.28386 3.21206 8.39384 3.33733 8.45625 3.48729L10.3406 7.88416C10.3896 7.99699 10.4101 8.12013 10.4003 8.24275C10.3905 8.36537 10.3507 8.48369 10.2844 8.58729L8.71875 10.9685C8.64905 11.0762 8.60814 11.2 8.59993 11.328C8.59172 11.4561 8.61649 11.5841 8.67187 11.6998V11.6998Z' stroke='%238C9BEA' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  --icon-mail: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 5.25H21V18C21 18.1989 20.921 18.3897 20.7803 18.5303C20.6397 18.671 20.4489 18.75 20.25 18.75H3.75C3.55109 18.75 3.36032 18.671 3.21967 18.5303C3.07902 18.3897 3 18.1989 3 18V5.25Z' stroke='%238C9BEA' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21 5.25L12 13.5L3 5.25' stroke='%238C9BEA' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  --icon-map-pin: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0001 12.75C13.6569 12.75 15.0001 11.4069 15.0001 9.75C15.0001 8.09315 13.6569 6.75 12.0001 6.75C10.3432 6.75 9.00006 8.09315 9.00006 9.75C9.00006 11.4069 10.3432 12.75 12.0001 12.75Z' stroke='%238C9BEA' stroke-width='1.50626' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.4998 9.75C19.4998 16.5 11.9998 21.75 11.9998 21.75C11.9998 21.75 4.49979 16.5 4.49979 9.75C4.49979 7.76088 5.28996 5.85322 6.69649 4.4467C8.10301 3.04018 10.0107 2.25 11.9998 2.25C13.9889 2.25 15.8966 3.04018 17.3031 4.4467C18.7096 5.85322 19.4998 7.76088 19.4998 9.75V9.75Z' stroke='%238C9BEA' stroke-width='1.50626' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  --icon-visa: url("data:image/svg+xml,%3Csvg width='95' height='31' viewBox='0 0 95 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_7715_3989)'%3E%3Cpath d='M35.9809 0.913362L23.5726 30.4769H15.4782L9.37279 6.88325C9.00262 5.42898 8.6818 4.89657 7.55154 4.28529C5.71054 3.28948 2.67018 2.35284 0 1.77113L0.182619 0.913362H13.2127C14.8711 0.913362 16.3666 2.01762 16.7417 3.93035L19.9647 21.0365L27.9358 0.913362H35.9809ZM67.6973 20.8245C67.7319 13.0207 56.8932 12.5919 56.9672 9.10655C56.9919 8.04666 58.0037 6.91775 60.2149 6.63183C61.3106 6.48887 64.3361 6.38042 67.7615 7.95299L69.1089 1.6824C67.2679 1.01196 64.8988 0.371094 61.9473 0.371094C54.3809 0.371094 49.0504 4.38881 49.006 10.1467C48.9567 14.4011 52.8065 16.7772 55.7086 18.192C58.6947 19.6413 59.6966 20.5731 59.6818 21.8646C59.6621 23.8464 57.3028 24.7239 55.0966 24.7584C51.2468 24.8175 49.0159 23.7182 47.2341 22.89L45.8472 29.3677C47.6389 30.186 50.9408 30.9008 54.3612 30.9403C62.4112 30.9403 67.6726 26.9718 67.6973 20.8245ZM87.6817 30.4769H94.7644L88.585 0.913362H82.0502C80.5794 0.913362 79.3405 1.7662 78.7926 3.08244L67.3025 30.4769H75.3426L76.9368 26.0598H86.7637L87.6817 30.4769ZM79.1381 20.0012L83.1706 8.8995L85.4903 20.0012H79.1381ZM46.9232 0.913362L40.5908 30.4769H32.9306L39.268 0.913362H46.9232Z' fill='%231434CB'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_7715_3989'%3E%3Crect width='94.7644' height='30.5692' fill='white' transform='translate(0 0.371094)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  --icon-master-card: url("data:image/svg+xml,%3Csvg width='58' height='36' viewBox='0 0 58 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.6605 4.46289H21.3832V31.9166H36.6605V4.46289Z' fill='%23FF5F00'/%3E%3Cpath d='M22.353 18.1897C22.3506 15.5457 22.9497 12.9358 24.105 10.5576C25.2604 8.17944 26.9417 6.09526 29.0216 4.46288C26.4459 2.43834 23.3526 1.17932 20.0952 0.829698C16.8378 0.48008 13.5478 1.05397 10.6011 2.48579C7.6545 3.91761 5.17014 6.14959 3.43204 8.9266C1.69393 11.7036 0.772217 14.9136 0.772217 18.1897C0.772217 21.4658 1.69393 24.6758 3.43204 27.4528C5.17014 30.2298 7.6545 32.4618 10.6011 33.8936C13.5478 35.3255 16.8378 35.8993 20.0952 35.5497C23.3526 35.2001 26.4459 33.9411 29.0216 31.9165C26.9417 30.2841 25.2604 28.2 24.1051 25.8218C22.9497 23.4436 22.3506 20.8337 22.353 18.1897Z' fill='%23EB001B'/%3E%3Cpath d='M57.2707 18.1897C57.2708 21.4658 56.3492 24.6757 54.6112 27.4528C52.8732 30.2298 50.3889 32.4617 47.4423 33.8936C44.4957 35.3254 41.2058 35.8993 37.9484 35.5497C34.6911 35.2001 31.5978 33.9411 29.0222 31.9165C31.1003 30.2825 32.7802 28.198 33.9354 25.8202C35.0906 23.4423 35.6908 20.8333 35.6908 18.1897C35.6908 15.5461 35.0906 12.9371 33.9354 10.5592C32.7802 8.18142 31.1003 6.0969 29.0222 4.46287C31.5978 2.43834 34.6911 1.17931 37.9484 0.829693C41.2058 0.48008 44.4957 1.05399 47.4423 2.48583C50.3889 3.91766 52.8732 6.14965 54.6112 8.92666C56.3492 11.7037 57.2708 14.9137 57.2707 18.1897Z' fill='%23F79E1B'/%3E%3Cpath d='M55.6047 29.0087V28.4467H55.8313V28.3322H55.2541V28.4467H55.4809V29.0087H55.6047ZM56.7252 29.0087V28.3311H56.5483L56.3448 28.7972L56.1413 28.3311H55.9642V29.0087H56.0892V28.4975L56.28 28.9383H56.4096L56.6004 28.4964V29.0087H56.7252Z' fill='%23F79E1B'/%3E%3C/svg%3E%0A");
+  --icon-finland: url("data:image/svg+xml,%3Csvg width='42' height='26' viewBox='0 0 42 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_7715_4016)'%3E%3Cpath d='M42 0H0V25.6667H42V0Z' fill='white'/%3E%3Cpath d='M42 9.3335H0V16.3335H42V9.3335Z' fill='%23002F6C'/%3E%3Cpath d='M18.6667 0H11.6667V25.6667H18.6667V0Z' fill='%23002F6C'/%3E%3C/g%3E%3Crect x='0.5' y='0.5' width='41' height='24.6667' rx='4.5' stroke='%23DEDEDE'/%3E%3Cdefs%3E%3CclipPath id='clip0_7715_4016'%3E%3Crect width='42' height='25.6667' rx='5' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }
 
-.section-footer .footer {
+.footer {
+  background-color: #fff;
+  padding: 2.7rem 15px;
+}
+
+.footer-inner {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2.5rem;
+  gap: 2rem 0.2rem;
 }
 
-.section-footer .footer-contact,
-.section-footer .footer-text,
-.section-footer .footer-link {
-  line-height: 1.6;
-}
-
-.section-footer .footer-contact a,
-.section-footer .footer-text a,
-.section-footer .footer-link a {
+.footer-inner a {
   color: #3E54D8;
-  font-weight: 500;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: 0.3s ease-in-out;
 }
 
-.section-footer .footer-contact a:hover,
-.section-footer .footer-contact a:focus,
-.section-footer .footer-text a:hover,
-.section-footer .footer-text a:focus,
-.section-footer .footer-link a:hover,
-.section-footer .footer-link a:focus {
-  border-color: #3E54D8;
-}
-
-.section-footer .footer-logo {
+.footer-logo {
   width: 12rem;
 }
 
-.section-footer .footer-logo-icon {
+.footer-logo-icon {
   max-width: 100%;
 }
 
-.section-footer .footer-text {
+.footer-text {
   color: #929398;
 }
 
-.section-footer .footer-text strong {
+.footer-text strong {
   color: #3E54D8;
   font-weight: normal;
 }
 
-.section-footer .footer-contact,
-.section-footer .footer-link {
-  display: inline-flex;
-  flex-direction: column;
-  justify-self: flex-start;
+.footer-contact {
+  display: grid;
+  row-gap: 1em;
 }
 
-.section-footer .footer-contact {
-  justify-content: space-around;
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1.2em 1.4em;
+  font-size: 14px;
 }
 
-.section-footer .footer-link {
-  align-items: flex-start;
+.footer-fin::after {
+  content: var(--icon-finland);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1em;
 }
 
-.section-footer .footer-link--inline {
-  flex-direction: row;
-  align-items: flex-end;
+.footer-denial-of-responsibility {
+  font-weight: 500;
 }
 
-.section-footer .footer-link--inline a.footer-link__social {
-  text-decoration: none;
-  border-color: transparent;
+.footer-copyright {
+  margin-top: 1.6em;
+  font-size: 16px;
 }
 
-.section-footer .footer-link--inline a.footer-link__social:not(:last-child) {
-  margin-right: 1.5rem;
-}
-
-.section-footer .footer-link--inline a.footer-link__social picture {
+.payment-system {
   display: flex;
-  width: 10rem;
+  gap: 1.3em;
+  padding-left: 0;
+  list-style-type: none;
 }
 
-.section-footer .footer-link--inline a.footer-link__social picture img {
-  max-width: 100%;
+.payment-system__item::before {
+  content: var(--icon);
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.section-footer .footer-link__item:not(:last-child) {
-  margin-bottom: 0.8rem;
+.payment-system__item--visa {
+  --icon: var(--icon-visa);
+}
+
+.payment-system__item--mc {
+  --icon: var(--icon-master-card);
+}
+
+.address__list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em 2em;
+}
+
+.address__item--phone {
+  --icon: var(--icon-phone);
+}
+
+.address__item--address {
+  --icon: var(--icon-map-pin);
+  grid-column: 1/-1;
+  color: #929398;
+}
+
+.address__item::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  background: var(--icon) no-repeat center;
+}
+
+.address__item--email {
+  --icon: var(--icon-mail);
 }
 
 .portfolio {
@@ -4231,6 +4255,140 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   bottom: 0;
   width: 138px;
   height: 70px;
+}
+
+.section-table-sort {
+  margin-top: 100px;
+  position: relative;
+}
+
+.section-table-sort::before {
+  content: "";
+  width: 148px;
+  height: 148px;
+  background: #ED6373;
+  border-radius: 50%;
+  position: absolute;
+  left: 37%;
+  top: -3.5%;
+}
+
+.table-sort {
+  background: linear-gradient(180deg, #FBFCFF 0%, #EAF1FE 100%);
+  position: relative;
+  z-index: 2;
+  padding: 0 15px;
+}
+
+.table-sort__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.table-sort__item-text {
+  font-size: 16px;
+  position: relative;
+  padding: 5px 16px;
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+}
+
+.table-sort__item-text + .table-sort__item-text {
+  border-top: 1px solid #E6EEFF;
+}
+
+.table-sort__item-text::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3E54D8;
+  position: absolute;
+  left: 0;
+  top: 45%;
+}
+
+.table-sort__block {
+  background: #FFFFFF;
+  /* Line table */
+  border: 1px solid #E6EEFF;
+  /* Table shadow */
+  box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 18px;
+  padding: 24px 32px;
+  transform: translateY(-94px);
+}
+
+.table-sort__block-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.table-sort__block-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 5px 16px;
+  min-height: 66px;
+}
+
+.table-sort__block-item + .table-sort__block-item {
+  border-top: 1px solid #E6EEFF;
+}
+
+.table-sort__block-info {
+  padding: 0 16px;
+  display: block;
+  max-width: 190px;
+  width: 100vw;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57px;
+}
+
+.table-sort__block-info + .table-sort__block-info {
+  margin-left: 7px;
+}
+
+.table-sort__block-info.blue {
+  background-color: #3E54D8;
+}
+
+.table-sort__block-info.yellow {
+  background-color: #F3B63F;
+}
+
+.table-sort__block-mark {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #199F27;
+  border-radius: 41.5135px;
+}
+
+.table-sort__block-mark svg {
+  width: 9px;
+  height: 6px;
+}
+
+.table-sort__block-not {
+  width: 20px;
+  height: 2px;
+  background-color: #D3E3FF;
 }
 
 .notfound {
@@ -5673,6 +5831,55 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   cursor: pointer;
 }
 
+.dividends .period-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dividends .period-info h4 {
+  font-weight: 600;
+  color: #24252E;
+  margin-right: 0.9rem;
+}
+
+.dividends .period-info-date {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-bottom: 1px dashed #687ae1;
+}
+
+.dividends .period-info-date span {
+  font-weight: 600;
+  color: #3E54D8;
+  line-height: 1.4;
+}
+
+.dividends .period-info-date svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
+.dividends .period-info-filter {
+  display: inline-block;
+  background-color: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 6px;
+  margin-left: 32px;
+  padding: 5px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3E54D8;
+  transition: background-color 0.3s;
+}
+
+.dividends .period-info-filter:hover {
+  background-color: #1B2D9D;
+  color: #fff;
+}
+
 .dividends .period-status {
   display: flex;
   align-items: center;
@@ -5714,55 +5921,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-}
-
-.dividends .period-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.dividends .period-info h4 {
-  font-weight: 600;
-  color: #24252E;
-  margin-right: 0.9rem;
-}
-
-.dividends .period-info-date {
-  display: flex;
-  align-items: center;
-  padding: 0.2rem 0;
-  border-bottom: 1px dashed #687ae1;
-}
-
-.dividends .period-info-date span {
-  font-weight: 600;
-  color: #3E54D8;
-  line-height: 1.4;
-}
-
-.dividends .period-info-date svg {
-  width: 20px;
-  height: 20px;
-  margin-left: 0.5rem;
-}
-
-.dividends .period-info-filter {
-  display: inline-block;
-  background-color: #fcfdff;
-  border: 1px solid #d3e3ff;
-  border-radius: 6px;
-  margin-left: 32px;
-  padding: 5px 16px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #3E54D8;
-  transition: background-color 0.3s;
-}
-
-.dividends .period-info-filter:hover {
-  background-color: #1B2D9D;
-  color: #fff;
 }
 
 .dividends .table-fixed-title h5 {
@@ -5821,7 +5979,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .dividends .table-fixed-item-content-second > span {
-  max-width: 100%;
+  max-width: 75px;
 }
 
 .dividends .table-fixed-item-price {
@@ -5903,10 +6061,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   align-items: center;
 }
 
-.dividends .table-content-item-info span:first-child {
-  font-weight: 600;
-}
-
 .dividends .table-content-item-info span.success {
   background-color: rgba(25, 159, 39, 0.5);
   color: #fff;
@@ -5925,21 +6079,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   justify-content: center;
 }
 
-.dividends .strategyCards {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: space-between;
-  background: #fff;
-  border: 1px solid #D3E3FF;
-  border-radius: 1rem;
-  padding: 1.35rem;
-}
-
 .dividends .strategyCards-card {
   flex-basis: 49%;
   display: flex;
   flex-direction: column;
-  border: none;
 }
 
 .dividends .strategyCards-card-coef {
@@ -5952,12 +6095,16 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   padding: 0.8rem 1.6rem;
   border-radius: 0.5rem;
   font-size: 1.6rem;
+  content: "";
 }
 
 .dividends .strategyCards-card-cash {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+}
+
+.dividends .strategyCards-card-cash-item {
+  white-space: nowrap;
 }
 
 .dividends .strategyCards-card-cash-item h5 {
@@ -6116,70 +6263,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .dividends .strategyCards-card-content-info-item span {
   font-weight: 600;
   color: #24252E;
-}
-
-.dividends .strategyCards-card-coef {
-  display: flex;
-}
-
-.dividends .strategyCards-card-value {
-  --color: #fff;
-  color: var(--color);
-  background-color: #3E54D8;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
-}
-
-.dividends .strategyCards-card-value--mini {
-  padding: 0;
-}
-
-.dividends .strategyCards-card-value--positive {
-  --color: #199F27;
-  background: transparent;
-}
-
-.dividends .strategyCards-card-value--negative {
-  --color: #ED6373;
-  background: transparent;
-}
-
-.dividends .blockSection__header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.dividends .dividends__switcher {
-  display: flex;
-  -moz-column-gap: 1.1111111111rem;
-       column-gap: 1.1111111111rem;
-}
-
-.dividends .dividends__switcher-btn {
-  position: relative;
-  padding: 0.8rem 0;
-  border: 0;
-  border-bottom: 3px solid transparent;
-  font-size: 0.8888888889rem;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-}
-
-.dividends .dividends__switcher-btn.active {
-  border-color: #3E54D8;
-  color: #3E54D8;
-}
-
-.dividends .dividends__switcher-btn:hover {
-  border-color: #3E54D8;
-  color: #3E54D8;
-}
-
-.dividends .dividendsTarget__detailInfo {
-  justify-content: space-around;
 }
 
 .statTable {
@@ -6566,6 +6649,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .statStickerInfo--nested {
   flex-direction: column;
+}
+
+.statStickerInfo__row {
+  display: flex;
+  align-items: baseline;
 }
 
 .statStickerInfo__container {
@@ -16913,30 +17001,40 @@ body.viewProfile .header-controls-links-link.auth span {
     margin: 0.8rem 0 0 0;
   }
 
-  .section-footer {
-    padding: 2.7rem 0;
+  .footer {
+    padding: 2.7rem 15px 3rem;
   }
 
-  .section-footer .footer {
+  .footer-inner {
     grid-template-columns: 1fr;
   }
 
-  .section-footer .footer-contact,
-  .section-footer .footer-logo {
+  .footer-logo {
     justify-self: center;
     text-align: center;
   }
 
-  .section-footer .footer-contact a {
+  .footer-text {
+    text-align: center;
+  }
+
+  .footer-contact {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .footer-contact a {
     margin-top: 0.2rem;
   }
 
-  .section-footer .footer-link--inline {
-    grid-row-start: 5;
+  .footer-links {
+    row-gap: 0.8rem;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .section-footer .footer-link--inline a.footer-link__social:not(:last-child) {
-    margin-right: 1rem;
+  .payment-system {
+    justify-content: center;
   }
 
   .portfolio {
@@ -16966,6 +17064,30 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .portfolio-figures .bottom-right {
     transform-origin: bottom right;
+  }
+
+  .section-table-sort::before {
+    left: 5%;
+    top: -2.5%;
+  }
+
+  .table-sort__row {
+    padding: 40px 0;
+  }
+
+  .table-sort__item-text {
+    font-size: 12px;
+  }
+
+  .table-sort__block {
+    padding: 8px;
+    transform: translateY(-66px);
+  }
+
+  .table-sort__block-info {
+    height: 45px;
+    font-size: 9px;
+    border-radius: 5px;
   }
 
   .notfound {
@@ -17322,23 +17444,6 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 1rem;
   }
 
-  .dividends .period-info {
-    order: -1;
-    margin-bottom: 1rem;
-  }
-
-  .dividends .strategyCards {
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
-  }
-
-  .dividends .strategyCards-card {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   .dividends .strategyCards-card-content {
     flex-wrap: wrap;
   }
@@ -17354,27 +17459,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .dividends .strategyCards-card-content-info-item:not(:last-child) {
     margin-bottom: 1rem;
-  }
-
-  .dividends .strategyCards-card-coef {
-    margin-bottom: 0;
-  }
-
-  .dividends .blockSection__header .dividends__switcher {
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .dividends .blockSection__header .dividends__switcher::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 1px;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 1px;
-    background: #D3E3FF;
   }
 
   .statTable--scroll .statTable__item--withIcon {
@@ -17917,7 +18001,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .blockSection__dividendStatusList {
-    margin: 1rem 0 0;
+    margin: 1rem 0 0 0.8rem;
   }
 
   .blockSection__period {
@@ -18941,6 +19025,11 @@ body.viewProfile .header-controls-links-link.auth span {
     gap: 1.5rem;
   }
 
+  .table-sort__block-info {
+    width: 70px;
+    padding: 0px;
+  }
+
   .myStrategy-indicators__block {
     padding: 16px 12px;
   }
@@ -18969,9 +19058,17 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 16px;
   }
 
-  .dividends .strategyCards {
-    grid-template-columns: 1fr;
-    justify-content: stretch;
+  .dividends .strategyCards-card-cash {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dividends .strategyCards-card-cash-item {
+    flex-basis: 22%;
+  }
+
+  .dividends .strategyCards-card-cash-item span {
+    font-size: 1rem;
   }
 
   .statTable__item:nth-child(1) {
@@ -19044,6 +19141,12 @@ body.viewProfile .header-controls-links-link.auth span {
     letter-spacing: -0.2px;
   }
 
+  .blockSection__dividendStatus .paperDontTrade__popup {
+    max-width: 9rem;
+    font-size: 0.9rem;
+    left: -4px;
+  }
+
   .forecastGraph__question .paperDontTrade__popup {
     left: unset;
     transform: translateY(15%);
@@ -19052,6 +19155,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .selectDropdownMenu .selectDropdownMenu-item__row .paperDontTrade__popup {
     transform: translateY(8%) translateX(-45%);
     max-width: 363px;
+  }
+
+  .dividendsTarget__labelInfo {
+    font-size: 0.9rem;
   }
 
   .dividendsTarget__labelInfo {
