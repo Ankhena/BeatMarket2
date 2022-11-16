@@ -1,7 +1,5 @@
 .dividends {
-	&__item {
-		margin-top: 3.35rem;
-	}
+
 
 	.period {
 		font-size: 0.9rem;
@@ -523,4 +521,15 @@
 			}
 		}
 	}
+}
+
+.dividends__item {
+  margin-top: 3.35rem;
+}
+
+.dividends__item--payout-dynamics {
+  .highcharts-point {
+    display: block;
+    opacity: 1;
+  }
 }
