@@ -117,6 +117,10 @@
       font-size: rem(16,14);
       font-weight: 500;
 
+			@media(max-width: 360px) {
+				grid-template-columns: max-content max-content;
+			}
+
       &::before {
         content: "Кол-во ";
       }
@@ -149,8 +153,16 @@
         border: 1px solid #d3e3ff;
         border-radius: 5px;
         background-size: 17px;
+
+				@media(max-width: 360px) {
+					margin-bottom: 7px;
+				}
       }
     }
+
+		@media(max-width: 360px) {
+			grid-template-columns: 1fr;
+		}
   }
 
   .td-summ {

@@ -538,6 +538,40 @@ $base_transition: 0.4s ease-in-out;
 			margin-bottom: 0.9rem;
 		}
 	}
+
+	&__plan {
+		margin-top: 32px;
+
+		@media($media_sm) {
+			max-width: 860px;
+			margin-bottom: 20px;
+			margin-top: 15px;
+		}
+
+		@media($media_xs) {
+			max-width: 542px;
+			margin-top: 0;
+		}
+	}
+
+	&-plan-scroll {
+		overflow: auto;
+
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar {
+			height: 6px;
+			width: 6px;
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: lighten($color_blue, 25%);
+		}
+	}
 }
 
 .cardAnalytic {

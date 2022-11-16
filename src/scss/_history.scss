@@ -1,262 +1,265 @@
 .myStrategy-history-container {
 
-    &.crypt {
+	&.crypt {
 
-        .table {
+		.table {
 
-            &-header {
+			&-header {
 
-                h5 {
-                    min-width: 21%;
-                }
-            }
+				h5 {
+					min-width: 21%;
+				}
+			}
 
-            &-content {
+			&-content {
 
-                &-item {
+				&-item {
 
-                    &-info, &-nums {
-                        display: flex;
-                        min-width: 42%;
-    
-                        span {
-                            min-width: 50%;
-                        }
+					&-info,
+					&-nums {
+						display: flex;
+						min-width: 42%;
 
-                        .cost {
-                            font-weight: 600;
-                        }
-                    }
+						span {
+							min-width: 50%;
+						}
 
-                    &-info {
-                        @media ($media_sm) {
-                            min-width: calc(100% + 3rem);
-                        }
-                    }
+						.cost {
+							font-weight: 600;
+						}
+					}
 
-                    &-nums {
-                        @media ($media_sm) {
-                            min-width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
+					&-info {
+						@media ($media_sm) {
+							min-width: calc(100% + 3rem);
+						}
+					}
 
-    .table {
+					&-nums {
+						@media ($media_sm) {
+							min-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
 
-        &-header {
+	.table {
+		//overflow: hidden;
 
-            h5 {
-                min-width: 14%;
-            }
-        }
+		&-header {
 
-        &-content {
+			h5 {
+				min-width: 14%;
+			}
+		}
 
-            &-item {
-                padding: .9rem 1.5rem;
-                align-items: center;
-                border-bottom: 1px solid $color_block_border;
+		&-content {
 
-                @media ($media_sm) {
-                    padding: 0 1.5rem .9rem 1.5rem;
-                    align-items: center;
-                    border-bottom: none;
-                    border: none;
+			&-item {
+				padding: .9rem 1.5rem;
+				align-items: center;
+				border-bottom: 1px solid $color_block_border;
 
-                    &:hover {
-                        box-shadow: unset;
-                        border: none;
-                    }
+				@media ($media_sm) {
+					padding: 0 1.5rem .9rem 1.5rem;
+					align-items: center;
+					border-bottom: none;
+					border: none;
 
-                    &:last-child {
-                        border-bottom: 1px solid $color_block_border;
-                    }
-                }
+					&:hover {
+						box-shadow: unset;
+						border: none;
+					}
 
-                &-info, &-nums {
-                    display: flex;
-                    min-width: 42%;
+					&:last-child {
+						border-bottom: 1px solid $color_block_border;
+					}
+				}
 
-                    span {
-                        min-width: 33.3%;
-                    }
-                }
+				&-info,
+				&-nums {
+					display: flex;
+					min-width: 42%;
 
-                &-info {
+					span {
+						min-width: 33.3%;
+					}
+				}
 
-                    @media ($media_sm) {
-                        min-width: calc(100% + 3rem);
-                        margin-left: calc(-1.5rem);
-                        padding: 1rem 1.5rem;
-                        border-top: 1px solid $color_block_border;
-                        border-bottom: 1px solid $color_block_border;
-                        background-color: $color_table_header;
+				&-info {
 
-                        span {
-                            min-width: 33.3%;
-                        }
+					@media ($media_sm) {
+						min-width: calc(100% + 3rem);
+						margin-left: calc(-1.5rem);
+						padding: 1rem 1.5rem;
+						border-top: 1px solid $color_block_border;
+						border-bottom: 1px solid $color_block_border;
+						background-color: $color_table_header;
 
-                        .date {
-                            order: 1;
-                        }
+						span {
+							min-width: 33.3%;
+						}
 
-                        .name {
-                            order: 2;
-                        }
+						.date {
+							order: 1;
+						}
 
-                        .operation {
-                            order: 3;
-                        }
-                    }
+						.name {
+							order: 2;
+						}
 
-                    .operation {
+						.operation {
+							order: 3;
+						}
+					}
 
-                        strong {
-                            font-size: 0.8rem;
-                            color: $color_white;
-                            padding: 0.3rem 0.7rem;
-                            background-color: $color_grey;
-                            font-weight: 600;
-                            border-radius: 0.5rem;
-                        }
+					.operation {
 
-                        &.success {
-                            strong {
-                                background-color: $color_green;
-                            }
-                        }
+						strong {
+							font-size: 0.8rem;
+							color: $color_white;
+							padding: 0.3rem 0.7rem;
+							background-color: $color_grey;
+							font-weight: 600;
+							border-radius: 0.5rem;
+						}
 
-                        &.error {
-                            strong {
-                                background-color: $color_red;
-                            }
-                        }
-                    }
+						&.success {
+							strong {
+								background-color: $color_green;
+							}
+						}
 
-                    .name {
-                        font-weight: 600;
-                        color: $color_blue;
-                    }
-                }
+						&.error {
+							strong {
+								background-color: $color_red;
+							}
+						}
+					}
 
-                &-nums {
+					.name {
+						font-weight: 600;
+						color: $color_blue;
+					}
+				}
 
-                    @media ($media_sm) {
-                        min-width: 100%;
-                        margin-top: 0.9rem;
+				&-nums {
 
-                        span {
-                            min-width: 33.3%;
+					@media ($media_sm) {
+						min-width: 100%;
+						margin-top: 0.9rem;
 
-                            &::before {
-                                display: block;
-                                margin-bottom: 0.4rem;
-                                color: $color_table_header_title;
-                                font-size: 0.8rem;
-                            }
-                        }
+						span {
+							min-width: 33.3%;
 
-                        .count {
-                            &::before {
-                                content: "Кол-во";
-                            }
-                        }
+							&::before {
+								display: block;
+								margin-bottom: 0.4rem;
+								color: $color_table_header_title;
+								font-size: 0.8rem;
+							}
+						}
 
-                        .cost {
-                            &::before {
-                                content: "Цена";
-                                font-weight: 500;
-                            }
-                        }
+						.count {
+							&::before {
+								content: "Кол-во";
+							}
+						}
 
-                        .money {
-                            font-weight: 500;
+						.cost {
+							&::before {
+								content: "Цена";
+								font-weight: 500;
+							}
+						}
 
-                            &::before {
-                                content: "Общ. стоим.";
-                            }
-                        }
+						.money {
+							font-weight: 500;
 
-                        .coin {
-                            font-weight: 500;
+							&::before {
+								content: "Общ. стоим.";
+							}
+						}
 
-                            &::before {
-                                content: "Монета";
-                            }
-                        }
-                    }
+						.coin {
+							font-weight: 500;
 
-                    .money {
-                        color: $color_black_title;
-                        font-weight: 600;
-                    }
+							&::before {
+								content: "Монета";
+							}
+						}
+					}
 
-                    .coin {
-                        color: $color_grey;
+					.money {
+						color: $color_black_title;
+						font-weight: 600;
+					}
 
-                        strong {
-                            font-weight: 600;
-                            color: $color_black_main;
-                        }
-                    }
-                }
+					.coin {
+						color: $color_grey;
 
-                &-operation {
-                    min-width: 10%;
-                    display: flex;
-                    justify-content: space-evenly;
+						strong {
+							font-weight: 600;
+							color: $color_black_main;
+						}
+					}
+				}
 
-                    .operate {
+				&-operation {
+					min-width: 10%;
+					display: flex;
+					justify-content: space-evenly;
 
-                        @media ($media_sm) {
-                            height: 2.2rem;
-                            width: 2.2rem;
-                            border: 1px solid $color_block_border;
-                            border-radius: 0.4rem;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            margin-top: 0.9rem;
+					.operate {
 
-                            &:first-child {
-                                margin-right: 0.8rem;
-                            }
-                        }
+						@media ($media_sm) {
+							height: 2.2rem;
+							width: 2.2rem;
+							border: 1px solid $color_block_border;
+							border-radius: 0.4rem;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							margin-top: 0.9rem;
 
-                        svg {
-                            stroke: lighten($color_blue, 15%);
-                            width: 1.3rem;
-                            height: 1.3rem;
-                            cursor: pointer;
-    
-                            &:hover {
-                                stroke: $color_blue;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+							&:first-child {
+								margin-right: 0.8rem;
+							}
+						}
 
-    .pagination {
-        margin-top: 1.5rem;
+						svg {
+							stroke: lighten($color_blue, 15%);
+							width: 1.3rem;
+							height: 1.3rem;
+							cursor: pointer;
 
-        @media ($media_sm) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+							&:hover {
+								stroke: $color_blue;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
-        ul {
-            margin-right: 1.8rem;
+	.pagination {
+		margin-top: 1.5rem;
 
-            @media ($media_sm) {
-                margin: 0 0 1rem 0;
-            }
-        }
-    }
+		@media ($media_sm) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		ul {
+			margin-right: 1.8rem;
+
+			@media ($media_sm) {
+				margin: 0 0 1rem 0;
+			}
+		}
+	}
 }
