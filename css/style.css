@@ -5820,10 +5820,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   color: #3E54D8;
 }
 
-.dividends__item {
-  margin-top: 3.35rem;
-}
-
 .dividends .period {
   font-size: 0.9rem;
   display: flex;
@@ -6263,6 +6259,15 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .dividends .strategyCards-card-content-info-item span {
   font-weight: 600;
   color: #24252E;
+}
+
+.dividends__item {
+  margin-top: 3.35rem;
+}
+
+.dividends__item--payout-dynamics .highcharts-point {
+  display: block;
+  opacity: 1;
 }
 
 .statTable {
