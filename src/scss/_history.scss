@@ -1,265 +1,262 @@
 .myStrategy-history-container {
 
-	&.crypt {
+    &.crypt {
 
-		.table {
+        .table {
 
-			&-header {
+            &-header {
 
-				h5 {
-					min-width: 21%;
-				}
-			}
+                h5 {
+                    min-width: 21%;
+                }
+            }
 
-			&-content {
+            &-content {
 
-				&-item {
+                &-item {
 
-					&-info,
-					&-nums {
-						display: flex;
-						min-width: 42%;
+                    &-info, &-nums {
+                        display: flex;
+                        min-width: 42%;
+    
+                        span {
+                            min-width: 50%;
+                        }
 
-						span {
-							min-width: 50%;
-						}
+                        .cost {
+                            font-weight: 600;
+                        }
+                    }
 
-						.cost {
-							font-weight: 600;
-						}
-					}
+                    &-info {
+                        @media ($media_sm) {
+                            min-width: calc(100% + 3rem);
+                        }
+                    }
 
-					&-info {
-						@media ($media_sm) {
-							min-width: calc(100% + 3rem);
-						}
-					}
+                    &-nums {
+                        @media ($media_sm) {
+                            min-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-					&-nums {
-						@media ($media_sm) {
-							min-width: 100%;
-						}
-					}
-				}
-			}
-		}
-	}
+    .table {
 
-	.table {
-		//overflow: hidden;
+        &-header {
 
-		&-header {
+            h5 {
+                min-width: 14%;
+            }
+        }
 
-			h5 {
-				min-width: 14%;
-			}
-		}
+        &-content {
 
-		&-content {
+            &-item {
+                padding: .9rem 1.5rem;
+                align-items: center;
+                border-bottom: 1px solid $color_block_border;
 
-			&-item {
-				padding: .9rem 1.5rem;
-				align-items: center;
-				border-bottom: 1px solid $color_block_border;
+                @media ($media_sm) {
+                    padding: 0 1.5rem .9rem 1.5rem;
+                    align-items: center;
+                    border-bottom: none;
+                    border: none;
 
-				@media ($media_sm) {
-					padding: 0 1.5rem .9rem 1.5rem;
-					align-items: center;
-					border-bottom: none;
-					border: none;
+                    &:hover {
+                        box-shadow: unset;
+                        border: none;
+                    }
 
-					&:hover {
-						box-shadow: unset;
-						border: none;
-					}
+                    &:last-child {
+                        border-bottom: 1px solid $color_block_border;
+                    }
+                }
 
-					&:last-child {
-						border-bottom: 1px solid $color_block_border;
-					}
-				}
+                &-info, &-nums {
+                    display: flex;
+                    min-width: 42%;
 
-				&-info,
-				&-nums {
-					display: flex;
-					min-width: 42%;
+                    span {
+                        min-width: 33.3%;
+                    }
+                }
 
-					span {
-						min-width: 33.3%;
-					}
-				}
+                &-info {
 
-				&-info {
+                    @media ($media_sm) {
+                        min-width: calc(100% + 3rem);
+                        margin-left: calc(-1.5rem);
+                        padding: 1rem 1.5rem;
+                        border-top: 1px solid $color_block_border;
+                        border-bottom: 1px solid $color_block_border;
+                        background-color: $color_table_header;
 
-					@media ($media_sm) {
-						min-width: calc(100% + 3rem);
-						margin-left: calc(-1.5rem);
-						padding: 1rem 1.5rem;
-						border-top: 1px solid $color_block_border;
-						border-bottom: 1px solid $color_block_border;
-						background-color: $color_table_header;
+                        span {
+                            min-width: 33.3%;
+                        }
 
-						span {
-							min-width: 33.3%;
-						}
+                        .date {
+                            order: 1;
+                        }
 
-						.date {
-							order: 1;
-						}
+                        .name {
+                            order: 2;
+                        }
 
-						.name {
-							order: 2;
-						}
+                        .operation {
+                            order: 3;
+                        }
+                    }
 
-						.operation {
-							order: 3;
-						}
-					}
+                    .operation {
 
-					.operation {
+                        strong {
+                            font-size: 0.8rem;
+                            color: $color_white;
+                            padding: 0.3rem 0.7rem;
+                            background-color: $color_grey;
+                            font-weight: 600;
+                            border-radius: 0.5rem;
+                        }
 
-						strong {
-							font-size: 0.8rem;
-							color: $color_white;
-							padding: 0.3rem 0.7rem;
-							background-color: $color_grey;
-							font-weight: 600;
-							border-radius: 0.5rem;
-						}
+                        &.success {
+                            strong {
+                                background-color: $color_green;
+                            }
+                        }
 
-						&.success {
-							strong {
-								background-color: $color_green;
-							}
-						}
+                        &.error {
+                            strong {
+                                background-color: $color_red;
+                            }
+                        }
+                    }
 
-						&.error {
-							strong {
-								background-color: $color_red;
-							}
-						}
-					}
+                    .name {
+                        font-weight: 600;
+                        color: $color_blue;
+                    }
+                }
 
-					.name {
-						font-weight: 600;
-						color: $color_blue;
-					}
-				}
+                &-nums {
 
-				&-nums {
+                    @media ($media_sm) {
+                        min-width: 100%;
+                        margin-top: 0.9rem;
 
-					@media ($media_sm) {
-						min-width: 100%;
-						margin-top: 0.9rem;
+                        span {
+                            min-width: 33.3%;
 
-						span {
-							min-width: 33.3%;
+                            &::before {
+                                display: block;
+                                margin-bottom: 0.4rem;
+                                color: $color_table_header_title;
+                                font-size: 0.8rem;
+                            }
+                        }
 
-							&::before {
-								display: block;
-								margin-bottom: 0.4rem;
-								color: $color_table_header_title;
-								font-size: 0.8rem;
-							}
-						}
+                        .count {
+                            &::before {
+                                content: "Кол-во";
+                            }
+                        }
 
-						.count {
-							&::before {
-								content: "Кол-во";
-							}
-						}
+                        .cost {
+                            &::before {
+                                content: "Цена";
+                                font-weight: 500;
+                            }
+                        }
 
-						.cost {
-							&::before {
-								content: "Цена";
-								font-weight: 500;
-							}
-						}
+                        .money {
+                            font-weight: 500;
 
-						.money {
-							font-weight: 500;
+                            &::before {
+                                content: "Общ. стоим.";
+                            }
+                        }
 
-							&::before {
-								content: "Общ. стоим.";
-							}
-						}
+                        .coin {
+                            font-weight: 500;
 
-						.coin {
-							font-weight: 500;
+                            &::before {
+                                content: "Монета";
+                            }
+                        }
+                    }
 
-							&::before {
-								content: "Монета";
-							}
-						}
-					}
+                    .money {
+                        color: $color_black_title;
+                        font-weight: 600;
+                    }
 
-					.money {
-						color: $color_black_title;
-						font-weight: 600;
-					}
+                    .coin {
+                        color: $color_grey;
 
-					.coin {
-						color: $color_grey;
+                        strong {
+                            font-weight: 600;
+                            color: $color_black_main;
+                        }
+                    }
+                }
 
-						strong {
-							font-weight: 600;
-							color: $color_black_main;
-						}
-					}
-				}
+                &-operation {
+                    min-width: 10%;
+                    display: flex;
+                    justify-content: space-evenly;
 
-				&-operation {
-					min-width: 10%;
-					display: flex;
-					justify-content: space-evenly;
+                    .operate {
 
-					.operate {
+                        @media ($media_sm) {
+                            height: 2.2rem;
+                            width: 2.2rem;
+                            border: 1px solid $color_block_border;
+                            border-radius: 0.4rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 0.9rem;
 
-						@media ($media_sm) {
-							height: 2.2rem;
-							width: 2.2rem;
-							border: 1px solid $color_block_border;
-							border-radius: 0.4rem;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							margin-top: 0.9rem;
+                            &:first-child {
+                                margin-right: 0.8rem;
+                            }
+                        }
 
-							&:first-child {
-								margin-right: 0.8rem;
-							}
-						}
+                        svg {
+                            stroke: lighten($color_blue, 15%);
+                            width: 1.3rem;
+                            height: 1.3rem;
+                            cursor: pointer;
+    
+                            &:hover {
+                                stroke: $color_blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-						svg {
-							stroke: lighten($color_blue, 15%);
-							width: 1.3rem;
-							height: 1.3rem;
-							cursor: pointer;
+    .pagination {
+        margin-top: 1.5rem;
 
-							&:hover {
-								stroke: $color_blue;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+        @media ($media_sm) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-	.pagination {
-		margin-top: 1.5rem;
+        ul {
+            margin-right: 1.8rem;
 
-		@media ($media_sm) {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-
-		ul {
-			margin-right: 1.8rem;
-
-			@media ($media_sm) {
-				margin: 0 0 1rem 0;
-			}
-		}
-	}
+            @media ($media_sm) {
+                margin: 0 0 1rem 0;
+            }
+        }
+    }
 }

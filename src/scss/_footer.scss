@@ -1,3 +1,4 @@
+
 // === Footer [ Стили для футера, используемые на всех страницах ] ===
 
 :root {
@@ -22,10 +23,10 @@
 
 
 	background-color: $color_white;
-	padding: 2.7rem 0;
+	padding: 2.7rem 15px;
 
 	@media ($media_sm) {
-		padding: 2.7rem 0 3rem 0;
+		padding: 2.7rem 15px 3rem;
 	}
 }
 
