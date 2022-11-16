@@ -10,6 +10,7 @@ $(document).ready(function () {
   --include("_searchInput.js")
   --include("_moveStrategy.js")
   --include("_dividendsGraph.js")
+  --include("_payoutDynamicsGraph.js") //
   --include("_inputCounter.js")
   --include("_banchGraphModern.js")
   --include("_performance.js")
