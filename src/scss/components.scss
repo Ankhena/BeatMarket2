@@ -3180,132 +3180,6 @@ $base_transition: 0.4s ease-in-out;
     }
   }
 
-  // .dividendsTarget__progress
-
-  &__progress {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-top: 3rem;
-
-    @media ($media_sm) {
-      height: 18rem;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  // .dividendsTarget__labelInfo
-
-  &__labelInfo {
-    background: $color_block_bg;
-    border: 1px solid $color_block_border;
-    box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
-    border-radius: 0.4rem;
-    padding: 0.8rem 0.9rem;
-    font-weight: 600;
-
-    display: inline-flex;
-    align-items: center;
-
-    white-space: nowrap;
-
-    @media($media_xs) {
-      font-size: 0.9rem;
-    }
-
-    svg {
-      min-width: 18px;
-      min-height: 18px;
-      margin-right: 0.6rem;
-      width: 18px;
-      height: 18px;
-    }
-
-    span {
-    }
-
-    // .dividendsTarget__labelInfo--primary
-
-    &--primary {
-      color: $color_blue;
-    }
-
-    // .dividendsTarget__labelInfo--success
-
-    &--success {
-      background-color: $color_yellow;
-      color: $color_white;
-      border-color: $color_yellow;
-    }
-
-    @media ($media_sm) {
-      margin-left: 4rem;
-    }
-
-    @media ($media_xs) {
-      margin-left: 2rem;
-    }
-  }
-
-  // .dividendsTarget__progressBar
-
-  &__progressBar {
-    position: relative;
-    height: 8px;
-    width: 100%;
-    border-radius: 4px;
-    background-color: $color_block_border;
-    margin: 0 0.9rem;
-
-    @media ($media_sm) {
-      position: absolute;
-      width: 15px;
-      height: inherit;
-      margin: 0;
-      border-radius: 8px;
-      left: 4rem;
-    }
-  }
-
-  // .dividendsTarget__progressBarTrack
-
-  &__progressBarTrack {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: var(--progressLength);
-    border-radius: 4px;
-    background-color: $color_blue;
-
-    @media ($media_sm) {
-      border-radius: 8px;
-      height: var(--progressLength);
-      width: 15px;
-    }
-
-    &--success {
-      background-color: $color_green;
-      left: var(--progressStart);
-
-      @media ($media_sm) {
-        top: var(--progressStart);
-        left: 0;
-      }
-    }
-
-    &--danger {
-      background-color: $color_red;
-      left: var(--progressStart);
-
-      @media ($media_sm) {
-        left: 0;
-        top: var(--progressStart);
-      }
-    }
-  }
 }
 
 .dividendsTarget__info {
@@ -3415,50 +3289,6 @@ $base_transition: 0.4s ease-in-out;
   }
 }
 
-.dividendsTarget__labelInfo {
-  background: $color_block_bg;
-  border: 1px solid $color_block_border;
-  box-shadow: 0 18px 16px -13px rgba(62, 84, 216, 0.22);
-  border-radius: 0.4rem;
-  padding: 0.8rem 0.9rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-
-  @media ($media_sm) {
-    //margin-left: 4rem;
-  }
-
-  @media ($media_xs) {
-    //margin-left: 2rem;
-  }
-
-  svg {
-    min-width: 18px;
-    min-height: 18px;
-    width: 18px;
-    height: 18px;
-  }
-
-  span {
-  }
-
-  // .dividendsTarget__labelInfo--primary
-
-  &--primary {
-    color: $color_blue;
-  }
-
-  // .dividendsTarget__labelInfo--success
-
-  &--success {
-    background-color: $color_yellow;
-    color: $color_white;
-    border-color: $color_yellow;
-  }
-}
-
 .dividendsTarget__progress {
   display: flex;
   align-items: center;
@@ -3480,12 +3310,9 @@ $base_transition: 0.4s ease-in-out;
   margin: 0 0.9rem;
 
   @media ($media_sm) {
-    //position: absolute;
-    //width: 15px;
-    //height: inherit;
-    //margin: 0;
-    //border-radius: 8px;
-    //left: 4rem;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
   }
 }
 
@@ -3502,6 +3329,7 @@ $base_transition: 0.4s ease-in-out;
     //border-radius: 8px;
     //height: var(--progressLength);
     //width: 15px;
+    border-radius: 0 4px 4px 0;
   }
 
   &--success {
@@ -3545,6 +3373,51 @@ $base_transition: 0.4s ease-in-out;
     top: calc(100% + 12px);
     bottom: initial;
     font-size: 14px;
+  }
+}
+
+.dividendsTarget__labelInfo {
+  background: $color_block_bg;
+  border: 1px solid $color_block_border;
+  box-shadow: 0 18px 16px -13px rgba(62, 84, 216, 0.22);
+  border-radius: 0.4rem;
+  padding: 0.8rem 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  @media ($media_sm) {
+    margin-left: 0;
+  }
+  @media($media_xs) {
+    font-size: 0.9rem;
+  }
+
+  svg {
+    min-width: 18px;
+    min-height: 18px;
+    margin-right: 0.6rem;
+    width: 18px;
+    height: 18px;
+  }
+
+  span {
+    @media ($media_sm) {
+      display: none;
+    }
+  }
+
+  // .dividendsTarget__labelInfo--primary
+  &--primary {
+    color: $color_blue;
+  }
+
+  // .dividendsTarget__labelInfo--success
+  &--success {
+    background-color: $color_yellow;
+    color: $color_white;
+    border-color: $color_yellow;
   }
 }
 
