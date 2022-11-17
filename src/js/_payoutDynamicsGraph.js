@@ -58,7 +58,7 @@ if (myPayoutDynamicsGraph !== null) {
       crosshairs: true,
       shared: true,
       useHTML: true,
-      valueSuffix: '$'
+      valueSuffix: ' USD'
     },
     plotOptions: {
       spline: {
