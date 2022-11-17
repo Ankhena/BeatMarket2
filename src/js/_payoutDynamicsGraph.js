@@ -5,7 +5,7 @@ const myPayoutDynamicsGraph = document.querySelector("#PayoutDynamicsGraph");
 
 if (myPayoutDynamicsGraph !== null) {
 
-  const myRenderGraphCategories2 = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+  const myRenderGraphCategories2 = ['2011', '2012', '2013', '2014', '2015', '2016', '2017'];
   const myRenderShowYLine2 = true; // если нужен показ верт. линий в графе, ставим true
 
   Highcharts.chart(myPayoutDynamicsGraph, {
@@ -58,7 +58,7 @@ if (myPayoutDynamicsGraph !== null) {
       crosshairs: true,
       shared: true,
       useHTML: true,
-      valueSuffix: '$'
+      valueSuffix: ' USD'
     },
     plotOptions: {
       spline: {
@@ -76,7 +76,7 @@ if (myPayoutDynamicsGraph !== null) {
         marker: {
           symbol: 'circle'
         },
-        data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
+        data: [43.00, 44.30, 45.00, 50.00, 52.00, 57.00, 59.00],
         color: "#3E54D8",
         dataLabels: [{
           enabled: true,
@@ -84,8 +84,9 @@ if (myPayoutDynamicsGraph !== null) {
           useHTML: true,
           verticalAlign: "bottom",
           style: {
-
             color: "#24252e",
+            fontWeight: "500",
+            fontSize: "15px",
           },
           format:'{y:0.2f} USD'
         }]
