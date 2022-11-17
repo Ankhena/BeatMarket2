@@ -5,7 +5,7 @@ const myPayoutDynamicsGraph = document.querySelector("#PayoutDynamicsGraph");
 
 if (myPayoutDynamicsGraph !== null) {
 
-  const myRenderGraphCategories2 = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+  const myRenderGraphCategories2 = ['2011', '2012', '2013', '2014', '2015', '2016', '2017'];
   const myRenderShowYLine2 = true; // если нужен показ верт. линий в графе, ставим true
 
   Highcharts.chart(myPayoutDynamicsGraph, {
