@@ -1482,6 +1482,10 @@ a.btn {
   padding: 2.8rem var(--section_padding) 2.8rem 1.8rem;
 }
 
+.main-menu.active ~ .main-content .main-contentPadding {
+  padding: 2.8rem 1rem 2.8rem 1rem;
+}
+
 input[type=checkbox]:checked ~ .radio_custom::before,
 input[type=checkbox]:checked ~ .checkbox_custom::before,
 input[type=radio]:checked ~ .radio_custom::before,
@@ -16594,6 +16598,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .btn_link {
     padding: 0;
     text-align: left;
+  }
+
+  .main-menu.active ~ .main-content .main-contentPadding {
+    padding: var(--section_padding);
   }
 
   .main-contentPadding {
