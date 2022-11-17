@@ -4267,38 +4267,28 @@ $base_transition: 0.4s ease-in-out;
       margin: 0 0 0 1.5rem;
     }
   }
+}
 
-  // .growthDividendPayments__header
+.growthDividendPayments__header {
+}
 
-  &__header {
-  }
+.growthDividendPayments__label {
+  width: auto;
+  padding: 0 0.67rem;
+}
 
-  // .growthDividendPayments__label
+.growthDividendPayments__text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 
-  &__label {
-    width: auto;
-    padding: 0 0.67rem;
-  }
+.growthDividendPayments__icon {
+  width: 1.34rem;
+  height: 1.34rem;
+  margin-right: 0.5rem;
+}
 
-  // .growthDividendPayments__text
-
-  &__text {
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  // .growthDividendPayments__icon
-
-  &__icon {
-    width: 1.34rem;
-    height: 1.34rem;
-    margin-right: 0.5rem;
-  }
-
-  // .growthDividendPayments__graphContainer
-
-  &__graphContainer {
-  }
+.growthDividendPayments__graphContainer {
 }
 
 .customTooltip {
