@@ -4416,10 +4416,23 @@ $base_transition: 0.4s ease-in-out;
     width: 100%;
   }
 
+	&__text {
+		margin-top: 25px;
+		max-width: 528px;
+		font-size: 0.88rem;
+		line-height: 1.6;
+	}
+
   // .premiumAccessCard__content
 
   &__content {
     padding: 4.5rem 0 4.5rem 6rem;
+
+		.baseList {
+			position: relative;
+			z-index: 2;
+			max-width: 528px;
+		}
 
     @media ($media_sm) {
       position: relative;
@@ -4429,6 +4442,7 @@ $base_transition: 0.4s ease-in-out;
 
       .baseList {
         text-align: left;
+				max-width: fit-content;
 
         li {
           font-size: 1rem;
