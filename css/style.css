@@ -11898,8 +11898,21 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin: 2.5rem auto;
 }
 
+.premiumAccessCard__text {
+  margin-top: 25px;
+  max-width: 528px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
 .premiumAccessCard__content {
   padding: 4.5rem 0 4.5rem 6rem;
+}
+
+.premiumAccessCard__content .baseList {
+  position: relative;
+  z-index: 2;
+  max-width: 528px;
 }
 
 .premiumAccessCard__title {
@@ -18536,6 +18549,9 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .premiumAccessCard__content .baseList {
     text-align: left;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
 
   .premiumAccessCard__content .baseList li {
