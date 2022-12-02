@@ -10,6 +10,7 @@ $(document).ready(function () {
   --include("_searchInput.js")
   --include("_moveStrategy.js")
   --include("_dividendsGraph.js")
+  --include("_payoutDynamicsGraph.js") //
   --include("_inputCounter.js")
   --include("_banchGraphModern.js")
   --include("_performance.js")
@@ -282,7 +283,7 @@ tabsScroll("table-scroll")
 tabsScroll("table-ticker__scroll")
 
 document.querySelector(".main-menu-btn").addEventListener("click", () => {
-  document.querySelector(".main-menu").classList.toggle("active")
+  document.querySelector(".main-menu").classList.toggle("active");
 })
 
 document.querySelectorAll('.modal-content-toggle').forEach(toggleElement => {

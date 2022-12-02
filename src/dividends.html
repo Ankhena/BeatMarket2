@@ -249,13 +249,8 @@
 
                   </section>
 
-                  <section class="dividends__item month-cash">
-                    <h3 class="month-cash__title">Ежемесячный доход</h3>
-                    <span class="month-cash__date">Янв 2021 - Янв 2022</span>
-                    <div class="month-cash__overlay">
-                      <div class="month-cash__graph" id="monthCashGraph"></div>
-                    </div>
-                  </section>
+
+                  @@include("partials/_month-cash.html")
 
                   <section class="dividends__item blockSection">
                     <div class="blockSection__header">
@@ -349,7 +344,7 @@
                             <div class="table-fixed-item-name">
                               <h5>Всего</h5>
                             </div>
-                            <div class="table-fixed-item-percent success">+32.56% <span>TTM</span></div>
+<!--                            <div class="table-fixed-item-percent success">+32.56% <span>TTM</span></div>-->
                           </div>
                         </div>
                       </div>
@@ -513,7 +508,7 @@
                     </div>
                   </section>
 
-                  <section class="dividends__item blockSection">
+                  <section class="dividends__item dividends__item--payout-dynamics blockSection">
                     <header class="blockSection__header">
                       <h3 class="blockSection__title blockSection__title--flex">
                         Динамика выплат
@@ -537,6 +532,11 @@
 
                       </h3>
 
+                      <div class="dividends__switcher">
+                        <button class="dividends__switcher-btn active">5 лет</button>
+                        <button class="dividends__switcher-btn">10 лет</button>
+                        <button class="dividends__switcher-btn">Все</button>
+                      </div>
                     </header>
 
                     <!--<div class="forecastArea blockSection blockSection&#45;&#45;card blockSection&#45;&#45;paddingMin">
@@ -613,7 +613,10 @@
                       </div>-->
 
                       <div class="blockSection__graph">
+                        <div class="stategyPromo-graph-chart mainGraphBlock" id="PayoutDynamicsGraph"></div>
+                        <!--
                         <div class="stategyPromo-graph-chart mainGraphBlock" id="demoGraph-4"></div>
+                        -->
                       </div>
 
                     </div>
@@ -634,6 +637,11 @@
                   <section class="dividends__item blockSection">
                     <header class="blockSection__header">
                       <h3 class="blockSection__title">Среднегодовое изменение выплат</h3>
+                      <div class="dividends__switcher">
+                        <button class="dividends__switcher-btn active">1 год</button>
+                        <button class="dividends__switcher-btn">5 лет</button>
+                        <button class="dividends__switcher-btn">10 лет</button>
+                      </div>
                     </header>
                     <div class="blockSection__content blockSection__content--scroll customScroll">
                       <div class="stategyPromo-graph-chart mainFactorsGraph mainFactorsGraph--grow"
