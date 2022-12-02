@@ -11138,14 +11138,43 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   text-align: center;
 }
 
-.dividendsTarget__progress {
+.dividendsTarget__detailItem .dividendsTarget__labelInfo {
+  background: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  box-shadow: 0 18px 16px -13px rgba(62, 84, 216, 0.22);
+  border-radius: 0.4rem;
+  padding: 0.8rem 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.dividendsTarget__detailItem .dividendsTarget__labelInfo svg {
+  min-width: 18px;
+  min-height: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.dividendsTarget__detailItem .dividendsTarget__labelInfo--primary {
+  color: #3E54D8;
+}
+
+.dividendsTarget__detailItem .dividendsTarget__labelInfo--success {
+  background-color: #F3B63F;
+  color: #fff;
+  border-color: #F3B63F;
+}
+
+.dividendsTarget__detailItem .dividendsTarget__progress {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 4rem;
 }
 
-.dividendsTarget__progressBar {
+.dividendsTarget__detailItem .dividendsTarget__progressBar {
   position: relative;
   height: 8px;
   width: 100%;
@@ -11154,7 +11183,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin: 0 0.9rem;
 }
 
-.dividendsTarget__progressBarTrack {
+.dividendsTarget__detailItem .dividendsTarget__progressBarTrack {
   position: absolute;
   left: 0;
   top: 0;
@@ -11164,17 +11193,17 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   background-color: #3E54D8;
 }
 
-.dividendsTarget__progressBarTrack--success {
+.dividendsTarget__detailItem .dividendsTarget__progressBarTrack--success {
   background-color: #199F27;
   left: var(--progressStart);
 }
 
-.dividendsTarget__progressBarTrack--danger {
+.dividendsTarget__detailItem .dividendsTarget__progressBarTrack--danger {
   background-color: #ED6373;
   left: var(--progressStart);
 }
 
-.dividendsTarget__progressBarDescription {
+.dividendsTarget__detailItem .dividendsTarget__progressBarDescription {
   position: absolute;
   left: var(--progressLength);
   bottom: calc(100% + 12px);
@@ -11192,7 +11221,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   white-space: nowrap;
 }
 
-.dividendsTarget__labelInfo {
+.dividendsTarget__detailItem .dividendsTarget__labelInfo {
   background: #FCFDFF;
   border: 1px solid #D3E3FF;
   box-shadow: 0 18px 16px -13px rgba(62, 84, 216, 0.22);
@@ -11204,7 +11233,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   white-space: nowrap;
 }
 
-.dividendsTarget__labelInfo svg {
+.dividendsTarget__detailItem .dividendsTarget__labelInfo svg {
   min-width: 18px;
   min-height: 18px;
   margin-right: 0.6rem;
@@ -11212,63 +11241,63 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   height: 18px;
 }
 
-.dividendsTarget__labelInfo--primary {
+.dividendsTarget__detailItem .dividendsTarget__labelInfo--primary {
   color: #3E54D8;
 }
 
-.dividendsTarget__labelInfo--success {
+.dividendsTarget__detailItem .dividendsTarget__labelInfo--success {
   background-color: #F3B63F;
   color: #fff;
   border-color: #F3B63F;
 }
 
-.dividendsTarget__progressBarDescriptionValue {
+.dividendsTarget__detailItem .dividendsTarget__progressBarDescriptionValue {
   font-weight: 700;
   color: var(--color);
 }
 
-.dividendsTarget__progressBarDescriptionValue--positive {
+.dividendsTarget__detailItem .dividendsTarget__progressBarDescriptionValue--positive {
   --color: #199F27;
   background: transparent;
 }
 
-.dividendsTarget__progressBarDescriptionValue--negative {
+.dividendsTarget__detailItem .dividendsTarget__progressBarDescriptionValue--negative {
   --color: #ED6373;
   background: transparent;
 }
 
-.pageGetPortfolio__container {
+.dividendsTarget__detailItem .pageGetPortfolio__container {
   position: relative;
   z-index: 1;
 }
 
-.pageGetPortfolio__info {
+.dividendsTarget__detailItem .pageGetPortfolio__info {
   text-align: center;
   padding-top: 1.8rem;
 }
 
-.pageGetPortfolio__title {
+.dividendsTarget__detailItem .pageGetPortfolio__title {
   font-size: 2.77rem;
   color: #24252E;
   font-weight: 700;
 }
 
-.pageGetPortfolio__primary {
+.dividendsTarget__detailItem .pageGetPortfolio__primary {
   color: #3E54D8;
 }
 
-.pageGetPortfolio__subtitle {
+.dividendsTarget__detailItem .pageGetPortfolio__subtitle {
   font-size: 1.55rem;
   color: #24252E;
   font-weight: 600;
   margin: 2.22rem 0 4.44rem 0;
 }
 
-.pageGetPortfolio__content {
+.dividendsTarget__detailItem .pageGetPortfolio__content {
   position: relative;
 }
 
-.pageGetPortfolio__content::before {
+.dividendsTarget__detailItem .pageGetPortfolio__content::before {
   content: url(../img/getPortfolio/getPortfolio_figure_1.svg);
   position: absolute;
   left: 0;
@@ -11276,7 +11305,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   transform: translate(-40%, -35%);
 }
 
-.pageGetPortfolio__content::after {
+.dividendsTarget__detailItem .pageGetPortfolio__content::after {
   content: url(../img/getPortfolio/getPortfolio_figure_2.svg);
   position: absolute;
   right: 0;
@@ -11284,39 +11313,39 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   transform: translate(70%, 25%);
 }
 
-.pageGetPortfolio__items {
+.dividendsTarget__detailItem .pageGetPortfolio__items {
   display: flex;
 }
 
-.pageGetPortfolio__item {
+.dividendsTarget__detailItem .pageGetPortfolio__item {
   flex-basis: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pageGetPortfolio__item:not(:last-child) {
+.dividendsTarget__detailItem .pageGetPortfolio__item:not(:last-child) {
   margin-right: 1.33rem;
 }
 
-.pageGetPortfolio__text {
+.dividendsTarget__detailItem .pageGetPortfolio__text {
   font-size: 1.33rem;
   font-weight: 600;
   line-height: 1.5;
   margin-left: 1.33rem;
 }
 
-.pageGetPortfolio__img {
+.dividendsTarget__detailItem .pageGetPortfolio__img {
   max-width: 3.33rem;
   height: auto;
 }
 
-.pageGetPortfolio__btn {
+.dividendsTarget__detailItem .pageGetPortfolio__btn {
   margin-top: 3rem;
   text-align: center;
 }
 
-.infoBanner {
+.dividendsTarget__detailItem .infoBanner {
   display: flex;
   align-items: center;
   padding: 0.5rem 0;
@@ -11329,7 +11358,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   z-index: 12;
 }
 
-.infoBanner__content {
+.dividendsTarget__detailItem .infoBanner__content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11337,66 +11366,66 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   width: 100%;
 }
 
-.infoBanner__icon {
+.dividendsTarget__detailItem .infoBanner__icon {
   height: 1.7rem;
   width: 1.7rem;
 }
 
-.infoBanner__text {
+.dividendsTarget__detailItem .infoBanner__text {
   font-weight: 500;
   color: #3E54D8;
   padding: 0 1.35rem 0 0.7rem;
   line-height: 1.4;
 }
 
-.infoBanner__btn {
+.dividendsTarget__detailItem .infoBanner__btn {
   font-size: 0.9rem;
   padding: 0.5rem 1.3rem;
 }
 
-.infoBanner__close {
+.dividendsTarget__detailItem .infoBanner__close {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.infoBanner__close svg {
+.dividendsTarget__detailItem .infoBanner__close svg {
   width: 1.35rem;
   height: 1.35rem;
 }
 
-.analyticCreate__header {
+.dividendsTarget__detailItem .analyticCreate__header {
   margin-bottom: 2.2rem;
 }
 
-.analyticCreate__switcher {
+.dividendsTarget__detailItem .analyticCreate__switcher {
   width: 40%;
 }
 
-.analyticCreate__searchText {
+.dividendsTarget__detailItem .analyticCreate__searchText {
   color: #24252E;
   font-weight: 600;
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
-.analyticCreate__searchInput {
+.dividendsTarget__detailItem .analyticCreate__searchInput {
   margin-top: 1.5rem;
 }
 
-.cashMoney {
+.dividendsTarget__detailItem .cashMoney {
   display: flex;
   align-items: baseline;
 }
 
-.cashMoney__title {
+.dividendsTarget__detailItem .cashMoney__title {
   font-size: 0.78rem;
   font-weight: 500;
   color: #606371;
 }
 
-.cashMoney__value {
+.dividendsTarget__detailItem .cashMoney__value {
   font-weight: 700;
   font-size: 1.35rem;
   color: #606371;
@@ -11404,37 +11433,37 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin: 0 0.9rem 0 0.7rem;
 }
 
-.cashMoney__edit {
+.dividendsTarget__detailItem .cashMoney__edit {
   display: flex;
 }
 
-.cashMoney__icon {
+.dividendsTarget__detailItem .cashMoney__icon {
   transform: translateY(0.1rem);
   stroke: #8C9BEA;
   width: 1.35rem;
   height: 1.35rem;
 }
 
-.addDividendTarget {
+.dividendsTarget__detailItem .addDividendTarget {
   padding: 0;
   background: unset;
   display: flex;
   align-items: center;
 }
 
-.addDividendTarget__icon {
+.dividendsTarget__detailItem .addDividendTarget__icon {
   width: 1.1rem;
   height: 1.1rem;
 }
 
-.addDividendTarget__title {
+.dividendsTarget__detailItem .addDividendTarget__title {
   color: #3E54D8;
   font-weight: 500;
   font-size: 0.9rem;
   margin-left: 0.875rem;
 }
 
-.mailingSlider {
+.dividendsTarget__detailItem .mailingSlider {
   position: relative;
   overflow: hidden;
   width: 35rem;
@@ -11444,7 +11473,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   padding: 1.75rem;
 }
 
-.mailingSlider::before {
+.dividendsTarget__detailItem .mailingSlider::before {
   content: "";
   position: absolute;
   width: 5rem;
@@ -11456,35 +11485,35 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   transform: translate(-50%, -50%);
 }
 
-.mailingSlider__controls {
+.dividendsTarget__detailItem .mailingSlider__controls {
   align-self: flex-end;
 }
 
-.mailingSlider__slideContent {
+.dividendsTarget__detailItem .mailingSlider__slideContent {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.mailingSlider__img {
+.dividendsTarget__detailItem .mailingSlider__img {
   max-width: 14rem;
 }
 
-.mailingSlider__img img {
+.dividendsTarget__detailItem .mailingSlider__img img {
   max-width: 100%;
 }
 
-.mailingSlider__title {
+.dividendsTarget__detailItem .mailingSlider__title {
   font-weight: 600;
   margin: 1.65rem 0 0.9rem 0;
   font-size: 1.55rem;
 }
 
-.mailingSlider__text {
+.dividendsTarget__detailItem .mailingSlider__text {
   font-weight: 500;
 }
 
-.btnGroup {
+.dividendsTarget__detailItem .btnGroup {
   display: inline-flex;
   align-items: center;
   background: #fff;
@@ -11495,7 +11524,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   padding: 0.6rem 0;
 }
 
-.btnGroup__btn {
+.dividendsTarget__detailItem .btnGroup__btn {
   background: unset;
   border: none;
   padding: 0;
@@ -11506,102 +11535,102 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   cursor: pointer;
 }
 
-.btnGroup__btn:not(:last-child) {
+.dividendsTarget__detailItem .btnGroup__btn:not(:last-child) {
   border-right: 1px solid #D3E3FF;
 }
 
-.btnGroup__btn:hover svg {
+.dividendsTarget__detailItem .btnGroup__btn:hover svg {
   stroke: #3E54D8;
 }
 
-.btnGroup__btn svg {
+.dividendsTarget__detailItem .btnGroup__btn svg {
   stroke: #8C9BEA;
   width: 1.5rem;
   height: 1.5rem;
   transition: 0.3s ease-in-out;
 }
 
-.mailing__header {
+.dividendsTarget__detailItem .mailing__header {
   position: relative;
   padding: 0.5rem 5rem 2.22rem 0;
   margin-bottom: 2.22rem;
   border-bottom: 1px solid #D3E3FF;
 }
 
-.mailing__title {
+.dividendsTarget__detailItem .mailing__title {
   font-size: 1.78rem;
   font-weight: 700;
   color: #24252E;
 }
 
-.mailing__settings {
+.dividendsTarget__detailItem .mailing__settings {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.mailing__body {
+.dividendsTarget__detailItem .mailing__body {
   display: flex;
 }
 
-.mailing__content {
+.dividendsTarget__detailItem .mailing__content {
   margin-right: 4rem;
 }
 
-.mailing__contentTitle {
+.dividendsTarget__detailItem .mailing__contentTitle {
   font-weight: 700;
   font-size: 1.33rem;
   color: #24252E;
   margin-bottom: 1.75rem;
 }
 
-.mailing__contentText {
+.dividendsTarget__detailItem .mailing__contentText {
   font-weight: 500;
   line-height: 1.5;
 }
 
-.mailing__slider {
+.dividendsTarget__detailItem .mailing__slider {
   text-align: center;
 }
 
-.mailing__slider .btn {
+.dividendsTarget__detailItem .mailing__slider .btn {
   margin-top: 1.35rem;
   padding: 1.2rem 2.5rem;
 }
 
-.mailing__alert {
+.dividendsTarget__detailItem .mailing__alert {
   margin-top: 2.22rem;
 }
 
-.togglerOrderHistory .btnShowAll {
+.dividendsTarget__detailItem .togglerOrderHistory .btnShowAll {
   border: none;
   margin: 0 !important;
 }
 
-.togglerOrderHistory .btnShowAll .btnShowAll__text {
+.dividendsTarget__detailItem .togglerOrderHistory .btnShowAll .btnShowAll__text {
   color: #373943;
 }
 
-.togglerOrderHistory .btnShowAll .btnShowAll__icon {
+.dividendsTarget__detailItem .togglerOrderHistory .btnShowAll .btnShowAll__icon {
   fill: unset;
   stroke: currentColor;
 }
 
-.togglerOrderHistory .toggleOverlay {
+.dividendsTarget__detailItem .togglerOrderHistory .toggleOverlay {
   margin-top: 1.4rem;
 }
 
-.downloadViewLink {
+.dividendsTarget__detailItem .downloadViewLink {
   display: flex;
   align-items: center;
 }
 
-.downloadViewLink__buttons {
+.dividendsTarget__detailItem .downloadViewLink__buttons {
   display: flex;
   align-items: center;
 }
 
-.downloadViewLink__button {
+.dividendsTarget__detailItem .downloadViewLink__button {
   background: unset;
   border: none;
   padding: 0;
@@ -11611,92 +11640,92 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   cursor: pointer;
 }
 
-.downloadViewLink__button:not(:last-child) {
+.dividendsTarget__detailItem .downloadViewLink__button:not(:last-child) {
   margin-right: 0.9rem;
 }
 
-.downloadViewLink__button:hover svg {
+.dividendsTarget__detailItem .downloadViewLink__button:hover svg {
   stroke: #3E54D8;
 }
 
-.downloadViewLink__button svg {
+.dividendsTarget__detailItem .downloadViewLink__button svg {
   stroke: #8C9BEA;
   width: 1.5rem;
   height: 1.5rem;
   transition: 0.3s ease-in-out;
 }
 
-.downloadViewLink__title {
+.dividendsTarget__detailItem .downloadViewLink__title {
   color: #3E54D8;
   font-weight: 500;
   margin-left: 1rem;
   line-height: 1.4;
 }
 
-.ratesOfGrowth {
+.dividendsTarget__detailItem .ratesOfGrowth {
   width: 100%;
 }
 
-.ratesOfGrowth__row {
+.dividendsTarget__detailItem .ratesOfGrowth__row {
   display: flex;
   align-items: center;
   padding: 0.7rem 0;
 }
 
-.ratesOfGrowth__row:not(:last-child) {
+.dividendsTarget__detailItem .ratesOfGrowth__row:not(:last-child) {
   border-bottom: 1px solid #D3E3FF;
 }
 
-.ratesOfGrowth__col {
+.dividendsTarget__detailItem .ratesOfGrowth__col {
   font-size: 1.11rem;
   font-weight: 600;
   color: #24252E;
   flex-basis: 100%;
 }
 
-.ratesOfGrowth__col--title {
+.dividendsTarget__detailItem .ratesOfGrowth__col--title {
   font-size: 0.78rem;
   color: #373943;
 }
 
-.ratesOfGrowth__col--success {
+.dividendsTarget__detailItem .ratesOfGrowth__col--success {
   color: #199F27;
 }
 
-.ratesOfGrowth__col--danger {
+.dividendsTarget__detailItem .ratesOfGrowth__col--danger {
   color: #ED6373;
 }
 
-.growthDividendPayments {
+.dividendsTarget__detailItem .growthDividendPayments {
   background-color: #F5F6FD;
   padding: 1.33rem 0 1.77rem 0;
 }
 
-.growthDividendPayments .blockSection__dividendStatus {
+.dividendsTarget__detailItem .growthDividendPayments .blockSection__dividendStatus {
   margin-bottom: 0.8rem;
 }
 
-.growthDividendPayments .blockSection__dividendStatusList {
+.dividendsTarget__detailItem .growthDividendPayments .blockSection__dividendStatusList {
   flex-wrap: wrap;
 }
 
-.growthDividendPayments__label {
+.dividendsTarget__detailItem .growthDividendPayments__label {
   width: auto;
   padding: 0 0.67rem;
 }
 
-.growthDividendPayments__text {
+.dividendsTarget__detailItem .growthDividendPayments__text {
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.growthDividendPayments__icon {
+.dividendsTarget__detailItem .growthDividendPayments__icon {
   width: 1.34rem;
   height: 1.34rem;
   margin-right: 0.5rem;
 }
 
-.customTooltip__label {
+.dividendsTarget__detailItem .customTooltip__label {
   background-color: #D3E3FF;
   color: #3E54D8 !important;
   border-radius: 0.5rem;
@@ -11705,53 +11734,53 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   font-weight: 600 !important;
 }
 
-.customTooltip__key {
+.dividendsTarget__detailItem .customTooltip__key {
   margin-bottom: 0 !important;
   width: 50px;
 }
 
-.customTooltip__item {
+.dividendsTarget__detailItem .customTooltip__item {
   display: flex;
   align-items: center;
 }
 
-.customTooltip__item:not(:last-child) {
+.dividendsTarget__detailItem .customTooltip__item:not(:last-child) {
   margin-bottom: 0.4rem;
 }
 
-.customTooltip__value {
+.dividendsTarget__detailItem .customTooltip__value {
   color: #24252E;
   font-weight: 600;
 }
 
-.customTooltip__value.success {
+.dividendsTarget__detailItem .customTooltip__value.success {
   color: #199F27;
 }
 
-.customTooltip__value.secondary {
+.dividendsTarget__detailItem .customTooltip__value.secondary {
   color: #929398;
 }
 
-.customTooltip__title {
+.dividendsTarget__detailItem .customTooltip__title {
   font-size: 1rem;
   font-weight: 600;
   color: #24252E;
 }
 
-.customTooltip__title span {
+.dividendsTarget__detailItem .customTooltip__title span {
   font-size: 0.9rem;
   color: #929398;
   margin-left: 0.2rem;
 }
 
-.customTooltip__subtitle {
+.dividendsTarget__detailItem .customTooltip__subtitle {
   font-size: 1rem;
   font-weight: 600;
   color: #24252E;
   margin: 0.8rem 0;
 }
 
-.customTooltip__grid {
+.dividendsTarget__detailItem .customTooltip__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 1.2rem;
@@ -11759,22 +11788,22 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-top: 0.4rem;
 }
 
-.customTooltip__percent {
+.dividendsTarget__detailItem .customTooltip__percent {
   color: var(--color, #24252E);
   font-weight: 600;
 }
 
-.customTooltip__percent--positive {
+.dividendsTarget__detailItem .customTooltip__percent--positive {
   --color: #199F27;
   background: transparent;
 }
 
-.customTooltip__percent--negative {
+.dividendsTarget__detailItem .customTooltip__percent--negative {
   --color: #ED6373;
   background: transparent;
 }
 
-.baseList li {
+.dividendsTarget__detailItem .baseList li {
   position: relative;
   color: #24252E;
   font-size: 0.88rem;
@@ -11782,7 +11811,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   padding-left: 1rem;
 }
 
-.baseList li::before {
+.dividendsTarget__detailItem .baseList li::before {
   position: absolute;
   content: "";
   left: 0;
@@ -11793,81 +11822,81 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   background-color: #3E54D8;
 }
 
-.baseList li:not(:last-child) {
+.dividendsTarget__detailItem .baseList li:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.advisorRateList__text {
+.dividendsTarget__detailItem .advisorRateList__text {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 1.7rem;
 }
 
-.advisorRateList__block .prompt-subscribe:not(:last-child) {
+.dividendsTarget__detailItem .advisorRateList__block .prompt-subscribe:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.advisorRateList .prompt {
+.dividendsTarget__detailItem .advisorRateList .prompt {
   border: none;
   margin: 0;
   padding: 0 0 0 3.5rem;
 }
 
-.advisorRateList .prompt a {
+.dividendsTarget__detailItem .advisorRateList .prompt a {
   font-weight: 600;
   color: #3E54D8;
   text-decoration: none;
 }
 
-.advisorRateList .prompt::before {
+.dividendsTarget__detailItem .advisorRateList .prompt::before {
   left: 0;
 }
 
-.advisorRateList .orderHistory__title {
+.dividendsTarget__detailItem .advisorRateList .orderHistory__title {
   color: #24252E;
   line-height: 1.4;
 }
 
-.advisorRateList .tarrifsCard.softBg {
+.dividendsTarget__detailItem .advisorRateList .tarrifsCard.softBg {
   background-color: #FAFCFF;
 }
 
-.advisorRateList .btn_tarrifs {
+.dividendsTarget__detailItem .advisorRateList .btn_tarrifs {
   padding: 1.65rem;
 }
 
-.premiumAccess__header {
+.dividendsTarget__detailItem .premiumAccess__header {
   text-align: center;
   margin-bottom: 2.5rem;
 }
 
-.premiumAccess__title {
+.dividendsTarget__detailItem .premiumAccess__title {
   line-height: 1.2;
   font-size: 3rem;
   color: #24252E;
 }
 
-.premiumAccess__body .tarrifsCard {
+.dividendsTarget__detailItem .premiumAccess__body .tarrifsCard {
   max-width: 1100px;
   margin: 0 auto 2rem auto;
 }
 
-.premiumAccess__body .tarrifsCard .btnShowAll {
+.dividendsTarget__detailItem .premiumAccess__body .tarrifsCard .btnShowAll {
   margin: 0 0 1rem 0;
 }
 
-.premiumAccess__body .tarrifsCard .modal-content-papers {
+.dividendsTarget__detailItem .premiumAccess__body .tarrifsCard .modal-content-papers {
   width: 60%;
   margin-bottom: 1.5rem;
 }
 
-.premiumAccess__body .tarrifsCard .label_modal {
+.dividendsTarget__detailItem .premiumAccess__body .tarrifsCard .label_modal {
   display: inline-block;
   margin-bottom: 0.7rem;
 }
 
-.premiumAccess__footerText {
+.dividendsTarget__detailItem .premiumAccess__footerText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11877,11 +11906,126 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   font-weight: 500;
 }
 
-.premiumAccess__footerText span {
+.dividendsTarget__detailItem .premiumAccess__footerText span {
   font-size: 0.89rem;
 }
 
-.premiumAccess__footerText a {
+.dividendsTarget__detailItem .premiumAccess__footerText a {
+  text-decoration: none;
+  color: #3E54D8;
+  font-size: 1rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal {
+  padding: 2.5rem 4.44rem;
+  width: 40rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-header {
+  padding: 0;
+  display: block;
+  text-align: center;
+  line-height: 1.3;
+  color: #3E54D8;
+  margin-bottom: 2.7rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-header h2 {
+  text-align: center;
+  line-height: 1.3;
+  color: #3e54d8;
+  margin-bottom: 0.6rem;
+  opacity: 1;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-header h3 {
+  color: #ED6373;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content {
+  padding: 0;
+  margin: 0;
+  overflow: unset;
+  max-height: min(70vh, 38rem);
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group:not(:first-child) {
+  margin-top: 1.1rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-label h4 {
+  color: #24252E;
+  font-weight: 500;
+  margin-right: 0.7rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-label span {
+  font-size: 0.8rem;
+  color: #929398;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-input.icon {
+  position: relative;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-input.icon .input_text {
+  padding: 0.8rem 2.5rem 0.8rem 1.3rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-input.icon svg {
+  position: absolute;
+  width: 1.2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  stroke: #8C9BEA;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-input.icon .modal-content-group-input.icon .input_text ~ .eye_close {
+  display: none;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-message {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-group-message span {
+  font-size: 0.8rem;
+  color: #ED6373;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-btn {
+  display: flex;
+  margin-top: 1.8rem;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-btn .btn {
+  width: 100%;
+  padding: 1.4rem 0;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-link {
+  margin-top: 1.8rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.dividendsTarget__detailItem .premiumAccess__modal .modal-content-link strong {
+  cursor: pointer;
+  color: #3E54D8;
+  font-weight: 600;
+}
+
+.dividendsTarget__detailItem .premiumAccess a {
   text-decoration: none;
   color: #3E54D8;
   font-size: 1rem;
@@ -15542,11 +15686,11 @@ body.viewProfile .header-controls-links-link.auth span {
     cursor: pointer;
   }
 
-  .infoBanner__close {
+  .dividendsTarget__detailItem .infoBanner__close {
     cursor: pointer;
   }
 
-  .cashMoney__edit {
+  .dividendsTarget__detailItem .cashMoney__edit {
     cursor: pointer;
   }
 
@@ -15813,20 +15957,20 @@ body.viewProfile .header-controls-links-link.auth span {
     width: 100%;
   }
 
-  .pageGetPortfolio__content::before,
-  .pageGetPortfolio__content::after {
+  .dividendsTarget__detailItem .pageGetPortfolio__content::before,
+  .dividendsTarget__detailItem .pageGetPortfolio__content::after {
     content: none;
   }
 
-  .analyticCreate__switcher {
+  .dividendsTarget__detailItem .analyticCreate__switcher {
     width: 50%;
   }
 
-  .mailingSlider {
+  .dividendsTarget__detailItem .mailingSlider {
     width: 32rem;
   }
 
-  .mailing__content {
+  .dividendsTarget__detailItem .mailing__content {
     margin-right: 2rem;
   }
 
@@ -18379,160 +18523,160 @@ body.viewProfile .header-controls-links-link.auth span {
     padding: 0.8rem 1.75rem;
   }
 
-  .dividendsTarget__detailItem:not(:last-child) {
+  .dividendsTarget__detailItem .dividendsTarget__labelInfo:not(:last-child) {
     margin-bottom: 1.5rem;
   }
 
-  .dividendsTarget__progress {
+  .dividendsTarget__detailItem .dividendsTarget__progress {
     margin-top: 2rem;
     margin-bottom: 4.5rem;
   }
 
-  .dividendsTarget__progressBar {
+  .dividendsTarget__detailItem .dividendsTarget__progressBar {
     margin-left: 0;
     margin-right: 0;
     border-radius: 0;
   }
 
-  .dividendsTarget__progressBarTrack {
+  .dividendsTarget__detailItem .dividendsTarget__progressBarTrack {
     border-radius: 0 4px 4px 0;
   }
 
-  .dividendsTarget__progressBarTrack--success {
+  .dividendsTarget__detailItem .dividendsTarget__progressBarTrack--success {
     top: var(--progressStart);
     left: 0;
   }
 
-  .dividendsTarget__progressBarTrack--danger {
+  .dividendsTarget__detailItem .dividendsTarget__progressBarTrack--danger {
     left: 0;
     top: var(--progressStart);
   }
 
-  .dividendsTarget__progressBarDescription {
+  .dividendsTarget__detailItem .dividendsTarget__progressBarDescription {
     left: 50%;
     top: calc(100% + 12px);
     bottom: initial;
     font-size: 14px;
   }
 
-  .dividendsTarget__labelInfo {
+  .dividendsTarget__detailItem .dividendsTarget__labelInfo {
     margin-left: 0;
   }
 
-  .dividendsTarget__labelInfo span {
+  .dividendsTarget__detailItem .dividendsTarget__labelInfo span {
     display: none;
   }
 
-  .dividendsTarget__progressBarDescriptionValue {
+  .dividendsTarget__detailItem .dividendsTarget__progressBarDescriptionValue {
     display: block;
   }
 
-  .pageGetPortfolio__info {
+  .dividendsTarget__detailItem .pageGetPortfolio__info {
     padding-top: 0;
   }
 
-  .pageGetPortfolio__title {
+  .dividendsTarget__detailItem .pageGetPortfolio__title {
     font-size: 2.1rem;
     line-height: 1.3;
   }
 
-  .pageGetPortfolio__subtitle {
+  .dividendsTarget__detailItem .pageGetPortfolio__subtitle {
     margin: 1.5rem 0 3rem 0;
     font-size: 1.2rem;
     line-height: 1.3;
   }
 
-  .pageGetPortfolio__items {
+  .dividendsTarget__detailItem .pageGetPortfolio__items {
     flex-direction: column;
   }
 
-  .pageGetPortfolio__item {
+  .dividendsTarget__detailItem .pageGetPortfolio__item {
     justify-content: start;
   }
 
-  .pageGetPortfolio__item:not(:last-child) {
+  .dividendsTarget__detailItem .pageGetPortfolio__item:not(:last-child) {
     margin: 0 0 1.5rem 0;
   }
 
-  .pageGetPortfolio__text {
+  .dividendsTarget__detailItem .pageGetPortfolio__text {
     font-size: 1.2rem;
   }
 
-  .infoBanner__content {
+  .dividendsTarget__detailItem .infoBanner__content {
     justify-content: start;
   }
 
-  .infoBanner__text {
+  .dividendsTarget__detailItem .infoBanner__text {
     width: 55%;
   }
 
-  .infoBanner__btn {
+  .dividendsTarget__detailItem .infoBanner__btn {
     padding: 0.5rem 1.3rem;
     width: auto;
   }
 
-  .analyticCreate__switcher {
+  .dividendsTarget__detailItem .analyticCreate__switcher {
     width: 100%;
   }
 
-  .mailingSlider {
+  .dividendsTarget__detailItem .mailingSlider {
     width: 100%;
     padding: 1rem;
   }
 
-  .mailingSlider__controls {
+  .dividendsTarget__detailItem .mailingSlider__controls {
     margin-bottom: 1rem;
   }
 
-  .mailingSlider__img {
+  .dividendsTarget__detailItem .mailingSlider__img {
     width: 80%;
   }
 
-  .mailingSlider__title {
+  .dividendsTarget__detailItem .mailingSlider__title {
     font-size: 1.3rem;
   }
 
-  .mailing__header {
+  .dividendsTarget__detailItem .mailing__header {
     padding: 0 0 1.5rem 0;
     margin-bottom: 1.5rem;
   }
 
-  .mailing__title {
+  .dividendsTarget__detailItem .mailing__title {
     font-size: 1.35rem;
     text-align: center;
     line-height: 1.5;
   }
 
-  .mailing__settings {
+  .dividendsTarget__detailItem .mailing__settings {
     right: -1.66rem;
     top: -7rem;
   }
 
-  .mailing__body {
+  .dividendsTarget__detailItem .mailing__body {
     flex-direction: column;
   }
 
-  .mailing__content {
+  .dividendsTarget__detailItem .mailing__content {
     margin: 0 0 2rem 0;
   }
 
-  .mailing__contentTitle {
+  .dividendsTarget__detailItem .mailing__contentTitle {
     font-size: 1.2rem;
   }
 
-  .mailing__slider .btn {
+  .dividendsTarget__detailItem .mailing__slider .btn {
     padding: 1.2rem 0;
   }
 
-  .growthDividendPayments .blockSection__dividendStatusList {
+  .dividendsTarget__detailItem .growthDividendPayments .blockSection__dividendStatusList {
     margin: 0 0 0 1.5rem;
   }
 
-  .premiumAccess__title {
+  .dividendsTarget__detailItem .premiumAccess__title {
     font-size: 1.7rem;
   }
 
-  .premiumAccess__body .tarrifsCard .modal-content-papers {
+  .dividendsTarget__detailItem .premiumAccess__body .tarrifsCard .modal-content-papers {
     width: 100%;
   }
 
@@ -19254,11 +19398,11 @@ body.viewProfile .header-controls-links-link.auth span {
     max-width: 363px;
   }
 
-  .dividendsTarget__labelInfo {
+  .dividendsTarget__detailItem .dividendsTarget__labelInfo {
     font-size: 0.9rem;
   }
 
-  .advisorRateList .orderHistory__title {
+  .dividendsTarget__detailItem .advisorRateList .orderHistory__title {
     max-width: 16rem;
   }
 

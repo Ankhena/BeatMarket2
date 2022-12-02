@@ -1153,6 +1153,78 @@
   </div>
 </div>
 
+	<div class="modal premiumAccess__modal" id="modal_reg">
+	<div class="modal-header">
+		<h2>Зарегистрироваться</h2>
+		<h3>Для подписки за 1 рубль укажите код купона в поле для купона после авторизации</h3>
+	</div>
+	<form class="modal-content" method="post" action="https://dev.beatmarket.one/registration" id="registerForm">
+		<input type="hidden" name="_token" value="HB25XjND31xRzcvqNNPByj40Bl2Sykk71ZWWUvPe">
+		<input type="hidden" name="localTimeZone" value="3" id="localTimeZoneRegister">
+		<input type="hidden" name="tariff_id_register" value="4" id="tariff_id_register">
+		<input type="hidden" name="tariff_auth_amount" value="1" id="tariff_auth_amount">
+
+		<div class="modal-content-group">
+			<div class="modal-content-group-label">
+				<h4>E-mail</h4>
+				<span>На этот адрес мы отправим письмо с подтверждением</span>
+			</div>
+			<div class="modal-content-group-input">
+				<input name="email" type="email" placeholder="beatmarket@one.com" class="input_text">
+			</div>
+			<div class="modal-content-group-message">
+				<span>Введите корректный E-mail</span>
+			</div>
+		</div>
+		<div class="modal-content-group">
+			<div class="modal-content-group-label">
+				<h4>Пароль</h4>
+				<span>Минимум 6 символов</span>
+			</div>
+			<div class="modal-content-group-input icon">
+				<input name="password" type="password" class="input_text">
+				<svg class="eye eye_open">
+					<use xlink:href="./img/main.svg#eye"></use>
+				</svg>
+				<svg class="eye eye_close">
+					<use xlink:href="./img/main.svg#eye_slash"></use>
+				</svg>
+			</div>
+			<div class="modal-content-group-message">
+				<span>Это поле обязательно для заполнения</span>
+			</div>
+		</div>
+		<div class="modal-content-group">
+			<div class="modal-content-group-label">
+				<h4>Повторите пароль</h4>
+			</div>
+			<div class="modal-content-group-input icon">
+				<input name="password_confirmation" type="password" class="input_text">
+				<svg class="eye eye_open">
+					<use xlink:href="./img/main.svg#eye"></use>
+				</svg>
+				<svg class="eye eye_close">
+					<use xlink:href="./img/main.svg#eye_slash"></use>
+				</svg>
+			</div>
+			<div class="modal-content-group-message">
+				<span>Это поле обязательно для заполнения</span>
+			</div>
+		</div>
+		<div class="modal-content-group">
+			<div class="modal-content-group-error">
+				<p>Не все обязательные поля заполнены</p>
+			</div>
+		</div>
+		<div class="modal-content-btn">
+			<button class="btn btn_blue">Зарегистрироваться</button>
+		</div>
+		<div class="modal-content-link">
+			<span>Уже есть аккаунт? <strong data-changemodal="modal_auth">Авторизироваться</strong></span>
+		</div>
+	</form>
+</div>
+
 <!-- <div class="modal" id="modal_settings">
     <div class="modal-header">
         <h2>Настройки</h2>
