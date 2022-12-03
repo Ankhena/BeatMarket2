@@ -2726,6 +2726,70 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   z-index: 21;
 }
 
+.modal.chooseCountry .modal-header {
+  margin-bottom: 40px;
+}
+
+.modal.chooseCountry .modal-content {
+  overflow: initial;
+}
+
+.modal.chooseCountry .inputSelect__container {
+  background-color: #FCFDFF;
+}
+
+.modal.chooseCountry .inputSelect__row {
+  display: flex;
+  align-items: center;
+}
+
+.modal.chooseCountry .inputSelect__row .inputSelect__choose {
+  padding-left: 0.8rem;
+}
+
+.modal.chooseCountry .inputSelect__dropdown {
+  overflow-y: auto;
+  min-height: 100px;
+  height: 39vh;
+  max-height: 408px;
+}
+
+@supports (height: clamp(100px, 39vh, 407px)) {
+  .modal.chooseCountry .inputSelect__dropdown {
+    height: clamp(100px, 39vh, 407px);
+  }
+}
+
+.modal.chooseCountry .inputSelect__dropdown::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.modal.chooseCountry .inputSelect__dropdown::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
+}
+
+.modal.chooseCountry .inputSelect__dropdown::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.modal.chooseCountry .inputSelect__letter {
+  font-weight: 700;
+  font-size: 24px;
+  color: #3E54D8;
+  display: inline;
+}
+
+.modal.chooseCountry .inputSelect__choose::before,
+.modal.chooseCountry .inputSelect__choose::after {
+  display: none;
+}
+
+.modal.chooseCountry .modal-content-buttons .btn {
+  flex-basis: 100%;
+}
+
 .modal.visible {
   top: 50%;
 }
