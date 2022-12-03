@@ -26,6 +26,75 @@
   transition: 0.3s ease-in-out;
   z-index: 21;
 
+	&.chooseCountry {
+
+		.modal-header {
+			margin-bottom: 40px;
+		}
+
+		.modal-content {
+			overflow: initial;
+		}
+
+		.inputSelect__container {
+			background-color: #FCFDFF;
+		}
+
+		.inputSelect__row {
+			display: flex;
+			align-items: center;
+
+			.inputSelect__choose {
+				padding-left: 0.8rem;
+			}
+		}
+
+		.inputSelect__dropdown {
+			overflow-y: auto;
+			min-height: 100px;
+			height: 39vh;
+			max-height: 408px;
+
+			@supports (height: clamp(100px, 39vh, 407px)) {
+				height: clamp(100px, 39vh, 407px)
+			}
+
+			&::-webkit-scrollbar {
+				width: 6px;
+				background-color: #F5F5F5;
+			}
+			
+			&::-webkit-scrollbar-thumb {
+				background-color: #a8b2ed;
+			}
+			
+			&::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+				background-color: #F5F5F5;
+			}
+		}
+
+		.inputSelect__letter {
+			font-weight: 700;
+			font-size: 24px;
+			color: #3E54D8;
+			display: inline;
+		}
+
+		.inputSelect__choose {
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+
+		.modal-content-buttons {
+			.btn {
+				flex-basis: 100%;
+			}
+		}
+	}
+
   &.visible {
     top: 50%;
   }
