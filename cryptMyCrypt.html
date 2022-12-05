@@ -1249,7 +1249,57 @@
     </div>
   </div>
 </div>
-
+<div class="modal" id="stategyPromo-graph-info-content_settings">
+	<div class="modal-header">
+		<h2>Настройки графика</h2>
+		<svg data-closeModal>
+			<use xlink:href="img/main.svg#icon-closeModal"></use>
+		</svg>
+	</div>
+	<div class="modal-content">
+		<div class="modal-content-input use_mt_first">
+			<label class="label_modal">Отображать стратегии</label>
+			<select>
+				<option selected value="SP 500">Стратегии (2)</option>
+				<option value="Nasdaq">Стратегии (1)</option>
+				<option value="Dow Jones">Стратегии (3)</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Сравнивать с индексом</label>
+			<select>
+				<option selected value="SP 500">Не сравнивать</option>
+				<option value="Nasdaq">Сравнивать</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Период по умолчанию</label>
+			<div class="modal-content-switcher-button">
+				<label>
+					<input type="radio" name="switcherPaybackWhat" class="visually_hidden">
+					<span>Неделя</span>
+				</label>
+				<label>
+					<input type="radio" name="switcherPaybackWhat" class="visually_hidden" checked="">
+					<span>Месяц</span>
+				</label>
+				<label>
+					<input type="radio" name="switcherPaybackWhat" class="visually_hidden">
+					<span>Год</span>
+				</label>
+			</div>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="selectDropdown-item">
+				<input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+				<span class="checkbox_custom">С учетом дивидендов</span>
+			</label>
+		</div>
+		<div class="modal-content-buttons full use_mt">
+			<button class="btn btn_blue" data-closeModal>Сохранить настройки</button>
+		</div>
+	</div>
+</div>
 <div class="modal" id="stategyPromo-graph-info-content_settings-2">
 	<div class="modal-header">
 		<h2>Настройки портфеля</h2>
@@ -1267,7 +1317,7 @@
 			</select>
 		</div>
 		<div class="modal-content-input use_mt">
-			<label class="label_modal"><span>Расчет общего дохода</span>
+			<label class="label_modal flex"><span>Расчет общего дохода</span>
 				<div class="paperDontTrade">
 					<svg class="paperDontTrade__icon table-fixed-item-name__icon">
 						<use xlink:href="img/main.svg#icon-WarningCircle"></use>

@@ -2790,6 +2790,21 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   flex-basis: 100%;
 }
 
+.modal .paperDontTrade {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  position: static;
+}
+
+.modal .paperDontTrade__popup {
+  max-width: 99%;
+  left: 36%;
+  overflow: auto;
+  bottom: -12%;
+  transform: translateY(0);
+}
+
 .modal.visible {
   top: 50%;
 }
@@ -2798,6 +2813,11 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   display: inline-block;
   color: #929398;
   margin-bottom: 0.6rem;
+}
+
+.modal .label_modal.flex {
+  display: flex;
+  align-items: center;
 }
 
 .modal .use_mt {
@@ -16979,6 +16999,11 @@ body.viewProfile .header-controls-links-link.auth span {
     display: flex;
   }
 
+  .modal .paperDontTrade__popup {
+    left: 1%;
+    bottom: -19%;
+  }
+
   .modal .use_mt {
     margin-top: 1.4rem;
   }
@@ -19277,6 +19302,10 @@ body.viewProfile .header-controls-links-link.auth span {
   html,
   body {
     font-size: 14px;
+  }
+
+  .modal .paperDontTrade__popup {
+    bottom: -20%;
   }
 
   .modal.notify {
