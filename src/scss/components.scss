@@ -4539,9 +4539,14 @@ $base_transition: 0.4s ease-in-out;
 
 	&__text {
 		margin-top: 25px;
-		max-width: 528px;
+		max-width: 460px;
 		font-size: 0.88rem;
 		line-height: 1.6;
+
+		@media($media_sm) {
+			max-width: 100%;
+			text-align: left;
+		}
 	}
 
   // .premiumAccessCard__content
@@ -4552,7 +4557,15 @@ $base_transition: 0.4s ease-in-out;
 		.baseList {
 			position: relative;
 			z-index: 2;
-			max-width: 528px;
+			max-width: 460px;
+
+			@media($media_lg) {
+				max-width: 528px;
+			}
+
+			@media($screen_sm) {
+				max-width: 100%;
+			}
 		}
 
     @media ($media_sm) {
