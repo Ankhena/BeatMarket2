@@ -619,6 +619,60 @@
   </div>
 </div>
 
+<div class="modal" id="stategyPromo-graph-info-content_settings-2">
+	<div class="modal-header">
+		<h2>Настройки портфеля</h2>
+		<svg data-closeModal>
+			<use xlink:href="img/main.svg#icon-closeModal"></use>
+		</svg>
+	</div>
+	<div class="modal-content">
+		<div class="modal-content-input use_mt_first">
+			<label class="label_modal">Валюта</label>
+			<select>
+				<option selected value="Российский рубль">Российский рубль</option>
+				<option value="Американский доллар">Американский доллар</option>
+				<option value="Казахский тенге">Казахский тенге</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal"><span>Расчет общего дохода</span>
+				<div class="paperDontTrade">
+					<svg class="paperDontTrade__icon table-fixed-item-name__icon">
+						<use xlink:href="img/main.svg#icon-WarningCircle"></use>
+					</svg>
+					<div class="paperDontTrade__popup">
+						<p>Как будет рассчитываться поле "общий доход" в портфеле.</p>
+						<p><span>Нереализованная прибыль.</span> Показывает сколько прибыли/убытка вы получите при
+							закрытии позиции. Учитываются только
+							непроданные акции. Проданные акции списываются по методу FIFO.</p>
+						<p><span>Реализованная прибыль.</span> Показывает сколько прибыли/убытка вы уже получили.
+							Учитывает только проданные акции. Проданные
+							акции списываются по методу FIFO.</p>
+						<p><span>Общая прибыль по позиции.</span> Сумма колонокРП + НП. Другими словами сколько
+							прибыли/убытка вы уже получили от продаж плюс
+							сколько можете получить при закрытии позиции.</p>
+					</div>
+				</div>
+			</label>
+			<select>
+				<option selected value="BMS global">Реализованная прибыль</option>
+				<option value="BMS local">Нереализованная прибыль</option>
+				<option value="BMD global">Общая прибыль по позиции</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="selectDropdown-item">
+				<input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+				<span class="checkbox_custom">Показать ленту</span>
+			</label>
+		</div>
+		<div class="modal-content-buttons full use_mt">
+			<button class="btn btn_blue" data-closeModal>Сохранить настройки</button>
+		</div>
+	</div>
+</div>
+
 <div class="modal" id="modal_edit">
   <div class="modal-header">
     <h2>Редактирование сделки</h2>

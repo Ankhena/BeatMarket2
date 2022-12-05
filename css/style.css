@@ -10335,6 +10335,9 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 
 .mainPromo__settings .stategyPromo-graph-values-btn {
   display: flex;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .mainPromo__moneyInfo {
@@ -10616,6 +10619,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .promoGraphArea__content {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
 }
 
 .promoGraphArea__settings {
@@ -10641,6 +10645,8 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .promoGraphArea__chooseDate {
   height: 100%;
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .promoGraphArea__chooseDate .stategyPromo-graph-info-content-choose {
