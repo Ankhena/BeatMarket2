@@ -95,6 +95,30 @@
 		}
 	}
 
+	.paperDontTrade {
+		width: 24px;
+		height: 24px;
+		margin-left: 8px;
+		position: static;
+
+		&__popup {
+			max-width: 99%;
+			left: 36%;
+			overflow: auto;
+			bottom: -12%;
+			transform: translateY(0);
+
+			@media($media_sm) {
+				left: 1%;
+				bottom: -19%;
+			}
+
+			@media($media_xs) {
+				bottom: -20%;
+			}
+		}
+	}
+
   &.visible {
     top: 50%;
   }
@@ -103,6 +127,11 @@
     display: inline-block;
     color: $color_grey;
     margin-bottom: 0.6rem;
+
+		&.flex {
+			display: flex;
+			align-items: center;
+		}
   }
 
   .use_mt {
