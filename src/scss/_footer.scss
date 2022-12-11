@@ -1,4 +1,3 @@
-
 // === Footer [ Стили для футера, используемые на всех страницах ] ===
 
 :root {
@@ -56,6 +55,38 @@
 	@media ($media_sm) {
 		justify-self: center;
 		text-align: center;
+	}
+}
+
+.footer-together {
+
+	.footer-fin {
+		margin-top: 30px;
+	}
+}
+
+.footer-partners {
+	display: flex;
+	align-items: center;
+	padding: 17px 20px;
+	background: #FCFDFF;
+	border: 1px solid #E6EEFF;
+	border-radius: 10.9446px;
+
+	&__text {
+		font-weight: 500;
+		
+		color: #929398;
+
+		margin-right: 25px;
+	}
+
+	&__item {
+
+
+		&+& {
+			margin-left: 26px;
+		}
 	}
 }
 
