@@ -4193,6 +4193,29 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   width: 12rem;
 }
 
+.footer-together .footer-fin {
+  margin-top: 30px;
+}
+
+.footer-partners {
+  display: flex;
+  align-items: center;
+  padding: 17px 20px;
+  background: #FCFDFF;
+  border: 1px solid #E6EEFF;
+  border-radius: 10.9446px;
+}
+
+.footer-partners__text {
+  font-weight: 500;
+  color: #929398;
+  margin-right: 25px;
+}
+
+.footer-partners__item + .footer-partners__item {
+  margin-left: 26px;
+}
+
 .footer-logo-icon {
   max-width: 100%;
 }
@@ -7447,6 +7470,117 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .statTable-scoring__diagram text {
   font-size: 12px;
   font-weight: 600;
+}
+
+.arbitrary-asset__btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3E54D8;
+  margin-bottom: 20px;
+}
+
+.arbitrary-asset__btn span {
+  margin-left: 16px;
+}
+
+.arbitrary-asset .statTable__row,
+.arbitrary-asset .statTable__content {
+  width: 100% !important;
+}
+
+.arbitrary-asset .statTable .statStickerInfo__title {
+  font-size: 14px;
+}
+
+.arbitrary-asset .statTable__btns {
+  display: flex;
+  margin-top: 8px;
+}
+
+.arbitrary-asset .statTable__btns .statSubtable__button {
+  width: 87px;
+  height: 36px;
+  padding: 0.4rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.arbitrary-asset .statTable__btns .statSubtable__button:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.arbitrary-asset .statTable__btns .btn_greenInverse {
+  border: 2px solid #199F27;
+  color: #199F27;
+  background-color: #fff;
+}
+
+.arbitrary-asset .statSubtable {
+  padding-bottom: 0;
+}
+
+.arbitrary-asset .statSubtable .statStickerInfo__title {
+  font-size: 14px;
+}
+
+.arbitrary-asset .statSubtable .statTable {
+  margin: 2.2rem -1.5rem 0;
+}
+
+.arbitrary-asset .statSubtable .statTable__row,
+.arbitrary-asset .statSubtable .statTable__content {
+  width: 100% !important;
+}
+
+.arbitrary-asset .statSubtable .statTable .statTable__item--sticker {
+  align-items: start;
+}
+
+.arbitrary-asset .statSubtable .statTable .statTable__item:last-child {
+  margin-left: auto;
+  text-align: right;
+}
+
+.arbitrary-asset .statSubtable .statTable .statTable__item--sticker {
+  flex-direction: column;
+}
+
+.arbitrary-asset .statSubtable .statTable .statStickerInfo__title {
+  color: #8C9BEA;
+  white-space: nowrap;
+}
+
+.arbitrary-asset .statSubtable .statTable .statStickerInfo__title span {
+  color: #373943;
+}
+
+.arbitrary-asset .statSubtable__buttons {
+  justify-content: space-between;
+}
+
+.arbitrary-asset .statSubtable__buttons .statSubtable__button:first-child {
+  max-width: 262px;
+}
+
+.arbitrary-asset .statSubtable__buttons .statSubtable__button:last-child {
+  max-width: 253px;
+}
+
+.arbitrary-asset .delete {
+  stroke: #7e8ce5;
+  width: 1.3rem;
+  height: 1.3rem;
+  cursor: pointer;
 }
 
 .performance > div {
@@ -15004,10 +15138,6 @@ body.viewProfile .header-controls-links-link.auth span {
   gap: 16px;
 }
 
-.analyticRatings__ratings.blur {
-  filter: blur(12px);
-}
-
 .block-rating {
   display: flex;
   justify-content: space-between;
@@ -15016,6 +15146,40 @@ body.viewProfile .header-controls-links-link.auth span {
   border: 1px solid #D3E3FF;
   border-radius: 18px;
   width: 100%;
+}
+
+.block-rating.blur {
+  z-index: 1;
+  position: relative;
+  border: none;
+}
+
+.block-rating.blur .block-rating__icon {
+  display: none;
+}
+
+.block-rating.blur .block-rating__content {
+  filter: blur(12px);
+  position: relative;
+  z-index: -1;
+}
+
+.block-rating-blur {
+  position: absolute;
+  top: -5%;
+  left: 1%;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  color: #373943;
+  text-decoration: none;
+  border: 1px solid #1B2D9D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  opacity: 1;
 }
 
 .block-rating__position {
@@ -15241,6 +15405,36 @@ body.viewProfile .header-controls-links-link.auth span {
   font-weight: 500;
   color: #373943;
   padding: 0 16px;
+}
+
+.table-ticker__block.blur {
+  z-index: 1;
+  position: relative;
+}
+
+.table-ticker__block.blur .table-ticket__scoring {
+  filter: blur(6px);
+  position: relative;
+  z-index: -1;
+}
+
+.table-ticker__block-blur {
+  position: absolute;
+  top: -5%;
+  left: 21%;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  color: #373943;
+  text-decoration: none;
+  border: 1px solid #1B2D9D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  max-width: 75px;
+  opacity: 1;
 }
 
 .table-ticker__block.whnr {
@@ -15545,7 +15739,7 @@ body.viewProfile .header-controls-links-link.auth span {
   padding: 0px 32px 26.7px;
 }
 
-.table-ticker-fixed__block.blur {
+.table-ticker-fixed__block-blur {
   filter: blur(6px);
 }
 
@@ -15697,6 +15891,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .statTable--scroll .statTable__item--shrink {
     min-width: 120px;
     max-width: 120px;
+  }
+
+  .arbitrary-asset .statTable__item--grow {
+    max-width: 266px;
   }
 }
 
@@ -18085,6 +18283,30 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-right: 0;
   }
 
+  .arbitrary-asset .statTable__btns {
+    width: 100%;
+  }
+
+  .arbitrary-asset .statTable__btns .statSubtable__button:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .arbitrary-asset .statSubtable .statTable .statSticker__block {
+    width: 100%;
+  }
+
+  .arbitrary-asset .statSubtable__buttons {
+    flex-direction: column;
+  }
+
+  .arbitrary-asset .statSubtable__buttons .statSubtable__button:first-child {
+    max-width: 100%;
+  }
+
+  .arbitrary-asset .statSubtable__buttons .statSubtable__button:last-child {
+    margin-right: auto;
+  }
+
   .performance .card {
     cursor: initial;
   }
@@ -19616,6 +19838,28 @@ body.viewProfile .header-controls-links-link.auth span {
 @media (y) {
   .section-main .main-menu.active .nav {
     padding-right: 2rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .block-rating.blur .block-rating-blur {
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 0.3s;
+  }
+
+  .block-rating.blur:hover .block-rating-blur {
+    opacity: 1;
+  }
+
+  .table-ticker__block.blur .table-ticker__block-blur {
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 0.3s;
+  }
+
+  .table-ticker__block.blur:hover .table-ticker__block-blur {
+    opacity: 1;
   }
 }
 
