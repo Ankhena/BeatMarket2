@@ -956,4 +956,23 @@
   }
 }
 
+#modal_subscribe_tariff {
+	.selectric-scroll {
+		max-height: 270px;
+
+		&::-webkit-scrollbar {
+				width: 2px;
+				background-color: #F5F5F5;
+			}
+		
+			&::-webkit-scrollbar-thumb {
+				background-color: #8C9BEA;
+			}
+		
+			&::-webkit-scrollbar-track {
+				background-color: #F5F5F5;
+			}
+	}
+}
+
 // === / Modal
