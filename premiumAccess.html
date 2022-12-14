@@ -3913,7 +3913,44 @@
         <option value="Казахский тенге">Казахский тенге</option>
       </select>
     </div>
-
+		<div class="modal-content-input use_mt">
+			<label class="label_modal"><span>Расчет общего дохода</span>
+				<div class="paperDontTrade">
+					<svg class="paperDontTrade__icon table-fixed-item-name__icon">
+						<use xlink:href="img/main.svg#icon-WarningCircle"></use>
+					</svg>
+					<div class="paperDontTrade__popup">
+						<p>Как будет рассчитываться поле "общий доход" в портфеле.</p>
+						<p><span>Нереализованная прибыль.</span> Показывает сколько прибыли/убытка вы получите при
+							закрытии позиции. Учитываются только
+							непроданные акции. Проданные акции списываются по методу FIFO.</p>
+						<p><span>Реализованная прибыль.</span> Показывает сколько прибыли/убытка вы уже получили.
+							Учитывает только проданные акции. Проданные
+							акции списываются по методу FIFO.</p>
+						<p><span>Общая прибыль по позиции.</span> Сумма колонокРП + НП. Другими словами сколько
+							прибыли/убытка вы уже получили от продаж плюс
+							сколько можете получить при закрытии позиции.</p>
+					</div>
+				</div>
+			</label>
+			<div class="selectric-wrapper">
+				<div class="selectric-hide-select"><select tabindex="-1">
+						<option selected="" value="BMS global">Реализованная прибыль</option>
+						<option value="BMS local">Нереализованная прибыль</option>
+						<option value="BMD global">Общая прибыль по позиции</option>
+					</select></div>
+				<div class="selectric"><span class="label">Реализованная прибыль</span><b class="button">▾</b></div>
+				<div class="selectric-items" tabindex="-1">
+					<div class="selectric-scroll">
+						<ul>
+							<li data-index="0" class="selected">Реализованная прибыль</li>
+							<li data-index="1" class="">Нереализованная прибыль</li>
+							<li data-index="2" class="last">Общая прибыль по позиции</li>
+						</ul>
+					</div>
+				</div><input class="selectric-input" tabindex="0">
+			</div>
+		</div>
     <div class="settings-comission use_mt">
       <div class="settings-comission__elem">
         <h3 class="settings-comission__title">Налоги и комиссии</h3>
@@ -4039,45 +4076,73 @@
 </div>
 
 <div class="modal" id="modal_strategy_settings">
-  <div class="modal-header">
-    <h2>Настройки</h2>
-    <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
-  </div>
-  <div class="modal-content">
-    <div class="modal-content-input use_mt_first">
-      <label class="label_modal">Название стратегии</label>
-      <input type="text">
-    </div>
-    <div class="modal-content-input use_mt">
-      <label class="label_modal">Бенчмарк портфеля</label>
-      <select>
-        <option selected value="SP 500">SP 500</option>
-        <option value="Nasdaq">Nasdaq</option>
-        <option value="Dow Jones">Dow Jones</option>
-      </select>
-    </div>
-    <div class="modal-content-input use_mt">
-      <label class="label_modal">Валюта портфеля</label>
-      <select>
-        <option selected value="Российский рубль">Российский рубль</option>
-        <option value="Американский доллар">Американский доллар</option>
-        <option value="Казахский тенге">Казахский тенге</option>
-      </select>
-    </div>
-    <div class="modal-content-input use_mt">
-      <label class="label_modal">Основной скоринг</label>
-      <select>
-        <option selected value="BMS global">BMS global</option>
-        <option value="BMS local">BMS local</option>
-        <option value="BMD global">BMD global</option>
-        <option value="BMD local">BMD local</option>
-      </select>
-    </div>
-    <div class="modal-content-buttons use_mt">
-      <button class="btn btn_blue" data-closeModal>Сохранить</button>
-      <button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
-    </div>
-  </div>
+	<div class="modal-header">
+		<h2>Настройки</h2>
+		<svg data-closeModal>
+			<use xlink:href="img/main.svg#icon-closeModal"></use>
+		</svg>
+	</div>
+	<div class="modal-content">
+		<div class="modal-content-input use_mt_first">
+			<label class="label_modal">Название стратегии</label>
+			<input type="text">
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Бенчмарк портфеля</label>
+			<select>
+				<option selected value="SP 500">SP 500</option>
+				<option value="Nasdaq">Nasdaq</option>
+				<option value="Dow Jones">Dow Jones</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Валюта портфеля</label>
+			<select>
+				<option selected value="Российский рубль">Российский рубль</option>
+				<option value="Американский доллар">Американский доллар</option>
+				<option value="Казахский тенге">Казахский тенге</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal flex"><span>Расчет общего дохода</span>
+				<div class="paperDontTrade">
+					<svg class="paperDontTrade__icon table-fixed-item-name__icon">
+						<use xlink:href="img/main.svg#icon-WarningCircle"></use>
+					</svg>
+					<div class="paperDontTrade__popup">
+						<p>Как будет рассчитываться поле "общий доход" в портфеле.</p>
+						<p><span>Нереализованная прибыль.</span> Показывает сколько прибыли/убытка вы получите при
+							закрытии позиции. Учитываются только
+							непроданные акции. Проданные акции списываются по методу FIFO.</p>
+						<p><span>Реализованная прибыль.</span> Показывает сколько прибыли/убытка вы уже получили.
+							Учитывает только проданные акции. Проданные
+							акции списываются по методу FIFO.</p>
+						<p><span>Общая прибыль по позиции.</span> Сумма колонокРП + НП. Другими словами сколько
+							прибыли/убытка вы уже получили от продаж плюс
+							сколько можете получить при закрытии позиции.</p>
+					</div>
+				</div>
+			</label>
+			<select>
+				<option selected value="BMS global">Реализованная прибыль</option>
+				<option value="BMS local">Нереализованная прибыль</option>
+				<option value="BMD global">Общая прибыль по позиции</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Основной скоринг</label>
+			<select>
+				<option selected value="BMS global">BMS global</option>
+				<option value="BMS local">BMS local</option>
+				<option value="BMD global">BMD global</option>
+				<option value="BMD local">BMD local</option>
+			</select>
+		</div>
+		<div class="modal-content-buttons use_mt">
+			<button class="btn btn_blue" data-closeModal>Сохранить</button>
+			<button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
+		</div>
+	</div>
 </div>
 
 <div class="modal" id="modal_add">

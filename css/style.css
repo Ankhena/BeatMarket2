@@ -2798,10 +2798,10 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 }
 
 .modal .paperDontTrade__popup {
-  max-width: 99%;
+  max-width: 94%;
   left: 36%;
   overflow: auto;
-  bottom: -12%;
+  bottom: -6%;
   transform: translateY(0);
 }
 
@@ -2877,6 +2877,7 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   overflow-y: auto;
   padding: 0 1.8rem;
   margin-bottom: 1.8rem;
+  max-height: min(70vh, 38rem);
 }
 
 .modal-content--withoutHeader {
@@ -17199,7 +17200,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .modal .paperDontTrade__popup {
     left: 1%;
-    bottom: -19%;
   }
 
   .modal .use_mt {
@@ -19524,10 +19524,6 @@ body.viewProfile .header-controls-links-link.auth span {
   html,
   body {
     font-size: 14px;
-  }
-
-  .modal .paperDontTrade__popup {
-    bottom: -20%;
   }
 
   .modal.notify {
