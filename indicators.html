@@ -1682,11 +1682,22 @@
 
 <div class="modal" id="modal_subscribe_tariff">
   <div class="modal-header">
-    <h2>Тариф “Советник”</h2>
+    <h2>Тариф “Локальный”</h2>
     <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
   </div>
   <div class="modal-content">
-    <div class="modal-content-cost use_mt_first">
+		<div class="modal-content-input use_mt_first">
+			<label class="label_modal">Выберите страну</label>
+			<select>
+				<option selected="" value="China">Китай</option>
+				<option value="Iran">Иран</option>
+				<option value="finland">Финляндия</option>
+				<option value="Russia">Россия</option>
+				<option value="Iran">Иран</option>
+				<option value="finland">Финляндия</option>
+			</select>
+		</div>
+    <div class="modal-content-cost use_mt">
       <h3>Стоимость подписки</h3>
       <div class="modal-content-cost-info">
         <strong>690 руб.</strong>
@@ -4473,7 +4484,7 @@
       </select>
     </div>
 		<div class="modal-content-input use_mt">
-			<label class="label_modal"><span>Расчет общего дохода</span>
+			<label class="label_modal flex"><span>Расчет общего дохода</span>
 				<div class="paperDontTrade">
 					<svg class="paperDontTrade__icon table-fixed-item-name__icon">
 						<use xlink:href="img/main.svg#icon-WarningCircle"></use>
@@ -4492,23 +4503,11 @@
 					</div>
 				</div>
 			</label>
-			<div class="selectric-wrapper">
-				<div class="selectric-hide-select"><select tabindex="-1">
-						<option selected="" value="BMS global">Реализованная прибыль</option>
-						<option value="BMS local">Нереализованная прибыль</option>
-						<option value="BMD global">Общая прибыль по позиции</option>
-					</select></div>
-				<div class="selectric"><span class="label">Реализованная прибыль</span><b class="button">▾</b></div>
-				<div class="selectric-items" tabindex="-1">
-					<div class="selectric-scroll">
-						<ul>
-							<li data-index="0" class="selected">Реализованная прибыль</li>
-							<li data-index="1" class="">Нереализованная прибыль</li>
-							<li data-index="2" class="last">Общая прибыль по позиции</li>
-						</ul>
-					</div>
-				</div><input class="selectric-input" tabindex="0">
-			</div>
+			<select>
+				<option selected="" value="BMS global">Реализованная прибыль</option>
+				<option value="BMS local">Нереализованная прибыль</option>
+				<option value="BMD global">Общая прибыль по позиции</option>
+			</select>
 		</div>
     <div class="settings-comission use_mt">
       <div class="settings-comission__elem">
