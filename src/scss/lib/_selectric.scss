@@ -17,8 +17,11 @@ $selectric-min-width: 12rem;
 
 .selectric-wrapper {
     position: relative;
-    cursor: pointer;
     min-width: 12rem;
+
+		@media(pointer: fine) {
+			cursor: pointer;
+		}
 }
 
 .selectric-responsive {

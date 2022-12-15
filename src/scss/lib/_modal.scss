@@ -957,8 +957,13 @@
 }
 
 #modal_subscribe_tariff {
+	.modal-content {
+		overflow: visible;
+	}
+
 	.selectric-scroll {
 		max-height: 270px;
+		height: 53vh;
 
 		&::-webkit-scrollbar {
 				width: 2px;
