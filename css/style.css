@@ -923,7 +923,6 @@ button {
 
 .selectric-wrapper {
   position: relative;
-  cursor: pointer;
   min-width: 12rem;
 }
 
@@ -3447,8 +3446,13 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   border-bottom: 1px solid #E6EEFF;
 }
 
+#modal_subscribe_tariff .modal-content {
+  overflow: visible;
+}
+
 #modal_subscribe_tariff .selectric-scroll {
   max-height: 270px;
+  height: 53vh;
 }
 
 #modal_subscribe_tariff .selectric-scroll::-webkit-scrollbar {
@@ -19839,6 +19843,12 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .adv-portfolio-settings__table .td-price {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (pointer: fine) {
+  .selectric-wrapper {
+    cursor: pointer;
   }
 }
 
