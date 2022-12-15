@@ -2,7 +2,12 @@
 
 function initSelectric() {
     document.querySelectorAll("select").forEach(item => {
-        $(item).selectric();
+        $(item).selectric(
+					{
+						disableOnMobile: false,
+						nativeOnMobile: false,
+					}
+				);
     });
 }
 
