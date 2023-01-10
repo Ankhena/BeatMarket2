@@ -552,6 +552,49 @@ $base_transition: 0.4s ease-in-out;
       max-width: 542px;
       margin-top: 0;
     }
+
+		&-svg {
+			min-width: 1290px;
+			min-height: 823px;
+
+			@media($media_sm) {
+				min-width: 350px;
+				min-height: 444px;
+				margin-bottom: 15px;
+			}
+
+			&__text {
+				font-family: "Montserrat", sans-serif;
+				font-weight: 500;
+				fill: #373943;
+				font-style: normal;
+				font-variant: normal;
+
+				&-bold {
+					font-weight: 700;
+				}
+
+				&.blue {
+					fill: #3E54D8;
+				}
+
+				&.red {
+					fill: #DE4355;
+				}
+
+				&.yellow {
+					fill: #F3B63F;
+				}
+
+				&.gray {
+					fill: #929398;
+				}
+
+				&.green {
+					fill: #199F27
+				}
+			}
+		}
   }
 
   &-plan-scroll {
