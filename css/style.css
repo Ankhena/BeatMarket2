@@ -9483,6 +9483,43 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   margin-top: 32px;
 }
 
+.blockSection__plan-svg {
+  min-width: 1290px;
+  min-height: 823px;
+}
+
+.blockSection__plan-svg__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  fill: #373943;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.blockSection__plan-svg__text-bold {
+  font-weight: 700;
+}
+
+.blockSection__plan-svg__text.blue {
+  fill: #3E54D8;
+}
+
+.blockSection__plan-svg__text.red {
+  fill: #DE4355;
+}
+
+.blockSection__plan-svg__text.yellow {
+  fill: #F3B63F;
+}
+
+.blockSection__plan-svg__text.gray {
+  fill: #929398;
+}
+
+.blockSection__plan-svg__text.green {
+  fill: #199F27;
+}
+
 .blockSection-plan-scroll {
   overflow: auto;
 }
@@ -18590,6 +18627,12 @@ body.viewProfile .header-controls-links-link.auth span {
     max-width: 860px;
     margin-bottom: 20px;
     margin-top: 15px;
+  }
+
+  .blockSection__plan-svg {
+    min-width: 350px;
+    min-height: 444px;
+    margin-bottom: 15px;
   }
 
   .cardAnalytic__content {
