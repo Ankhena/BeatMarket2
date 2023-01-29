@@ -3185,33 +3185,6 @@ $base_transition: 0.4s ease-in-out;
     font-weight: 500;
   }
 
-  // .dividendsTarget__label
-
-  &__label {
-    font-size: 1.55rem;
-    font-weight: 700;
-
-    display: inline-block;
-    padding: 0.8rem 1.75rem;
-    border-radius: 0.5rem;
-    margin-top: 0.9rem;
-
-    @media ($media_sm) {
-      padding: 0.2rem 1.75rem;
-    }
-
-    // .dividendsTarget__label--primary
-
-    &--primary {
-      color: $color_blue;
-      background-color: $color_white;
-
-      @media ($media_sm) {
-        padding: 0.8rem 1.75rem;
-      }
-    }
-  }
-
   // .dividendsTarget__btn
 
   &__btn {
@@ -3292,7 +3265,7 @@ $base_transition: 0.4s ease-in-out;
   font-weight: 700;
 
   display: inline-block;
-  padding: 0.8rem 1.75rem;
+  padding: 0.8rem 1.75rem 0.8rem 0;
   border-radius: 0.5rem;
   margin-top: 0.9rem;
 
@@ -3303,8 +3276,10 @@ $base_transition: 0.4s ease-in-out;
   // .dividendsTarget__label--primary
 
   &--primary {
+    padding-left: 0.8rem;
     color: $color_blue;
     background-color: $color_white;
+
 
     @media ($media_sm) {
       padding: 0.8rem 1.75rem;
