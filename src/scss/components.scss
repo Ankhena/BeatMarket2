@@ -552,6 +552,49 @@ $base_transition: 0.4s ease-in-out;
       max-width: 542px;
       margin-top: 0;
     }
+
+		&-svg {
+			min-width: 1290px;
+			min-height: 823px;
+
+			@media($media_sm) {
+				min-width: 350px;
+				min-height: 444px;
+				margin-bottom: 15px;
+			}
+
+			&__text {
+				font-family: "Montserrat", sans-serif;
+				font-weight: 500;
+				fill: #373943;
+				font-style: normal;
+				font-variant: normal;
+
+				&-bold {
+					font-weight: 700;
+				}
+
+				&.blue {
+					fill: #3E54D8;
+				}
+
+				&.red {
+					fill: #DE4355;
+				}
+
+				&.yellow {
+					fill: #F3B63F;
+				}
+
+				&.gray {
+					fill: #929398;
+				}
+
+				&.green {
+					fill: #199F27
+				}
+			}
+		}
   }
 
   &-plan-scroll {
@@ -1964,6 +2007,9 @@ $base_transition: 0.4s ease-in-out;
 
     .stategyPromo-graph-values-btn {
       display: flex;
+			background-color: transparent;
+			border: none;
+			outline: none;
 
       @media ($media_sm) {
         transform: translateX(50%);
@@ -2320,6 +2366,7 @@ $base_transition: 0.4s ease-in-out;
   &__content {
     display: flex;
     flex-direction: column;
+		flex-basis: 100%;
   }
 
   // .promoGraphArea__settings
@@ -2349,6 +2396,8 @@ $base_transition: 0.4s ease-in-out;
   // .promoGraphArea__chooseInfo
 
   &__chooseInfo {
+
+
     .stategyPromo-graph-info-btn {
       @media ($media_xl) {
         padding: 1rem;
@@ -2396,6 +2445,8 @@ $base_transition: 0.4s ease-in-out;
   &__chooseDate {
     height: 100%;
     margin-left: auto;
+		display: flex;
+		align-items: center;
 
     .stategyPromo-graph-info-content-choose {
       height: 100%;
@@ -4400,6 +4451,127 @@ $base_transition: 0.4s ease-in-out;
       font-size: 1rem;
     }
   }
+
+	&__modal {
+		padding: 2.5rem 4.44rem;
+		width: 40rem;
+
+		.modal {
+			&-header {
+				padding: 0;
+				display: block;
+				text-align: center;
+				line-height: 1.3;
+				color: #3E54D8;
+				margin-bottom: 2.7rem;
+	
+				h2 {
+					text-align: center;
+					line-height: 1.3;
+					color: #3e54d8;
+					margin-bottom: 0.6rem;
+					opacity: 1;
+				}
+
+				h3 {
+					color: $color_red;
+				}
+			}
+
+			&-content {
+				padding: 0;
+    		margin: 0;
+    		overflow: unset;
+				max-height: min(70vh, 38rem);
+			}
+
+			&-content-group:not(:first-child) {
+				margin-top: 1.1rem;
+			}
+
+			&-content-group-label {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				margin-bottom: 0.5rem;
+
+				h4 {
+						color: #24252E;
+						font-weight: 500;
+						margin-right: 0.7rem;
+				}
+
+				span {
+						font-size: 0.8rem;
+						color: #929398;
+				}
+			}
+
+			&-content-group-input {
+				&.icon {
+					position: relative;
+					.input_text {
+						padding: 0.8rem 2.5rem 0.8rem 1.3rem;
+					}
+
+					svg {
+						position: absolute;
+						width: 1.2rem;
+						right: 1rem;
+						top: 50%;
+						-webkit-transform: translateY(-50%);
+						transform: translateY(-50%);
+						stroke: #8C9BEA;
+						-webkit-transition: 0.3s ease-in-out;
+						transition: 0.3s ease-in-out;
+						cursor: pointer;
+					}
+
+					.modal-content-group-input.icon .input_text~.eye_close {
+						display: none;
+					}
+				}
+			}
+
+			&-content-group-message {
+				display: none;
+				margin-top: 0.5rem;
+
+				span {
+					font-size: 0.8rem;
+					color: #ED6373;
+				}
+			}
+
+			&-content-btn {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				margin-top: 1.8rem;
+
+				.btn {
+						width: 100%;
+						padding: 1.4rem 0;
+					}
+			}
+
+			&-content-link {
+				margin-top: 1.8rem;
+				text-align: center;
+				font-weight: 500;
+
+				strong {
+						cursor: pointer;
+						color: #3E54D8;
+						font-weight: 600;
+					}
+			}
+		}
+	}
+
 }
 
 .premiumAccessCard {
@@ -4418,9 +4590,14 @@ $base_transition: 0.4s ease-in-out;
 
 	&__text {
 		margin-top: 25px;
-		max-width: 528px;
+		max-width: 460px;
 		font-size: 0.88rem;
 		line-height: 1.6;
+
+		@media($media_sm) {
+			max-width: 100%;
+			text-align: left;
+		}
 	}
 
   // .premiumAccessCard__content
@@ -4431,7 +4608,15 @@ $base_transition: 0.4s ease-in-out;
 		.baseList {
 			position: relative;
 			z-index: 2;
-			max-width: 528px;
+			max-width: 460px;
+
+			@media($media_lg) {
+				max-width: 528px;
+			}
+
+			@media($screen_sm) {
+				max-width: 100%;
+			}
 		}
 
     @media ($media_sm) {
@@ -4565,7 +4750,7 @@ $base_transition: 0.4s ease-in-out;
       }
     }
 
-    // .premiumAccessCard__circle--green
+    // .premiumAccessCard__circle--greenn
 
     &--green {
       width: 100px;

@@ -54,13 +54,13 @@ function initAverageDividentsGraph() {
 							color: "#373943"
 						}
 					},
-          plotLines:[{
-            value: 10,
-            color: '#3E54D8',
-            width:2,
-            zIndex:4,
-            label:{text:''}
-          }],
+					plotLines: [{
+						value: 10,
+						color: '#3E54D8',
+						width: 2,
+						zIndex: 4,
+						label: { text: '' }
+					}],
 				},
 				tooltip: {
 					crosshairs: true,

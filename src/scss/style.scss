@@ -522,6 +522,7 @@
 			@media($media_xs) {
 				flex-wrap: wrap;
 			}
+
 			&-row {
 				display: flex;
 				align-items: center;
@@ -1427,10 +1428,6 @@ body.viewProfile {
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 16px;
 
-		&.blur {
-			filter: blur(12px);
-		}
-
 		@media($media_sm) {
 			gap: 12px;
 		}
@@ -1445,6 +1442,57 @@ body.viewProfile {
 	border: 1px solid #D3E3FF;
 	border-radius: 18px;
 	width: 100%;
+
+	&.blur {
+		z-index: 1;
+		position: relative;
+
+		.block-rating__icon {
+			display: none;
+		}
+
+		border: none;
+
+		.block-rating__content {
+			filter: blur(12px);
+			position: relative;
+			z-index: -1;
+		}
+
+		@media(any-hover: hover) {
+
+			.block-rating-blur {
+				opacity: 0;
+				z-index: 10;
+				transition: opacity .3s;
+			}
+
+			&:hover {
+				.block-rating-blur {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&-blur {
+		position: absolute;
+		top: -5%;
+		left: 1%;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		color: $color_black_main;
+		text-decoration: none;
+		border: 1px solid $color_blue_hover;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 12px;
+		opacity: 1;
+	}
+
 
 	// .block-rating__position
 
@@ -1745,6 +1793,51 @@ body.viewProfile {
 		font-weight: 500;
 		color: #373943;
 		padding: 0 16px;
+
+		&.blur {
+			z-index: 1;
+			position: relative;
+
+			.table-ticket__scoring {
+				filter: blur(6px);
+				position: relative;
+				z-index: -1;
+			}
+
+			@media(any-hover: hover) {
+
+				.table-ticker__block-blur {
+					opacity: 0;
+					z-index: 10;
+					transition: opacity .3s;
+				}
+
+				&:hover {
+					.table-ticker__block-blur {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&-blur {
+			position: absolute;
+			top: -5%;
+			left: 21%;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			color: $color_black_main;
+			text-decoration: none;
+			border: 1px solid $color_blue_hover;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
+			max-width: 75px;
+			opacity: 1;
+		}
 
 		@media(max-width: 768px) {
 			&:first-child {
@@ -2214,7 +2307,7 @@ body.viewProfile {
 			}
 		}
 
-		&.blur {
+		&-blur {
 			filter: blur(6px);
 		}
 

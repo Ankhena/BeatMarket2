@@ -119,6 +119,110 @@
     </div>
   </div>
 </div>
+<div class="modal" id="stategyPromo-graph-info-content_settings">
+	<div class="modal-header">
+		<h2>Настройки графика</h2>
+		<svg data-closeModal>
+			<use xlink:href="img/main.svg#icon-closeModal"></use>
+		</svg>
+	</div>
+	<div class="modal-content">
+		<div class="modal-content-input use_mt_first">
+			<label class="label_modal">Отображать стратегии</label>
+			<select>
+				<option selected value="SP 500">Стратегии (2)</option>
+				<option value="Nasdaq">Стратегии (1)</option>
+				<option value="Dow Jones">Стратегии (3)</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Сравнивать с индексом</label>
+			<select>
+				<option selected value="SP 500">Не сравнивать</option>
+				<option value="Nasdaq">Сравнивать</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Период по умолчанию</label>
+			<div class="modal-content-switcher-button">
+				<label>
+					<input type="radio" name="switcherPaybackWhat" class="visually_hidden">
+					<span>Неделя</span>
+				</label>
+				<label>
+					<input type="radio" name="switcherPaybackWhat" class="visually_hidden" checked="">
+					<span>Месяц</span>
+				</label>
+				<label>
+					<input type="radio" name="switcherPaybackWhat" class="visually_hidden">
+					<span>Год</span>
+				</label>
+			</div>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="selectDropdown-item">
+				<input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+				<span class="checkbox_custom">С учетом дивидендов</span>
+			</label>
+		</div>
+		<div class="modal-content-buttons full use_mt">
+			<button class="btn btn_blue" data-closeModal>Сохранить настройки</button>
+		</div>
+	</div>
+</div>
+<div class="modal" id="stategyPromo-graph-info-content_settings-2">
+	<div class="modal-header">
+		<h2>Настройки портфеля</h2>
+		<svg data-closeModal>
+			<use xlink:href="img/main.svg#icon-closeModal"></use>
+		</svg>
+	</div>
+	<div class="modal-content">
+		<div class="modal-content-input use_mt_first">
+			<label class="label_modal">Валюта</label>
+			<select>
+				<option selected value="Российский рубль">Российский рубль</option>
+				<option value="Американский доллар">Американский доллар</option>
+				<option value="Казахский тенге">Казахский тенге</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal flex"><span>Расчет общего дохода</span>
+				<div class="paperDontTrade">
+					<svg class="paperDontTrade__icon table-fixed-item-name__icon">
+						<use xlink:href="img/main.svg#icon-WarningCircle"></use>
+					</svg>
+					<div class="paperDontTrade__popup">
+						<p>Как будет рассчитываться поле "общий доход" в портфеле.</p>
+						<p><span>Нереализованная прибыль.</span> Показывает сколько прибыли/убытка вы получите при
+							закрытии позиции. Учитываются только
+							непроданные акции. Проданные акции списываются по методу FIFO.</p>
+						<p><span>Реализованная прибыль.</span> Показывает сколько прибыли/убытка вы уже получили.
+							Учитывает только проданные акции. Проданные
+							акции списываются по методу FIFO.</p>
+						<p><span>Общая прибыль по позиции.</span> Сумма колонокРП + НП. Другими словами сколько
+							прибыли/убытка вы уже получили от продаж плюс
+							сколько можете получить при закрытии позиции.</p>
+					</div>
+				</div>
+			</label>
+			<select>
+				<option selected value="BMS global">Реализованная прибыль</option>
+				<option value="BMS local">Нереализованная прибыль</option>
+				<option value="BMD global">Общая прибыль по позиции</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="selectDropdown-item">
+				<input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+				<span class="checkbox_custom">Показать ленту</span>
+			</label>
+		</div>
+		<div class="modal-content-buttons full use_mt">
+			<button class="btn btn_blue" data-closeModal>Сохранить настройки</button>
+		</div>
+	</div>
+</div>
 
 <div class="modal" id="modal_edit">
   <div class="modal-header">
@@ -198,6 +302,77 @@
       <button class="btn gray" data-closeModal>Отменить</button>
     </div>
   </div>
+</div>
+<div class="modal premiumAccess__modal" id="modal_reg">
+	<div class="modal-header">
+		<h2>Зарегистрироваться</h2>
+		<h3>Для подписки за 1 рубль укажите код купона в поле для купона после авторизации</h3>
+	</div>
+	<form class="modal-content" method="post" action="https://dev.beatmarket.one/registration" id="registerForm">
+		<input type="hidden" name="_token" value="HB25XjND31xRzcvqNNPByj40Bl2Sykk71ZWWUvPe">
+		<input type="hidden" name="localTimeZone" value="3" id="localTimeZoneRegister">
+		<input type="hidden" name="tariff_id_register" value="4" id="tariff_id_register">
+		<input type="hidden" name="tariff_auth_amount" value="1" id="tariff_auth_amount">
+
+		<div class="modal-content-group">
+			<div class="modal-content-group-label">
+				<h4>E-mail</h4>
+				<span>На этот адрес мы отправим письмо с подтверждением</span>
+			</div>
+			<div class="modal-content-group-input">
+				<input name="email" type="email" placeholder="beatmarket@one.com" class="input_text">
+			</div>
+			<div class="modal-content-group-message">
+				<span>Введите корректный E-mail</span>
+			</div>
+		</div>
+		<div class="modal-content-group">
+			<div class="modal-content-group-label">
+				<h4>Пароль</h4>
+				<span>Минимум 6 символов</span>
+			</div>
+			<div class="modal-content-group-input icon">
+				<input name="password" type="password" class="input_text">
+				<svg class="eye eye_open">
+					<use xlink:href="./img/main.svg#eye"></use>
+				</svg>
+				<svg class="eye eye_close">
+					<use xlink:href="./img/main.svg#eye_slash"></use>
+				</svg>
+			</div>
+			<div class="modal-content-group-message">
+				<span>Это поле обязательно для заполнения</span>
+			</div>
+		</div>
+		<div class="modal-content-group">
+			<div class="modal-content-group-label">
+				<h4>Повторите пароль</h4>
+			</div>
+			<div class="modal-content-group-input icon">
+				<input name="password_confirmation" type="password" class="input_text">
+				<svg class="eye eye_open">
+					<use xlink:href="./img/main.svg#eye"></use>
+				</svg>
+				<svg class="eye eye_close">
+					<use xlink:href="./img/main.svg#eye_slash"></use>
+				</svg>
+			</div>
+			<div class="modal-content-group-message">
+				<span>Это поле обязательно для заполнения</span>
+			</div>
+		</div>
+		<div class="modal-content-group">
+			<div class="modal-content-group-error">
+				<p>Не все обязательные поля заполнены</p>
+			</div>
+		</div>
+		<div class="modal-content-btn">
+			<button class="btn btn_blue">Зарегистрироваться</button>
+		</div>
+		<div class="modal-content-link">
+			<span>Уже есть аккаунт? <strong data-changemodal="modal_auth">Авторизироваться</strong></span>
+		</div>
+	</form>
 </div>
 
 <!-- <div class="modal" id="modal_settings">
@@ -375,11 +550,22 @@
 
 <div class="modal" id="modal_subscribe_tariff">
   <div class="modal-header">
-    <h2>Тариф “Советник”</h2>
+    <h2>Тариф “Локальный”</h2>
     <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
   </div>
   <div class="modal-content">
-    <div class="modal-content-cost use_mt_first">
+		<div class="modal-content-input use_mt_first">
+			<label class="label_modal">Выберите страну</label>
+			<select>
+				<option selected="" value="China">Китай</option>
+				<option value="Iran">Иран</option>
+				<option value="finland">Финляндия</option>
+				<option value="Russia">Россия</option>
+				<option value="Iran">Иран</option>
+				<option value="finland">Финляндия</option>
+			</select>
+		</div>
+    <div class="modal-content-cost use_mt">
       <h3>Стоимость подписки</h3>
       <div class="modal-content-cost-info">
         <strong>690 руб.</strong>
@@ -1157,7 +1343,32 @@
         <option value="Казахский тенге">Казахский тенге</option>
       </select>
     </div>
-
+		<div class="modal-content-input use_mt">
+			<label class="label_modal flex"><span>Расчет общего дохода</span>
+				<div class="paperDontTrade">
+					<svg class="paperDontTrade__icon table-fixed-item-name__icon">
+						<use xlink:href="img/main.svg#icon-WarningCircle"></use>
+					</svg>
+					<div class="paperDontTrade__popup">
+						<p>Как будет рассчитываться поле "общий доход" в портфеле.</p>
+						<p><span>Нереализованная прибыль.</span> Показывает сколько прибыли/убытка вы получите при
+							закрытии позиции. Учитываются только
+							непроданные акции. Проданные акции списываются по методу FIFO.</p>
+						<p><span>Реализованная прибыль.</span> Показывает сколько прибыли/убытка вы уже получили.
+							Учитывает только проданные акции. Проданные
+							акции списываются по методу FIFO.</p>
+						<p><span>Общая прибыль по позиции.</span> Сумма колонокРП + НП. Другими словами сколько
+							прибыли/убытка вы уже получили от продаж плюс
+							сколько можете получить при закрытии позиции.</p>
+					</div>
+				</div>
+			</label>
+			<select>
+				<option selected="" value="BMS global">Реализованная прибыль</option>
+				<option value="BMS local">Нереализованная прибыль</option>
+				<option value="BMD global">Общая прибыль по позиции</option>
+			</select>
+		</div>
     <div class="settings-comission use_mt">
       <div class="settings-comission__elem">
         <h3 class="settings-comission__title">Налоги и комиссии</h3>
@@ -1192,46 +1403,164 @@
   </div>
 </div>
 
-<div class="modal" id="modal_strategy_settings">
+<div class="modal chooseCountry" id="modal_country">
   <div class="modal-header">
-    <h2>Настройки</h2>
+    <h2>Шаг 1/2</h2>
     <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
   </div>
   <div class="modal-content">
-    <div class="modal-content-input use_mt_first">
-      <label class="label_modal">Название стратегии</label>
-      <input type="text">
-    </div>
-    <div class="modal-content-input use_mt">
-      <label class="label_modal">Бенчмарк портфеля</label>
+		<div class="inputGroup">
+			<span class="inputGroup__label">Страна</span>
+			<div class="inputGroup__item">
+		
+				<div class="inputGroup__control inputSelect">
+		
+					<input class="inputSelect__checkbox visually_hidden" id="analyticScanner5" type="checkbox">
+		
+					<label class="inputSelect__container" for="analyticScanner5">
+						<span class="inputSelect__value">Ваша страна</span>
+						<svg class="inputSelect__icon">
+							<use xlink:href="img/main.svg#icon-arrow-down"></use>
+						</svg>
+					</label>
+		
+					<div class="inputSelect__dropdown">
+						<label class="inputSelect__item">
+							<div class="inputGroup__item">
+								<input class="inputGroup__control inputGroup__control--padding" type="text" placeholder="Например, Сбербанк">
+								<svg class="inputGroup__icon">
+									<use xlink:href="img/main.svg#icon-searchTicket"></use>
+								</svg>
+							</div>
+						</label>
+						<label class="inputSelect__item">
+							<input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked="">
+							<div class="inputSelect__row">
+								<div class="inputSelect__letter">A</div>
+								<span class="inputSelect__choose radio_custom">Китай</span>
+							</div>
+						</label>
+						<label class="inputSelect__item">
+							<input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+							<span class="inputSelect__choose radio_custom">Иран</span>
+						</label>
+						<label class="inputSelect__item">
+							<input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+							<span class="inputSelect__choose radio_custom">Финляндия</span>
+						</label>
+						<label class="inputSelect__item">
+							<input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+							<span class="inputSelect__choose radio_custom">Россия</span>
+						</label>
+						<label class="inputSelect__item">
+							<input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem" checked="">
+							<div class="inputSelect__row">
+								<div class="inputSelect__letter">B</div>
+								<span class="inputSelect__choose radio_custom">Иран</span>
+							</div>
+						</label>
+						<label class="inputSelect__item">
+							<input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+							<span class="inputSelect__choose radio_custom">Финляндия</span>
+						</label>
+						<label class="inputSelect__item">
+							<input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+							<span class="inputSelect__choose radio_custom">Иран</span>
+						</label>
+						<label class="inputSelect__item">
+							<input class="inputSelect__radio visually_hidden" type="radio" name="ticketStatusItem">
+							<div class="inputSelect__row">
+								<div class="inputSelect__letter">B</div>
+								<span class="inputSelect__choose radio_custom">Финляндия</span>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+    <!--<div class="modal-content-input use_mt">
       <select>
-        <option selected value="SP 500">SP 500</option>
-        <option value="Nasdaq">Nasdaq</option>
-        <option value="Dow Jones">Dow Jones</option>
-      </select>
-    </div>
-    <div class="modal-content-input use_mt">
-      <label class="label_modal">Валюта портфеля</label>
-      <select>
+
         <option selected value="Российский рубль">Российский рубль</option>
         <option value="Американский доллар">Американский доллар</option>
         <option value="Казахский тенге">Казахский тенге</option>
       </select>
-    </div>
-    <div class="modal-content-input use_mt">
-      <label class="label_modal">Основной скоринг</label>
-      <select>
-        <option selected value="BMS global">BMS global</option>
-        <option value="BMS local">BMS local</option>
-        <option value="BMD global">BMD global</option>
-        <option value="BMD local">BMD local</option>
-      </select>
-    </div>
+    </div>-->
+
     <div class="modal-content-buttons use_mt">
-      <button class="btn btn_blue" data-closeModal>Сохранить</button>
-      <button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
+      <button class="btn btn_blue" data-closeModal>Далее</button>
     </div>
   </div>
+</div>
+
+<div class="modal" id="modal_strategy_settings">
+	<div class="modal-header">
+		<h2>Настройки</h2>
+		<svg data-closeModal>
+			<use xlink:href="img/main.svg#icon-closeModal"></use>
+		</svg>
+	</div>
+	<div class="modal-content">
+		<div class="modal-content-input use_mt_first">
+			<label class="label_modal">Название стратегии</label>
+			<input type="text">
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Бенчмарк портфеля</label>
+			<select>
+				<option selected value="SP 500">SP 500</option>
+				<option value="Nasdaq">Nasdaq</option>
+				<option value="Dow Jones">Dow Jones</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Валюта портфеля</label>
+			<select>
+				<option selected value="Российский рубль">Российский рубль</option>
+				<option value="Американский доллар">Американский доллар</option>
+				<option value="Казахский тенге">Казахский тенге</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal flex"><span>Расчет общего дохода</span>
+				<div class="paperDontTrade">
+					<svg class="paperDontTrade__icon table-fixed-item-name__icon">
+						<use xlink:href="img/main.svg#icon-WarningCircle"></use>
+					</svg>
+					<div class="paperDontTrade__popup">
+						<p>Как будет рассчитываться поле "общий доход" в портфеле.</p>
+						<p><span>Нереализованная прибыль.</span> Показывает сколько прибыли/убытка вы получите при
+							закрытии позиции. Учитываются только
+							непроданные акции. Проданные акции списываются по методу FIFO.</p>
+						<p><span>Реализованная прибыль.</span> Показывает сколько прибыли/убытка вы уже получили.
+							Учитывает только проданные акции. Проданные
+							акции списываются по методу FIFO.</p>
+						<p><span>Общая прибыль по позиции.</span> Сумма колонокРП + НП. Другими словами сколько
+							прибыли/убытка вы уже получили от продаж плюс
+							сколько можете получить при закрытии позиции.</p>
+					</div>
+				</div>
+			</label>
+			<select>
+				<option selected value="BMS global">Реализованная прибыль</option>
+				<option value="BMS local">Нереализованная прибыль</option>
+				<option value="BMD global">Общая прибыль по позиции</option>
+			</select>
+		</div>
+		<div class="modal-content-input use_mt">
+			<label class="label_modal">Основной скоринг</label>
+			<select>
+				<option selected value="BMS global">BMS global</option>
+				<option value="BMS local">BMS local</option>
+				<option value="BMD global">BMD global</option>
+				<option value="BMD local">BMD local</option>
+			</select>
+		</div>
+		<div class="modal-content-buttons use_mt">
+			<button class="btn btn_blue" data-closeModal>Сохранить</button>
+			<button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
+		</div>
+	</div>
 </div>
 
 <div class="modal" id="modal_add">

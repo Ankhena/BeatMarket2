@@ -26,6 +26,94 @@
   transition: 0.3s ease-in-out;
   z-index: 21;
 
+	&.chooseCountry {
+
+		.modal-header {
+			margin-bottom: 40px;
+		}
+
+		.modal-content {
+			overflow: initial;
+		}
+
+		.inputSelect__container {
+			background-color: #FCFDFF;
+		}
+
+		.inputSelect__row {
+			display: flex;
+			align-items: center;
+
+			.inputSelect__choose {
+				padding-left: 0.8rem;
+			}
+		}
+
+		.inputSelect__dropdown {
+			overflow-y: auto;
+			min-height: 100px;
+			height: 39vh;
+			max-height: 408px;
+
+			@supports (height: clamp(100px, 39vh, 407px)) {
+				height: clamp(100px, 39vh, 407px)
+			}
+
+			&::-webkit-scrollbar {
+				width: 6px;
+				background-color: #F5F5F5;
+			}
+			
+			&::-webkit-scrollbar-thumb {
+				background-color: #a8b2ed;
+			}
+			
+			&::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+				background-color: #F5F5F5;
+			}
+		}
+
+		.inputSelect__letter {
+			font-weight: 700;
+			font-size: 24px;
+			color: #3E54D8;
+			display: inline;
+		}
+
+		.inputSelect__choose {
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+
+		.modal-content-buttons {
+			.btn {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	.paperDontTrade {
+		width: 24px;
+		height: 24px;
+		margin-left: 8px;
+		position: static;
+
+		&__popup {
+			max-width: 94%;
+			left: 36%;
+			overflow: auto;
+			bottom: -6%;
+			transform: translateY(0);
+		
+			@media($media_sm) {
+				left: 1%;
+			}
+		}
+	}
+
   &.visible {
     top: 50%;
   }
@@ -34,6 +122,11 @@
     display: inline-block;
     color: $color_grey;
     margin-bottom: 0.6rem;
+
+		&.flex {
+			display: flex;
+			align-items: center;
+		}
   }
 
   .use_mt {
@@ -139,6 +232,7 @@
     overflow-y: auto;
     padding: 0 1.8rem;
     margin-bottom: 1.8rem;
+		max-height: min(70vh, 38rem);
 
     @media ($media_xs) {
       padding: 0 1.5rem;
@@ -860,6 +954,30 @@
       }
     }
   }
+}
+
+#modal_subscribe_tariff {
+	.modal-content {
+		overflow: visible;
+	}
+
+	.selectric-scroll {
+		max-height: 270px;
+		height: 53vh;
+
+		&::-webkit-scrollbar {
+				width: 6px;
+				background-color: #F5F5F5;
+			}
+		
+			&::-webkit-scrollbar-thumb {
+				background-color: #8C9BEA;
+			}
+		
+			&::-webkit-scrollbar-track {
+				background-color: #F5F5F5;
+			}
+	}
 }
 
 // === / Modal
