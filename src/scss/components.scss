@@ -3218,19 +3218,6 @@ $base_transition: 0.4s ease-in-out;
     padding: 1.2rem 0;
     width: 100%;
   }
-
-  // .dividendsTarget__detailItem
-
-  &__detailItem {
-    text-align: center;
-
-    @media ($media_sm) {
-      &:not(:last-child) {
-        margin-bottom: 1.5rem;
-      }
-    }
-  }
-
 }
 
 .dividendsTarget__info {
@@ -3331,7 +3318,7 @@ $base_transition: 0.4s ease-in-out;
 }
 
 .dividendsTarget__detailItem {
-  text-align: center;
+
 
   @media ($media_sm) {
     &:not(:last-child) {
@@ -4464,7 +4451,7 @@ $base_transition: 0.4s ease-in-out;
 				line-height: 1.3;
 				color: #3E54D8;
 				margin-bottom: 2.7rem;
-	
+
 				h2 {
 					text-align: center;
 					line-height: 1.3;
