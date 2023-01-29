@@ -11342,10 +11342,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
   width: 100%;
 }
 
-.dividendsTarget__detailItem {
-  text-align: center;
-}
-
 .dividendsTarget__info {
   display: flex;
 }
@@ -11415,10 +11411,6 @@ input[type=radio]:checked ~ .checkbox_custom::after {
 .dividendsTarget__btn {
   padding: 1.2rem 0;
   width: 100%;
-}
-
-.dividendsTarget__detailItem {
-  text-align: center;
 }
 
 .dividendsTarget__progress {
@@ -18846,10 +18838,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .dividendsTarget__label--primary {
     padding: 0.8rem 1.75rem;
-  }
-
-  .dividendsTarget__detailItem:not(:last-child) {
-    margin-bottom: 1.5rem;
   }
 
   .dividendsTarget__info {

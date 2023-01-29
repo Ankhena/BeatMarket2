@@ -3551,6 +3551,7 @@ initPortfolioProfitGraph();
 }
 
 initAverageDividentsGraph();
+
   if (document.querySelector(".analyticScanner")) {
 	function filterScanner() {
 		const companies = [
